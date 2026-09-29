@@ -1,0 +1,105 @@
+"""Shared style + court helpers for the LBA report scripts (white background, BC Roma in gold).
+
+Layout and chart types follow martinig94/basketball_analytics (utils_plot.py); the palette is a
+light-mode version of it so the figures work in docs and slides on white.
+"""
+from __future__ import annotations
+
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from matplotlib.axes import Axes
+from matplotlib.patches import Arc, Circle, Rectangle
+
+matplotlib.use("Agg")
+
+# ── palette ──────────────────────────────────────────────────────────────────────
+BG, PANEL_BG = "#ffffff", "#f6f6f9"
+GOLD = "#F2C300"          # team colour (BC Roma) – every team mark uses this
+GOLD_EDGE = "#B08D00"     # thin edge so gold reads on white
+RED, GREEN, BLUE, ORANGE = "#d94b4b", "#2e9e5b", "#4a7fc1", "#e08c52"
+LEAGUE = "#9aa0b4"        # muted steel for league / opponent reference
+TEXT, TEXT2, GRID, COURT = "#1a1a2e", "#5a5e73", "#e3e4ea", "#5b5f78"
+TITLE_KW = dict(color=TEXT, fontsize=13, fontweight="bold", pad=10)
+SUP_KW = dict(color=TEXT, fontsize=15, fontweight="bold")
+DPI = 160
+
+plt.rcParams.update({
+    "figure.facecolor": BG, "axes.facecolor": PANEL_BG, "savefig.facecolor": BG,
+    "text.color": TEXT, "axes.labelcolor": TEXT2, "xtick.color": TEXT2, "ytick.color": TEXT2,
+    "axes.edgecolor": GRID, "grid.color": GRID, "grid.linewidth": 0.8,
+    "font.family": "DejaVu Sans", "legend.frameon": False,
+})
+
+
+def team_bar_kw() -> dict:
+    return dict(color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6)
+
+
+def mins(m: float) -> str:
+    return f"{m:.0f}'"
+
+
+def style_axes(ax: Axes, grid: str | None = None) -> None:
+    ax.spines[:].set_visible(False)
+    ax.tick_params(length=0)
+    if grid:
+        ax.grid(axis=grid, color=GRID, lw=0.8); ax.set_axisbelow(True)
+
+
+# ── court geometry (cm, basket at origin, court extends +y) ──────────────────────
+THREE_PT_RADIUS, CORNER_X, CORNER_Y, RESTRICTED_R, SHORT_RANGE_MAX = 675, 660, 90, 125, 449
+ZONE_LABELS = {"A": "Under basket", "B": "Left short", "C": "Right short", "D": "Left mid", "E": "Centre mid",
+               "F": "Right mid", "G": "Left 3PT", "H": "Centre 3PT", "I": "Right 3PT"}
+ZONE_LABEL_POS = {"A": (0, 55), "B": (-215, 270), "C": (215, 270), "D": (-450, 360), "E": (0, 560),
+                  "F": (450, 360), "G": (-620, 480), "H": (0, 950), "I": (620, 480)}
+
+
+def assign_zone_arr(x: np.ndarray, y: np.ndarray) -> np.ndarray:
+    d2 = x * x + y * y
+    z = np.full(x.shape, "E", dtype="<U1")
+    left, right = x < -y, x > y
+    z[left] = "D"; z[right] = "F"
+    three = (d2 >= THREE_PT_RADIUS**2) | ((np.abs(x) >= CORNER_X) & (y <= CORNER_Y))
+    z[three & left] = "G"; z[three & right] = "I"; z[three & ~left & ~right] = "H"
+    short = (d2 <= SHORT_RANGE_MAX**2) & ~three
+    z[short & (x < 0)] = "B"; z[short & (x >= 0)] = "C"
+    z[d2 <= RESTRICTED_R**2] = "A"
+    return z
+
+
+def draw_half_court(ax: Axes, color: str = COURT, lw: float = 1.4) -> None:
+    """FIBA half court, basket at the origin, units cm (same as basketball_analytics)."""
+    ft_y = 422
+    for el in [Circle((0, 0), 22.5, lw=lw, color=color, fill=False),
+               Rectangle((-91.5, -20), 183, -4, lw=lw, color=color),
+               Rectangle((-245, 0), 490, ft_y, lw=lw, edgecolor=color, facecolor="none"),
+               Arc((0, ft_y), 360, 360, theta1=0, theta2=180, lw=lw, color=color),
+               Arc((0, ft_y), 360, 360, theta1=180, theta2=0, lw=lw, color=color, linestyle="dashed"),
+               Arc((0, 0), 250, 250, theta1=0, theta2=180, lw=lw, color=color),
+               Rectangle((-660, 0), 0, 90, lw=lw, color=color), Rectangle((660, 0), 0, 90, lw=lw, color=color),
+               Arc((0, 0), 1350, 1350, theta1=12, theta2=168, lw=lw, color=color),
+               Rectangle((-750, 0), 1500, 1400, lw=lw, edgecolor=color, facecolor="none"),
+               Arc((0, 1400), 360, 360, theta1=180, theta2=0, lw=lw, color=color)]:
+        ax.add_patch(el)
+    ax.set_xlim(-800, 800); ax.set_ylim(-150, 1450); ax.set_aspect("equal"); ax.axis("off")
+
+
+def shots_cm(pbp: pd.DataFrame) -> pd.DataFrame:
+    """All FGA in the play-by-play, converted to cm with the basket at the origin, both ends folded.
+
+    Legabasket coordinates are percent of the full court (x along the 28 m length, y across the
+    15 m width). Teams swap ends at half time, so attempts at x>50 are rotated 180 degrees.
+    """
+    s = pbp[pbp.event.str.match(r"^\d punti", na=False)].dropna(subset=["x", "y"]).copy()
+    s["made"] = s.event.str.contains("segnato")
+    s["pts"] = s.event.str[0].astype(int)
+    flip = s.x > 50
+    xf = np.where(flip, 100 - s.x, s.x); yf = np.where(flip, 100 - s.y, s.y)
+    s["cx"] = (yf - 50) * 15.0
+    s["cy"] = xf * 28.0 - 157.5
+    s["dist"] = np.hypot(s.cx, s.cy)
+    s["zone"] = assign_zone_arr(s.cx.values, s.cy.values)
+    s["player"] = s.player_surname.fillna("").str.title()
+    return s
