@@ -221,3 +221,169 @@ game_id,match_datetime,round,team_id,team,opponent_id,opponent,home,row_type,pla
 25607,2026-09-27T18:00:00.000+02:00,1,1768,Longobardi Scafati Basket,1771,APU Old Wild West Udine,0,player,3526,MAS-BRU-96,33,Bruno,MASCOLO,0,23,1380,4,1,8,0,2,2,2,2,3,5,2,1,2,0,2,0,1,0,0,0,0,0.3076923,-19
 25607,2026-09-27T18:00:00.000+02:00,1,1768,Longobardi Scafati Basket,1771,APU Old Wild West Udine,0,team,,,,,,,,,0,,,,,,,3,3,6,,0,1,,,0,0,0,0,,5,,
 25607,2026-09-27T18:00:00.000+02:00,1,1768,Longobardi Scafati Basket,1771,APU Old Wild West Udine,0,total,,,,,,,200,12000,63,19,44,6,22,7,11,11,22,33,16,9,17,3,4,13,16,0,0,5,61,0.9031517,
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,9367,FRA-TRE-98,1,Trent,FRAZIER,0,21,1260,16,5,5,1,4,3,4,0,0,0,1,0,0,0,0,1,4,0,0,0,16,1.4545455,0
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,9368,CAR-MAR-99,2,Marcus,CARR,1,25,1500,21,5,10,1,3,8,9,0,3,3,13,0,1,0,0,1,6,0,0,0,33,1.1351351,26
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,1051,CAS-DAV-03,7,Davide,CASARIN,0,10,600,0,0,1,0,1,0,0,0,0,0,3,0,3,0,0,2,0,0,0,0,-4,0,-7
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,9370,MOO-WEN-01,8,Wendell,MOORE,1,20,1200,8,1,3,1,3,3,3,1,4,5,4,0,2,0,0,3,4,0,0,0,12,0.8421053,-1
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,9371,EVA-KES-00,9,Kessler,EDWARDS,0,20,1200,5,1,2,1,3,0,0,0,6,6,1,1,0,0,0,2,0,0,0,1,8,1,6
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,274,BAL-TOM-88,11,Tommaso,BALDASSO,0,17,1020,2,1,4,0,2,0,0,1,2,3,0,0,0,0,0,4,0,0,1,0,-4,0.3333333,-24
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,6797,BAI-MAT-07,13,Matteo,BAIOCCHI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,2608,HAC-DAN-87,23,Daniel,HACKETT,0,15,900,5,1,1,1,1,0,0,3,1,4,3,0,0,0,0,3,3,0,0,0,12,2.5,21
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,7132,FER-FRA-05,24,Francesco,FERRARI,1,13,780,8,0,1,1,3,5,7,1,0,1,1,0,0,2,0,4,3,0,0,0,6,1.0666667,12
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,9043,DIA-ALI-01,31,Aliou,DIARRA,0,16,960,10,3,4,0,0,4,5,0,0,0,0,0,2,0,0,4,4,0,1,2,6,1.1764706,-5
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,9372,KLI-BO-03,34,Bo,KLINTMAN,1,27,1620,15,6,7,1,3,0,0,2,5,7,1,0,2,0,0,3,2,0,0,2,17,1.25,13
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,player,1774,DIO-MOU-18,35,Mouhamet Rassoul,DIOUF,1,16,960,8,2,5,0,0,4,4,2,5,7,0,1,0,1,0,2,3,0,0,0,15,1.1428571,4
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,team,,,,,,,,,0,,,,,,,2,2,4,,0,1,,,0,0,0,0,,3,,
+25368,2026-10-04T18:15:00.000+02:00,2,1750,Virtus Costa Bologna,1762,Maxima Roma,1,total,,,,,,,200,12000,98,25,43,7,23,27,32,12,28,40,27,2,11,3,0,29,29,0,2,5,120,1.19011136,
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,536,BIL-MIR-89,2,Miro,BILAN,1,19,1140,10,2,6,0,0,6,8,2,0,2,1,0,2,0,2,2,6,0,0,1,7,0.8333333,-14
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,9374,HOL-AAR-96,3,Aaron,HOLIDAY,1,21,1260,6,2,2,0,2,2,2,0,1,1,3,0,1,0,0,4,4,0,0,0,7,1,-18
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,76,ALI-MIR-92,5,Mirza,ALIBEGOVIC,0,22,1320,8,0,0,2,5,2,2,0,2,2,1,0,1,0,0,3,2,0,0,0,6,1.1428571,2
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,3185,LEM-BRY-95,11,Brynton,LEMAR,1,21,1260,18,3,5,2,4,6,6,0,1,1,1,0,0,0,0,3,4,0,0,0,17,1.5,-20
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,5764,VER-GIO-98,16,Giovanni,VERONESI,0,18,1080,11,0,1,3,7,2,2,0,1,1,1,1,1,0,0,2,2,0,0,0,8,1.1,11
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,9375,MOO-XAV-95,17,Xavier,MOON,0,28,1680,13,5,7,1,4,0,0,0,4,4,8,1,4,0,0,3,1,0,0,0,15,0.8666667,4
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,7222,BRE-AND-08,18,Andrea,BRESCIANI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,625,BON-FED,23,Federico,BONACINI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,5913,WHE-CAR-98,24,Carl,WHEATLE,1,14,840,2,0,0,0,1,2,2,1,1,2,0,0,1,0,0,5,2,0,0,0,-1,0.6666667,-13
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,934,CAM-GOR-18,29,Gora,CAMARA,0,17,1020,7,3,6,0,0,1,2,1,3,4,0,0,1,0,1,3,2,0,0,0,4,0.875,13
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,9377,RYA-MAT-97,32,Matt,RYAN,1,10,600,2,1,2,0,4,0,0,0,1,1,0,0,0,0,0,2,1,0,0,0,-3,0.3333333,-13
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,player,774,BRO-JHO-92,100,John,BROWN,0,30,1800,12,3,7,0,0,6,10,5,6,11,3,2,0,0,0,2,5,0,0,0,23,1,3
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,team,,,,,,,,,0,,,,,,,1,3,4,,0,0,,,0,0,0,0,,4,,
+25368,2026-10-04T18:15:00.000+02:00,2,1762,Maxima Roma,1750,Virtus Costa Bologna,0,total,,,,,,,200,12000,89,19,36,8,27,27,34,10,23,33,18,4,11,0,3,29,29,0,0,1,87,0.93178571,
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,6138,MAN-NIC-01,1,Niccolò,MANNION,1,24,1440,19,4,4,2,5,5,5,1,5,6,9,1,1,0,0,2,5,0,0,0,34,1.52,29
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,9385,WAT-PAU-94,3,Paul,WATSON,0,18,1080,13,3,3,2,4,1,2,0,2,2,1,0,0,0,0,3,2,0,0,0,12,1.625,15
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,6258,DAV-COR-97,5,Corey,DAVIS,0,17,1020,13,5,6,1,1,0,0,0,1,1,6,1,1,0,0,2,0,0,0,0,17,1.625,19
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,9379,EME-GIO-02,7,Giovanni,EMEJURU,0,16,960,4,2,2,0,0,0,0,0,3,3,0,0,2,1,0,5,1,0,0,1,2,1,13
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,6188,TAV-RIC-91,8,Riccardo,TAVERNELLI,0,1,60,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,2,0,0
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,9384,STE-ERI-99,10,Erik,STEVENSON,1,26,1560,19,2,2,5,7,0,0,0,3,3,4,0,1,0,0,1,1,0,0,0,23,1.9,20
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,9380,AYA-GER-01,11,Gerald,AYAYI,0,22,1320,7,3,4,0,1,1,2,0,1,1,2,1,3,0,0,1,1,0,0,0,5,0.7777778,11
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,5369,STR-ART,12,Arturs,STRAUTINS,1,28,1680,12,3,5,1,4,3,5,1,5,6,3,0,3,0,0,2,2,0,0,0,11,0.8275862,27
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,9386,ODZ-GIA-08,13,Giannis,ODZEBE,0,3,180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,9382,SIM-MAR-99,19,Marko,SIMONOVIC,1,23,1380,14,6,7,0,2,2,4,1,7,8,1,1,2,1,0,3,5,0,0,1,20,1.0769231,25
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,3710,MEZ-AND-98,24,Andrea,MEZZANOTTE,1,19,1140,5,1,2,1,3,0,0,2,1,3,0,0,0,0,0,4,2,0,0,1,3,1,19
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,player,9383,IUZ-MIK-02,33,Mike,IUZZOLINO,0,3,180,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,2,7
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,team,,,,,,,,,0,,,,,,,6,3,9,,0,0,,,0,0,0,0,,9,,
+25369,2026-10-04T16:00:00.000+02:00,2,1761,BC Roma,1752,Bertram Derthona Tortona,1,total,,,,,,,200,12000,108,30,36,12,27,12,18,11,32,43,27,4,13,2,0,24,19,0,0,3,139,1.33522871,
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,7048,HUB-PRE-99,3,Prentiss,HUBB,1,25,1500,8,2,4,1,8,1,2,1,1,2,3,0,2,0,1,1,4,0,0,0,3,0.5333333,-28
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,7431,GOR-JUS-98,4,Justin,GORHAM,1,25,1500,12,4,6,0,0,4,4,0,3,3,1,0,1,0,0,4,3,0,0,0,12,1.3333333,-25
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,4268,PEC-AND-97,6,Andrea,PECCHIA,0,19,1140,3,0,0,1,1,0,0,2,0,2,2,0,0,0,0,0,0,0,0,0,7,3,-17
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,75,ALI-AMA-95,7,Amar,ALIBEGOVIC,0,20,1200,4,2,5,0,1,0,0,2,1,3,1,2,1,0,0,3,1,0,0,0,3,0.5714286,-13
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,7537,DIM-EDO-08,9,Edoardo,DI MEO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,656,BOR-GIO,12,Giordano,BORTOLANI,0,13,780,4,1,9,0,3,2,2,1,0,1,0,1,0,0,0,0,2,0,0,0,-3,0.3076923,-10
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,9038,OLE-DOM-96,17,Dominik,OLEJNICZAK,1,26,1560,9,2,5,0,0,5,6,1,1,2,2,0,1,0,0,4,5,0,0,1,9,1,-28
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,9351,MAD-DAN-02,21,Dante,MADDOX,1,27,1620,15,2,3,2,8,5,5,1,1,2,2,0,4,0,1,2,4,0,0,0,9,0.8571429,-28
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,2313,GAZ-GIU-91,24,Giulio,GAZZOTTI,0,8,480,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-8
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,9006,JAL-KAR-97,35,Karim,JALLOW,1,22,1320,8,2,2,1,1,1,2,0,1,1,1,0,0,0,0,4,3,0,1,0,8,2,-23
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,9009,DUR-ALJ-98,42,Aljami,DURHAM,0,15,900,7,3,4,0,4,1,1,1,2,3,1,0,1,0,0,1,2,0,0,0,6,0.7368421,-10
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,player,1875,EBO-PAU-00,100,Paul,EBOUA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,team,,,,,,,,,0,,,,,,,1,1,2,,0,0,,,0,0,0,0,,2,,
+25369,2026-10-04T16:00:00.000+02:00,2,1752,Bertram Derthona Tortona,1761,BC Roma,0,total,,,,,,,200,12000,70,18,38,5,26,19,22,10,11,21,13,3,10,0,2,19,24,0,1,1,56,1.1488636111111112,
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,9330,BRO-DAR-99,0,Darius,BROWN,1,29,1740,14,4,5,1,7,3,6,2,4,6,8,1,3,1,0,0,4,0,0,0,21,0.7777778,-1
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,9329,BRO-CHA-97,4,Charles,BROWN,0,22,1320,5,2,5,0,4,1,1,1,4,5,4,0,5,0,1,3,2,0,0,0,0,0.3448276,-9
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,439,BER-ALE-02,5,Alessandro,BERTINI,1,21,1260,6,0,0,2,5,0,0,2,3,5,0,0,1,0,0,2,1,0,0,0,6,1,5
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,7279,NIA-CHE-08,7,Cheickh,NIANG,0,21,1260,12,3,4,2,4,0,0,3,2,5,0,1,0,1,0,4,2,0,0,2,14,1.5,-8
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,9328,OLI-QUI-01,8,Quincy,OLIVARI,1,27,1620,19,1,6,5,12,2,2,0,1,1,4,1,2,0,0,3,4,0,0,0,12,0.9047619,5
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,2148,FOR-TOT-86,10,Toto,FORRAY,0,7,420,3,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,2,1,-5
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,7119,CAT-FED-08,11,Federico,CATTAPAN,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,7600,VER-GIU-08,12,Giulio,VERGNAGHI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,7449,MAW-SEL-98,21,Selom,MAWUGBE,1,15,900,7,3,4,0,0,1,1,4,2,6,2,0,3,0,1,5,2,0,0,0,7,0.9333333,-3
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,9327,BIG-ISA-00,24,Isaiah,BIGELOW,0,19,1140,15,4,7,2,4,1,1,2,2,4,1,0,0,0,1,5,1,0,1,1,10,1.3043478,8
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,378,BAY-JOR-99,26,Jordan,BAYEHE,1,25,1500,4,2,7,0,2,0,0,4,4,8,0,2,2,0,0,5,3,0,0,0,3,0.3636364,-7
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,player,9170,MED-JOS-07,30,Josè Alfred,MEDINA BOUZA,0,14,840,5,1,2,1,1,0,0,0,1,1,0,0,0,0,0,4,0,0,0,0,1,1.6666667,0
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,team,,,,,,,,,0,,,,,,,6,2,8,,0,1,,,0,0,0,0,,7,,
+25371,2026-10-03T20:00:00.000+02:00,2,1763,Dolomiti Energia Trentino,1764,Nutribullet Treviso Basket,1,total,,,,,,,200,12000,90,20,41,14,40,8,11,24,25,49,20,5,18,2,3,31,19,0,1,3,83,0.97953515,
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,969,CAP-ALE-95,0,Alessandro,CAPPELLETTI,0,27,1620,17,3,8,1,3,8,9,1,5,6,4,2,2,0,0,2,5,0,0,0,22,0.9714286,12
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,9331,CAR-CHI-00,2,Chico,CARTER,1,27,1620,9,3,5,1,4,0,0,1,2,3,1,1,1,0,0,2,1,0,0,0,7,0.9,-5
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,9041,CHA-BRE-96,3,Brekkott,CHAPMAN,1,27,1620,6,1,3,0,1,4,8,1,5,6,2,1,0,2,0,3,6,0,0,0,13,0.75,11
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,4879,RUS-DEW-94,4,DeWayne,RUSSELL,1,28,1680,24,7,13,2,4,4,5,3,5,8,2,2,3,0,2,3,6,0,0,0,25,1.0666667,-9
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,7566,MAN-ALE-08,8,Alessandro,MANFREDOTTI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,3714,MIA-FED-16,11,Federico,MIASCHI,0,9,540,3,0,1,1,2,0,0,1,1,2,0,1,0,0,0,0,0,0,0,0,4,1,7
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,9042,ANI-IKE-98,13,Ike,ANIGBOGU,1,15,900,6,3,5,0,1,0,0,2,2,4,1,0,2,0,0,3,0,0,0,1,3,0.75,-9
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,9332,ALL-GRE-04,19,Gregorio,ALLINEI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,7607,IAQ-ANT-08,24,Antonio,IAQUINTA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,1189,CHI-MAT-93,26,Matteo,CHILLO,0,15,900,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0,2,0,-4
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,6191,MAC-JP-95,55,JP,MACURA,1,29,1740,20,6,11,1,4,5,5,3,0,3,0,4,2,1,0,2,5,0,0,0,21,1.025641,1
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,player,9333,CHE-VAL-97,97,Valentine,CHERY,0,23,1380,8,2,3,0,0,4,10,3,3,6,0,1,0,0,0,4,6,0,0,0,10,1,11
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,team,,,,,,,,,0,,,,,,,2,1,3,,0,0,,,0,0,0,0,,3,,
+25371,2026-10-03T20:00:00.000+02:00,2,1764,Nutribullet Treviso Basket,1763,Dolomiti Energia Trentino,0,total,,,,,,,200,12000,93,25,49,6,20,25,37,17,24,41,11,12,10,3,2,19,31,0,0,1,110,0.9329670375,
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,6604,ROS-COL-98,4,Colbey,ROSS,1,27,1620,18,4,4,2,4,4,4,1,3,4,4,0,2,0,0,5,5,0,0,0,22,1.5,-7
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,9005,CAN-ABR-02,7,Abramo,CANKA,0,6,360,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,1592,DEA-LUD-18,8,Lodovico,DEANGELI,0,20,1200,9,2,2,1,2,2,2,3,3,6,1,0,0,0,0,4,1,0,0,0,12,1.8,6
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,6993,GAL-LAN-91,9,Langston,GALLOWAY,1,28,1680,5,1,4,0,5,3,4,2,3,5,3,1,3,0,0,1,3,0,0,0,4,0.3571429,-2
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,4890,RUZ-MIC-93,10,Michele,RUZZIER,0,21,1260,8,1,3,0,1,6,6,0,2,2,4,0,1,0,0,1,4,0,0,0,13,1,-7
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,7616,MAR-EMA-07,11,Emanuele,MARTUCCI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,949,CAN-FRA-94,13,Francesco,CANDUSSI,0,22,1320,13,2,6,3,7,0,0,0,4,4,0,1,1,0,0,4,0,0,0,0,5,0.9285714,2
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,7617,BRE-LOR-07,16,Lorenzo,BREGANT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,7420,BRA-LUK-99,17,Luka,BRAJKOVIC,1,15,900,1,0,1,0,0,1,2,2,1,3,0,0,0,0,0,3,3,0,0,0,2,0.5,-10
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,9390,JON-LAJ-04,25,Lajae,JONES,1,26,1560,16,6,10,0,3,4,7,2,6,8,1,1,0,1,0,0,5,0,0,1,22,0.969697,-10
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,7007,MCD-SEA-96,30,Sean,MCDERMOTT,1,32,1920,12,1,1,2,10,4,4,1,3,4,0,1,2,0,0,4,5,0,0,0,8,0.8,-6
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,player,7478,PAI-DAV-XX,15,Davide,PAIANO,0,3,180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,-1,0,3
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,team,,,,,,,,,0,,,,,,,1,0,1,,0,0,,,0,0,0,0,,1,,
+25372,2026-10-04T17:30:00.000+02:00,2,1767,Pallacanestro Trieste,1753,Umana Reyer Venezia,1,total,,,,,,,200,12000,82,17,31,8,32,24,29,12,25,37,13,4,9,1,0,23,26,0,0,1,88,0.9819264125,
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,6499,MAR-OCT-04,1,Octavio,MARETTO,0,11,660,2,1,2,0,1,0,0,0,2,2,0,0,1,0,0,3,1,0,0,0,-1,0.5,5
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,1670,DEN-GIO-96,5,Giovanni,DE NICOLAO,0,4,240,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,-3
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,954,CAN-LEO-97,7,Leonardo,CANDI,1,33,1980,15,3,3,2,4,3,4,2,2,4,6,1,2,0,0,3,4,0,0,0,22,1.3636364,9
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,6648,BOW-KY-97,0,Ky,BOWMAN,0,19,1140,4,0,3,0,2,4,4,1,3,4,3,1,0,0,1,1,4,0,0,0,9,0.5714286,7
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,9360,BOA-ENO-03,13,Enoch,BOAKYE,0,7,420,0,0,1,0,0,0,0,0,2,2,0,0,0,0,0,2,0,0,0,0,-1,0,3
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,9362,OLI-LOU-98,19,Louis,OLINDE,1,22,1320,11,2,4,1,2,4,4,2,4,6,4,0,2,0,0,2,3,0,0,0,17,1.1,9
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,9363,WAT-GLY-97,30,Glynn,WATSON,1,27,1620,17,1,1,5,6,0,0,0,5,5,3,0,1,0,0,3,1,0,0,0,21,2.125,16
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,2534,GRE-ERI-91,32,Erick,GREEN,0,18,1080,7,2,3,1,5,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,-1,0.875,-13
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,7079,WIL-KYL-92,33,Kyle,WILTJER,1,21,1260,13,6,11,0,3,1,2,0,2,2,0,2,2,0,0,3,1,0,0,0,4,0.7647059,-7
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,7166,TUR-GAB-08,40,Gabriele,TURCONI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,6994,GRA-SAH-02,44,Sasha,GRANT,0,20,1200,10,3,3,0,0,4,6,1,2,3,1,0,0,0,0,1,3,0,0,1,14,1.6666667,-8
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,player,5481,TES-AME-94,100,Amedeo,TESSITORI,1,18,1080,8,3,6,0,0,2,2,0,4,4,1,0,1,0,0,5,5,0,0,0,9,1,7
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,team,,,,,,,,,0,,,,,,,1,1,2,,0,1,,,0,0,0,0,,1,,
+25372,2026-10-04T17:30:00.000+02:00,2,1753,Umana Reyer Venezia,1767,Pallacanestro Trieste,0,total,,,,,,,200,12000,87,21,37,9,24,18,22,7,27,34,18,4,10,0,1,26,23,0,0,1,94,1.1073819555555557,
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,5299,SPI-MAR-95,0,Marco,SPISSU,0,18,1080,12,0,1,3,5,3,3,0,0,0,3,1,4,0,0,1,1,0,0,0,9,1.0434783,-13
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,9355,ZAC-SEL-97,1,Zac,SELJAAS,0,25,1500,7,1,2,1,3,2,3,0,5,5,1,1,0,0,0,5,2,0,0,0,7,1.0769231,14
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,9356,DOW-JEF-97,3,Jeff,DOWTIN,1,28,1680,17,6,8,0,4,5,6,2,0,2,10,2,0,1,0,2,4,0,0,0,27,1.1333333,28
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,1965,FAG-LEO-04,10,Leonardo,FAGGIAN,0,17,1020,8,0,1,2,4,2,2,0,2,2,1,0,1,0,0,2,2,0,0,0,7,1.1428571,-2
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,6142,PET-JOH-92,11,John,PETRUCELLI,1,17,1020,6,2,4,0,1,2,2,1,0,1,0,1,0,0,1,4,4,0,0,0,4,1,-13
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,7097,SAN-ASS-07,12,Assane,SANKARE,1,10,600,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,-3,0,-3
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,9357,WHI-JAC-97,14,Jack,WHITE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,6605,BRO-MAR-92,22,Markel,BROWN,0,22,1320,15,1,1,2,3,7,8,2,2,4,1,4,2,0,0,4,8,1,0,0,24,1.5,18
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,9026,JAK-AND-01,23,Andrej,JAKIMOVSKI,1,29,1740,17,3,6,2,6,5,6,0,10,10,2,0,5,0,1,3,3,0,0,0,15,0.85,1
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,5433,TAR-KAL-93,25,Kaleb,TARCZEWSKI,1,10,600,2,0,0,0,0,2,2,2,1,3,0,0,1,0,0,5,1,0,0,0,0,1,1
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,6186,CAR-GUG-99,30,Guglielmo,CARUSO,0,24,1440,15,6,6,0,1,3,4,2,0,2,0,0,1,0,0,4,2,0,0,0,12,1.5,-1
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,player,9032,RAM-JAH-01,37,Jahmi'us,RAMSEY,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,team,,,,,,,,,0,,,,,,,3,5,8,,0,0,,,1,0,0,0,,7,,
+25373,2026-10-03T20:30:00.000+02:00,2,1772,Napoli Basketball,1760,UNA Hotels Reggio Emilia,1,total,,,,,,,200,12000,99,19,31,10,27,31,36,12,25,37,18,9,14,1,2,32,27,1,0,0,109,1.1385102,
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,314,BAR-JAY-96,0,Jaylen,BARFORD,0,26,1560,12,3,8,2,7,0,1,0,2,2,4,0,1,0,0,1,2,0,0,0,7,0.7272727,-12
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,9352,EDW-ROB-97,2,Rob,EDWARDS,1,32,1920,12,2,6,2,5,2,2,2,2,4,4,3,2,0,0,3,3,0,0,0,14,0.8571429,-13
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,9139,THO-JT-02,4,JT,THOR,0,17,1020,5,1,3,0,2,3,4,1,0,1,1,1,1,1,0,1,2,0,0,1,4,0.625,-14
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,6640,ROSS-RIC-96,6,Riccardo,ROSSATO,1,21,1260,21,0,1,4,9,9,9,3,2,5,2,2,2,0,1,5,8,0,0,0,24,1.2727273,7
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,5823,VIS-RIC,9,Riccardo,VISCONTI,0,17,1020,8,0,1,2,5,2,3,0,1,1,1,1,0,0,0,2,4,0,0,0,8,1.0666667,-7
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,7195,MAN-LUC-08,11,Luca,MANFREDOTTI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,5663,UGL-LOR-94,16,Lorenzo,UGLIETTI,1,22,1320,12,2,2,2,2,2,2,1,1,2,3,0,4,0,0,5,2,1,0,0,10,1.3333333,4
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,7565,HAD-ARS-08,19,Arseniy,HADZHYIEV,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,5125,SEV-LUC-96,20,Luca,SEVERINI,1,26,1560,10,2,2,1,2,3,5,2,0,2,0,0,1,0,0,5,2,0,0,0,5,1.3333333,9
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,6887,FAI-ELH-05,25,Elhadji,FAINKE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,9036,ECH-JAI-97,26,Jaime,ECHENIQUE,1,17,1020,3,1,3,0,0,1,2,1,4,5,0,0,1,1,0,3,2,0,0,0,4,0.6,-2
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,player,7034,OGB-DER-97,34,Derek,OGBEIDE,0,22,1320,10,2,3,0,0,6,10,3,6,9,0,1,3,0,0,3,5,0,0,0,14,0.9090909,-2
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,team,,,,,,,,,0,,,,,,,3,0,3,,0,1,,,1,0,0,0,,1,,
+25373,2026-10-03T20:30:00.000+02:00,2,1760,UNA Hotels Reggio Emilia,1772,Napoli Basketball,0,total,,,,,,,200,12000,93,13,29,13,32,28,38,16,18,34,15,8,16,2,1,29,30,1,0,1,91,0.9693963444444444,
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,3200,LEV-ALE,4,Alessandro,LEVER,1,24,1440,5,1,6,1,5,0,2,1,2,3,2,0,1,1,0,5,3,0,0,0,-3,0.3846154,-6
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,2770,IAN-ANT-91,7,Antonio,IANNUZZI,0,11,660,0,0,0,0,0,0,2,0,2,2,0,1,0,1,0,0,2,0,0,0,4,0,-1
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,7030,MOO-CHA-98,8,Charlie Edward,MOORE,1,33,1980,12,2,4,1,7,5,7,1,3,4,4,1,5,0,1,1,8,0,0,0,12,0.6153846,-4
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,6436,SPI-FRA-05,9,Francesco,SPINELLI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,1142,CER-MAR-92,11,Marco,CERON,0,1,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-2
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,2293,GAR-NEV-92,12,Garrett,NEVELS,1,32,1920,21,4,4,3,8,4,4,2,2,4,1,0,3,0,0,3,6,0,0,0,21,1.2352941,-8
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,9347,OFF-MEZ-00,13,Mezie,OFFURUM,1,24,1440,14,4,8,1,2,3,4,0,2,2,0,0,2,0,0,4,3,0,0,1,7,1,-3
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,7319,MCG-ROD-91,17,Rodney,MCGRUDER,0,28,1680,5,1,3,1,2,0,0,2,0,2,0,0,0,0,0,1,0,0,0,0,3,1,-11
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,9348,ONY-ZER-01,21,Ze'Rik,ONYEMA,1,22,1320,6,3,4,0,0,0,0,2,10,12,0,0,1,3,0,5,0,0,0,0,14,1.2,-11
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,player,3526,MAS-BRU-96,33,Bruno,MASCOLO,0,25,1500,14,3,4,1,2,5,8,1,1,2,5,1,0,0,0,2,4,0,0,0,19,1.4,6
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,team,,,,,,,,,0,,,,,,,1,0,1,,0,1,,,0,0,0,0,,0,,
+25374,2026-10-04T17:00:00.000+02:00,2,1768,Longobardi Scafati Basket,1766,Openjobmetis Varese,1,total,,,,,,,200,12000,77,18,33,8,26,17,27,10,22,32,12,3,13,5,1,21,26,0,0,1,77,0.9764705857142857,
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,97,ALV-DAV-96,2,Davide,ALVITI,1,26,1560,6,1,1,1,4,1,1,0,4,4,2,1,1,0,0,2,2,0,0,0,9,0.9230769,13
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,9337,DUK-DAV-99,3,David,DUKE,1,20,1200,10,4,7,0,3,2,4,1,1,2,2,0,3,0,1,3,4,0,0,0,3,0.6666667,-1
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,6556,VIL-MAU-04,5,Mauro,VILLA,0,9,540,2,1,1,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,-1,1,3
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,4034,NIK-STE-97,11,Stefan,NIKOLIC,1,28,1680,8,4,5,0,2,0,0,0,8,8,1,1,1,0,0,4,1,0,0,1,11,1,10
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,9334,HAL-HUN-97,12,Hunter,HALE,1,28,1680,25,4,8,3,7,8,9,0,2,2,6,1,1,0,2,2,5,0,0,0,25,1.2195122,15
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,3207,LIB-MAT-02,13,Matteo,LIBRIZZI,0,19,1140,10,0,3,3,4,1,2,1,0,1,2,0,2,0,1,3,2,0,0,0,4,1,0
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,7428,REN-NAT-96,15,Nate,RENFRO,0,23,1380,14,7,9,0,0,0,1,3,4,7,4,1,1,0,0,3,3,0,0,3,22,1.3333333,11
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,7014,KAM-ISM-01,17,Ismael,KAMAGATE,1,17,1020,10,4,7,0,0,2,3,2,1,3,1,1,2,1,0,2,2,0,0,1,10,0.952381,0
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,7626,KAN-ROB-09,19,Robert,KANGUR,0,1,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,9335,ROB-ISA-98,22,Isaiah,ROBY,0,12,720,0,0,1,0,1,0,0,1,1,2,0,0,1,0,1,2,2,0,0,0,-2,0,-2
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,3155,LAU-MAX,34,Maximilian,LADURNER,0,1,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,player,2790,IKA-IRI-94,35,Iris,IKANGI,0,16,960,0,0,2,0,0,0,0,0,1,1,0,1,0,0,0,3,0,0,0,0,-3,0,-3
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,team,,,,,,,,,0,,,,,,,3,1,4,,0,0,,,0,0,0,0,,4,,
+25374,2026-10-04T17:00:00.000+02:00,2,1766,Openjobmetis Varese,1768,Longobardi Scafati Basket,0,total,,,,,,,200,12000,85,25,44,7,21,14,20,11,23,34,18,6,13,1,5,26,21,0,0,5,82,1.0118712625,
