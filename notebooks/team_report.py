@@ -42,7 +42,7 @@ def player_table(box: pd.DataFrame) -> pd.DataFrame:
     g["eFG%"] = 100 * (g.fgm + 0.5 * g.fg3m) / g.fga.replace(0, np.nan)
     g["FT%"] = 100 * g.ftm / g.fta.replace(0, np.nan)
     g["TS%"] = 100 * g.pts / (2 * (g.fga + 0.44 * g.fta)).replace(0, np.nan)
-    g["TO_per36"] = 36 * g.tov / g.MIN.replace(0, np.nan)
+    g["TO_per40"] = 40 * g.tov / g.MIN.replace(0, np.nan)
     return g
 
 
@@ -50,7 +50,7 @@ def league_line(box: pd.DataFrame) -> dict:
     t = box[box.row_type == "total"]
     fga, fgm, f3m, ftm, fta, pts = (t.fg2a + t.fg3a).sum(), (t.fg2m + t.fg3m).sum(), t.fg3m.sum(), t.ftm.sum(), t.fta.sum(), t.pts.sum()
     return {"eFG%": 100 * (fgm + 0.5 * f3m) / fga, "FT%": 100 * ftm / fta, "TS%": 100 * pts / (2 * (fga + 0.44 * fta)),
-            "TO_per36": 36 * t.tov.sum() / (t.sec.sum() / 60) * 5}   # per player-36 min: team TOV over 5 players
+            "TO_per40": 36 * t.tov.sum() / (t.sec.sum() / 60) * 5}   # per player-36 min: team TOV over 5 players
 
 
 # ── figures ─────────────────────────────────────────────────────────────────────
@@ -61,7 +61,7 @@ def zone_stats(s: pd.DataFrame) -> dict[str, tuple[int, int, float]]:
 
 def plot_zone_heatmap(ax, s, title, ref: dict | None = None, colorbar=True, fontsize=8.5):
     st = zone_stats(s)
-    xs, ys = np.linspace(-750, 750, 300), np.linspace(0, 1350, 270)
+    xs, ys = np.linspace(-750, 750, 300), np.linspace(-157.5, 1242.5, 280)
     XX, YY = np.meshgrid(xs, ys)
     zg = assign_zone_arr(XX, YY)
     pct = np.full(zg.shape, np.nan)
@@ -120,7 +120,7 @@ def fig_shot_chart(s_team, team, label, out):
     miss, make = s_team[~s_team.made], s_team[s_team.made]
     ax.scatter(miss.cx, miss.cy, s=55, facecolors="none", edgecolors=RED, linewidths=1.3, label=f"Miss ({len(miss)})", zorder=3)
     ax.scatter(make.cx, make.cy, s=55, c=GOLD, edgecolors=GOLD_EDGE, linewidths=0.7, label=f"Make ({len(make)})", zorder=4)
-    ax.legend(loc="upper right", fontsize=9)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.01), ncol=2, fontsize=9)
     ax.set_title(f"Shot Chart — all {team} field goal attempts", **TITLE_KW)
     fig.suptitle(f"{team} — LBA 2026-27 {label}", **SUP_KW)
     fig.savefig(out / "shot_chart.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
@@ -178,16 +178,16 @@ def fig_pir_ts(pt, team, label, out, min_minutes=10):
 
 
 def fig_turnovers(pt_team, pt_league, team, label, out, min_minutes=5):
-    d = pt_team[pt_team.MIN >= min_minutes].sort_values("TO_per36", ascending=False)
-    lg_med = pt_league[pt_league.MIN >= min_minutes].TO_per36.median()
+    d = pt_team[pt_team.MIN >= min_minutes].sort_values("TO_per40", ascending=False)
+    lg_med = pt_league[pt_league.MIN >= min_minutes].TO_per40.median()
     fig, ax = plt.subplots(figsize=(9, 6))
-    cols = [RED if v > 3.5 else ORANGE if v > 2.5 else GOLD for v in d.TO_per36]
-    ax.barh([f"{p}  ({mins(m)})" for p, m in zip(d.Player, d.MIN)], d.TO_per36, color=cols, edgecolor=GOLD_EDGE, linewidth=0.5)
-    for i, (v, t) in enumerate(zip(d.TO_per36, d.tov)):
+    cols = [RED if v > 3.5 else ORANGE if v > 2.5 else GOLD for v in d.TO_per40]
+    ax.barh([f"{p}  ({mins(m)})" for p, m in zip(d.Player, d.MIN)], d.TO_per40, color=cols, edgecolor=GOLD_EDGE, linewidth=0.5)
+    for i, (v, t) in enumerate(zip(d.TO_per40, d.tov)):
         ax.text(v + 0.08, i, f"{v:.2f}  ({int(t)} TO)", va="center", color=TEXT, fontsize=9)
     ax.axvline(3.5, color=RED, lw=0.8, ls="--", alpha=0.6)
     ax.axvline(lg_med, color=LEAGUE, lw=1.2, ls="--"); ax.text(lg_med, len(d) - 0.4, f" league median {lg_med:.1f}", color=LEAGUE, fontsize=8)
-    ax.set_title(f"Turnovers per 36 min  (red > 3.5, min {min_minutes} minutes)", **TITLE_KW)
+    ax.set_title(f"Turnovers per 40 min  (red > 3.5, min {min_minutes} minutes)", **TITLE_KW)
     style_axes(ax)
     fig.suptitle(f"{team} — LBA 2026-27 {label}", **SUP_KW)
     fig.savefig(out / "player_turnovers.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
