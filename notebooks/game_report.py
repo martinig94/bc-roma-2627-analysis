@@ -134,7 +134,7 @@ def fig_lineups(pbp, box, team, g, out, top=8):
     lim = max(abs(agg.pm).max(), 1) * 1.35; axes[1].set_xlim(-lim, lim)
     for ax in axes:
         style_axes(ax, "x")
-    fig.suptitle(f"{team} — five-man lineups, top {len(agg)} by minutes  |  round {g['round']} vs {g.away_team if g.home_team == team else g.home_team}", x=0.02, ha="left", **SUP_KW)
+    fig.suptitle(f"{team} — five-man lineups, top {len(agg)} by minutes  |  round {g['round']} vs {g.away_team if g.home_team == team else g.home_team}", **SUP_KW)
     fig.savefig(out / "lineups.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
     return agg
 
@@ -149,7 +149,7 @@ def fig_shotmap(shots_game, team, opp, g, out):
         ax.scatter(made.cx, made.cy, s=60, color=col, edgecolors=edge, linewidths=0.7, label=f"made ({len(made)})", zorder=4)
         two, three = s[s.pts == 2], s[s.pts == 3]
         ax.set_title(f"{tm}\n{int(s.made.sum())}/{len(s)} FG  ·  2pt {int(two.made.sum())}/{len(two)}  ·  3pt {int(three.made.sum())}/{len(three)}", **TITLE_KW)
-        ax.legend(loc="upper right", fontsize=9)
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.01), ncol=2, fontsize=9)
     fig.suptitle(f"Shot charts — {g.home_team} {g.home_score}–{g.away_score} {g.away_team}, round {g['round']}", **SUP_KW)
     fig.text(0.01, 0.01, "Every field-goal attempt from the play-by-play, both halves folded onto one basket.", color=TEXT2, fontsize=8)
     fig.savefig(out / "shotmap.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
@@ -181,7 +181,7 @@ def fig_shot_profile(shots_game, shots_league, team, opp, g, out):
     axes[1].axhline(1.0, color=TEXT2, lw=0.8, ls="--")
     for ax in axes:
         ax.set_xticks(x); ax.set_xticklabels(zones); style_axes(ax, "y"); ax.legend(fontsize=9)
-    fig.suptitle(f"Shot profile — {g.home_team} {g.home_score}–{g.away_score} {g.away_team}, round {g['round']}", y=1.06, **SUP_KW)
+    fig.suptitle(f"Shot profile — {g.home_team} {g.home_score}–{g.away_score} {g.away_team}, round {g['round']}", **SUP_KW)
     fig.savefig(out / "shot_profile.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
 
 

@@ -21,7 +21,7 @@ GOLD_EDGE = "#B08D00"     # thin edge so gold reads on white
 RED, GREEN, BLUE, ORANGE = "#d94b4b", "#2e9e5b", "#4a7fc1", "#e08c52"
 LEAGUE = "#9aa0b4"        # muted steel for league / opponent reference
 TEXT, TEXT2, GRID, COURT = "#1a1a2e", "#5a5e73", "#e3e4ea", "#5b5f78"
-TITLE_KW = dict(color=TEXT, fontsize=13, fontweight="bold", pad=10)
+TITLE_KW = dict(color=TEXT, fontsize=13, fontweight="bold", pad=12)
 SUP_KW = dict(color=TEXT, fontsize=15, fontweight="bold")
 DPI = 160
 
@@ -30,6 +30,7 @@ plt.rcParams.update({
     "text.color": TEXT, "axes.labelcolor": TEXT2, "xtick.color": TEXT2, "ytick.color": TEXT2,
     "axes.edgecolor": GRID, "grid.color": GRID, "grid.linewidth": 0.8,
     "font.family": "DejaVu Sans", "legend.frameon": False,
+    "figure.constrained_layout.use": True, "figure.constrained_layout.h_pad": 0.12, "figure.constrained_layout.w_pad": 0.12,   # keeps suptitles, axes titles and colorbars from overlapping
 })
 
 
@@ -70,20 +71,26 @@ def assign_zone_arr(x: np.ndarray, y: np.ndarray) -> np.ndarray:
 
 
 def draw_half_court(ax: Axes, color: str = COURT, lw: float = 1.4) -> None:
-    """FIBA half court, basket at the origin, units cm (same as basketball_analytics)."""
-    ft_y = 422
+    """FIBA half court, basket at the origin, units cm (same frame as basketball_analytics).
+
+    Baseline at y = -157.5 (the rim is 1.575 m in from it), half-way line at y = 1242.5.
+    """
+    ft_y, base = 422, -157.5
     for el in [Circle((0, 0), 22.5, lw=lw, color=color, fill=False),
                Rectangle((-91.5, -20), 183, -4, lw=lw, color=color),
-               Rectangle((-245, 0), 490, ft_y, lw=lw, edgecolor=color, facecolor="none"),
+               Rectangle((-245, base), 490, ft_y - base, lw=lw, edgecolor=color, facecolor="none"),
                Arc((0, ft_y), 360, 360, theta1=0, theta2=180, lw=lw, color=color),
                Arc((0, ft_y), 360, 360, theta1=180, theta2=0, lw=lw, color=color, linestyle="dashed"),
                Arc((0, 0), 250, 250, theta1=0, theta2=180, lw=lw, color=color),
-               Rectangle((-660, 0), 0, 90, lw=lw, color=color), Rectangle((660, 0), 0, 90, lw=lw, color=color),
+               Rectangle((-660, base), 0, 299, lw=lw, color=color), Rectangle((660, base), 0, 299, lw=lw, color=color),
                Arc((0, 0), 1350, 1350, theta1=12, theta2=168, lw=lw, color=color),
-               Rectangle((-750, 0), 1500, 1400, lw=lw, edgecolor=color, facecolor="none"),
-               Arc((0, 1400), 360, 360, theta1=180, theta2=0, lw=lw, color=color)]:
+               Rectangle((-750, base), 1500, 1400, lw=lw, edgecolor=color, facecolor="none"),
+               Arc((0, base + 1400), 360, 360, theta1=180, theta2=0, lw=lw, color=color)]:
         ax.add_patch(el)
-    ax.set_xlim(-800, 800); ax.set_ylim(-150, 1450); ax.set_aspect("equal"); ax.axis("off")
+    ax.set_xlim(-790, 790); ax.set_ylim(-200, 1290); ax.set_aspect("equal"); ax.axis("off")
+
+
+COURT_X, COURT_Y = (-742, 742), (-150, 1235)   # inside the lines; shots are clipped to this box
 
 
 def shots_cm(pbp: pd.DataFrame) -> pd.DataFrame:
@@ -97,9 +104,19 @@ def shots_cm(pbp: pd.DataFrame) -> pd.DataFrame:
     s["pts"] = s.event.str[0].astype(int)
     flip = s.x > 50
     xf = np.where(flip, 100 - s.x, s.x); yf = np.where(flip, 100 - s.y, s.y)
-    s["cx"] = (yf - 50) * 15.0
-    s["cy"] = xf * 28.0 - 157.5
+    s["cx"] = np.clip((yf - 50) * 15.0, *COURT_X)      # scorer clicks occasionally land outside the lines
+    s["cy"] = np.clip(xf * 28.0 - 157.5, *COURT_Y)
     s["dist"] = np.hypot(s.cx, s.cy)
     s["zone"] = assign_zone_arr(s.cx.values, s.cy.values)
     s["player"] = s.player_surname.fillna("").str.title()
     return s
+
+
+# ── team colours (BC Roma always gold; add others as needed) ──────────────────────
+TEAM_COLORS = {"BC Roma": (GOLD, GOLD_EDGE), "Maxima Roma": ("#2b2b36", "#111118")}
+_FALLBACK = [(BLUE, "#2f5f99"), (ORANGE, "#b46a3a"), (GREEN, "#1f6e3f")]
+
+
+def team_color(team: str, idx: int = 0) -> tuple[str, str]:
+    """(fill, edge) for a team; unknown teams cycle through blue/orange/green by idx."""
+    return TEAM_COLORS.get(team, _FALLBACK[idx % len(_FALLBACK)])
