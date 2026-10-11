@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 from game_report import game_clock, stints
-from lba_style import (BLUE, DPI, GOLD, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS,
+from lba_style import (save_fig, BLUE, DPI, GOLD, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS,
                        assign_zone_arr, draw_half_court, shots_cm, style_axes, team_color)
 from matchup_report import parse_eurocup, player_table
 
@@ -150,7 +150,7 @@ def player_card(pbp, box, team, surname, pt_row, ev, out, color):
     ]
     ax_txt.text(0, 0.95, "\n\n".join(lines), va="top", ha="left", fontsize=10.5, color=TEXT, wrap=True, transform=ax_txt.transAxes)
     fig.suptitle(f"{team} — {surname.title()}", **SUP_KW)
-    fig.savefig(out / f"{surname.lower()}.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / f"{surname.lower()}.png"); plt.close(fig)
 
 
 def fig_connections(pbp, team, players, out, color):
@@ -176,7 +176,7 @@ def fig_connections(pbp, team, players, out, color):
     tot_ast = int(mat.values.sum()); tot_mk = len(makes)
     ax.set_title(f"{team} — who feeds whom (LBA only): {tot_ast} assists on {tot_mk} field goals ({100 * tot_ast / tot_mk:.0f}% assisted)", **TITLE_KW)
     ax.tick_params(length=0)
-    fig.savefig(out / "connections.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "connections.png"); plt.close(fig)
     return mat
 
 
@@ -204,7 +204,7 @@ def fig_habits_summary(evs: dict, pts: pd.DataFrame, team, out, color):
         ax.set_title(lab, fontsize=9.5, color=TEXT, fontweight="bold"); ax.set_xlim(0, d[c].max() * 1.35 + 1e-9); style_axes(ax, "x")
     axes[0].set_yticks(y); axes[0].set_yticklabels(d.player, fontsize=9.5); axes[0].invert_yaxis()
     fig.suptitle(f"{team} — on-court habits of the key players (LBA only)", **SUP_KW)
-    fig.savefig(out / "habits_summary.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "habits_summary.png"); plt.close(fig)
     return d
 
 
@@ -216,18 +216,28 @@ def main():
     ap.add_argument("--data", default=str(Path(__file__).resolve().parent.parent / "data"))
     ap.add_argument("--eurocup", default=None); ap.add_argument("--no-eurocup", action="store_true")
     ap.add_argument("--out", default="reports")
+    ap.add_argument("--before", default=None, help="YYYY-MM-DD: only games before this date (frozen pre-match snapshot)")
     a = ap.parse_args()
     data = Path(a.data)
-    out = Path(a.out) / f"players_{a.team.replace(' ', '_')}"; out.mkdir(parents=True, exist_ok=True)
+    suffix = f"_before_{a.before}" if a.before else ""
+    out = Path(a.out) / f"players_{a.team.replace(' ', '_')}{suffix}"; out.mkdir(parents=True, exist_ok=True)
     games = pd.read_csv(data / "games.csv")
     box = pd.read_csv(data / "box_scores.csv"); box["competition"] = "LBA"
     box["date"] = box.match_datetime.str[:10]
     pbp = pd.read_csv(data / "pbp.csv")
+    if a.before:
+        import lba_style
+        from datetime import date as _d
+        lba_style.STAMP_NOTE = f"games before {_d.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
+        box = box[box.date < a.before]; pbp = pbp[pbp.game_id.isin(box.game_id.unique())]
     ec_path = Path(a.eurocup) if a.eurocup else data / "eurocup_2026_raw.txt"
     box_all = box
     if not a.no_eurocup and ec_path.exists():
         ec_box, _ = parse_eurocup(ec_path)
-        box_all = pd.concat([box, ec_box[ec_box.team == a.team]], ignore_index=True)
+        ec_box = ec_box[ec_box.team == a.team]
+        if a.before:
+            ec_box = ec_box[ec_box.date < a.before]
+        box_all = pd.concat([box, ec_box], ignore_index=True)
     pt = player_table(box_all, a.team).set_index("player_surname")
     if a.players:
         players = [p.upper() for p in a.players]
