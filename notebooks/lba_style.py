@@ -133,3 +133,52 @@ _FALLBACK = [(BLUE, "#2f5f99"), (ORANGE, "#b46a3a"), (GREEN, "#1f6e3f")]
 def team_color(team: str, idx: int = 0) -> tuple[str, str]:
     """(fill, edge) for a team; unknown teams cycle through blue/orange/green by idx."""
     return TEAM_COLORS.get(team, _FALLBACK[idx % len(_FALLBACK)])
+
+
+# ── zone polygons (vector, smooth edges) ────────────────────────────────────────
+def zone_polygons() -> dict:
+    """The nine A–I zones as shapely polygons in the court frame (cm), mirroring assign_zone_arr exactly.
+
+    Used to draw zone heatmaps as filled vector patches instead of a pixel grid.
+    """
+    from shapely.geometry import Point, Polygon, box
+    from shapely.ops import unary_union
+
+    court = box(-750, -157.5, 750, 1242.5)
+    circ = lambda r: Point(0, 0).buffer(r, resolution=256)
+    strips = unary_union([box(-750, -157.5, -CORNER_X, CORNER_Y), box(CORNER_X, -157.5, 750, CORNER_Y)])
+    inside3 = circ(THREE_PT_RADIUS).difference(strips).intersection(court)
+    three = court.difference(inside3)
+    a = circ(RESTRICTED_R).intersection(court)
+    short = circ(SHORT_RANGE_MAX).difference(circ(RESTRICTED_R)).intersection(court)
+    mid = inside3.difference(circ(SHORT_RANGE_MAX))
+    big = 5000
+    left_sector = Polygon([(0, 0), (-big, big), (-big, -big), (big, -big)])    # x < -y
+    right_sector = Polygon([(0, 0), (big, big), (big, -big), (-big, -big)])    # x > y
+    left_half, right_half = box(-big, -big, 0, big), box(0, -big, big, big)
+    zones = {
+        "A": a,
+        "B": short.intersection(left_half), "C": short.intersection(right_half),
+        "D": mid.intersection(left_sector), "F": mid.intersection(right_sector),
+        "G": three.intersection(left_sector), "I": three.intersection(right_sector),
+    }
+    zones["E"] = mid.difference(zones["D"]).difference(zones["F"])
+    zones["H"] = three.difference(zones["G"]).difference(zones["I"])
+    return zones
+
+
+def draw_zone_fill(ax, pct_by_zone: dict, cmap, vmin=0, vmax=100, alpha=0.85, empty="#e6e6ee", zorder=1):
+    """Fill the nine zones with cmap(pct) as smooth vector patches; zones missing from pct_by_zone get `empty`."""
+    from matplotlib.colors import Normalize
+    from matplotlib.patches import PathPatch
+    from matplotlib.path import Path as MPath
+    norm = Normalize(vmin, vmax)
+    for z, geom in zone_polygons().items():
+        geoms = geom.geoms if hasattr(geom, "geoms") else [geom]
+        color = cmap(norm(pct_by_zone[z])) if z in pct_by_zone else empty
+        for g in geoms:
+            verts, codes = [], []
+            for ring in [g.exterior, *g.interiors]:
+                pts = list(ring.coords)
+                verts += pts; codes += [MPath.MOVETO] + [MPath.LINETO] * (len(pts) - 2) + [MPath.CLOSEPOLY]
+            ax.add_patch(PathPatch(MPath(verts, codes), facecolor=color, edgecolor=color, linewidth=0.3, alpha=alpha, zorder=zorder))
