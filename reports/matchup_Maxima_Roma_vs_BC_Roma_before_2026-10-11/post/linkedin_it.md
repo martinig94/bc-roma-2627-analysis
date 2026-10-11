@@ -1,6 +1,6 @@
 Stasera Roma ritrova il derby di Serie A dopo 46 anni: Maxima Roma – BC Roma, PalaEur, ore 18:15.
 
-Ho passato la settimana a costruire una piccola pipeline open sul play-by-play di legabasket.it (ogni tiro con le coordinate, ogni assist collegato al canestro, ogni cambio) e sui tabellini di EuroCup, per capire cosa dicono già quattro partite a testa. Alcune cose che saltano all'occhio:
+Ho raccolto e processato in maniera programmatica i dati delle due competizioni (LBA ed EuroCup) per capire cosa dicono già quattro partite a testa. Alcune cose che saltano all'occhio:
 
 🏀 Due attacchi opposti. BC Roma vive nel pitturato: 38 punti a partita entro 4,5 m, 82% in area, 18/23 in penetrazione. Maxima ne segna 25 dentro (13 sotto la media del campionato), tira col 52% sotto canestro e si regge sulla lunetta: 26 liberi a partita con l'82,5%.
 
@@ -16,7 +16,7 @@ La mia lettura dai numeri: BC Roma controlla area e rimbalzi e vince di pochi pu
 
 L'analisi completa, con tutti i grafici e il ragionamento dietro ogni numero, è qui (in italiano, con versione inglese): martinig94.github.io/about_me/Derby_Roma_2026_it.html
 
-Codice e dati sono su GitHub: github.com/martinig94/lba-2627-data. Tutto si rigenera per qualsiasi partita con un comando e si aggiorna da solo ogni lunedì.
+Codice e dati sono su GitHub: github.com/martinig94/lba-2627-data. Per dettagli su dati e metodo, scrivetemi.
 
 🇬🇧 English version in the first comment.
 
