@@ -69,3 +69,5 @@ The tendencies suggest BC Roma controls the paint and the glass (12.8 offensive 
 - [Derby, 6.100 biglietti venduti (Eurosport)](https://www.eurosport.it/basket/serie-a/2026-2027/derby-di-roma-gia-6.100-biglietti-venduti-primi-due-anelli-del-palaeur-sold-out-per-maxima-roma-bc-roma_sto23343885/story.shtml)
 - [Türk Telekom – Maxima Roma 92–77 (Timeout Channel)](https://www.timeoutchannel.it/eurocup-2a-giornata-turk-telekom-maxima-roma-92-77-non-basta-bilan-bianconeri-sconfitti-in-turchia/), [Maxima Roma – Cluj 89–55 pagelle (Backdoor)](https://backdoorpodcast.com/maxima-roma-straripante-all-esordio-in-eurocup/), [BC Roma – Lietkabelis (NbaPassion)](https://www.nbapassion.com/lega-basket-a/bc-roma-spqr/il-bc-roma-parte-forte-poi-soffre-lietkabelis-ko-al-photofinish-324996/)
 - Box scores and play-by-play: legabasket.it (via this repo's collector) and the EuroLeague live API (`data/eurocup_2026_raw.txt`)
+
+- `11_clutch.png` — clutch time (last 5:00 of Q4/OT, score within 5): points, shooting line, assists and turnovers per player, LBA + EuroCup play-by-play. Produced by `notebooks/clutch_report.py --before 2026-10-11`.

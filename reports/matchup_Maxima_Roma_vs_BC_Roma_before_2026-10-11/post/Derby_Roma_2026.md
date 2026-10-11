@@ -57,6 +57,16 @@ On LBA games only, both teams play at the same pace (76 and 75 possessions a gam
 
 ![basic stats](assets/images/derby_2026/09_basic_stats.png)
 
+## Who has the ball in the last five minutes
+
+For "clutch" I use the NBA definition: last five minutes of the fourth quarter or overtime with the score within five points at the moment of the play. The filter removes blowouts, and so far close finishes are rare: two for BC Roma (the 92–87 over Lietkabelis, played entirely within five points over the last five minutes, and a handful of possessions in Istanbul before Bahcesehir pulled away) and one for Maxima (Bologna, where it came back to level before losing 98–89). Napoli, Treviso, Tortona, Cluj and Ankara were never close at the end.
+
+In those minutes BC Roma scored 11 points on 4/7 shooting and conceded 8, but turned the ball over four times, against a league average of 1.2 per close finish. The ball goes through Mannion (2/4, two turnovers, four fouls drawn) and Simonovic, who closed the Lietkabelis game with 20 seconds left with an offensive rebound, the basket and two free throws; Stevenson's three at 1:07 came off a Simonovic assist.
+
+Maxima scored 7 points in five minutes at Bologna, with one field goal (Moon) and the rest from the line (Alibegovic, Lemar and Brown, 5/6), three turnovers, two of them by Bilan, and 18 points conceded. It is the same pattern as its games overall: a late offence that lives at the free-throw line while the opponent scores from the field.
+
+![clutch](assets/images/derby_2026/11_clutch.png)
+
 ## What to expect
 
 Two matchups should decide it. First, whether Maxima can keep BC Roma's drivers out of the restricted area, where BC Roma takes a third of its shots and makes 82% and Maxima's opponents are shooting 34/45. Second, whether BC Roma can defend without fouling, because its 28.5 opponent free throws a game run straight into the league's best free-throw team.
@@ -65,6 +75,6 @@ The tendencies say BC Roma controls the paint and the glass (12.8 offensive rebo
 
 ## Caveats
 
-Four games is a thin sample and some of the player numbers are already noisy (a 1/1 night shows up as 125% true shooting). Shot coordinates are the league scorer's clicks: all threes come out at 6.8–8.0 m from the rim and all twos under 6.5 m, so the scaling is right, but individual positions carry perhaps half a metre of noise, fine for zones, not for exact distances. The EuroCup data carries box scores and shot zones but not shot types or assist links, so the habit charts are LBA only and say so.
+Four games is a thin sample and some of the player numbers are already noisy (a 1/1 night shows up as 125% true shooting). Shot coordinates are the league scorer's clicks: all threes come out at 6.8–8.0 m from the rim and all twos under 6.5 m, so the scaling is right, but individual positions carry perhaps half a metre of noise, fine for zones, not for exact distances. The EuroCup data carries box scores, shot zones and the late-game play-by-play (used for the clutch minutes) but not shot types or assist links, so the habit charts are LBA only and say so.
 
 *A post-game version of this page, comparing what happened with the expectations above, will follow once the final play-by-play is collected.*

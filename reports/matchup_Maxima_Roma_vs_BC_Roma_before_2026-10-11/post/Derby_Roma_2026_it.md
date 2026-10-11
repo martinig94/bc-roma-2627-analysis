@@ -57,6 +57,16 @@ Solo sulle partite di LBA, le due squadre giocano allo stesso ritmo (76 e 75 pos
 
 ![statistiche di base](assets/images/derby_2026/09_basic_stats.png)
 
+## Chi tiene la palla negli ultimi cinque minuti
+
+Per "clutch" uso la definizione NBA: ultimi cinque minuti del quarto periodo o del supplementare con scarto entro i cinque punti al momento del gioco. Con questo filtro i blowout non contano, e finora i finali punto a punto sono pochi: due per BC Roma (il 92–87 sul Lietkabelis, giocato tutto negli ultimi cinque minuti sotto i cinque punti di scarto, e una manciata di possessi a Istanbul prima che il Bahcesehir scappasse) e uno per Maxima (Bologna, dove è risalita fino alla parità prima di perdere 98–89). Napoli, Treviso, Tortona, Cluj e Ankara non sono mai state in equilibrio nel finale.
+
+In quei minuti BC Roma ha segnato 11 punti con 4/7 al tiro e subito 8, ma ha perso quattro palloni, contro una media di campionato di 1,2 per finale in equilibrio. La palla passa da Mannion (2/4, due palle perse, quattro falli subiti) e da Simonovic, che contro il Lietkabelis ha chiuso la partita a 20 secondi dalla fine con rimbalzo offensivo, canestro e due liberi; la tripla di Stevenson a 1:07 è arrivata su assist di Simonovic.
+
+Maxima a Bologna ha segnato 7 punti in cinque minuti, con un solo canestro dal campo (Moon) e il resto dalla lunetta (Alibegovic, Lemar e Brown, 5/6), tre palle perse, due di Bilan, e 18 punti subiti. È lo stesso schema delle sue partite: un attacco che nel finale vive di liberi mentre l'avversario segna dal campo.
+
+![clutch](assets/images/derby_2026/11_clutch.png)
+
 ## Cosa aspettarsi
 
 Due duelli dovrebbero decidere la partita. Il primo: se Maxima riesce a tenere i penetratori di BC Roma fuori dall'area, dove BC Roma prende un terzo dei suoi tiri e segna con l'82% e dove gli avversari di Maxima stanno tirando 34/45. Il secondo: se BC Roma riesce a difendere senza fare falli, perché i suoi 28,5 liberi concessi a partita vanno dritti contro la miglior squadra del campionato in lunetta.
@@ -65,6 +75,6 @@ Le tendenze dicono che BC Roma controlla area e rimbalzi (12,8 rimbalzi offensiv
 
 ## Avvertenze
 
-Quattro partite sono un campione sottile e alcuni numeri individuali sono già rumorosi (una serata da 1/1 compare come 125% di true shooting). Le coordinate dei tiri sono i clic del refertista: tutte le triple risultano tra 6,8 e 8,0 metri dal ferro e tutti i tiri da due sotto i 6,5, quindi la scala è corretta, ma le singole posizioni hanno forse mezzo metro di rumore, che va bene per le zone e non per le distanze esatte. I dati EuroCup contengono tabellini e zone di tiro ma non i tipi di tiro né i collegamenti degli assist, quindi i grafici sulle abitudini sono solo LBA e lo dichiarano.
+Quattro partite sono un campione sottile e alcuni numeri individuali sono già rumorosi (una serata da 1/1 compare come 125% di true shooting). Le coordinate dei tiri sono i clic del refertista: tutte le triple risultano tra 6,8 e 8,0 metri dal ferro e tutti i tiri da due sotto i 6,5, quindi la scala è corretta, ma le singole posizioni hanno forse mezzo metro di rumore, che va bene per le zone e non per le distanze esatte. I dati EuroCup contengono tabellini, zone di tiro e il play-by-play del finale (usato per i minuti clutch) ma non i tipi di tiro né i collegamenti degli assist, quindi i grafici sulle abitudini sono solo LBA e lo dichiarano.
 
 *Una versione post-partita di questa pagina, con il confronto tra quello che è successo e le attese qui sopra, seguirà appena il play-by-play finale sarà raccolto.*
