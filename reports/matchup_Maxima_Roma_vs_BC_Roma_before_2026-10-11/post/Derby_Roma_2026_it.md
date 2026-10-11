@@ -57,15 +57,13 @@ Solo sulle partite di LBA, le due squadre giocano allo stesso ritmo (76 e 75 pos
 
 ![statistiche di base](assets/images/derby_2026/09_basic_stats.png)
 
-## Chi tiene la palla negli ultimi cinque minuti
+## I giocatori chiave
 
-Per "clutch" uso la definizione NBA: ultimi cinque minuti del quarto periodo o del supplementare con scarto entro i cinque punti al momento del gioco. Con questo filtro i blowout non contano, e finora i finali punto a punto sono pochi: due per BC Roma (il 92–87 sul Lietkabelis, giocato tutto negli ultimi cinque minuti sotto i cinque punti di scarto, e una manciata di possessi a Istanbul prima che il Bahcesehir scappasse) e uno per Maxima (Bologna, dove è risalita fino alla parità prima di perdere 98–89). Napoli, Treviso, Tortona, Cluj e Ankara non sono mai state in equilibrio nel finale.
+Solo sulle due partite di LBA, dove i dati sono completi, i giocatori chiave sono pochi e chiari. In BC Roma la coppia è Mannion e Simonovic: Mannion ha la miglior valutazione della squadra (23,5 di PIR a partita, sesta in tutto il campionato) con 15 punti, 8 assist e una sola palla persa a partita, ed è il giocatore che tocca più palloni (il 19% dei tiri e un terzo degli assist della squadra); Simonovic produce 17 punti e 6,5 rimbalzi in 24 minuti con il 72% di true shooting, 14/17 da due, ed è il miglior +15 di squadra nel bilancio in campo. Dietro di loro Stevenson è il più efficiente di tutti (83% di true shooting, 8/14 da tre, +21 in campo) e Davis dà 10 assist in 41 minuti dalla panchina. Il peso di questi quattro è tale che quando Mannion o Simonovic sono fuori ritmo l'attacco non ha un'alternativa evidente nei numeri: dopo Davis, nessun altro supera i 9 di PIR a partita.
 
-In quei minuti BC Roma ha segnato 11 punti con 4/7 al tiro e subito 8, ma ha perso quattro palloni, contro una media di campionato di 1,2 per finale in equilibrio. La palla passa da Mannion (2/4, due palle perse, quattro falli subiti) e da Simonovic, che contro il Lietkabelis ha chiuso la partita a 20 secondi dalla fine con rimbalzo offensivo, canestro e due liberi; la tripla di Stevenson a 1:07 è arrivata su assist di Simonovic.
+In Maxima i numeri indicano Bilan e Brown. Bilan ha la valutazione più alta (21,5 di PIR, 14 punti e 6 rimbalzi in 22,5 minuti) e la ottiene soprattutto dalla lunetta, 14/16, dove va grazie ai 15 falli subiti in due partite, il dato più alto delle due squadre; Brown è il più completo (10 punti, 9 rimbalzi, 3 recuperi a partita, 19 di PIR) ed è l'unico dei lunghi con un bilancio in campo quasi in pari (−2) in due sconfitte nette. Alibegovic è il terzo riferimento (11,5 punti, 14/14 ai liberi), Lemar il marcatore più prolifico per minuto (26,7 punti ogni 40') ma con −34 in campo, e Moon, 13 punti e 8 assist nell'unica partita giocata, è la variabile più interessante perché ha fatto girare la palla come nessun altro compagno. Il problema di Maxima, nei numeri, non è la testa della rotazione ma la coda: Wheatle, Ryan e Holiday sommano 125 minuti con valutazioni negative o quasi e −93 complessivo in campo.
 
-Maxima a Bologna ha segnato 7 punti in cinque minuti, con un solo canestro dal campo (Moon) e il resto dalla lunetta (Alibegovic, Lemar e Brown, 5/6), tre palle perse, due di Bilan, e 18 punti subiti. È lo stesso schema delle sue partite: un attacco che nel finale vive di liberi mentre l'avversario segna dal campo.
-
-![clutch](assets/images/derby_2026/11_clutch.png)
+![giocatori chiave](assets/images/derby_2026/07_key_players.png)
 
 ## Cosa aspettarsi
 
@@ -75,6 +73,6 @@ Le tendenze dicono che BC Roma controlla area e rimbalzi (12,8 rimbalzi offensiv
 
 ## Avvertenze
 
-Quattro partite sono un campione sottile e alcuni numeri individuali sono già rumorosi (una serata da 1/1 compare come 125% di true shooting). Le coordinate dei tiri sono i clic del refertista: tutte le triple risultano tra 6,8 e 8,0 metri dal ferro e tutti i tiri da due sotto i 6,5, quindi la scala è corretta, ma le singole posizioni hanno forse mezzo metro di rumore, che va bene per le zone e non per le distanze esatte. I dati EuroCup contengono tabellini, zone di tiro e il play-by-play del finale (usato per i minuti clutch) ma non i tipi di tiro né i collegamenti degli assist, quindi i grafici sulle abitudini sono solo LBA e lo dichiarano.
+Quattro partite sono un campione sottile e alcuni numeri individuali sono già rumorosi (una serata da 1/1 compare come 125% di true shooting). Le coordinate dei tiri sono i clic del refertista: tutte le triple risultano tra 6,8 e 8,0 metri dal ferro e tutti i tiri da due sotto i 6,5, quindi la scala è corretta, ma le singole posizioni hanno forse mezzo metro di rumore, che va bene per le zone e non per le distanze esatte. I dati EuroCup contengono tabellini e zone di tiro ma non i tipi di tiro né i collegamenti degli assist, quindi i grafici sulle abitudini sono solo LBA e lo dichiarano.
 
 *Una versione post-partita di questa pagina, con il confronto tra quello che è successo e le attese qui sopra, seguirà appena il play-by-play finale sarà raccolto.*
