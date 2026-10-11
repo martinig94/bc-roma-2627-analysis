@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from lba_style import (BLUE, DPI, GOLD, GOLD_EDGE, GREEN, LEAGUE, ORANGE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW,
+from lba_style import (save_fig, BLUE, DPI, GOLD, GOLD_EDGE, GREEN, LEAGUE, ORANGE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW,
                        ZONE_LABEL_POS as _ZONE_LABEL_POS, ZONE_LABELS, assign_zone_arr, draw_half_court, mins,
                        shots_cm, style_axes, team_bar_kw)
 
@@ -77,7 +77,7 @@ def plot_zone_heatmap(ax, s, title, ref: dict | None = None, colorbar=True, font
         else:
             lab, col = f"{mk}/{att}\n{p:.0f}%", "black" if 25 < p < 75 else "white"
             if ref and z in ref and ref[z][1] > 0:
-                lab += f"\nlg {ref[z][2]:.0f}%"
+                lab += f"\nleague {ref[z][2]:.0f}%"
         ax.text(cx, cy, lab, ha="center", va="center", color=col, fontsize=fontsize, fontweight="bold", zorder=5)
     if colorbar:
         cb = plt.colorbar(mesh, ax=ax, fraction=0.025, pad=0.02)
@@ -96,9 +96,9 @@ def fig_zone_heatmaps(s_team, s_league, team, label, out):
     cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", color=TEXT, fontsize=8)
     cb.ax.yaxis.set_tick_params(color=TEXT)
     fig.suptitle(f"{team} — LBA 2026-27 {label}  |  FG% by zone vs league", **SUP_KW)
-    fig.text(0.01, 0.01, "'lg' = league FG% in the same zone, all other teams' attempts in the collected games.",
+    fig.text(0.01, 0.01, "Third line in each zone = FG% of all other LBA teams in that zone, from the collected games.",
              color=TEXT2, fontsize=8)
-    fig.savefig(out / "zone_heatmap_team.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "zone_heatmap_team.png"); plt.close(fig)
 
 
 def fig_zone_heatmap_players(s_team, pt, team, label, out, n=8):
@@ -111,7 +111,7 @@ def fig_zone_heatmap_players(s_team, pt, team, label, out, n=8):
     for ax in axes.ravel()[len(top):]:
         ax.axis("off")
     fig.suptitle(f"{team} — LBA 2026-27 {label}  |  Player Shot Zones (top {len(top)} by minutes)", **SUP_KW)
-    fig.savefig(out / "zone_heatmap_players.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "zone_heatmap_players.png"); plt.close(fig)
 
 
 def fig_shot_chart(s_team, team, label, out):
@@ -123,7 +123,7 @@ def fig_shot_chart(s_team, team, label, out):
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.01), ncol=2, fontsize=9)
     ax.set_title(f"Shot Chart — all {team} field goal attempts", **TITLE_KW)
     fig.suptitle(f"{team} — LBA 2026-27 {label}", **SUP_KW)
-    fig.savefig(out / "shot_chart.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "shot_chart.png"); plt.close(fig)
 
 
 def fig_player_offense(pt_team, lg, team, label, out):
@@ -153,7 +153,7 @@ def fig_player_offense(pt_team, lg, team, label, out):
     ax1.set_title("Shooting Efficiency: eFG% / FT% / TS%\n(dashed = league average, same colour)", **TITLE_KW)
     ax1.legend(fontsize=9, loc="upper right"); style_axes(ax1, "y")
     fig.suptitle(f"{team} — LBA 2026-27 {label}  |  Player Offensive Overview", **SUP_KW)
-    fig.savefig(out / "player_PIR.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "player_PIR.png"); plt.close(fig)
 
 
 def fig_pir_ts(pt, team, label, out, min_minutes=10):
@@ -174,7 +174,7 @@ def fig_pir_ts(pt, team, label, out, min_minutes=10):
     ax.set_title(f"PIR vs True Shooting%  —  dot size = MPG, min {min_minutes} minutes", **TITLE_KW)
     ax.legend(fontsize=9, loc="lower right"); style_axes(ax)
     fig.suptitle(f"{team} — LBA 2026-27 {label}  |  PIR vs True Shooting%", **SUP_KW)
-    fig.savefig(out / "player_pir_ts.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "player_pir_ts.png"); plt.close(fig)
 
 
 def fig_turnovers(pt_team, pt_league, team, label, out, min_minutes=5):
@@ -190,7 +190,7 @@ def fig_turnovers(pt_team, pt_league, team, label, out, min_minutes=5):
     ax.set_title(f"Turnovers per 40 min  (red > 3.5, min {min_minutes} minutes)", **TITLE_KW)
     style_axes(ax)
     fig.suptitle(f"{team} — LBA 2026-27 {label}", **SUP_KW)
-    fig.savefig(out / "player_turnovers.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "player_turnovers.png"); plt.close(fig)
 
 
 def fig_zone_shares(s_team, s_league, team, label, out):
@@ -214,7 +214,7 @@ def fig_zone_shares(s_team, s_league, team, label, out):
         ax.set_xticks(x); ax.set_xticklabels([f"{z}\n" + ZONE_LABELS[z].replace(" ", "\n") for z in ZONE_LABELS], fontsize=8)
         ax.legend(fontsize=9); style_axes(ax, "y")
     fig.suptitle(f"{team} — LBA 2026-27 {label}  |  Shot profile vs league", **SUP_KW)
-    fig.savefig(out / "zone_profile_vs_league.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "zone_profile_vs_league.png"); plt.close(fig)
 
 
 def main():

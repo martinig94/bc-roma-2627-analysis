@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from lba_style import (BLUE, DPI, GOLD, GOLD_EDGE, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW,
+from lba_style import (save_fig, BLUE, DPI, GOLD, GOLD_EDGE, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW,
                        draw_half_court, mins, shots_cm, style_axes, team_bar_kw)
 
 PERIOD_LEN = 600
@@ -108,7 +108,7 @@ def fig_rotation(pbp, box, team, g, out):
     fig.suptitle(f"{team} — {g.home_team} {g.home_score}–{g.away_score} {g.away_team}, round {g['round']}, {str(g.match_datetime)[:10]}", **SUP_KW)
     fig.text(0.01, 0.01, "Bars: time on court (minutes in brackets), gold = finished with plus/minus >= 0, red = negative. "
              "Top: score margin from the team's perspective. Source: legabasket.it play-by-play.", color=TEXT2, fontsize=8)
-    fig.savefig(out / "rotation.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "rotation.png"); plt.close(fig)
 
 
 def fig_lineups(pbp, box, team, g, out, top=8):
@@ -135,7 +135,7 @@ def fig_lineups(pbp, box, team, g, out, top=8):
     for ax in axes:
         style_axes(ax, "x")
     fig.suptitle(f"{team} — five-man lineups, top {len(agg)} by minutes  |  round {g['round']} vs {g.away_team if g.home_team == team else g.home_team}", **SUP_KW)
-    fig.savefig(out / "lineups.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "lineups.png"); plt.close(fig)
     return agg
 
 
@@ -152,7 +152,7 @@ def fig_shotmap(shots_game, team, opp, g, out):
         ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.01), ncol=2, fontsize=9)
     fig.suptitle(f"Shot charts — {g.home_team} {g.home_score}–{g.away_score} {g.away_team}, round {g['round']}", **SUP_KW)
     fig.text(0.01, 0.01, "Every field-goal attempt from the play-by-play, both halves folded onto one basket.", color=TEXT2, fontsize=8)
-    fig.savefig(out / "shotmap.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "shotmap.png"); plt.close(fig)
 
 
 def fig_shot_profile(shots_game, shots_league, team, opp, g, out):
@@ -182,7 +182,7 @@ def fig_shot_profile(shots_game, shots_league, team, opp, g, out):
     for ax in axes:
         ax.set_xticks(x); ax.set_xticklabels(zones); style_axes(ax, "y"); ax.legend(fontsize=9)
     fig.suptitle(f"Shot profile — {g.home_team} {g.home_score}–{g.away_score} {g.away_team}, round {g['round']}", **SUP_KW)
-    fig.savefig(out / "shot_profile.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "shot_profile.png"); plt.close(fig)
 
 
 def main():

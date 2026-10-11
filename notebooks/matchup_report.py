@@ -12,6 +12,8 @@ Figures (all season-to-date, both LBA and EuroCup games when the EuroCup file is
   06_hot_spots            nine-zone FG% heatmaps side by side (LBA shots only — they carry coordinates)
   07_key_players          PIR vs TS% scatter with minutes, league in grey; top-5 table per team
   08_shot_distribution    share of team FGA per player, twos vs threes
+  09_basic_stats          assists, rebounds, steals, blocks, turnovers, fouls per game and per 100 possessions (LBA only)
+  10_major_factors        who carries each category: leader's share of the team total (2nd/3rd when close), LBA only
 
 EuroCup box scores come from data/eurocup_box.csv (see notebooks/eurocup_fetch.md for how to refresh it);
 they carry per-zone shot counts, not coordinates, so they feed every chart except the hot spots.
@@ -25,7 +27,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from lba_style import (BLUE, DPI, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS, ZONE_LABELS,
+from lba_style import (save_fig, BLUE, DPI, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS, ZONE_LABELS,
                        assign_zone_arr, draw_half_court, mins, shots_cm, style_axes, team_color)
 
 PAINT_CM = 450
@@ -174,7 +176,7 @@ def fig_timeline(box, A, B, out):
                      f"{g.pts.mean():.0f} for / {g.opp_pts.mean():.0f} against per game", **TITLE_KW)
         ax.legend(fontsize=8, loc="lower right"); style_axes(ax, "y"); ax.set_ylim(0, max(115, g[["pts", "opp_pts"]].max().max() + 12))
     fig.suptitle("Results so far — LBA and EuroCup", **SUP_KW)
-    fig.savefig(out / "01_results_timeline.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "01_results_timeline.png"); plt.close(fig)
 
 
 def fig_starters_bench(box, A, B, out):
@@ -200,7 +202,7 @@ def fig_starters_bench(box, A, B, out):
                      f"({100 * sb.bench.sum() / (sb.starters.sum() + sb.bench.sum()):.0f}% from the bench)", **TITLE_KW)
         ax.legend(fontsize=8, loc="upper left"); style_axes(ax, "y")
     fig.suptitle("Points from the starting five vs the bench (dashed: LBA league averages)", **SUP_KW)
-    fig.savefig(out / "02_starters_bench.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "02_starters_bench.png"); plt.close(fig)
 
 
 def fig_minutes(box, A, B, out):
@@ -218,7 +220,7 @@ def fig_minutes(box, A, B, out):
         ax.set_title(f"{team}\nminutes per game — {len(pt)} players used, top 7 play {top7:.0f}% of minutes", **TITLE_KW)
         style_axes(ax, "x")
     fig.suptitle("Minutes distribution, all competitions", **SUP_KW)
-    fig.savefig(out / "03_minutes.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "03_minutes.png"); plt.close(fig)
 
 
 def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
@@ -252,7 +254,7 @@ def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
     axes[1].set_xticks([0, 1, 2]); axes[1].set_xticklabels([A, B, "league"], fontsize=9); axes[1].set_ylim(0, max(vals) * 1.3)
     axes[1].set_title("Three-point attempts per game", **TITLE_KW); style_axes(axes[1], "y")
     fig.suptitle("Scoring sources and three-point volume, all competitions (league = other LBA teams)", **SUP_KW)
-    fig.savefig(out / "04_scoring_sources.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "04_scoring_sources.png"); plt.close(fig)
     return srcA, srcB, lg_mean
 
 
@@ -271,7 +273,7 @@ def fig_shooting(box, A, B, out):
     ax.set_xticks(x); ax.set_xticklabels(keys); ax.set_ylim(0, 100); ax.set_ylabel("%")
     ax.set_title("Shooting percentages, season to date (all competitions; league = other LBA teams)", **TITLE_KW)
     ax.legend(fontsize=9); style_axes(ax, "y")
-    fig.savefig(out / "05_shooting.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "05_shooting.png"); plt.close(fig)
     return lines
 
 
@@ -297,7 +299,7 @@ def plot_zone_heatmap(ax, s, title, ref=None):
         else:
             lab, col = f"{mk}/{att}\n{p:.0f}%", "black" if 25 < p < 75 else "white"
             if ref and z in ref and ref[z][1] > 0:
-                lab += f"\nlg {ref[z][2]:.0f}%"
+                lab += f"\nleague {ref[z][2]:.0f}%"
         ax.text(cx, cy, lab, ha="center", va="center", color=col, fontsize=8.5, fontweight="bold", zorder=5)
     ax.set_title(title, **TITLE_KW)
     return mesh
@@ -311,8 +313,8 @@ def fig_hot_spots(pbp, A, B, out):
         st = s[s.team == team]
         mesh = plot_zone_heatmap(ax, st, f"{team} — {int(st.made.sum())}/{len(st)} FG in {st.game_id.nunique()} LBA games", ref=ref)
     cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
-    fig.suptitle("Hot spots — FG% by zone (LBA games; 'lg' = league FG% in the zone)", **SUP_KW)
-    fig.savefig(out / "06_hot_spots.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    fig.suptitle("Hot spots — FG% by zone, LBA games (third line = FG% of all other LBA teams in that zone)", **SUP_KW)
+    save_fig(fig, out / "06_hot_spots.png"); plt.close(fig)
     # per-zone attempt share for the text
     share = {tm: s[s.team == tm].zone.value_counts(normalize=True).round(3).to_dict() for tm in (A, B)}
     share["league"] = s[~s.team.isin([A, B])].zone.value_counts(normalize=True).round(3).to_dict()
@@ -320,7 +322,7 @@ def fig_hot_spots(pbp, A, B, out):
 
 
 def fig_key_players(box, A, B, out, min_mpg=10):
-    pts = {tm: player_table(box, tm) for tm in (A, B)}
+    pts = {tm: player_table(box[box.competition == "LBA"], tm) for tm in (A, B)}   # LBA only, same basis as the league dots
     lgp = box[(box.competition == "LBA") & (box.row_type == "player") & ~box.team.isin([A, B])]
     lg = lgp.groupby(["team", "player_surname"]).agg(GP=("game_id", "nunique"), sec=("sec", "sum"), pts=("pts", "sum"), val=("val", "sum"),
                                                      fg2a=("fg2a", "sum"), fg3a=("fg3a", "sum"), fta=("fta", "sum")).reset_index()
@@ -330,17 +332,31 @@ def fig_key_players(box, A, B, out, min_mpg=10):
     fig, ax = plt.subplots(figsize=(13, 8.5))
     size = lambda mpg: mpg / 36 * 420 + 40
     ax.scatter(lg.PIR, lg["TS%"], s=size(lg.MPG), c=LEAGUE, alpha=0.4, edgecolors="none", label="other LBA players", zorder=2)
+    both = pd.concat([pts[tm][pts[tm].MPG >= min_mpg].assign(team=tm) for tm in (A, B)])
+    cands = pd.concat([both[["Player", "team", "PIR", "TS%", "MPG"]],
+                       lg.assign(Player=lg.player_surname.str.title())[["Player", "team", "PIR", "TS%", "MPG"]]])
+    best = cands.sort_values("PIR", ascending=False).iloc[0]
     for i, tm in enumerate((A, B)):
         d = pts[tm][pts[tm].MPG >= min_mpg]
         fill, edge = team_color(tm, i)
         ax.scatter(d.PIR, d["TS%"], s=size(d.MPG), c=fill, edgecolors=edge, linewidths=0.8, zorder=3, label=tm)
         for j, (_, r) in enumerate(d.sort_values("PIR").iterrows()):
-            ax.annotate(f"{r.Player} ({r.MPG:.0f}')", (r.PIR, r["TS%"]), xytext=(6, 6 if j % 2 else -12), textcoords="offset points", fontsize=8, color=TEXT)
+            is_best = r.Player == best.Player and tm == best.team
+            ax.annotate(f"{r.Player} ({r.MPG:.0f}')", (r.PIR, r["TS%"]), xytext=(6, 6 if j % 2 else -12), textcoords="offset points",
+                        fontsize=9 if is_best else 8, color=GREEN if is_best else TEXT, fontweight="bold" if is_best else "normal")
+    ax.scatter([best.PIR], [best["TS%"]], s=size(best.MPG) * 2.2, facecolors="none", edgecolors=GREEN, linewidths=2.5, zorder=4,
+               label=f"best PIR in the league: {best.Player} ({best.team}, PIR {best.PIR:.1f})")
+    if best.team not in (A, B):
+        ax.annotate(f"{best.Player} ({best.team}, {best.MPG:.0f}')", (best.PIR, best["TS%"]), xytext=(8, 8), textcoords="offset points",
+                    fontsize=9, color=GREEN, fontweight="bold")
     ax.axvline(lg.PIR.median(), color=TEXT2, lw=0.7, ls="--"); ax.axhline(lg["TS%"].median(), color=TEXT2, lw=0.7, ls="--")
+    ax.text(lg.PIR.median() + 0.2, ax.get_ylim()[0] + 1.5, "league median PIR", color=TEXT2, fontsize=8)
+    ax.text(ax.get_xlim()[0] + 0.3, lg["TS%"].median() + 0.8, "league median TS%", color=TEXT2, fontsize=8)
     ax.set_xlabel("PIR per game (LBA valutazione)"); ax.set_ylabel("TS%")
-    ax.set_title(f"Key players — PIR vs true shooting, dot size = minutes per game (min {min_mpg}'), all competitions", **TITLE_KW)
+    ax.set_title(f"Key players — PIR vs true shooting, dot size = minutes per game (min {min_mpg}')\n"
+                 "LBA games only, all players on the same basis", **TITLE_KW)
     ax.legend(fontsize=9, loc="lower right"); style_axes(ax)
-    fig.savefig(out / "07_key_players.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "07_key_players.png"); plt.close(fig)
     return pts
 
 
@@ -368,7 +384,83 @@ def fig_shot_distribution(box, A, B, out):
         ax.set_title(f"{team} — {int(tot)} FGA in {p.game_id.nunique()} games\ntop 3 take {top3:.0f}%, top 5 take {g.share.head(5).sum():.0f}%", **TITLE_KW)
         ax.legend(fontsize=8, loc="lower right"); style_axes(ax, "x")
     fig.suptitle("Who takes the shots — share of team FGA per player (LBA+EC)", **SUP_KW)
-    fig.savefig(out / "08_shot_distribution.png", dpi=DPI, bbox_inches="tight"); plt.close(fig)
+    save_fig(fig, out / "08_shot_distribution.png"); plt.close(fig)
+
+
+BASIC_STATS = [("ast", "assists"), ("dreb", "def. rebounds"), ("oreb", "off. rebounds"), ("stl", "steals"), ("blk", "blocks"),
+               ("tov", "turnovers"), ("pf", "fouls"), ("pf_drawn", "fouls drawn")]
+
+
+def basic_line(box_tot: pd.DataFrame) -> pd.Series:
+    """Per-game and per-100-possession totals from a set of team 'total' rows (one row per team-game)."""
+    t = box_tot.copy()
+    t["poss"] = t.fg2a + t.fg3a - t.oreb + t.tov + 0.44 * t.fta
+    out = {"games": len(t), "poss": t.poss.mean(), "pts": t.pts.mean()}
+    for k, _ in BASIC_STATS:
+        out[f"{k}_pg"] = t[k].mean()
+        out[f"{k}_p100"] = 100 * t[k].sum() / t.poss.sum()
+    out["pts_p100"] = 100 * t.pts.sum() / t.poss.sum()
+    return pd.Series(out)
+
+
+def fig_basic_stats(box, A, B, out):
+    """Assists, rebounds, steals, blocks, turnovers, fouls: per game and per 100 possessions (LBA only)."""
+    tot = box[(box.competition == "LBA") & (box.row_type == "total")]
+    lines = {A: basic_line(tot[tot.team == A]), B: basic_line(tot[tot.team == B]), "league": basic_line(tot[~tot.team.isin([A, B])])}
+    fig, axes = plt.subplots(1, 2, figsize=(16, 5.6))
+    x = np.arange(len(BASIC_STATS)); w = 0.27
+    for ax, suffix, title in ((axes[0], "_pg", "per game"), (axes[1], "_p100", "per 100 possessions")):
+        for i, (name, ln) in enumerate(lines.items()):
+            fill, edge = team_color(name, i) if name != "league" else (LEAGUE, LEAGUE)
+            vals = [ln[f"{k}{suffix}"] for k, _ in BASIC_STATS]
+            ax.bar(x + (i - 1) * w, vals, w, color=fill, edgecolor=edge, linewidth=0.6, label=name)
+            for xi, v in zip(x, vals):
+                ax.text(xi + (i - 1) * w, v + 0.3, f"{v:.1f}", ha="center", fontsize=7.5, color=TEXT2)
+        ax.set_xticks(x); ax.set_xticklabels([lab for _, lab in BASIC_STATS], fontsize=9)
+        ax.set_title(f"Basic stats {title}", **TITLE_KW); ax.legend(fontsize=9); style_axes(ax, "y")
+    pace = " · ".join(f"{n}: {ln.poss:.1f} poss/g, {ln.pts_p100:.0f} pts per 100" for n, ln in lines.items())
+    fig.suptitle(f"Team comparison — LBA games only ({int(lines[A].games)} per team; league = other 14 teams)\n{pace}", **SUP_KW)
+    axes[1].set_xlabel("possessions estimated as FGA − OREB + TOV + 0.44·FTA", fontsize=8, color=TEXT2)
+    save_fig(fig, out / "09_basic_stats.png"); plt.close(fig)
+    return pd.DataFrame(lines)
+
+
+FACTOR_STATS = [("pts", "points"), ("ast", "assists"), ("dreb", "def. rebounds"), ("oreb", "off. rebounds"), ("stl", "steals"),
+                ("blk", "blocks"), ("fg3m", "threes made"), ("pf_drawn", "fouls drawn"), ("tov", "turnovers")]
+
+
+def fig_major_factors(box, A, B, out, close=0.8, max_players=3):
+    """For each category, which player carries the team: share of the team total for the leader, plus the 2nd and
+    3rd when they are within `close` (80%) of the leader's share. LBA only. Grey = rest of the roster."""
+    fig, axes = plt.subplots(1, 2, figsize=(16, 7.2), sharey=True)
+    for ax, team, ti in ((axes[0], A, 0), (axes[1], B, 1)):
+        p = box[(box.competition == "LBA") & (box.row_type == "player") & (box.team == team)]
+        totals = p.groupby("player_surname")[[k for k, _ in FACTOR_STATS]].sum()
+        fill, edge = team_color(team, ti)
+        shades = [fill, "#e8d77a" if fill == "#F2C300" else "#6b6b7a", "#f3e7b3" if fill == "#F2C300" else "#a8a8b4"]
+        y = np.arange(len(FACTOR_STATS))
+        for yi, (k, lab) in enumerate(FACTOR_STATS):
+            col = totals[k]; tot = col.sum()
+            if tot <= 0:
+                ax.text(1, yi, "none", va="center", fontsize=8, color=TEXT2); continue
+            share = (col / tot).sort_values(ascending=False)
+            lead = share.iloc[0]
+            chosen = share[share >= close * lead].head(max_players)
+            left = 0
+            for j, (name, sh) in enumerate(chosen.items()):
+                ax.barh(yi, 100 * sh, left=left, color=shades[j], edgecolor=edge, linewidth=0.6, height=0.7)
+                ax.text(left + 50 * sh, yi, f"{name.title()}\n{100 * sh:.0f}%", ha="center", va="center", fontsize=7.5 if len(chosen) > 1 else 8,
+                        color=TEXT if (fill == "#F2C300" or j > 0) else "white", fontweight="bold" if j == 0 else "normal")
+                left += 100 * sh
+            ax.barh(yi, 100 - left, left=left, color="#dcdde3", height=0.7)
+            ax.text(101, yi, f"rest {100 - left:.0f}%  (team {int(tot)})", va="center", fontsize=8, color=TEXT2)
+        ax.set_yticks(y); ax.set_yticklabels([lab for _, lab in FACTOR_STATS], fontsize=9.5)
+        ax.set_xlim(0, 135); ax.set_xticks([0, 25, 50, 75, 100]); ax.set_xlabel("% of the team total")
+        ax.set_title(f"{team}", **TITLE_KW); style_axes(ax, "x")
+    axes[0].invert_yaxis()   # shared y: invert once
+    fig.suptitle("Who carries each category — share of the team total, LBA games only\n"
+                 f"leader shown; 2nd and 3rd added when within {int(close * 100)}% of the leader's share", **SUP_KW)
+    save_fig(fig, out / "10_major_factors.png"); plt.close(fig)
 
 
 def main():
@@ -378,15 +470,26 @@ def main():
     ap.add_argument("--eurocup", default=None, help="path to the EuroCup raw file (default data/eurocup_2026_raw.txt)")
     ap.add_argument("--no-eurocup", action="store_true")
     ap.add_argument("--out", default="reports")
+    ap.add_argument("--before", default=None, help="YYYY-MM-DD: use only games played before this date (frozen pre-match "
+                                                     "snapshot; output folder gets a _before_<date> suffix and charts say so)")
     a = ap.parse_args()
     data = Path(a.data)
-    out = Path(a.out) / f"matchup_{a.home.replace(' ', '_')}_vs_{a.away.replace(' ', '_')}"; out.mkdir(parents=True, exist_ok=True)
+    suffix = f"_before_{a.before}" if a.before else ""
+    out = Path(a.out) / f"matchup_{a.home.replace(' ', '_')}_vs_{a.away.replace(' ', '_')}{suffix}"; out.mkdir(parents=True, exist_ok=True)
     games, box, pbp = load_lba(data)
+    if a.before:
+        import lba_style
+        from datetime import date as _d
+        lba_style.STAMP_NOTE = f"games before {_d.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
+        box = box[box.date < a.before]; pbp = pbp[pbp.game_id.isin(box.game_id.unique())]
+        games = games[games.match_datetime.str[:10] < a.before]
     ec_path = Path(a.eurocup) if a.eurocup else data / "eurocup_2026_raw.txt"
     ec_zones = pd.DataFrame(columns=["game_id", "team", "zone", "action", "n"])
     if not a.no_eurocup and ec_path.exists():
         ec_box, ec_zones = parse_eurocup(ec_path)
         ec_box = ec_box[ec_box.team.isin([a.home, a.away])]
+        if a.before:
+            ec_box = ec_box[ec_box.date < a.before]; ec_zones = ec_zones[ec_zones.game_id.isin(ec_box.game_id.unique())]
         box = pd.concat([box, ec_box], ignore_index=True)
     A, B = a.home, a.away
     fig_timeline(box, A, B, out)
@@ -397,6 +500,9 @@ def main():
     share = fig_hot_spots(pbp, A, B, out)
     pts = fig_key_players(box, A, B, out)
     fig_shot_distribution(box, A, B, out)
+    basic = fig_basic_stats(box, A, B, out)
+    fig_major_factors(box, A, B, out)
+    print(basic.round(1).to_string())
 
     pd.set_option("display.width", 200)
     print(f"\n=== {A} vs {B} — season to date ===")
