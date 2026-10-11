@@ -31,6 +31,33 @@ from lba_style import (save_fig, draw_zone_fill, BLUE, DPI, GREEN, LEAGUE, RED, 
                        assign_zone_arr, draw_half_court, mins, shots_cm, style_axes, team_color)
 
 PAINT_CM = 450
+SOCIAL = False          # --social: portrait 4:5 versions (1080x1350) of selected figures for Instagram
+SOCIAL_SIZE = (6.0, 7.5)   # inches; the saved PNG is padded to exactly 1080x1350 px
+
+
+def grid(ncols_wide: int = 2, figsize=(14, 5), **kw):
+    """1 x N panels for the report, N x 1 (stacked) for the social version."""
+    if SOCIAL:
+        kw.pop("sharey", None); kw.pop("sharex", None)
+        if "gridspec_kw" in kw and "width_ratios" in kw["gridspec_kw"]:
+            kw["gridspec_kw"] = {"height_ratios": kw["gridspec_kw"]["width_ratios"]}
+        return plt.subplots(ncols_wide, 1, figsize=SOCIAL_SIZE, **kw)
+    return plt.subplots(1, ncols_wide, figsize=figsize, **kw)
+
+
+def sup(fig, text: str, social_text: str | None = None):
+    import textwrap
+    fig.suptitle(textwrap.fill(social_text or text, 46) if SOCIAL else text, **SUP_KW)
+
+
+def save(fig, path):
+    save_fig(fig, path)
+    if SOCIAL:   # pad to a 4:5 white canvas, 1080x1350
+        from PIL import Image
+        im = Image.open(path).convert("RGB"); W, H = 1080, 1350
+        r = min((W - 60) / im.width, (H - 60) / im.height)
+        im = im.resize((int(im.width * r), int(im.height * r)), Image.LANCZOS)
+        canvas = Image.new("RGB", (W, H), "white"); canvas.paste(im, ((W - im.width) // 2, (H - im.height) // 2)); canvas.save(path)
 
 
 def short(name: str) -> str:
@@ -162,7 +189,7 @@ def player_table(box, team) -> pd.DataFrame:
 
 # ── figures ─────────────────────────────────────────────────────────────────────
 def fig_timeline(box, A, B, out):
-    fig, axes = plt.subplots(1, 2, figsize=(14, 4.6), sharey=True)
+    fig, axes = grid(2, figsize=(14, 4.6), sharey=True)
     for ax, team, i in ((axes[0], A, 0), (axes[1], B, 1)):
         g = game_list(box, team).sort_values("date")
         fill, edge = team_color(team, i)
@@ -174,9 +201,10 @@ def fig_timeline(box, A, B, out):
         ax.set_xticks(x); ax.set_xticklabels([f"{c}\n{short(o)}" for c, o in zip(g.competition, g.opponent)], fontsize=8)
         ax.set_title(f"{team}: {int((g.pts > g.opp_pts).sum())}–{int((g.pts < g.opp_pts).sum())}, "
                      f"{g.pts.mean():.0f} for / {g.opp_pts.mean():.0f} against per game", **TITLE_KW)
-        ax.legend(fontsize=8, loc="lower right"); style_axes(ax, "y"); ax.set_ylim(0, max(115, g[["pts", "opp_pts"]].max().max() + 12))
-    fig.suptitle("Results so far — LBA and EuroCup", **SUP_KW)
-    save_fig(fig, out / "01_results_timeline.png"); plt.close(fig)
+        ax.legend(fontsize=8, loc="upper center", ncol=2, bbox_to_anchor=(0.5, 1.0) if SOCIAL else (0.5, 1.0)); style_axes(ax, "y")
+        ax.set_ylim(0, max(115, g[["pts", "opp_pts"]].max().max() + 12) + (14 if SOCIAL else 0))
+    sup(fig, "Results so far — LBA and EuroCup")
+    save(fig, out / "01_results_timeline.png"); plt.close(fig)
 
 
 def fig_starters_bench(box, A, B, out):
@@ -232,7 +260,7 @@ def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
     lg = pd.concat(lg_src)
     lg_mean = lg[["paint", "mid", "three", "ft", "fg3a", "fga"]].mean()
     srcA, srcB = scoring_sources(box, pbp, ec_zones, A), scoring_sources(box, pbp, ec_zones, B)
-    fig, axes = plt.subplots(1, 2, figsize=(14, 5), gridspec_kw={"width_ratios": [2.2, 1]})
+    fig, axes = grid(2, figsize=(14, 5), gridspec_kw={"width_ratios": [2.2, 1]})
     cats = ["paint", "mid", "three", "ft"]; labels = ["≤4.5 m from rim", "mid-range 2s", "threes", "free throws"]
     x = np.arange(4); w = 0.27
     for i, (team, src) in enumerate(((A, srcA), (B, srcB))):
@@ -253,8 +281,9 @@ def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
         axes[1].text(xi, v + 0.5, f"{v:.1f}\n({100 * s:.0f}% of FGA)", ha="center", fontsize=8.5, color=TEXT2)
     axes[1].set_xticks([0, 1, 2]); axes[1].set_xticklabels([A, B, "league"], fontsize=9); axes[1].set_ylim(0, max(vals) * 1.3)
     axes[1].set_title("Three-point attempts per game", **TITLE_KW); style_axes(axes[1], "y")
-    fig.suptitle("Scoring sources and three-point volume, all competitions (league = other LBA teams)", **SUP_KW)
-    save_fig(fig, out / "04_scoring_sources.png"); plt.close(fig)
+    sup(fig, "Scoring sources and three-point volume, all competitions (league = other LBA teams)",
+        "Where the points come from — all competitions (league = other LBA teams)")
+    save(fig, out / "04_scoring_sources.png"); plt.close(fig)
     return srcA, srcB, lg_mean
 
 
@@ -294,9 +323,9 @@ def plot_zone_heatmap(ax, s, title, ref=None):
             lab, col = "0/0\n—", "#8a8d9c"
         else:
             lab, col = f"{mk}/{att}\n{p:.0f}%", "black" if 25 < p < 75 else "white"
-            if ref and z in ref and ref[z][1] > 0:
+            if ref and z in ref and ref[z][1] > 0 and not SOCIAL:
                 lab += f"\nleague {ref[z][2]:.0f}%"
-        ax.text(cx, cy, lab, ha="center", va="center", color=col, fontsize=8.5, fontweight="bold", zorder=5)
+        ax.text(cx, cy, lab, ha="center", va="center", color=col, fontsize=7.5 if SOCIAL else 8.5, fontweight="bold", zorder=5)
     ax.set_title(title, **TITLE_KW)
     return mesh
 
@@ -304,13 +333,15 @@ def plot_zone_heatmap(ax, s, title, ref=None):
 def fig_hot_spots(pbp, A, B, out):
     s = shots_cm(pbp)
     ref = zone_stats(s[~s.team.isin([A, B])])
-    fig, axes = plt.subplots(1, 2, figsize=(15, 8))
+    fig, axes = grid(2, figsize=(15, 8))
     for ax, team in zip(axes, (A, B)):
         st = s[s.team == team]
         mesh = plot_zone_heatmap(ax, st, f"{team} — {int(st.made.sum())}/{len(st)} FG in {st.game_id.nunique()} LBA games", ref=ref)
-    cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
-    fig.suptitle("Hot spots — FG% by zone, LBA games (third line = FG% of all other LBA teams in that zone)", **SUP_KW)
-    save_fig(fig, out / "06_hot_spots.png"); plt.close(fig)
+    if not SOCIAL:
+        cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
+    sup(fig, "Hot spots — FG% by zone, LBA games (third line = FG% of all other LBA teams in that zone)",
+        "Hot spots — FG% by zone, LBA games (red = cold, green = hot)")
+    save(fig, out / "06_hot_spots.png"); plt.close(fig)
     # per-zone attempt share for the text
     share = {tm: s[s.team == tm].zone.value_counts(normalize=True).round(3).to_dict() for tm in (A, B)}
     share["league"] = s[~s.team.isin([A, B])].zone.value_counts(normalize=True).round(3).to_dict()
@@ -403,7 +434,7 @@ def fig_basic_stats(box, A, B, out):
     """Assists, rebounds, steals, blocks, turnovers, fouls: per game and per 100 possessions (LBA only)."""
     tot = box[(box.competition == "LBA") & (box.row_type == "total")]
     lines = {A: basic_line(tot[tot.team == A]), B: basic_line(tot[tot.team == B]), "league": basic_line(tot[~tot.team.isin([A, B])])}
-    fig, axes = plt.subplots(1, 2, figsize=(16, 5.6))
+    fig, axes = grid(2, figsize=(16, 5.6))
     x = np.arange(len(BASIC_STATS)); w = 0.27
     for ax, suffix, title in ((axes[0], "_pg", "per game"), (axes[1], "_p100", "per 100 possessions")):
         for i, (name, ln) in enumerate(lines.items()):
@@ -411,13 +442,18 @@ def fig_basic_stats(box, A, B, out):
             vals = [ln[f"{k}{suffix}"] for k, _ in BASIC_STATS]
             ax.bar(x + (i - 1) * w, vals, w, color=fill, edgecolor=edge, linewidth=0.6, label=name)
             for xi, v in zip(x, vals):
-                ax.text(xi + (i - 1) * w, v + 0.3, f"{v:.1f}", ha="center", fontsize=7.5, color=TEXT2)
-        ax.set_xticks(x); ax.set_xticklabels([lab for _, lab in BASIC_STATS], fontsize=9)
+                ax.text(xi + (i - 1) * w, v + 0.3, f"{v:.0f}" if SOCIAL else f"{v:.1f}", ha="center", fontsize=6.5 if SOCIAL else 7.5, color=TEXT2)
+        ax.set_xticks(x); ax.set_xticklabels([lab for _, lab in BASIC_STATS], fontsize=8 if SOCIAL else 9,
+                                              rotation=25 if SOCIAL else 0, ha="right" if SOCIAL else "center")
         ax.set_title(f"Basic stats {title}", **TITLE_KW); ax.legend(fontsize=9); style_axes(ax, "y")
     pace = " · ".join(f"{n}: {ln.poss:.1f} poss/g, {ln.pts_p100:.0f} pts per 100" for n, ln in lines.items())
-    fig.suptitle(f"Team comparison — LBA games only ({int(lines[A].games)} per team; league = other 14 teams)\n{pace}", **SUP_KW)
-    axes[1].set_xlabel("possessions estimated as FGA − OREB + TOV + 0.44·FTA", fontsize=8, color=TEXT2)
-    save_fig(fig, out / "09_basic_stats.png"); plt.close(fig)
+    if SOCIAL:
+        fig.suptitle(f"Team comparison — LBA games only\n({int(lines[A].games)} per team; league = other 14 teams)", **SUP_KW)
+        axes[1].set_xlabel("per 100 possessions (FGA − OREB + TOV + 0.44·FTA)\n" + pace.replace(" · ", "\n"), fontsize=7.5, color=TEXT2)
+    else:
+        fig.suptitle(f"Team comparison — LBA games only ({int(lines[A].games)} per team; league = other 14 teams)\n{pace}", **SUP_KW)
+        axes[1].set_xlabel("possessions estimated as FGA − OREB + TOV + 0.44·FTA", fontsize=8, color=TEXT2)
+    save(fig, out / "09_basic_stats.png"); plt.close(fig)
     return pd.DataFrame(lines)
 
 
@@ -466,6 +502,7 @@ def main():
     ap.add_argument("--eurocup", default=None, help="path to the EuroCup raw file (default data/eurocup_2026_raw.txt)")
     ap.add_argument("--no-eurocup", action="store_true")
     ap.add_argument("--out", default="reports")
+    ap.add_argument("--social", action="store_true", help="also write portrait 4:5 (1080x1350) versions of figures 01, 04, 06, 09 into <out>/social/")
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: use only games played before this date (frozen pre-match "
                                                      "snapshot; output folder gets a _before_<date> suffix and charts say so)")
     a = ap.parse_args()
@@ -498,6 +535,14 @@ def main():
     fig_shot_distribution(box, A, B, out)
     basic = fig_basic_stats(box, A, B, out)
     fig_major_factors(box, A, B, out)
+    if a.social:
+        global SOCIAL
+        SOCIAL = True
+        soc = out / "social"; soc.mkdir(exist_ok=True)
+        fig_timeline(box, A, B, soc); fig_scoring_sources(box, pbp, ec_zones, A, B, soc)
+        fig_hot_spots(pbp, A, B, soc); fig_basic_stats(box, A, B, soc)
+        SOCIAL = False
+        print(f"social versions in {soc}")
     print(basic.round(1).to_string())
 
     pd.set_option("display.width", 200)
