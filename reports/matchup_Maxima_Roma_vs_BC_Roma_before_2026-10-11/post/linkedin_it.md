@@ -18,4 +18,6 @@ L'analisi completa, con tutti i grafici e il ragionamento dietro ogni numero, è
 
 Codice e dati sono su GitHub: github.com/martinig94/lba-2627-data. Tutto si rigenera per qualsiasi partita con un comando e si aggiorna da solo ogni lunedì.
 
+🇬🇧 English version in the first comment.
+
 #basket #LBA #analytics #python #DerbyDiRoma
