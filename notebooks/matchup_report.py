@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from lba_style import (save_fig, BLUE, DPI, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS, ZONE_LABELS,
+from lba_style import (save_fig, draw_zone_fill, BLUE, DPI, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS, ZONE_LABELS,
                        assign_zone_arr, draw_half_court, mins, shots_cm, style_axes, team_color)
 
 PAINT_CM = 450
@@ -284,13 +284,9 @@ def zone_stats(s):
 
 def plot_zone_heatmap(ax, s, title, ref=None):
     st = zone_stats(s)
-    xs, ys = np.linspace(-750, 750, 300), np.linspace(-157.5, 1242.5, 280)
-    XX, YY = np.meshgrid(xs, ys); zg = assign_zone_arr(XX, YY)
-    pct = np.full(zg.shape, np.nan)
-    for z, (_, _, p) in st.items():
-        pct[zg == z] = p
-    cmap = plt.cm.RdYlGn.copy(); cmap.set_bad("#e6e6ee")
-    mesh = ax.pcolormesh(XX, YY, pct, cmap=cmap, vmin=0, vmax=100, alpha=0.85, shading="auto", zorder=1)
+    cmap = plt.cm.RdYlGn.copy()
+    draw_zone_fill(ax, {z: p for z, (_, _, p) in st.items()}, cmap)
+    mesh = plt.cm.ScalarMappable(cmap=cmap, norm=plt.Normalize(0, 100)); mesh.set_array([])
     draw_half_court(ax, color="#3a3d52", lw=1.6)
     for z, (cx, cy) in ZONE_LABEL_POS.items():
         mk, att, p = st.get(z, (0, 0, 0.0))
