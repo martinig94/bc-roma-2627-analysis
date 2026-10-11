@@ -14,6 +14,8 @@ Una premessa onesta: tutto questo si basa solo su tabellini e play-by-play. Dico
 
 La mia lettura dai numeri: BC Roma controlla area e rimbalzi e vince di pochi punti in una partita sugli 85-90; la strada di Maxima passa dalla lunetta, dalla panchina e dall'inizio del secondo tempo.
 
-Codice, dati e report completo (10 grafici, schede giocatore, matrice degli assist) sono su GitHub: github.com/martinig94/lba-2627-data. Tutto si rigenera per qualsiasi partita con un comando e si aggiorna da solo ogni lunedì.
+L'analisi completa, con tutti i grafici e il ragionamento dietro ogni numero, è qui (in italiano, con versione inglese): martinig94.github.io/about_me/Derby_Roma_2026_it.html
+
+Codice e dati sono su GitHub: github.com/martinig94/lba-2627-data. Tutto si rigenera per qualsiasi partita con un comando e si aggiorna da solo ogni lunedì.
 
 #basket #LBA #analytics #python #DerbyDiRoma

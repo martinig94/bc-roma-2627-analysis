@@ -14,6 +14,8 @@ One honest caveat: this is built only on the box scores and the play-by-play. It
 
 My read from the numbers: BC Roma controls the paint and the glass and wins by a handful in a high-80s game; Maxima's route is the line, the bench and the start of the second half.
 
-Code, data and the full report (10 charts, player cards, who-feeds-whom matrix) are on GitHub: github.com/martinig94/lba-2627-data. Everything reruns for any matchup in one command, and it updates itself every Monday.
+The complete analysis, with all the charts and the reasoning behind each number, is here (EN, with Italian version): martinig94.github.io/about_me/Derby_Roma_2026.html
+
+Code and data are on GitHub: github.com/martinig94/lba-2627-data. Everything reruns for any matchup in one command, and it updates itself every Monday.
 
 #basketball #LBA #analytics #python #DerbyDiRoma
