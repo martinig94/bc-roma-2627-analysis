@@ -17,7 +17,7 @@ Kelly Olynyk, signed by BC Roma on 3 October, is not registered in time and miss
 
 ## The data
 
-Legabasket's site publishes a JSON play-by-play for every game: each shot with coordinates and shot type, each assist linked to its basket, each foul, each substitution. A small collector pulls the finished games every Monday (GitHub Actions) and a few scripts turn them into game, team, matchup and player reports in one command. EuroCup data comes from the EuroLeague live API; the league reference is always the other fourteen LBA teams in the same games.
+Data from both competitions (LBA and EuroCup) is collected and processed programmatically; the league reference is always the other fourteen LBA teams in the same games. For details on the data and the method, feel free to contact me ([email](mailto:martini.giulia94@gmail.com) or [LinkedIn](https://www.linkedin.com/in/giulimartini/)).
 
 One limit should be clear from the start: the analysis is based solely on this data. It shows where shots come from, who takes them, who is on the floor and who passes to whom; it does not show how a possession was built. Nothing in this page is a comment on defensive schemes, pick-and-roll usage or coverages, set plays or spacing, which can only come from the film.
 

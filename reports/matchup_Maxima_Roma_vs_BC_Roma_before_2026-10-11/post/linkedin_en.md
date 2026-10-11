@@ -1,4 +1,4 @@
-🇬🇧 English version. Rome's first Serie A derby since 1980 tonight: Maxima Roma vs BC Roma, PalaEur, 18:15. I built a small open pipeline on the legabasket.it play-by-play and the EuroCup box scores to see what four games per team already say.
+🇬🇧 English version. Rome's first Serie A derby since 1980 tonight: Maxima Roma vs BC Roma, PalaEur, 18:15. I collected and processed the data from both competitions (LBA and EuroCup) programmatically to see what four games per team already say.
 
 🏀 Opposite offences: BC Roma scores 38 a game inside 4.5 m, 82% in the restricted area, 18/23 on drives. Maxima scores 25 inside, 52% at the rim, and lives at the line (26 FTA a game at 82.5%).
 
@@ -9,4 +9,4 @@
 Built only on box scores and play-by-play, so no comment here on schemes, coverages or set plays. Numbers say BC Roma by a handful in a high-80s game.
 
 Full analysis (EN): martinig94.github.io/about_me/Derby_Roma_2026.html
-Code and data: github.com/martinig94/lba-2627-data
+Code and data: github.com/martinig94/lba-2627-data. For details on data and method, just message me.

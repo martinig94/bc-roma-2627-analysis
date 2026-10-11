@@ -17,7 +17,7 @@ Kelly Olynyk, firmato da BC Roma il 3 ottobre, non è stato tesserato in tempo e
 
 ## I dati
 
-Il sito di Legabasket pubblica per ogni partita un play-by-play in JSON: ogni tiro con coordinate e tipo di conclusione, ogni assist legato al suo canestro, ogni fallo, ogni cambio. Un piccolo collettore scarica le partite concluse ogni lunedì (GitHub Actions) e alcuni script ne ricavano con un comando i report di partita, squadra, confronto e giocatori. I dati EuroCup vengono dall'API live dell'EuroLeague; il riferimento al campionato sono sempre le altre quattordici squadre di LBA nelle stesse giornate.
+I dati delle due competizioni (LBA ed EuroCup) vengono raccolti e processati in maniera programmatica; il riferimento al campionato sono sempre le altre quattordici squadre di LBA nelle stesse giornate. Per i dettagli su dati e metodo potete contattarmi ([email](mailto:martini.giulia94@gmail.com) o [LinkedIn](https://www.linkedin.com/in/giulimartini/)).
 
 Un limite va detto subito: l'analisi si basa esclusivamente su questi dati. Mostrano da dove arrivano i tiri, chi li prende, chi è in campo e chi serve chi; non mostrano come un possesso è stato costruito. In questa pagina non c'è quindi nessun commento su schemi difensivi, uso e coperture del pick and roll, giochi o spaziature, che possono venire solo dal video.
 
