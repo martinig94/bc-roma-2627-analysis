@@ -69,7 +69,7 @@ In Maxima i numeri indicano Bilan e Brown. Bilan ha la valutazione più alta (21
 
 Due duelli dovrebbero decidere la partita. Il primo: se Maxima riesce a tenere i penetratori di BC Roma fuori dall'area, dove BC Roma prende un terzo dei suoi tiri e segna con l'82% e dove gli avversari di Maxima stanno tirando 34/45. Il secondo: se BC Roma riesce a difendere senza fare falli, perché i suoi 28,5 liberi concessi a partita vanno dritti contro la miglior squadra del campionato in lunetta.
 
-Le tendenze dicono che BC Roma controlla area e rimbalzi (12,8 rimbalzi offensivi a partita contro 9,5) e che Maxima resta in partita con i liberi e le triple della panchina. L'abitudine di Maxima a perdere un terzo o un quarto periodo, contro una BC Roma che un terzo quarto l'ha buttato via a sua volta, rende l'inizio del secondo tempo il momento da guardare. Una lettura ragionevole dei numeri è una vittoria di BC Roma di pochi punti in una partita intorno agli 85-90; l'atmosfera del derby e la profondità di Maxima sono i motivi principali per cui potrebbe andare diversamente, e senza Olynyk i falli di Simonovic sarebbero la singola variabile più pesante.
+Le tendenze dicono che BC Roma controlla area e rimbalzi (12,8 rimbalzi offensivi a partita contro 9,5) e che Maxima resta in partita con i liberi e le triple della panchina. L'abitudine di Maxima a perdere un terzo o un quarto periodo, contro una BC Roma che un terzo quarto l'ha buttato via a sua volta, rende l'inizio del secondo tempo il momento da guardare. Senza Olynyk, i falli di Simonovic sarebbero la singola variabile più pesante per BC Roma; l'atmosfera del derby e la profondità di Maxima sono i fattori che i numeri non possono pesare.
 
 ## Avvertenze
 
