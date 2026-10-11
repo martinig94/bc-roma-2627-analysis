@@ -57,15 +57,13 @@ On LBA games only, both teams play at the same pace (76 and 75 possessions a gam
 
 ![basic stats](assets/images/derby_2026/09_basic_stats.png)
 
-## Who has the ball in the last five minutes
+## The key players
 
-For "clutch" I use the NBA definition: last five minutes of the fourth quarter or overtime with the score within five points at the moment of the play. The filter removes blowouts, and so far close finishes are rare: two for BC Roma (the 92–87 over Lietkabelis, played entirely within five points over the last five minutes, and a handful of possessions in Istanbul before Bahcesehir pulled away) and one for Maxima (Bologna, where it came back to level before losing 98–89). Napoli, Treviso, Tortona, Cluj and Ankara were never close at the end.
+On the two LBA games alone, where the data is complete, the key players are few and clear. For BC Roma the pair is Mannion and Simonovic: Mannion has the team's best efficiency rating (23.5 PIR per game, sixth in the whole league) with 15 points, 8 assists and one turnover a game, and he is the player who touches the ball most (19% of the team's shots and a third of its assists); Simonovic produces 17 points and 6.5 rebounds in 24 minutes at 72% true shooting, 14/17 on twos, with the team's best on-court balance at +15. Behind them Stevenson is the most efficient of all (83% true shooting, 8/14 from three, +21 on court) and Davis gives 10 assists in 41 minutes off the bench. These four carry so much that when Mannion or Simonovic are off, the numbers show no obvious alternative: after Davis, nobody else is above 9 PIR per game.
 
-In those minutes BC Roma scored 11 points on 4/7 shooting and conceded 8, but turned the ball over four times, against a league average of 1.2 per close finish. The ball goes through Mannion (2/4, two turnovers, four fouls drawn) and Simonovic, who closed the Lietkabelis game with 20 seconds left with an offensive rebound, the basket and two free throws; Stevenson's three at 1:07 came off a Simonovic assist.
+For Maxima the numbers point to Bilan and Brown. Bilan has the highest rating (21.5 PIR, 14 points and 6 rebounds in 22.5 minutes) and gets it mostly from the line, 14/16, where he goes thanks to 15 fouls drawn in two games, the highest figure on either team; Brown is the most complete player (10 points, 9 rebounds, 3 steals a game, 19 PIR) and the only big with a near-even on-court balance (−2) across two clear defeats. Alibegovic is the third reference (11.5 points, 14/14 at the line), Lemar the most prolific scorer per minute (26.7 points per 40') but at −34 on court, and Moon, 13 points and 8 assists in his only game, is the most interesting variable because he moved the ball like no other teammate. Maxima's problem in the numbers is not the top of the rotation but its tail: Wheatle, Ryan and Holiday add up to 125 minutes with negative or near-zero ratings and a combined −93 on court.
 
-Maxima scored 7 points in five minutes at Bologna, with one field goal (Moon) and the rest from the line (Alibegovic, Lemar and Brown, 5/6), three turnovers, two of them by Bilan, and 18 points conceded. It is the same pattern as its games overall: a late offence that lives at the free-throw line while the opponent scores from the field.
-
-![clutch](assets/images/derby_2026/11_clutch.png)
+![key players](assets/images/derby_2026/07_key_players.png)
 
 ## What to expect
 
@@ -75,6 +73,6 @@ The tendencies say BC Roma controls the paint and the glass (12.8 offensive rebo
 
 ## Caveats
 
-Four games is a thin sample and some of the player numbers are already noisy (a 1/1 night shows up as 125% true shooting). Shot coordinates are the league scorer's clicks: all threes come out at 6.8–8.0 m from the rim and all twos under 6.5 m, so the scaling is right, but individual positions carry perhaps half a metre of noise, fine for zones, not for exact distances. The EuroCup data carries box scores, shot zones and the late-game play-by-play (used for the clutch minutes) but not shot types or assist links, so the habit charts are LBA only and say so.
+Four games is a thin sample and some of the player numbers are already noisy (a 1/1 night shows up as 125% true shooting). Shot coordinates are the league scorer's clicks: all threes come out at 6.8–8.0 m from the rim and all twos under 6.5 m, so the scaling is right, but individual positions carry perhaps half a metre of noise, fine for zones, not for exact distances. The EuroCup data carries box scores and shot zones but not shot types or assist links, so the habit charts are LBA only and say so.
 
 *A post-game version of this page, comparing what happened with the expectations above, will follow once the final play-by-play is collected.*
