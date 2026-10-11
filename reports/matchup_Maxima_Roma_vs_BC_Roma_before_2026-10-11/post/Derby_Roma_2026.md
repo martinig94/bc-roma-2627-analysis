@@ -4,7 +4,7 @@ title: Derby della Capitale, by the numbers
 description: Maxima Roma vs BC Roma, LBA 2026-27 — a data preview built on the league play-by-play
 image: assets/images/derby_2026/06_hot_spots.png
 nav-menu: false
-show_tile: true
+show_tile: false
 ---
 
 *Published 11 October 2026, a few hours before tip-off. [Versione italiana](/about_me/Derby_Roma_2026_it.html). Numbers are season to date: two LBA games per team plus two EuroCup games each, so read everything as early tendencies rather than established facts. Code and data: [lba-2627-data](https://github.com/martinig94/lba-2627-data).*
@@ -17,7 +17,7 @@ Kelly Olynyk, signed by BC Roma on 3 October, is not registered in time and miss
 
 ## The data
 
-Legabasket's site exposes a JSON play-by-play for every game: each shot with court coordinates and a shot-type tag (drive, pull-up, step-back, dunk…), each assist linked to the basket it created, each foul with its type, each substitution. I built a small collector that pulls every finished game once a week (GitHub Actions, Monday morning), and a set of scripts that turn it into game, team, matchup and player reports in one command. EuroCup box scores and shot zones come from the EuroLeague live API. League references throughout are the other fourteen LBA teams in the same games.
+Legabasket's site publishes a JSON play-by-play for every game: each shot with coordinates and shot type, each assist linked to its basket, each foul, each substitution. A small collector pulls the finished games every Monday (GitHub Actions) and a few scripts turn them into game, team, matchup and player reports in one command. EuroCup data comes from the EuroLeague live API; the league reference is always the other fourteen LBA teams in the same games.
 
 One limit should be clear from the start: the analysis is based solely on this data. It shows where shots come from, who takes them, who is on the floor and who passes to whom; it does not show how a possession was built. Nothing in this page is a comment on defensive schemes, pick-and-roll usage or coverages, set plays or spacing, which can only come from the film.
 
