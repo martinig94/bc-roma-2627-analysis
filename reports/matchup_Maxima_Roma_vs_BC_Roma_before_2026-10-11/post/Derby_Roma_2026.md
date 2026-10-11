@@ -69,7 +69,7 @@ For Maxima the numbers point to Bilan and Brown. Bilan has the highest rating (2
 
 Two matchups should decide it. First, whether Maxima can keep BC Roma's drivers out of the restricted area, where BC Roma takes a third of its shots and makes 82% and Maxima's opponents are shooting 34/45. Second, whether BC Roma can defend without fouling, because its 28.5 opponent free throws a game run straight into the league's best free-throw team.
 
-The tendencies say BC Roma controls the paint and the glass (12.8 offensive rebounds a game to Maxima's 9.5) and Maxima stays in it through free throws and bench threes. Maxima's habit of losing a third or fourth quarter, against a BC Roma that has itself collapsed in a third quarter, makes the start of the second half the moment to watch. A reasonable baseline is a BC Roma win by a handful in a game in the high eighties; the derby atmosphere and Maxima's depth are the main reasons it could go the other way, and without Olynyk, foul trouble for Simonovic would be the single biggest swing.
+The tendencies say BC Roma controls the paint and the glass (12.8 offensive rebounds a game to Maxima's 9.5) and Maxima stays in it through free throws and bench threes. Maxima's habit of losing a third or fourth quarter, against a BC Roma that has itself collapsed in a third quarter, makes the start of the second half the moment to watch. Without Olynyk, foul trouble for Simonovic would be the single biggest swing for BC Roma; the derby atmosphere and Maxima's depth are the factors the numbers cannot weigh.
 
 ## Caveats
 
