@@ -4,7 +4,7 @@ title: Il derby della Capitale, in numeri
 description: Maxima Roma – BC Roma, LBA 2026-27 — un'anteprima dati costruita sul play-by-play del campionato
 image: assets/images/derby_2026/06_hot_spots.png
 nav-menu: false
-show_tile: true
+show_tile: false
 ---
 
 *Pubblicato l'11 ottobre 2026, poche ore prima della palla a due. [English version](/about_me/Derby_Roma_2026.html). I numeri sono quelli della stagione fin qui: due partite di LBA per squadra più due di EuroCup ciascuna, quindi vanno letti come tendenze iniziali, non come certezze. Codice e dati: [lba-2627-data](https://github.com/martinig94/lba-2627-data).*
@@ -17,7 +17,7 @@ Kelly Olynyk, firmato da BC Roma il 3 ottobre, non è stato tesserato in tempo e
 
 ## I dati
 
-Il sito di Legabasket espone per ogni partita un play-by-play in JSON: ogni tiro con le coordinate sul campo e il tipo di conclusione (penetrazione, arresto e tiro, step back, schiacciata…), ogni assist collegato al canestro che ha prodotto, ogni fallo con la sua tipologia, ogni sostituzione. Ho costruito un piccolo collettore che scarica tutte le partite concluse una volta a settimana (GitHub Actions, il lunedì mattina) e una serie di script che da quei dati generano con un solo comando i report di partita, di squadra, di confronto e le schede dei giocatori. Tabellini e zone di tiro dell'EuroCup arrivano dall'API live dell'EuroLeague. I riferimenti al campionato sono sempre le altre quattordici squadre di LBA nelle stesse giornate.
+Il sito di Legabasket pubblica per ogni partita un play-by-play in JSON: ogni tiro con coordinate e tipo di conclusione, ogni assist legato al suo canestro, ogni fallo, ogni cambio. Un piccolo collettore scarica le partite concluse ogni lunedì (GitHub Actions) e alcuni script ne ricavano con un comando i report di partita, squadra, confronto e giocatori. I dati EuroCup vengono dall'API live dell'EuroLeague; il riferimento al campionato sono sempre le altre quattordici squadre di LBA nelle stesse giornate.
 
 Un limite va detto subito: l'analisi si basa esclusivamente su questi dati. Mostrano da dove arrivano i tiri, chi li prende, chi è in campo e chi serve chi; non mostrano come un possesso è stato costruito. In questa pagina non c'è quindi nessun commento su schemi difensivi, uso e coperture del pick and roll, giochi o spaziature, che possono venire solo dal video.
 
