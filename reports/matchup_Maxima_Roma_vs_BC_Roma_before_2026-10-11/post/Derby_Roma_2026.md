@@ -75,4 +75,24 @@ The tendencies say BC Roma controls the paint and the glass (12.8 offensive rebo
 
 Four games is a thin sample and some of the player numbers are already noisy (a 1/1 night shows up as 125% true shooting). Shot coordinates are the league scorer's clicks: all threes come out at 6.8–8.0 m from the rim and all twos under 6.5 m, so the scaling is right, but individual positions carry perhaps half a metre of noise, fine for zones, not for exact distances. The EuroCup data carries box scores and shot zones but not shot types or assist links, so the habit charts are LBA only and say so.
 
-*A post-game version of this page, comparing what happened with the expectations above, will follow once the final play-by-play is collected.*
+---
+
+## What happened
+
+*Added on 12 October 2026, from the play-by-play of the game. The charts are produced by `postgame_report.py`, which compares a game with everything each team and player had done before it.*
+
+**Maxima Roma 96–95 BC Roma** (25–33, 27–24, 25–13, 19–25). BC Roma led for 25 minutes, by up to 14 at the end of the first quarter, and the game turned exactly where the pattern above pointed, but in the opposite direction: Maxima, the team that had lost a third quarter badly in three games out of four, won the third 25–13 with a 10–0 run and led by 9 early in the fourth. BC Roma got back to 94–93 with 17 seconds left on a Mannion drive; two Tyson free throws and a missed Mannion jumper at 0:05 settled it.
+
+![margin](assets/images/derby_2026/pg_01_margin.png)
+
+**Maxima** had the best offensive game of its season: 96 points, 21 assists against 9 turnovers (it had averaged 16), 15/29 from three (52% against 37% before). The free-throw line, its lifeline until now, mattered less: 23 attempts, 74%, 21 fouls drawn against 25. The points came from the perimeter, not from the players flagged above as its key men: Alibegovic 18 on 6/9 from three (PIR 20 against an average of 8), Holiday 20 points and 8 assists (23 against 11), Brown 18 on 7/10 inside, Moon 9 points, 7 assists, no turnovers and a team-best +18 in 27 minutes. Bilan, its best player by PIR coming in, played 15 minutes, shot 3/10 and finished with 6; Lemar 12 minutes and 2 points. Twelve players used again, 44 bench points.
+
+**BC Roma** lost the two things the page above called its strengths. The restricted area, where it had shot 37/45 in the LBA, was 15/24 (62%), and twos overall fell from 67% to 50%; threes were normal (10/28), free throws perfect (19/19), turnovers low (10), but 17 assists against an average of 20 and 10 offensive rebounds against 13 say the inside game did not produce. Mannion carried it, 24 points, 10 assists, 10/10 at the line, PIR 31 against 26.5, with 4 turnovers; Simonovic, the other half of the hub, had 9 points, 3 turnovers and a PIR of 5 against 22.8; Stevenson 4/13 for 9. Davis (14, PIR 18 against 8.5) and Strautins (14, PIR 13 against 5) were the two who played above their average.
+
+![team numbers](assets/images/derby_2026/pg_02_team.png)
+
+![players](assets/images/derby_2026/pg_03_players.png)
+
+![zones](assets/images/derby_2026/pg_04_zones.png)
+
+**Against the reading above.** The paint duel went Maxima's way: BC Roma's efficiency at the rim collapsed while Maxima's two-point percentage held at 45%. The fouling duel did not matter, because Maxima drew fewer fouls than usual. The third quarter decided the game as expected, with the roles reversed. And the group that turned it was Maxima's perimeter rotation, which the data had flagged as deep but not as a shooting threat: 29% from the top of the arc before, 11/21 from there in the derby. Olynyk did not play. Same caveat as above: box score and play-by-play only, nothing here is a comment on how possessions were defended or built.

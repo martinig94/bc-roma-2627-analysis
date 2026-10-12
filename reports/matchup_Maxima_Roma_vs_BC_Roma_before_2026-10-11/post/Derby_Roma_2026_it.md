@@ -75,4 +75,24 @@ Le tendenze dicono che BC Roma controlla area e rimbalzi (12,8 rimbalzi offensiv
 
 Quattro partite sono un campione sottile e alcuni numeri individuali sono già rumorosi (una serata da 1/1 compare come 125% di true shooting). Le coordinate dei tiri sono i clic del refertista: tutte le triple risultano tra 6,8 e 8,0 metri dal ferro e tutti i tiri da due sotto i 6,5, quindi la scala è corretta, ma le singole posizioni hanno forse mezzo metro di rumore, che va bene per le zone e non per le distanze esatte. I dati EuroCup contengono tabellini e zone di tiro ma non i tipi di tiro né i collegamenti degli assist, quindi i grafici sulle abitudini sono solo LBA e lo dichiarano.
 
-*Una versione post-partita di questa pagina, con il confronto tra quello che è successo e le attese qui sopra, seguirà appena il play-by-play finale sarà raccolto.*
+---
+
+## Cosa è successo
+
+*Aggiunto il 12 ottobre 2026, dal play-by-play della partita. I grafici sono prodotti da `postgame_report.py`, che confronta una partita con tutto quello che squadre e giocatori avevano fatto prima.*
+
+**Maxima Roma 96–95 BC Roma** (25–33, 27–24, 25–13, 19–25). BC Roma è stata avanti per 25 minuti, fino a +14 alla fine del primo quarto, e la partita è girata esattamente dove indicava lo schema qui sopra, ma nel verso opposto: Maxima, la squadra che aveva perso male un terzo quarto in tre partite su quattro, ha vinto il terzo 25–13 con un parziale di 10–0 ed è salita a +9 a inizio quarto periodo. BC Roma è tornata sul 94–93 a 17 secondi dalla fine con una penetrazione di Mannion; due liberi di Tyson e il tiro sbagliato di Mannion a 5 secondi hanno chiuso i conti.
+
+![andamento](assets/images/derby_2026/pg_01_margin.png)
+
+**Maxima** ha fatto la migliore partita offensiva della sua stagione: 96 punti, 21 assist contro 9 palle perse (ne perdeva 16 di media), 15/29 da tre (52% contro il 37% precedente). La lunetta, finora la sua ancora, ha contato meno: 23 tiri, 74%, 21 falli subiti contro 25. I punti sono arrivati dal perimetro, non dai giocatori indicati sopra come riferimenti: Alibegovic 18 con 6/9 da tre (20 di PIR contro una media di 8), Holiday 20 punti e 8 assist (23 contro 11), Brown 18 con 7/10 dentro, Moon 9 punti, 7 assist, zero palle perse e il miglior +18 di squadra in 27 minuti. Bilan, il miglior giocatore per PIR alla vigilia, ha giocato 15 minuti con 3/10 al tiro e 6 di valutazione; Lemar 12 minuti e 2 punti. Di nuovo dodici giocatori usati, 44 punti dalla panchina.
+
+**BC Roma** ha perso le due cose che la pagina sopra chiamava punti di forza. L'area, dove in LBA tirava 37/45, è stata 15/24 (62%), e il 2P% complessivo è sceso dal 67% al 50%; le triple sono state nella norma (10/28), i liberi perfetti (19/19), le palle perse poche (10), ma 17 assist contro una media di 20 e 10 rimbalzi offensivi contro 13 dicono che il gioco interno non ha prodotto. Mannion l'ha trascinata, 24 punti, 10 assist, 10/10 ai liberi, 31 di PIR contro 26,5, con 4 palle perse; Simonovic, l'altra metà del collegamento, ha chiuso con 9 punti, 3 palle perse e 5 di PIR contro 22,8; Stevenson 4/13 per 9 punti. Davis (14, PIR 18 contro 8,5) e Strautins (14, PIR 13 contro 5) sono i due che hanno giocato sopra la loro media.
+
+![numeri di squadra](assets/images/derby_2026/pg_02_team.png)
+
+![giocatori](assets/images/derby_2026/pg_03_players.png)
+
+![zone](assets/images/derby_2026/pg_04_zones.png)
+
+**Rispetto alla lettura di prima.** Il duello in area l'ha vinto Maxima: l'efficienza di BC Roma sotto canestro è crollata mentre il 2P% di Maxima è rimasto al 45%. Il duello sui falli non ha contato, perché Maxima ne ha subiti meno del solito. Il terzo quarto ha deciso la partita come previsto, ma a ruoli invertiti. E il gruppo che l'ha girata è stata la rotazione perimetrale di Maxima, che i dati indicavano come profonda ma non come minaccia al tiro: 29% dalla punta prima, 11/21 da lì nel derby. Olynyk non ha giocato. Stessa avvertenza di sopra: solo tabellino e play-by-play, niente qui è un commento su come i possessi sono stati difesi o costruiti.
