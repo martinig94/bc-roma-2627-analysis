@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LBA 2026/27 match analyses</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<style>
+  :root { --bg:#fff; --text:#1a1a2e; --muted:#5a5e73; --line:#e3e4ea; --gold:#F2C300; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14141c; --text:#ececf3; --muted:#a3a6b8; --line:#2c2d3a; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, sans-serif; }
+  header { border-bottom:4px solid var(--gold); padding:16px; position:sticky; top:0; background:var(--bg); z-index:1; }
+  .bar { max-width:980px; margin:0 auto; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  h1.site { font-size:1.1rem; margin:0; }
+  select { font:inherit; padding:6px 10px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
+  main { max-width:980px; margin:0 auto; padding:8px 16px 48px; }
+  img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
+  a { color:inherit; }
+  h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2rem; }
+  code { font-size:.9em; word-break:break-word; }
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <h1 class="site">LBA 2026/27 match analyses</h1>
+  <select id="pick" aria-label="Choose an analysis"></select>
+</div></header>
+<main id="content">Loading...</main>
+<script>
+const pick = document.getElementById("pick"), content = document.getElementById("content");
+
+async function show(slug) {
+  const base = `analyses/${slug}/`;
+  const res = await fetch(base + "README.md");
+  if (!res.ok) { content.textContent = "Could not load this analysis."; return; }
+  content.innerHTML = marked.parse(await res.text());
+  content.querySelectorAll("img").forEach(img => { img.src = base + img.getAttribute("src"); img.loading = "lazy"; });
+  content.querySelectorAll("a[href^=http]").forEach(a => { a.target = "_blank"; a.rel = "noopener"; });
+  window.scrollTo(0, 0);
+}
+
+fetch("analyses.json").then(r => r.json()).then(list => {
+  list.forEach(e => pick.add(new Option(e.title + "  (before " + e.date + ")", e.slug)));
+  const wanted = location.hash.slice(1);
+  if (list.some(e => e.slug === wanted)) pick.value = wanted;
+  pick.onchange = () => { location.hash = pick.value; show(pick.value); };
+  show(pick.value);
+}).catch(() => { content.textContent = "Could not load the list of analyses."; });
+</script>
+</body>
+</html>

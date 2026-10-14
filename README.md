@@ -43,6 +43,13 @@ roma.groupby(["team", "player_surname"])[["pts", "reb", "ast", "val", "plus_minu
 
 See `notebooks/` for more.
 
+## Analyses site (GitHub Pages)
+
+`docs/` is a static page with a drop-down of the pre-match analyses (`reports/matchup_*_before_*`).
+After generating a new report (`matchup_report.py` plus `lineups_report.py`, both with `--before <date>`),
+run `python notebooks/build_site.py` and commit `docs/`. Enable it once in the repository settings:
+Pages, source "Deploy from a branch", branch `master`, folder `/docs`.
+
 ## Caveats
 
 * Not an official API. Endpoints were mapped from the site's network traffic in Sept 2026 and can
