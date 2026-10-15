@@ -4,13 +4,46 @@ LBA 2026/27, Round 4 · Saturday 17 October 2026, 16:00 · Palazzetto dello Spor
 
 Data: LBA games only (legabasket.it box scores and play-by-play), rounds 1 to 3 for both teams. League references are all 16 teams' LBA games collected so far (42 team-games). Three games per team is a small sample: treat everything below as early tendencies, not established facts. EuroCup games are not included.
 
-This folder is a frozen pre-match snapshot (games before 17 October 2026). Regenerate it with `python notebooks/matchup_report.py --home "BC Roma" --away "Umana Reyer Venezia" --no-eurocup --before 2026-10-17` and `python notebooks/lineups_report.py --team "BC Roma" --team "Umana Reyer Venezia" --before 2026-10-17 --out <this folder>`.
+This folder is a frozen pre-match snapshot (games before 17 October 2026). Regenerate it with `python notebooks/matchup_report.py --home "BC Roma" --away "Umana Reyer Venezia" --no-eurocup --before 2026-10-17`, `python notebooks/lineups_report.py --team "BC Roma" --team "Umana Reyer Venezia" --before 2026-10-17 --out <this folder>` and `python notebooks/standings.py --team "BC Roma" --team "Umana Reyer Venezia" --before 2026-10-17 --out <this folder>` (results and standings section).
+
+## LBA so far: results and standings
+
+All 24 LBA games played before this match (rounds 1 to 3); home team first.
+
+- **Round 1**: **Treviso 109-94 BC Roma** · **Venezia 85-73 Cantù** · Reggio Emilia 78-83 Trento · Milano 83-79 Trieste · Tortona 101-93 Verona · Udine 87-63 Scafati · Maxima Roma 75-94 Napoli · Varese 69-90 Virtus Bologna
+- **Round 2**: Trento 90-93 Treviso · Napoli 99-93 Reggio Emilia · **BC Roma 108-70 Tortona** · Scafati 77-85 Varese · **Trieste 82-87 Venezia** · Virtus Bologna 98-89 Maxima Roma · Cantù 84-85 Udine · Verona 75-72 Milano
+- **Round 3**: Udine 66-74 Trento · Varese 85-84 Trieste · Milano 106-77 Treviso · Reggio Emilia 93-86 Tortona · Cantù 80-99 Napoli · Scafati 82-89 Verona · **Maxima Roma 96-95 BC Roma** · **Venezia 86-93 Virtus Bologna**
+
+![standings](00_standings.png)
+
+**Standings after round 3**
+
+| # | Team | Pts | W-L | Points for-against | Diff | Results |
+|---:|---|---:|:---:|:---:|---:|:---:|
+| 1 | Napoli | 6 | 3-0 | 292-248 | +44 | WWW |
+| 2 | Virtus Bologna | 6 | 3-0 | 281-244 | +37 | WWW |
+| 3 | Verona | 4 | 2-1 | 257-255 | +2 | LWW |
+| 4 | Milano | 4 | 2-1 | 261-231 | +30 | WLW |
+| 5 | Treviso | 4 | 2-1 | 279-290 | -11 | WWL |
+| 6 | Trento | 4 | 2-1 | 247-237 | +10 | WLW |
+| 7 | **Venezia** | 4 | 2-1 | 258-248 | +10 | WWL |
+| 8 | Varese | 4 | 2-1 | 239-251 | -12 | LWW |
+| 9 | Udine | 4 | 2-1 | 238-221 | +17 | WWL |
+| 10 | Reggio Emilia | 2 | 1-2 | 264-268 | -4 | LLW |
+| 11 | Maxima Roma | 2 | 1-2 | 260-287 | -27 | LLW |
+| 12 | **BC Roma** | 2 | 1-2 | 297-275 | +22 | LWL |
+| 13 | Tortona | 2 | 1-2 | 257-294 | -37 | WLL |
+| 14 | Trieste | 0 | 0-3 | 245-255 | -10 | LLL |
+| 15 | Cantù | 0 | 0-3 | 237-269 | -32 | LLL |
+| 16 | Scafati | 0 | 0-3 | 222-261 | -39 | LLL |
+
+Two points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).
 
 ## Where the two teams are
 
-**BC Roma** is 1-2: a 94-109 loss at Treviso, a 108-70 win over Tortona and a 95-96 loss at Maxima Roma in the derby. The team scores 99 per game (128 per 100 possessions against a league 111) and concedes 92, the opponents hitting 53% of their twos, 36% of their threes and getting to the line 26.7 times per game.
+**BC Roma** is 1-2 and 12th in the standings, level on 2 points with Reggio Emilia, Maxima Roma and Tortona (its +22 point difference is the best of the four, but the derby loss puts it behind Maxima): a 94-109 loss at Treviso, a 108-70 win over Tortona and a 95-96 loss at Maxima Roma in the derby. The team scores 99 per game (128 per 100 possessions against a league 111) and concedes 92, the opponents hitting 53% of their twos, 36% of their threes and getting to the line 26.7 times per game.
 
-**Venezia** is 2-1: wins over Cantu (85-73) and at Trieste (87-82), then a 86-93 home loss to Virtus Bologna. It scores 86 and concedes 83 (117 per 100 possessions scored), with the better defence of the two: opponents shoot 51% on twos and 33% on threes and have 21 free throw attempts per game.
+**Venezia** is 2-1 and 7th, one of seven teams on 4 points behind the unbeaten Napoli and Virtus Bologna: wins over Cantu (85-73) and at Trieste (87-82), then a 86-93 home loss to Virtus Bologna. It scores 86 and concedes 83 (117 per 100 possessions scored), with the better defence of the two: opponents shoot 51% on twos and 33% on threes and have 21 free throw attempts per game.
 
 ![results](01_results_timeline.png)
 
