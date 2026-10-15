@@ -14,6 +14,8 @@ Figures (all season-to-date, both LBA and EuroCup games when the EuroCup file is
   08_shot_distribution    share of team FGA per player, twos vs threes
   09_basic_stats          assists, rebounds, steals, blocks, turnovers, fouls per game and per 100 possessions (LBA only)
   10_major_factors        who carries each category: leader's share of the team total (2nd/3rd when close), LBA only
+  00_standings + standings.md   LBA results so far and current standings (notebooks/standings.py); every page
+                          README includes the standings.md section under its intro, with both teams' positions
 
 EuroCup box scores come from data/eurocup_box.csv (see notebooks/eurocup_fetch.md for how to refresh it);
 they carry per-zone shot counts, not coordinates, so they feed every chart except the hot spots.
@@ -27,6 +29,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import standings as lba_standings
 from lba_style import (save_fig, draw_zone_fill, BLUE, DPI, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS, ZONE_LABELS,
                        assign_zone_arr, draw_half_court, mins, shots_cm, style_axes, team_color)
 
@@ -525,6 +528,9 @@ def main():
             ec_box = ec_box[ec_box.date < a.before]; ec_zones = ec_zones[ec_zones.game_id.isin(ec_box.game_id.unique())]
         box = pd.concat([box, ec_box], ignore_index=True)
     A, B = a.home, a.away
+    all_games = pd.read_csv(data / "games.csv")   # standings use every finished LBA game before the cut-off
+    lba_standings.fig_standings(all_games, a.before, [A, B], out)
+    (out / "standings.md").write_text(lba_standings.standings_md(all_games, a.before, [A, B]), encoding="utf-8")
     fig_timeline(box, A, B, out)
     fig_starters_bench(box, A, B, out)
     fig_minutes(box, A, B, out)

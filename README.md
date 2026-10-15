@@ -47,7 +47,11 @@ See `notebooks/` for more.
 
 `docs/` is a static page with a drop-down of the pre-match analyses (`reports/matchup_*_before_*`).
 After generating a new report (`matchup_report.py` plus `lineups_report.py`, both with `--before <date>`),
-run `python notebooks/build_site.py` and commit `docs/`. Enable it once in the repository settings:
+run `python notebooks/build_site.py` and commit `docs/`.
+Every page starts with an **LBA so far: results and standings** section (all results before the match
+plus the current table, `00_standings.png` + `standings.md`, written by `notebooks/standings.py` and
+automatically by `matchup_report.py`); paste `standings.md` under the page intro and mention both
+teams' positions in "Where the two teams are". Enable it once in the repository settings:
 Pages, source "Deploy from a branch", branch `master`, folder `/docs`.
 
 ## Caveats
