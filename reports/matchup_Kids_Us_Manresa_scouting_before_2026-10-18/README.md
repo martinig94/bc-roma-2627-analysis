@@ -101,7 +101,7 @@ Most frequent combinations:
 
 ![distance](03_shot_distance.png)
 
-EuroCup games only (3 games, 197 attempts): ACB does not publish shot locations. Main scorers = top 4 by total points. Share of own attempts / FG%:
+EuroCup games only (3 games, 197 attempts): ACB does not publish shot locations. Main scorers = top 4 by total points. Table: share of each player's own attempts / FG%. The chart shows who takes the team's attempts at each distance.
 
 | Distance | Team | Timmy Allen | JD Notae | Nick Ongenda | Chibuzo Agbo |
 |---|---|---|---|---|---|
