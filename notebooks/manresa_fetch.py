@@ -33,6 +33,8 @@ EL_RESULTS = "https://api-live.euroleague.net/v1/results?seasonCode=U2026"
 EL_BOX = "https://live.euroleague.net/api/Boxscore?gamecode={n}&seasoncode=U2026"
 EL_PBP = "https://live.euroleague.net/api/PlayByPlay?gamecode={n}&seasoncode=U2026"
 EL_PEOPLE = "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/clubs/MAN/people"
+ES_MONTHS = {"ene": "01", "feb": "02", "mar": "03", "abr": "04", "may": "05", "jun": "06", "jul": "07",
+             "ago": "08", "sep": "09", "oct": "10", "nov": "11", "dic": "12"}
 PERIOD_QUARTERS = ("FirstQuarter", "SecondQuarter", "ThirdQuarter", "ForthQuarter", "ExtraTime")
 # ACB numeric play types for substitutions (checked against starters + on-court counts).
 ACB_SUB_IN, ACB_SUB_OUT, ACB_STARTERS = 112, 115, 599
@@ -108,7 +110,10 @@ def acb_game_slugs() -> list[str]:
 def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]:
     """Return (game row, Manresa box rows, Manresa events, assists) for one ACB game."""
     game_id = slug.rsplit("-", 1)[1]
-    stats = flight_json(get(ACB_GAME.format(slug=slug, page="estadisticas")).text, "teamBoxscores")
+    page = get(ACB_GAME.format(slug=slug, page="estadisticas")).text
+    stats = flight_json(page, "teamBoxscores")
+    day, month, year = re.search(r"(\d{1,2}) ([a-z]+) (\d{4}) \|", page).groups()
+    game_date = f"{year}-{ES_MONTHS[month[:3]]}-{int(day):02d}"
     plays = flight_json(get(ACB_GAME.format(slug=slug, page="jugadas")).text, "plays")
     plays = sorted(plays, key=lambda p: p["order"])
     man_home = slug.startswith("kidsandus-manresa-vs")
@@ -177,7 +182,7 @@ def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]
 
     final = score(plays[-1])
     opponent = teams["opp"][0]
-    game = {"comp": "Liga Endesa", "game_id": game_id, "opponent": opponent,
+    game = {"comp": "Liga Endesa", "game_id": game_id, "date": game_date, "opponent": opponent,
             "home": int(man_home), "man_pts": final[0], "opp_pts": final[1]}
     return game, box, events, assists
 
@@ -256,7 +261,9 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[d
         events.append({"comp": "EuroCup", "game_id": game_id, "period": period,
                        "elapsed": period_start(period) + period_length(period), "kind": "END",
                        "player": "", "man": man_score, "opp": opp_score})
-    game = {"comp": "EuroCup", "game_id": game_id, "opponent": opponent,
+    game = {"comp": "EuroCup", "game_id": game_id,
+            "date": pd.to_datetime(info["date"], format="%b %d, %Y").strftime("%Y-%m-%d"),
+            "opponent": opponent,
             "home": int(info["home"]), "man_pts": man_score, "opp_pts": opp_score}
     return game, box, events, assists
 

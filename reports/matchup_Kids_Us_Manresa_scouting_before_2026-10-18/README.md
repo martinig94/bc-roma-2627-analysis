@@ -2,6 +2,8 @@
 
 *Prepared for BC Roma. Data as of 2026-10-18: 7 games (4 Liga Endesa, 3 EuroCup). Sources: acb.com live stats, EuroLeague live API. Small sample, read as tendencies.*
 
+**Availability:** out of the last game (2026-10-17, Liga Endesa vs Unicaja): Timmy Allen, Rafael Villar, Lukasz Kolenda.
+
 ## Team snapshot
 
 | | GP | W-L | PPG | Opp PPG |
@@ -69,17 +71,21 @@ Five-man units rebuilt from substitutions, both competitions combined; best/wors
 - Agbo / Benitez / Notae / Ongenda / Allen: 3.4 min, -6 (-70 per 40), 1 game
 - Agbo / Benitez / Notae / Kolenda / Minchev: 3.2 min, -6 (-74 per 40), 1 game
 
-## Starting fives
+## Starting fives and absences
 
-| Comp | Opponent | H/A | Score | Starters |
-|---|---|---|---|---|
-| Liga Endesa | Surne Bilbao | A | 92-107 | Agbo / Benitez / Notae / Ongenda / Tamba |
-| Liga Endesa | Río Breogán | H | 95-101 | Agbo / Allen / Notae / Ongenda / Villar |
-| Liga Endesa | Real Madrid | A | 83-120 | Agbo / Minchev / Notae / Oriola / Villar |
-| Liga Endesa | Unicaja | H | 72-84 | Agbo / Benitez / Minchev / Notae / Ongenda |
-| EuroCup | Paok Thessaloniki | A | 78-93 | Agbo / Allen / Notae / Ongenda / Villar |
-| EuroCup | Ratiopharm Ulm | H | 101-89 | Agbo / Allen / Notae / Ongenda / Villar |
-| EuroCup | Bahcesehir College Istanbul | A | 88-100 | Agbo / Allen / Benitez / Notae / Ongenda |
+![starting fives](00_starting_fives.png)
+
+Gold = starter (S, minutes), grey = bench minutes, red = rotation player (top 10 by minutes) not on the game sheet (injury, rest or selection: the reason is not in the data).
+
+| Date | Comp | Opponent | H/A | Score | Starters | Out |
+|---|---|---|---|---|---|---|
+| 2026-09-26 | Liga Endesa | Surne Bilbao | A | 92-107 | Agbo / Benitez / Notae / Ongenda / Tamba | **Timmy Allen** |
+| 2026-09-30 | EuroCup | Paok Thessaloniki | A | 78-93 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez** |
+| 2026-10-03 | Liga Endesa | Río Breogán | H | 95-101 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez** |
+| 2026-10-07 | EuroCup | Ratiopharm Ulm | H | 101-89 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez** |
+| 2026-10-11 | Liga Endesa | Real Madrid | A | 83-120 | Agbo / Minchev / Notae / Oriola / Villar | - |
+| 2026-10-13 | EuroCup | Bahcesehir College Istanbul | A | 88-100 | Agbo / Allen / Benitez / Notae / Ongenda | **Ferran Bassas** |
+| 2026-10-17 | Liga Endesa | Unicaja | H | 72-84 | Agbo / Benitez / Minchev / Notae / Ongenda | **Timmy Allen, Rafael Villar, Lukasz Kolenda** |
 
 5 different starting fives in 7 games; the most used (3 games): Agbo / Allen / Notae / Ongenda / Villar.
 

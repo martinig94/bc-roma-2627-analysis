@@ -142,14 +142,50 @@ def fig_players(table: pd.DataFrame, out: Path) -> Path:
     return path
 
 
-def starters_table(box: pd.DataFrame, games: pd.DataFrame) -> pd.DataFrame:
-    """One row per game with the five starters (alphabetical surnames) and the result."""
+def starters_table(box: pd.DataFrame, games: pd.DataFrame, rotation: list[str]) -> pd.DataFrame:
+    """One row per game (by date): starters, and rotation players missing from the game."""
     rows = []
-    for g in games.itertuples():
+    for g in games.sort_values("date").itertuples():
+        played = set(box[box.game_id == g.game_id].player)
         five = sorted(p.split()[-1] for p in box[(box.game_id == g.game_id) & (box.starter == 1)].player)
-        rows.append({"comp": g.comp, "opponent": g.opponent, "home": "H" if g.home else "A",
-                     "score": f"{g.man_pts}-{g.opp_pts}", "starters": " / ".join(five)})
+        out = [p for p in rotation if p not in played]
+        rows.append({"date": g.date, "game_id": g.game_id, "comp": g.comp, "opponent": g.opponent,
+                     "home": "H" if g.home else "A", "score": f"{g.man_pts}-{g.opp_pts}",
+                     "starters": " / ".join(five), "out": ", ".join(p for p in out)})
     return pd.DataFrame(rows)
+
+
+def fig_starting_fives(box: pd.DataFrame, starters: pd.DataFrame, rotation: list[str], out: Path) -> Path:
+    """Grid players x games: gold = starter, grey = bench (minutes), red = out of the game."""
+    starters_any = box[box.starter == 1].player.unique().tolist()
+    players = rotation + [p for p in starters_any if p not in rotation]
+    fig, ax = plt.subplots(figsize=(1.35 * len(starters) + 2.6, 0.42 * len(players) + 2.2))
+    for j, g in enumerate(starters.itertuples()):
+        for i, player in enumerate(players):
+            row = box[(box.game_id == g.game_id) & (box.player == player)]
+            if row.empty:
+                color, text = RED, "OUT"
+            elif row.starter.iloc[0] == 1:
+                color, text = lba_style.GOLD, f"S {row.sec.iloc[0] / 60:.0f}'"
+            else:
+                color, text = "#e6e6ee", f"{row.sec.iloc[0] / 60:.0f}'"
+            ax.add_patch(plt.Rectangle((j, -i - 1), 0.94, 0.88, color=color))
+            ax.text(j + 0.47, -i - 0.56, text, ha="center", va="center", fontsize=9,
+                    color="white" if color == RED else TEXT, fontweight="bold" if color == RED else None)
+    ax.set_xlim(-0.05, len(starters))
+    ax.set_ylim(-len(players) - 0.1, 0)
+    ax.set_yticks([-i - 0.56 for i in range(len(players))], players, fontsize=9)
+    labels = [f"{g.date[5:]}\n{g.opponent.split()[0][:11]}\n{g.comp[:3]} {g.score}"
+              for g in starters.itertuples()]
+    ax.set_xticks([j + 0.47 for j in range(len(starters))], labels, fontsize=8)
+    ax.xaxis.tick_top()
+    ax.tick_params(length=0)
+    ax.spines[:].set_visible(False)
+    fig.suptitle("Kids&Us Manresa: starters (S), bench minutes and absences by game", **SUP_KW)
+    path = out / "00_starting_fives.png"
+    save_fig(fig, path)
+    plt.close(fig)
+    return path
 
 
 def fig_assists(assists: pd.DataFrame, out: Path) -> tuple[Path, pd.DataFrame]:
@@ -359,8 +395,12 @@ def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.Dat
                    dist: pd.DataFrame, scorers: list[str], shots: pd.DataFrame,
                    per_game: pd.DataFrame) -> list[str]:
     """README lines for starting fives, assist matrix, shot distances and shot charts."""
-    L = ["## Starting fives", "", "| Comp | Opponent | H/A | Score | Starters |", "|---|---|---|---|---|"]
-    L += [f"| {r.comp} | {r.opponent} | {r.home} | {r.score} | {r.starters} |" for r in starters.itertuples()]
+    L = ["## Starting fives and absences", "", "![starting fives](00_starting_fives.png)", "",
+         "Gold = starter (S, minutes), grey = bench minutes, red = rotation player (top 10 by minutes) "
+         "not on the game sheet (injury, rest or selection: the reason is not in the data).", "",
+         "| Date | Comp | Opponent | H/A | Score | Starters | Out |", "|---|---|---|---|---|---|---|"]
+    L += [f"| {r.date} | {r.comp} | {r.opponent} | {r.home} | {r.score} | {r.starters} | "
+          f"{'**' + r.out + '**' if r.out else '-'} |" for r in starters.itertuples()]
     counts = starters.starters.value_counts()
     L += ["", f"{len(counts)} different starting fives in {len(starters)} games"
           + (f"; the most used ({counts.iloc[0]} games): {counts.index[0]}." if counts.iloc[0] > 1 else "."), ""]
@@ -389,14 +429,14 @@ def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.Dat
 
 
 def write_readme(out: Path, title_date: str, games: pd.DataFrame, table: pd.DataFrame,
-                 units: pd.DataFrame, team: pd.DataFrame, extra: list[str]) -> None:
+                 units: pd.DataFrame, team: pd.DataFrame, extra: list[str], alert: str) -> None:
     """Write README.md (picked up by build_site.py)."""
     from lineups_report import pick
 
     L = ["# Kids&Us Manresa scouting report (Liga Endesa + EuroCup)", "",
          f"*Prepared for BC Roma. Data as of {title_date}: {len(games)} games "
          f"({(games.comp == 'Liga Endesa').sum()} Liga Endesa, {(games.comp == 'EuroCup').sum()} EuroCup). "
-         "Sources: acb.com live stats, EuroLeague live API. Small sample, read as tendencies.*", "",
+         "Sources: acb.com live stats, EuroLeague live API. Small sample, read as tendencies.*", "", alert, "",
          "## Team snapshot", "", "| | GP | W-L | PPG | Opp PPG |", "|---|---|---|---|---|"]
     for comp, r in team.iterrows():
         L.append(f"| {comp} | {int(r.gp)} | {int(r.w)}-{int(r.gp - r.w)} | {r.ppg:.1f} | {r.opp:.1f} |")
@@ -440,7 +480,11 @@ def main() -> None:
     scorers = box.groupby("player").pts.sum().loc[table.player].nlargest(4).index.tolist()
     shots = shot_zones(shots)
     dist = distance_table(shots, scorers)
-    starters = starters_table(box, games)
+    starters = starters_table(box, games, table.player.tolist())
+    fig_starting_fives(box, starters, table.player.tolist(), out)
+    last = starters.iloc[-1]
+    alert = (f"**Availability:** out of the last game ({last.date}, {last.comp} vs {last.opponent}): "
+             f"{last.out}." if last.out else f"**Availability:** full rotation in the last game ({last.date}).")
     _, matrix = fig_assists(assists, out)
     split, totals, seg_labels = attempt_split(shots, box, scorers)
     fig_distance(split, totals, seg_labels, out)
@@ -452,7 +496,7 @@ def main() -> None:
     fig_lineups(units, "Kids&Us Manresa", MIN_UNIT_SECS, 5, out, "2026/27", league="Liga Endesa + EuroCup")
     (out / "lineups_Kids&Us_Manresa.png").replace(out / "lineups_Kids_Us_Manresa.png")
     write_readme(out, args.before, games, table, units, team_summary(games),
-                 extra_sections(starters, assists, matrix, dist, scorers, shots, per_game))
+                 extra_sections(starters, assists, matrix, dist, scorers, shots, per_game), alert)
     print(f"wrote {out}")
 
 
