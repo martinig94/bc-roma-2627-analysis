@@ -138,7 +138,8 @@ def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]
             "ftm": p["freeThrowsMade"], "fta": p["freeThrowsAttempted"],
             "oreb": p["offRebounds"], "dreb": p["defRebounds"], "ast": p["assists"],
             "stl": p["steals"], "tov": p["turnovers"], "blk": p["blocks"],
-            "pf": p["personalFouls"], "plus_minus": p["plusMinus"],
+            "pf": p["personalFouls"], "plus_minus": p["plusMinus"], "pf_drawn": p["foulsDrawn"],
+            "blk_against": p["receivedBlocks"], "rating": p["rating"],
         })
 
     def score(play: dict) -> tuple[int, int]:
@@ -226,6 +227,8 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[d
                 "oreb": p["OffensiveRebounds"], "dreb": p["DefensiveRebounds"],
                 "ast": p["Assistances"], "stl": p["Steals"], "tov": p["Turnovers"],
                 "blk": p["BlocksFavour"], "pf": p["FoulsCommited"], "plus_minus": p["Plusminus"],
+                "pf_drawn": p["FoulsReceived"], "blk_against": p["BlocksAgainst"],
+                "rating": p["Valuation"],
             })
     team_a_is_man = pbp["CodeTeamA"].strip() == "MAN"
 
