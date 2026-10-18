@@ -1,0 +1,225 @@
+"""Scouting report on Kids&Us Manresa (Liga Endesa + EuroCup): top-10 players by minutes and lineups.
+
+    python notebooks/manresa_fetch.py     # refresh data/manresa/ first
+    python notebooks/manresa_report.py
+
+Writes reports/matchup_Kids_Us_Manresa_scouting_before_<date>/ (README.md + PNGs); then run
+notebooks/build_site.py to publish it. Samples are tiny early in the season: read as tendencies.
+"""
+from __future__ import annotations
+
+import argparse
+from datetime import date
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import pandas as pd
+
+import lba_style
+from lba_style import SUP_KW, TEXT, save_fig
+from lineups_report import fig_lineups
+from manresa_fetch import player_key
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data" / "manresa"
+TOP_N = 10
+MIN_UNIT_SECS = 180
+ROLE_EN = {"Base": "PG", "Escolta": "SG", "Alero": "SF", "Ala-pívot": "PF", "Pívot": "C"}
+POS_EN = {"Guard": "G", "Forward": "F", "Center": "C"}
+STAT_SUMS = ["pts", "fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "oreb", "dreb", "ast", "stl", "tov",
+             "plus_minus"]
+
+
+def load() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Read the fetched CSVs and add a merge key and a display name per player."""
+    games, box, events, heights = (pd.read_csv(DATA / f"{n}.csv") for n in
+                                   ("games", "box", "events", "heights"))
+    for df in (box, events, heights):
+        df["key"] = df.player.map(lambda n: player_key(n) if isinstance(n, str) and n else "")
+    names = box.sort_values("comp", ascending=False).drop_duplicates("key").set_index("key").player
+    for df in (box, events):
+        df["player"] = df.key.map(names).fillna(df.player)
+    box["game_id"], events["game_id"], games["game_id"] = (d.game_id.astype(str)
+                                                           for d in (box, events, games))
+    return games, box, events, heights
+
+
+def player_table(box: pd.DataFrame, heights: pd.DataFrame) -> pd.DataFrame:
+    """Per-player season line over both competitions, top N by total minutes."""
+    total = box.groupby("key")[STAT_SUMS + ["sec"]].sum()
+    total["gp"] = box.groupby("key").size()
+    per_comp = box.pivot_table(index="key", columns="comp", values="pts", aggfunc="mean")
+    roles = box[box.role_es != ""].dropna(subset=["role_es"]).groupby("key").role_es.first()
+    table = total.sort_values("sec", ascending=False).head(TOP_N).copy()
+    table["player"] = box.drop_duplicates("key").set_index("key").player.reindex(table.index)
+    table["role"] = roles.map(ROLE_EN).reindex(table.index)
+    hh = heights.drop_duplicates("key").set_index("key")
+    table["height"] = hh.height_cm.reindex(table.index)
+    table["role"] = table.role.fillna(hh.position_en.map(POS_EN).reindex(table.index))
+    g = table.gp
+    table["mpg"] = table.sec / 60 / g
+    for col in ("pts", "reb", "ast", "stl", "tov", "plus_minus"):
+        table[f"{col}_pg"] = (table.oreb + table.dreb if col == "reb" else table[col]) / g
+    table["fg_pct"] = (table.fg2m + table.fg3m) / (table.fg2a + table.fg3a) * 100
+    table["fg3_pct"] = table.fg3m / table.fg3a * 100
+    table["ft_pct"] = table.ftm / table.fta * 100
+    table["fg3a_pg"] = table.fg3a / g
+    table["ppg_acb"] = per_comp.get("Liga Endesa").reindex(table.index)
+    table["ppg_eur"] = per_comp.get("EuroCup").reindex(table.index)
+    return table
+
+
+def lineup_stints(events: pd.DataFrame, games: pd.DataFrame) -> pd.DataFrame:
+    """Five-man stints from substitution events, with elapsed seconds and plus/minus.
+
+    Raises:
+        ValueError: if a game's stints do not add up to its length or final margin.
+    """
+    rows = []
+    for gid, ev in events.groupby("game_id"):
+        on: set[str] = set()
+        last_t, last_score = 0, (0, 0)
+        for t, grp in ev.groupby("elapsed", sort=True):
+            if t > last_t and len(on) == 5:
+                rows.append({"game_id": gid, "lineup": tuple(sorted(on)), "secs": t - last_t,
+                             "pm": (grp.man.iloc[0] - grp.opp.iloc[0]) - (last_score[0] - last_score[1])})
+            if t > last_t:
+                last_t, last_score = t, (grp.man.iloc[0], grp.opp.iloc[0])
+            for kind, player in zip(grp.kind, grp.player):
+                if kind == "OUT":
+                    on.discard(player)
+                elif kind in ("START", "IN"):
+                    on.add(player)
+    stints = pd.DataFrame(rows)
+    for gid, g in stints.groupby("game_id"):
+        row = games[games.game_id == gid].iloc[0]
+        if g.secs.sum() < 2400 or g.pm.sum() != row.man_pts - row.opp_pts:
+            raise ValueError(f"game {gid}: {g.secs.sum()}s, pm {g.pm.sum()} vs "
+                             f"{row.man_pts - row.opp_pts}")
+    return stints
+
+
+def aggregate_units(stints: pd.DataFrame) -> pd.DataFrame:
+    """One row per five-man unit with minutes, plus/minus and net rating per 40."""
+    agg = stints.groupby("lineup").agg(secs=("secs", "sum"), pm=("pm", "sum"), stints=("secs", "size"),
+                                       games=("game_id", "nunique")).reset_index()
+    agg["lineup"] = agg.lineup.map(lambda unit: tuple(name.split()[-1].title() for name in unit))
+    agg["net40"] = agg.pm / agg.secs * 2400
+    return agg
+
+
+def fig_players(table: pd.DataFrame, out: Path) -> Path:
+    """Table figure of the top-10 players."""
+    cols = ["Player", "Pos", "Ht", "GP", "MPG", "PPG", "RPG", "APG", "TOV", "STL", "FG%", "3P%", "FT%"]
+    cells = [[r.player, r.role or "-", f"{r.height:.0f}" if pd.notna(r.height) else "-", int(r.gp),
+              f"{r.mpg:.1f}", f"{r.pts_pg:.1f}", f"{r.reb_pg:.1f}", f"{r.ast_pg:.1f}", f"{r.tov_pg:.1f}",
+              f"{r.stl_pg:.1f}", f"{r.fg_pct:.0f}", f"{r.fg3_pct:.0f}" if r.fg3a else "-", f"{r.ft_pct:.0f}"]
+             for r in table.itertuples()]
+    fig, ax = plt.subplots(figsize=(11, 0.42 * len(cells) + 1.4))
+    ax.axis("off")
+    tab = ax.table(cellText=cells, colLabels=cols, loc="center", cellLoc="center")
+    tab.auto_set_font_size(False)
+    tab.set_fontsize(9.5)
+    tab.scale(1, 1.5)
+    for (row, col), cell in tab.get_celld().items():
+        cell.set_edgecolor(lba_style.GRID)
+        if row == 0:
+            cell.set_facecolor(lba_style.GOLD)
+            cell.set_text_props(fontweight="bold", color=TEXT)
+        if col == 0:
+            cell._loc = "left"
+            cell.set_text_props(ha="left")
+    tab.auto_set_column_width(range(len(cols)))
+    fig.suptitle("Kids&Us Manresa: top 10 by minutes, Liga Endesa + EuroCup 2026/27", **SUP_KW)
+    path = out / "01_top10_players.png"
+    save_fig(fig, path)
+    plt.close(fig)
+    return path
+
+
+def tag(row: pd.Series) -> str:
+    """One data-driven sentence on a player."""
+    bits = []
+    if row.pts_pg >= 14:
+        bits.append("primary scorer")
+    if row.ast_pg >= 4:
+        bits.append("main creator")
+    if row.reb_pg >= 6:
+        bits.append("rebounder")
+    if row.fg3a_pg >= 4:
+        bits.append(f"volume shooter from 3 ({row.fg3a_pg:.1f} att, {row.fg3_pct:.0f}%)")
+    if row.tov_pg >= 2.5:
+        bits.append(f"turnover-prone ({row.tov_pg:.1f})")
+    if row.ft_pct < 65 and row.fta / row.gp >= 2:
+        bits.append(f"weak at the line ({row.ft_pct:.0f}%)")
+    return ", ".join(bits) if bits else "role player"
+
+
+def team_summary(games: pd.DataFrame) -> pd.DataFrame:
+    """Record and scoring per competition plus overall."""
+    g = games.assign(win=games.man_pts > games.opp_pts)
+    out = g.groupby("comp").agg(gp=("win", "size"), w=("win", "sum"), ppg=("man_pts", "mean"),
+                                opp=("opp_pts", "mean"))
+    total = g.agg({"win": ["size", "sum"], "man_pts": "mean", "opp_pts": "mean"})
+    out.loc["Total"] = [total.win["size"], total.win["sum"], total.man_pts["mean"], total.opp_pts["mean"]]
+    return out
+
+
+def write_readme(out: Path, title_date: str, games: pd.DataFrame, table: pd.DataFrame,
+                 units: pd.DataFrame, team: pd.DataFrame) -> None:
+    """Write README.md (picked up by build_site.py)."""
+    from lineups_report import pick
+
+    L = ["# Kids&Us Manresa scouting report (Liga Endesa + EuroCup)", "",
+         f"*Prepared for BC Roma. Data as of {title_date}: {len(games)} games "
+         f"({(games.comp == 'Liga Endesa').sum()} Liga Endesa, {(games.comp == 'EuroCup').sum()} EuroCup). "
+         "Sources: acb.com live stats, EuroLeague live API. Small sample, read as tendencies.*", "",
+         "## Team snapshot", "", "| | GP | W-L | PPG | Opp PPG |", "|---|---|---|---|---|"]
+    for comp, r in team.iterrows():
+        L.append(f"| {comp} | {int(r.gp)} | {int(r.w)}-{int(r.gp - r.w)} | {r.ppg:.1f} | {r.opp:.1f} |")
+    L += ["", "## Results", "", "| Comp | Opponent | H/A | Score |", "|---|---|---|---|"]
+    for r in games.itertuples():
+        L.append(f"| {r.comp} | {r.opponent} | {'H' if r.home else 'A'} | {r.man_pts}-{r.opp_pts} |")
+    L += ["", "## Top 10 by total minutes", "", "![top 10](01_top10_players.png)", "",
+          "Height in cm (EuroLeague roster), position from ACB role / EuroLeague roster. "
+          "PPG split: Liga Endesa / EuroCup.", ""]
+    for r in table.itertuples():
+        ht = f"{r.height:.0f} cm" if pd.notna(r.height) else "height n/a"
+        three = f"{r.fg3_pct:.0f}%" if r.fg3a else "-"
+        L.append(f"- **{r.player}** ({r.role}, {ht}, {int(r.gp)} GP): {r.mpg:.1f} min, **{r.pts_pg:.1f} pts**, "
+                 f"{r.reb_pg:.1f} reb, {r.ast_pg:.1f} ast, FG {r.fg_pct:.0f}% / 3P {three} / "
+                 f"FT {r.ft_pct:.0f}%; PPG {r.ppg_acb:.1f} ACB / {r.ppg_eur:.1f} EC. "
+                 f"{tag(pd.Series(r._asdict())).capitalize()}.")
+    L += ["", "## Lineups", "", "![lineups](lineups_Kids_Us_Manresa.png)", "",
+          f"Five-man units rebuilt from substitutions, both competitions combined; best/worst need "
+          f"{MIN_UNIT_SECS // 60}+ minutes together. Net rating = point differential per 40 minutes. "
+          f"{len(units)} different units in {units.secs.sum() / 60:.0f} minutes.", ""]
+    used, best, worst = (df for _, df in pick(units, MIN_UNIT_SECS, 5))
+    for label, df in (("Most used", used), ("Most effective", best), ("Least effective", worst)):
+        L += [f"**{label}**", ""]
+        L += [f"- {' / '.join(r.lineup)}: {r.secs / 60:.1f} min, {r.pm:+.0f} ({r.net40:+.0f} per 40), "
+              f"{r.games} game{'s' if r.games > 1 else ''}" for r in df.itertuples()]
+        L.append("")
+    (out / "README.md").write_text("\n".join(L), encoding="utf-8")
+
+
+def main() -> None:
+    """Build the report."""
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--before", default=f"{date.today():%Y-%m-%d}")
+    args = ap.parse_args()
+    out = ROOT / "reports" / f"matchup_Kids_Us_Manresa_scouting_before_{args.before}"
+    out.mkdir(parents=True, exist_ok=True)
+    lba_style.SOURCE_NOTE = "acb.com + EuroLeague live API"
+    games, box, events, heights = load()
+    table = player_table(box, heights)
+    units = aggregate_units(lineup_stints(events, games))
+    fig_players(table, out)
+    fig_lineups(units, "Kids&Us Manresa", MIN_UNIT_SECS, 5, out, "2026/27", league="Liga Endesa + EuroCup")
+    (out / "lineups_Kids&Us_Manresa.png").replace(out / "lineups_Kids_Us_Manresa.png")
+    write_readme(out, args.before, games, table, units, team_summary(games))
+    print(f"wrote {out}")
+
+
+if __name__ == "__main__":
+    main()
