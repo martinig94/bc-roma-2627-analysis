@@ -1,0 +1,782 @@
+comp,game_id,period,elapsed,kind,player,man,opp
+Liga Endesa,105375,1,0,START,Pablo Tamba,0,0
+Liga Endesa,105375,1,0,START,JD Notae,0,0
+Liga Endesa,105375,1,0,START,Hugo Benitez,0,0
+Liga Endesa,105375,1,0,START,Chibuzo Agbo,0,0
+Liga Endesa,105375,1,0,START,Nick Ongenda,0,0
+Liga Endesa,105375,1,145,OUT,JD Notae,2,7
+Liga Endesa,105375,1,145,OUT,Nick Ongenda,2,7
+Liga Endesa,105375,1,145,IN,Ferran Bassas,2,7
+Liga Endesa,105375,1,145,IN,Yordan Minchev,2,7
+Liga Endesa,105375,1,218,OUT,Hugo Benitez,7,9
+Liga Endesa,105375,1,218,IN,Rafael Villar,7,9
+Liga Endesa,105375,1,243,OUT,Pablo Tamba,9,9
+Liga Endesa,105375,1,243,IN,Lukasz Kolenda,9,9
+Liga Endesa,105375,1,338,OUT,Chibuzo Agbo,9,15
+Liga Endesa,105375,1,338,IN,Eric Vila,9,15
+Liga Endesa,105375,1,382,OUT,Yordan Minchev,12,15
+Liga Endesa,105375,1,382,IN,Nick Ongenda,12,15
+Liga Endesa,105375,1,456,OUT,Ferran Bassas,14,17
+Liga Endesa,105375,1,456,IN,JD Notae,14,17
+Liga Endesa,105375,1,526,OUT,Eric Vila,16,19
+Liga Endesa,105375,1,526,IN,Pablo Tamba,16,19
+Liga Endesa,105375,1,526,OUT,Rafael Villar,16,19
+Liga Endesa,105375,1,526,IN,Lucas Beaufort,16,19
+Liga Endesa,105375,1,582,OUT,Nick Ongenda,18,19
+Liga Endesa,105375,1,582,IN,Ferran Bassas,18,19
+Liga Endesa,105375,1,582,OUT,Lucas Beaufort,18,19
+Liga Endesa,105375,1,582,IN,Yordan Minchev,18,19
+Liga Endesa,105375,2,600,OUT,Lukasz Kolenda,18,19
+Liga Endesa,105375,2,600,OUT,Ferran Bassas,18,19
+Liga Endesa,105375,2,600,IN,Hugo Benitez,18,19
+Liga Endesa,105375,2,600,IN,Chibuzo Agbo,18,19
+Liga Endesa,105375,2,658,OUT,Yordan Minchev,18,19
+Liga Endesa,105375,2,658,IN,Nick Ongenda,18,19
+Liga Endesa,105375,2,709,OUT,Hugo Benitez,20,21
+Liga Endesa,105375,2,709,OUT,JD Notae,20,21
+Liga Endesa,105375,2,709,IN,Ferran Bassas,20,21
+Liga Endesa,105375,2,709,IN,Rafael Villar,20,21
+Liga Endesa,105375,2,722,OUT,Chibuzo Agbo,20,21
+Liga Endesa,105375,2,722,IN,Eric Vila,20,21
+Liga Endesa,105375,2,779,OUT,Pablo Tamba,22,23
+Liga Endesa,105375,2,779,IN,Lukasz Kolenda,22,23
+Liga Endesa,105375,2,906,OUT,Rafael Villar,27,26
+Liga Endesa,105375,2,906,IN,JD Notae,27,26
+Liga Endesa,105375,2,1010,OUT,Nick Ongenda,29,32
+Liga Endesa,105375,2,1010,OUT,Ferran Bassas,29,32
+Liga Endesa,105375,2,1010,IN,Yordan Minchev,29,32
+Liga Endesa,105375,2,1010,IN,Rafael Villar,29,32
+Liga Endesa,105375,2,1042,OUT,Eric Vila,31,34
+Liga Endesa,105375,2,1042,IN,Chibuzo Agbo,31,34
+Liga Endesa,105375,2,1110,OUT,Yordan Minchev,33,34
+Liga Endesa,105375,2,1110,IN,Nick Ongenda,33,34
+Liga Endesa,105375,2,1121,OUT,JD Notae,33,36
+Liga Endesa,105375,2,1121,IN,Lucas Beaufort,33,36
+Liga Endesa,105375,2,1167,OUT,Rafael Villar,36,41
+Liga Endesa,105375,2,1167,OUT,Lucas Beaufort,36,41
+Liga Endesa,105375,2,1167,IN,Ferran Bassas,36,41
+Liga Endesa,105375,2,1167,IN,Pablo Tamba,36,41
+Liga Endesa,105375,3,1200,OUT,Lukasz Kolenda,38,44
+Liga Endesa,105375,3,1200,IN,Rafael Villar,38,44
+Liga Endesa,105375,3,1279,OUT,Pablo Tamba,42,49
+Liga Endesa,105375,3,1279,IN,Lukasz Kolenda,42,49
+Liga Endesa,105375,3,1356,OUT,Rafael Villar,45,51
+Liga Endesa,105375,3,1356,IN,Lucas Beaufort,45,51
+Liga Endesa,105375,3,1403,OUT,Nick Ongenda,47,55
+Liga Endesa,105375,3,1403,OUT,Chibuzo Agbo,47,55
+Liga Endesa,105375,3,1403,IN,Eric Vila,47,55
+Liga Endesa,105375,3,1403,IN,Yordan Minchev,47,55
+Liga Endesa,105375,3,1457,OUT,Ferran Bassas,47,60
+Liga Endesa,105375,3,1457,IN,JD Notae,47,60
+Liga Endesa,105375,3,1564,OUT,Lucas Beaufort,53,64
+Liga Endesa,105375,3,1564,IN,Rafael Villar,53,64
+Liga Endesa,105375,3,1691,OUT,Lukasz Kolenda,62,69
+Liga Endesa,105375,3,1691,IN,Pablo Tamba,62,69
+Liga Endesa,105375,3,1735,OUT,Yordan Minchev,62,71
+Liga Endesa,105375,3,1735,IN,Nick Ongenda,62,71
+Liga Endesa,105375,3,1735,OUT,Pablo Tamba,62,73
+Liga Endesa,105375,3,1735,IN,Chibuzo Agbo,62,73
+Liga Endesa,105375,4,1868,OUT,JD Notae,67,79
+Liga Endesa,105375,4,1868,OUT,Rafael Villar,67,79
+Liga Endesa,105375,4,1868,IN,Ferran Bassas,67,79
+Liga Endesa,105375,4,1868,IN,Lucas Beaufort,67,79
+Liga Endesa,105375,4,1945,OUT,Eric Vila,69,85
+Liga Endesa,105375,4,1945,OUT,Nick Ongenda,69,85
+Liga Endesa,105375,4,1945,IN,Yordan Minchev,69,85
+Liga Endesa,105375,4,1945,IN,Pablo Tamba,69,85
+Liga Endesa,105375,4,2060,OUT,Lucas Beaufort,74,90
+Liga Endesa,105375,4,2060,OUT,Chibuzo Agbo,74,90
+Liga Endesa,105375,4,2060,IN,Lukasz Kolenda,74,90
+Liga Endesa,105375,4,2060,IN,JD Notae,74,90
+Liga Endesa,105375,4,2105,OUT,Ferran Bassas,76,92
+Liga Endesa,105375,4,2105,IN,Rafael Villar,76,92
+Liga Endesa,105375,4,2105,OUT,Pablo Tamba,77,92
+Liga Endesa,105375,4,2105,IN,Eric Vila,77,92
+Liga Endesa,105375,4,2246,OUT,Yordan Minchev,84,96
+Liga Endesa,105375,4,2246,IN,Nick Ongenda,84,96
+Liga Endesa,105375,4,2260,OUT,Rafael Villar,84,96
+Liga Endesa,105375,4,2260,IN,Ferran Bassas,84,96
+Liga Endesa,105375,4,2297,OUT,Eric Vila,86,99
+Liga Endesa,105375,4,2297,IN,Chibuzo Agbo,86,99
+Liga Endesa,105375,4,2349,OUT,Chibuzo Agbo,86,103
+Liga Endesa,105375,4,2349,IN,Pablo Tamba,86,103
+Liga Endesa,105375,1,600,END,,18,19
+Liga Endesa,105375,2,1200,END,,38,44
+Liga Endesa,105375,3,1800,END,,65,76
+Liga Endesa,105375,4,2400,END,,92,107
+Liga Endesa,105386,1,0,START,Rafael Villar,0,0
+Liga Endesa,105386,1,0,START,Timmy Allen,0,0
+Liga Endesa,105386,1,0,START,JD Notae,0,0
+Liga Endesa,105386,1,0,START,Chibuzo Agbo,0,0
+Liga Endesa,105386,1,0,START,Nick Ongenda,0,0
+Liga Endesa,105386,1,131,OUT,Nick Ongenda,9,3
+Liga Endesa,105386,1,131,OUT,Rafael Villar,9,3
+Liga Endesa,105386,1,131,IN,Yordan Minchev,9,3
+Liga Endesa,105386,1,131,IN,Ferran Bassas,9,3
+Liga Endesa,105386,1,164,OUT,JD Notae,11,3
+Liga Endesa,105386,1,164,IN,Lukasz Kolenda,11,3
+Liga Endesa,105386,1,320,OUT,Timmy Allen,21,9
+Liga Endesa,105386,1,320,OUT,Chibuzo Agbo,21,9
+Liga Endesa,105386,1,320,OUT,Yordan Minchev,21,9
+Liga Endesa,105386,1,320,OUT,Ferran Bassas,21,9
+Liga Endesa,105386,1,320,IN,Pablo Tamba,21,9
+Liga Endesa,105386,1,320,IN,Rafael Villar,21,9
+Liga Endesa,105386,1,320,IN,Nick Ongenda,21,9
+Liga Endesa,105386,1,320,IN,Eric Vila,21,9
+Liga Endesa,105386,1,401,OUT,Lukasz Kolenda,22,13
+Liga Endesa,105386,1,401,IN,JD Notae,22,13
+Liga Endesa,105386,1,494,OUT,Nick Ongenda,24,18
+Liga Endesa,105386,1,494,IN,Michael Enabulele,24,18
+Liga Endesa,105386,1,514,OUT,Eric Vila,24,19
+Liga Endesa,105386,1,514,IN,Timmy Allen,24,19
+Liga Endesa,105386,1,526,OUT,Pablo Tamba,25,21
+Liga Endesa,105386,1,526,IN,Chibuzo Agbo,25,21
+Liga Endesa,105386,1,575,OUT,JD Notae,25,24
+Liga Endesa,105386,1,575,IN,Lucas Beaufort,25,24
+Liga Endesa,105386,1,575,OUT,Chibuzo Agbo,27,24
+Liga Endesa,105386,1,575,OUT,Rafael Villar,27,24
+Liga Endesa,105386,1,575,IN,Pablo Tamba,27,24
+Liga Endesa,105386,1,575,IN,Lukasz Kolenda,27,24
+Liga Endesa,105386,1,599,OUT,Michael Enabulele,27,24
+Liga Endesa,105386,1,599,IN,Yordan Minchev,27,24
+Liga Endesa,105386,2,600,OUT,Pablo Tamba,27,24
+Liga Endesa,105386,2,600,IN,Ferran Bassas,27,24
+Liga Endesa,105386,2,815,OUT,Ferran Bassas,30,26
+Liga Endesa,105386,2,815,OUT,Lukasz Kolenda,30,26
+Liga Endesa,105386,2,815,OUT,Yordan Minchev,30,26
+Liga Endesa,105386,2,815,IN,Michael Enabulele,30,26
+Liga Endesa,105386,2,815,IN,JD Notae,30,26
+Liga Endesa,105386,2,815,IN,Rafael Villar,30,26
+Liga Endesa,105386,2,848,OUT,Lucas Beaufort,32,28
+Liga Endesa,105386,2,848,OUT,Timmy Allen,32,28
+Liga Endesa,105386,2,848,IN,Chibuzo Agbo,32,28
+Liga Endesa,105386,2,848,IN,Eric Vila,32,28
+Liga Endesa,105386,2,908,OUT,Michael Enabulele,34,33
+Liga Endesa,105386,2,908,IN,Nick Ongenda,34,33
+Liga Endesa,105386,2,1004,OUT,Rafael Villar,34,41
+Liga Endesa,105386,2,1004,OUT,Eric Vila,34,41
+Liga Endesa,105386,2,1004,IN,Pablo Tamba,34,41
+Liga Endesa,105386,2,1004,IN,Ferran Bassas,34,41
+Liga Endesa,105386,2,1019,OUT,Nick Ongenda,36,41
+Liga Endesa,105386,2,1019,IN,Yordan Minchev,36,41
+Liga Endesa,105386,2,1078,OUT,Pablo Tamba,37,46
+Liga Endesa,105386,2,1078,IN,Timmy Allen,37,46
+Liga Endesa,105386,2,1146,OUT,JD Notae,40,50
+Liga Endesa,105386,2,1146,IN,Lucas Beaufort,40,50
+Liga Endesa,105386,3,1200,OUT,Yordan Minchev,40,51
+Liga Endesa,105386,3,1200,OUT,Chibuzo Agbo,40,51
+Liga Endesa,105386,3,1200,IN,Lukasz Kolenda,40,51
+Liga Endesa,105386,3,1200,IN,Nick Ongenda,40,51
+Liga Endesa,105386,3,1293,OUT,Lukasz Kolenda,42,55
+Liga Endesa,105386,3,1293,IN,JD Notae,42,55
+Liga Endesa,105386,3,1355,OUT,Nick Ongenda,43,60
+Liga Endesa,105386,3,1355,IN,Yordan Minchev,43,60
+Liga Endesa,105386,3,1378,OUT,Lucas Beaufort,43,62
+Liga Endesa,105386,3,1378,IN,Rafael Villar,43,62
+Liga Endesa,105386,3,1421,OUT,JD Notae,46,64
+Liga Endesa,105386,3,1421,IN,Lukasz Kolenda,46,64
+Liga Endesa,105386,3,1450,OUT,Ferran Bassas,46,66
+Liga Endesa,105386,3,1450,IN,Chibuzo Agbo,46,66
+Liga Endesa,105386,3,1516,OUT,Yordan Minchev,46,68
+Liga Endesa,105386,3,1516,IN,Nick Ongenda,46,68
+Liga Endesa,105386,3,1675,OUT,Rafael Villar,60,76
+Liga Endesa,105386,3,1675,OUT,Nick Ongenda,60,76
+Liga Endesa,105386,3,1675,IN,Yordan Minchev,60,76
+Liga Endesa,105386,3,1675,IN,Lucas Beaufort,60,76
+Liga Endesa,105386,3,1685,OUT,Chibuzo Agbo,60,78
+Liga Endesa,105386,3,1685,IN,Pablo Tamba,60,78
+Liga Endesa,105386,3,1701,OUT,Timmy Allen,64,78
+Liga Endesa,105386,3,1701,IN,Chibuzo Agbo,64,78
+Liga Endesa,105386,3,1713,OUT,Lukasz Kolenda,64,78
+Liga Endesa,105386,3,1713,IN,JD Notae,64,78
+Liga Endesa,105386,3,1747,OUT,Lucas Beaufort,66,82
+Liga Endesa,105386,3,1747,IN,Ferran Bassas,66,82
+Liga Endesa,105386,3,1794,OUT,Yordan Minchev,66,86
+Liga Endesa,105386,3,1794,OUT,Ferran Bassas,66,86
+Liga Endesa,105386,3,1794,IN,Michael Enabulele,66,86
+Liga Endesa,105386,3,1794,IN,Lucas Beaufort,66,86
+Liga Endesa,105386,3,1794,OUT,JD Notae,67,86
+Liga Endesa,105386,3,1794,IN,Lukasz Kolenda,67,86
+Liga Endesa,105386,4,1800,OUT,Michael Enabulele,67,89
+Liga Endesa,105386,4,1800,OUT,Lucas Beaufort,67,89
+Liga Endesa,105386,4,1800,OUT,Pablo Tamba,67,89
+Liga Endesa,105386,4,1800,IN,Rafael Villar,67,89
+Liga Endesa,105386,4,1800,IN,Nick Ongenda,67,89
+Liga Endesa,105386,4,1800,IN,Timmy Allen,67,89
+Liga Endesa,105386,4,1848,OUT,Nick Ongenda,68,89
+Liga Endesa,105386,4,1848,IN,Michael Enabulele,68,89
+Liga Endesa,105386,4,1942,OUT,Michael Enabulele,71,91
+Liga Endesa,105386,4,1942,IN,Yordan Minchev,71,91
+Liga Endesa,105386,4,1980,OUT,Chibuzo Agbo,72,92
+Liga Endesa,105386,4,1980,IN,Pablo Tamba,72,92
+Liga Endesa,105386,4,2061,OUT,Lukasz Kolenda,74,92
+Liga Endesa,105386,4,2061,OUT,Rafael Villar,74,92
+Liga Endesa,105386,4,2061,OUT,Yordan Minchev,74,92
+Liga Endesa,105386,4,2061,IN,Michael Enabulele,74,92
+Liga Endesa,105386,4,2061,IN,JD Notae,74,92
+Liga Endesa,105386,4,2061,IN,Ferran Bassas,74,92
+Liga Endesa,105386,4,2174,OUT,Timmy Allen,81,96
+Liga Endesa,105386,4,2174,IN,Chibuzo Agbo,81,96
+Liga Endesa,105386,4,2219,OUT,Michael Enabulele,85,99
+Liga Endesa,105386,4,2219,IN,Yordan Minchev,85,99
+Liga Endesa,105386,1,600,END,,27,24
+Liga Endesa,105386,2,1200,END,,40,51
+Liga Endesa,105386,3,1800,END,,67,89
+Liga Endesa,105386,4,2400,END,,95,101
+Liga Endesa,105397,1,0,START,Pierre Oriola,0,0
+Liga Endesa,105397,1,0,START,Rafael Villar,0,0
+Liga Endesa,105397,1,0,START,JD Notae,0,0
+Liga Endesa,105397,1,0,START,Yordan Minchev,0,0
+Liga Endesa,105397,1,0,START,Chibuzo Agbo,0,0
+Liga Endesa,105397,1,105,OUT,Yordan Minchev,2,4
+Liga Endesa,105397,1,105,IN,Timmy Allen,2,4
+Liga Endesa,105397,1,213,OUT,Pierre Oriola,8,8
+Liga Endesa,105397,1,213,IN,Nick Ongenda,8,8
+Liga Endesa,105397,1,251,OUT,JD Notae,8,8
+Liga Endesa,105397,1,251,OUT,Rafael Villar,8,8
+Liga Endesa,105397,1,251,IN,Ferran Bassas,8,8
+Liga Endesa,105397,1,251,IN,Gerard Fernández,8,8
+Liga Endesa,105397,1,300,OUT,Chibuzo Agbo,8,13
+Liga Endesa,105397,1,300,OUT,Nick Ongenda,8,13
+Liga Endesa,105397,1,300,IN,Pablo Tamba,8,13
+Liga Endesa,105397,1,300,IN,Yordan Minchev,8,13
+Liga Endesa,105397,1,370,OUT,Pablo Tamba,9,20
+Liga Endesa,105397,1,370,OUT,Yordan Minchev,9,20
+Liga Endesa,105397,1,370,IN,Pierre Oriola,9,20
+Liga Endesa,105397,1,370,IN,Lukasz Kolenda,9,20
+Liga Endesa,105397,1,429,OUT,Pierre Oriola,11,22
+Liga Endesa,105397,1,429,OUT,Ferran Bassas,11,22
+Liga Endesa,105397,1,429,IN,Hugo Benitez,11,22
+Liga Endesa,105397,1,429,IN,Yordan Minchev,11,22
+Liga Endesa,105397,1,476,OUT,Gerard Fernández,13,24
+Liga Endesa,105397,1,476,OUT,Timmy Allen,13,24
+Liga Endesa,105397,1,476,IN,Chibuzo Agbo,13,24
+Liga Endesa,105397,1,476,IN,JD Notae,13,24
+Liga Endesa,105397,2,671,OUT,Yordan Minchev,22,39
+Liga Endesa,105397,2,671,OUT,Lukasz Kolenda,22,39
+Liga Endesa,105397,2,671,IN,Pablo Tamba,22,39
+Liga Endesa,105397,2,671,IN,Nick Ongenda,22,39
+Liga Endesa,105397,2,687,OUT,Hugo Benitez,22,39
+Liga Endesa,105397,2,687,IN,Rafael Villar,22,39
+Liga Endesa,105397,2,717,OUT,Chibuzo Agbo,23,41
+Liga Endesa,105397,2,717,IN,Timmy Allen,23,41
+Liga Endesa,105397,2,817,OUT,Nick Ongenda,27,46
+Liga Endesa,105397,2,817,OUT,JD Notae,27,46
+Liga Endesa,105397,2,817,IN,Pierre Oriola,27,46
+Liga Endesa,105397,2,817,IN,Gerard Fernández,27,46
+Liga Endesa,105397,2,885,OUT,Pablo Tamba,29,48
+Liga Endesa,105397,2,885,OUT,Timmy Allen,29,48
+Liga Endesa,105397,2,885,IN,Chibuzo Agbo,29,48
+Liga Endesa,105397,2,885,IN,Lukasz Kolenda,29,48
+Liga Endesa,105397,2,951,OUT,Rafael Villar,31,51
+Liga Endesa,105397,2,951,OUT,Gerard Fernández,31,51
+Liga Endesa,105397,2,951,IN,Hugo Benitez,31,51
+Liga Endesa,105397,2,951,IN,Ferran Bassas,31,51
+Liga Endesa,105397,2,1069,OUT,Chibuzo Agbo,36,53
+Liga Endesa,105397,2,1069,OUT,Pierre Oriola,36,53
+Liga Endesa,105397,2,1069,IN,Timmy Allen,36,53
+Liga Endesa,105397,2,1069,IN,Yordan Minchev,36,53
+Liga Endesa,105397,3,1200,OUT,Yordan Minchev,38,62
+Liga Endesa,105397,3,1200,OUT,Lukasz Kolenda,38,62
+Liga Endesa,105397,3,1200,OUT,Ferran Bassas,38,62
+Liga Endesa,105397,3,1200,IN,Pierre Oriola,38,62
+Liga Endesa,105397,3,1200,IN,Chibuzo Agbo,38,62
+Liga Endesa,105397,3,1200,IN,JD Notae,38,62
+Liga Endesa,105397,3,1294,OUT,Timmy Allen,40,67
+Liga Endesa,105397,3,1294,OUT,JD Notae,40,67
+Liga Endesa,105397,3,1294,IN,Yordan Minchev,40,67
+Liga Endesa,105397,3,1294,IN,Gerard Fernández,40,67
+Liga Endesa,105397,3,1358,OUT,Hugo Benitez,44,70
+Liga Endesa,105397,3,1358,IN,Rafael Villar,44,70
+Liga Endesa,105397,3,1456,OUT,Pierre Oriola,47,74
+Liga Endesa,105397,3,1456,OUT,Chibuzo Agbo,47,74
+Liga Endesa,105397,3,1456,OUT,Gerard Fernández,47,74
+Liga Endesa,105397,3,1456,IN,Nick Ongenda,47,74
+Liga Endesa,105397,3,1456,IN,Ferran Bassas,47,74
+Liga Endesa,105397,3,1456,IN,Lukasz Kolenda,47,74
+Liga Endesa,105397,3,1579,OUT,Nick Ongenda,49,79
+Liga Endesa,105397,3,1579,IN,Pierre Oriola,49,79
+Liga Endesa,105397,3,1610,OUT,Yordan Minchev,52,79
+Liga Endesa,105397,3,1610,IN,Timmy Allen,52,79
+Liga Endesa,105397,3,1652,OUT,Rafael Villar,54,81
+Liga Endesa,105397,3,1652,IN,Hugo Benitez,54,81
+Liga Endesa,105397,3,1773,OUT,Pierre Oriola,56,85
+Liga Endesa,105397,3,1773,OUT,Ferran Bassas,56,85
+Liga Endesa,105397,3,1773,IN,Yordan Minchev,56,85
+Liga Endesa,105397,3,1773,IN,JD Notae,56,85
+Liga Endesa,105397,4,1800,OUT,Lukasz Kolenda,56,86
+Liga Endesa,105397,4,1800,IN,Chibuzo Agbo,56,86
+Liga Endesa,105397,4,1934,OUT,Timmy Allen,65,94
+Liga Endesa,105397,4,1934,OUT,JD Notae,65,94
+Liga Endesa,105397,4,1934,IN,Nick Ongenda,65,94
+Liga Endesa,105397,4,1934,IN,Lukasz Kolenda,65,94
+Liga Endesa,105397,4,1951,OUT,Hugo Benitez,65,95
+Liga Endesa,105397,4,1951,IN,Rafael Villar,65,95
+Liga Endesa,105397,4,1975,OUT,Chibuzo Agbo,67,95
+Liga Endesa,105397,4,1975,IN,Pablo Tamba,67,95
+Liga Endesa,105397,4,2190,OUT,Nick Ongenda,76,106
+Liga Endesa,105397,4,2190,OUT,Yordan Minchev,76,106
+Liga Endesa,105397,4,2190,OUT,Lukasz Kolenda,76,106
+Liga Endesa,105397,4,2190,IN,Pierre Oriola,76,106
+Liga Endesa,105397,4,2190,IN,Chibuzo Agbo,76,106
+Liga Endesa,105397,4,2190,IN,Gerard Fernández,76,106
+Liga Endesa,105397,4,2261,OUT,Rafael Villar,76,113
+Liga Endesa,105397,4,2261,OUT,Chibuzo Agbo,76,113
+Liga Endesa,105397,4,2261,IN,Hugo Benitez,76,113
+Liga Endesa,105397,4,2261,IN,Timmy Allen,76,113
+Liga Endesa,105397,1,600,END,,22,34
+Liga Endesa,105397,2,1200,END,,38,62
+Liga Endesa,105397,3,1800,END,,56,86
+Liga Endesa,105397,4,2400,END,,83,120
+Liga Endesa,105402,1,0,START,JD Notae,0,0
+Liga Endesa,105402,1,0,START,Hugo Benitez,0,0
+Liga Endesa,105402,1,0,START,Yordan Minchev,0,0
+Liga Endesa,105402,1,0,START,Chibuzo Agbo,0,0
+Liga Endesa,105402,1,0,START,Nick Ongenda,0,0
+Liga Endesa,105402,1,117,OUT,Nick Ongenda,2,2
+Liga Endesa,105402,1,117,IN,Pierre Oriola,2,2
+Liga Endesa,105402,1,226,OUT,Hugo Benitez,8,7
+Liga Endesa,105402,1,226,OUT,Chibuzo Agbo,8,7
+Liga Endesa,105402,1,226,OUT,Yordan Minchev,8,7
+Liga Endesa,105402,1,226,IN,Ferran Bassas,8,7
+Liga Endesa,105402,1,226,IN,Eric Vila,8,7
+Liga Endesa,105402,1,226,IN,Pablo Tamba,8,7
+Liga Endesa,105402,1,261,OUT,JD Notae,8,9
+Liga Endesa,105402,1,261,IN,Gerard Fernández,8,9
+Liga Endesa,105402,1,403,OUT,Gerard Fernández,12,17
+Liga Endesa,105402,1,403,OUT,Pierre Oriola,12,17
+Liga Endesa,105402,1,403,IN,Nick Ongenda,12,17
+Liga Endesa,105402,1,403,IN,Hugo Benitez,12,17
+Liga Endesa,105402,1,459,OUT,Ferran Bassas,14,17
+Liga Endesa,105402,1,459,IN,JD Notae,14,17
+Liga Endesa,105402,1,478,OUT,Eric Vila,14,18
+Liga Endesa,105402,1,478,OUT,Pablo Tamba,14,18
+Liga Endesa,105402,1,478,IN,Yordan Minchev,14,18
+Liga Endesa,105402,1,478,IN,Lucas Beaufort,14,18
+Liga Endesa,105402,1,559,OUT,Nick Ongenda,16,20
+Liga Endesa,105402,1,559,IN,Pierre Oriola,16,20
+Liga Endesa,105402,2,600,OUT,Lucas Beaufort,16,22
+Liga Endesa,105402,2,600,IN,Chibuzo Agbo,16,22
+Liga Endesa,105402,2,651,OUT,Hugo Benitez,16,27
+Liga Endesa,105402,2,651,IN,Ferran Bassas,16,27
+Liga Endesa,105402,2,757,OUT,JD Notae,19,27
+Liga Endesa,105402,2,757,IN,Hugo Benitez,19,27
+Liga Endesa,105402,2,813,OUT,Yordan Minchev,19,29
+Liga Endesa,105402,2,813,OUT,Pierre Oriola,19,29
+Liga Endesa,105402,2,813,IN,Nick Ongenda,19,29
+Liga Endesa,105402,2,813,IN,Pablo Tamba,19,29
+Liga Endesa,105402,2,899,OUT,Hugo Benitez,22,31
+Liga Endesa,105402,2,899,IN,Gerard Fernández,22,31
+Liga Endesa,105402,2,918,OUT,Ferran Bassas,22,33
+Liga Endesa,105402,2,918,OUT,Chibuzo Agbo,22,33
+Liga Endesa,105402,2,918,IN,Eric Vila,22,33
+Liga Endesa,105402,2,918,IN,Hugo Benitez,22,33
+Liga Endesa,105402,2,1064,OUT,Pablo Tamba,29,42
+Liga Endesa,105402,2,1064,OUT,Eric Vila,29,42
+Liga Endesa,105402,2,1064,OUT,Hugo Benitez,29,42
+Liga Endesa,105402,2,1064,IN,Yordan Minchev,29,42
+Liga Endesa,105402,2,1064,IN,Ferran Bassas,29,42
+Liga Endesa,105402,2,1064,IN,Lucas Beaufort,29,42
+Liga Endesa,105402,2,1082,OUT,Nick Ongenda,29,42
+Liga Endesa,105402,2,1082,IN,Pierre Oriola,29,42
+Liga Endesa,105402,2,1135,OUT,Lucas Beaufort,29,47
+Liga Endesa,105402,2,1135,IN,JD Notae,29,47
+Liga Endesa,105402,2,1143,OUT,Ferran Bassas,30,47
+Liga Endesa,105402,2,1143,IN,Hugo Benitez,30,47
+Liga Endesa,105402,3,1200,OUT,Gerard Fernández,35,48
+Liga Endesa,105402,3,1200,OUT,Pierre Oriola,35,48
+Liga Endesa,105402,3,1200,IN,Nick Ongenda,35,48
+Liga Endesa,105402,3,1200,IN,Chibuzo Agbo,35,48
+Liga Endesa,105402,3,1387,OUT,Yordan Minchev,45,53
+Liga Endesa,105402,3,1387,IN,Eric Vila,45,53
+Liga Endesa,105402,3,1431,OUT,Hugo Benitez,47,53
+Liga Endesa,105402,3,1431,IN,Ferran Bassas,47,53
+Liga Endesa,105402,3,1494,OUT,Nick Ongenda,47,57
+Liga Endesa,105402,3,1494,IN,Pierre Oriola,47,57
+Liga Endesa,105402,3,1587,OUT,Chibuzo Agbo,49,61
+Liga Endesa,105402,3,1587,OUT,JD Notae,49,61
+Liga Endesa,105402,3,1587,IN,Pablo Tamba,49,61
+Liga Endesa,105402,3,1587,IN,Hugo Benitez,49,61
+Liga Endesa,105402,3,1669,OUT,Eric Vila,51,61
+Liga Endesa,105402,3,1669,OUT,Ferran Bassas,51,61
+Liga Endesa,105402,3,1669,IN,Yordan Minchev,51,61
+Liga Endesa,105402,3,1669,IN,Gerard Fernández,51,61
+Liga Endesa,105402,4,1936,OUT,Pierre Oriola,59,68
+Liga Endesa,105402,4,1936,OUT,Pablo Tamba,59,68
+Liga Endesa,105402,4,1936,OUT,Gerard Fernández,59,68
+Liga Endesa,105402,4,1936,OUT,Hugo Benitez,59,68
+Liga Endesa,105402,4,1936,IN,Nick Ongenda,59,68
+Liga Endesa,105402,4,1936,IN,Chibuzo Agbo,59,68
+Liga Endesa,105402,4,1936,IN,Ferran Bassas,59,68
+Liga Endesa,105402,4,1936,IN,JD Notae,59,68
+Liga Endesa,105402,4,1998,OUT,Yordan Minchev,61,70
+Liga Endesa,105402,4,1998,IN,Eric Vila,61,70
+Liga Endesa,105402,4,2174,OUT,Chibuzo Agbo,64,76
+Liga Endesa,105402,4,2174,OUT,Eric Vila,64,76
+Liga Endesa,105402,4,2174,OUT,JD Notae,64,76
+Liga Endesa,105402,4,2174,IN,Yordan Minchev,64,76
+Liga Endesa,105402,4,2174,IN,Gerard Fernández,64,76
+Liga Endesa,105402,4,2174,IN,Hugo Benitez,64,76
+Liga Endesa,105402,4,2247,OUT,Nick Ongenda,67,76
+Liga Endesa,105402,4,2247,IN,Pierre Oriola,67,76
+Liga Endesa,105402,4,2282,OUT,Ferran Bassas,67,78
+Liga Endesa,105402,4,2282,IN,JD Notae,67,78
+Liga Endesa,105402,1,600,END,,16,22
+Liga Endesa,105402,2,1200,END,,35,48
+Liga Endesa,105402,3,1800,END,,57,64
+Liga Endesa,105402,4,2400,END,,72,84
+EuroCup,EC14,1,0,START,Timmy Allen,0,0
+EuroCup,EC14,1,0,START,Chibuzo Agbo,0,0
+EuroCup,EC14,1,0,START,Jd Notae,0,0
+EuroCup,EC14,1,0,START,Nick Ongenda,0,0
+EuroCup,EC14,1,0,START,Rafa Villar,0,0
+EuroCup,EC14,1,203,IN,Ferran Bassas,7,7
+EuroCup,EC14,1,203,OUT,Jd Notae,7,7
+EuroCup,EC14,1,203,OUT,Nick Ongenda,7,7
+EuroCup,EC14,1,203,IN,Yordan Minchev,7,7
+EuroCup,EC14,1,257,OUT,Timmy Allen,7,10
+EuroCup,EC14,1,257,IN,Lukasz Kolenda,7,10
+EuroCup,EC14,1,257,IN,Eric Vila,7,10
+EuroCup,EC14,1,257,OUT,Chibuzo Agbo,7,10
+EuroCup,EC14,1,282,IN,Pablo Tamba,11,12
+EuroCup,EC14,1,282,OUT,Rafa Villar,11,12
+EuroCup,EC14,1,454,IN,Timmy Allen,16,16
+EuroCup,EC14,1,454,OUT,Lukasz Kolenda,16,16
+EuroCup,EC14,1,454,OUT,Eric Vila,16,16
+EuroCup,EC14,1,454,OUT,Ferran Bassas,16,16
+EuroCup,EC14,1,454,IN,Jd Notae,16,16
+EuroCup,EC14,1,454,IN,Nick Ongenda,16,16
+EuroCup,EC14,1,454,IN,Rafa Villar,16,16
+EuroCup,EC14,1,454,OUT,Yordan Minchev,16,16
+EuroCup,EC14,1,524,OUT,Pablo Tamba,18,21
+EuroCup,EC14,1,524,IN,Chibuzo Agbo,18,21
+EuroCup,EC14,1,569,IN,Lucas Beaufort,18,21
+EuroCup,EC14,1,569,OUT,Jd Notae,18,21
+EuroCup,EC14,1,569,IN,Pablo Tamba,18,21
+EuroCup,EC14,1,569,OUT,Chibuzo Agbo,18,21
+EuroCup,EC14,1,594,IN,Ferran Bassas,20,21
+EuroCup,EC14,1,594,OUT,Pablo Tamba,20,21
+EuroCup,EC14,1,600,END,,20,21
+EuroCup,EC14,2,600,IN,Lukasz Kolenda,20,21
+EuroCup,EC14,2,600,OUT,Lucas Beaufort,20,21
+EuroCup,EC14,2,600,OUT,Ferran Bassas,20,21
+EuroCup,EC14,2,600,IN,Chibuzo Agbo,20,21
+EuroCup,EC14,2,668,IN,Pablo Tamba,22,23
+EuroCup,EC14,2,668,OUT,Chibuzo Agbo,22,23
+EuroCup,EC14,2,685,OUT,Nick Ongenda,24,25
+EuroCup,EC14,2,685,IN,Yordan Minchev,24,25
+EuroCup,EC14,2,741,IN,Ferran Bassas,26,26
+EuroCup,EC14,2,741,OUT,Rafa Villar,26,26
+EuroCup,EC14,2,795,OUT,Timmy Allen,28,30
+EuroCup,EC14,2,795,IN,Eric Vila,28,30
+EuroCup,EC14,2,795,OUT,Pablo Tamba,28,30
+EuroCup,EC14,2,795,IN,Jd Notae,28,30
+EuroCup,EC14,2,958,OUT,Lukasz Kolenda,34,35
+EuroCup,EC14,2,958,OUT,Eric Vila,34,35
+EuroCup,EC14,2,958,IN,Chibuzo Agbo,34,35
+EuroCup,EC14,2,958,IN,Nick Ongenda,34,35
+EuroCup,EC14,2,958,IN,Rafa Villar,34,35
+EuroCup,EC14,2,958,OUT,Yordan Minchev,34,35
+EuroCup,EC14,2,958,IN,Eric Vila,34,35
+EuroCup,EC14,2,958,OUT,Ferran Bassas,34,35
+EuroCup,EC14,2,1114,IN,Timmy Allen,38,38
+EuroCup,EC14,2,1114,IN,Lukasz Kolenda,38,38
+EuroCup,EC14,2,1114,OUT,Eric Vila,38,38
+EuroCup,EC14,2,1114,OUT,Jd Notae,38,38
+EuroCup,EC14,2,1114,OUT,Nick Ongenda,38,38
+EuroCup,EC14,2,1114,IN,Yordan Minchev,38,38
+EuroCup,EC14,2,1161,IN,Lucas Beaufort,41,38
+EuroCup,EC14,2,1161,OUT,Chibuzo Agbo,41,38
+EuroCup,EC14,2,1183,OUT,Lucas Beaufort,41,40
+EuroCup,EC14,2,1183,IN,Ferran Bassas,41,40
+EuroCup,EC14,2,1183,IN,Chibuzo Agbo,41,40
+EuroCup,EC14,2,1183,IN,Jd Notae,41,40
+EuroCup,EC14,2,1183,OUT,Rafa Villar,41,40
+EuroCup,EC14,2,1183,OUT,Yordan Minchev,41,40
+EuroCup,EC14,2,1200,END,,41,40
+EuroCup,EC14,3,1200,OUT,Lukasz Kolenda,41,40
+EuroCup,EC14,3,1200,OUT,Ferran Bassas,41,40
+EuroCup,EC14,3,1200,IN,Nick Ongenda,41,40
+EuroCup,EC14,3,1200,IN,Rafa Villar,41,40
+EuroCup,EC14,3,1326,IN,Lukasz Kolenda,45,42
+EuroCup,EC14,3,1326,OUT,Jd Notae,45,42
+EuroCup,EC14,3,1348,OUT,Nick Ongenda,45,42
+EuroCup,EC14,3,1348,IN,Michael Enabulele,45,42
+EuroCup,EC14,3,1407,IN,Ferran Bassas,46,44
+EuroCup,EC14,3,1407,OUT,Rafa Villar,46,44
+EuroCup,EC14,3,1432,OUT,Timmy Allen,46,46
+EuroCup,EC14,3,1432,IN,Eric Vila,46,46
+EuroCup,EC14,3,1527,OUT,Lukasz Kolenda,48,48
+EuroCup,EC14,3,1527,IN,Pablo Tamba,48,48
+EuroCup,EC14,3,1527,OUT,Chibuzo Agbo,48,48
+EuroCup,EC14,3,1527,IN,Jd Notae,48,48
+EuroCup,EC14,3,1683,IN,Nick Ongenda,52,56
+EuroCup,EC14,3,1683,OUT,Michael Enabulele,52,56
+EuroCup,EC14,3,1683,IN,Timmy Allen,52,56
+EuroCup,EC14,3,1683,OUT,Eric Vila,52,56
+EuroCup,EC14,3,1718,IN,Lukasz Kolenda,52,56
+EuroCup,EC14,3,1718,OUT,Ferran Bassas,52,56
+EuroCup,EC14,3,1718,OUT,Jd Notae,52,56
+EuroCup,EC14,3,1718,IN,Rafa Villar,52,56
+EuroCup,EC14,3,1742,IN,Ferran Bassas,54,56
+EuroCup,EC14,3,1742,OUT,Rafa Villar,54,56
+EuroCup,EC14,3,1764,IN,Lucas Beaufort,54,56
+EuroCup,EC14,3,1764,OUT,Ferran Bassas,54,56
+EuroCup,EC14,3,1764,OUT,Pablo Tamba,54,56
+EuroCup,EC14,3,1764,IN,Rafa Villar,54,56
+EuroCup,EC14,3,1800,END,,56,58
+EuroCup,EC14,4,1800,IN,Ferran Bassas,56,58
+EuroCup,EC14,4,1800,OUT,Rafa Villar,56,58
+EuroCup,EC14,4,1819,OUT,Ferran Bassas,56,58
+EuroCup,EC14,4,1819,OUT,Nick Ongenda,56,58
+EuroCup,EC14,4,1819,IN,Michael Enabulele,56,58
+EuroCup,EC14,4,1819,IN,Rafa Villar,56,58
+EuroCup,EC14,4,1828,OUT,Lucas Beaufort,56,58
+EuroCup,EC14,4,1828,IN,Chibuzo Agbo,56,58
+EuroCup,EC14,4,1865,OUT,Lukasz Kolenda,56,60
+EuroCup,EC14,4,1865,IN,Jd Notae,56,60
+EuroCup,EC14,4,1879,IN,Ferran Bassas,56,62
+EuroCup,EC14,4,1879,OUT,Rafa Villar,56,62
+EuroCup,EC14,4,1962,OUT,Timmy Allen,56,67
+EuroCup,EC14,4,1962,IN,Eric Vila,56,67
+EuroCup,EC14,4,1962,IN,Nick Ongenda,56,67
+EuroCup,EC14,4,1962,OUT,Michael Enabulele,56,67
+EuroCup,EC14,4,2089,IN,Pablo Tamba,61,72
+EuroCup,EC14,4,2089,OUT,Chibuzo Agbo,61,72
+EuroCup,EC14,4,2190,IN,Timmy Allen,68,78
+EuroCup,EC14,4,2190,IN,Lukasz Kolenda,68,78
+EuroCup,EC14,4,2190,OUT,Eric Vila,68,78
+EuroCup,EC14,4,2190,OUT,Ferran Bassas,68,78
+EuroCup,EC14,4,2190,OUT,Jd Notae,68,78
+EuroCup,EC14,4,2190,IN,Rafa Villar,68,78
+EuroCup,EC14,4,2324,OUT,Pablo Tamba,72,85
+EuroCup,EC14,4,2324,IN,Jd Notae,72,85
+EuroCup,EC14,4,2364,OUT,Nick Ongenda,75,88
+EuroCup,EC14,4,2364,IN,Michael Enabulele,75,88
+EuroCup,EC14,4,2370,OUT,Timmy Allen,76,88
+EuroCup,EC14,4,2370,IN,Pablo Tamba,76,88
+EuroCup,EC14,4,2400,END,,78,93
+EuroCup,EC31,1,0,START,Timmy Allen,0,0
+EuroCup,EC31,1,0,START,Chibuzo Agbo,0,0
+EuroCup,EC31,1,0,START,Jd Notae,0,0
+EuroCup,EC31,1,0,START,Nick Ongenda,0,0
+EuroCup,EC31,1,0,START,Rafa Villar,0,0
+EuroCup,EC31,1,184,IN,Ferran Bassas,15,4
+EuroCup,EC31,1,184,OUT,Jd Notae,15,4
+EuroCup,EC31,1,184,IN,Gerard Fernandez,15,4
+EuroCup,EC31,1,184,OUT,Rafa Villar,15,4
+EuroCup,EC31,1,211,OUT,Nick Ongenda,15,7
+EuroCup,EC31,1,211,IN,Yordan Minchev,15,7
+EuroCup,EC31,1,269,IN,Lukasz Kolenda,15,11
+EuroCup,EC31,1,269,OUT,Chibuzo Agbo,15,11
+EuroCup,EC31,1,269,OUT,Timmy Allen,17,11
+EuroCup,EC31,1,269,IN,Pablo Tamba,17,11
+EuroCup,EC31,1,334,OUT,Ferran Bassas,17,15
+EuroCup,EC31,1,334,IN,Jd Notae,17,15
+EuroCup,EC31,1,334,OUT,Gerard Fernandez,17,15
+EuroCup,EC31,1,334,IN,Rafa Villar,17,15
+EuroCup,EC31,1,398,OUT,Lukasz Kolenda,20,16
+EuroCup,EC31,1,398,IN,Chibuzo Agbo,20,16
+EuroCup,EC31,1,437,IN,Nick Ongenda,22,16
+EuroCup,EC31,1,437,OUT,Yordan Minchev,22,16
+EuroCup,EC31,1,503,IN,Timmy Allen,27,19
+EuroCup,EC31,1,503,IN,Eric Vila,27,19
+EuroCup,EC31,1,503,OUT,Pablo Tamba,27,19
+EuroCup,EC31,1,503,OUT,Chibuzo Agbo,27,19
+EuroCup,EC31,1,533,IN,Lucas Beaufort,29,19
+EuroCup,EC31,1,533,OUT,Rafa Villar,29,19
+EuroCup,EC31,1,600,END,,31,24
+EuroCup,EC31,2,600,OUT,Lucas Beaufort,31,24
+EuroCup,EC31,2,600,IN,Ferran Bassas,31,24
+EuroCup,EC31,2,600,OUT,Jd Notae,31,24
+EuroCup,EC31,2,600,IN,Gerard Fernandez,31,24
+EuroCup,EC31,2,721,OUT,Eric Vila,40,28
+EuroCup,EC31,2,721,IN,Pablo Tamba,40,28
+EuroCup,EC31,2,721,OUT,Nick Ongenda,40,28
+EuroCup,EC31,2,721,IN,Yordan Minchev,40,28
+EuroCup,EC31,2,750,IN,Lukasz Kolenda,42,29
+EuroCup,EC31,2,750,OUT,Ferran Bassas,42,29
+EuroCup,EC31,2,750,OUT,Gerard Fernandez,42,29
+EuroCup,EC31,2,750,IN,Rafa Villar,42,29
+EuroCup,EC31,2,811,OUT,Timmy Allen,46,32
+EuroCup,EC31,2,811,IN,Chibuzo Agbo,46,32
+EuroCup,EC31,2,893,OUT,Lukasz Kolenda,48,38
+EuroCup,EC31,2,893,IN,Ferran Bassas,48,38
+EuroCup,EC31,2,893,IN,Jd Notae,48,38
+EuroCup,EC31,2,893,OUT,Rafa Villar,48,38
+EuroCup,EC31,2,931,IN,Nick Ongenda,48,40
+EuroCup,EC31,2,931,OUT,Yordan Minchev,48,40
+EuroCup,EC31,2,1025,IN,Timmy Allen,54,40
+EuroCup,EC31,2,1025,OUT,Pablo Tamba,54,40
+EuroCup,EC31,2,1096,IN,Lucas Beaufort,58,40
+EuroCup,EC31,2,1096,OUT,Chibuzo Agbo,58,40
+EuroCup,EC31,2,1165,OUT,Jd Notae,60,42
+EuroCup,EC31,2,1165,IN,Gerard Fernandez,60,42
+EuroCup,EC31,2,1165,OUT,Ferran Bassas,62,42
+EuroCup,EC31,2,1165,IN,Pablo Tamba,62,42
+EuroCup,EC31,2,1178,IN,Ferran Bassas,62,42
+EuroCup,EC31,2,1178,OUT,Pablo Tamba,62,42
+EuroCup,EC31,2,1200,END,,62,45
+EuroCup,EC31,3,1200,OUT,Lucas Beaufort,62,45
+EuroCup,EC31,3,1200,OUT,Ferran Bassas,62,45
+EuroCup,EC31,3,1200,IN,Chibuzo Agbo,62,45
+EuroCup,EC31,3,1200,IN,Jd Notae,62,45
+EuroCup,EC31,3,1200,OUT,Gerard Fernandez,62,45
+EuroCup,EC31,3,1200,IN,Rafa Villar,62,45
+EuroCup,EC31,3,1373,IN,Ferran Bassas,68,52
+EuroCup,EC31,3,1373,IN,Pablo Tamba,68,52
+EuroCup,EC31,3,1373,OUT,Chibuzo Agbo,68,52
+EuroCup,EC31,3,1373,OUT,Rafa Villar,68,52
+EuroCup,EC31,3,1409,OUT,Nick Ongenda,70,52
+EuroCup,EC31,3,1409,IN,Yordan Minchev,70,52
+EuroCup,EC31,3,1505,IN,Lukasz Kolenda,77,56
+EuroCup,EC31,3,1505,OUT,Jd Notae,77,56
+EuroCup,EC31,3,1563,OUT,Timmy Allen,77,56
+EuroCup,EC31,3,1563,IN,Gerard Fernandez,77,56
+EuroCup,EC31,3,1601,OUT,Pablo Tamba,77,56
+EuroCup,EC31,3,1601,IN,Chibuzo Agbo,77,56
+EuroCup,EC31,3,1643,OUT,Ferran Bassas,79,59
+EuroCup,EC31,3,1643,IN,Rafa Villar,79,59
+EuroCup,EC31,3,1643,IN,Nick Ongenda,80,59
+EuroCup,EC31,3,1643,OUT,Yordan Minchev,80,59
+EuroCup,EC31,3,1748,OUT,Nick Ongenda,82,63
+EuroCup,EC31,3,1748,IN,Yordan Minchev,82,63
+EuroCup,EC31,3,1800,END,,82,69
+EuroCup,EC31,4,1800,IN,Timmy Allen,82,69
+EuroCup,EC31,4,1800,OUT,Lukasz Kolenda,82,69
+EuroCup,EC31,4,1800,IN,Pablo Tamba,82,69
+EuroCup,EC31,4,1800,OUT,Chibuzo Agbo,82,69
+EuroCup,EC31,4,1800,IN,Jd Notae,82,69
+EuroCup,EC31,4,1800,OUT,Gerard Fernandez,82,69
+EuroCup,EC31,4,1935,IN,Ferran Bassas,82,73
+EuroCup,EC31,4,1935,OUT,Pablo Tamba,82,73
+EuroCup,EC31,4,1935,IN,Chibuzo Agbo,82,73
+EuroCup,EC31,4,1935,IN,Nick Ongenda,82,73
+EuroCup,EC31,4,1935,OUT,Rafa Villar,82,73
+EuroCup,EC31,4,1935,OUT,Yordan Minchev,82,73
+EuroCup,EC31,4,2024,IN,Lukasz Kolenda,86,76
+EuroCup,EC31,4,2024,OUT,Jd Notae,86,76
+EuroCup,EC31,4,2069,OUT,Chibuzo Agbo,87,76
+EuroCup,EC31,4,2069,IN,Rafa Villar,87,76
+EuroCup,EC31,4,2129,OUT,Ferran Bassas,89,76
+EuroCup,EC31,4,2129,IN,Jd Notae,89,76
+EuroCup,EC31,4,2129,OUT,Timmy Allen,91,76
+EuroCup,EC31,4,2129,IN,Chibuzo Agbo,91,76
+EuroCup,EC31,4,2207,IN,Ferran Bassas,91,76
+EuroCup,EC31,4,2207,OUT,Rafa Villar,91,76
+EuroCup,EC31,4,2254,IN,Timmy Allen,91,81
+EuroCup,EC31,4,2254,OUT,Lukasz Kolenda,91,81
+EuroCup,EC31,4,2299,OUT,Jd Notae,95,81
+EuroCup,EC31,4,2299,OUT,Nick Ongenda,95,81
+EuroCup,EC31,4,2299,IN,Rafa Villar,95,81
+EuroCup,EC31,4,2299,IN,Yordan Minchev,95,81
+EuroCup,EC31,4,2348,IN,Jd Notae,95,84
+EuroCup,EC31,4,2348,OUT,Rafa Villar,95,84
+EuroCup,EC31,4,2351,OUT,Jd Notae,95,85
+EuroCup,EC31,4,2351,IN,Rafa Villar,95,85
+EuroCup,EC31,4,2351,OUT,Chibuzo Agbo,95,85
+EuroCup,EC31,4,2351,IN,Jd Notae,95,85
+EuroCup,EC31,4,2400,END,,101,89
+EuroCup,EC47,1,0,START,Timmy Allen,0,0
+EuroCup,EC47,1,0,START,Hugo Benitez,0,0
+EuroCup,EC47,1,0,START,Chibuzo Agbo,0,0
+EuroCup,EC47,1,0,START,Jd Notae,0,0
+EuroCup,EC47,1,0,START,Nick Ongenda,0,0
+EuroCup,EC47,1,205,OUT,Jd Notae,5,11
+EuroCup,EC47,1,205,OUT,Nick Ongenda,5,11
+EuroCup,EC47,1,205,IN,Pierre Oriola,5,11
+EuroCup,EC47,1,205,IN,Rafa Villar,5,11
+EuroCup,EC47,1,229,OUT,Timmy Allen,5,11
+EuroCup,EC47,1,229,IN,Yordan Minchev,5,11
+EuroCup,EC47,1,255,IN,Lukasz Kolenda,5,14
+EuroCup,EC47,1,255,OUT,Hugo Benitez,5,14
+EuroCup,EC47,1,255,OUT,Chibuzo Agbo,5,14
+EuroCup,EC47,1,255,IN,Gerard Fernandez,5,14
+EuroCup,EC47,1,386,IN,Jd Notae,10,19
+EuroCup,EC47,1,386,OUT,Gerard Fernandez,10,19
+EuroCup,EC47,1,419,IN,Timmy Allen,10,22
+EuroCup,EC47,1,419,IN,Hugo Benitez,10,22
+EuroCup,EC47,1,419,OUT,Rafa Villar,10,22
+EuroCup,EC47,1,419,OUT,Yordan Minchev,10,22
+EuroCup,EC47,1,447,OUT,Lukasz Kolenda,12,24
+EuroCup,EC47,1,447,IN,Pablo Tamba,12,24
+EuroCup,EC47,1,447,IN,Nick Ongenda,12,24
+EuroCup,EC47,1,447,OUT,Pierre Oriola,12,24
+EuroCup,EC47,1,600,END,,20,32
+EuroCup,EC47,2,704,OUT,Hugo Benitez,25,36
+EuroCup,EC47,2,704,OUT,Pablo Tamba,25,36
+EuroCup,EC47,2,704,IN,Chibuzo Agbo,25,36
+EuroCup,EC47,2,704,IN,Rafa Villar,25,36
+EuroCup,EC47,2,760,IN,Lukasz Kolenda,27,38
+EuroCup,EC47,2,760,IN,Lucas Beaufort,27,38
+EuroCup,EC47,2,760,OUT,Chibuzo Agbo,27,38
+EuroCup,EC47,2,760,OUT,Jd Notae,27,38
+EuroCup,EC47,2,784,OUT,Nick Ongenda,29,38
+EuroCup,EC47,2,784,IN,Pierre Oriola,29,38
+EuroCup,EC47,2,870,OUT,Timmy Allen,33,40
+EuroCup,EC47,2,870,IN,Hugo Benitez,33,40
+EuroCup,EC47,2,870,OUT,Rafa Villar,33,40
+EuroCup,EC47,2,870,IN,Yordan Minchev,33,40
+EuroCup,EC47,2,938,OUT,Lukasz Kolenda,35,42
+EuroCup,EC47,2,938,IN,Gerard Fernandez,35,42
+EuroCup,EC47,2,1008,IN,Timmy Allen,35,45
+EuroCup,EC47,2,1008,OUT,Yordan Minchev,35,45
+EuroCup,EC47,2,1008,OUT,Lucas Beaufort,35,45
+EuroCup,EC47,2,1008,IN,Pablo Tamba,35,45
+EuroCup,EC47,2,1108,IN,Lucas Beaufort,41,49
+EuroCup,EC47,2,1108,OUT,Gerard Fernandez,41,49
+EuroCup,EC47,2,1161,OUT,Hugo Benitez,44,52
+EuroCup,EC47,2,1161,OUT,Pablo Tamba,44,52
+EuroCup,EC47,2,1161,IN,Jd Notae,44,52
+EuroCup,EC47,2,1161,IN,Rafa Villar,44,52
+EuroCup,EC47,2,1180,OUT,Lucas Beaufort,44,53
+EuroCup,EC47,2,1180,IN,Chibuzo Agbo,44,53
+EuroCup,EC47,2,1200,END,,44,53
+EuroCup,EC47,3,1200,IN,Nick Ongenda,44,53
+EuroCup,EC47,3,1200,OUT,Pierre Oriola,44,53
+EuroCup,EC47,3,1422,IN,Hugo Benitez,51,60
+EuroCup,EC47,3,1422,OUT,Nick Ongenda,51,60
+EuroCup,EC47,3,1422,IN,Pierre Oriola,51,60
+EuroCup,EC47,3,1422,OUT,Rafa Villar,51,60
+EuroCup,EC47,3,1512,IN,Lukasz Kolenda,56,62
+EuroCup,EC47,3,1512,OUT,Chibuzo Agbo,56,62
+EuroCup,EC47,3,1574,OUT,Jd Notae,59,62
+EuroCup,EC47,3,1574,IN,Gerard Fernandez,59,62
+EuroCup,EC47,3,1597,OUT,Timmy Allen,59,65
+EuroCup,EC47,3,1597,IN,Yordan Minchev,59,65
+EuroCup,EC47,3,1597,IN,Nick Ongenda,61,65
+EuroCup,EC47,3,1597,OUT,Pierre Oriola,61,65
+EuroCup,EC47,3,1645,IN,Lucas Beaufort,63,69
+EuroCup,EC47,3,1645,OUT,Gerard Fernandez,63,69
+EuroCup,EC47,3,1646,OUT,Hugo Benitez,65,69
+EuroCup,EC47,3,1646,IN,Rafa Villar,65,69
+EuroCup,EC47,3,1691,OUT,Lucas Beaufort,65,73
+EuroCup,EC47,3,1691,IN,Jd Notae,65,73
+EuroCup,EC47,3,1743,IN,Timmy Allen,65,75
+EuroCup,EC47,3,1743,OUT,Jd Notae,65,75
+EuroCup,EC47,3,1748,IN,Lucas Beaufort,66,75
+EuroCup,EC47,3,1748,OUT,Rafa Villar,66,75
+EuroCup,EC47,3,1797,IN,Hugo Benitez,66,76
+EuroCup,EC47,3,1797,OUT,Nick Ongenda,66,76
+EuroCup,EC47,3,1800,END,,66,76
+EuroCup,EC47,4,1800,OUT,Lukasz Kolenda,66,76
+EuroCup,EC47,4,1800,OUT,Lucas Beaufort,66,76
+EuroCup,EC47,4,1800,IN,Chibuzo Agbo,66,76
+EuroCup,EC47,4,1800,IN,Gerard Fernandez,66,76
+EuroCup,EC47,4,1800,IN,Pierre Oriola,66,76
+EuroCup,EC47,4,1800,OUT,Yordan Minchev,66,76
+EuroCup,EC47,4,1934,IN,Jd Notae,66,82
+EuroCup,EC47,4,1934,OUT,Gerard Fernandez,66,82
+EuroCup,EC47,4,2051,IN,Lukasz Kolenda,72,84
+EuroCup,EC47,4,2051,OUT,Chibuzo Agbo,72,84
+EuroCup,EC47,4,2057,OUT,Hugo Benitez,72,86
+EuroCup,EC47,4,2057,IN,Nick Ongenda,72,86
+EuroCup,EC47,4,2057,OUT,Pierre Oriola,72,86
+EuroCup,EC47,4,2057,IN,Rafa Villar,72,86
+EuroCup,EC47,4,2080,OUT,Timmy Allen,73,86
+EuroCup,EC47,4,2080,IN,Yordan Minchev,73,86
+EuroCup,EC47,4,2149,IN,Timmy Allen,77,88
+EuroCup,EC47,4,2149,OUT,Rafa Villar,77,88
+EuroCup,EC47,4,2164,IN,Hugo Benitez,77,90
+EuroCup,EC47,4,2164,OUT,Jd Notae,77,90
+EuroCup,EC47,4,2400,END,,88,100

@@ -35,6 +35,7 @@ plt.rcParams.update({
 
 
 AUTHOR = "Giulia Martini"
+SOURCE_NOTE = "legabasket.it play-by-play"   # data source shown in the chart stamp
 STAMP_NOTE = ""   # set by the report scripts, e.g. "data as of 10 Oct 2026 (pre-match snapshot)"
 
 
@@ -42,7 +43,7 @@ def save_fig(fig, path, **kw) -> None:
     """Save with an author/date stamp in the bottom-right corner (every published chart carries it)."""
     from datetime import date
     note = f" · {STAMP_NOTE}" if STAMP_NOTE else ""
-    fig.text(0.995, -0.035, f"{AUTHOR} · {date.today():%d %b %Y} · data: legabasket.it play-by-play{note}",
+    fig.text(0.995, -0.035, f"{AUTHOR} · {date.today():%d %b %Y} · data: {SOURCE_NOTE}{note}",
              ha="right", va="bottom", fontsize=7.5, color=TEXT2, alpha=0.9)
     fig.savefig(path, dpi=kw.pop("dpi", DPI), bbox_inches="tight", **kw)
 

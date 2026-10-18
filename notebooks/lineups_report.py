@@ -57,7 +57,7 @@ def pick(agg: pd.DataFrame, min_secs: int, top: int) -> list[tuple[str, pd.DataF
             (f"Worst net rating (min {min_secs // 60} min together)", worst.sort_values("net40", ascending=False))]
 
 
-def fig_lineups(agg: pd.DataFrame, team: str, min_secs: int, top: int, out: Path, stamp: str) -> Path:
+def fig_lineups(agg: pd.DataFrame, team: str, min_secs: int, top: int, out: Path, stamp: str, league: str = "LBA") -> Path:
     sections = pick(agg, min_secs, top)
     rows = []   # (kind, payload)
     for title, df in sections:
@@ -87,7 +87,7 @@ def fig_lineups(agg: pd.DataFrame, team: str, min_secs: int, top: int, out: Path
     for ax in (ax_min, ax_net):
         style_axes(ax, "x")
     total = agg.secs.sum() / 60
-    fig.suptitle(f"{team}: five-man lineups, LBA {stamp}  |  {len(agg)} units in {total:.0f} minutes, "
+    fig.suptitle(f"{team}: five-man lineups, {league} {stamp}  |  {len(agg)} units in {total:.0f} minutes, "
                  f"{int((agg.secs >= min_secs).sum())} with {min_secs // 60}+ min together", **SUP_KW)
     path = out / f"lineups_{team.replace(' ', '_')}.png"
     save_fig(fig, path); plt.close(fig)
