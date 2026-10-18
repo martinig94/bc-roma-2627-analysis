@@ -24,7 +24,7 @@ from manresa_fetch import player_key
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "manresa"
-TOP_N = 10
+TOP_N = 12
 MIN_UNIT_SECS = 180
 ROLE_EN = {"Base": "PG", "Escolta": "SG", "Alero": "SF", "Ala-pívot": "PF", "Pívot": "C"}
 POS_EN = {"Guard": "G", "Forward": "F", "Center": "C"}
@@ -135,8 +135,8 @@ def fig_players(table: pd.DataFrame, out: Path) -> Path:
             cell._loc = "left"
             cell.set_text_props(ha="left")
     tab.auto_set_column_width(range(len(cols)))
-    fig.suptitle("Kids&Us Manresa: top 10 by minutes, Liga Endesa + EuroCup 2026/27", **SUP_KW)
-    path = out / "01_top10_players.png"
+    fig.suptitle(f"Kids&Us Manresa: top {TOP_N} by minutes, Liga Endesa + EuroCup 2026/27", **SUP_KW)
+    path = out / "01_top_players.png"
     save_fig(fig, path)
     plt.close(fig)
     return path
@@ -442,7 +442,7 @@ def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.Dat
                    per_game: pd.DataFrame, ts: pd.DataFrame) -> list[str]:
     """README lines for starting fives, assist matrix, shot distances and shot charts."""
     L = ["## Starting fives and absences", "", "![starting fives](00_starting_fives.png)", "",
-         "Gold = starter (S, minutes), grey = bench minutes, red = rotation player (top 10 by minutes) "
+         "Gold = starter (S, minutes), grey = bench minutes, red = rotation player (top 12 by minutes) "
          "not on the game sheet (injury, rest or selection: the reason is not in the data).", "",
          "| Date | Comp | Opponent | H/A | Score | Starters | Out |", "|---|---|---|---|---|---|---|"]
     L += [f"| {r.date} | {r.comp} | {r.opponent} | {r.home} | {r.score} | {r.starters} | "
@@ -467,7 +467,7 @@ def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.Dat
                  for n in dist.columns.get_level_values(0).unique()]
         L.append(f"| {label} | " + " | ".join(cells) + " |")
     L += ["", "### Attempts per game (FG%) by player", "", "![per game](05_shots_per_game.png)", "",
-          "Top 10 by minutes; attempts per EuroCup game played, FG% in brackets.", "",
+          "Top 12 by minutes; attempts per EuroCup game played, FG% in brackets.", "",
           "| Player | " + " | ".join(per_game.columns) + " |", "|---|" + "---|" * len(per_game.columns)]
     L += [f"| {name} | " + " | ".join(str(v) for v in row) + " |" for name, row in per_game.iterrows()]
     L += ["", "## True Shooting and PIR", "", "![ts pir](06_ts_pir.png)", "",
@@ -496,7 +496,7 @@ def write_readme(out: Path, title_date: str, games: pd.DataFrame, table: pd.Data
     L += ["", "## Results", "", "| Comp | Opponent | H/A | Score |", "|---|---|---|---|"]
     for r in games.itertuples():
         L.append(f"| {r.comp} | {r.opponent} | {'H' if r.home else 'A'} | {r.man_pts}-{r.opp_pts} |")
-    L += ["", "## Top 10 by total minutes", "", "![top 10](01_top10_players.png)", "",
+    L += ["", "## Top 12 by total minutes", "", "![top players](01_top_players.png)", "",
           "Height in cm (EuroLeague roster), position from ACB role / EuroLeague roster. "
           "PPG split: Liga Endesa / EuroCup.", ""]
     for r in table.itertuples():
