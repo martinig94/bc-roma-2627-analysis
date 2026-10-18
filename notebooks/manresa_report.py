@@ -207,33 +207,53 @@ def distance_table(shots: pd.DataFrame, scorers: list[str]) -> pd.DataFrame:
     return pd.concat(cols, axis=1)
 
 
-def attempt_split(shots: pd.DataFrame, scorers: list[str]) -> pd.DataFrame:
-    """Per distance bin: each main scorer's share of the team's attempts, plus the rest (sums to 100)."""
+def attempt_split(shots: pd.DataFrame, box: pd.DataFrame, scorers: list[str]) -> tuple:
+    """Per distance bin: share of the team's attempts by main scorer + rest (sums to 100).
+
+    Returns:
+        (shares in %, attempts per bin, text label per bin/player with attempts per game and FG%).
+        The rest of the team is counted per team game.
+    """
     who = shots.player.where(shots.player.isin(scorers), "Rest of the team")
-    counts = pd.crosstab(shots.bin, who).reindex(index=DIST_LABELS, columns=scorers + ["Rest of the team"],
-                                                 fill_value=0)
-    return counts.div(counts.sum(axis=1), axis=0) * 100, counts.sum(axis=1)
+    columns = scorers + ["Rest of the team"]
+    counts = pd.crosstab(shots.bin, who).reindex(index=DIST_LABELS, columns=columns, fill_value=0)
+    made = shots.assign(who=who).pivot_table(index="bin", columns="who", values="made", aggfunc="sum",
+                                             fill_value=0).reindex(index=DIST_LABELS, columns=columns,
+                                                                   fill_value=0)
+    played = box[box.comp == "EuroCup"].groupby("player").size()
+    games = pd.Series({**{p: played.get(p, 1) for p in scorers}, "Rest of the team": shots.game_id.nunique()})
+    shares = counts.div(counts.sum(axis=1), axis=0) * 100
+    labels = {(b, p): f"{shares.loc[b, p]:.0f}%\n{counts.loc[b, p] / games[p]:.1f}/g, "
+                      f"{made.loc[b, p] / counts.loc[b, p] * 100:.0f}% FG"
+              for b in DIST_LABELS for p in columns if counts.loc[b, p]}
+    return shares, counts.sum(axis=1), labels
 
 
-def fig_distance(split: pd.DataFrame, totals: pd.Series, out: Path) -> Path:
+def fig_distance(split: pd.DataFrame, totals: pd.Series, labels: dict, out: Path) -> Path:
     """Stacked bars per distance: who takes the team's shots (main scorers + rest = 100%)."""
     palette = [BLUE, GREEN, "#e08c52", "#b46aa5", "#c9ccd8"]
-    fig, ax = plt.subplots(figsize=(12, 5.8))
+    fig, ax = plt.subplots(figsize=(14, 7))
     bottom = np.zeros(len(split))
     for color, name in zip(palette, split.columns):
-        ax.bar(range(len(split)), split[name], bottom=bottom, color=color, label=name, width=0.62,
+        ax.bar(range(len(split)), split[name], bottom=bottom, color=color, label=name, width=0.7,
                edgecolor="white", linewidth=0.8)
-        for i, val in enumerate(split[name]):
-            if val >= 6:
-                ax.text(i, bottom[i] + val / 2, f"{val:.0f}%", ha="center", va="center", fontsize=9,
+        for i, (label, val) in enumerate(split[name].items()):
+            if val >= 5:
+                ax.text(i, bottom[i] + val / 2, labels[(label, name)], ha="center", va="center", fontsize=8.5,
                         color=TEXT)
+            elif val > 0:
+                ax.text(i + 0.37, bottom[i] + val / 2, labels[(label, name)].replace("\n", "  "), ha="left",
+                        va="center", fontsize=7.5, color=TEXT2)
         bottom += split[name].values
     ax.set_xticks(range(len(split)), [f"{label}\n{int(totals[label])} FGA" for label in split.index])
+    ax.set_xlim(-0.5, len(split) - 0.1)
     ax.set_ylim(0, 100)
     ax.set_ylabel("share of the team's attempts at that distance (%)")
     style_axes(ax, "y")
-    ax.legend(ncols=len(split.columns), loc="upper center", bbox_to_anchor=(0.5, -0.14), fontsize=8.5)
-    fig.suptitle("Who takes the shots at each distance from the rim, EuroCup games", **SUP_KW)
+    ax.legend(ncols=len(split.columns), loc="upper center", bbox_to_anchor=(0.5, -0.1), fontsize=8.5)
+    fig.suptitle("Who takes the shots at each distance from the rim, EuroCup games\n"
+                 "(share of team attempts; attempts per game and FG% below; rest of team per team game)",
+                 **SUP_KW)
     path = out / "03_shot_distance.png"
     save_fig(fig, path)
     plt.close(fig)
@@ -422,8 +442,8 @@ def main() -> None:
     dist = distance_table(shots, scorers)
     starters = starters_table(box, games)
     _, matrix = fig_assists(assists, out)
-    split, totals = attempt_split(shots, scorers)
-    fig_distance(split, totals, out)
+    split, totals, seg_labels = attempt_split(shots, box, scorers)
+    fig_distance(split, totals, seg_labels, out)
     fig_shot_charts(shots, scorers, out)
     per_game = shots_per_game(shots, box, table.player.tolist())
     fig_shots_per_game(per_game, out)
