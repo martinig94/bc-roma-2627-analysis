@@ -10,6 +10,9 @@ Output CSVs (one row per ...):
   games.csv   game
   box.csv     Manresa player per game
   events.csv  Manresa substitution / period boundary with the running score, used for lineups
+  assists.csv assisted made field goal (passer, scorer, points) between Manresa players
+  shots.csv   EuroCup field-goal attempts with court coordinates (cm, basket at origin);
+              ACB publishes no shot locations
 """
 from __future__ import annotations
 
@@ -33,6 +36,10 @@ EL_PEOPLE = "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/clu
 PERIOD_QUARTERS = ("FirstQuarter", "SecondQuarter", "ThirdQuarter", "ForthQuarter", "ExtraTime")
 # ACB numeric play types for substitutions (checked against starters + on-court counts).
 ACB_SUB_IN, ACB_SUB_OUT, ACB_STARTERS = 112, 115, 599
+# Made field goals (2P, 3P, dunk) and assist types (checked against the per-player assist counters).
+ACB_MADE_FG, ACB_ASSIST = {93, 94, 100}, {107, 108, 119}
+EL_MADE_FG = {"2FGM", "3FGM", "DUNK"}
+EL_POINTS = "https://live.euroleague.net/api/Points?gamecode={n}&seasoncode=U2026"
 BOX_COLS = ["pts", "fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "oreb", "dreb", "ast", "stl", "tov",
             "blk", "pf", "plus_minus"]
 
@@ -98,8 +105,8 @@ def acb_game_slugs() -> list[str]:
     return sorted(slugs, key=lambda s: int(s.rsplit("-", 1)[1]))
 
 
-def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict]]:
-    """Return (game row, Manresa box rows, Manresa events) for one ACB game."""
+def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]:
+    """Return (game row, Manresa box rows, Manresa events, assists) for one ACB game."""
     game_id = slug.rsplit("-", 1)[1]
     stats = flight_json(get(ACB_GAME.format(slug=slug, page="estadisticas")).text, "teamBoxscores")
     plays = flight_json(get(ACB_GAME.format(slug=slug, page="jugadas")).text, "plays")
@@ -133,6 +140,17 @@ def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict]]:
         home, away = play["scoreHome"], play["scoreAway"]
         return (home, away) if man_home else (away, home)
 
+    assists, made = [], None
+    for play in plays:
+        if play["playType"] in ACB_MADE_FG:
+            made = play
+        elif play["playType"] in ACB_ASSIST and made is not None:
+            same_moment = all(made[k] == play[k] for k in ("quarter", "minute", "second", "local"))
+            passer, scorer = id_name.get(play["playerLicenseId"]), id_name.get(made["playerLicenseId"])
+            if same_moment and passer and scorer:
+                assists.append({"comp": "Liga Endesa", "game_id": game_id, "passer": passer,
+                                "scorer": scorer, "pts": 3 if made["playType"] == 94 else 2})
+
     events, last = [], {}
     for play in plays:
         if play["playType"] in (ACB_SUB_IN, ACB_SUB_OUT) and play["playerLicenseId"] in id_name:
@@ -161,7 +179,7 @@ def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict]]:
     opponent = teams["opp"][0]
     game = {"comp": "Liga Endesa", "game_id": game_id, "opponent": opponent,
             "home": int(man_home), "man_pts": final[0], "opp_pts": final[1]}
-    return game, box, events
+    return game, box, events, assists
 
 
 # --------------------------------------------------------------------------------- EuroCup
@@ -178,8 +196,8 @@ def eurocup_games() -> list[dict]:
     return sorted(games, key=lambda g: g["number"])
 
 
-def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict]]:
-    """Return (game row, Manresa box rows, Manresa events) for one EuroCup game."""
+def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[dict]]:
+    """Return (game row, Manresa box rows, Manresa events, assists) for one EuroCup game."""
     number, game_id = info["number"], f"EC{info['number']}"
     box_json = get(EL_BOX.format(n=number)).json()
     pbp = get(EL_PBP.format(n=number)).json()
@@ -209,12 +227,21 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict]]:
     events = [{"comp": "EuroCup", "game_id": game_id, "period": 1, "elapsed": 0, "kind": "START",
                "player": row["player"], "man": 0, "opp": 0} for row in box if row["starter"]]
     home = away = 0
+    assists, made = [], None
     man_score = opp_score = 0
     for period, key in enumerate(PERIOD_QUARTERS, start=1):
         rows = pbp.get(key) or []
         if not rows:
             continue
-        for row in rows:
+        for row in sorted(rows, key=lambda r: r["NUMBEROFPLAY"]):
+            if row["PLAYTYPE"] in EL_MADE_FG:
+                made = row
+            elif (row["PLAYTYPE"] == "AS" and made is not None and row["CODETEAM"].strip() == "MAN"
+                  and made["CODETEAM"].strip() == "MAN"
+                  and row["NUMBEROFPLAY"] - made["NUMBEROFPLAY"] <= 10):
+                assists.append({"comp": "EuroCup", "game_id": game_id, "passer": display_name(row["PLAYER"]),
+                                "scorer": display_name(made["PLAYER"]),
+                                "pts": 3 if made["PLAYTYPE"] == "3FGM" else 2})
             if row["POINTS_A"] is not None:
                 home = row["POINTS_A"]
             if row["POINTS_B"] is not None:
@@ -231,7 +258,17 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict]]:
                        "player": "", "man": man_score, "opp": opp_score})
     game = {"comp": "EuroCup", "game_id": game_id, "opponent": opponent,
             "home": int(info["home"]), "man_pts": man_score, "opp_pts": opp_score}
-    return game, box, events
+    return game, box, events, assists
+
+
+def fetch_shots(info: dict) -> list[dict]:
+    """Manresa field-goal attempts with coordinates for one EuroCup game."""
+    rows = get(EL_POINTS.format(n=info["number"])).json()["Rows"]
+    return [{"game_id": f"EC{info['number']}", "player": display_name(r["PLAYER"]),
+             "made": int(r["ID_ACTION"].strip().endswith("M")), "three": int(r["ID_ACTION"].startswith("3")),
+             "x": r["COORD_X"], "y": r["COORD_Y"], "zone": r["ZONE"].strip()}
+            for r in rows if r["TEAM"].strip() == "MAN" and r["ID_ACTION"].strip()[:1] in "23"
+            and r["ID_ACTION"].strip()[1:3] == "FG"]
 
 
 def fetch_heights() -> pd.DataFrame:
@@ -249,13 +286,18 @@ def fetch_heights() -> pd.DataFrame:
 def main() -> None:
     """Fetch everything and write the CSVs."""
     OUT.mkdir(parents=True, exist_ok=True)
-    games, boxes, events = [], [], []
+    games, boxes, events, assists = [], [], [], []
+    ec_games = eurocup_games()
     parsed = [parse_acb_game(slug) for slug in acb_game_slugs()]
-    parsed += [parse_eurocup_game(info) for info in eurocup_games()]
-    for game, box, evs in parsed:
+    parsed += [parse_eurocup_game(info) for info in ec_games]
+    for game, box, evs, ast in parsed:
         games.append(game)
         boxes += box
         events += evs
+        assists += ast
+    pd.DataFrame(assists).to_csv(OUT / "assists.csv", index=False)
+    pd.DataFrame([row for info in ec_games for row in fetch_shots(info)]).to_csv(
+        OUT / "shots.csv", index=False)
     pd.DataFrame(games).to_csv(OUT / "games.csv", index=False)
     pd.DataFrame(boxes).to_csv(OUT / "box.csv", index=False)
     pd.DataFrame(events).to_csv(OUT / "events.csv", index=False)
