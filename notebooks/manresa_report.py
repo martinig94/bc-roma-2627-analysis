@@ -207,24 +207,33 @@ def distance_table(shots: pd.DataFrame, scorers: list[str]) -> pd.DataFrame:
     return pd.concat(cols, axis=1)
 
 
-def fig_distance(table: pd.DataFrame, out: Path) -> Path:
-    """Grouped bars: share of attempts by distance for the team and each main scorer, FG% on top."""
-    names = table.columns.get_level_values(0).unique()
-    fig, ax = plt.subplots(figsize=(12, 5.5))
-    width = 0.8 / len(names)
-    palette = [TEXT2, BLUE, GREEN, "#e08c52", "#b46aa5"]
-    for k, name in enumerate(names):
-        x = np.arange(len(DIST_LABELS)) + k * width
-        share, fg, att = table[name].share, table[name].fg, table[name].att
-        ax.bar(x, share, width, label=f"{name} ({int(att.sum())} FGA)", color=palette[k % len(palette)])
-        for xi, sh, pct, n in zip(x, share, fg, att):
-            if n:
-                ax.text(xi, sh + 0.6, f"{pct:.0f}%", ha="center", fontsize=7.5, color=TEXT2)
-    ax.set_xticks(np.arange(len(DIST_LABELS)) + width * (len(names) - 1) / 2, DIST_LABELS)
-    ax.set_ylabel("share of field-goal attempts (%)")
+def attempt_split(shots: pd.DataFrame, scorers: list[str]) -> pd.DataFrame:
+    """Per distance bin: each main scorer's share of the team's attempts, plus the rest (sums to 100)."""
+    who = shots.player.where(shots.player.isin(scorers), "Rest of the team")
+    counts = pd.crosstab(shots.bin, who).reindex(index=DIST_LABELS, columns=scorers + ["Rest of the team"],
+                                                 fill_value=0)
+    return counts.div(counts.sum(axis=1), axis=0) * 100, counts.sum(axis=1)
+
+
+def fig_distance(split: pd.DataFrame, totals: pd.Series, out: Path) -> Path:
+    """Stacked bars per distance: who takes the team's shots (main scorers + rest = 100%)."""
+    palette = [BLUE, GREEN, "#e08c52", "#b46aa5", "#c9ccd8"]
+    fig, ax = plt.subplots(figsize=(12, 5.8))
+    bottom = np.zeros(len(split))
+    for color, name in zip(palette, split.columns):
+        ax.bar(range(len(split)), split[name], bottom=bottom, color=color, label=name, width=0.62,
+               edgecolor="white", linewidth=0.8)
+        for i, val in enumerate(split[name]):
+            if val >= 6:
+                ax.text(i, bottom[i] + val / 2, f"{val:.0f}%", ha="center", va="center", fontsize=9,
+                        color=TEXT)
+        bottom += split[name].values
+    ax.set_xticks(range(len(split)), [f"{label}\n{int(totals[label])} FGA" for label in split.index])
+    ax.set_ylim(0, 100)
+    ax.set_ylabel("share of the team's attempts at that distance (%)")
     style_axes(ax, "y")
-    ax.legend(ncols=len(names), loc="upper center", bbox_to_anchor=(0.5, -0.1), fontsize=8.5)
-    fig.suptitle("Shot distribution by distance from the rim, EuroCup games (label = FG%)", **SUP_KW)
+    ax.legend(ncols=len(split.columns), loc="upper center", bbox_to_anchor=(0.5, -0.14), fontsize=8.5)
+    fig.suptitle("Who takes the shots at each distance from the rim, EuroCup games", **SUP_KW)
     path = out / "03_shot_distance.png"
     save_fig(fig, path)
     plt.close(fig)
@@ -296,7 +305,7 @@ def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.Dat
     L += ["", "## Shot distribution by distance from the rim", "", "![distance](03_shot_distance.png)", "",
           "EuroCup games only (3 games, "
           f"{len(shots)} attempts): ACB does not publish shot locations. Main scorers = top 4 by total points. "
-          "Share of own attempts / FG%:", "",
+          "Table: share of each player's own attempts / FG%. The chart shows who takes the team's attempts at each distance.", "",
           "| Distance | " + " | ".join(dist.columns.get_level_values(0).unique()) + " |",
           "|---|" + "---|" * len(dist.columns.get_level_values(0).unique())]
     for label in DIST_LABELS:
@@ -361,7 +370,8 @@ def main() -> None:
     dist = distance_table(shots, scorers)
     starters = starters_table(box, games)
     _, matrix = fig_assists(assists, out)
-    fig_distance(dist, out)
+    split, totals = attempt_split(shots, scorers)
+    fig_distance(split, totals, out)
     fig_shot_charts(shots, scorers, out)
     units = aggregate_units(lineup_stints(events, games))
     fig_players(table, out)
