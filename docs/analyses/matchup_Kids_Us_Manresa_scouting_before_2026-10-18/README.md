@@ -24,9 +24,9 @@
 | EuroCup | Ratiopharm Ulm | H | 101-89 |
 | EuroCup | Bahcesehir College Istanbul | A | 88-100 |
 
-## Top 10 by total minutes
+## Top 12 by total minutes
 
-![top 10](01_top10_players.png)
+![top players](01_top_players.png)
 
 Height in cm (EuroLeague roster), position from ACB role / EuroLeague roster. PPG split: Liga Endesa / EuroCup.
 
@@ -40,6 +40,8 @@ Height in cm (EuroLeague roster), position from ACB role / EuroLeague roster. PP
 - **Ferran Bassas** (PG, 181 cm, 6 GP): 19.0 min, **3.7 pts**, 2.0 reb, 4.5 ast, FG 24% / 3P 16% / FT 78%; PPG 1.8 ACB / 7.5 EC. Main creator.
 - **Pablo Tamba** (SF, 200 cm, 7 GP): 13.1 min, **4.7 pts**, 2.6 reb, 0.6 ast, FG 68% / 3P 33% / FT 42%; PPG 4.5 ACB / 5.0 EC. Role player.
 - **Hugo Benitez** (PG, 192 cm, 4 GP): 19.2 min, **8.2 pts**, 1.5 reb, 4.0 ast, FG 54% / 3P 17% / FT 50%; PPG 7.3 ACB / 11.0 EC. Main creator, weak at the line (50%).
+- **Eric Vila** (PF, 209 cm, 5 GP): 12.2 min, **1.8 pts**, 2.6 reb, 0.6 ast, FG 21% / 3P 0% / FT 75%; PPG 1.7 ACB / 2.0 EC. Role player.
+- **Pierre Oriola** (C, 208 cm, 3 GP): 19.6 min, **12.0 pts**, 6.0 reb, 0.7 ast, FG 50% / 3P 0% / FT 70%; PPG 11.5 ACB / 13.0 EC. Rebounder.
 
 ## Lineups
 
@@ -75,16 +77,16 @@ Five-man units rebuilt from substitutions, both competitions combined; best/wors
 
 ![starting fives](00_starting_fives.png)
 
-Gold = starter (S, minutes), grey = bench minutes, red = rotation player (top 10 by minutes) not on the game sheet (injury, rest or selection: the reason is not in the data).
+Gold = starter (S, minutes), grey = bench minutes, red = rotation player (top 12 by minutes) not on the game sheet (injury, rest or selection: the reason is not in the data).
 
 | Date | Comp | Opponent | H/A | Score | Starters | Out |
 |---|---|---|---|---|---|---|
-| 2026-09-26 | Liga Endesa | Surne Bilbao | A | 92-107 | Agbo / Benitez / Notae / Ongenda / Tamba | **Timmy Allen** |
-| 2026-09-30 | EuroCup | Paok Thessaloniki | A | 78-93 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez** |
-| 2026-10-03 | Liga Endesa | Río Breogán | H | 95-101 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez** |
-| 2026-10-07 | EuroCup | Ratiopharm Ulm | H | 101-89 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez** |
-| 2026-10-11 | Liga Endesa | Real Madrid | A | 83-120 | Agbo / Minchev / Notae / Oriola / Villar | - |
-| 2026-10-13 | EuroCup | Bahcesehir College Istanbul | A | 88-100 | Agbo / Allen / Benitez / Notae / Ongenda | **Ferran Bassas** |
+| 2026-09-26 | Liga Endesa | Surne Bilbao | A | 92-107 | Agbo / Benitez / Notae / Ongenda / Tamba | **Timmy Allen, Pierre Oriola** |
+| 2026-09-30 | EuroCup | Paok Thessaloniki | A | 78-93 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez, Pierre Oriola** |
+| 2026-10-03 | Liga Endesa | Río Breogán | H | 95-101 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez, Pierre Oriola** |
+| 2026-10-07 | EuroCup | Ratiopharm Ulm | H | 101-89 | Agbo / Allen / Notae / Ongenda / Villar | **Hugo Benitez, Pierre Oriola** |
+| 2026-10-11 | Liga Endesa | Real Madrid | A | 83-120 | Agbo / Minchev / Notae / Oriola / Villar | **Eric Vila** |
+| 2026-10-13 | EuroCup | Bahcesehir College Istanbul | A | 88-100 | Agbo / Allen / Benitez / Notae / Ongenda | **Ferran Bassas, Eric Vila** |
 | 2026-10-17 | Liga Endesa | Unicaja | H | 72-84 | Agbo / Benitez / Minchev / Notae / Ongenda | **Timmy Allen, Rafael Villar, Lukasz Kolenda** |
 
 5 different starting fives in 7 games; the most used (3 games): Agbo / Allen / Notae / Ongenda / Villar.
@@ -121,7 +123,7 @@ EuroCup games only (3 games, 197 attempts): ACB does not publish shot locations.
 
 ![per game](05_shots_per_game.png)
 
-Top 10 by minutes; attempts per EuroCup game played, FG% in brackets.
+Top 12 by minutes; attempts per EuroCup game played, FG% in brackets.
 
 | Player | GP | At the rim (0-1.5 m) | Close (1.5-3 m) | Mid-range (3-4.5 m) | Long 2 (4.5 m+) | 3-pointers | Total |
 |---|---|---|---|---|---|---|---|
@@ -135,6 +137,8 @@ Top 10 by minutes; attempts per EuroCup game played, FG% in brackets.
 | Ferran Bassas | 2 | - | 0.5 (100%) | - | - | 3.5 (29%) | 4.0 (38%) |
 | Pablo Tamba | 3 | 1.7 (100%) | 0.3 (0%) | - | - | 1.0 (33%) | 3.0 (67%) |
 | Hugo Benitez | 1 | 1.0 (100%) | 2.0 (100%) | 1.0 (100%) | - | 2.0 (50%) | 6.0 (83%) |
+| Eric Vila | 2 | 0.5 (100%) | - | - | - | 1.5 (0%) | 2.0 (25%) |
+| Pierre Oriola | 1 | 2.0 (100%) | 2.0 (50%) | - | - | 1.0 (0%) | 5.0 (60%) |
 | Team | 3 | 20.3 (72%) | 12.3 (41%) | 2.0 (50%) | 3.0 (33%) | 28.0 (32%) | 65.7 (47%) |
 
 ## True Shooting and PIR
