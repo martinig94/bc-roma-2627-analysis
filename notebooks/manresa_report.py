@@ -188,6 +188,52 @@ def fig_starting_fives(box: pd.DataFrame, starters: pd.DataFrame, rotation: list
     return path
 
 
+def ts_pir_table(box: pd.DataFrame, min_minutes: float = 20) -> pd.DataFrame:
+    """True shooting % and PIR per game by player, for each competition and combined.
+
+    PIR = pts + reb + ast + stl + blk + fouls drawn - missed FG - missed FT - tov - blocks against
+    - fouls committed (equals the rating published by ACB and EuroLeague for every player-game).
+    """
+    box = box.assign(fga=box.fg2a + box.fg3a, reb=box.oreb + box.dreb)
+    frames = []
+    for comp, group in [("Combined", box)] + list(box.groupby("comp")):
+        agg = group.groupby("player").agg(pts=("pts", "sum"), fga=("fga", "sum"), fta=("fta", "sum"),
+                                          sec=("sec", "sum"), gp=("sec", "size"), pir=("rating", "sum"))
+        agg["ts"] = agg.pts / (2 * (agg.fga + 0.44 * agg.fta)) * 100
+        agg["pir_pg"] = agg.pir / agg.gp
+        agg["minutes"] = agg.sec / 60
+        agg["panel"] = comp
+        frames.append(agg[agg.minutes >= min_minutes].reset_index())
+    return pd.concat(frames, ignore_index=True)
+
+
+def fig_ts_pir(table: pd.DataFrame, out: Path) -> Path:
+    """Scatter of TS% (x) vs PIR per game (y), bubble = total minutes; combined, ACB and EuroCup."""
+    panels = ["Combined", "Liga Endesa", "EuroCup"]
+    fig, axes = plt.subplots(1, 3, figsize=(18, 6.2), sharex=True, sharey=True)
+    combined = table[table.panel == "Combined"]
+    ref_ts = combined.pts.sum() / (2 * (combined.fga.sum() + 0.44 * combined.fta.sum())) * 100
+    ref_pir = combined.pir_pg.mean()
+    for ax, panel in zip(axes, panels):
+        data = table[table.panel == panel]
+        ax.scatter(data.ts, data.pir_pg, s=data.minutes * 5, color=BLUE, alpha=0.65, edgecolor="white")
+        for r in data.itertuples():
+            ax.annotate(r.player.split()[-1], (r.ts, r.pir_pg), textcoords="offset points", xytext=(6, 5),
+                        fontsize=8.5, color=TEXT)
+        ax.axvline(ref_ts, color=TEXT2, lw=0.8, ls="--")
+        ax.axhline(ref_pir, color=TEXT2, lw=0.8, ls="--")
+        ax.set_title(f"{panel} ({data.gp.max()} games max, {len(data)} players)", fontsize=11)
+        ax.set_xlabel("True Shooting % (pts / (2 x (FGA + 0.44 x FTA)))")
+        style_axes(ax, "both")
+    axes[0].set_ylabel("PIR per game")
+    fig.suptitle("Kids&Us Manresa: True Shooting vs PIR per game (bubble = minutes; dashed = combined "
+                 "team TS% and mean PIR; players with 20+ min in the panel)", **SUP_KW)
+    path = out / "06_ts_pir.png"
+    save_fig(fig, path)
+    plt.close(fig)
+    return path
+
+
 def fig_assists(assists: pd.DataFrame, out: Path) -> tuple[Path, pd.DataFrame]:
     """Passer (rows) by scorer (columns) heatmap of assisted field goals, all 7 games."""
     matrix = assists.pivot_table(index="passer", columns="scorer", values="pts", aggfunc="size", fill_value=0)
@@ -393,7 +439,7 @@ def team_summary(games: pd.DataFrame) -> pd.DataFrame:
 
 def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.DataFrame,
                    dist: pd.DataFrame, scorers: list[str], shots: pd.DataFrame,
-                   per_game: pd.DataFrame) -> list[str]:
+                   per_game: pd.DataFrame, ts: pd.DataFrame) -> list[str]:
     """README lines for starting fives, assist matrix, shot distances and shot charts."""
     L = ["## Starting fives and absences", "", "![starting fives](00_starting_fives.png)", "",
          "Gold = starter (S, minutes), grey = bench minutes, red = rotation player (top 10 by minutes) "
@@ -424,6 +470,13 @@ def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.Dat
           "Top 10 by minutes; attempts per EuroCup game played, FG% in brackets.", "",
           "| Player | " + " | ".join(per_game.columns) + " |", "|---|" + "---|" * len(per_game.columns)]
     L += [f"| {name} | " + " | ".join(str(v) for v in row) + " |" for name, row in per_game.iterrows()]
+    L += ["", "## True Shooting and PIR", "", "![ts pir](06_ts_pir.png)", "",
+          "All box-score data of both competitions. Liga Endesa has no missing data here: PIR is computed from "
+          "the box score and matches the rating published by ACB and EuroLeague for every player-game. "
+          "Only players with 20+ minutes in the panel are shown.", "",
+          "| Player | Panel | GP | Min | TS% | PIR/g |", "|---|---|---|---|---|---|"]
+    L += [f"| {r.player} | {r.panel} | {r.gp} | {r.minutes:.0f} | {r.ts:.1f} | {r.pir_pg:.1f} |"
+          for r in ts[ts.panel == "Combined"].sort_values("pir_pg", ascending=False).itertuples()]
     L += ["", "## Shot charts of the main scorers", "", "![shot charts](04_shot_charts.png)", ""]
     return L
 
@@ -491,12 +544,14 @@ def main() -> None:
     fig_shot_charts(shots, scorers, out)
     per_game = shots_per_game(shots, box, table.player.tolist())
     fig_shots_per_game(per_game, out)
+    ts = ts_pir_table(box)
+    fig_ts_pir(ts, out)
     units = aggregate_units(lineup_stints(events, games))
     fig_players(table, out)
     fig_lineups(units, "Kids&Us Manresa", MIN_UNIT_SECS, 5, out, "2026/27", league="Liga Endesa + EuroCup")
     (out / "lineups_Kids&Us_Manresa.png").replace(out / "lineups_Kids_Us_Manresa.png")
     write_readme(out, args.before, games, table, units, team_summary(games),
-                 extra_sections(starters, assists, matrix, dist, scorers, shots, per_game), alert)
+                 extra_sections(starters, assists, matrix, dist, scorers, shots, per_game, ts), alert)
     print(f"wrote {out}")
 
 
