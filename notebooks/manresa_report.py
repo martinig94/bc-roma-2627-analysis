@@ -240,6 +240,53 @@ def fig_distance(split: pd.DataFrame, totals: pd.Series, out: Path) -> Path:
     return path
 
 
+def shots_per_game(shots: pd.DataFrame, box: pd.DataFrame, players: list[str]) -> pd.DataFrame:
+    """Attempts per EuroCup game and FG% by distance bin for each player plus the team.
+
+    Returns:
+        Rows = players (and Team), one "att/game (FG%)" string per distance bin and a Total column.
+    """
+    games_played = box[box.comp == "EuroCup"].groupby("player").size()
+    rows = {}
+    for name in players + ["Team"]:
+        mine = shots if name == "Team" else shots[shots.player == name]
+        n_games = shots.game_id.nunique() if name == "Team" else games_played.get(name, 0)
+        row = {"GP": int(n_games)}
+        for label in DIST_LABELS + ["Total"]:
+            sel = mine if label == "Total" else mine[mine.bin == label]
+            row[label] = (f"{len(sel) / n_games:.1f} ({sel.made.mean() * 100:.0f}%)"
+                          if len(sel) and n_games else "-")
+        rows[name] = row
+    return pd.DataFrame(rows).T
+
+
+def fig_shots_per_game(table: pd.DataFrame, out: Path) -> Path:
+    """Table figure: attempts per game (FG%) per player and distance."""
+    cols = ["Player"] + list(table.columns)
+    cells = [[name] + list(row) for name, row in table.iterrows()]
+    fig, ax = plt.subplots(figsize=(13, 0.42 * len(cells) + 1.4))
+    ax.axis("off")
+    tab = ax.table(cellText=cells, colLabels=cols, loc="center", cellLoc="center")
+    tab.auto_set_font_size(False)
+    tab.set_fontsize(9.5)
+    tab.scale(1, 1.5)
+    for (row, col), cell in tab.get_celld().items():
+        cell.set_edgecolor(lba_style.GRID)
+        if row == 0:
+            cell.set_facecolor(lba_style.GOLD)
+            cell.set_text_props(fontweight="bold", color=TEXT)
+        elif row == len(cells):
+            cell.set_text_props(fontweight="bold")
+        if col == 0 and row > 0:
+            cell.set_text_props(ha="left")
+    tab.auto_set_column_width(range(len(cols)))
+    fig.suptitle("Field-goal attempts per game (FG%) by distance from the rim, EuroCup games", **SUP_KW)
+    path = out / "05_shots_per_game.png"
+    save_fig(fig, path)
+    plt.close(fig)
+    return path
+
+
 def fig_shot_charts(shots: pd.DataFrame, scorers: list[str], out: Path) -> Path:
     """One half-court chart per main scorer (EuroCup games only: ACB publishes no locations)."""
     fig, axes = plt.subplots(1, len(scorers), figsize=(4.6 * len(scorers), 4.6))
@@ -289,7 +336,8 @@ def team_summary(games: pd.DataFrame) -> pd.DataFrame:
 
 
 def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.DataFrame,
-                   dist: pd.DataFrame, scorers: list[str], shots: pd.DataFrame) -> list[str]:
+                   dist: pd.DataFrame, scorers: list[str], shots: pd.DataFrame,
+                   per_game: pd.DataFrame) -> list[str]:
     """README lines for starting fives, assist matrix, shot distances and shot charts."""
     L = ["## Starting fives", "", "| Comp | Opponent | H/A | Score | Starters |", "|---|---|---|---|---|"]
     L += [f"| {r.comp} | {r.opponent} | {r.home} | {r.score} | {r.starters} |" for r in starters.itertuples()]
@@ -312,6 +360,10 @@ def extra_sections(starters: pd.DataFrame, assists: pd.DataFrame, matrix: pd.Dat
         cells = [f"{dist[n].share[label]:.0f}% / " + (f"{dist[n].fg[label]:.0f}%" if dist[n].att[label] else "-")
                  for n in dist.columns.get_level_values(0).unique()]
         L.append(f"| {label} | " + " | ".join(cells) + " |")
+    L += ["", "### Attempts per game (FG%) by player", "", "![per game](05_shots_per_game.png)", "",
+          "Top 10 by minutes; attempts per EuroCup game played, FG% in brackets.", "",
+          "| Player | " + " | ".join(per_game.columns) + " |", "|---|" + "---|" * len(per_game.columns)]
+    L += [f"| {name} | " + " | ".join(str(v) for v in row) + " |" for name, row in per_game.iterrows()]
     L += ["", "## Shot charts of the main scorers", "", "![shot charts](04_shot_charts.png)", ""]
     return L
 
@@ -373,12 +425,14 @@ def main() -> None:
     split, totals = attempt_split(shots, scorers)
     fig_distance(split, totals, out)
     fig_shot_charts(shots, scorers, out)
+    per_game = shots_per_game(shots, box, table.player.tolist())
+    fig_shots_per_game(per_game, out)
     units = aggregate_units(lineup_stints(events, games))
     fig_players(table, out)
     fig_lineups(units, "Kids&Us Manresa", MIN_UNIT_SECS, 5, out, "2026/27", league="Liga Endesa + EuroCup")
     (out / "lineups_Kids&Us_Manresa.png").replace(out / "lineups_Kids_Us_Manresa.png")
     write_readme(out, args.before, games, table, units, team_summary(games),
-                 extra_sections(starters, assists, matrix, dist, scorers, shots))
+                 extra_sections(starters, assists, matrix, dist, scorers, shots, per_game))
     print(f"wrote {out}")
 
 
