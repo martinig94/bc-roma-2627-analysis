@@ -68,3 +68,49 @@ Five-man units rebuilt from substitutions, both competitions combined; best/wors
 - Agbo / Vila / Notae / Ongenda / Villar: 6.4 min, -10 (-62 per 40), 3 games
 - Agbo / Benitez / Notae / Ongenda / Allen: 3.4 min, -6 (-70 per 40), 1 game
 - Agbo / Benitez / Notae / Kolenda / Minchev: 3.2 min, -6 (-74 per 40), 1 game
+
+## Starting fives
+
+| Comp | Opponent | H/A | Score | Starters |
+|---|---|---|---|---|
+| Liga Endesa | Surne Bilbao | A | 92-107 | Agbo / Benitez / Notae / Ongenda / Tamba |
+| Liga Endesa | Río Breogán | H | 95-101 | Agbo / Allen / Notae / Ongenda / Villar |
+| Liga Endesa | Real Madrid | A | 83-120 | Agbo / Minchev / Notae / Oriola / Villar |
+| Liga Endesa | Unicaja | H | 72-84 | Agbo / Benitez / Minchev / Notae / Ongenda |
+| EuroCup | Paok Thessaloniki | A | 78-93 | Agbo / Allen / Notae / Ongenda / Villar |
+| EuroCup | Ratiopharm Ulm | H | 101-89 | Agbo / Allen / Notae / Ongenda / Villar |
+| EuroCup | Bahcesehir College Istanbul | A | 88-100 | Agbo / Allen / Benitez / Notae / Ongenda |
+
+5 different starting fives in 7 games; the most used (3 games): Agbo / Allen / Notae / Ongenda / Villar.
+
+## Assist matrix
+
+![assist matrix](02_assist_matrix.png)
+
+Passer (rows) to scorer (columns), 111 assisted baskets linked from the play-by-play (about 90% of the box-score assists; the rest could not be matched to a basket). Players with 5+ assists given plus received.
+
+Most frequent combinations:
+
+- Ferran Bassas to Nick Ongenda: 5
+- JD Notae to Nick Ongenda: 5
+- Rafael Villar to Timmy Allen: 5
+- Ferran Bassas to Lukasz Kolenda: 4
+- Ferran Bassas to JD Notae: 4
+
+## Shot distribution by distance from the rim
+
+![distance](03_shot_distance.png)
+
+EuroCup games only (3 games, 197 attempts): ACB does not publish shot locations. Main scorers = top 4 by total points. Share of own attempts / FG%:
+
+| Distance | Team | Timmy Allen | JD Notae | Nick Ongenda | Chibuzo Agbo |
+|---|---|---|---|---|---|
+| At the rim (0-1.5 m) | 31% / 72% | 30% / 64% | 32% / 75% | 46% / 73% | 18% / 25% |
+| Close (1.5-3 m) | 19% / 41% | 8% / 67% | 11% / 25% | 54% / 31% | 5% / 100% |
+| Mid-range (3-4.5 m) | 3% / 50% | 8% / 33% | 5% / 50% | 0% / - | 0% / - |
+| Long 2 (4.5 m+) | 5% / 33% | 19% / 43% | 0% / - | 0% / - | 0% / - |
+| 3-pointers | 43% / 32% | 35% / 54% | 51% / 32% | 0% / - | 77% / 35% |
+
+## Shot charts of the main scorers
+
+![shot charts](04_shot_charts.png)
