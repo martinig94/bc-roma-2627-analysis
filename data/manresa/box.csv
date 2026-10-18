@@ -1,83 +1,83 @@
-comp,game_id,player,role_es,starter,sec,pts,fg2m,fg2a,fg3m,fg3a,ftm,fta,oreb,dreb,ast,stl,tov,blk,pf,plus_minus
-Liga Endesa,105375,Hugo Benitez,Base,1,327,2,1,2,0,1,0,0,1,0,0,0,0,0,2,-2
-Liga Endesa,105375,Pablo Tamba,Alero,1,863,5,2,2,0,0,1,2,0,3,2,2,0,0,4,-1
-Liga Endesa,105375,Chibuzo Agbo,Alero,1,1198,7,0,0,2,3,1,3,0,1,0,0,0,0,5,-20
-Liga Endesa,105375,JD Notae,Escolta,1,1364,14,4,6,2,7,0,0,0,2,1,1,2,0,1,-5
-Liga Endesa,105375,Nick Ongenda,Pívot,1,1354,17,8,11,0,0,1,2,1,1,0,2,2,0,3,-22
-Liga Endesa,105375,Lukasz Kolenda,Escolta,0,1530,16,3,4,2,5,4,4,0,1,3,0,1,0,2,-5
-Liga Endesa,105375,Eric Vila,Ala-pívot,0,1242,3,1,1,0,4,1,2,3,4,1,0,2,0,1,-5
-Liga Endesa,105375,Lucas Beaufort,Base,0,502,4,2,3,0,0,0,0,0,0,0,0,1,0,1,-9
-Liga Endesa,105375,Ferran Bassas,Base,0,1297,5,1,3,1,5,0,0,0,0,7,1,1,0,0,-15
-Liga Endesa,105375,Rafael Villar,Base,0,1277,9,4,6,0,2,1,2,1,3,5,1,2,0,3,2
-Liga Endesa,105375,Yordan Minchev,Ala-pívot,0,1046,10,2,3,2,4,0,0,3,3,1,0,2,0,4,7
-Liga Endesa,105386,Timmy Allen,Ala-pívot,1,1651,30,7,9,3,6,7,9,0,8,3,0,1,0,5,13
-Liga Endesa,105386,Chibuzo Agbo,Alero,1,1461,14,1,2,4,7,0,0,1,2,1,2,0,0,1,1
-Liga Endesa,105386,JD Notae,Escolta,1,1217,20,7,14,0,3,6,10,0,1,2,1,0,0,1,-12
-Liga Endesa,105386,Nick Ongenda,Pívot,1,778,7,1,1,0,0,5,8,0,1,2,0,0,2,5,-5
-Liga Endesa,105386,Rafael Villar,Base,1,1133,7,1,2,1,4,2,2,0,0,3,0,3,1,3,-7
-Liga Endesa,105386,Lukasz Kolenda,Escolta,0,1129,7,1,1,1,2,2,2,0,4,2,1,1,0,4,5
-Liga Endesa,105386,Eric Vila,Ala-pívot,0,350,0,0,1,0,0,0,0,0,0,0,0,0,0,0,-18
-Liga Endesa,105386,Lucas Beaufort,Base,0,583,3,0,0,1,1,0,0,0,0,0,1,0,0,2,-8
-Liga Endesa,105386,Ferran Bassas,Base,0,1236,0,0,1,0,2,0,1,2,1,4,0,2,0,2,2
-Liga Endesa,105386,Pablo Tamba,Alero,0,840,6,2,2,0,1,2,4,0,4,0,0,3,1,0,0
-Liga Endesa,105386,Michael Enabulele,Pívot,0,456,0,0,0,0,0,0,0,0,1,0,0,0,0,1,-3
-Liga Endesa,105386,Yordan Minchev,Ala-pívot,0,1166,1,0,3,0,1,1,2,2,4,4,2,2,0,4,2
-Liga Endesa,105397,Chibuzo Agbo,Alero,1,1227,12,0,0,3,5,3,4,0,1,1,1,0,0,3,-18
-Liga Endesa,105397,JD Notae,Escolta,1,847,5,1,3,1,2,0,0,0,0,2,1,1,0,5,-11
-Liga Endesa,105397,Pierre Oriola,Pívot,1,1184,6,2,7,0,1,2,4,1,4,0,0,1,0,3,-7
-Liga Endesa,105397,Rafael Villar,Base,1,1119,5,1,1,1,3,0,1,1,0,3,1,0,0,3,-11
-Liga Endesa,105397,Yordan Minchev,Ala-pívot,1,1281,13,5,8,1,3,0,0,2,3,0,0,1,0,0,-22
-Liga Endesa,105397,Timmy Allen,Ala-pívot,0,1227,11,3,6,1,5,2,2,3,2,2,2,3,0,2,-22
-Liga Endesa,105397,Lukasz Kolenda,Escolta,0,1216,8,3,5,0,2,2,2,1,1,3,0,0,0,4,-15
-Liga Endesa,105397,Hugo Benitez,Base,0,1103,8,4,6,0,1,0,0,0,1,5,1,2,0,3,-15
-Liga Endesa,105397,Ferran Bassas,Base,0,744,0,0,0,0,2,0,0,1,1,0,0,2,0,0,-17
-Liga Endesa,105397,Pablo Tamba,Alero,0,709,4,2,2,0,0,0,0,0,2,0,0,0,0,3,-17
-Liga Endesa,105397,Nick Ongenda,Pívot,0,612,10,4,7,0,0,2,3,0,0,0,0,2,1,4,-11
-Liga Endesa,105397,Gerard Fernández,Escolta,0,731,1,0,1,0,2,1,2,0,1,0,1,0,0,2,-19
-Liga Endesa,105402,Hugo Benitez,Base,1,1625,12,4,8,0,2,4,8,0,1,5,2,1,0,2,6
-Liga Endesa,105402,Chibuzo Agbo,Alero,1,1169,8,2,3,1,6,1,1,0,3,0,0,0,0,2,-6
-Liga Endesa,105402,JD Notae,Escolta,1,1367,13,5,9,1,4,0,0,0,4,2,2,3,0,2,-4
-Liga Endesa,105402,Nick Ongenda,Pívot,1,1147,7,3,5,0,0,1,2,5,2,0,0,2,1,1,1
-Liga Endesa,105402,Yordan Minchev,Ala-pívot,1,1439,5,2,6,0,1,1,6,3,5,1,1,3,1,4,1
-Liga Endesa,105402,Eric Vila,Ala-pívot,0,856,2,1,1,0,3,0,0,1,1,1,0,0,0,4,-12
-Liga Endesa,105402,Lucas Beaufort,Base,0,193,0,0,2,0,0,0,0,1,0,0,0,0,0,0,-7
-Liga Endesa,105402,Ferran Bassas,Base,0,1163,2,1,1,0,3,0,0,0,2,3,1,1,0,3,-14
-Liga Endesa,105402,Pablo Tamba,Alero,0,852,3,0,1,1,2,0,0,0,3,0,0,1,0,4,-5
-Liga Endesa,105402,Gerard Fernández,Escolta,0,936,3,0,1,1,3,0,0,0,3,0,1,0,0,4,-7
-Liga Endesa,105402,Pierre Oriola,Pívot,0,1253,17,6,9,0,0,5,6,2,4,1,0,1,0,1,-13
-EuroCup,EC14,Timmy Allen,,1,1375,15,4,7,1,3,4,10,1,3,1,0,1,0,4,-14
-EuroCup,EC14,Lukasz Kolenda,,0,1199,3,0,4,0,3,3,3,1,2,1,0,0,0,2,-4
-EuroCup,EC14,Eric Vila,,0,995,4,1,1,0,2,2,2,0,3,0,0,1,0,2,2
-EuroCup,EC14,Lucas Beaufort,,0,117,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-EuroCup,EC14,Ferran Bassas,,0,1154,10,0,0,2,5,4,4,1,2,5,0,2,0,3,-11
-EuroCup,EC14,Pablo Tamba,,0,896,7,3,4,0,1,1,4,2,1,1,2,0,0,4,-8
-EuroCup,EC14,Chibuzo Agbo,,1,1178,2,1,2,0,5,0,0,2,2,1,0,0,0,1,-9
-EuroCup,EC14,Jd Notae,,1,1372,16,5,7,2,7,0,0,0,1,4,3,4,0,2,-11
-EuroCup,EC14,Nick Ongenda,,1,1276,9,4,10,0,0,1,2,1,3,1,1,1,1,2,2
-EuroCup,EC14,Michael Enabulele,,0,514,4,2,2,0,0,0,0,0,1,0,0,0,0,0,-18
-EuroCup,EC14,Rafa Villar,,1,1331,2,1,1,0,0,0,0,0,1,4,2,2,0,1,-5
-EuroCup,EC14,Yordan Minchev,,0,593,6,2,2,0,1,2,2,1,4,1,1,0,0,1,1
-EuroCup,EC31,Timmy Allen,,1,1590,30,7,10,2,3,10,10,0,1,1,2,4,0,3,23
-EuroCup,EC31,Lukasz Kolenda,,0,797,4,2,3,0,1,0,2,0,1,1,0,1,0,0,-11
-EuroCup,EC31,Eric Vila,,0,218,0,0,0,0,1,0,0,0,1,1,1,0,0,1,4
-EuroCup,EC31,Lucas Beaufort,,0,171,0,0,0,0,0,0,0,1,0,0,0,0,0,0,-4
-EuroCup,EC31,Ferran Bassas,,0,1251,5,1,1,0,2,3,4,0,2,8,1,4,0,2,9
-EuroCup,EC31,Pablo Tamba,,0,914,7,2,2,1,2,0,0,1,2,1,2,0,0,1,5
-EuroCup,EC31,Chibuzo Agbo,,1,1387,14,1,2,4,7,0,0,1,2,0,1,0,0,3,0
-EuroCup,EC31,Jd Notae,,1,1473,20,5,7,2,6,4,4,1,3,1,2,2,1,0,27
-EuroCup,EC31,Nick Ongenda,,1,1442,11,4,9,0,0,3,4,3,6,1,3,4,3,2,27
-EuroCup,EC31,Gerard Fernandez,,0,572,5,1,2,1,1,0,0,0,0,0,0,2,0,2,-12
-EuroCup,EC31,Rafa Villar,,1,1227,2,1,1,0,0,0,2,0,4,4,2,1,0,3,7
-EuroCup,EC31,Yordan Minchev,,0,958,3,1,6,0,1,1,2,4,0,2,0,0,0,1,-15
-EuroCup,EC47,Timmy Allen,,1,1857,21,2,7,4,7,5,6,1,2,3,1,4,1,4,-1
-EuroCup,EC47,Lukasz Kolenda,,0,1007,11,1,2,2,5,3,4,1,1,1,0,1,0,2,-3
-EuroCup,EC47,Hugo Benitez,,1,1551,11,4,4,1,2,0,0,0,3,6,3,4,0,3,-7
-EuroCup,EC47,Lucas Beaufort,,0,418,2,1,2,0,0,0,0,1,0,0,0,1,0,1,-3
-EuroCup,EC47,Pablo Tamba,,0,410,1,0,0,0,0,1,2,0,0,0,0,0,0,0,3
-EuroCup,EC47,Chibuzo Agbo,,1,894,6,0,1,2,5,0,0,0,0,0,0,2,1,5,-8
-EuroCup,EC47,Jd Notae,,1,1274,8,1,4,2,6,0,0,0,2,5,0,1,0,2,-2
-EuroCup,EC47,Nick Ongenda,,1,1307,10,4,5,0,0,2,2,0,2,3,0,0,3,4,-7
-EuroCup,EC47,Gerard Fernandez,,0,506,3,0,0,1,2,0,0,0,0,2,0,2,0,4,-10
-EuroCup,EC47,Pierre Oriola,,0,1090,13,3,4,0,1,7,10,5,2,1,0,0,0,0,-5
-EuroCup,EC47,Rafa Villar,,0,835,2,1,1,0,3,0,0,0,1,1,0,1,0,4,-5
-EuroCup,EC47,Yordan Minchev,,0,851,0,0,0,0,2,0,0,1,4,0,1,0,0,2,-12
+comp,game_id,player,role_es,starter,sec,pts,fg2m,fg2a,fg3m,fg3a,ftm,fta,oreb,dreb,ast,stl,tov,blk,pf,plus_minus,pf_drawn,blk_against,rating
+Liga Endesa,105375,Hugo Benitez,Base,1,327,2,1,2,0,1,0,0,1,0,0,0,0,0,2,-2,0,0,-1
+Liga Endesa,105375,Pablo Tamba,Alero,1,863,5,2,2,0,0,1,2,0,3,2,2,0,0,4,-1,1,0,8
+Liga Endesa,105375,Chibuzo Agbo,Alero,1,1198,7,0,0,2,3,1,3,0,1,0,0,0,0,5,-20,1,0,1
+Liga Endesa,105375,JD Notae,Escolta,1,1364,14,4,6,2,7,0,0,0,2,1,1,2,0,1,-5,1,1,8
+Liga Endesa,105375,Nick Ongenda,Pívot,1,1354,17,8,11,0,0,1,2,1,1,0,2,2,0,3,-22,5,0,17
+Liga Endesa,105375,Lukasz Kolenda,Escolta,0,1530,16,3,4,2,5,4,4,0,1,3,0,1,0,2,-5,2,0,15
+Liga Endesa,105375,Eric Vila,Ala-pívot,0,1242,3,1,1,0,4,1,2,3,4,1,0,2,0,1,-5,0,0,3
+Liga Endesa,105375,Lucas Beaufort,Base,0,502,4,2,3,0,0,0,0,0,0,0,0,1,0,1,-9,0,0,1
+Liga Endesa,105375,Ferran Bassas,Base,0,1297,5,1,3,1,5,0,0,0,0,7,1,1,0,0,-15,4,0,10
+Liga Endesa,105375,Rafael Villar,Base,0,1277,9,4,6,0,2,1,2,1,3,5,1,2,0,3,2,5,1,13
+Liga Endesa,105375,Yordan Minchev,Ala-pívot,0,1046,10,2,3,2,4,0,0,3,3,1,0,2,0,4,7,2,0,10
+Liga Endesa,105386,Timmy Allen,Ala-pívot,1,1651,30,7,9,3,6,7,9,0,8,3,0,1,0,5,13,7,0,35
+Liga Endesa,105386,Chibuzo Agbo,Alero,1,1461,14,1,2,4,7,0,0,1,2,1,2,0,0,1,1,0,0,15
+Liga Endesa,105386,JD Notae,Escolta,1,1217,20,7,14,0,3,6,10,0,1,2,1,0,0,1,-12,6,1,14
+Liga Endesa,105386,Nick Ongenda,Pívot,1,778,7,1,1,0,0,5,8,0,1,2,0,0,2,5,-5,4,0,8
+Liga Endesa,105386,Rafael Villar,Base,1,1133,7,1,2,1,4,2,2,0,0,3,0,3,1,3,-7,1,1,1
+Liga Endesa,105386,Lukasz Kolenda,Escolta,0,1129,7,1,1,1,2,2,2,0,4,2,1,1,0,4,5,2,0,10
+Liga Endesa,105386,Eric Vila,Ala-pívot,0,350,0,0,1,0,0,0,0,0,0,0,0,0,0,0,-18,0,0,-1
+Liga Endesa,105386,Lucas Beaufort,Base,0,583,3,0,0,1,1,0,0,0,0,0,1,0,0,2,-8,1,0,3
+Liga Endesa,105386,Ferran Bassas,Base,0,1236,0,0,1,0,2,0,1,2,1,4,0,2,0,2,2,0,0,-1
+Liga Endesa,105386,Pablo Tamba,Alero,0,840,6,2,2,0,1,2,4,0,4,0,0,3,1,0,0,3,0,8
+Liga Endesa,105386,Michael Enabulele,Pívot,0,456,0,0,0,0,0,0,0,0,1,0,0,0,0,1,-3,0,0,0
+Liga Endesa,105386,Yordan Minchev,Ala-pívot,0,1166,1,0,3,0,1,1,2,2,4,4,2,2,0,4,2,2,0,4
+Liga Endesa,105397,Chibuzo Agbo,Alero,1,1227,12,0,0,3,5,3,4,0,1,1,1,0,0,3,-18,2,0,11
+Liga Endesa,105397,JD Notae,Escolta,1,847,5,1,3,1,2,0,0,0,0,2,1,1,0,5,-11,1,0,0
+Liga Endesa,105397,Pierre Oriola,Pívot,1,1184,6,2,7,0,1,2,4,1,4,0,0,1,0,3,-7,2,1,0
+Liga Endesa,105397,Rafael Villar,Base,1,1119,5,1,1,1,3,0,1,1,0,3,1,0,0,3,-11,5,0,9
+Liga Endesa,105397,Yordan Minchev,Ala-pívot,1,1281,13,5,8,1,3,0,0,2,3,0,0,1,0,0,-22,0,0,12
+Liga Endesa,105397,Timmy Allen,Ala-pívot,0,1227,11,3,6,1,5,2,2,3,2,2,2,3,0,2,-22,1,0,9
+Liga Endesa,105397,Lukasz Kolenda,Escolta,0,1216,8,3,5,0,2,2,2,1,1,3,0,0,0,4,-15,3,0,8
+Liga Endesa,105397,Hugo Benitez,Base,0,1103,8,4,6,0,1,0,0,0,1,5,1,2,0,3,-15,2,0,9
+Liga Endesa,105397,Ferran Bassas,Base,0,744,0,0,0,0,2,0,0,1,1,0,0,2,0,0,-17,0,0,-2
+Liga Endesa,105397,Pablo Tamba,Alero,0,709,4,2,2,0,0,0,0,0,2,0,0,0,0,3,-17,0,0,3
+Liga Endesa,105397,Nick Ongenda,Pívot,0,612,10,4,7,0,0,2,3,0,0,0,0,2,1,4,-11,3,0,4
+Liga Endesa,105397,Gerard Fernández,Escolta,0,731,1,0,1,0,2,1,2,0,1,0,1,0,0,2,-19,1,1,-3
+Liga Endesa,105402,Hugo Benitez,Base,1,1625,12,4,8,0,2,4,8,0,1,5,2,1,0,2,6,6,0,13
+Liga Endesa,105402,Chibuzo Agbo,Alero,1,1169,8,2,3,1,6,1,1,0,3,0,0,0,0,2,-6,1,0,4
+Liga Endesa,105402,JD Notae,Escolta,1,1367,13,5,9,1,4,0,0,0,4,2,2,3,0,2,-4,1,0,10
+Liga Endesa,105402,Nick Ongenda,Pívot,1,1147,7,3,5,0,0,1,2,5,2,0,0,2,1,1,1,1,0,10
+Liga Endesa,105402,Yordan Minchev,Ala-pívot,1,1439,5,2,6,0,1,1,6,3,5,1,1,3,1,4,1,3,0,2
+Liga Endesa,105402,Eric Vila,Ala-pívot,0,856,2,1,1,0,3,0,0,1,1,1,0,0,0,4,-12,0,0,-2
+Liga Endesa,105402,Lucas Beaufort,Base,0,193,0,0,2,0,0,0,0,1,0,0,0,0,0,0,-7,0,0,-1
+Liga Endesa,105402,Ferran Bassas,Base,0,1163,2,1,1,0,3,0,0,0,2,3,1,1,0,3,-14,4,0,5
+Liga Endesa,105402,Pablo Tamba,Alero,0,852,3,0,1,1,2,0,0,0,3,0,0,1,0,4,-5,0,0,-1
+Liga Endesa,105402,Gerard Fernández,Escolta,0,936,3,0,1,1,3,0,0,0,3,0,1,0,0,4,-7,1,0,1
+Liga Endesa,105402,Pierre Oriola,Pívot,0,1253,17,6,9,0,0,5,6,2,4,1,0,1,0,1,-13,4,1,21
+EuroCup,EC14,Timmy Allen,,1,1375,15,4,7,1,3,4,10,1,3,1,0,1,0,4,-14,7,0,11
+EuroCup,EC14,Lukasz Kolenda,,0,1199,3,0,4,0,3,3,3,1,2,1,0,0,0,2,-4,2,0,0
+EuroCup,EC14,Eric Vila,,0,995,4,1,1,0,2,2,2,0,3,0,0,1,0,2,2,1,0,3
+EuroCup,EC14,Lucas Beaufort,,0,117,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EuroCup,EC14,Ferran Bassas,,0,1154,10,0,0,2,5,4,4,1,2,5,0,2,0,3,-11,4,0,14
+EuroCup,EC14,Pablo Tamba,,0,896,7,3,4,0,1,1,4,2,1,1,2,0,0,4,-8,3,0,7
+EuroCup,EC14,Chibuzo Agbo,,1,1178,2,1,2,0,5,0,0,2,2,1,0,0,0,1,-9,0,1,-1
+EuroCup,EC14,Jd Notae,,1,1372,16,5,7,2,7,0,0,0,1,4,3,4,0,2,-11,1,1,11
+EuroCup,EC14,Nick Ongenda,,1,1276,9,4,10,0,0,1,2,1,3,1,1,1,1,2,2,2,1,7
+EuroCup,EC14,Michael Enabulele,,0,514,4,2,2,0,0,0,0,0,1,0,0,0,0,0,-18,1,0,6
+EuroCup,EC14,Rafa Villar,,1,1331,2,1,1,0,0,0,0,0,1,4,2,2,0,1,-5,2,0,8
+EuroCup,EC14,Yordan Minchev,,0,593,6,2,2,0,1,2,2,1,4,1,1,0,0,1,1,2,0,13
+EuroCup,EC31,Timmy Allen,,1,1590,30,7,10,2,3,10,10,0,1,1,2,4,0,3,23,7,0,30
+EuroCup,EC31,Lukasz Kolenda,,0,797,4,2,3,0,1,0,2,0,1,1,0,1,0,0,-11,1,0,2
+EuroCup,EC31,Eric Vila,,0,218,0,0,0,0,1,0,0,0,1,1,1,0,0,1,4,0,0,1
+EuroCup,EC31,Lucas Beaufort,,0,171,0,0,0,0,0,0,0,1,0,0,0,0,0,0,-4,0,0,1
+EuroCup,EC31,Ferran Bassas,,0,1251,5,1,1,0,2,3,4,0,2,8,1,4,0,2,9,3,0,10
+EuroCup,EC31,Pablo Tamba,,0,914,7,2,2,1,2,0,0,1,2,1,2,0,0,1,5,0,0,11
+EuroCup,EC31,Chibuzo Agbo,,1,1387,14,1,2,4,7,0,0,1,2,0,1,0,0,3,0,0,0,11
+EuroCup,EC31,Jd Notae,,1,1473,20,5,7,2,6,4,4,1,3,1,2,2,1,0,27,2,0,22
+EuroCup,EC31,Nick Ongenda,,1,1442,11,4,9,0,0,3,4,3,6,1,3,4,3,2,27,4,1,18
+EuroCup,EC31,Gerard Fernandez,,0,572,5,1,2,1,1,0,0,0,0,0,0,2,0,2,-12,0,0,0
+EuroCup,EC31,Rafa Villar,,1,1227,2,1,1,0,0,0,2,0,4,4,2,1,0,3,7,7,0,13
+EuroCup,EC31,Yordan Minchev,,0,958,3,1,6,0,1,1,2,4,0,2,0,0,0,1,-15,3,0,4
+EuroCup,EC47,Timmy Allen,,1,1857,21,2,7,4,7,5,6,1,2,3,1,4,1,4,-1,5,0,17
+EuroCup,EC47,Lukasz Kolenda,,0,1007,11,1,2,2,5,3,4,1,1,1,0,1,0,2,-3,3,0,9
+EuroCup,EC47,Hugo Benitez,,1,1551,11,4,4,1,2,0,0,0,3,6,3,4,0,3,-7,0,0,15
+EuroCup,EC47,Lucas Beaufort,,0,418,2,1,2,0,0,0,0,1,0,0,0,1,0,1,-3,0,0,0
+EuroCup,EC47,Pablo Tamba,,0,410,1,0,0,0,0,1,2,0,0,0,0,0,0,0,3,1,0,1
+EuroCup,EC47,Chibuzo Agbo,,1,894,6,0,1,2,5,0,0,0,0,0,0,2,1,5,-8,1,2,-5
+EuroCup,EC47,Jd Notae,,1,1274,8,1,4,2,6,0,0,0,2,5,0,1,0,2,-2,1,2,4
+EuroCup,EC47,Nick Ongenda,,1,1307,10,4,5,0,0,2,2,0,2,3,0,0,3,4,-7,2,0,15
+EuroCup,EC47,Gerard Fernandez,,0,506,3,0,0,1,2,0,0,0,0,2,0,2,0,4,-10,0,0,-2
+EuroCup,EC47,Pierre Oriola,,0,1090,13,3,4,0,1,7,10,5,2,1,0,0,0,0,-5,5,0,21
+EuroCup,EC47,Rafa Villar,,0,835,2,1,1,0,3,0,0,0,1,1,0,1,0,4,-5,4,0,0
+EuroCup,EC47,Yordan Minchev,,0,851,0,0,0,0,2,0,0,1,4,0,1,0,0,2,-12,2,0,4

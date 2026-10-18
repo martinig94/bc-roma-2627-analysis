@@ -137,6 +137,29 @@ Top 10 by minutes; attempts per EuroCup game played, FG% in brackets.
 | Hugo Benitez | 1 | 1.0 (100%) | 2.0 (100%) | 1.0 (100%) | - | 2.0 (50%) | 6.0 (83%) |
 | Team | 3 | 20.3 (72%) | 12.3 (41%) | 2.0 (50%) | 3.0 (33%) | 28.0 (32%) | 65.7 (47%) |
 
+## True Shooting and PIR
+
+![ts pir](06_ts_pir.png)
+
+All box-score data of both competitions. Liga Endesa has no missing data here: PIR is computed from the box score and matches the rating published by ACB and EuroLeague for every player-game. Only players with 20+ minutes in the panel are shown.
+
+| Player | Panel | GP | Min | TS% | PIR/g |
+|---|---|---|---|---|---|
+| Timmy Allen | Combined | 5 | 128 | 67.5 | 20.4 |
+| Pierre Oriola | Combined | 3 | 59 | 58.4 | 14.0 |
+| Nick Ongenda | Combined | 7 | 132 | 61.1 | 11.3 |
+| JD Notae | Combined | 7 | 149 | 52.7 | 9.9 |
+| Hugo Benitez | Combined | 4 | 77 | 55.9 | 9.0 |
+| Lukasz Kolenda | Combined | 6 | 115 | 55.1 | 7.3 |
+| Rafael Villar | Combined | 6 | 115 | 49.9 | 7.3 |
+| Yordan Minchev | Combined | 7 | 122 | 41.1 | 7.0 |
+| Ferran Bassas | Combined | 6 | 114 | 38.0 | 6.0 |
+| Pablo Tamba | Combined | 7 | 91 | 68.0 | 5.3 |
+| Chibuzo Agbo | Combined | 7 | 142 | 61.1 | 5.1 |
+| Eric Vila | Combined | 5 | 61 | 28.6 | 0.8 |
+| Lucas Beaufort | Combined | 6 | 33 | 56.2 | 0.7 |
+| Gerard Fernández | Combined | 4 | 46 | 46.6 | -1.0 |
+
 ## Shot charts of the main scorers
 
 ![shot charts](04_shot_charts.png)
