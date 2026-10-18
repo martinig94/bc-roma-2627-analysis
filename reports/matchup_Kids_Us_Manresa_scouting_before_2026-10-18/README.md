@@ -111,6 +111,26 @@ EuroCup games only (3 games, 197 attempts): ACB does not publish shot locations.
 | Long 2 (4.5 m+) | 5% / 33% | 19% / 43% | 0% / - | 0% / - | 0% / - |
 | 3-pointers | 43% / 32% | 35% / 54% | 51% / 32% | 0% / - | 77% / 35% |
 
+### Attempts per game (FG%) by player
+
+![per game](05_shots_per_game.png)
+
+Top 10 by minutes; attempts per EuroCup game played, FG% in brackets.
+
+| Player | GP | At the rim (0-1.5 m) | Close (1.5-3 m) | Mid-range (3-4.5 m) | Long 2 (4.5 m+) | 3-pointers | Total |
+|---|---|---|---|---|---|---|---|
+| JD Notae | 3 | 4.0 (75%) | 1.3 (25%) | 0.7 (50%) | - | 6.3 (32%) | 12.3 (46%) |
+| Chibuzo Agbo | 3 | 1.3 (25%) | 0.3 (100%) | - | - | 5.7 (35%) | 7.3 (36%) |
+| Nick Ongenda | 3 | 3.7 (73%) | 4.3 (31%) | - | - | - | 8.0 (50%) |
+| Timmy Allen | 3 | 3.7 (64%) | 1.0 (67%) | 1.0 (33%) | 2.3 (43%) | 4.3 (54%) | 12.3 (54%) |
+| Yordan Minchev | 3 | 2.0 (50%) | 0.7 (0%) | - | - | 1.3 (0%) | 4.0 (25%) |
+| Rafael Villar | 3 | 0.7 (100%) | 0.3 (100%) | - | - | 1.0 (0%) | 2.0 (50%) |
+| Lukasz Kolenda | 3 | 0.7 (100%) | 2.0 (17%) | - | 0.3 (0%) | 3.0 (22%) | 6.0 (28%) |
+| Ferran Bassas | 2 | - | 0.5 (100%) | - | - | 3.5 (29%) | 4.0 (38%) |
+| Pablo Tamba | 3 | 1.7 (100%) | 0.3 (0%) | - | - | 1.0 (33%) | 3.0 (67%) |
+| Hugo Benitez | 1 | 1.0 (100%) | 2.0 (100%) | 1.0 (100%) | - | 2.0 (50%) | 6.0 (83%) |
+| Team | 3 | 20.3 (72%) | 12.3 (41%) | 2.0 (50%) | 3.0 (33%) | 28.0 (32%) | 65.7 (47%) |
+
 ## Shot charts of the main scorers
 
 ![shot charts](04_shot_charts.png)
