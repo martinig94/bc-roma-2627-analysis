@@ -85,7 +85,7 @@ EuroCup: {{ a.ts_pir_ec.games }} game{{ 's' if a.ts_pir_ec.games != 1 else '' }}
 {% macro analysis_header(a, files, author, kind) -%}
 Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.venue }}{% endif %}
 
-**Pre-game analysis: only data from games played before {{ a.date_long }}.** League games{% if a.eurocup %} and EuroCup games{% endif %}; early in the season the samples are small, so read everything as tendencies, not established facts.{% if a.team_link %} The situation of {{ a.team }} before this game is [here]({{ a.team_link }}).{% endif %}
+**Pre-game analysis: only data from games played before {{ a.date_long }}.** League games{% if a.eurocup %} and EuroCup games{% endif %}; early in the season the samples are small, so read everything as tendencies, not established facts.
 
 Author: {{ author }}
 {%- endmacro %}
