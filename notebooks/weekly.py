@@ -12,7 +12,7 @@ For every game of the team, by round N (settings in weekly/config.json):
             game before it, up to the next game to be played). Folder = the date of the game.
   opponent  analysis of the opponent of an LBA game with the comparison against the team (same data cut); other
             competitions' opponents get a hand-made page (weekly/schedule.csv links it to the game)
-  review    post-game review of an LBA round (only once it is finished and collected)
+  review    post-game review of an LBA round (only once it is finished and collected); OFF unless "reviews": true in weekly/config.json
 Your pages are weekly/games/<date>/{snapshot,analysis}.md (created the first time, never overwritten; see pages.py) and
 weekly/review/round-NN/notes.md
 (a hand-written README.md in a reports/matchup_* folder is used as it is).
@@ -57,6 +57,10 @@ def main() -> None:
     a = ap.parse_args()
     kinds = [k for k in a.only.split(",") if k in KINDS]
     cfg = weekly_config.load(); team = cfg["team"]
+    if "review" in kinds and not cfg.get("reviews"):          # no automatic post-game reviews unless switched on
+        kinds.remove("review")
+        if a.only != ",".join(KINDS):
+            print('post-game reviews are switched off ("reviews": false in weekly/config.json); skipped')
     if a.page:                                   # where to edit: the page files of one game (created if missing)
         for kind, path, created in pages.ensure_for(a.page):
             if path:
@@ -116,7 +120,7 @@ def main() -> None:
                 waiting.append(f"{kind} {day}")
             if day >= today and st_ != "reviewed":
                 to_review.append(f"{kind} {day}")
-    for r in done:
+    for r in (done if cfg.get("reviews") else []):
         if not has_text(ROOT / "weekly" / "review" / f"round-{r:02d}" / "notes.md"):
             waiting.append(f"review round {r}")
     if to_review:
