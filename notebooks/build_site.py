@@ -29,6 +29,7 @@ import pandas as pd
 
 import standings as st
 import weekly_config
+from player_names import photo_name
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -75,6 +76,16 @@ def copy_images(src: Path, *more: Path, dest: Path) -> list[str]:
     return names
 
 
+def add_photos(md: str, files: list[str]) -> str:
+    """Put a small picture before the player's name in table rows whose first cell is a name with a photo_<name>.jpg in `files`."""
+    have = {f for f in files if f.startswith("photo_")}
+    def row(m: re.Match) -> str:
+        name = re.sub(r"\s*\(.*?\)", "", m.group(2)).strip()
+        stem = f"photo_{photo_name(name)}.jpg" if name else ""
+        return f'{m.group(1)}<img class="face" src="{stem}" alt="{name}"> {m.group(2)}{m.group(3)}' if stem in have else m.group(0)
+    return re.sub(r"^(\| )([A-Z][^|]*?)( +\|)", row, md, flags=re.M)
+
+
 def folder_name(home: str, away: str, day: str) -> str:
     return f"matchup_{home.replace(' ', '_')}_vs_{away.replace(' ', '_')}_before_{day}"
 
@@ -105,6 +116,7 @@ def build_opponents(nav_holder: dict) -> list[dict]:
                 title = re.search(r"^# (.+)$", doc, re.M).group(1)
                 auto = re.sub(r"^# .+\n", "", text, count=1, flags=re.M)
                 auto = re.sub(r"^(#{2,5}) ", lambda m: "#" + m.group(1) + " ", auto, flags=re.M)   # one level down
+                doc = add_photos(doc, files)
                 page_md = doc.rstrip() + "\n\n## Automatic data report\n\nGenerated from the data by `notebooks/" + \
                     "manresa_report.py`; it repeats some of the sections above with the full figures.\n" + auto
                 files += copy_images(notes_dir, dest=dest)

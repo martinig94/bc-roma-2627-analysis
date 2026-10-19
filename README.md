@@ -81,6 +81,10 @@ your text is never overwritten. The single steps are `snapshot_report.py --round
 * **A document of your own for an opponent**: put it as `weekly/opponent/<matchup folder>/document.md` (images next to it). It is
   shown first, exactly as written, and the automatic report of that folder follows under "Automatic data report", so nothing of either
   is lost. The Manresa page is built like that from the Word document (`pandoc doc.docx -t gfm`, highlights kept as `<span class="mark">`).
+* **Manresa photos**: `python notebooks/manresa_fetch.py` downloads them (EuroLeague roster API, needs network access to
+  `api-live.euroleague.net`) into `data/manresa/photos/<surname>_<initial>.jpg`; or put your own jpg files there under those names
+  (e.g. `notae_j.jpg`, `villar_r.jpg`). Then run `python notebooks/manresa_report.py --before 2026-10-18` and `python notebooks/build_site.py`:
+  the pictures appear in the roster table of the document and in the automatic report.
 * **Opponent figures** come from `matchup_report.py`, `lineups_report.py` and `standings.py` (`--before <date>`); each team's EuroCup
   games are added when the team is in the EuroCup file. Hand-written opponent pages get the roster with photos appended automatically
   (`roster.json` next to their README). Photos come from the league media server (box-score `player_p_key`); the Manresa report takes
