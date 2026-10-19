@@ -1,0 +1,87 @@
+{
+  "round": 1,
+  "game_id": 25602,
+  "team": "BC Roma",
+  "opponent": "Treviso",
+  "opponent_full": "Nutribullet Treviso Basket",
+  "home": false,
+  "win": false,
+  "score_for": 94,
+  "score_against": 109,
+  "date": "2026-09-26",
+  "time": "19:30",
+  "venue": "Palaverde",
+  "town": "Villorba",
+  "spectators": 4122,
+  "coach": "Magro Alessandro",
+  "coach_opp": "Nicola Marcelo",
+  "quarters": [
+    {
+      "for": 26,
+      "against": 29
+    },
+    {
+      "for": 19,
+      "against": 28
+    },
+    {
+      "for": 22,
+      "against": 27
+    },
+    {
+      "for": 27,
+      "against": 25
+    }
+  ],
+  "record": "0-1",
+  "position": 13,
+  "margin": {
+    "max_lead": 2,
+    "max_deficit": -19
+  },
+  "four_factors": {
+    "Points": 94,
+    "Possessions": 76.2,
+    "Off. rating": 123.3,
+    "eFG%": 56.3,
+    "TOV%": 15.7,
+    "OREB%": 43.2,
+    "FT rate (FTA/FGA)": 29.6,
+    "3P": "12/36",
+    "2P": "22/35",
+    "FT": "14/21",
+    "Assists": 22,
+    "Turnovers": 12,
+    "Rebounds": 39
+  },
+  "four_factors_opp": {
+    "Points": 109,
+    "Possessions": 79.4,
+    "Off. rating": 137.3,
+    "eFG%": 60.9,
+    "TOV%": 8.8,
+    "OREB%": 34.3,
+    "FT rate (FTA/FGA)": 50.7,
+    "3P": "8/23",
+    "2P": "30/46",
+    "FT": "25/35",
+    "Assists": 23,
+    "Turnovers": 7,
+    "Rebounds": 33
+  },
+  "md": {
+    "four_factors": "|  | BC Roma | Treviso |\n| --- | ---: | ---: |\n| Points | 94 | 109 |\n| Possessions | 76.2 | 79.4 |\n| Off. rating | 123.3 | 137.3 |\n| eFG% | 56.3 | 60.9 |\n| TOV% | 15.7 | 8.8 |\n| OREB% | 43.2 | 34.3 |\n| FT rate (FTA/FGA) | 29.6 | 50.7 |\n| 3P | 12/36 | 8/23 |\n| 2P | 22/35 | 30/46 |\n| FT | 14/21 | 25/35 |\n| Assists | 22 | 23 |\n| Turnovers | 12 | 7 |\n| Rebounds | 39 | 33 |",
+    "box": "| Player | Min | Pts | 2P | 3P | FT | Reb | Ast | TOV | Stl | PIR | +/- |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n| **Ayayi** | 31 | 17 | 6/8 | 1/2 | 2/2 | 6 | 4 | 2 | 1 | 24 | -12 |\n| **Mannion** | 28 | 11 | 1/3 | 2/8 | 3/4 | 3 | 7 | 0 | 0 | 13 | -24 |\n| **Strautins** | 26 | 12 | 2/6 | 2/6 | 2/2 | 6 | 2 | 2 | 0 | 7 | -8 |\n| **Simonovic** | 25 | 20 | 8/10 | 1/2 | 1/2 | 8 | 0 | 3 | 0 | 21 | -10 |\n| Davis | 24 | 8 | 3/4 | 0/4 | 2/2 | 2 | 4 | 1 | 2 | 10 | -2 |\n| Stevenson | 24 | 11 | 1/2 | 3/7 | 0/0 | 2 | 3 | 1 | 2 | 9 | +1 |\n| Watson | 16 | 13 | 1/1 | 3/6 | 2/7 | 1 | 1 | 2 | 0 | 5 | +0 |\n| Emejuru | 11 | 0 | 0/1 | 0/0 | 0/0 | 3 | 0 | 1 | 1 | 1 | -8 |\n| **Mezzanotte** | 9 | 0 | 0/0 | 0/0 | 0/0 | 1 | 0 | 0 | 0 | 0 | -12 |\n| Flowers | 5 | 2 | 0/0 | 0/1 | 2/2 | 1 | 1 | 0 | 0 | 3 | +3 |\n| Iuzzolino | 1 | 0 | 0/0 | 0/0 | 0/0 | 0 | 0 | 0 | 0 | 0 | -3 |\n\nBold = starter.",
+    "box_opp": "| Player | Min | Pts | 2P | 3P | FT | Reb | Ast | TOV | Stl | PIR | +/- |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n| **Macura** | 31 | 31 | 8/10 | 2/6 | 9/11 | 4 | 1 | 1 | 5 | 37 | +20 |\n| **Chapman** | 28 | 6 | 1/2 | 0/3 | 4/10 | 2 | 3 | 1 | 1 | 8 | +16 |\n| **Russell** | 28 | 20 | 6/10 | 2/5 | 2/2 | 1 | 7 | 2 | 3 | 21 | +13 |\n| Cappelletti | 24 | 15 | 4/8 | 1/2 | 4/4 | 5 | 9 | 1 | 0 | 23 | +8 |\n| **Carter** | 24 | 3 | 0/1 | 1/1 | 0/0 | 3 | 3 | 0 | 0 | 8 | +2 |\n| **Anigbogu** | 20 | 13 | 4/5 | 0/0 | 5/7 | 4 | 0 | 1 | 0 | 15 | +10 |\n| Chery | 19 | 15 | 7/8 | 0/0 | 1/1 | 4 | 0 | 1 | 0 | 14 | +7 |\n| Chillo | 13 | 6 | 0/1 | 2/3 | 0/0 | 3 | 0 | 0 | 0 | 5 | -5 |\n| Miaschi | 7 | 0 | 0/1 | 0/2 | 0/0 | 0 | 0 | 0 | 0 | -4 | -2 |\n| Allinei | 6 | 0 | 0/0 | 0/1 | 0/0 | 0 | 0 | 0 | 0 | -2 | +6 |\n\nBold = starter.",
+    "results": "- **Treviso 109-94 BC Roma**\n- Venezia 85-73 Cantù\n- Reggio Emilia 78-83 Trento\n- Milano 83-79 Trieste\n- Tortona 101-93 Verona\n- Udine 87-63 Scafati\n- Maxima Roma 75-94 Napoli\n- Varese 69-90 Virtus Bologna",
+    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Udine | 2 | 1-0 | +24 | W |\n| 2 | Virtus Bologna | 2 | 1-0 | +21 | W |\n| 3 | Napoli | 2 | 1-0 | +19 | W |\n| 4 | Treviso | 2 | 1-0 | +15 | W |\n| 5 | Venezia | 2 | 1-0 | +12 | W |\n| 6 | Tortona | 2 | 1-0 | +8 | W |\n| 7 | Trento | 2 | 1-0 | +5 | W |\n| 8 | Milano | 2 | 1-0 | +4 | W |\n| 9 | Trieste | 0 | 0-1 | -4 | L |\n| 10 | Reggio Emilia | 0 | 0-1 | -5 | L |\n| 11 | Verona | 0 | 0-1 | -8 | L |\n| 12 | Cantù | 0 | 0-1 | -12 | L |\n| 13 | **BC Roma** | 0 | 0-1 | -15 | L |\n| 14 | Maxima Roma | 0 | 0-1 | -19 | L |\n| 15 | Varese | 0 | 0-1 | -21 | L |\n| 16 | Scafati | 0 | 0-1 | -24 | L |"
+  },
+  "next": {
+    "round": 2,
+    "opponent": "Tortona",
+    "home": true,
+    "date": "2026-10-04",
+    "time": "16:00",
+    "venue": "Palazzetto dello Sport"
+  }
+}

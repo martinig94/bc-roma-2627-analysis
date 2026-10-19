@@ -43,7 +43,27 @@ roma.groupby(["team", "player_surname"])[["pts", "reb", "ast", "val", "plus_minu
 
 See `notebooks/` for more.
 
-## Analyses site (GitHub Pages)
+## Weekly report (landing page)
+
+The landing page `docs/index.html` lists one report per round (newest first); pre-match analyses moved to `docs/prematch.html`.
+Each weekly report mixes an automatic part and your text:
+
+```bash
+python -m lba_data.collect                    # Monday: collect the round (the Action does this too)
+python notebooks/weekly_report.py --round 4   # plots + tables -> reports/weekly/round-04/, and creates weekly/round-04/notes.md
+# edit weekly/round-04/notes.md: title, summary and the sections key_points, story, tactics, players, next
+python notebooks/build_site.py                # -> docs/weekly/round-04/ and the landing page
+git add -A && git commit && git push
+```
+
+* Automatic: score and quarters, margin chart, team numbers (eFG%, TOV%, OREB%, FT rate), PIR vs season average, box scores,
+  round results, standings, season trend, next fixture.
+* Written by you: `weekly/round-NN/notes.md` (markdown; empty sections are left out; put images in the same folder).
+* Layout: `weekly/template/page.md.j2` (page order and automatic sections), `weekly/template/site.html.j2` (look).
+  To add a section: add a `## newkey` to the notes and `{% if n.newkey %}...{{ n.newkey }}{% endif %}` to the page template,
+  or add a figure in `weekly_report.py` and reference its PNG in the template.
+
+## Pre-match analyses site (GitHub Pages)
 
 `docs/` is a static page with a drop-down of the pre-match analyses (`reports/matchup_*_before_*`).
 After generating a new report (`matchup_report.py` plus `lineups_report.py`, both with `--before <date>`),
