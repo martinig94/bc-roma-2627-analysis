@@ -51,7 +51,7 @@ may differ slightly). An LBA table is never shown for a EuroCup game.
 - **Form**: result of every game of both competitions, in date order.
 - **Playing-time flag**: in the last game, a player is flagged if he played at least 8 minutes and either 7 minutes more or 30% more
   than his average in the earlier games he played (both competitions). A player with no earlier minutes is shown as new.
-- **Roster**: per-game averages before the game; shooting as percentage with attempts per game in brackets.
+- **Roster**: per-game averages before the game; shooting as 2P%, 3P% and FT%, each with attempts per game in brackets.
 - **Assist matrix**: each assist event of the LBA play-by-play is linked to the field goal it set up; the matrix shows passer (rows)
   and scorer (columns), for players involved in at least four assisted baskets. Box-score assists are used as a check (the share
   covered is printed in the title). There is no play-by-play for EuroCup games here, so the matrix is LBA only.

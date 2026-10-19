@@ -277,7 +277,7 @@ def compare_data(a: dict) -> dict:
     """What the compare page needs from one snapshot (numbers only, small)."""
     where = "at" if a["home"] is False else "vs"
     comp = a["competition"] + (f" round {a['round']}" if a["round"] else "")
-    keep = ("player_id", "photo", "name", "pos", "height", "gp", "min", "pts", "reb", "ast", "pir", "fg", "fg3", "ft")
+    keep = ("player_id", "photo", "name", "pos", "height", "gp", "min", "pts", "reb", "ast", "pir", "fg2", "fg3", "ft")
     return {"key": a["date"], "label": f"{a['date']} · {where} {a['opponent']} · {comp}", "date": a["date"], "game": f"{where} {a['opponent']} ({comp})",
             "record": a["record"], "position": a["position"], "points": a["points"], "record_ec": a.get("record_ec"), "form": a["form"],
             "profile": a.get("profile") or {}, "roster": [{k: r.get(k) for k in keep} for r in a["roster"]]}
