@@ -61,7 +61,8 @@ def test_archive_flag_only_for_a_past_automatic_page():
     import pandas as pd
 
     import build_site as b
-    tg = pd.DataFrame({"date": [], "finished": [], "opponent": [], "competition": [], "round": [], "home": []})
+    tg = pd.DataFrame({"date": pd.Series([], dtype=str), "finished": pd.Series([], dtype=bool), "opponent": pd.Series([], dtype=str),
+                       "competition": pd.Series([], dtype=str), "round": pd.Series([], dtype=float), "home": pd.Series([], dtype=object)})
     today = date(2026, 10, 19)
     assert any("Archive, automatic only" in f for f in b.flags_for("2026-10-04", tg, today, "draft", "x.md", archive=True))
     assert not b.flags_for("2026-10-04", tg, today, "reviewed", "x.md", archive=True)            # reviewed: yes removes it
