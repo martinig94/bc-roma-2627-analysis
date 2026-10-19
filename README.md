@@ -51,7 +51,7 @@ See `notebooks/` for more.
 | | what | data used | page folder |
 |---|---|---|---|
 | **Team before each game** | BC Roma's situation before every game: record and standings, form, last game's playing-time flag, team numbers, roster with photos, assist matrix, shot zones, TS% vs PIR (LBA only, EuroCup only), season trend | only games played before that game | `docs/snapshot/round-NN/` |
-| **Opponent analysis** | one per opponent and game, with the comparison table against BC Roma, results and standings, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game | `docs/opponent/<matchup folder>/` |
+| **Opponent analysis** | one per opponent and game, with the comparison table against BC Roma, results and standings, the opponent's roster with photos, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game: the league (LBA) plus the EuroCup, for the teams in the EuroCup file | `docs/opponent/<matchup folder>/` |
 | **Game reviews** (landing page) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
 
 **Every week** (the Monday GitHub Action collects the games, runs `weekly.py` and commits the result):
@@ -75,8 +75,10 @@ your text is never overwritten. The single steps are `snapshot_report.py --round
 * **Layout**: `weekly/template/{snapshot,opponent,review}.md.j2` (page order, automatic parts, text slots) and `site.html.j2` (look).
   To add a section, add its key to the matching `notes_*.md` and an `{% if n.key %}...{% endif %}` block to the template, or add a
   figure in `weekly_sections.py` and its numbers to `auto` in the generator.
-* **Opponent figures** come from `matchup_report.py`, `lineups_report.py` and `standings.py` (`--before <date>`); EuroCup games enter
-  only when both teams are in the EuroCup file.
+* **Opponent figures** come from `matchup_report.py`, `lineups_report.py` and `standings.py` (`--before <date>`); each team's EuroCup
+  games are added when the team is in the EuroCup file. Hand-written opponent pages get the roster with photos appended automatically
+  (`roster.json` next to their README). Photos come from the league media server (box-score `player_p_key`); the Manresa report takes
+  them from the EuroLeague roster API when `manresa_fetch.py` runs (`data/manresa/photos/`).
 * **Roster positions and heights**: `data/roster.csv` (new players are appended blank). Photos: `data/photos/` (fetched automatically).
 * **Another team or season**: change `weekly/config.json`; the code has no team name in it.
 * Enable the site once in the repository settings: Pages, source "Deploy from a branch", branch `master`, folder `/docs`.

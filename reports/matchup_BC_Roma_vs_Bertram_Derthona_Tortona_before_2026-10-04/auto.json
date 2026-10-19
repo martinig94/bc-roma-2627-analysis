@@ -10,112 +10,308 @@
   "date": "2026-10-04",
   "time": "16:00",
   "venue": "Palazzetto dello Sport",
-  "eurocup": false,
+  "eurocup": true,
+  "eurocup_teams": [
+    "BC Roma"
+  ],
+  "league": "LBA Serie A",
+  "roster": [
+    {
+      "player_id": 7431,
+      "photo": true,
+      "name": "Gorham",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 31.0,
+      "pts": 14.0,
+      "reb": 3.0,
+      "ast": 2.0,
+      "pir": 17.0,
+      "fg": "86 (7.0)",
+      "fg3": "0 (1.0)",
+      "ft": "100 (2.0)",
+      "ppg_lba": 14.0,
+      "ppg_ec": null,
+      "sec_total": 1860
+    },
+    {
+      "player_id": 7048,
+      "photo": true,
+      "name": "Hubb",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 26.0,
+      "pts": 13.0,
+      "reb": 1.0,
+      "ast": 8.0,
+      "pir": 18.0,
+      "fg": "40 (10.0)",
+      "fg3": "40 (5.0)",
+      "ft": "100 (3.0)",
+      "ppg_lba": 13.0,
+      "ppg_ec": null,
+      "sec_total": 1560
+    },
+    {
+      "player_id": 9351,
+      "photo": true,
+      "name": "Maddox",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 25.0,
+      "pts": 23.0,
+      "reb": 4.0,
+      "ast": 2.0,
+      "pir": 27.0,
+      "fg": "82 (11.0)",
+      "fg3": "67 (6.0)",
+      "ft": "33 (3.0)",
+      "ppg_lba": 23.0,
+      "ppg_ec": null,
+      "sec_total": 1500
+    },
+    {
+      "player_id": 9038,
+      "photo": true,
+      "name": "Olejniczak",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 24.0,
+      "pts": 11.0,
+      "reb": 5.0,
+      "ast": 1.0,
+      "pir": 17.0,
+      "fg": "67 (6.0)",
+      "fg3": "– (0.0)",
+      "ft": "75 (4.0)",
+      "ppg_lba": 11.0,
+      "ppg_ec": null,
+      "sec_total": 1440
+    },
+    {
+      "player_id": 9006,
+      "photo": true,
+      "name": "Jallow",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 23.0,
+      "pts": 5.0,
+      "reb": 3.0,
+      "ast": 2.0,
+      "pir": 7.0,
+      "fg": "50 (4.0)",
+      "fg3": "– (0.0)",
+      "ft": "100 (1.0)",
+      "ppg_lba": 5.0,
+      "ppg_ec": null,
+      "sec_total": 1380
+    },
+    {
+      "player_id": 75,
+      "photo": true,
+      "name": "Alibegovic",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 19.0,
+      "pts": 10.0,
+      "reb": 2.0,
+      "ast": 1.0,
+      "pir": 7.0,
+      "fg": "67 (6.0)",
+      "fg3": "0 (1.0)",
+      "ft": "67 (3.0)",
+      "ppg_lba": 10.0,
+      "ppg_ec": null,
+      "sec_total": 1140
+    },
+    {
+      "player_id": 656,
+      "photo": true,
+      "name": "Bortolani",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 18.0,
+      "pts": 13.0,
+      "reb": 1.0,
+      "ast": 0.0,
+      "pir": 11.0,
+      "fg": "62 (8.0)",
+      "fg3": "50 (4.0)",
+      "ft": "50 (2.0)",
+      "ppg_lba": 13.0,
+      "ppg_ec": null,
+      "sec_total": 1080
+    },
+    {
+      "player_id": 4268,
+      "photo": true,
+      "name": "Pecchia",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 18.0,
+      "pts": 2.0,
+      "reb": 2.0,
+      "ast": 1.0,
+      "pir": 3.0,
+      "fg": "50 (2.0)",
+      "fg3": "– (0.0)",
+      "ft": "– (0.0)",
+      "ppg_lba": 2.0,
+      "ppg_ec": null,
+      "sec_total": 1080
+    },
+    {
+      "player_id": 9009,
+      "photo": true,
+      "name": "Durham",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 14.0,
+      "pts": 10.0,
+      "reb": 3.0,
+      "ast": 4.0,
+      "pir": 12.0,
+      "fg": "100 (4.0)",
+      "fg3": "100 (1.0)",
+      "ft": "100 (1.0)",
+      "ppg_lba": 10.0,
+      "ppg_ec": null,
+      "sec_total": 840
+    },
+    {
+      "player_id": 2313,
+      "photo": true,
+      "name": "Gazzotti",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 2.0,
+      "pts": 0.0,
+      "reb": 0.0,
+      "ast": 0.0,
+      "pir": 0.0,
+      "fg": "– (0.0)",
+      "fg3": "– (0.0)",
+      "ft": "– (0.0)",
+      "ppg_lba": 0.0,
+      "ppg_ec": null,
+      "sec_total": 120
+    }
+  ],
   "comparison": {
     "rows": [
       {
-        "stat": "GP",
-        "team": 1,
-        "opp": 1
+        "stat": "Games",
+        "team": "2 (1 LBA + 1 EuroCup)",
+        "opp": "1 (1 LBA + 0 EuroCup)"
       },
       {
         "stat": "Record",
-        "team": "0-1",
+        "team": "0-2",
         "opp": "1-0"
       },
       {
         "stat": "Points per game",
-        "team": 94.0,
+        "team": 86.0,
         "opp": 101.0
       },
       {
         "stat": "Points allowed per game",
-        "team": 109.0,
+        "team": 100.0,
         "opp": 93.0
       },
       {
         "stat": "Offensive rating",
-        "team": 123.3,
+        "team": 114.5,
         "opp": 135.8
       },
       {
         "stat": "Defensive rating",
-        "team": 137.3,
+        "team": 129.6,
         "opp": 120.0
       },
       {
         "stat": "Net rating",
-        "team": -14.0,
+        "team": -15.1,
         "opp": 15.8
       },
       {
         "stat": "Pace (possessions per 40')",
-        "team": 77.8,
+        "team": 76.1,
         "opp": 75.9
       },
       {
         "stat": "eFG%",
-        "team": 56.3,
+        "team": 54.5,
         "opp": 75.0
       },
       {
         "stat": "TOV% (per 100 poss.)",
-        "team": 15.7,
+        "team": 18.0,
         "opp": 16.1
       },
       {
         "stat": "OREB%",
-        "team": 43.2,
+        "team": 38.0,
         "opp": 19.0
       },
       {
         "stat": "FT rate (FTA/FGA)",
-        "team": 29.6,
+        "team": 29.3,
         "opp": 32.8
       },
       {
         "stat": "3PA per game",
-        "team": 36.0,
+        "team": 32.0,
         "opp": 18.0
       },
       {
         "stat": "3P%",
-        "team": 33.3,
+        "team": 29.7,
         "opp": 50.0
       },
       {
         "stat": "2P%",
-        "team": 62.9,
+        "team": 63.8,
         "opp": 75.0
       },
       {
         "stat": "FT%",
-        "team": 66.7,
+        "team": 69.2,
         "opp": 73.7
       },
       {
         "stat": "Assists per game",
-        "team": 22.0,
+        "team": 19.5,
         "opp": 21.0
       },
       {
         "stat": "Opp. eFG%",
-        "team": 60.9,
+        "team": 59.0,
         "opp": 50.6
       },
       {
         "stat": "Opp. TOV% (forced)",
-        "team": 8.8,
+        "team": 13.0,
         "opp": 12.9
       },
       {
         "stat": "DREB%",
-        "team": 65.7,
+        "team": 61.6,
         "opp": 51.2
       }
     ],
     "team": {
-      "record": "0-1",
+      "record": "0-2",
       "position": 13,
       "form": "L"
     },

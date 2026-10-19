@@ -1,4 +1,4 @@
-# {{ a.team }} before round {{ a.round }}: {{ 'vs' if a.home else 'at' }} {{ a.opponent }}
+{% from '_macros.j2' import roster_table %}# {{ a.team }} before round {{ a.round }}: {{ 'vs' if a.home else 'at' }} {{ a.opponent }}
 
 Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.venue }}{% endif %}
 
@@ -56,10 +56,7 @@ Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = 
 
 {% endif %}Per-game averages before this game, LBA + EuroCup. Shooting: percentage (attempts per game).
 
-| | Player | Pos | Ht | GP | MIN | PTS | REB | AST | PIR | FG% (FGA) | 3P% (3PA) | FT% (FTA) | PPG LBA | PPG EC |
-|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-{% for r in a.roster %}| {% if r.photo %}<img src="photo_{{ r.player_id }}.jpg" alt="{{ r.name }}" width="44">{% endif %} | **{{ r.name }}** | {{ r.pos or '–' }} | {{ r.height or '–' }} | {{ r.gp }} | {{ r.min }} | {{ r.pts }} | {{ r.reb }} | {{ r.ast }} | {{ r.pir }} | {{ r.fg }} | {{ r.fg3 }} | {{ r.ft }} | {{ r.ppg_lba if r.ppg_lba is not none else '–' }} | {{ r.ppg_ec if r.ppg_ec is not none else '–' }} |
-{% endfor %}
+{{ roster_table(a.roster) }}
 
 ## Assists
 

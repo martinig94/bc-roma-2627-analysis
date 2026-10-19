@@ -94,6 +94,13 @@ def build_opponents(nav_holder: dict) -> list[dict]:
             text = readme.read_text(encoding="utf-8")
             title = re.search(r"^# (.+)$", text, re.M).group(1)
             page_md, rnd = text, None
+            if (folder / "roster.json").exists():
+                roster = json.loads((folder / "roster.json").read_text(encoding="utf-8"))
+                block = TPL.from_string("{% from '_macros.j2' import roster_table %}## Roster\n\nPer-game averages before this game, "
+                                        "league and EuroCup games. Shooting: percentage (attempts per game).\n\n"
+                                        "{{ roster_table(r) }}\n\n").render(r=roster)
+                k = page_md.find("\n## Sources")
+                page_md = page_md[:k] + "\n" + block + page_md[k:] if k >= 0 else page_md + "\n\n" + block
         elif auto_path.exists():
             a = json.loads(auto_path.read_text(encoding="utf-8"))
             n = parse_notes(notes_dir / "notes.md")

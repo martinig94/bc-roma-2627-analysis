@@ -6,18 +6,20 @@ Runs the existing figure scripts (matchup_report.py, lineups_report.py, standing
 reports/matchup_<home>_vs_<away>_before_<date>/ and writes auto.json there (the BC Roma vs opponent comparison table).
 A folder that already exists is a frozen snapshot and is left alone; one with a hand-written README.md keeps it.
 Otherwise the page is rendered from weekly/template/opponent.md.j2 plus weekly/opponent/<folder>/notes.md (created empty).
-EuroCup games enter the figures only when both teams are in the EuroCup file (the matchup report mixes them in).
+Both teams' figures use their league games (LBA) plus their EuroCup games, for the teams that are in the EuroCup file.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import subprocess
 import sys
 from pathlib import Path
 
 import pandas as pd
 
+import player_photos
 import standings as st
 import weekly_config
 import weekly_report as wr
@@ -49,13 +51,24 @@ def run(script: str, *args: str) -> None:
 
 def comparison(box: pd.DataFrame, games: pd.DataFrame, date: str, team: str, opp: str) -> dict:
     tab = st.standings(games, date)
-    prof = {t: ws.team_profile(box, t) for t in (team, opp)}
+    prof = {t: ws.team_profile(box, t, ("LBA", "EC")) for t in (team, opp)}
     rows = []
     for k in prof[team]:
         rows.append({"stat": k, "team": prof[team][k], "opp": prof[opp].get(k, "–")})
     return {"rows": rows,
             "team": {"record": prof[team]["Record"], "position": int(tab.loc[team, "pos"]), "form": tab.loc[team, "form"][-5:]},
             "opp": {"record": prof[opp].get("Record", "0-0"), "position": int(tab.loc[opp, "pos"]), "form": tab.loc[opp, "form"][-5:]}}
+
+
+def write_roster(folder: Path, opp: str, date: str, data: Path) -> list[dict]:
+    """The opponent's roster before `date` (league + EuroCup, with photos) as roster.json + photo_<id>.jpg in the folder."""
+    player_photos.main_quiet(opp)
+    roster = ws.roster_table(ws.load_box_before(data, date, CFG["eurocup_file"]), data, opp)
+    for r in roster:
+        if r["photo"]:
+            shutil.copy(data / "photos" / f"{r['player_id']}.jpg", folder / f"photo_{r['player_id']}.jpg")
+    (folder / "roster.json").write_text(json.dumps(roster, indent=2, ensure_ascii=False), encoding="utf-8")
+    return roster
 
 
 def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool = False) -> Path | None:
@@ -69,22 +82,26 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
     opp = g.away_team if home else g.home_team
     folder = ROOT / "reports" / folder_name(g.home_team, g.away_team, date)
     if folder.exists() and (not force or (folder / "README.md").exists()):   # frozen snapshot / hand-written page
+        if (folder / "README.md").exists():          # its text stays; the roster with pictures is added at build time
+            write_roster(folder, opp, date, data)
         print(f"opponent analysis exists, left alone: {folder.name}")
         return folder
     if st.finished(games, date).empty:
         raise SystemExit(f"no games before {date}")
 
-    both_ec = {team, opp} <= eurocup_teams(data)
+    ec_teams = sorted({team, opp} & eurocup_teams(data))
     args = ["--home", g.home_team, "--away", g.away_team, "--before", date, "--out", "reports"]
-    run("matchup_report.py", *args, *([] if both_ec else ["--no-eurocup"]))
+    run("matchup_report.py", *args, *([] if ec_teams else ["--no-eurocup"]))
     run("lineups_report.py", "--team", team, "--team", opp, "--before", date, "--out", str(folder))
     run("standings.py", "--team", team, "--team", opp, "--before", date, "--out", str(folder))
 
-    xbox = ws.load_box_before(data, date, "")
+    xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
+    roster = write_roster(folder, opp, date, data)
     auto = {
         "kind": "opponent", "round": rnd, "team": team, "opponent": wr.short(opp), "opponent_full": opp, "home": bool(home),
         "home_team": g.home_team, "away_team": g.away_team, "date": date, "time": g.match_datetime[11:16],
-        "venue": None if pd.isna(g.venue) else g.venue, "eurocup": bool(both_ec),
+        "venue": None if pd.isna(g.venue) else g.venue, "eurocup": bool(ec_teams),
+        "eurocup_teams": [wr.short(t) for t in ec_teams], "league": CFG["league"], "roster": roster,
         "comparison": comparison(xbox, games, date, team, opp),
         "standings_md": (folder / "standings.md").read_text(encoding="utf-8"),
     }

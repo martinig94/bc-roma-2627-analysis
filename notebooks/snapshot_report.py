@@ -81,7 +81,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     wr.fig_season(games, team, int(last["round"]), out)
     box_lba = pd.read_csv(data / "box_scores.csv")
     box_ast = int(box_lba[(box_lba.game_id.isin(lba_games)) & (box_lba.team == team) & (box_lba.row_type == "total")].ast.sum())
-    roster = ws.roster_table(xbox, data)
+    roster = ws.roster_table(xbox, data, team)
     for r in roster:
         if r["photo"]:
             shutil.copy(data / "photos" / f"{r['player_id']}.jpg", out / f"photo_{r['player_id']}.jpg")

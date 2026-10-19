@@ -1,8 +1,8 @@
-# {{ a.home_team }} vs {{ a.away_team }}
+{% from '_macros.j2' import roster_table %}# {{ a.home_team }} vs {{ a.away_team }}
 
 Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.venue }}{% endif %}
 
-**Pre-game analysis: only data from games played before {{ a.date_long }}.** LBA games{% if a.eurocup %} and EuroCup games{% endif %}; early in the season the samples are small, so read everything as tendencies, not established facts.{% if a.team_link %} The situation of {{ a.team }} before this game is [here]({{ a.team_link }}).{% endif %}
+**Pre-game analysis: only data from games played before {{ a.date_long }}.** League games{% if a.eurocup %} and EuroCup games{% endif %}; early in the season the samples are small, so read everything as tendencies, not established facts.{% if a.team_link %} The situation of {{ a.team }} before this game is [here]({{ a.team_link }}).{% endif %}
 
 {% if n.summary %}> {{ n.summary }}
 
@@ -23,11 +23,17 @@ Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.v
 |---|---:|---:|
 {% for r in a.comparison.rows %}| {{ r.stat }} | {{ r.team }} | {{ r.opp }} |
 {% endfor %}
-Ratings are points per 100 possessions; LBA games before this one.
+Ratings are points per 100 possessions. Games before this one in the league ({{ a.league }}) and, where the EuroCup file has them, the EuroCup{% if a.eurocup_teams %} (EuroCup data included for: {{ a.eurocup_teams|join(', ') }}){% else %} (no EuroCup data for either team){% endif %}.
 
 {% if n.comparison %}{{ n.comparison }}
 
-{% endif %}{% if '01_results_timeline.png' in files %}![results](01_results_timeline.png)
+{% endif %}## {{ a.opponent }} roster
+
+Per-game averages before this game, league and EuroCup games. Shooting: percentage (attempts per game).
+
+{{ roster_table(a.roster) }}
+
+{% if '01_results_timeline.png' in files %}![results](01_results_timeline.png)
 
 {% endif %}{% if '02_starters_bench.png' in files %}## Starting five and bench
 
