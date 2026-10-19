@@ -112,6 +112,7 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   Without `results.csv` the page says the standings are not available yet. EuroCup box scores are still the hand-made file
   (`data/eurocup_2026_raw.txt`).
 * **Roster positions and heights**: `data/roster.csv` (new players are appended blank). Photos: `data/photos/` (fetched automatically).
+* **Official sites** on the landing page are the `links` list in `weekly/config.json` (label and url).
 * **Another team or season**: change `weekly/config.json`; the code has no team name in it.
 * Enable the site once in the repository settings: Pages, source "Deploy from a branch", branch `master`, folder `/docs`.
 

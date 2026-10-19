@@ -340,6 +340,10 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
                               f'<span class="{cls}">{"W" if w["win"] else "L"}</span> {w["score"]} {where} {w["opponent"]}',
                               f"{w['record']} · {w['position']}{ordinal(w['position'])} in the standings" + (f"<div>{w['summary']}</div>" if w["summary"] else ""), i == 0))
         parts.append("</div>")
+    if CFG.get("links"):
+        links = "".join(f'<a class="card" href="{l["url"]}" target="_blank" rel="noopener"><div class="rd">Official site</div>'
+                        f'<div class="score">{l["label"]}</div><div class="rd">{l["url"].split("//")[1].rstrip("/")}</div></a>' for l in CFG["links"])
+        parts.append(f'<h2>Official sites</h2><div class="cards">{links}</div>')
     (DOCS / "index.html").write_text(shell(CFG["site_title"], "".join(parts), "", nav), encoding="utf-8")
 
 
