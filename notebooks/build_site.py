@@ -262,10 +262,11 @@ def build_snapshots(opponents: list[dict], tg: pd.DataFrame, today: date) -> lis
         meta, body = pages.load("snapshot", a["date"], a, files)         # weekly/games/<date>/snapshot.md (or the default)
         state = pages.state(meta, body)
         page_md = add_flags(pages.expand(body, "snapshot", a, files, AUTHOR),
-                            flags_for(a["date"], tg, today, state, pages.edit_path("snapshot", a["date"])))
+                            flags_for(a["date"], tg, today, state, pages.edit_path("snapshot", a["date"]), archive=True))
         short = f"{'at' if a['home'] is False else 'vs'} {a['opponent']}"
         title = meta.get("title") or f"{a['team']} {short}"
         entries.append({"slug": src.name, "title": title, "date": a["date"], "html": md_html(page_md), "state": state, "data": compare_data(a),
+                        "archive": a["date"] < f"{today:%Y-%m-%d}" and state == "draft",
                         "edit": pages.edit_path("snapshot", a["date"]),
                         "opponent": a["opponent"], "competition": a["competition"], "round": a["round"], "home": a["home"],
                         "opponent_slug": a.get("opponent_analysis") if a.get("opponent_analysis") in have_opp else None})
@@ -457,7 +458,7 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
                               badge(n["analysis_state"] or n["snapshot_state"]) or ("🗂 old format (hand-written)" if n["analysis_legacy"] else "opponent analysis"), i == 0))
         parts.append("</div>")
     if snaps:
-        opts = "".join(f'<option value="snapshot/{e["slug"]}/">{e["data"]["label"]}</option>' for e in snaps)
+        opts = "".join(f'<option value="snapshot/{e["slug"]}/">{e["data"]["label"]}{" · automatic only" if e.get("archive") else ""}</option>' for e in snaps)
         optk = "".join(f'<option value="{e["slug"]}">{e["data"]["label"]}</option>' for e in snaps)
         upcoming = [e for e in snaps if e["date"] >= f"{today:%Y-%m-%d}"]
         parts.append(f'<h2 id="situation">{CFG["team"]}: situation, roster, form</h2>'

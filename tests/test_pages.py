@@ -67,5 +67,5 @@ def test_archive_flag_only_for_a_past_automatic_page():
     assert any("Archive, automatic only" in f for f in b.flags_for("2026-10-04", tg, today, "draft", "x.md", archive=True))
     assert not b.flags_for("2026-10-04", tg, today, "reviewed", "x.md", archive=True)            # reviewed: yes removes it
     assert not b.flags_for("2026-10-04", tg, today, "progress", "x.md", archive=True)            # the analyst worked on it
-    assert not b.flags_for("2026-10-04", tg, today, "draft", "x.md", archive=False)              # snapshots are not flagged
+    assert not b.flags_for("2026-10-04", tg, today, "draft", "x.md", archive=False)              # hand-written pages are not flagged
     assert any("Automatic draft" in f for f in b.flags_for("2026-10-24", tg, today, "draft", "x.md", archive=True))   # upcoming: draft flag
