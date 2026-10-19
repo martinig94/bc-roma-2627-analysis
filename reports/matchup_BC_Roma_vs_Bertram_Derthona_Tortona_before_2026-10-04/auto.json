@@ -1,0 +1,325 @@
+{
+  "kind": "opponent",
+  "round": 2,
+  "team": "BC Roma",
+  "opponent": "Tortona",
+  "opponent_full": "Bertram Derthona Tortona",
+  "home": true,
+  "home_team": "BC Roma",
+  "away_team": "Bertram Derthona Tortona",
+  "date": "2026-10-04",
+  "time": "16:00",
+  "venue": "Palazzetto dello Sport",
+  "eurocup": true,
+  "eurocup_teams": [
+    "BC Roma"
+  ],
+  "league": "LBA Serie A",
+  "roster": [
+    {
+      "player_id": 7431,
+      "photo": true,
+      "name": "Gorham",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 31.0,
+      "pts": 14.0,
+      "reb": 3.0,
+      "ast": 2.0,
+      "pir": 17.0,
+      "fg": "86 (7.0)",
+      "fg3": "0 (1.0)",
+      "ft": "100 (2.0)",
+      "ppg_lba": 14.0,
+      "ppg_ec": null,
+      "sec_total": 1860
+    },
+    {
+      "player_id": 7048,
+      "photo": true,
+      "name": "Hubb",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 26.0,
+      "pts": 13.0,
+      "reb": 1.0,
+      "ast": 8.0,
+      "pir": 18.0,
+      "fg": "40 (10.0)",
+      "fg3": "40 (5.0)",
+      "ft": "100 (3.0)",
+      "ppg_lba": 13.0,
+      "ppg_ec": null,
+      "sec_total": 1560
+    },
+    {
+      "player_id": 9351,
+      "photo": true,
+      "name": "Maddox",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 25.0,
+      "pts": 23.0,
+      "reb": 4.0,
+      "ast": 2.0,
+      "pir": 27.0,
+      "fg": "82 (11.0)",
+      "fg3": "67 (6.0)",
+      "ft": "33 (3.0)",
+      "ppg_lba": 23.0,
+      "ppg_ec": null,
+      "sec_total": 1500
+    },
+    {
+      "player_id": 9038,
+      "photo": true,
+      "name": "Olejniczak",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 24.0,
+      "pts": 11.0,
+      "reb": 5.0,
+      "ast": 1.0,
+      "pir": 17.0,
+      "fg": "67 (6.0)",
+      "fg3": "– (0.0)",
+      "ft": "75 (4.0)",
+      "ppg_lba": 11.0,
+      "ppg_ec": null,
+      "sec_total": 1440
+    },
+    {
+      "player_id": 9006,
+      "photo": true,
+      "name": "Jallow",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 23.0,
+      "pts": 5.0,
+      "reb": 3.0,
+      "ast": 2.0,
+      "pir": 7.0,
+      "fg": "50 (4.0)",
+      "fg3": "– (0.0)",
+      "ft": "100 (1.0)",
+      "ppg_lba": 5.0,
+      "ppg_ec": null,
+      "sec_total": 1380
+    },
+    {
+      "player_id": 75,
+      "photo": true,
+      "name": "Alibegovic",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 19.0,
+      "pts": 10.0,
+      "reb": 2.0,
+      "ast": 1.0,
+      "pir": 7.0,
+      "fg": "67 (6.0)",
+      "fg3": "0 (1.0)",
+      "ft": "67 (3.0)",
+      "ppg_lba": 10.0,
+      "ppg_ec": null,
+      "sec_total": 1140
+    },
+    {
+      "player_id": 656,
+      "photo": true,
+      "name": "Bortolani",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 18.0,
+      "pts": 13.0,
+      "reb": 1.0,
+      "ast": 0.0,
+      "pir": 11.0,
+      "fg": "62 (8.0)",
+      "fg3": "50 (4.0)",
+      "ft": "50 (2.0)",
+      "ppg_lba": 13.0,
+      "ppg_ec": null,
+      "sec_total": 1080
+    },
+    {
+      "player_id": 4268,
+      "photo": true,
+      "name": "Pecchia",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 18.0,
+      "pts": 2.0,
+      "reb": 2.0,
+      "ast": 1.0,
+      "pir": 3.0,
+      "fg": "50 (2.0)",
+      "fg3": "– (0.0)",
+      "ft": "– (0.0)",
+      "ppg_lba": 2.0,
+      "ppg_ec": null,
+      "sec_total": 1080
+    },
+    {
+      "player_id": 9009,
+      "photo": true,
+      "name": "Durham",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 14.0,
+      "pts": 10.0,
+      "reb": 3.0,
+      "ast": 4.0,
+      "pir": 12.0,
+      "fg": "100 (4.0)",
+      "fg3": "100 (1.0)",
+      "ft": "100 (1.0)",
+      "ppg_lba": 10.0,
+      "ppg_ec": null,
+      "sec_total": 840
+    },
+    {
+      "player_id": 2313,
+      "photo": true,
+      "name": "Gazzotti",
+      "pos": "",
+      "height": "",
+      "gp": 1,
+      "min": 2.0,
+      "pts": 0.0,
+      "reb": 0.0,
+      "ast": 0.0,
+      "pir": 0.0,
+      "fg": "– (0.0)",
+      "fg3": "– (0.0)",
+      "ft": "– (0.0)",
+      "ppg_lba": 0.0,
+      "ppg_ec": null,
+      "sec_total": 120
+    }
+  ],
+  "comparison": {
+    "rows": [
+      {
+        "stat": "Games",
+        "team": "2 (1 LBA + 1 EuroCup)",
+        "opp": "1 (1 LBA + 0 EuroCup)"
+      },
+      {
+        "stat": "Record",
+        "team": "0-2",
+        "opp": "1-0"
+      },
+      {
+        "stat": "Points per game",
+        "team": 86.0,
+        "opp": 101.0
+      },
+      {
+        "stat": "Points allowed per game",
+        "team": 100.0,
+        "opp": 93.0
+      },
+      {
+        "stat": "Offensive rating",
+        "team": 114.5,
+        "opp": 135.8
+      },
+      {
+        "stat": "Defensive rating",
+        "team": 129.6,
+        "opp": 120.0
+      },
+      {
+        "stat": "Net rating",
+        "team": -15.1,
+        "opp": 15.8
+      },
+      {
+        "stat": "Pace (possessions per 40')",
+        "team": 76.1,
+        "opp": 75.9
+      },
+      {
+        "stat": "eFG%",
+        "team": 54.5,
+        "opp": 75.0
+      },
+      {
+        "stat": "TOV% (per 100 poss.)",
+        "team": 18.0,
+        "opp": 16.1
+      },
+      {
+        "stat": "OREB%",
+        "team": 38.0,
+        "opp": 19.0
+      },
+      {
+        "stat": "FT rate (FTA/FGA)",
+        "team": 29.3,
+        "opp": 32.8
+      },
+      {
+        "stat": "3PA per game",
+        "team": 32.0,
+        "opp": 18.0
+      },
+      {
+        "stat": "3P%",
+        "team": 29.7,
+        "opp": 50.0
+      },
+      {
+        "stat": "2P%",
+        "team": 63.8,
+        "opp": 75.0
+      },
+      {
+        "stat": "FT%",
+        "team": 69.2,
+        "opp": 73.7
+      },
+      {
+        "stat": "Assists per game",
+        "team": 19.5,
+        "opp": 21.0
+      },
+      {
+        "stat": "Opp. eFG%",
+        "team": 59.0,
+        "opp": 50.6
+      },
+      {
+        "stat": "Opp. TOV% (forced)",
+        "team": 13.0,
+        "opp": 12.9
+      },
+      {
+        "stat": "DREB%",
+        "team": 61.6,
+        "opp": 51.2
+      }
+    ],
+    "team": {
+      "record": "0-2",
+      "position": 13,
+      "form": "L"
+    },
+    "opp": {
+      "record": "1-0",
+      "position": 6,
+      "form": "W"
+    }
+  },
+  "standings_md": "## LBA so far: results and standings\n\nAll 10 LBA games played before this match (rounds 1 to 2); home team first.\n\n- **Round 1**: **Treviso 109-94 BC Roma** · Venezia 85-73 Cantù · Reggio Emilia 78-83 Trento · Milano 83-79 Trieste · **Tortona 101-93 Verona** · Udine 87-63 Scafati · Maxima Roma 75-94 Napoli · Varese 69-90 Virtus Bologna\n- **Round 2**: Trento 90-93 Treviso · Napoli 99-93 Reggio Emilia\n\n![standings](00_standings.png)\n\n**Standings after round 2**\n\n| # | Team | Pts | W-L | Points for-against | Diff | Results |\n|---:|---|---:|:---:|:---:|---:|:---:|\n| 1 | Napoli | 4 | 2-0 | 193-168 | +25 | WW |\n| 2 | Treviso | 4 | 2-0 | 202-184 | +18 | WW |\n| 3 | Udine | 2 | 1-0 | 87-63 | +24 | W |\n| 4 | Virtus Bologna | 2 | 1-0 | 90-69 | +21 | W |\n| 5 | Venezia | 2 | 1-0 | 85-73 | +12 | W |\n| 6 | **Tortona** | 2 | 1-0 | 101-93 | +8 | W |\n| 7 | Milano | 2 | 1-0 | 83-79 | +4 | W |\n| 8 | Trento | 2 | 1-1 | 173-171 | +2 | WL |\n| 9 | Trieste | 0 | 0-1 | 79-83 | -4 | L |\n| 10 | Verona | 0 | 0-1 | 93-101 | -8 | L |\n| 11 | Reggio Emilia | 0 | 0-2 | 171-182 | -11 | LL |\n| 12 | Cantù | 0 | 0-1 | 73-85 | -12 | L |\n| 13 | **BC Roma** | 0 | 0-1 | 94-109 | -15 | L |\n| 14 | Maxima Roma | 0 | 0-1 | 75-94 | -19 | L |\n| 15 | Varese | 0 | 0-1 | 69-90 | -21 | L |\n| 16 | Scafati | 0 | 0-1 | 63-87 | -24 | L |\n\nTwo points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).\n"
+}
