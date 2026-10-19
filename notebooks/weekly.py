@@ -126,7 +126,7 @@ def main() -> None:
     old = sorted(f.parent.name.removeprefix("matchup_") for f in (ROOT / "reports").glob("matchup_*/README.md"))
     if old:
         print("\nANALYSES IN THE OLD FORMAT (hand-written, flagged on the site; not built from the game-page files): " + "; ".join(old))
-    past = [f"{p.parent.name}" for p in sorted(pages.GAMES.glob("*/analysis.md"))
+    past = [f"{kind} {p.parent.name}" for kind in ("snapshot", "analysis") for p in sorted(pages.GAMES.glob(f"*/{pages.KINDS[kind]}"))
             if p.parent.name < today and pages.state(*pages.split_front(p.read_text(encoding="utf-8"))) == "draft"]
     if past:
         print("\nANALYSES OF PAST GAMES THAT ARE AUTOMATIC ONLY (flagged as archive on the site; `reviewed: yes` removes the flag): " + "; ".join(past))
