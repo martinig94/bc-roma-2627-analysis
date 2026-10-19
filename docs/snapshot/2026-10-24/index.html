@@ -4,43 +4,55 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BC Roma at Varese · BC Roma 2026/27 · weekly report</title>
+<link rel="icon" type="image/png" href="../../assets/logo.png">
 <style>
-  :root { --bg:#fff; --text:#1a1a2e; --muted:#5a5e73; --line:#e3e4ea; --gold:#F2C300; --card:#f6f6f9; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#14141c; --text:#ececf3; --muted:#a3a6b8; --line:#2c2d3a; --card:#1d1d28; } }
-  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, sans-serif; }
-  header { border-bottom:4px solid var(--gold); padding:14px 16px; }
-  .bar { max-width:980px; margin:0 auto; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
-  .bar a { text-decoration:none; font-weight:700; }
-  .bar .sub { color:var(--muted); font-size:.9rem; }
-  main { max-width:980px; margin:0 auto; padding:8px 16px 56px; }
+  /* Light, sober palette from the BC Roma logo: warm near-black text, the logo gold only as accent (borders, rules, tints);
+     links and small accents use a deeper gold so every text colour keeps a contrast of 5:1 or more on white. */
+  :root { color-scheme: light; --paper:#fff; --soft:#faf7ef; --tint:#f5ebcb; --flag:#fbf6e6; --ink:#1f1b14; --muted:#5e584b;
+          --line:#e7e1d3; --gold:#e8b018; --link:#7a5600; --win:#1e7b45; --loss:#b3302f; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color:var(--link); }
+  a:hover { color:var(--ink); }
+  header { border-bottom:3px solid var(--gold); padding:12px 16px; background:var(--paper); }
+  .bar { max-width:980px; margin:0 auto; display:flex; gap:10px 16px; align-items:center; flex-wrap:wrap; }
+  .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--muted); font-size:.78rem; letter-spacing:.03em; text-transform:uppercase; }
+  .brand img { height:32px; width:auto; background:none; border-radius:0; display:block; }
+  .bar > a:not(.brand) { color:var(--ink); text-decoration:none; font-weight:500; }
+  .bar > a:not(.brand):hover { color:var(--link); text-decoration:underline; }
+  main { max-width:980px; margin:0 auto; padding:12px 16px 56px; }
   img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
-  h1 { margin-bottom:.2rem; }
+  h1 { margin:1.2rem 0 .6rem; line-height:1.25; }
+  h1::after { content:""; display:block; width:56px; height:3px; background:var(--gold); margin-top:.5rem; }
   h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2.2rem; }
+  h3 { margin-top:1.6rem; }
   td img { max-width:none; width:44px; height:54px; object-fit:cover; object-position:top; border-radius:6px; display:block; }
   td img.face { display:inline-block; width:34px; height:42px; vertical-align:middle; margin-right:8px; }
   table { border-collapse:collapse; display:block; overflow-x:auto; }
-  th, td { padding:4px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
-  .mark { background:#fff2a8; color:#1a1a2e; padding:0 3px; border-radius:3px; }
-  blockquote { margin:1rem 0; padding:.2rem 1rem; border-left:4px solid var(--gold); color:var(--muted); }
+  th { background:var(--tint); color:var(--ink); border-bottom:2px solid var(--gold); }
+  th, td { padding:5px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  .mark { background:#fff2a8; color:var(--ink); padding:0 3px; border-radius:3px; }
+  blockquote { margin:1rem 0; padding:.5rem 1rem; border-left:4px solid var(--gold); background:var(--flag); color:var(--ink); border-radius:0 6px 6px 0; }
+  blockquote p { margin:.3rem 0; }
+  code { background:var(--soft); padding:0 4px; border-radius:3px; }
   details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
   .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
-  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:10px; background:var(--card); text-decoration:none; color:inherit; }
-  .card:hover { border-color:var(--gold); }
+  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:8px; background:var(--soft); text-decoration:none; color:var(--ink); }
+  .card:hover { border-color:var(--gold); background:var(--flag); color:var(--ink); }
   .card .rd { color:var(--muted); font-size:.85rem; }
-  .card .score { font-size:1.4rem; font-weight:700; }
-  .win { color:#2e9e5b; } .loss { color:#d94b4b; }
-  .latest { border-left:6px solid var(--gold); }
-  select { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
+  .card .score { font-size:1.35rem; font-weight:700; }
+  .win { color:var(--win); } .loss { color:var(--loss); }
+  .latest { border-left:5px solid var(--gold); }
+  select { font:inherit; padding:5px 8px; border:1px solid #cfc7b3; border-radius:6px; background:var(--paper); color:var(--ink); width:210px; max-width:100%; }
+  select:focus-visible, a:focus-visible, summary:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
   .doc table { display:table; width:100%; }
   .doc th, .doc td { white-space:normal; text-align:left; vertical-align:top; }
   .muted { color:var(--muted); font-size:.9rem; }
   .comments { margin-top:3rem; }
-  .nav { display:flex; justify-content:space-between; margin-top:3rem; }
 </style>
 </head>
 <body>
 <header><div class="bar">
-  <a href="../../">BC Roma 2026/27 · weekly report</a>
+  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27 &middot; weekly report</span></a>
   <select aria-label="Opponents" onchange="if(this.value)location.href='../../'+this.value">
     <option value="">Opponents &#9662;</option>
     <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
@@ -52,9 +64,9 @@
     <option value="snapshot/2026-09-30/">at Bahcesehir College Istanbul · EuroCup · 30 Sep</option>
     
   </select>
-  <a href="../../#reviews" style="font-weight:400">Game reviews</a>
-  <a href="../../methodology/" style="font-weight:400">Methodology</a>
-  <a href="../../work-plan/" style="font-weight:400">Work plan</a>
+  <a href="../../#reviews">Game reviews</a>
+  <a href="../../methodology/">Methodology</a>
+  <a href="../../work-plan/">Work plan</a>
   
 </div></header>
 <main>
@@ -481,7 +493,7 @@ The analysis of the opponent is <a href="../../opponent/matchup_Openjobmetis_Var
 <section class="comments">
 <h2>Comments</h2>
 <p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
-<script src="https://utteranc.es/client.js" repo="martinig94/bc-roma-2627-analysis" issue-term="pathname" label="comment" theme="preferred-color-scheme" crossorigin="anonymous" async></script>
+<script src="https://utteranc.es/client.js" repo="martinig94/bc-roma-2627-analysis" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>
 </section>
 </main>
 </body>

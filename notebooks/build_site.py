@@ -139,7 +139,7 @@ def folder_name(home: str, away: str, day: str) -> str:
 
 def shell(title: str, body: str, root: str, nav: dict, comments: bool = False) -> str:
     c = CFG.get("comments") or {}
-    return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, nav=nav, site_title=CFG["site_title"], league=CFG["league"],
+    return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, nav=nav, site_title=CFG["site_title"], league=CFG["league"], season=CFG["season"],
                                                    comments=comments, comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
 
 
@@ -348,6 +348,8 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
 
 
 def main() -> None:
+    shutil.rmtree(DOCS / "assets", ignore_errors=True)
+    shutil.copytree(WEEKLY / "assets", DOCS / "assets")        # logo
     today = date.today()
     tg = team_games(ROOT / "data", CFG["team"])
     opps = build_opponents(tg, today)
