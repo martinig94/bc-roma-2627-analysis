@@ -111,6 +111,10 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   Pages written by hand (`reports/matchup_*/README.md`, `weekly/opponent/<folder>/document.md`) are shown as they are. **No automatic
   post-game review is generated or published** unless `"reviews": true` in `weekly/config.json` (the files already in `reports/review` and
   `weekly/review` are kept but not shown); if switched on, reviews still use `weekly/review/round-NN/notes.md` (`## key` sections: `key_points`, `story`, `tactics`, `players`, `next`).
+* **Old-format analyses**: an analysis that is a hand-written page (`reports/matchup_*/README.md`, `weekly/opponent/<folder>/document.md`) and not
+  a game page file is flagged: a banner *Old format* at the top of the page, " · old format" in the Opponents dropdown, a note on its card of the
+  landing page, and a list in the output of `weekly.py`. Its tables and figures do not refresh with new data. It stops being flagged when
+  it is replaced by a game page (`weekly/games/<date>/analysis.md`).
 * **Layout**: `weekly/template/page_snapshot.md.j2` and `page_analysis.md.j2` are the default of a new page (change them and only new pages
   change), `blocks.md.j2` holds the automatic blocks (the macros behind the placeholders, shared by all pages), `review.md.j2` the review,
   `site.html.j2` the look. To add a block: add a macro to `blocks.md.j2`, put its numbers in `auto` (the generator) if needed, and add

@@ -123,6 +123,9 @@ def main() -> None:
     for r in (done if cfg.get("reviews") else []):
         if not has_text(ROOT / "weekly" / "review" / f"round-{r:02d}" / "notes.md"):
             waiting.append(f"review round {r}")
+    old = sorted(f.parent.name.removeprefix("matchup_") for f in (ROOT / "reports").glob("matchup_*/README.md"))
+    if old:
+        print("\nANALYSES IN THE OLD FORMAT (hand-written, flagged on the site; not built from the game-page files): " + "; ".join(old))
     if to_review:
         print("\nUPCOMING GAMES TO REVIEW (flagged as draft on the site until `reviewed: yes` is set in their page file): " + "; ".join(to_review))
     if waiting:
