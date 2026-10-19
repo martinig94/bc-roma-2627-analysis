@@ -15,7 +15,7 @@ import weekly_config
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--clubs", nargs="*", help="club codes whose rosters to fetch (default: the team and its opponents)")
+    ap.add_argument("--clubs", nargs="*", help="club codes whose rosters to fetch (default: the team, its opponents so far and the EuroCup opponents in weekly/schedule.csv)")
     a = ap.parse_args()
     team = weekly_config.load()["team"]
     ec.DATA.mkdir(parents=True, exist_ok=True)
@@ -24,8 +24,7 @@ def main() -> None:
     print(f"{len(results)} games ({int(results.played.sum())} played) -> {ec.DATA / 'results.csv'}")
     codes = a.clubs
     if not codes:
-        mine = results[(results.home == team) | (results.away == team)]
-        codes = sorted({*mine.home_code, *mine.away_code})
+        codes = ec.club_codes(results, team, ec.ROOT / "weekly" / "schedule.csv")
     people = []
     for club in codes:
         try:
