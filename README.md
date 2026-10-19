@@ -115,6 +115,9 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   a game page file is flagged: a banner *Old format* at the top of the page, " · old format" in the Opponents dropdown, a note on its card of the
   landing page, and a list in the output of `weekly.py`. Its tables and figures do not refresh with new data. It stops being flagged when
   it is replaced by a game page (`weekly/games/<date>/analysis.md`).
+* **Automatic-only analyses of past games**: a generated analysis of a game already played that is still exactly what was generated gets an
+  *Archive, automatic only* banner and " · automatic only" in the dropdown (and a line in the output of `weekly.py`), so readers know no
+  analyst text exists. Setting `reviewed: yes` in its page file, or editing it, removes the flag. Snapshots are not flagged this way.
 * **Layout**: `weekly/template/page_snapshot.md.j2` and `page_analysis.md.j2` are the default of a new page (change them and only new pages
   change), `blocks.md.j2` holds the automatic blocks (the macros behind the placeholders, shared by all pages), `review.md.j2` the review,
   `site.html.j2` the look. To add a block: add a macro to `blocks.md.j2`, put its numbers in `auto` (the generator) if needed, and add
