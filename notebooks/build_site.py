@@ -39,7 +39,7 @@ WEEKLY = ROOT / "weekly"
 CFG = weekly_config.load()
 AUTHOR = CFG["author"]
 TPL = jinja2.Environment(loader=jinja2.FileSystemLoader(WEEKLY / "template"), autoescape=False, keep_trailing_newline=True)
-PAGES = ["methodology", "work-plan"]     # weekly/pages/<name>.md, in header order
+PAGES = ["goal", "methodology", "work-plan"]     # weekly/pages/<name>.md, in header order
 IMAGES = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}
 
 
@@ -165,7 +165,7 @@ def shell(title: str, body: str, root: str, nav: dict, comments: bool = False, e
     c = CFG.get("comments") or {}
     edit_url = f"https://github.com/{CFG['repo']}/edit/{CFG['branch']}/{edit}" if edit and CFG.get("repo") else None
     return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, nav=nav, site_title=CFG["site_title"], league=CFG["league"], season=CFG["season"],
-                                                   comments=comments, edit_url=edit_url, has_reviews=bool(CFG.get("reviews")), comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
+                                                   comments=comments, author=CFG.get("author"), edit_url=edit_url, has_reviews=bool(CFG.get("reviews")), comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
 
 
 # ── page builders: each returns the list of entries it created ──────────────────

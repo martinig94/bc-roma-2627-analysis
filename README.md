@@ -76,7 +76,7 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   reviewed when its page file (`weekly/games/<date>/snapshot.md` or `analysis.md`) has `reviewed: yes` in the header;
   without it the banner says draft (the page is still what was generated) or work in progress (you changed it). Pages with a hand-written README or `document.md`
   are reviewed by definition. `weekly.py` prints the upcoming games still to review, and the landing page shows the same on the cards.
-* **Methodology and Work plan** are pages of the site written in `weekly/pages/methodology.md` and `weekly/pages/work-plan.md` (edit them like
+* **Goal, Methodology and Work plan** are pages of the site written in `weekly/pages/goal.md`, `weekly/pages/methodology.md` and `weekly/pages/work-plan.md` (edit them like
   any markdown file; `build_site.py` publishes them). **Comments** come from [utterances](https://utteranc.es): each page has a comment box
   at the bottom, and a comment is stored as a GitHub issue of this repository (one per page, label `comment`), so readers need a GitHub
   account. One-time setup: install the utterances app on the repository (https://github.com/apps/utterances); the repository is set in
