@@ -500,11 +500,12 @@ def write_readme(out: Path, title_date: str, games: pd.DataFrame, table: pd.Data
     L += ["", "## Top 12 by total minutes", "", "![top players](01_top_players.png)", "",
           "Height in cm (EuroLeague roster), position from ACB role / EuroLeague roster. "
           "PPG split: Liga Endesa / EuroCup.", ""]
-    photos = DATA / "photos"
+    photo_dirs = [DATA / "photos", ROOT / "data" / "eurocup" / "photos"]      # manresa_fetch.py or eurocup.py
     for r in table.itertuples():
         img = ""
-        if (photos / f"{photo_name(r.player)}.jpg").exists():      # copied next to the README, picked up by build_site.py
-            shutil.copy(photos / f"{photo_name(r.player)}.jpg", out / f"photo_{photo_name(r.player)}.jpg")
+        src = next((d / f"{photo_name(r.player)}.jpg" for d in photo_dirs if (d / f"{photo_name(r.player)}.jpg").exists()), None)
+        if src:                                                    # copied next to the README, picked up by build_site.py
+            shutil.copy(src, out / f"photo_{photo_name(r.player)}.jpg")
             img = f'<img src="photo_{photo_name(r.player)}.jpg" alt="{r.player}" width="44" align="left"> '
         ht = f"{r.height:.0f} cm" if pd.notna(r.height) else "height n/a"
         three = f"{r.fg3_pct:.0f}%" if r.fg3a else "-"

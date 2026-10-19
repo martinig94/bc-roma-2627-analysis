@@ -153,6 +153,9 @@ def build_snapshots(nav_holder: dict, opponents: list[dict]) -> list[dict]:
         a = json.loads((src / "auto.json").read_text(encoding="utf-8"))
         notes_dir = WEEKLY / "snapshot" / src.name
         n = parse_notes(notes_dir / "notes.md")
+        if a.get("standings_table", {}).get("position"):
+            a["standings_table"]["position_suffix"] = ordinal(a["standings_table"]["position"])
+        a.setdefault("standings_table", {"kind": "LBA", "available": True})
         a.update(date_long=long_date(a["date"]), position_suffix=ordinal(a["position"]),
                  opponent_link=f"../../opponent/{a['opponent_analysis']}/" if a.get("opponent_analysis") in have_opp else None)
         page_md = TPL.get_template("snapshot.md.j2").render(a=a, n=n, author=AUTHOR)

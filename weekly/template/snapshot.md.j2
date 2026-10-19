@@ -18,21 +18,23 @@
 {% endif %}
 ## Where {{ a.team }} stands
 
-**LBA: {{ a.record }} · {{ a.position }}{{ a.position_suffix }} in the standings ({{ a.points }} points){% if a.record_ec %} · EuroCup: {{ a.record_ec }}{% endif %} · last five games (both competitions): {{ a.form }}**
+**{% if a.competition == 'LBA' %}LBA: {{ a.record }} · {{ a.position }}{{ a.position_suffix }} in the standings ({{ a.points }} points){% if a.record_ec %} · EuroCup: {{ a.record_ec }}{% endif %}{% else %}EuroCup: {{ a.standings_table.record or a.record_ec or '0-0' }}{% if a.standings_table.position %} · {{ a.standings_table.position }}{{ a.standings_table.position_suffix }} of {{ a.standings_table.teams }} in its group{% endif %} · LBA: {{ a.record }} · {{ a.position }}{{ a.position_suffix }} in the standings ({{ a.points }} points){% endif %} · last five games (both competitions): {{ a.form }}**
 
 {{ a.md.last_results }}
 
 {% if n.form %}{{ n.form }}
 
-{% endif %}LBA standings before this game:
+{% endif %}{% if a.standings_table.available %}{{ a.standings_table.kind if a.standings_table.kind != 'LBA' else 'LBA' }} standings before this game{% if a.competition != 'LBA' %} (the group of {{ a.team }}){% endif %}:
 
 ![standings](standings.png)
+{% else %}EuroCup standings are not available yet: they are computed from the EuroCup results (`data/eurocup/results.csv`), which the daily run fetches from the EuroLeague API.
+{% endif %}
 
-<details><summary>Standings table</summary>
+{% if a.standings_table.available %}<details><summary>Standings table</summary>
 
 {{ a.md.standings }}
 
-</details>
+</details>{% endif %}
 
 ### Last game
 
