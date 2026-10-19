@@ -6,7 +6,7 @@
   "team": "BC Roma",
   "opponent": "Kids&Us Manresa",
   "opponent_full": "Kids&Us Manresa",
-  "home": null,
+  "home": false,
   "date": "2026-10-20",
   "time": "",
   "venue": null,
