@@ -67,6 +67,8 @@ def player_table(box: pd.DataFrame, heights: pd.DataFrame) -> pd.DataFrame:
     for col in ("pts", "reb", "ast", "stl", "tov", "plus_minus"):
         table[f"{col}_pg"] = (table.oreb + table.dreb if col == "reb" else table[col]) / g
     table["fg_pct"] = (table.fg2m + table.fg3m) / (table.fg2a + table.fg3a) * 100
+    table["fg2_pct"] = table.fg2m / table.fg2a * 100
+    table["fg2a_pg"] = table.fg2a / table.gp
     table["fg3_pct"] = table.fg3m / table.fg3a * 100
     table["ft_pct"] = table.ftm / table.fta * 100
     table["fg3a_pg"] = table.fg3a / g
@@ -116,10 +118,10 @@ def aggregate_units(stints: pd.DataFrame) -> pd.DataFrame:
 
 def fig_players(table: pd.DataFrame, out: Path) -> Path:
     """Table figure of the top-10 players."""
-    cols = ["Player", "Pos", "Ht", "GP", "MPG", "PPG", "RPG", "APG", "TOV", "STL", "FG%", "3P%", "FT%"]
+    cols = ["Player", "Pos", "Ht", "GP", "MPG", "PPG", "RPG", "APG", "TOV", "STL", "2P%", "3P%", "FT%"]
     cells = [[r.player, r.role or "-", f"{r.height:.0f}" if pd.notna(r.height) else "-", int(r.gp),
               f"{r.mpg:.1f}", f"{r.pts_pg:.1f}", f"{r.reb_pg:.1f}", f"{r.ast_pg:.1f}", f"{r.tov_pg:.1f}",
-              f"{r.stl_pg:.1f}", f"{r.fg_pct:.0f}", f"{r.fg3_pct:.0f}" if r.fg3a else "-", f"{r.ft_pct:.0f}"]
+              f"{r.stl_pg:.1f}", f"{r.fg2_pct:.0f}", f"{r.fg3_pct:.0f}" if r.fg3a else "-", f"{r.ft_pct:.0f}"]
              for r in table.itertuples()]
     fig, ax = plt.subplots(figsize=(11, 0.42 * len(cells) + 1.4))
     ax.axis("off")
@@ -510,7 +512,7 @@ def write_readme(out: Path, title_date: str, games: pd.DataFrame, table: pd.Data
         ht = f"{r.height:.0f} cm" if pd.notna(r.height) else "height n/a"
         three = f"{r.fg3_pct:.0f}%" if r.fg3a else "-"
         L.append(f"- {img}**{r.player}** ({r.role}, {ht}, {int(r.gp)} GP): {r.mpg:.1f} min, **{r.pts_pg:.1f} pts**, "
-                 f"{r.reb_pg:.1f} reb, {r.ast_pg:.1f} ast, FG {r.fg_pct:.0f}% / 3P {three} / "
+                 f"{r.reb_pg:.1f} reb, {r.ast_pg:.1f} ast, 2P {r.fg2_pct:.0f}% / 3P {three} / "
                  f"FT {r.ft_pct:.0f}%; PPG {r.ppg_acb:.1f} ACB / {r.ppg_eur:.1f} EC. "
                  f"{tag(pd.Series(r._asdict())).capitalize()}.")
     L += ["", "## Lineups", "", "![lineups](lineups_Kids_Us_Manresa.png)", "",
