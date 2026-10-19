@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "round-03",
+    "round": 3,
+    "title": "Derby della Capitale: lost by one at Maxima Roma",
+    "summary": "A 95-96 defeat at PalaEur in the first Rome derby of the season.",
+    "date": "2026-10-11",
+    "opponent": "Maxima Roma",
+    "home": false,
+    "win": false,
+    "score": "95-96",
+    "record": "1-2",
+    "position": 12
+  },
+  {
+    "slug": "round-02",
+    "round": 2,
+    "title": "Round 2: BC Roma 108-70 Tortona",
+    "summary": "",
+    "date": "2026-10-04",
+    "opponent": "Tortona",
+    "home": true,
+    "win": true,
+    "score": "108-70",
+    "record": "1-1",
+    "position": 6
+  },
+  {
+    "slug": "round-01",
+    "round": 1,
+    "title": "Round 1: BC Roma 94-109 Treviso",
+    "summary": "",
+    "date": "2026-09-26",
+    "opponent": "Treviso",
+    "home": false,
+    "win": false,
+    "score": "94-109",
+    "record": "0-1",
+    "position": 13
+  }
+]

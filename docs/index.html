@@ -3,49 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LBA 2026/27 match analyses</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<title>BC Roma weekly report</title>
 <style>
-  :root { --bg:#fff; --text:#1a1a2e; --muted:#5a5e73; --line:#e3e4ea; --gold:#F2C300; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#14141c; --text:#ececf3; --muted:#a3a6b8; --line:#2c2d3a; } }
+  :root { --bg:#fff; --text:#1a1a2e; --muted:#5a5e73; --line:#e3e4ea; --gold:#F2C300; --card:#f6f6f9; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14141c; --text:#ececf3; --muted:#a3a6b8; --line:#2c2d3a; --card:#1d1d28; } }
   body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, sans-serif; }
-  header { border-bottom:4px solid var(--gold); padding:16px; position:sticky; top:0; background:var(--bg); z-index:1; }
-  .bar { max-width:980px; margin:0 auto; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
-  h1.site { font-size:1.1rem; margin:0; }
-  select { font:inherit; padding:6px 10px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
-  main { max-width:980px; margin:0 auto; padding:8px 16px 48px; }
+  header { border-bottom:4px solid var(--gold); padding:14px 16px; }
+  .bar { max-width:980px; margin:0 auto; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  .bar a { text-decoration:none; font-weight:700; }
+  .bar .sub { color:var(--muted); font-size:.9rem; }
+  main { max-width:980px; margin:0 auto; padding:8px 16px 56px; }
   img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
-  a { color:inherit; }
-  h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2rem; }
-  code { font-size:.9em; word-break:break-word; }
+  h1 { margin-bottom:.2rem; }
+  h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2.2rem; }
+  table { border-collapse:collapse; display:block; overflow-x:auto; }
+  th, td { padding:4px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  blockquote { margin:1rem 0; padding:.2rem 1rem; border-left:4px solid var(--gold); color:var(--muted); }
+  details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
+  .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
+  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:10px; background:var(--card); text-decoration:none; color:inherit; }
+  .card:hover { border-color:var(--gold); }
+  .card .rd { color:var(--muted); font-size:.85rem; }
+  .card .score { font-size:1.4rem; font-weight:700; }
+  .win { color:#2e9e5b; } .loss { color:#d94b4b; }
+  .latest { border-left:6px solid var(--gold); }
+  .nav { display:flex; justify-content:space-between; margin-top:3rem; }
 </style>
 </head>
 <body>
 <header><div class="bar">
-  <h1 class="site">LBA 2026/27 match analyses</h1>
-  <select id="pick" aria-label="Choose an analysis"></select>
+  <a href="">BC Roma 2026/27 &middot; weekly report</a>
+  <span class="sub">LBA Serie A &middot; <a href="prematch.html" style="font-weight:400">pre-match analyses</a></span>
 </div></header>
-<main id="content">Loading...</main>
-<script>
-const pick = document.getElementById("pick"), content = document.getElementById("content");
-
-async function show(slug) {
-  const base = `analyses/${slug}/`;
-  const res = await fetch(base + "README.md");
-  if (!res.ok) { content.textContent = "Could not load this analysis."; return; }
-  content.innerHTML = marked.parse(await res.text());
-  content.querySelectorAll("img").forEach(img => { img.src = base + img.getAttribute("src"); img.loading = "lazy"; });
-  content.querySelectorAll("a[href^=http]").forEach(a => { a.target = "_blank"; a.rel = "noopener"; });
-  window.scrollTo(0, 0);
-}
-
-fetch("analyses.json").then(r => r.json()).then(list => {
-  list.forEach(e => pick.add(new Option(e.title + "  (before " + e.date + ")", e.slug)));
-  const wanted = location.hash.slice(1);
-  if (list.some(e => e.slug === wanted)) pick.value = wanted;
-  pick.onchange = () => { location.hash = pick.value; show(pick.value); };
-  show(pick.value);
-}).catch(() => { content.textContent = "Could not load the list of analyses."; });
-</script>
+<main>
+<h1>BC Roma 2026/27 weekly report</h1><p>One report per round of the LBA Serie A: the game, the players, the league table. Pre-match opponent analyses are <a href="prematch.html">here</a>.</p><div class="cards"><a class="card latest" href="weekly/round-03/"><div class="rd">Round 3 · 2026-10-11 · latest</div><div class="score"><span class="loss">L</span> 95-96 at Maxima Roma</div><div class="rd">1-2 · 12th in the standings</div><div>A 95-96 defeat at PalaEur in the first Rome derby of the season.</div></a><a class="card" href="weekly/round-02/"><div class="rd">Round 2 · 2026-10-04</div><div class="score"><span class="win">W</span> 108-70 vs Tortona</div><div class="rd">1-1 · 6th in the standings</div></a><a class="card" href="weekly/round-01/"><div class="rd">Round 1 · 2026-09-26</div><div class="score"><span class="loss">L</span> 94-109 at Treviso</div><div class="rd">0-1 · 13th in the standings</div></a></div>
+</main>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<style>
+  :root { --bg:#fff; --text:#1a1a2e; --muted:#5a5e73; --line:#e3e4ea; --gold:#F2C300; --card:#f6f6f9; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14141c; --text:#ececf3; --muted:#a3a6b8; --line:#2c2d3a; --card:#1d1d28; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, sans-serif; }
+  header { border-bottom:4px solid var(--gold); padding:14px 16px; }
+  .bar { max-width:980px; margin:0 auto; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  .bar a { text-decoration:none; font-weight:700; }
+  .bar .sub { color:var(--muted); font-size:.9rem; }
+  main { max-width:980px; margin:0 auto; padding:8px 16px 56px; }
+  img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
+  h1 { margin-bottom:.2rem; }
+  h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2.2rem; }
+  table { border-collapse:collapse; display:block; overflow-x:auto; }
+  th, td { padding:4px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  blockquote { margin:1rem 0; padding:.2rem 1rem; border-left:4px solid var(--gold); color:var(--muted); }
+  details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
+  .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
+  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:10px; background:var(--card); text-decoration:none; color:inherit; }
+  .card:hover { border-color:var(--gold); }
+  .card .rd { color:var(--muted); font-size:.85rem; }
+  .card .score { font-size:1.4rem; font-weight:700; }
+  .win { color:#2e9e5b; } .loss { color:#d94b4b; }
+  .latest { border-left:6px solid var(--gold); }
+  .nav { display:flex; justify-content:space-between; margin-top:3rem; }
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a href="{{ root }}">BC Roma 2026/27 &middot; weekly report</a>
+  <span class="sub">LBA Serie A &middot; <a href="{{ root }}prematch.html" style="font-weight:400">pre-match analyses</a></span>
+</div></header>
+<main>
+{{ body }}
+</main>
+</body>
+</html>

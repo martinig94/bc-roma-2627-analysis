@@ -1,0 +1,83 @@
+# {{ a.team }} {{ 'beat' if a.win else 'lost to' }} {{ a.opponent }}, {{ a.score_for }}-{{ a.score_against }}
+
+Round {{ a.round }} · {{ a.date_long }}{% if a.venue %} · {{ a.venue }}{% if a.town %}, {{ a.town }}{% endif %}{% endif %}{% if a.spectators %} · {{ a.spectators }} spectators{% endif %}
+
+**Record: {{ a.record }} · {{ a.position }}{{ a.position_suffix }} in the standings**
+
+{% if n.summary %}> {{ n.summary }}
+
+{% endif %}Author: {{ author }}
+
+{% if n.key_points %}## Key points
+
+{{ n.key_points }}
+
+{% endif %}
+{#- ───────────── AUTOMATIC: game summary ───────────── -#}
+## The game in numbers
+
+| | {% for q in a.quarters %}Q{{ loop.index if loop.index <= 4 else 'OT' }} | {% endfor %}Final |
+|---|{% for q in a.quarters %}---:|{% endfor %}---:|
+| **{{ a.team }}** | {% for q in a.quarters %}{{ q['for'] }} | {% endfor %}**{{ a.score_for }}** |
+| {{ a.opponent }} | {% for q in a.quarters %}{{ q['against'] }} | {% endfor %}{{ a.score_against }} |
+
+![score margin](margin.png)
+
+{% if n.story %}## How it was decided
+
+{{ n.story }}
+
+{% endif %}
+### Team numbers
+
+{{ a.md.four_factors }}
+
+eFG% = (2P + 1.5 × 3P) / FGA · TOV% = turnovers per 100 possessions · OREB% = share of available offensive rebounds · FT rate = free throw attempts per field goal attempt.
+
+{% if n.tactics %}## Tactical notes
+
+{{ n.tactics }}
+
+{% endif %}
+## Players
+
+![players](players.png)
+
+{% if n.players %}{{ n.players }}
+
+{% endif %}
+<details><summary>Full box score, {{ a.team }}</summary>
+
+{{ a.md.box }}
+
+</details>
+
+<details><summary>Full box score, {{ a.opponent }}</summary>
+
+{{ a.md.box_opp }}
+
+</details>
+
+## Round {{ a.round }} across the league
+
+{{ a.md.results }}
+
+![standings](standings.png)
+
+<details><summary>Standings table</summary>
+
+{{ a.md.standings }}
+
+</details>
+
+## Season so far
+
+![season](season.png)
+
+{% if n.next %}## Next up
+
+{{ n.next }}
+{% elif a.next %}## Next up
+
+Round {{ a.next.round }}: {{ a.next.opponent }} ({{ 'home' if a.next.home else 'away' }}), {{ a.next.date }} at {{ a.next.time }}.
+{% endif %}
