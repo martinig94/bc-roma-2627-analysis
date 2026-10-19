@@ -90,6 +90,9 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   upcoming ones as cards, and a picker to compare two games) and *Game reviews*. The *Compare* page (`docs/compare/`, also in the header) is
   one static page: the numbers of every snapshot are embedded in it and the two situations are drawn side by side in the browser
   (`?a=<date>&b=<date>` in the address selects the games; each snapshot links to it with itself as B).
+* **Sections that open and close**: on every content page each main heading (`##` in the markdown) is a section with a ▾/▸ marker that
+  opens and closes it (plain HTML `<details>`, open by default), with **Collapse all** / **Expand all** buttons above the first one. The title,
+  banners and intro before the first `##` stay visible. Nothing to do in the markdown files.
 * **Highlighting table cells**: every page with a table has a floating **✎ Highlighter** button. With it on, a click on a cell
   highlights it (click again to remove; shift-click does the whole row), **Clear highlights** removes them all. It is for working live on
   a page (meetings, review sessions) and is kept in the browser of whoever clicks, not in the repository. For a highlight that stays
