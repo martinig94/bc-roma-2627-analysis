@@ -505,9 +505,9 @@ def main() -> None:
     if not reviews:
         shutil.rmtree(DOCS / "review", ignore_errors=True)       # reviews switched off: nothing of them is published
     pages = build_info_pages()
-    nav = {**build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"]} for p in pages]}
+    nav = {**build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"], "right": i == 0} for i, p in enumerate(pages)]}
     if len(snaps) > 1:
-        nav["pages"].insert(0, {"url": "compare/", "label": "Compare"})
+        nav["pages"].insert(0, {"url": "compare/", "label": "Compare"})     # then Goal, Methodology, Work plan, pushed to the right
     build_compare(snaps, nav)
     for p in pages:
         (DOCS / p["slug"]).mkdir(parents=True, exist_ok=True)
