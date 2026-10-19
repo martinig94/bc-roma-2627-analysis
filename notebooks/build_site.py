@@ -109,8 +109,15 @@ def long_date(iso: str) -> str:
     return date.fromisoformat(iso).strftime("%A %d %B %Y")
 
 
+def mark_highlights(text: str) -> str:
+    """==text== -> a highlighted span (like the marked cells of a Word table); code spans are left alone."""
+    parts = re.split(r"(`[^`]*`)", text)
+    return "".join(p if p.startswith("`") else re.sub(r"(?<![=\w])==(?=\S)(.+?)(?<=\S)==(?![=\w])", r'<span class="mark">\1</span>', p)
+                   for p in parts)
+
+
 def md_html(text: str) -> str:
-    return markdown.markdown(text, extensions=["tables", "md_in_html", "sane_lists"])
+    return markdown.markdown(mark_highlights(text), extensions=["tables", "md_in_html", "sane_lists"])
 
 
 def copy_images(src: Path, *more: Path, dest: Path) -> list[str]:

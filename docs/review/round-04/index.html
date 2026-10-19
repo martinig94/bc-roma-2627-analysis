@@ -48,6 +48,13 @@
   .doc th, .doc td { white-space:normal; text-align:left; vertical-align:top; }
   .edit { margin:.6rem 0 0; font-size:.9rem; }
   .edit a { font-weight:600; }
+  .hl { background:#ffe27a !important; box-shadow:inset 0 0 0 1px #c99a00; }
+  body.hl-mode main table td { cursor:cell; }
+  .hl-tools { position:fixed; right:16px; bottom:16px; display:flex; gap:8px; z-index:5; }
+  .hl-tools button { font:inherit; font-size:.85rem; padding:6px 12px; border:1px solid var(--gold); border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,.15); }
+  .hl-tools button[aria-pressed="true"] { background:var(--gold); }
+  .hl-tools button:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
+  @media print { .hl-tools, .edit { display:none; } }
   .muted { color:var(--muted); font-size:.9rem; }
   .comments { margin-top:3rem; }
 </style>
@@ -294,5 +301,40 @@ Bold = starter.
 <script src="https://utteranc.es/client.js" repo="martinig94/bc-roma-2627-analysis" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>
 </section>
 </main>
+<div class="hl-tools" id="hl-tools" hidden>
+  <button type="button" id="hl-clear" hidden>Clear highlights</button>
+  <button type="button" id="hl-toggle" aria-pressed="false" title="Click table cells to highlight them (shift-click: the whole row). Kept in this browser only.">&#9998; Highlighter</button>
+</div>
+<script>
+// Live highlighter: with it on, a click on a table cell highlights it (shift-click: the row). Saved in this browser only.
+(function () {
+  var tables = [].slice.call(document.querySelectorAll("main table"));
+  if (!tables.length) return;
+  var KEY = "bcroma-highlights:" + location.pathname, saved = [];
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) {}
+  var cells = [].slice.call(document.querySelectorAll("main table td"));
+  var id = function (td) { return tables.indexOf(td.closest("table")) + ":" + td.parentNode.rowIndex + ":" + td.cellIndex; };
+  var store = function () { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} };
+  var set = function (td, on) { var k = id(td), i = saved.indexOf(k); td.classList.toggle("hl", on);
+                                if (on && i < 0) saved.push(k); if (!on && i >= 0) saved.splice(i, 1); };
+  cells.forEach(function (td) { if (saved.indexOf(id(td)) >= 0) td.classList.add("hl"); });
+  var tools = document.getElementById("hl-tools"), toggle = document.getElementById("hl-toggle"), clear = document.getElementById("hl-clear");
+  tools.hidden = false;
+  toggle.addEventListener("click", function () {
+    var on = toggle.getAttribute("aria-pressed") !== "true";
+    toggle.setAttribute("aria-pressed", on); document.body.classList.toggle("hl-mode", on); clear.hidden = !on;
+  });
+  clear.addEventListener("click", function () { cells.forEach(function (td) { td.classList.remove("hl"); }); saved = []; store(); });
+  document.addEventListener("click", function (ev) {
+    if (!document.body.classList.contains("hl-mode")) return;
+    var td = ev.target.closest && ev.target.closest("main table td");
+    if (!td) return;
+    ev.preventDefault();
+    var targets = ev.shiftKey ? [].slice.call(td.parentNode.cells).filter(function (c) { return c.tagName === "TD"; }) : [td];
+    var on = !td.classList.contains("hl");
+    targets.forEach(function (c) { set(c, on); }); store();
+  });
+})();
+</script>
 </body>
 </html>
