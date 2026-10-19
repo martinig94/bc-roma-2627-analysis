@@ -96,7 +96,7 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
         "kind": "snapshot", "key": key, "competition": g.competition, "round": None if pd.isna(g["round"]) else int(g["round"]),
         "team": team, "opponent": g.opponent, "opponent_full": opp, "home": None if nn(g.home) is None else bool(g.home),
         "date": date, "time": g.time, "venue": (None if venue.empty or pd.isna(venue.iloc[0]) else venue.iloc[0]) if is_lba else None,
-        "played": bool(g.finished), "opponent_analysis": nn(g.analysis),
+        "played": bool(g.finished), "n_before": tgm.n_before(tg, games, date), "opponent_analysis": nn(g.analysis),
         "record": f"{int(tab.loc[team, 'w'])}-{int(tab.loc[team, 'l'])}", "position": int(tab.loc[team, "pos"]), "points": int(tab.loc[team, "pts"]),
         "record_ec": f"{int(ec_before.win.sum())}-{int(len(ec_before) - ec_before.win.sum())}" if len(ec_before) else None,
         "form": "".join("W" if w else "L" for w in before.win.tail(5)),

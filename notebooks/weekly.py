@@ -19,6 +19,7 @@ Your text lives in weekly/{snapshot,opponent,review}/.../notes.md, created empty
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -61,7 +62,12 @@ def main() -> None:
     tg = team_games.team_games(ROOT / "data", team)
     targets = team_games.snapshot_targets(tg, f"{date.today():%Y-%m-%d}")
     rnd_key = {int(r["round"]): r["key"] for _, r in tg[tg.competition == "LBA"].iterrows()}
-    snap_done = lambda key: (ROOT / "reports" / "snapshot" / key / "auto.json").exists()
+    games_df = pd.read_csv(ROOT / "data" / "games.csv")
+
+    def snap_done(key: str) -> bool:
+        """Generated, and with the data that is available now (a snapshot of a future game goes stale when games are collected)."""
+        path = ROOT / "reports" / "snapshot" / key / "auto.json"
+        return path.exists() and json.loads(path.read_text(encoding="utf-8")).get("n_before") == team_games.n_before(tg, games_df, key)
     lba_targets = [int(r) for r in targets[targets.competition == "LBA"]["round"]]
     rep = lambda kind, r: ROOT / "reports" / kind / f"round-{r:02d}" / "auto.json"
     if a.game:

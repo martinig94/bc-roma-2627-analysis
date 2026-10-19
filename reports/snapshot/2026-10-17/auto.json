@@ -11,6 +11,7 @@
   "time": "16:00",
   "venue": "Palazzetto dello Sport",
   "played": false,
+  "n_before": 29,
   "opponent_analysis": "matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17",
   "record": "1-2",
   "position": 12,
