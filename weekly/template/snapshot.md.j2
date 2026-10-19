@@ -5,9 +5,7 @@
 **Pre-game snapshot: only data from games played before {{ a.date_long }}, in both competitions.**
 {% if a.opponent_link %}The analysis of the opponent is [here]({{ a.opponent_link }}).{% endif %}
 
-{% if a.missing %}> **Not in the data yet:** {{ a.missing|join('; ') }}. The snapshot does not include {{ 'it' if a.missing|length == 1 else 'them' }}; it is updated by the next collection of games.
-
-{% endif %}{% if n.summary %}> {{ n.summary }}
+{% if n.summary %}> {{ n.summary }}
 
 {% endif %}Author: {{ author }}
 

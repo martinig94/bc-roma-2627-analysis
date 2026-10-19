@@ -37,30 +37,22 @@
 <body>
 <header><div class="bar">
   <a href="../../">BC Roma 2026/27 · weekly report</a>
-  <select aria-label="Before each game" onchange="if(this.value)location.href='../../'+this.value">
-    <option value="">Team before each game &#9662;</option>
-    <option value="snapshot/2026-10-24/">2026-10-24 · LBA R5 at Varese</option>
-    <option value="snapshot/2026-10-20/">2026-10-20 · EuroCup at Kids&Us Manresa</option>
-    <option value="snapshot/2026-10-17/">2026-10-17 · LBA R4 vs Venezia</option>
-    <option value="snapshot/2026-10-11/">2026-10-11 · LBA R3 at Maxima Roma</option>
-    <option value="snapshot/2026-10-07/">2026-10-07 · EuroCup vs Lietkabelis Panevezys</option>
-    <option value="snapshot/2026-10-04/">2026-10-04 · LBA R2 vs Tortona</option>
-    <option value="snapshot/2026-09-30/">2026-09-30 · EuroCup at Bahcesehir College Istanbul</option>
-    
-  </select>
-  <select aria-label="Opponent analysis" onchange="if(this.value)location.href='../../'+this.value">
-    <option value="">Opponent analysis &#9662;</option>
-    <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">Openjobmetis Varese vs BC Roma · 2026-10-24</option>
-    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">Kids&Us Manresa scouting report (Liga Endesa + EuroCup) · 2026-10-18</option>
-    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">BC Roma vs Umana Reyer Venezia · 2026-10-17</option>
-    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">Derby della Capitale — Maxima Roma vs BC Roma · 2026-10-11</option>
-    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">BC Roma vs Bertram Derthona Tortona · 2026-10-04</option>
+  <select aria-label="Opponents" onchange="if(this.value)location.href='../../'+this.value">
+    <option value="">Opponents &#9662;</option>
+    <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
+    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct</option>
+    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct</option>
+    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">at Maxima Roma · LBA round 3 · 11 Oct</option>
+    <option value="snapshot/2026-10-07/">vs Lietkabelis Panevezys · EuroCup · 7 Oct</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">vs Tortona · LBA round 2 · 4 Oct</option>
+    <option value="snapshot/2026-09-30/">at Bahcesehir College Istanbul · EuroCup · 30 Sep</option>
     
   </select>
   <a href="../../#reviews" style="font-weight:400">Game reviews</a>
 </div></header>
 <main>
 <h1>Derby della Capitale — Maxima Roma vs BC Roma</h1>
+<p>BC Roma before this game: <a href="../../snapshot/2026-10-11/">pre-game snapshot</a>.</p>
 <p>LBA 2026/27, Round 3 · Sunday 11 October 2026, 18:15 · PalaEur (first two rings sold out, 6,100+ tickets by Thursday)</p>
 <p>Data: both teams' LBA games (rounds 1–2, from the legabasket.it play-by-play) and EuroCup rounds 1–2 (EuroLeague API box scores and shot zones). League references are the other 14 LBA teams' games collected so far. Four games per team is a small sample: treat everything below as early tendencies, not established facts.</p>
 <p>This folder is a frozen pre-match snapshot: it uses only games played before 11 October 2026 and is not meant to change. Regenerate it identically with <code>python notebooks/matchup_report.py --home "Maxima Roma" --away "BC Roma" --before 2026-10-11</code> (the player cards with <code>notebooks/players_report.py --team "BC Roma" --before 2026-10-11</code>). A plain run without <code>--before</code> writes a season-to-date version to a separate folder.</p>

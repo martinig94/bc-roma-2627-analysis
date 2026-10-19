@@ -11,6 +11,7 @@
   "time": "18:15",
   "venue": "PalaEur",
   "played": true,
+  "version": 2,
   "n_before": 22,
   "opponent_analysis": "matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11",
   "record": "1-1",
@@ -28,7 +29,6 @@
     "win": true,
     "date": "2026-10-07"
   },
-  "missing": [],
   "playing_time": [
     {
       "name": "Watson",
@@ -401,6 +401,12 @@
     "players": 9,
     "others": 10,
     "games": 2
+  },
+  "standings_table": {
+    "kind": "LBA",
+    "available": true,
+    "position": null,
+    "teams": null
   },
   "md": {
     "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Virtus Bologna | 4 | 2-0 | +30 | WW |\n| 2 | Treviso | 4 | 2-0 | +18 | WW |\n| 3 | Trento | 4 | 2-1 | +10 | WLW |\n| 4 | Napoli | 4 | 2-0 | +25 | WW |\n| 5 | Venezia | 4 | 2-0 | +17 | WW |\n| 6 | Udine | 4 | 2-1 | +17 | WWL |\n| 7 | Varese | 4 | 2-1 | -12 | LWW |\n| 8 | **BC Roma** | 2 | 1-1 | +23 | LW |\n| 9 | Tortona | 2 | 1-1 | -30 | WL |\n| 10 | Verona | 2 | 1-1 | -5 | LW |\n| 11 | Milano | 2 | 1-1 | +1 | WL |\n| 12 | Trieste | 0 | 0-3 | -10 | LLL |\n| 13 | Reggio Emilia | 0 | 0-2 | -11 | LL |\n| 14 | Cantù | 0 | 0-2 | -13 | LL |\n| 15 | **Maxima Roma** | 0 | 0-2 | -28 | LL |\n| 16 | Scafati | 0 | 0-2 | -32 | LL |",

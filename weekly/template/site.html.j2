@@ -37,14 +37,9 @@
 <body>
 <header><div class="bar">
   <a href="{{ root }}">{{ site_title }}</a>
-  <select aria-label="{{ nav.snapshot_label|default('Before each game') }}" onchange="if(this.value)location.href='{{ root }}'+this.value">
-    <option value="">Team before each game &#9662;</option>
-    {% for o in nav.snapshot %}<option value="{{ o.url }}">{{ o.label }}</option>
-    {% endfor %}
-  </select>
-  <select aria-label="Opponent analysis" onchange="if(this.value)location.href='{{ root }}'+this.value">
-    <option value="">Opponent analysis &#9662;</option>
-    {% for o in nav.opponent %}<option value="{{ o.url }}">{{ o.label }}</option>
+  <select aria-label="Opponents" onchange="if(this.value)location.href='{{ root }}'+this.value">
+    <option value="">Opponents &#9662;</option>
+    {% for o in nav.games %}<option value="{{ o.url }}">{{ o.label }}</option>
     {% endfor %}
   </select>
   <a href="{{ root }}#reviews" style="font-weight:400">Game reviews</a>

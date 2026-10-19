@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NB = ROOT / "notebooks"
 CFG = weekly_config.load()
 TEAM = CFG["team"]
+VERSION = 2   # bump when the generated data changes shape: weekly.py regenerates older analyses
 
 
 def folder_name(home: str, away: str, date: str) -> str:
@@ -89,8 +90,8 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
             print(f"opponent analysis with a hand-written README, left alone: {folder.name}")
             return folder
         auto_path = folder / "auto.json"
-        stored = json.loads(auto_path.read_text(encoding="utf-8")).get("n_before") if auto_path.exists() else None
-        if not force and stored == current:          # nothing new in the data since it was generated
+        old = json.loads(auto_path.read_text(encoding="utf-8")) if auto_path.exists() else {}
+        if not force and old.get("n_before") == current and old.get("version") == VERSION:          # nothing new in the data since it was generated
             print(f"opponent analysis up to date: {folder.name}")
             return folder
     if st.finished(games, date).empty:
@@ -105,7 +106,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
     auto = {
-        "kind": "opponent", "n_before": current, "round": rnd, "team": team, "opponent": wr.short(opp), "opponent_full": opp, "home": bool(home),
+        "kind": "opponent", "version": VERSION, "n_before": current, "round": rnd, "team": team, "opponent": wr.short(opp), "opponent_full": opp, "home": bool(home),
         "home_team": g.home_team, "away_team": g.away_team, "date": date, "time": g.match_datetime[11:16],
         "venue": None if pd.isna(g.venue) else g.venue, "eurocup": bool(ec_teams),
         "eurocup_teams": [wr.short(t) for t in ec_teams], "league": CFG["league"], "roster": roster,
