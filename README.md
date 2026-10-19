@@ -53,7 +53,7 @@ analysis, which links to the BC Roma snapshot of the same game (a game without a
 |---|---|---|---|
 | **BC Roma before the game** (link from the analysis) | BC Roma's situation before every game, **in both competitions** (LBA and EuroCup): LBA and EuroCup record, LBA standings, last results of both, last game's playing-time flag, team numbers (LBA and EuroCup columns), roster with photos, assist matrix and shot zones (LBA play-by-play), TS% vs PIR (LBA only, EuroCup only), every game so far | only games played before that game, in both competitions | `docs/snapshot/<date of the game>/` |
 | **Opponent analysis** (the dropdown) | one per opponent and game, with the comparison table against BC Roma, results and standings, the opponent's roster with photos, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game: the league (LBA) plus the EuroCup, for the teams in the EuroCup file | `docs/opponent/<matchup folder>/` |
-| **Game reviews** (landing page) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
+| **Game reviews** (landing page; **off by default**, switch `"reviews": true` in `weekly/config.json`) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
 
 **Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games are not collected, add them to the EuroCup file and `weekly/schedule.csv`):
 
@@ -86,7 +86,7 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   changes under `weekly/`) rebuilds `docs/` in about a minute. People without write access get "Propose changes": GitHub forks the
   repository and opens a pull request that you merge. The repository and branch are `repo` and `branch` in `weekly/config.json`.
 * **Landing page sections**: *Next games* (opponent analyses), *BC Roma: situation, roster, form* (a dropdown of the pre-game snapshots, the
-  upcoming ones as cards, and a picker to compare two games) and *Game reviews*. The *Compare* page (`docs/compare/`, also in the header) is
+  upcoming ones as cards, and a picker to compare two games) and, if switched on, *Game reviews*. The *Compare* page (`docs/compare/`, also in the header) is
   one static page: the numbers of every snapshot are embedded in it and the two situations are drawn side by side in the browser
   (`?a=<date>&b=<date>` in the address selects the games; each snapshot links to it with itself as B).
 * **Sections that open and close**: on every content page each main heading (`##` in the markdown) is a section with a ▾/▸ marker that
@@ -108,8 +108,9 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   * **your own plots and images**: put the file in the same folder (`weekly/games/<date>/`) and write `![caption](my_plot.png)` where you
     want it (drag and drop it with GitHub's "Add file / Upload files", or copy it locally). Ask Claude to draw a plot and it goes there.
   Text in `<!-- comments -->` is not published (the prompts of a new page are comments); sections that stay empty are left out.
-  Pages written by hand (`reports/matchup_*/README.md`, `weekly/opponent/<folder>/document.md`) are shown as they are. The post-game reviews
-  still use `weekly/review/round-NN/notes.md` (`## key` sections: `key_points`, `story`, `tactics`, `players`, `next`).
+  Pages written by hand (`reports/matchup_*/README.md`, `weekly/opponent/<folder>/document.md`) are shown as they are. **No automatic
+  post-game review is generated or published** unless `"reviews": true` in `weekly/config.json` (the files already in `reports/review` and
+  `weekly/review` are kept but not shown); if switched on, reviews still use `weekly/review/round-NN/notes.md` (`## key` sections: `key_points`, `story`, `tactics`, `players`, `next`).
 * **Layout**: `weekly/template/page_snapshot.md.j2` and `page_analysis.md.j2` are the default of a new page (change them and only new pages
   change), `blocks.md.j2` holds the automatic blocks (the macros behind the placeholders, shared by all pages), `review.md.j2` the review,
   `site.html.j2` the look. To add a block: add a macro to `blocks.md.j2`, put its numbers in `auto` (the generator) if needed, and add

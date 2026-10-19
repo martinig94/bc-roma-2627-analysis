@@ -85,7 +85,7 @@
     {% for o in nav.games %}<option value="{{ o.url }}">{{ o.label }}</option>
     {% endfor %}
   </select>
-  <a href="{{ root }}#reviews">Game reviews</a>
+  {% if has_reviews %}<a href="{{ root }}#reviews">Game reviews</a>{% endif %}
   {% for pg in nav.pages %}<a href="{{ root }}{{ pg.url }}">{{ pg.label }}</a>
   {% endfor %}
 </div></header>

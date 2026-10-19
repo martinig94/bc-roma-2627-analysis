@@ -19,7 +19,7 @@ judgement about plays or tactics: the pages are built from box scores and play-b
 Every pre-game page (the opponent analysis and the BC Roma snapshot) uses **only games played before the date of that game**,
 in both competitions when the team plays both. A page about a game still to come is therefore regenerated whenever new games enter
 the data, and a banner says so when earlier games are missing (still to be played, or played and not collected yet).
-The post-game review uses the data up to and including its game.
+(Post-game reviews, when switched on, use the data up to and including their game; they are off by default.)
 
 Teams that play the EuroCup (BC Roma, Maxima Roma, and any opponent present in the EuroCup file) are shown with league and EuroCup
 games; the others with league games only. The tables say which competitions were included.
