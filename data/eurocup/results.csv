@@ -1,0 +1,49 @@
+gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
+1,1,2026-09-30,BGS,Recoletas Salud San Pablo Burgos,85,LJU,Cedevita Olimpija Ljubljana,81,True
+2,1,2026-09-29,JER,Hapoel Midtown Jerusalem,94,RTK,Rostock Seawolves,73,True
+3,1,2026-09-30,RIG,Riga Zelli,86,TRT,Baglietto Derthona Tortona,84,True
+4,1,2026-09-29,LEM,Le Mans Sarthe Basket,74,ARI,Aris Thessaloniki,87,True
+5,1,2026-09-30,TNF,La Laguna Tenerife,82,TTK,Turk Telekom Ankara,75,True
+6,1,2026-09-30,MRO,Maxima Roma,89,CLU,U-Bt Cluj-Napoca,55,True
+7,1,2026-09-29,VNC,Umana Reyer Venice,104,FRA,Skyliners Frankfurt,72,True
+8,1,2026-09-30,SIA,Siauliai Basketball,74,LLI,London Lions,71,True
+9,1,2026-09-30,WRO,Slask Wroclaw,75,BUD,Buducnost Voli Podgorica,99,True
+10,1,2026-09-30,NAP,Napoli Basketball,84,BOU,Cosea Jl Bourg-En-Bresse,76,True
+11,1,2026-09-29,BUR,Tofas Bursa,82,NIN,Niners Chemnitz,69,True
+12,1,2026-09-29,KLA,Neptunas Klaipeda,73,TRN,Dolomiti Energia Trento,76,True
+13,1,2026-09-30,LKB,Lietkabelis Panevezys,75,BOS,Bosna Bh Telecom Sarajevo,72,True
+14,1,2026-09-30,PAO,Paok Thessaloniki,93,MAN,Kids&Us Manresa,78,True
+15,1,2026-09-30,ULM,Ratiopharm Ulm,98,BLK,Balkan Botevgrad,84,True
+16,1,2026-09-30,BAH,Bahcesehir College Istanbul,91,BCR,BC Roma,78,True
+17,2,2026-10-07,ARI,Aris Thessaloniki,93,BGS,Recoletas Salud San Pablo Burgos,80,True
+18,2,2026-10-07,TRT,Baglietto Derthona Tortona,89,LEM,Le Mans Sarthe Basket,83,True
+19,2,2026-10-06,RTK,Rostock Seawolves,87,RIG,Riga Zelli,86,True
+20,2,2026-10-06,LJU,Cedevita Olimpija Ljubljana,64,JER,Hapoel Midtown Jerusalem,75,True
+21,2,2026-10-06,LLI,London Lions,89,TNF,La Laguna Tenerife,77,True
+22,2,2026-10-06,FRA,Skyliners Frankfurt,79,SIA,Siauliai Basketball,71,True
+23,2,2026-10-07,CLU,U-Bt Cluj-Napoca,98,VNC,Umana Reyer Venice,92,True
+24,2,2026-10-06,TTK,Turk Telekom Ankara,92,MRO,Maxima Roma,77,True
+25,2,2026-10-06,TRN,Dolomiti Energia Trento,81,WRO,Slask Wroclaw,94,True
+26,2,2026-10-07,NIN,Niners Chemnitz,93,KLA,Neptunas Klaipeda,84,True
+27,2,2026-10-06,BOU,Cosea Jl Bourg-En-Bresse,82,BUR,Tofas Bursa,89,True
+28,2,2026-10-06,BUD,Buducnost Voli Podgorica,75,NAP,Napoli Basketball,93,True
+29,2,2026-10-07,BCR,BC Roma,92,LKB,Lietkabelis Panevezys,87,True
+30,2,2026-10-07,BLK,Balkan Botevgrad,61,BAH,Bahcesehir College Istanbul,100,True
+31,2,2026-10-07,MAN,Kids&Us Manresa,101,ULM,Ratiopharm Ulm,89,True
+32,2,2026-10-06,BOS,Bosna Bh Telecom Sarajevo,72,PAO,Paok Thessaloniki,75,True
+33,3,2026-10-14,BGS,Recoletas Salud San Pablo Burgos,84,JER,Hapoel Midtown Jerusalem,85,True
+34,3,2026-10-14,RIG,Riga Zelli,89,LJU,Cedevita Olimpija Ljubljana,79,True
+35,3,2026-10-14,LEM,Le Mans Sarthe Basket,82,RTK,Rostock Seawolves,70,True
+36,3,2026-10-14,ARI,Aris Thessaloniki,88,TRT,Baglietto Derthona Tortona,68,True
+37,3,2026-10-14,TNF,La Laguna Tenerife,96,MRO,Maxima Roma,71,True
+38,3,2026-10-14,VNC,Umana Reyer Venice,75,TTK,Turk Telekom Ankara,65,True
+39,3,2026-10-14,SIA,Siauliai Basketball,75,CLU,U-Bt Cluj-Napoca,94,True
+40,3,2026-10-15,LLI,London Lions,76,FRA,Skyliners Frankfurt,81,True
+41,3,2026-10-14,WRO,Slask Wroclaw,82,NAP,Napoli Basketball,86,True
+42,3,2026-10-14,BUR,Tofas Bursa,90,BUD,Buducnost Voli Podgorica,85,True
+43,3,2026-10-13,KLA,Neptunas Klaipeda,93,BOU,Cosea Jl Bourg-En-Bresse,89,True
+44,3,2026-10-13,TRN,Dolomiti Energia Trento,80,NIN,Niners Chemnitz,88,True
+45,3,2026-10-13,LKB,Lietkabelis Panevezys,95,PAO,Paok Thessaloniki,86,True
+46,3,2026-10-14,ULM,Ratiopharm Ulm,102,BOS,Bosna Bh Telecom Sarajevo,93,True
+47,3,2026-10-13,BAH,Bahcesehir College Istanbul,100,MAN,Kids&Us Manresa,88,True
+48,3,2026-10-13,BCR,BC Roma,77,BLK,Balkan Botevgrad,72,True
