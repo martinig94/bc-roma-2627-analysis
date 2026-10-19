@@ -4,8 +4,8 @@
 
 Three kinds of page, all reachable from the two dropdowns in the header of every page:
 
-  BC Roma snapshots (dropdown 1)   one per game, using only data from before it
-      reports/snapshot/round-NN/{auto.json, PNGs}  +  weekly/snapshot/round-NN/notes.md   ->  docs/snapshot/round-NN/
+  BC Roma snapshots (dropdown 1)   one per game in every competition, using only data from before it
+      reports/snapshot/<date>/{auto.json, PNGs}  +  weekly/snapshot/<date>/notes.md   ->  docs/snapshot/<date>/
   Opponent analyses (dropdown 2)   one per opponent and game, with the comparison against the team
       reports/matchup_*_before_<date>/  README.md (hand-written, used as it is) or auto.json + weekly/opponent/<folder>/notes.md
       ->  docs/opponent/<folder>/
@@ -27,9 +27,9 @@ import markdown
 
 import pandas as pd
 
-import standings as st
 import weekly_config
 from player_names import photo_name
+from team_games import team_games
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -132,7 +132,7 @@ def build_opponents(nav_holder: dict) -> list[dict]:
             n = parse_notes(notes_dir / "notes.md")
             a.update(date_long=long_date(a["date"]), team_suffix=ordinal(a["comparison"]["team"]["position"]),
                      opp_suffix=ordinal(a["comparison"]["opp"]["position"]))
-            a["team_link"] = f"../../snapshot/round-{a['round']:02d}/" if (ROOT / "reports" / "snapshot" / f"round-{a['round']:02d}" / "auto.json").exists() else None
+            a["team_link"] = f"../../snapshot/{a['date']}/" if (ROOT / "reports" / "snapshot" / a["date"] / "auto.json").exists() else None
             page_md = TPL.get_template("opponent.md.j2").render(a=a, n=n, author=AUTHOR, files=files)
             title, rnd = n.get("title") or f"{a['home_team']} vs {a['away_team']}", a["round"]
         else:
@@ -147,25 +147,23 @@ def build_snapshots(nav_holder: dict, opponents: list[dict]) -> list[dict]:
     shutil.rmtree(DOCS / "snapshot", ignore_errors=True)
     have_opp = {e["slug"] for e in opponents}
     entries = []
-    for src in sorted((ROOT / "reports" / "snapshot").glob("round-*")):
+    for src in sorted((ROOT / "reports" / "snapshot").glob("20*")):
         if not (src / "auto.json").exists():
             continue
         a = json.loads((src / "auto.json").read_text(encoding="utf-8"))
         notes_dir = WEEKLY / "snapshot" / src.name
         n = parse_notes(notes_dir / "notes.md")
-        home_t, away_t = (a["team"], a["opponent_full"]) if a["home"] else (a["opponent_full"], a["team"])
-        slug = folder_name(home_t, away_t, a["date"])
         a.update(date_long=long_date(a["date"]), position_suffix=ordinal(a["position"]),
-                 opponent_link=f"../../opponent/{slug}/" if slug in have_opp else None)
+                 opponent_link=f"../../opponent/{a['opponent_analysis']}/" if a.get("opponent_analysis") in have_opp else None)
         page_md = TPL.get_template("snapshot.md.j2").render(a=a, n=n, author=AUTHOR)
-        title = n.get("title") or f"{a['team']} {'vs' if a['home'] else 'at'} {a['opponent']}"
+        short = f"{a['competition']}{' R' + str(a['round']) if a['round'] else ''} {'at' if a['home'] is False else 'vs'} {a['opponent']}"
+        title = n.get("title") or f"{a['team']} {short}"
         copy_images(src, notes_dir, dest=DOCS / "snapshot" / src.name)
-        entries.append({"slug": src.name, "round": a["round"], "title": title, "date": a["date"], "html": md_html(page_md),
-                        "opponent": a["opponent"], "home": a["home"], "record": a["record"], "position": a["position"],
-                        "opponent_slug": slug if slug in have_opp else None})
-    entries.sort(key=lambda e: e["round"], reverse=True)
-    nav_holder["snapshot"] = [{"url": f"snapshot/{e['slug']}/",
-                               "label": f"Round {e['round']}: {e['title']} · {e['date']}"} for e in entries]
+        entries.append({"slug": src.name, "title": title, "label": f"{a['date']} · {n.get('title') or short}", "date": a["date"],
+                        "html": md_html(page_md), "opponent": a["opponent"], "competition": a["competition"], "home": a["home"],
+                        "opponent_slug": a.get("opponent_analysis") if a.get("opponent_analysis") in have_opp else None})
+    entries.sort(key=lambda e: e["date"], reverse=True)
+    nav_holder["snapshot"] = [{"url": f"snapshot/{e['slug']}/", "label": e["label"]} for e in entries]
     return entries
 
 
@@ -196,29 +194,17 @@ def write_pages(kind: str, entries: list[dict], nav: dict) -> None:
 
 
 def next_game(snaps: list[dict], opps: list[dict], today: date) -> dict | None:
-    """The first game from today on, in any competition: LBA games not finished yet (data/games.csv) and the other
-    competitions' games listed in weekly/schedule.csv (date, time, competition, opponent, home, analysis folder)."""
-    team = CFG["team"]
-    cands = []
-    games = pd.read_csv(ROOT / "data" / "games.csv")
-    for _, g in games[(games.game_status.astype(str) != "2") & ((games.home_team == team) | (games.away_team == team))].iterrows():
-        day = g.match_datetime[:10]
-        home = g.home_team == team
-        opp = g.away_team if home else g.home_team
-        cands.append({"date": day, "time": g.match_datetime[11:16], "competition": CFG["league"], "opponent": st.short(opp), "home": home,
-                      "analysis": folder_name(g.home_team, g.away_team, day), "snapshot": f"round-{int(g['round']):02d}"})
-    sched = WEEKLY / "schedule.csv"
-    if sched.exists():
-        for r in pd.read_csv(sched, dtype=str, keep_default_na=False).itertuples():
-            cands.append({"date": r.date, "time": r.time, "competition": r.competition, "opponent": r.opponent,
-                          "home": {"1": True, "0": False}.get(r.home), "analysis": r.analysis or None, "snapshot": None})
-    cands = [c for c in cands if c["date"] >= f"{today:%Y-%m-%d}"]
-    if not cands:
+    """The first game from today on, in any competition (team_games.py: LBA, EuroCup, weekly/schedule.csv)."""
+    tg = team_games(ROOT / "data", CFG["team"])
+    fut = tg[(~tg.finished) & (tg.date >= f"{today:%Y-%m-%d}")]
+    if fut.empty:
         return None
-    c = min(cands, key=lambda x: (x["date"], x["time"] or "99"))
-    c["analysis"] = c["analysis"] if c["analysis"] in {e["slug"] for e in opps} else None
-    c["snapshot"] = c["snapshot"] if c["snapshot"] in {e["slug"] for e in snaps} else None
-    return c
+    c = fut.iloc[0]
+    home = None if c.home is None or pd.isna(c.home) else bool(c.home)
+    return {"date": c.date, "time": c.time or "", "competition": c.competition if c.competition != "LBA" else CFG["league"],
+            "opponent": c.opponent, "home": home,
+            "analysis": c.analysis if c.analysis in {e["slug"] for e in opps} else None,
+            "snapshot": c.key if c.key in {e["slug"] for e in snaps} else None}
 
 
 def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[dict], today: date) -> None:
@@ -226,7 +212,7 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
         return (f'<a class="card{" latest" if latest else ""}" href="{href}"><div class="rd">{kicker}</div>'
                 f'<div class="score">{main}</div><div class="rd">{sub}</div></a>')
     parts = [f"<h1>{CFG['site_title']}</h1>",
-             f"<p>The {CFG['league']} season of {CFG['team']}, in three parts: the team's situation before every game, "
+             f"<p>The season of {CFG['team']} ({CFG['league']} and EuroCup), in three parts: the team's situation before every game, "
              "the analysis of every opponent, and the review of every game played. "
              "The first two are always available from the dropdowns at the top; each uses only data from before its game.</p>"]
     nxt = next_game(snaps, opps, today)

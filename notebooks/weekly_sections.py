@@ -272,3 +272,31 @@ def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)
         "Opp. TOV% (forced)": r(100 * opp.tov.sum() / po.sum()),
         "DREB%": r(100 * mine.dreb.sum() / (mine.dreb + opp.oreb).sum()),
     }
+
+
+# ── form across competitions ────────────────────────────────────────────────────
+def fig_form(before: pd.DataFrame, out: Path, team: str = TEAM) -> None:
+    """Points scored and conceded in every game played so far, in date order; circles = league, squares = EuroCup."""
+    from matplotlib.lines import Line2D
+    GOLD, GOLD_EDGE = team_color(team)
+    blue = "#4a7fc1"
+    n = len(before)
+    x = np.arange(1, n + 1)
+    fig, ax = plt.subplots(figsize=(max(9.0, 1.05 * n + 3), 4.8))
+    ax.plot(x, before.pf, color=GOLD_EDGE, lw=2.2, zorder=2)
+    ax.plot(x, before.pa, color=blue, lw=2.2, zorder=2)
+    for i, (_, r) in enumerate(before.iterrows(), start=1):
+        mk = "o" if r.competition == "LBA" else "s"
+        ax.scatter(i, r.pf, marker=mk, s=95, color=GOLD, edgecolor=GOLD_EDGE, zorder=3)
+        ax.scatter(i, r.pa, marker=mk, s=75, color=blue, zorder=3)
+        ax.text(i, r.pf + 3, int(r.pf), ha="center", fontsize=9, color=TEXT)
+        ax.text(i, r.pa - 7, int(r.pa), ha="center", fontsize=9, color=blue)
+    ax.set_xticks(x, [f"{o[:15]}\n{d[8:]}/{d[5:7]}" for o, d in zip(before.opponent, before.date)], fontsize=8.5)
+    ax.set_ylabel("points")
+    ax.legend(handles=[Line2D([], [], color=GOLD_EDGE, marker="o", mfc=GOLD, label=f"{team} scored"),
+                       Line2D([], [], color=blue, marker="o", label=f"{team} conceded"),
+                       Line2D([], [], color=TEXT2, marker="o", ls="", label="league (LBA)"),
+                       Line2D([], [], color=TEXT2, marker="s", ls="", label="EuroCup")], loc="upper left", ncol=4, fontsize=8)
+    style_axes(ax, "y")
+    ax.set_title("Every game so far, both competitions: points scored and conceded", loc="left", **TITLE_KW)
+    save_fig(fig, out / "season.png"); plt.close(fig)
