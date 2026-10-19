@@ -92,8 +92,8 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
 * **Sections that open and close**: on every content page each main heading (`##` in the markdown) is a section with a ▾/▸ marker that
   opens and closes it (plain HTML `<details>`, open by default), with **Collapse all** / **Expand all** buttons above the first one. The title,
   banners and intro before the first `##` stay visible. Nothing to do in the markdown files.
-* **Highlighting table cells**: every page with a table has a floating **✎ Highlighter** button. With it on, a click on a cell
-  highlights it (click again to remove; shift-click does the whole row), **Clear highlights** removes them all. It is for working live on
+* **Highlighting table cells**: every page with a table has a floating **✎ Highlighter** button. With it on, pick a colour (five swatches) and
+  a click on a cell highlights it (click again with the same colour to remove, with another colour to recolour; shift-click does the whole row), **Clear highlights** removes them all. It is for working live on
   a page (meetings, review sessions) and is kept in the browser of whoever clicks, not in the repository. For a highlight that stays
   for everybody, write `==text==` in the markdown file (for instance `| ==4.5== |` in a table written by hand, or in `document.md`).
 * **Your pages** (snapshot and opponent analysis): one markdown file per game and page, `weekly/games/<date>/snapshot.md` (BC Roma before the
