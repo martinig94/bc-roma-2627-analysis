@@ -89,7 +89,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM) -> list[dict]:
             "player_id": pid, "photo": pid in photos, "name": sur.title(), "pos": pos, "height": ht, "gp": n,
             "min": round(g.sec.sum() / 60 / n, 1), "pts": round(g.pts.sum() / n, 1), "reb": round((g.oreb + g.dreb).sum() / n, 1),
             "ast": round(g.ast.sum() / n, 1), "pir": round(g.val.sum() / n, 1),
-            "fg": f"{pct(g.fg2m.sum() + g.fg3m.sum(), fga)} ({fga / n:.1f})",
+            "fg2": f"{pct(g.fg2m.sum(), g.fg2a.sum())} ({g.fg2a.sum() / n:.1f})",
             "fg3": f"{pct(g.fg3m.sum(), g.fg3a.sum())} ({g.fg3a.sum() / n:.1f})",
             "ft": f"{pct(g.ftm.sum(), g.fta.sum())} ({g.fta.sum() / n:.1f})",
             "ppg_lba": round(lba.pts.mean(), 1) if len(lba) else None, "ppg_ec": round(ec.pts.mean(), 1) if len(ec) else None,
