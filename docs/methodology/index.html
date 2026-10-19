@@ -63,7 +63,11 @@
   .doc th, .doc td { white-space:normal; text-align:left; vertical-align:top; }
   .edit { margin:.6rem 0 0; font-size:.9rem; }
   .edit a { font-weight:600; }
-  .hl { background:#ffe27a !important; box-shadow:inset 0 0 0 1px #c99a00; }
+  .hl { background:var(--hl, #ffe27a) !important; box-shadow:inset 0 0 0 1px rgba(0,0,0,.35); }
+  .hl-colors { display:none; gap:6px; align-items:center; background:var(--paper); border:1px solid var(--gold); border-radius:999px; padding:4px 8px; box-shadow:0 1px 4px rgba(0,0,0,.15); }
+  body.hl-mode .hl-colors { display:flex; }
+  .hl-colors button { width:22px; height:22px; padding:0; border-radius:50%; border:2px solid transparent; box-shadow:0 0 0 1px rgba(0,0,0,.35); cursor:pointer; }
+  .hl-colors button[aria-pressed="true"] { border-color:var(--ink); }
   body.hl-mode main table td { cursor:cell; }
   .hl-tools { position:fixed; right:16px; bottom:16px; display:flex; gap:8px; z-index:5; }
   .hl-tools button { font:inherit; font-size:.85rem; padding:6px 12px; border:1px solid var(--gold); border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,.15); }
@@ -89,14 +93,12 @@
     <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct · old format</option>
     <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct · old format</option>
     <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">at Maxima Roma · LBA round 3 · 11 Oct · old format</option>
-    <option value="snapshot/2026-10-07/">vs Lietkabelis Panevezys · EuroCup · 7 Oct</option>
     <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">vs Tortona · LBA round 2 · 4 Oct · automatic only</option>
-    <option value="snapshot/2026-09-30/">at Bahcesehir College Istanbul · EuroCup · 30 Sep</option>
     
   </select>
   
   <a href="../compare/">Compare</a>
-  <a href="../goal/">Goal</a>
+  <a href="../goal/" class="right">Goal</a>
   <a href="../methodology/">Methodology</a>
   <a href="../work-plan/">Work plan</a>
   
@@ -220,6 +222,7 @@ say which games before this one are not in the data yet.</p>
 </main>
 <footer class="author">Author: Giulia Martini</footer>
 <div class="hl-tools" id="hl-tools" hidden>
+  <span class="hl-colors" id="hl-colors" role="group" aria-label="Highlighter colour"></span>
   <button type="button" id="hl-clear" hidden>Clear highlights</button>
   <button type="button" id="hl-toggle" aria-pressed="false" title="Click table cells to highlight them (shift-click: the whole row). Kept in this browser only.">&#9998; Highlighter</button>
 </div>
@@ -238,33 +241,43 @@ say which games before this one are not in the data yet.</p>
 })();
 </script>
 <script>
-// Live highlighter: with it on, a click on a table cell highlights it (shift-click: the row). Saved in this browser only.
+// Live highlighter: with it on, a click on a table cell highlights it in the chosen colour (shift-click: the row);
+// click again with the same colour to remove it, with another colour to recolour it. Saved in this browser only.
 (function () {
   var tables = [].slice.call(document.querySelectorAll("main table"));
   if (!tables.length) return;
-  var KEY = "bcroma-highlights:" + location.pathname, saved = [];
-  try { saved = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) {}
+  var COLORS = [["#ffe27a", "yellow"], ["#a8e6a1", "green"], ["#9fd3f5", "blue"], ["#f7b3d0", "pink"], ["#ffb980", "orange"]];
+  var KEY = "bcroma-highlights:" + location.pathname, saved = {}, cur = 0;
+  try {
+    var raw = JSON.parse(localStorage.getItem(KEY) || "{}");
+    if (Array.isArray(raw)) raw.forEach(function (k) { saved[k] = COLORS[0][0]; }); else saved = raw;   // older versions: a list of cells, all yellow
+  } catch (e) {}
   var cells = [].slice.call(document.querySelectorAll("main table td"));
   var id = function (td) { return tables.indexOf(td.closest("table")) + ":" + td.parentNode.rowIndex + ":" + td.cellIndex; };
   var store = function () { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} };
-  var set = function (td, on) { var k = id(td), i = saved.indexOf(k); td.classList.toggle("hl", on);
-                                if (on && i < 0) saved.push(k); if (!on && i >= 0) saved.splice(i, 1); };
-  cells.forEach(function (td) { if (saved.indexOf(id(td)) >= 0) td.classList.add("hl"); });
-  var tools = document.getElementById("hl-tools"), toggle = document.getElementById("hl-toggle"), clear = document.getElementById("hl-clear");
+  var paint = function (td, c) { if (c) { td.classList.add("hl"); td.style.setProperty("--hl", c); } else { td.classList.remove("hl"); td.style.removeProperty("--hl"); } };
+  cells.forEach(function (td) { paint(td, saved[id(td)]); });
+  var tools = document.getElementById("hl-tools"), toggle = document.getElementById("hl-toggle"), clear = document.getElementById("hl-clear"), box = document.getElementById("hl-colors");
+  COLORS.forEach(function (c, i) {
+    var b = document.createElement("button"); b.type = "button"; b.style.background = c[0]; b.title = c[1]; b.setAttribute("aria-label", c[1]); b.setAttribute("aria-pressed", i === 0);
+    b.addEventListener("click", function () { cur = i; [].forEach.call(box.children, function (x, j) { x.setAttribute("aria-pressed", j === i); }); });
+    box.appendChild(b);
+  });
   tools.hidden = false;
   toggle.addEventListener("click", function () {
     var on = toggle.getAttribute("aria-pressed") !== "true";
     toggle.setAttribute("aria-pressed", on); document.body.classList.toggle("hl-mode", on); clear.hidden = !on;
   });
-  clear.addEventListener("click", function () { cells.forEach(function (td) { td.classList.remove("hl"); }); saved = []; store(); });
+  clear.addEventListener("click", function () { cells.forEach(function (td) { paint(td, null); }); saved = {}; store(); });
   document.addEventListener("click", function (ev) {
     if (!document.body.classList.contains("hl-mode")) return;
     var td = ev.target.closest && ev.target.closest("main table td");
     if (!td) return;
     ev.preventDefault();
     var targets = ev.shiftKey ? [].slice.call(td.parentNode.cells).filter(function (c) { return c.tagName === "TD"; }) : [td];
-    var on = !td.classList.contains("hl");
-    targets.forEach(function (c) { set(c, on); }); store();
+    var color = COLORS[cur][0], remove = saved[id(td)] === color;
+    targets.forEach(function (c) { if (remove) { delete saved[id(c)]; paint(c, null); } else { saved[id(c)] = color; paint(c, color); } });
+    store();
   });
 })();
 </script>

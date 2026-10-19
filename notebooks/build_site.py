@@ -228,10 +228,10 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
             state, game_day = pages.state(meta, body), a["date"]
             page_md = pages.expand(body, "analysis", a, files, AUTHOR)
             title, rnd = meta.get("title") or f"{a['home_team']} vs {a['away_team']}", a["round"]
-            link, edit_file = None, pages.edit_path("analysis", a["date"])
+            link, edit_file = a["team_link"], pages.edit_path("analysis", a["date"])
         else:
             continue
-        extra = f"BC Roma before this game: [pre-game snapshot]({link})." if link else ""
+        extra = f"➜ **{CFG['team']} before this game:** [situation, roster and form (pre-game snapshot)]({link})" if link else ""
         edit = edit_file or (f"weekly/opponent/{slug}/document.md" if document.exists() else f"reports/{slug}/README.md")  # file with the text
         flags = flags_for(game_day, tg, today, state, edit, archive=not legacy)
         if legacy:
@@ -262,10 +262,11 @@ def build_snapshots(opponents: list[dict], tg: pd.DataFrame, today: date) -> lis
         meta, body = pages.load("snapshot", a["date"], a, files)         # weekly/games/<date>/snapshot.md (or the default)
         state = pages.state(meta, body)
         page_md = add_flags(pages.expand(body, "snapshot", a, files, AUTHOR),
-                            flags_for(a["date"], tg, today, state, pages.edit_path("snapshot", a["date"])))
+                            flags_for(a["date"], tg, today, state, pages.edit_path("snapshot", a["date"]), archive=True))
         short = f"{'at' if a['home'] is False else 'vs'} {a['opponent']}"
         title = meta.get("title") or f"{a['team']} {short}"
         entries.append({"slug": src.name, "title": title, "date": a["date"], "html": md_html(page_md), "state": state, "data": compare_data(a),
+                        "archive": a["date"] < f"{today:%Y-%m-%d}" and state == "draft",
                         "edit": pages.edit_path("snapshot", a["date"]),
                         "opponent": a["opponent"], "competition": a["competition"], "round": a["round"], "home": a["home"],
                         "opponent_slug": a.get("opponent_analysis") if a.get("opponent_analysis") in have_opp else None})
@@ -371,24 +372,18 @@ def build_info_pages() -> list[dict]:
     return entries
 
 
-def build_nav(snaps: list[dict], opps: list[dict]) -> list[dict]:
-    """The dropdown: one entry per game, newest first, opening the opponent analysis (which links to the BC Roma snapshot of
-    the game) or, when there is no analysis, the snapshot itself."""
-    rows, used = [], set()
-    old = {o["slug"] for o in opps if o.get("legacy")}
-    auto_only = {o["slug"] for o in opps if o.get("archive")}
-    for e in snaps:
-        where = "at" if e["home"] is False else "vs"
-        comp = e["competition"] + (f" round {e['round']}" if e["round"] else "")
-        url = f"opponent/{e['opponent_slug']}/" if e["opponent_slug"] else f"snapshot/{e['slug']}/"
-        used.add(e["opponent_slug"])
-        rows.append({"date": e["date"], "url": url, "label": f"{where} {e['opponent']} · {comp} · {day_label(e['date'])}"
-                                                             + (" · old format" if e["opponent_slug"] in old else " · automatic only" if e["opponent_slug"] in auto_only else "")})
-    for o in opps:                                   # analyses of games without a snapshot
-        if o["slug"] not in used:
-            rows.append({"date": o["game_date"], "url": f"opponent/{o['slug']}/",
-                         "label": f"{o['title']} · {day_label(o['game_date'])}" + (" · old format" if o.get("legacy") else " · automatic only" if o.get("archive") else "")})
-    return sorted(rows, key=lambda r: r["date"], reverse=True)
+def build_nav(snaps: list[dict], opps: list[dict]) -> dict:
+    """The Opponents dropdown, newest first: the games that have an opponent analysis (snapshots are reached from the landing page)."""
+    by_slug = {e["opponent_slug"]: e for e in snaps if e["opponent_slug"]}
+    opponents = []
+    for o in opps:
+        e = by_slug.get(o["slug"])
+        label = (f"{'at' if e['home'] is False else 'vs'} {e['opponent']} · {e['competition']}" + (f" round {e['round']}" if e["round"] else "")
+                 + f" · {day_label(e['date'])}") if e else f"{o['title']} · {day_label(o['game_date'])}"
+        opponents.append({"date": o["game_date"], "url": f"opponent/{o['slug']}/",
+                          "label": label + (" · old format" if o.get("legacy") else " · automatic only" if o.get("archive") else "")})
+    key = lambda r: r["date"]
+    return {"games": sorted(opponents, key=key, reverse=True)}
 
 
 def build_reviews() -> list[dict]:
@@ -457,7 +452,7 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
                               badge(n["analysis_state"] or n["snapshot_state"]) or ("🗂 old format (hand-written)" if n["analysis_legacy"] else "opponent analysis"), i == 0))
         parts.append("</div>")
     if snaps:
-        opts = "".join(f'<option value="snapshot/{e["slug"]}/">{e["data"]["label"]}</option>' for e in snaps)
+        opts = "".join(f'<option value="snapshot/{e["slug"]}/">{e["data"]["label"]}{" · automatic only" if e.get("archive") else ""}</option>' for e in snaps)
         optk = "".join(f'<option value="{e["slug"]}">{e["data"]["label"]}</option>' for e in snaps)
         upcoming = [e for e in snaps if e["date"] >= f"{today:%Y-%m-%d}"]
         parts.append(f'<h2 id="situation">{CFG["team"]}: situation, roster, form</h2>'
@@ -510,9 +505,9 @@ def main() -> None:
     if not reviews:
         shutil.rmtree(DOCS / "review", ignore_errors=True)       # reviews switched off: nothing of them is published
     pages = build_info_pages()
-    nav = {"games": build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"]} for p in pages]}
+    nav = {**build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"], "right": i == 0} for i, p in enumerate(pages)]}
     if len(snaps) > 1:
-        nav["pages"].insert(0, {"url": "compare/", "label": "Compare"})
+        nav["pages"].insert(0, {"url": "compare/", "label": "Compare"})     # then Goal, Methodology, Work plan, pushed to the right
     build_compare(snaps, nav)
     for p in pages:
         (DOCS / p["slug"]).mkdir(parents=True, exist_ok=True)
