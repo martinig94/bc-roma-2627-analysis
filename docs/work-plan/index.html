@@ -112,86 +112,27 @@
 <td>analyst</td>
 </tr>
 <tr>
-<td>After each game</td>
-<td>check the post-game review, write the story of the game and the tactical notes; the draft flags and the "games before" banners go away by themselves</td>
-<td>analyst</td>
-</tr>
-<tr>
 <td>When asked</td>
 <td>read the comments left on the pages and answer, or fold them into the text</td>
 <td>analyst</td>
 </tr>
 </tbody>
 </table>
-<h2>Status</h2>
-<table>
-<thead>
-<tr>
-<th>Area</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Daily collection of LBA games, tests, automatic rebuild</td>
-<td>done</td>
-</tr>
-<tr>
-<td>Opponent analysis per game, with the comparison against BC Roma and the roster with photos</td>
-<td>done</td>
-</tr>
-<tr>
-<td>BC Roma snapshot before every game, in both competitions</td>
-<td>done</td>
-</tr>
-<tr>
-<td>Post-game reviews (LBA)</td>
-<td>done</td>
-</tr>
-<tr>
-<td>Compare the situation of two games (landing page and <em>Compare</em> page)</td>
-<td>done</td>
-</tr>
-<tr>
-<td>Flags: games before this one, automatic draft / work in progress</td>
-<td>done</td>
-</tr>
-<tr>
-<td>EuroCup standings of the group, from the EuroLeague results</td>
-<td>written, <strong>waiting for the first real run</strong> to confirm the data</td>
-</tr>
-<tr>
-<td>EuroCup headshots and rosters from the EuroLeague API</td>
-<td>written, waiting for the first real run</td>
-</tr>
-<tr>
-<td>Comments from other users</td>
-<td>on the pages; needs the utterances app installed once on the repository</td>
-</tr>
-<tr>
-<td>Positions and heights of the players</td>
-<td>to fill in (<code>data/roster.csv</code>)</td>
-</tr>
-</tbody>
-</table>
-<h2>Next steps</h2>
+<h2>Next steps and ideas</h2>
 <ol>
-<li><strong>First real EuroCup run.</strong> After the next daily run, check <code>data/eurocup/</code> and the EuroCup table of the Manresa snapshot; fix
-   column names or the headshot field if the API differs from what was assumed.</li>
-<li><strong>Written content.</strong> Review the upcoming games first (Manresa, then Varese), then the past games' notes that are still empty.</li>
-<li><strong>Positions and heights.</strong> Fill in <code>data/roster.csv</code> for BC Roma and for the opponents that matter.</li>
-<li><strong>EuroCup box scores without hand entry.</strong> Use the EuroLeague API (box scores, play-by-play, shots) so that the EuroCup file and the
-   EuroCup-only limits (no assist matrix, no zones) go away.</li>
-<li><strong>EuroCup opponents.</strong> Generate the opponent analysis for EuroCup games like the LBA ones, instead of a hand-made page per club.</li>
-<li><strong>Reviews of EuroCup games</strong> with the same structure as the LBA reviews.</li>
-</ol>
-<h2>Ideas, not scheduled</h2>
-<ul>
-<li>A season page: BC Roma's trends across the season, both competitions.</li>
-<li>Player pages with the history of each player's numbers and minutes.</li>
-<li>Official EuroCup tie-breaks in the standings.</li>
-</ul>
-<p>Suggestions and corrections are welcome as comments on any page.</p></div>
+<li><strong>Fetch data from Synergy and/or Instat via API</strong> Check if it's possible to have access granted to the API's endpoints</li>
+<li><strong>Player health status and performance</strong> Triangulate performance, work-load and health status data. </li>
+<li><strong>Player subpages</strong> with the history of each player's numbers and minutes.</li>
+<li><strong>Playing philosophy</strong>. Definition of quantitative metrics reflecting the playing philosophy of the club and the tactical decisions.
+Metrics to be tracked to measure player adherence to the philosophy and philosophy effectiveness.</li>
+<li><strong>Live tagging console</strong> Improve live tagging of the games.</li>
+<li>
+<p><strong>Alerts definition</strong> Define alerts based on specific metrics of interest (significant "increasing" or "decreasing" playing time, efficiency, etc.) for BC Roma team and opponents.</p>
+</li>
+<li>
+<p>Suggestions and corrections are welcome as comments on any page.</p>
+</li>
+</ol></div>
 <section class="comments">
 <h2>Comments</h2>
 <p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
