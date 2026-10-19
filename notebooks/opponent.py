@@ -21,6 +21,7 @@ import pandas as pd
 
 import player_photos
 import standings as st
+import team_games as tgm
 import weekly_config
 import weekly_report as wr
 import weekly_sections as ws
@@ -81,11 +82,17 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
     home = g.home_team == team
     opp = g.away_team if home else g.home_team
     folder = ROOT / "reports" / folder_name(g.home_team, g.away_team, date)
-    if folder.exists() and (not force or (folder / "README.md").exists()):   # frozen snapshot / hand-written page
-        if (folder / "README.md").exists():          # its text stays; the roster with pictures is added at build time
+    current = tgm.n_before(tgm.team_games(data, team), games, date)
+    if folder.exists():
+        if (folder / "README.md").exists():          # hand-written page: its text stays; the roster with pictures is added at build time
             write_roster(folder, opp, date, data)
-        print(f"opponent analysis exists, left alone: {folder.name}")
-        return folder
+            print(f"opponent analysis with a hand-written README, left alone: {folder.name}")
+            return folder
+        auto_path = folder / "auto.json"
+        stored = json.loads(auto_path.read_text(encoding="utf-8")).get("n_before") if auto_path.exists() else None
+        if not force and stored == current:          # nothing new in the data since it was generated
+            print(f"opponent analysis up to date: {folder.name}")
+            return folder
     if st.finished(games, date).empty:
         raise SystemExit(f"no games before {date}")
 
@@ -98,7 +105,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
     auto = {
-        "kind": "opponent", "round": rnd, "team": team, "opponent": wr.short(opp), "opponent_full": opp, "home": bool(home),
+        "kind": "opponent", "n_before": current, "round": rnd, "team": team, "opponent": wr.short(opp), "opponent_full": opp, "home": bool(home),
         "home_team": g.home_team, "away_team": g.away_team, "date": date, "time": g.match_datetime[11:16],
         "venue": None if pd.isna(g.venue) else g.venue, "eurocup": bool(ec_teams),
         "eurocup_teams": [wr.short(t) for t in ec_teams], "league": CFG["league"], "roster": roster,
