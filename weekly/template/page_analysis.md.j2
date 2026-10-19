@@ -1,0 +1,74 @@
+{% macro slot(key, prompt) -%}{% if notes and notes.get(key) %}{{ notes[key] }}{% else %}<!-- {{ prompt }} -->{% endif %}{%- endmacro -%}
+title: {{ notes.get('title', '') if notes else '' }}
+reviewed: {{ notes.get('reviewed', 'no') if notes else 'no' }}
+generated: {{ generated }}
+
+<!--
+HOW TO EDIT THIS PAGE (this comment is not shown on the site)
+- This file is yours: it is never overwritten. Reorder, delete or add sections and text freely.
+- The lines like [[ comparison ]] or [[ figure: 07_key_players ]] are automatic blocks: they are filled in when the site is built
+  and keep refreshing when the data changes. Delete a line to remove its block, move it to move the block.
+- Your own plots and images: put the file in this folder (weekly/games/<date>/) and write ![caption](file.png).
+- Highlight with ==text==. When you are done, set "reviewed: yes" at the top of the file.
+Blocks of this page: [[ header ]] [[ standings ]] [[ comparison ]] [[ roster ]] [[ lineups ]] and [[ figure: name ]] for any
+generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting, 06_hot_spots,
+07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors).
+-->
+
+# {{ a.home_team }} vs {{ a.away_team }}
+
+[[ header ]]
+
+## Key points
+
+{{ slot('key_points', 'Key points: bullet list of the takeaways.') }}
+
+## LBA so far: results and standings
+
+[[ standings ]]
+
+## {{ a.team }} and {{ a.opponent }} compared
+
+[[ comparison ]]
+
+{{ slot('comparison', 'Comparison: how the two teams compare.') }}
+{% if '01_results_timeline.png' in files %}
+[[ figure: 01_results_timeline ]]
+{% endif %}
+## {{ a.opponent }} roster
+
+[[ roster ]]
+{% if '02_starters_bench.png' in files %}
+## Starting five and bench
+
+{{ slot('starters', 'Starting five, bench and minutes.') }}
+
+[[ figure: 02_starters_bench ]]
+{% if '03_minutes.png' in files %}
+[[ figure: 03_minutes ]]
+{% endif %}{% endif %}{% if '04_scoring_sources.png' in files %}
+## Scoring sources and shooting
+
+{{ slot('shooting', 'Scoring sources, shooting and hot spots.') }}
+
+[[ figure: 04_scoring_sources ]]
+{% for f in ['05_shooting', '06_hot_spots'] %}{% if f ~ '.png' in files %}
+[[ figure: {{ f }} ]]
+{% endif %}{% endfor %}{% endif %}{% if '07_key_players.png' in files %}
+## Key players
+
+{{ slot('players', 'Key players and shot distribution.') }}
+
+[[ figure: 07_key_players ]]
+{% for f in ['08_shot_distribution', '09_basic_stats', '10_major_factors'] %}{% if f ~ '.png' in files %}
+[[ figure: {{ f }} ]]
+{% endif %}{% endfor %}{% endif %}{% if has_lineups %}
+## Lineups
+
+{{ slot('lineups', 'Five-man units.') }}
+
+[[ lineups ]]
+{% endif %}
+## What to expect
+
+{{ slot('expect', 'What to expect in the game.') }}
