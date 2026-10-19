@@ -2,7 +2,7 @@
 
 Incremental collector for the Italian basketball league (Lega Basket Serie A) 2026/27 season,
 built on the undocumented JSON API behind [legabasket.it](https://www.legabasket.it).
-It runs every Monday morning on GitHub Actions, collects any newly finished games, and commits
+It runs every morning on GitHub Actions, collects any newly finished games, and commits
 the updated dataset — so `data/` grows on its own through the season.
 
 Season context: 16 teams, 30 rounds (andata/ritorno). Two Rome teams — **BC Roma** (team_id 1761,
@@ -54,7 +54,7 @@ See `notebooks/` for more.
 | **Opponent analysis** | one per opponent and game, with the comparison table against BC Roma, results and standings, the opponent's roster with photos, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game: the league (LBA) plus the EuroCup, for the teams in the EuroCup file | `docs/opponent/<matchup folder>/` |
 | **Game reviews** (landing page) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
 
-**Every week** (the Monday GitHub Action collects the games, runs `weekly.py` and commits the result):
+**Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games are not collected, add them to the EuroCup file and `weekly/schedule.csv`):
 
 ```bash
 python notebooks/weekly.py --collect    # pull new games, generate everything that is missing, build docs/
