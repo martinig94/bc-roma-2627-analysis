@@ -2,11 +2,12 @@
 
     python notebooks/build_site.py
 
-Three kinds of page, all reachable from the two dropdowns in the header of every page:
+Three kinds of page. The dropdown in the header of every page lists the opponents (one entry per game, every competition);
+the opponent analysis links to the BC Roma snapshot of the same game, and a game without an analysis opens its snapshot:
 
-  BC Roma snapshots (dropdown 1)   one per game in every competition, using only data from before it
+  BC Roma snapshots                one per game in every competition, using only data from before it
       reports/snapshot/<date>/{auto.json, PNGs}  +  weekly/snapshot/<date>/notes.md   ->  docs/snapshot/<date>/
-  Opponent analyses (dropdown 2)   one per opponent and game, with the comparison against the team
+  Opponent analyses                one per opponent and game, with the comparison against the team
       reports/matchup_*_before_<date>/  README.md (hand-written, used as it is) or auto.json + weekly/opponent/<folder>/notes.md
       ->  docs/opponent/<folder>/
   Game reviews (landing page)      post-game, one per played round
@@ -47,11 +48,56 @@ def parse_notes(path: Path) -> dict:
         return {}
     text = re.sub(r"<!--.*?-->", "", path.read_text(encoding="utf-8"), flags=re.S)
     head, *parts = re.split(r"^## ", text, flags=re.M)
-    notes = {k: v.strip() for k, v in re.findall(r"^(title|summary):(.*)$", head, re.M)}
+    notes = {k: v.strip() for k, v in re.findall(r"^(title|summary|reviewed):(.*)$", head, re.M)}
     for part in parts:
         key, _, body = part.partition("\n")
         notes[key.strip()] = body.strip()
     return {k: v for k, v in notes.items() if v}
+
+
+def page_state(notes: dict) -> str:
+    """"reviewed" (reviewed: yes in the notes), "progress" (some text written) or "draft" (automatic only)."""
+    if notes.get("reviewed", "").strip().lower() in {"yes", "y", "true", "1", "reviewed"}:
+        return "reviewed"
+    return "progress" if any(k != "reviewed" for k in notes) else "draft"
+
+
+def day_label(iso: str) -> str:
+    return date.fromisoformat(iso).strftime("%-d %b")
+
+
+def game_text(r) -> str:
+    rnd = f" round {int(r['round'])}" if r["competition"] == "LBA" and pd.notna(r["round"]) else ""
+    return f"{'at' if r.home is False else 'vs'} {r.opponent} ({r.competition}{rnd}, {day_label(r.date)})"
+
+
+def flags_for(day: str, tg: pd.DataFrame, today: date, state: str | None, notes_path: str = "") -> list[str]:
+    """Banners at the top of a page: games before this one that are not in the data (still to be played, or played and not collected
+    yet) and, for a game still to come, whether anyone has worked on the page (state None = hand-written, never a draft)."""
+    iso = f"{today:%Y-%m-%d}"
+    before = tg[(tg.date < day) & ~tg.finished]
+    out = []
+    to_play, pending = before[before.date >= iso], before[before.date < iso]
+    if len(to_play):
+        out.append("⚠ **Games still to be played before this one:** " + "; ".join(game_text(r) for _, r in to_play.iterrows()) +
+                   ". This page is a preview and will change after them.")
+    if len(pending):
+        out.append("⚠ **Played but not collected yet:** " + "; ".join(game_text(r) for _, r in pending.iterrows()) +
+                   ". Not included here; the next collection of games updates this page.")
+    if day >= iso and state in ("draft", "progress"):
+        how = f" Set `reviewed: yes` in `{notes_path}` when done." if notes_path else ""
+        out.append("✎ **Automatic draft, not reviewed yet:** generated from the data, no text of yours so far." + how if state == "draft" else
+                   "✎ **Work in progress:** some text is written but the page is not marked as reviewed yet." + how)
+    return out
+
+
+def add_flags(md: str, flags: list[str], extra: str = "") -> str:
+    """Put the banners (and an optional line) right after the page's first heading."""
+    block = "\n\n".join(["> " + f for f in flags] + ([extra] if extra else []))
+    if not block:
+        return md
+    head, _, rest = md.partition("\n")
+    return f"{head}\n\n{block}\n{rest}"
 
 
 def ordinal(n: int) -> str:
@@ -95,8 +141,19 @@ def shell(title: str, body: str, root: str, nav: dict) -> str:
 
 
 # ── page builders: each returns the list of entries it created ──────────────────
-def build_opponents(nav_holder: dict) -> list[dict]:
+def snapshot_links() -> dict[str, str]:
+    """opponent-analysis folder -> date of the snapshot of the same game (read from the generated snapshots)."""
+    out = {}
+    for f in (ROOT / "reports" / "snapshot").glob("20*/auto.json"):
+        slug = json.loads(f.read_text(encoding="utf-8")).get("opponent_analysis")
+        if slug:
+            out[slug] = f.parent.name
+    return out
+
+
+def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
     shutil.rmtree(DOCS / "opponent", ignore_errors=True)
+    snap_of = snapshot_links()
     entries = []
     for folder in sorted((ROOT / "reports").glob("matchup_*_before_*")):
         slug, day = folder.name, folder.name.rsplit("_before_", 1)[1]
@@ -105,6 +162,8 @@ def build_opponents(nav_holder: dict) -> list[dict]:
         files = copy_images(folder, dest=dest)
         readme, auto_path = folder / "README.md", folder / "auto.json"
         document = notes_dir / "document.md"
+        state, game_day = "reviewed", day          # a page with your own text (README / document) counts as reviewed
+        link = f"../../snapshot/{snap_of[slug]}/" if slug in snap_of else None
         if readme.exists():                          # page with a README (hand-written, or written by a report script)
             text = readme.read_text(encoding="utf-8")
             title = re.search(r"^# (.+)$", text, re.M).group(1)
@@ -127,23 +186,28 @@ def build_opponents(nav_holder: dict) -> list[dict]:
                                         "{{ roster_table(r) }}\n\n").render(r=roster)
                 k = page_md.find("\n## Sources")
                 page_md = page_md[:k] + "\n" + block + page_md[k:] if k >= 0 else page_md + "\n\n" + block
+            if document.exists() and slug in snap_of:
+                game_day = snap_of[slug]             # the game itself (the folder name carries the data cut-off date)
         elif auto_path.exists():
             a = json.loads(auto_path.read_text(encoding="utf-8"))
             n = parse_notes(notes_dir / "notes.md")
+            state, game_day = page_state(n), a["date"]
             a.update(date_long=long_date(a["date"]), team_suffix=ordinal(a["comparison"]["team"]["position"]),
                      opp_suffix=ordinal(a["comparison"]["opp"]["position"]))
             a["team_link"] = f"../../snapshot/{a['date']}/" if (ROOT / "reports" / "snapshot" / a["date"] / "auto.json").exists() else None
             page_md = TPL.get_template("opponent.md.j2").render(a=a, n=n, author=AUTHOR, files=files)
             title, rnd = n.get("title") or f"{a['home_team']} vs {a['away_team']}", a["round"]
+            link = None                              # the template has its own line
         else:
             continue
-        entries.append({"slug": slug, "title": title, "date": day, "round": rnd, "html": md_html(page_md)})
+        extra = f"BC Roma before this game: [pre-game snapshot]({link})." if link else ""
+        page_md = add_flags(page_md, flags_for(game_day, tg, today, state, f"weekly/opponent/{slug}/notes.md"), extra)
+        entries.append({"slug": slug, "title": title, "date": day, "game_date": game_day, "round": rnd, "state": state, "html": md_html(page_md)})
     entries.sort(key=lambda e: e["date"], reverse=True)
-    nav_holder["opponent"] = [{"url": f"opponent/{e['slug']}/", "label": f"{e['title']} · {e['date']}"} for e in entries]
     return entries
 
 
-def build_snapshots(nav_holder: dict, opponents: list[dict]) -> list[dict]:
+def build_snapshots(opponents: list[dict], tg: pd.DataFrame, today: date) -> list[dict]:
     shutil.rmtree(DOCS / "snapshot", ignore_errors=True)
     have_opp = {e["slug"] for e in opponents}
     entries = []
@@ -158,19 +222,36 @@ def build_snapshots(nav_holder: dict, opponents: list[dict]) -> list[dict]:
         a.setdefault("standings_table", {"kind": "LBA", "available": True})
         a.update(date_long=long_date(a["date"]), position_suffix=ordinal(a["position"]),
                  opponent_link=f"../../opponent/{a['opponent_analysis']}/" if a.get("opponent_analysis") in have_opp else None)
-        page_md = TPL.get_template("snapshot.md.j2").render(a=a, n=n, author=AUTHOR)
-        short = f"{a['competition']}{' R' + str(a['round']) if a['round'] else ''} {'at' if a['home'] is False else 'vs'} {a['opponent']}"
+        state = page_state(n)
+        page_md = add_flags(TPL.get_template("snapshot.md.j2").render(a=a, n=n, author=AUTHOR),
+                            flags_for(a["date"], tg, today, state, f"weekly/snapshot/{src.name}/notes.md"))
+        short = f"{'at' if a['home'] is False else 'vs'} {a['opponent']}"
         title = n.get("title") or f"{a['team']} {short}"
         copy_images(src, notes_dir, dest=DOCS / "snapshot" / src.name)
-        entries.append({"slug": src.name, "title": title, "label": f"{a['date']} · {n.get('title') or short}", "date": a["date"],
-                        "html": md_html(page_md), "opponent": a["opponent"], "competition": a["competition"], "home": a["home"],
+        entries.append({"slug": src.name, "title": title, "date": a["date"], "html": md_html(page_md), "state": state,
+                        "opponent": a["opponent"], "competition": a["competition"], "round": a["round"], "home": a["home"],
                         "opponent_slug": a.get("opponent_analysis") if a.get("opponent_analysis") in have_opp else None})
     entries.sort(key=lambda e: e["date"], reverse=True)
-    nav_holder["snapshot"] = [{"url": f"snapshot/{e['slug']}/", "label": e["label"]} for e in entries]
     return entries
 
 
-def build_reviews(nav_holder: dict) -> list[dict]:
+def build_nav(snaps: list[dict], opps: list[dict]) -> list[dict]:
+    """The dropdown: one entry per game, newest first, opening the opponent analysis (which links to the BC Roma snapshot of
+    the game) or, when there is no analysis, the snapshot itself."""
+    rows, used = [], set()
+    for e in snaps:
+        where = "at" if e["home"] is False else "vs"
+        comp = e["competition"] + (f" round {e['round']}" if e["round"] else "")
+        url = f"opponent/{e['opponent_slug']}/" if e["opponent_slug"] else f"snapshot/{e['slug']}/"
+        used.add(e["opponent_slug"])
+        rows.append({"date": e["date"], "url": url, "label": f"{where} {e['opponent']} · {comp} · {day_label(e['date'])}"})
+    for o in opps:                                   # analyses of games without a snapshot
+        if o["slug"] not in used:
+            rows.append({"date": o["game_date"], "url": f"opponent/{o['slug']}/", "label": f"{o['title']} · {day_label(o['game_date'])}"})
+    return sorted(rows, key=lambda r: r["date"], reverse=True)
+
+
+def build_reviews() -> list[dict]:
     shutil.rmtree(DOCS / "review", ignore_errors=True)
     entries = []
     for src in sorted((ROOT / "reports" / "review").glob("round-*")):
@@ -199,13 +280,15 @@ def write_pages(kind: str, entries: list[dict], nav: dict) -> None:
 def next_games(snaps: list[dict], opps: list[dict], today: date) -> list[dict]:
     """The next game still to play in each competition, in date order (team_games.py: LBA, EuroCup, weekly/schedule.csv)."""
     tg = team_games(ROOT / "data", CFG["team"])
+    snap = {e["slug"]: e for e in snaps}
+    opp = {e["slug"]: e for e in opps}
     out = []
     for _, c in next_games_df(tg, f"{today:%Y-%m-%d}").iterrows():
         home = None if c.home is None or pd.isna(c.home) else bool(c.home)
         out.append({"date": c.date, "time": c.time or "", "competition": c.competition if c.competition != "LBA" else CFG["league"],
                     "opponent": c.opponent, "home": home, "round": None if pd.isna(c["round"]) else int(c["round"]),
-                    "analysis": c.analysis if c.analysis in {e["slug"] for e in opps} else None,
-                    "snapshot": c.key if c.key in {e["slug"] for e in snaps} else None})
+                    "analysis": c.analysis if c.analysis in opp else None, "analysis_state": opp[c.analysis]["state"] if c.analysis in opp else None,
+                    "snapshot": c.key if c.key in snap else None, "snapshot_state": snap[c.key]["state"] if c.key in snap else None})
     return out
 
 
@@ -213,21 +296,23 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
     def card(href: str, kicker: str, main: str, sub: str = "", latest: bool = False) -> str:
         return (f'<a class="card{" latest" if latest else ""}" href="{href}"><div class="rd">{kicker}</div>'
                 f'<div class="score">{main}</div><div class="rd">{sub}</div></a>')
+    badge = lambda state: {"draft": "✎ automatic draft, not reviewed", "progress": "✎ work in progress"}.get(state, "")
     parts = [f"<h1>{CFG['site_title']}</h1>",
-             f"<p>The season of {CFG['team']} ({CFG['league']} and EuroCup), in three parts: the team's situation before every game, "
-             "the analysis of every opponent, and the review of every game played. "
-             "The first two are always available from the dropdowns at the top; each uses only data from before its game.</p>"]
+             f"<p>The season of {CFG['team']} ({CFG['league']} and EuroCup). The dropdown at the top lists the opponents, game by game: "
+             "each page is the analysis of the opponent, with a link to the situation of the team before that game; both use only data from "
+             "before the game. Below, the next games and the review of every game played.</p>"]
     nxt = next_games(snaps, opps, today)
     if nxt:
         parts.append("<h2>Next games</h2><div class=\"cards\">")
         for i, n in enumerate(nxt):
             where = "at" if n["home"] is False else "vs"
             when = f"{long_date(n['date'])}{', ' + n['time'] if n['time'] else ''} · {n['competition']}{' round ' + str(n['round']) if n['round'] else ''}"
-            href = f"snapshot/{n['snapshot']}/" if n["snapshot"] else (f"opponent/{n['analysis']}/" if n["analysis"] else "#")
-            parts.append(card(href, when, f"{CFG['team']} {where} {n['opponent']}",
-                              "pre-game snapshot" if n["snapshot"] else "", i == 0))
-            if n["analysis"]:
-                parts.append(card(f"opponent/{n['analysis']}/", n["opponent"], "Opponent analysis", "with the comparison against " + CFG["team"]))
+            main_href = f"opponent/{n['analysis']}/" if n["analysis"] else (f"snapshot/{n['snapshot']}/" if n["snapshot"] else "#")
+            state = n["analysis_state"] or n["snapshot_state"]
+            parts.append(card(main_href, when, f"{CFG['team']} {where} {n['opponent']}", badge(state) or "opponent analysis", i == 0))
+            if n["analysis"] and n["snapshot"]:
+                parts.append(card(f"snapshot/{n['snapshot']}/", f"{CFG['team']} before the game", "Situation, roster, form",
+                                  badge(n["snapshot_state"]) or "pre-game snapshot"))
         parts.append("</div>")
     if reviews:
         parts.append("<h2 id=\"reviews\">Game reviews</h2><div class=\"cards\">")
@@ -241,13 +326,14 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
 
 
 def main() -> None:
-    nav: dict = {}
-    opps = build_opponents(nav)
-    snaps = build_snapshots(nav, opps)
-    reviews = build_reviews(nav)
-    nav.setdefault("snapshot", []); nav.setdefault("opponent", [])
+    today = date.today()
+    tg = team_games(ROOT / "data", CFG["team"])
+    opps = build_opponents(tg, today)
+    snaps = build_snapshots(opps, tg, today)
+    reviews = build_reviews()
+    nav = {"games": build_nav(snaps, opps)}
     write_pages("opponent", opps, nav); write_pages("snapshot", snaps, nav); write_pages("review", reviews, nav)
-    build_landing(nav, snaps, opps, reviews, date.today())
+    build_landing(nav, snaps, opps, reviews, today)
     for stale in ("prematch.html", "analyses", "analyses.json", "weekly", "weekly.json"):   # replaced by the structure above
         p = DOCS / stale
         shutil.rmtree(p) if p.is_dir() else p.unlink(missing_ok=True)

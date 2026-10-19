@@ -1,10 +1,13 @@
 title: 
 summary: 
+reviewed: no
 
 <!--
 Your text for the opponent analysis. Everything under a "## key" heading is markdown and goes into the matching
 slot of weekly/template/opponent.md.j2; empty sections are left out. (A hand-written README.md placed in the
 reports/matchup_* folder replaces this whole mechanism for that page.)
+
+Pages of games still to come carry a "draft" banner until you set `reviewed: yes` above.
 -->
 
 ## key_points

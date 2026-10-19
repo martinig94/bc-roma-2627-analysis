@@ -255,7 +255,7 @@ def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)
     minutes = np.where(mine.competition == "EC", 40, mine.sec / 300).sum()   # EuroCup totals carry 2400 s, not 5 x 2400
     r = lambda x, d=1: round(float(x), d)
     return {
-        "Games": n if len(comps) == 1 else f"{n} ({(mine.competition == 'LBA').sum()} LBA + {(mine.competition == 'EC').sum()} EuroCup)",
+        "Games": f"{n} ({(mine.competition == 'LBA').sum()} LBA + {(mine.competition == 'EC').sum()} EuroCup)" if (mine.competition == "EC").any() and len(comps) > 1 else n,
         "Record": f"{wins}-{n - wins}",
         "Points per game": r(mine.pts.mean()), "Points allowed per game": r(opp.pts.mean()),
         "Offensive rating": r(100 * mine.pts.sum() / pm.sum()), "Defensive rating": r(100 * opp.pts.sum() / po.sum()),

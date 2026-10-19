@@ -1,5 +1,6 @@
 {
   "kind": "opponent",
+  "version": 2,
   "n_before": 29,
   "round": 5,
   "team": "BC Roma",
@@ -270,7 +271,7 @@
       {
         "stat": "Games",
         "team": "5 (3 LBA + 2 EuroCup)",
-        "opp": "3 (3 LBA + 0 EuroCup)"
+        "opp": 3
       },
       {
         "stat": "Record",
