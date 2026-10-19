@@ -228,10 +228,10 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
             state, game_day = pages.state(meta, body), a["date"]
             page_md = pages.expand(body, "analysis", a, files, AUTHOR)
             title, rnd = meta.get("title") or f"{a['home_team']} vs {a['away_team']}", a["round"]
-            link, edit_file = None, pages.edit_path("analysis", a["date"])
+            link, edit_file = a["team_link"], pages.edit_path("analysis", a["date"])
         else:
             continue
-        extra = f"BC Roma before this game: [pre-game snapshot]({link})." if link else ""
+        extra = f"➜ **{CFG['team']} before this game:** [situation, roster and form (pre-game snapshot)]({link})" if link else ""
         edit = edit_file or (f"weekly/opponent/{slug}/document.md" if document.exists() else f"reports/{slug}/README.md")  # file with the text
         flags = flags_for(game_day, tg, today, state, edit, archive=not legacy)
         if legacy:
