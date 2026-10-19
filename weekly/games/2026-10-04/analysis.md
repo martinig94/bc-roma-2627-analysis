@@ -1,6 +1,6 @@
 title: 
 reviewed: no
-generated: 2d1cecf184
+generated: 2567f8cedf
 
 <!--
 HOW TO EDIT THIS PAGE (this comment is not shown on the site)
@@ -9,7 +9,7 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
   and keep refreshing when the data changes. Delete a line to remove its block, move it to move the block.
 - Your own plots and images: put the file in this folder (weekly/games/<date>/) and write ![caption](file.png).
 - Highlight with ==text==. When you are done, set "reviewed: yes" at the top of the file.
-Blocks of this page: {{ header }} {{ standings }} {{ comparison }} {{ roster }} {{ lineups }} and {{ figure: name }} for any
+Blocks of this page: {{ header }} {{ standings }} {{ comparison }} {{ roster }} {{ assists }} {{ turnovers }} {{ lineups }} and {{ figure: name }} for any
 generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting, 06_hot_spots,
 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors).
 -->
@@ -45,6 +45,18 @@ generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_
 {{ figure: 02_starters_bench }}
 
 {{ figure: 03_minutes }}
+
+## Assists
+
+<!-- Assists: ball movement and the main passer-scorer pairs. -->
+
+{{ assists }}
+
+## Turnovers
+
+<!-- Turnovers: who loses the ball and when. -->
+
+{{ turnovers }}
 
 ## Scoring sources and shooting
 

@@ -98,8 +98,9 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   a page (meetings, review sessions) and is kept in the browser of whoever clicks, not in the repository. For a highlight that stays
   for everybody, write `==text==` in the markdown file (for instance `| ==4.5== |` in a table written by hand, or in `document.md`).
 * **Your pages** (snapshot and opponent analysis): one markdown file per game and page, `weekly/games/<date>/snapshot.md` (BC Roma before the
-  game) and `analysis.md` (the opponent). They are written once, the first time the game is generated, and **never overwritten**: they are
-  yours. `python notebooks/weekly.py --page 2026-10-24` prints their paths (creating them if missing). A page file is plain markdown:
+  game) and `analysis.md` (the opponent). They are written once, the first time the game is generated, and **never overwritten once you have worked on them**
+  (a page still exactly as generated is refreshed when the default page gains a block, e.g. Assists or Turnovers; for a page you have edited, add
+  the line `{{ assists }}` or `{{ turnovers }}` where you want the block). They are yours. `python notebooks/weekly.py --page 2026-10-24` prints their paths (creating them if missing). A page file is plain markdown:
   * a few header lines at the top: `title:` (name in the dropdown), `reviewed:` (`no` / `yes`) and `generated:` (leave it);
   * your text and your section titles: `##` headings, paragraphs, lists, `==highlights==`; reorder, delete or add sections freely;
   * **live placeholders** for the automatic content, one per line: `{{ roster }}`, `{{ comparison }}`, `{{ standings }}`, `{{ lineups }}`,

@@ -1,6 +1,6 @@
 {
   "kind": "opponent",
-  "version": 4,
+  "version": 5,
   "n_before": 38,
   "round": 5,
   "team": "BC Roma",
@@ -378,5 +378,182 @@
       "form": "LWWL"
     }
   },
+  "assist_top": [
+    {
+      "passer": "Hale",
+      "scorer": "Renfro",
+      "n": 6
+    },
+    {
+      "passer": "Hale",
+      "scorer": "Nikolic",
+      "n": 3
+    },
+    {
+      "passer": "Alviti",
+      "scorer": "Kamagate",
+      "n": 3
+    },
+    {
+      "passer": "Renfro",
+      "scorer": "Nikolic",
+      "n": 3
+    },
+    {
+      "passer": "Della Valle",
+      "scorer": "Renfro",
+      "n": 2
+    },
+    {
+      "passer": "Alviti",
+      "scorer": "Hale",
+      "n": 2
+    }
+  ],
+  "turnovers": [
+    {
+      "name": "Duke",
+      "gp": 4,
+      "min": 98.0,
+      "tov": 12,
+      "tov_min": 0.122,
+      "tov_pg": 3.0,
+      "worst_n": 4,
+      "worst_game": "vs Virtus Costa Bologna (27/09)",
+      "top": true
+    },
+    {
+      "name": "Hale",
+      "gp": 4,
+      "min": 115.0,
+      "tov": 10,
+      "tov_min": 0.087,
+      "tov_pg": 2.5,
+      "worst_n": 4,
+      "worst_game": "vs Virtus Costa Bologna (27/09)",
+      "top": true
+    },
+    {
+      "name": "Kamagate",
+      "gp": 4,
+      "min": 56.0,
+      "tov": 8,
+      "tov_min": 0.143,
+      "tov_pg": 2.0,
+      "worst_n": 3,
+      "worst_game": "vs Pallacanestro Trieste (10/10)",
+      "top": false
+    },
+    {
+      "name": "Renfro",
+      "gp": 4,
+      "min": 84.0,
+      "tov": 7,
+      "tov_min": 0.083,
+      "tov_pg": 1.8,
+      "worst_n": 3,
+      "worst_game": "at Dolomiti Energia Trentino (18/10)",
+      "top": false
+    },
+    {
+      "name": "Librizzi",
+      "gp": 4,
+      "min": 61.0,
+      "tov": 7,
+      "tov_min": 0.115,
+      "tov_pg": 1.8,
+      "worst_n": 3,
+      "worst_game": "vs Virtus Costa Bologna (27/09)",
+      "top": false
+    },
+    {
+      "name": "Nikolic",
+      "gp": 4,
+      "min": 96.0,
+      "tov": 5,
+      "tov_min": 0.052,
+      "tov_pg": 1.2,
+      "worst_n": 3,
+      "worst_game": "vs Pallacanestro Trieste (10/10)",
+      "top": false
+    },
+    {
+      "name": "Alviti",
+      "gp": 4,
+      "min": 93.0,
+      "tov": 5,
+      "tov_min": 0.054,
+      "tov_pg": 1.2,
+      "worst_n": 3,
+      "worst_game": "at Dolomiti Energia Trentino (18/10)",
+      "top": false
+    },
+    {
+      "name": "Roby",
+      "gp": 4,
+      "min": 78.0,
+      "tov": 4,
+      "tov_min": 0.051,
+      "tov_pg": 1.0,
+      "worst_n": 1,
+      "worst_game": "at Dolomiti Energia Trentino (18/10)",
+      "top": false
+    },
+    {
+      "name": "Ikangi",
+      "gp": 4,
+      "min": 68.0,
+      "tov": 2,
+      "tov_min": 0.029,
+      "tov_pg": 0.5,
+      "worst_n": 2,
+      "worst_game": "vs Pallacanestro Trieste (10/10)",
+      "top": false
+    },
+    {
+      "name": "Della Valle",
+      "gp": 1,
+      "min": 22.0,
+      "tov": 2,
+      "tov_min": 0.091,
+      "tov_pg": 2.0,
+      "worst_n": 2,
+      "worst_game": "vs Pallacanestro Trieste (10/10)",
+      "top": false
+    },
+    {
+      "name": "Villa",
+      "gp": 3,
+      "min": 25.0,
+      "tov": 1,
+      "tov_min": 0.04,
+      "tov_pg": 0.3,
+      "worst_n": 1,
+      "worst_game": "at Longobardi Scafati Basket (04/10)",
+      "top": false
+    },
+    {
+      "name": "Kangur",
+      "gp": 2,
+      "min": 2.0,
+      "tov": 1,
+      "tov_min": 0.5,
+      "tov_pg": 0.5,
+      "worst_n": 1,
+      "worst_game": "vs Virtus Costa Bologna (27/09)",
+      "top": false
+    },
+    {
+      "name": "Ladurner",
+      "gp": 2,
+      "min": 2.0,
+      "tov": 0,
+      "tov_min": 0.0,
+      "tov_pg": 0.0,
+      "worst_n": 0,
+      "worst_game": "at Longobardi Scafati Basket (04/10)",
+      "top": false
+    }
+  ],
   "standings_md": "## LBA so far: results and standings\n\nAll 32 LBA games played before this match (rounds 1 to 4); home team first.\n\n- **Round 1**: **Treviso 109-94 BC Roma** · Venezia 85-73 Cantù · Reggio Emilia 78-83 Trento · Milano 83-79 Trieste · Tortona 101-93 Verona · Udine 87-63 Scafati · Maxima Roma 75-94 Napoli · **Varese 69-90 Virtus Bologna**\n- **Round 2**: Trento 90-93 Treviso · Napoli 99-93 Reggio Emilia · **BC Roma 108-70 Tortona** · **Scafati 77-85 Varese** · Trieste 82-87 Venezia · Virtus Bologna 98-89 Maxima Roma · Cantù 84-85 Udine · Verona 75-72 Milano\n- **Round 3**: Udine 66-74 Trento · **Varese 85-84 Trieste** · Milano 106-77 Treviso · Reggio Emilia 93-86 Tortona · Cantù 80-99 Napoli · Scafati 82-89 Verona · **Maxima Roma 96-95 BC Roma** · Venezia 86-93 Virtus Bologna\n- **Round 4**: **BC Roma 98-104 Venezia** · Napoli 82-98 Milano · **Trento 87-85 Varese** · Treviso 102-86 Udine · Verona 94-81 Reggio Emilia · Trieste 92-72 Cantù · Virtus Bologna 108-83 Scafati · Tortona 75-89 Maxima Roma\n\n![standings](00_standings.png)\n\n**Standings after round 4**\n\n| # | Team | Pts | W-L | Points for-against | Diff | Results |\n|---:|---|---:|:---:|:---:|---:|:---:|\n| 1 | Virtus Bologna | 8 | 4-0 | 389-327 | +62 | WWWW |\n| 2 | Milano | 6 | 3-1 | 359-313 | +46 | WLWW |\n| 3 | Verona | 6 | 3-1 | 351-336 | +15 | LWWW |\n| 4 | Treviso | 6 | 3-1 | 381-376 | +5 | WWLW |\n| 5 | Venezia | 6 | 3-1 | 362-346 | +16 | WWLW |\n| 6 | Napoli | 6 | 3-1 | 374-346 | +28 | WWWL |\n| 7 | Trento | 6 | 3-1 | 334-322 | +12 | WLWW |\n| 8 | Udine | 4 | 2-2 | 324-323 | +1 | WWLL |\n| 9 | Maxima Roma | 4 | 2-2 | 349-362 | -13 | LLWW |\n| 10 | **Varese** | 4 | 2-2 | 324-338 | -14 | LWWL |\n| 11 | **BC Roma** | 2 | 1-3 | 395-379 | +16 | LWLL |\n| 12 | Reggio Emilia | 2 | 1-3 | 345-362 | -17 | LLWL |\n| 13 | Trieste | 2 | 1-3 | 337-327 | +10 | LLLW |\n| 14 | Tortona | 2 | 1-3 | 332-383 | -51 | WLLL |\n| 15 | Cantù | 0 | 0-4 | 309-361 | -52 | LLLL |\n| 16 | Scafati | 0 | 0-4 | 305-369 | -64 | LLLL |\n\nTwo points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).\n"
 }
