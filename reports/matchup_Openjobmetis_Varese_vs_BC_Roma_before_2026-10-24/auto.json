@@ -1,6 +1,6 @@
 {
   "kind": "opponent",
-  "version": 2,
+  "version": 4,
   "n_before": 38,
   "round": 5,
   "team": "BC Roma",
@@ -12,10 +12,8 @@
   "date": "2026-10-24",
   "time": "20:00",
   "venue": "Itelyum Arena",
-  "eurocup": true,
-  "eurocup_teams": [
-    "BC Roma"
-  ],
+  "eurocup": false,
+  "eurocup_teams": [],
   "league": "LBA Serie A",
   "roster": [
     {
@@ -30,7 +28,7 @@
       "reb": 1.8,
       "ast": 3.2,
       "pir": 12.0,
-      "fg": "37 (17.5)",
+      "fg2": "34 (8.0)",
       "fg3": "39 (9.5)",
       "ft": "81 (5.2)",
       "ppg_lba": 21.0,
@@ -49,7 +47,7 @@
       "reb": 2.5,
       "ast": 2.8,
       "pir": 8.2,
-      "fg": "37 (9.5)",
+      "fg2": "44 (6.8)",
       "fg3": "18 (2.8)",
       "ft": "71 (5.2)",
       "ppg_lba": 11.2,
@@ -68,7 +66,7 @@
       "reb": 4.2,
       "ast": 1.0,
       "pir": 6.2,
-      "fg": "62 (5.2)",
+      "fg2": "68 (4.8)",
       "fg3": "0 (0.5)",
       "ft": "25 (1.0)",
       "ppg_lba": 6.8,
@@ -87,7 +85,7 @@
       "reb": 3.5,
       "ast": 2.5,
       "pir": 12.0,
-      "fg": "60 (5.0)",
+      "fg2": "75 (2.0)",
       "fg3": "50 (3.0)",
       "ft": "75 (3.0)",
       "ppg_lba": 9.8,
@@ -106,7 +104,7 @@
       "reb": 5.2,
       "ast": 1.5,
       "pir": 11.5,
-      "fg": "70 (5.0)",
+      "fg2": "70 (5.0)",
       "fg3": "– (0.0)",
       "ft": "62 (2.0)",
       "ppg_lba": 8.2,
@@ -125,7 +123,7 @@
       "reb": 4.0,
       "ast": 1.2,
       "pir": 3.8,
-      "fg": "30 (7.5)",
+      "fg2": "55 (2.8)",
       "fg3": "16 (4.8)",
       "ft": "– (0.0)",
       "ppg_lba": 5.2,
@@ -144,7 +142,7 @@
       "reb": 1.5,
       "ast": 1.0,
       "pir": -1.2,
-      "fg": "25 (3.0)",
+      "fg2": "25 (1.0)",
       "fg3": "25 (2.0)",
       "ft": "100 (0.5)",
       "ppg_lba": 2.5,
@@ -163,7 +161,7 @@
       "reb": 1.2,
       "ast": 1.8,
       "pir": 4.2,
-      "fg": "25 (5.0)",
+      "fg2": "20 (1.2)",
       "fg3": "27 (3.8)",
       "ft": "90 (2.5)",
       "ppg_lba": 5.8,
@@ -182,7 +180,7 @@
       "reb": 4.2,
       "ast": 1.2,
       "pir": 8.0,
-      "fg": "73 (3.8)",
+      "fg2": "73 (3.8)",
       "fg3": "– (0.0)",
       "ft": "43 (1.8)",
       "ppg_lba": 6.2,
@@ -201,7 +199,7 @@
       "reb": 1.0,
       "ast": 0.7,
       "pir": 1.7,
-      "fg": "60 (1.7)",
+      "fg2": "75 (1.3)",
       "fg3": "0 (0.3)",
       "ft": "0 (0.7)",
       "ppg_lba": 2.0,
@@ -220,7 +218,7 @@
       "reb": 1.0,
       "ast": 5.0,
       "pir": 7.0,
-      "fg": "33 (9.0)",
+      "fg2": "25 (4.0)",
       "fg3": "40 (5.0)",
       "ft": "43 (7.0)",
       "ppg_lba": 11.0,
@@ -239,7 +237,7 @@
       "reb": 0.0,
       "ast": 0.0,
       "pir": -0.5,
-      "fg": "– (0.0)",
+      "fg2": "– (0.0)",
       "fg3": "– (0.0)",
       "ft": "– (0.0)",
       "ppg_lba": 0.0,
@@ -258,7 +256,7 @@
       "reb": 0.0,
       "ast": 0.0,
       "pir": 0.0,
-      "fg": "– (0.0)",
+      "fg2": "– (0.0)",
       "fg3": "– (0.0)",
       "ft": "– (0.0)",
       "ppg_lba": 0.0,
@@ -270,107 +268,107 @@
     "rows": [
       {
         "stat": "Games",
-        "team": "6 (4 LBA + 2 EuroCup)",
+        "team": 4,
         "opp": 4
       },
       {
         "stat": "Record",
-        "team": "2-4",
+        "team": "1-3",
         "opp": "2-2"
       },
       {
         "stat": "Points per game",
-        "team": 94.2,
+        "team": 98.8,
         "opp": 81.0
       },
       {
         "stat": "Points allowed per game",
-        "team": 92.8,
+        "team": 94.8,
         "opp": 84.5
       },
       {
         "stat": "Offensive rating",
-        "team": 122.3,
+        "team": 126.7,
         "opp": 103.4
       },
       {
         "stat": "Defensive rating",
-        "team": 120.7,
+        "team": 122.0,
         "opp": 110.2
       },
       {
         "stat": "Net rating",
-        "team": 1.6,
+        "team": 4.7,
         "opp": -6.8
       },
       {
         "stat": "Pace (possessions per 40')",
-        "team": 76.9,
+        "team": 77.8,
         "opp": 77.5
       },
       {
         "stat": "eFG%",
-        "team": 59.6,
+        "team": 61.6,
         "opp": 50.0
       },
       {
         "stat": "TOV% (per 100 poss.)",
-        "team": 17.8,
+        "team": 16.0,
         "opp": 21.7
       },
       {
         "stat": "OREB%",
-        "team": 34.8,
+        "team": 34.4,
         "opp": 36.6
       },
       {
         "stat": "FT rate (FTA/FGA)",
-        "team": 30.3,
+        "team": 29.0,
         "opp": 36.2
       },
       {
         "stat": "3PA per game",
-        "team": 30.5,
+        "team": 31.2,
         "opp": 27.8
       },
       {
         "stat": "3P%",
-        "team": 38.3,
+        "team": 40.8,
         "opp": 30.6
       },
       {
         "stat": "2P%",
-        "team": 61.5,
+        "team": 61.9,
         "opp": 53.0
       },
       {
         "stat": "FT%",
-        "team": 77.5,
+        "team": 75.9,
         "opp": 68.1
       },
       {
         "stat": "Assists per game",
-        "team": 19.2,
+        "team": 20.8,
         "opp": 18.0
       },
       {
         "stat": "Opp. eFG%",
-        "team": 54.1,
+        "team": 53.9,
         "opp": 50.8
       },
       {
         "stat": "Opp. TOV% (forced)",
-        "team": 12.6,
+        "team": 11.6,
         "opp": 21.8
       },
       {
         "stat": "DREB%",
-        "team": 66.7,
+        "team": 69.7,
         "opp": 58.5
       }
     ],
     "team": {
-      "record": "2-4",
+      "record": "1-3",
       "position": 11,
       "form": "LWLL"
     },
