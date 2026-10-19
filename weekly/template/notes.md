@@ -22,3 +22,15 @@ simply left out of the page. Images: put them in this folder and write ![caption
 
 ## next
 <!-- Preview of the next opponent and what to watch. -->
+
+## roster
+<!-- Text above the roster table (injuries, signings, rotation changes). -->
+
+## assists
+<!-- Comments on ball movement. -->
+
+## zones
+<!-- Comments on shot selection and zones. -->
+
+## efficiency
+<!-- Comments on the TS% vs PIR plots. -->

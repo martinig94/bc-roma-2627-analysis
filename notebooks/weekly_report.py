@@ -22,6 +22,8 @@ import pandas as pd
 
 import lba_style
 import standings as st
+import weekly_sections as ws
+import player_photos
 from lba_style import GOLD, GOLD_EDGE, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, style_axes
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -216,6 +218,26 @@ def main() -> None:
     fig_players(box, g, team, out)
     fig_season(games, team, rnd, out)
 
+    # extra sections: roster, playing time, assists, zones, TS% vs PIR
+    date = g.match_datetime[:10]
+    player_photos.main_quiet(team)
+    xbox = ws.load_box(data, rnd, date)
+    lba_games = [int(x) for x in games[(games["round"] <= rnd) & (games.game_status.astype(str) == "2") &
+                                       ((games.home_team == team) | (games.away_team == team))].game_id]
+    pairs = ws.assist_pairs(pbp, lba_games, team)
+    box_ast = int(box[(box.game_id.isin(lba_games)) & (box.team == team) & (box.row_type == "total")].ast.sum())
+    extra = {
+        "roster": ws.roster_table(xbox, data),
+        "playing_time": ws.playing_time_flags(xbox, str(g.game_id), date),
+        "assist_top": ws.fig_assists(pairs, box_ast, out),
+        "zone_share": ws.fig_zones(pbp, lba_games, int(g.game_id), out, team),
+        "ts_pir_lba": ws.fig_ts_pir(xbox, "LBA", out, team=team),
+        "ts_pir_ec": ws.fig_ts_pir(xbox, "EC", out, team=team) if (xbox.competition == "EC").any() else None,
+    }
+    photos = {r["player_id"] for r in extra["roster"] if r["photo"]}
+    for pid in photos:
+        shutil.copy(data / "photos" / f"{pid}.jpg", out / f"photo_{pid}.jpg")
+
     q = quarter_scores(g, pbp)
     qs = [(h, aw) if home else (aw, h) for h, aw in q]
     t, o = team_totals(box, g.game_id, team), team_totals(box, g.game_id, opp)
@@ -236,6 +258,7 @@ def main() -> None:
         "md": {"four_factors": ff_md, "box": box_md(box, g, team), "box_opp": box_md(box, g, opp),
                "results": results_md(games, rnd, team), "standings": standings_table_md(games, rnd, team)},
         "next": next_game(games, team, rnd),
+        **extra,
     }
     (out / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")
 
