@@ -45,23 +45,30 @@ See `notebooks/` for more.
 
 ## Weekly report (landing page)
 
-The landing page `docs/index.html` lists one report per round (newest first); pre-match analyses moved to `docs/prematch.html`.
-Each weekly report mixes an automatic part and your text:
+The landing page `docs/index.html` lists one report per round (newest first); pre-match analyses are at `docs/prematch.html`.
+Each report mixes an automatic part and your text. Team, season, author and the EuroCup file are set in `weekly/config.json`.
+
+**Every week** (the Monday GitHub Action already collects the games, generates the new reports and rebuilds `docs/`):
 
 ```bash
-python -m lba_data.collect                    # Monday: collect the round (the Action does this too)
-python notebooks/weekly_report.py --round 4   # plots + tables -> reports/weekly/round-04/, and creates weekly/round-04/notes.md
-# edit weekly/round-04/notes.md: title, summary and the sections key_points, story, tactics, players, next
-python notebooks/build_site.py                # -> docs/weekly/round-04/ and the landing page
+python notebooks/weekly.py --collect   # pull new games, generate every round without a report yet, build docs/
+# write your text in weekly/round-NN/notes.md (created empty for each new round, never overwritten)
 git add -A && git commit && git push
 ```
 
-* Automatic: score and quarters, margin chart, team numbers (eFG%, TOV%, OREB%, FT rate), PIR vs season average, box scores,
-  round results, standings, season trend, next fixture.
-* Written by you: `weekly/round-NN/notes.md` (markdown; empty sections are left out; put images in the same folder).
+`python notebooks/weekly.py --round 4` regenerates one round (stats corrections); your notes are kept. The command lists the rounds
+that have no text yet. Single steps: `notebooks/weekly_report.py --round N` (figures + `auto.json`), `notebooks/build_site.py` (pages).
+
+* Automatic: score and quarters, margin chart, team numbers (eFG%, TOV%, OREB%, FT rate), PIR vs season average, playing-time flag
+  (8'+ played and +7' or +30% vs the average before), box scores, roster with photos, assist matrix, shot zones, TS% vs PIR (LBA only,
+  EuroCup only), round results, standings, season trend, next fixture.
+* Written by you: `weekly/round-NN/notes.md` (markdown; sections `key_points`, `story`, `tactics`, `players`, `roster`, `assists`,
+  `zones`, `efficiency`, `next`; empty sections are left out; put images in the same folder).
+* Roster positions and heights: fill in `data/roster.csv` (new players are appended blank). Photos: `data/photos/` (fetched automatically).
 * Layout: `weekly/template/page.md.j2` (page order and automatic sections), `weekly/template/site.html.j2` (look).
-  To add a section: add a `## newkey` to the notes and `{% if n.newkey %}...{{ n.newkey }}{% endif %}` to the page template,
-  or add a figure in `weekly_report.py` and reference its PNG in the template.
+  To add a section: add a `## newkey` to `weekly/template/notes.md` and an `{% if n.newkey %}...{% endif %}` block to the page template,
+  or add a figure in `weekly_sections.py`, put its numbers in `auto` (`weekly_report.py`) and reference its PNG in the template.
+* Another team or season: change `weekly/config.json` (the code has no team name in it) and add that season's EuroCup file if any.
 
 ## Pre-match analyses site (GitHub Pages)
 
