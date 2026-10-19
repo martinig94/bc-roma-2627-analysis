@@ -61,6 +61,8 @@ may differ slightly). An LBA table is never shown for a EuroCup game.
 - **TS% vs PIR**: players with at least 10 minutes per game; dot size is minutes per game; one plot with LBA games only and one with
   EuroCup games only. The grey dots are other teams' players in the same competition (in the EuroCup, only the teams present in the
   file).
+- **Compare two situations**: the page *Compare* puts two snapshots side by side (record and position, team numbers, roster averages) and
+  shows B minus A in brackets. The figures are the ones of the snapshots, so each side uses only the data available before its game.
 - **Opponent comparison**: the table puts BC Roma and the opponent side by side with the definitions above; the figures of the analysis
   (scoring sources, hot spots, key players, lineups) come from the same data cut.
 - **Five-man lineups**: rebuilt from the substitutions in the play-by-play; best and worst units need a minimum of minutes together
