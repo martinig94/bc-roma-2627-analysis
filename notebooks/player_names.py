@@ -21,3 +21,23 @@ def player_key(name: str) -> str:
 def photo_name(player: str) -> str:
     """File stem of a player's picture: data/manresa/photos/<photo_name>.jpg, photo_<photo_name>.jpg next to the report."""
     return re.sub(r"\W+", "_", player_key(player)).strip("_")
+
+
+def display_name(name: str) -> str:
+    """'ALLEN, TIMMY' -> 'Timmy Allen'; names already in that form are kept."""
+    if "," not in name:
+        return name.strip()
+    last, first = (part.strip() for part in name.split(",", 1))
+    return f"{first.title()} {last.title()}"
+
+
+def find_image_url(obj, key_hint: bool = False) -> str | None:
+    """First http(s) URL under keys that look like image/photo/headshot in a (nested) API object."""
+    if isinstance(obj, str):
+        return obj if key_hint and obj.startswith("http") else None
+    items = obj.items() if isinstance(obj, dict) else enumerate(obj) if isinstance(obj, list) else []
+    for k, v in items:
+        hit = find_image_url(v, key_hint or bool(re.search(r"image|photo|head", str(k), re.I)))
+        if hit:
+            return hit
+    return None

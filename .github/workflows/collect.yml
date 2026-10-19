@@ -37,6 +37,11 @@ jobs:
         continue-on-error: true   # commit whatever was collected even if some games failed
         run: python -m lba_data.collect
 
+      - name: EuroCup results and rosters (EuroLeague API)
+        id: eurocup
+        continue-on-error: true   # the report falls back to "EuroCup standings not available yet"
+        run: python notebooks/eurocup_fetch.py
+
       - name: Weekly report for the new rounds
         id: weekly
         continue-on-error: true   # a report problem must not block committing the data
@@ -56,6 +61,6 @@ jobs:
             git push
           fi
 
-      - name: Fail the run if the collector or the report reported errors
-        if: steps.collect.outcome == 'failure' || steps.weekly.outcome == 'failure'
+      - name: Fail the run if the collector, the EuroCup fetch or the report reported errors
+        if: steps.collect.outcome == 'failure' || steps.eurocup.outcome == 'failure' || steps.weekly.outcome == 'failure'
         run: exit 1
