@@ -40,6 +40,12 @@ def load_box(data: Path, upto_round: int, upto_date: str, eurocup_file: str = ""
     return box
 
 
+def load_box_before(data: Path, before: str, eurocup_file: str = "") -> pd.DataFrame:
+    """Everything available before a game: LBA and EuroCup rows dated strictly before `before` (YYYY-MM-DD)."""
+    box = load_box(data, 10**6, "9999-12-31", eurocup_file)
+    return box[box.date < before].copy()
+
+
 def players(box: pd.DataFrame, team: str = TEAM) -> pd.DataFrame:
     return box[(box.row_type == "player") & (box.team == team) & (box.sec > 0)]
 
@@ -150,15 +156,17 @@ def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM) 
 
 
 # ── shot zones ──────────────────────────────────────────────────────────────────
-def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int, out: Path, team: str = TEAM) -> dict:
+def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int | None, out: Path, team: str = TEAM) -> dict:
     GOLD, GOLD_EDGE = team_color(team)
     s = shots_cm(pbp[pbp.game_id.isin(games)])
     ref = zone_stats(s[s.team != team])
     mine = s[s.team == team]
-    this = mine[mine.game_id == game_id]
-    fig, axes = plt.subplots(1, 2, figsize=(15, 8))
+    this = mine[mine.game_id == game_id] if game_id is not None else mine.iloc[0:0]
+    fig, axes = plt.subplots(1, 2 if game_id is not None else 1, figsize=(15, 8) if game_id is not None else (8.5, 8))
+    axes = np.atleast_1d(axes)
     mesh = plot_zone_heatmap(axes[0], mine, f"Season to date: {int(mine.made.sum())}/{len(mine)} FG in {mine.game_id.nunique()} LBA games", ref=ref)
-    plot_zone_heatmap(axes[1], this, f"This game: {int(this.made.sum())}/{len(this)} FG")
+    if game_id is not None:
+        plot_zone_heatmap(axes[1], this, f"This game: {int(this.made.sum())}/{len(this)} FG")
     cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
     fig.suptitle(f"{team} shooting by zone, LBA (small grey text: FG% of all other LBA teams in that zone)", **SUP_KW)
     save_fig(fig, out / "zones.png"); plt.close(fig)
@@ -170,9 +178,13 @@ def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int, out: Path, team
     sm, sl, sg = share(mine), share(s[s.team != team]), share(this)
     fig, ax = plt.subplots(figsize=(10, 4.8))
     x = np.arange(len(zs)); w = 0.27
-    ax.bar(x - w, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, season")
-    ax.bar(x, sg, w, color=GOLD, alpha=0.45, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, this game")
-    ax.bar(x + w, sl, w, color=LEAGUE, label="other LBA teams")
+    if game_id is not None:
+        ax.bar(x - w, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, season")
+        ax.bar(x, sg, w, color=GOLD, alpha=0.45, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, this game")
+        ax.bar(x + w, sl, w, color=LEAGUE, label="other LBA teams")
+    else:
+        ax.bar(x - w / 2, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, season")
+        ax.bar(x + w / 2, sl, w, color=LEAGUE, label="other LBA teams")
     ax.set_xticks(x, [labels[z] for z in zs], rotation=25, ha="right", fontsize=9)
     ax.set_ylabel("% of field-goal attempts"); ax.legend(fontsize=8)
     style_axes(ax, "y")
@@ -220,3 +232,37 @@ def fig_ts_pir(box: pd.DataFrame, comp: str, out: Path, min_mpg: float = 10, tea
     fname = "ts_pir_lba.png" if comp == "LBA" else "ts_pir_eurocup.png"
     save_fig(fig, out / fname); plt.close(fig)
     return {"file": fname, "players": len(mine), "others": len(other), "games": games}
+
+
+# ── team profile (LBA, to date) ─────────────────────────────────────────────────
+def team_profile(box: pd.DataFrame, team: str) -> dict:
+    """Season-to-date team numbers from LBA games (box = rows of load_box*, all teams): record, pace, ratings, four factors."""
+    tot = box[(box.competition == "LBA") & (box.row_type == "total")]
+    mine = tot[tot.team == team].set_index("game_id")
+    if mine.empty:
+        return {}
+    opp = tot[tot.opponent == team].set_index("game_id").reindex(mine.index)
+    n = len(mine)
+    poss = lambda t: t.fg2a + t.fg3a - t.oreb + t.tov + 0.44 * t.fta
+    pm, po = poss(mine), poss(opp)
+    fga, ofga = mine.fg2a + mine.fg3a, opp.fg2a + opp.fg3a
+    wins = int((mine.pts > opp.pts).sum())
+    minutes = mine.sec.sum() / 300
+    r = lambda x, d=1: round(float(x), d)
+    return {
+        "GP": n, "Record": f"{wins}-{n - wins}",
+        "Points per game": r(mine.pts.mean()), "Points allowed per game": r(opp.pts.mean()),
+        "Offensive rating": r(100 * mine.pts.sum() / pm.sum()), "Defensive rating": r(100 * opp.pts.sum() / po.sum()),
+        "Net rating": r(100 * mine.pts.sum() / pm.sum() - 100 * opp.pts.sum() / po.sum()),
+        "Pace (possessions per 40')": r(40 * ((pm + po) / 2).sum() / minutes),
+        "eFG%": r(100 * (mine.fg2m + 1.5 * mine.fg3m).sum() / fga.sum()),
+        "TOV% (per 100 poss.)": r(100 * mine.tov.sum() / pm.sum()),
+        "OREB%": r(100 * mine.oreb.sum() / (mine.oreb + opp.dreb).sum()),
+        "FT rate (FTA/FGA)": r(100 * mine.fta.sum() / fga.sum()),
+        "3PA per game": r(mine.fg3a.mean()), "3P%": r(100 * mine.fg3m.sum() / mine.fg3a.sum()),
+        "2P%": r(100 * mine.fg2m.sum() / mine.fg2a.sum()), "FT%": r(100 * mine.ftm.sum() / mine.fta.sum()),
+        "Assists per game": r(mine.ast.mean()),
+        "Opp. eFG%": r(100 * (opp.fg2m + 1.5 * opp.fg3m).sum() / ofga.sum()),
+        "Opp. TOV% (forced)": r(100 * opp.tov.sum() / po.sum()),
+        "DREB%": r(100 * mine.dreb.sum() / (mine.dreb + opp.oreb).sum()),
+    }

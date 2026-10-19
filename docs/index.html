@@ -28,16 +28,32 @@
   .card .score { font-size:1.4rem; font-weight:700; }
   .win { color:#2e9e5b; } .loss { color:#d94b4b; }
   .latest { border-left:6px solid var(--gold); }
+  select { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
   .nav { display:flex; justify-content:space-between; margin-top:3rem; }
 </style>
 </head>
 <body>
 <header><div class="bar">
   <a href="">BC Roma 2026/27 · weekly report</a>
-  <span class="sub">LBA Serie A &middot; <a href="prematch.html" style="font-weight:400">pre-match analyses</a></span>
+  <select aria-label="Before each game" onchange="if(this.value)location.href=''+this.value">
+    <option value="">Team before each game &#9662;</option>
+    <option value="snapshot/round-04/">Round 4: BC Roma vs Venezia · 2026-10-17</option>
+    <option value="snapshot/round-03/">Round 3: BC Roma at Maxima Roma · 2026-10-11</option>
+    <option value="snapshot/round-02/">Round 2: BC Roma vs Tortona · 2026-10-04</option>
+    
+  </select>
+  <select aria-label="Opponent analysis" onchange="if(this.value)location.href=''+this.value">
+    <option value="">Opponent analysis &#9662;</option>
+    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">Kids&Us Manresa scouting report (Liga Endesa + EuroCup) · 2026-10-18</option>
+    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">BC Roma vs Umana Reyer Venezia · 2026-10-17</option>
+    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">Derby della Capitale — Maxima Roma vs BC Roma · 2026-10-11</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">BC Roma vs Bertram Derthona Tortona · 2026-10-04</option>
+    
+  </select>
+  <a href="#reviews" style="font-weight:400">Game reviews</a>
 </div></header>
 <main>
-<h1>BC Roma 2026/27 · weekly report</h1><p>One report per round of the LBA Serie A: the game, the players, the league table. Pre-match opponent analyses are <a href="prematch.html">here</a>.</p><div class="cards"><a class="card latest" href="weekly/round-03/"><div class="rd">Round 3 · 2026-10-11 · latest</div><div class="score"><span class="loss">L</span> 95-96 at Maxima Roma</div><div class="rd">1-2 · 12th in the standings</div><div>A 95-96 defeat at PalaEur in the first Rome derby of the season.</div></a><a class="card" href="weekly/round-02/"><div class="rd">Round 2 · 2026-10-04</div><div class="score"><span class="win">W</span> 108-70 vs Tortona</div><div class="rd">1-1 · 6th in the standings</div></a><a class="card" href="weekly/round-01/"><div class="rd">Round 1 · 2026-09-26</div><div class="score"><span class="loss">L</span> 94-109 at Treviso</div><div class="rd">0-1 · 13th in the standings</div></a></div>
+<h1>BC Roma 2026/27 · weekly report</h1><p>The LBA Serie A season of BC Roma, in three parts: the team's situation before every game, the analysis of every opponent, and the review of every game played. The first two are always available from the dropdowns at the top; each uses only data from before its game.</p><h2>Next game</h2><div class="cards"><a class="card latest" href="snapshot/round-04/"><div class="rd">BC Roma before round 4 · 2026-10-17</div><div class="score">vs Venezia</div><div class="rd">1-2 · 12th in the standings</div></a><a class="card" href="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/"><div class="rd">Opponent analysis · 2026-10-17</div><div class="score">BC Roma vs Umana Reyer Venezia</div><div class="rd">with the comparison against BC Roma</div></a></div><h2 id="reviews">Game reviews</h2><div class="cards"><a class="card latest" href="review/round-03/"><div class="rd">Round 3 · 2026-10-11</div><div class="score"><span class="loss">L</span> 95-96 at Maxima Roma</div><div class="rd">1-2 · 12th in the standings<div>A 95-96 defeat at PalaEur in the first Rome derby of the season.</div></div></a><a class="card" href="review/round-02/"><div class="rd">Round 2 · 2026-10-04</div><div class="score"><span class="win">W</span> 108-70 vs Tortona</div><div class="rd">1-1 · 6th in the standings</div></a><a class="card" href="review/round-01/"><div class="rd">Round 1 · 2026-09-26</div><div class="score"><span class="loss">L</span> 94-109 at Treviso</div><div class="rd">0-1 · 13th in the standings</div></a></div>
 </main>
 </body>
 </html>

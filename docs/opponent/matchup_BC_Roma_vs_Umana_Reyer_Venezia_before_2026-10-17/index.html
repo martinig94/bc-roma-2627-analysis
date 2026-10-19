@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BC Roma vs Umana Reyer Venezia · BC Roma 2026/27 · weekly report</title>
+<style>
+  :root { --bg:#fff; --text:#1a1a2e; --muted:#5a5e73; --line:#e3e4ea; --gold:#F2C300; --card:#f6f6f9; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14141c; --text:#ececf3; --muted:#a3a6b8; --line:#2c2d3a; --card:#1d1d28; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, sans-serif; }
+  header { border-bottom:4px solid var(--gold); padding:14px 16px; }
+  .bar { max-width:980px; margin:0 auto; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  .bar a { text-decoration:none; font-weight:700; }
+  .bar .sub { color:var(--muted); font-size:.9rem; }
+  main { max-width:980px; margin:0 auto; padding:8px 16px 56px; }
+  img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
+  h1 { margin-bottom:.2rem; }
+  h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2.2rem; }
+  td img { max-width:none; width:44px; height:54px; object-fit:cover; object-position:top; border-radius:6px; display:block; }
+  table { border-collapse:collapse; display:block; overflow-x:auto; }
+  th, td { padding:4px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  blockquote { margin:1rem 0; padding:.2rem 1rem; border-left:4px solid var(--gold); color:var(--muted); }
+  details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
+  .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
+  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:10px; background:var(--card); text-decoration:none; color:inherit; }
+  .card:hover { border-color:var(--gold); }
+  .card .rd { color:var(--muted); font-size:.85rem; }
+  .card .score { font-size:1.4rem; font-weight:700; }
+  .win { color:#2e9e5b; } .loss { color:#d94b4b; }
+  .latest { border-left:6px solid var(--gold); }
+  select { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
+  .nav { display:flex; justify-content:space-between; margin-top:3rem; }
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a href="../../">BC Roma 2026/27 · weekly report</a>
+  <select aria-label="Before each game" onchange="if(this.value)location.href='../../'+this.value">
+    <option value="">Team before each game &#9662;</option>
+    <option value="snapshot/round-04/">Round 4: BC Roma vs Venezia · 2026-10-17</option>
+    <option value="snapshot/round-03/">Round 3: BC Roma at Maxima Roma · 2026-10-11</option>
+    <option value="snapshot/round-02/">Round 2: BC Roma vs Tortona · 2026-10-04</option>
+    
+  </select>
+  <select aria-label="Opponent analysis" onchange="if(this.value)location.href='../../'+this.value">
+    <option value="">Opponent analysis &#9662;</option>
+    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">Kids&Us Manresa scouting report (Liga Endesa + EuroCup) · 2026-10-18</option>
+    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">BC Roma vs Umana Reyer Venezia · 2026-10-17</option>
+    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">Derby della Capitale — Maxima Roma vs BC Roma · 2026-10-11</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">BC Roma vs Bertram Derthona Tortona · 2026-10-04</option>
+    
+  </select>
+  <a href="../../#reviews" style="font-weight:400">Game reviews</a>
+</div></header>
+<main>
+<h1>BC Roma vs Umana Reyer Venezia</h1>
+<p>LBA 2026/27, Round 4 · Saturday 17 October 2026, 16:00 · Palazzetto dello Sport, Rome</p>
+<p>Data: LBA games only (legabasket.it box scores and play-by-play), rounds 1 to 3 for both teams. League references are all 16 teams' LBA games collected so far (42 team-games). Three games per team is a small sample: treat everything below as early tendencies, not established facts. EuroCup games are not included.</p>
+<p>This folder is a frozen pre-match snapshot (games before 17 October 2026). Regenerate it with <code>python notebooks/matchup_report.py --home "BC Roma" --away "Umana Reyer Venezia" --no-eurocup --before 2026-10-17</code>, <code>python notebooks/lineups_report.py --team "BC Roma" --team "Umana Reyer Venezia" --before 2026-10-17 --out &lt;this folder&gt;</code> and <code>python notebooks/standings.py --team "BC Roma" --team "Umana Reyer Venezia" --before 2026-10-17 --out &lt;this folder&gt;</code> (results and standings section).</p>
+<h2>LBA so far: results and standings</h2>
+<p>All 24 LBA games played before this match (rounds 1 to 3); home team first.</p>
+<ul>
+<li><strong>Round 1</strong>: <strong>Treviso 109-94 BC Roma</strong> · <strong>Venezia 85-73 Cantù</strong> · Reggio Emilia 78-83 Trento · Milano 83-79 Trieste · Tortona 101-93 Verona · Udine 87-63 Scafati · Maxima Roma 75-94 Napoli · Varese 69-90 Virtus Bologna</li>
+<li><strong>Round 2</strong>: Trento 90-93 Treviso · Napoli 99-93 Reggio Emilia · <strong>BC Roma 108-70 Tortona</strong> · Scafati 77-85 Varese · <strong>Trieste 82-87 Venezia</strong> · Virtus Bologna 98-89 Maxima Roma · Cantù 84-85 Udine · Verona 75-72 Milano</li>
+<li><strong>Round 3</strong>: Udine 66-74 Trento · Varese 85-84 Trieste · Milano 106-77 Treviso · Reggio Emilia 93-86 Tortona · Cantù 80-99 Napoli · Scafati 82-89 Verona · <strong>Maxima Roma 96-95 BC Roma</strong> · <strong>Venezia 86-93 Virtus Bologna</strong></li>
+</ul>
+<p><img alt="standings" src="00_standings.png" /></p>
+<p><strong>Standings after round 3</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Team</th>
+<th style="text-align: right;">Pts</th>
+<th style="text-align: center;">W-L</th>
+<th style="text-align: center;">Points for-against</th>
+<th style="text-align: right;">Diff</th>
+<th style="text-align: center;">Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Napoli</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: center;">3-0</td>
+<td style="text-align: center;">292-248</td>
+<td style="text-align: right;">+44</td>
+<td style="text-align: center;">WWW</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Virtus Bologna</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: center;">3-0</td>
+<td style="text-align: center;">281-244</td>
+<td style="text-align: right;">+37</td>
+<td style="text-align: center;">WWW</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Verona</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">2-1</td>
+<td style="text-align: center;">257-255</td>
+<td style="text-align: right;">+2</td>
+<td style="text-align: center;">LWW</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Milano</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">2-1</td>
+<td style="text-align: center;">261-231</td>
+<td style="text-align: right;">+30</td>
+<td style="text-align: center;">WLW</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Treviso</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">2-1</td>
+<td style="text-align: center;">279-290</td>
+<td style="text-align: right;">-11</td>
+<td style="text-align: center;">WWL</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Trento</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">2-1</td>
+<td style="text-align: center;">247-237</td>
+<td style="text-align: right;">+10</td>
+<td style="text-align: center;">WLW</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><strong>Venezia</strong></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">2-1</td>
+<td style="text-align: center;">258-248</td>
+<td style="text-align: right;">+10</td>
+<td style="text-align: center;">WWL</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Varese</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">2-1</td>
+<td style="text-align: center;">239-251</td>
+<td style="text-align: right;">-12</td>
+<td style="text-align: center;">LWW</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Udine</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">2-1</td>
+<td style="text-align: center;">238-221</td>
+<td style="text-align: right;">+17</td>
+<td style="text-align: center;">WWL</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Reggio Emilia</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">264-268</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: center;">LLW</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Maxima Roma</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">260-287</td>
+<td style="text-align: right;">-27</td>
+<td style="text-align: center;">LLW</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><strong>BC Roma</strong></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">297-275</td>
+<td style="text-align: right;">+22</td>
+<td style="text-align: center;">LWL</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Tortona</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">257-294</td>
+<td style="text-align: right;">-37</td>
+<td style="text-align: center;">WLL</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Trieste</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">0-3</td>
+<td style="text-align: center;">245-255</td>
+<td style="text-align: right;">-10</td>
+<td style="text-align: center;">LLL</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>Cantù</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">0-3</td>
+<td style="text-align: center;">237-269</td>
+<td style="text-align: right;">-32</td>
+<td style="text-align: center;">LLL</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>Scafati</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">0-3</td>
+<td style="text-align: center;">222-261</td>
+<td style="text-align: right;">-39</td>
+<td style="text-align: center;">LLL</td>
+</tr>
+</tbody>
+</table>
+<p>Two points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).</p>
+<h2>Where the two teams are</h2>
+<p><strong>BC Roma</strong> is 1-2 and 12th in the standings, level on 2 points with Reggio Emilia, Maxima Roma and Tortona (its +22 point difference is the best of the four, but the derby loss puts it behind Maxima): a 94-109 loss at Treviso, a 108-70 win over Tortona and a 95-96 loss at Maxima Roma in the derby. The team scores 99 per game (128 per 100 possessions against a league 111) and concedes 92, the opponents hitting 53% of their twos, 36% of their threes and getting to the line 26.7 times per game.</p>
+<p><strong>Venezia</strong> is 2-1 and 7th, one of seven teams on 4 points behind the unbeaten Napoli and Virtus Bologna: wins over Cantu (85-73) and at Trieste (87-82), then a 86-93 home loss to Virtus Bologna. It scores 86 and concedes 83 (117 per 100 possessions scored), with the better defence of the two: opponents shoot 51% on twos and 33% on threes and have 21 free throw attempts per game.</p>
+<p><img alt="results" src="01_results_timeline.png" /></p>
+<h2>Starting five and bench</h2>
+<p>Both teams get most of their scoring from the starters (BC Roma 62 starters and 37 bench per game, Venezia 58 and 28). Venezia has the thinner bench scoring of the two; BC Roma's bench, led by Watson (12.0 points, 78% true shooting) and Davis (11.0), is closer to the league norm.</p>
+<p><img alt="starters vs bench" src="02_starters_bench.png" /></p>
+<p><img alt="minutes" src="03_minutes.png" /></p>
+<h2>Scoring sources</h2>
+<p>BC Roma is paint-first: 33% of its shots come from under the basket and 2P% is 65%, with 45 points per game within 4.5 m of the rim. It still takes 30.7 threes per game (37% made). Venezia is more balanced: 29% of its shots at the rim, 59% on twos, 27 threes per game at 37%. Both are well above the league on shooting efficiency, so the game is likely to be decided by who gets more possessions and free throws rather than who shoots better.</p>
+<p><img alt="scoring sources" src="04_scoring_sources.png" /></p>
+<p><img alt="shooting" src="05_shooting.png" /></p>
+<p><img alt="hot spots" src="06_hot_spots.png" /></p>
+<h2>Pace, turnovers, fouls</h2>
+<p>BC Roma plays faster (77.2 possessions per game against Venezia's 73.3, league 76.7). Both take care of the ball (11.7 and 11.0 turnovers, league 13.8) and neither forces many (8.7 and 9.3 turnovers by opponents). The difference is at the line: Venezia attempts just 13.7 free throws per game (league 23), BC Roma 19.3, but BC Roma gives up 26.7 per game against Venezia's 21. On the glass BC Roma has the offensive rebounding edge (12.3 per game against 9.0).</p>
+<h2>Key players</h2>
+<p>Niccolo Mannion is the engine of BC Roma: 18.0 points, 8.7 assists, PIR 26.0 and 67% true shooting. Simonovic (14.3 points, 6.7 rebounds, 70% TS) is the inside anchor, Stevenson (9/21 from three, +26) and Strautins (12.7 points, team-best +25) complete the best unit. Ayayi is the only regular with a negative plus/minus (-9).</p>
+<p>For Venezia, Watson (15.3 points, 4.0 assists, 10/20 from three) and Wiltjer (16.3 points but 57% TS and 3/13 from three) lead the scoring; Candi is 7/11 from three and Tessitori (+30 over three games) is the stabiliser inside. Bowman (-15) and Grant (-22) are the players the team has been outscored with.</p>
+<p><img alt="key players" src="07_key_players.png" /></p>
+<p><img alt="shot distribution" src="08_shot_distribution.png" /></p>
+<p><img alt="basic stats" src="09_basic_stats.png" /></p>
+<p><img alt="major factors" src="10_major_factors.png" /></p>
+<h2>Lineups</h2>
+<p>Lineups are rebuilt from the play-by-play substitutions. With 120 minutes per team, only 12 five-man units per team have played three minutes together, so rankings are by net points per 40 minutes among those units and are noisy.</p>
+<p><strong>BC Roma</strong> has one clear default unit: Mannion, Mezzanotte, Simonovic, Stevenson and Strautins played 17:53 together (15% of all minutes, two games) and are +18, +40 per 40 minutes. Swapping Davis for Mezzanotte gives the best rate (+7 in 4:41), while the units built around Ayayi are the weak ones: Ayayi, Mannion, Mezzanotte, Simonovic and Strautins are -9 in 5:36 (the worst), and the second unit of Ayayi, Davis, Emejuru plus two wings is negative every time (-3 in 4:46 with Strautins and Watson, -2 in 3:07 with Flowers). The bench-heavy units are where the game has been given away, and Mezzanotte's presence in the first unit is notable given his 2.3 points per game. Without Olynyk (not registered for the derby, expected to debut in this round), the frontcourt rotation could change this picture.</p>
+<p><img alt="BC Roma lineups" src="lineups_BC_Roma.png" /></p>
+<p><strong>Venezia</strong> relies even more on a single unit: Candi, Parks, Tessitori, Watson and Wiltjer played 11:53 (10% of the minutes, +15, +51 per 40) and a variant with Green in place of Candi added 7:07 (+5). Best rate of all is Bowman, Candi, Olinde, Tessitori and Watson (+6 in 3:00, one game). The poor units pair Bowman or Grant with Parks and Wiltjer (Bowman, Grant, Parks, Watson, Wiltjer: -3 in 3:36), plus Candi, Green, Olinde, Tessitori, Watson (-4 in 3:30). Venezia's results are best when Watson, Tessitori and Wiltjer share the floor with Candi or Parks.</p>
+<p><img alt="Venezia lineups" src="lineups_Umana_Reyer_Venezia.png" /></p>
+<h2>What to expect</h2>
+<p>BC Roma at home with the faster, paint-heavy offence against a Venezia defence that has held opponents to 83 points. The tendencies suggest BC Roma controls the glass and the paint, while Venezia's route is a low-turnover, three-point-friendly game and avoiding fouls: it has rarely gone to the line, so BC Roma's 26.7 free throws conceded per game are the cheapest advantage on offer. The lineups say the key minutes are when each coach goes to the bench: BC Roma's Ayayi-Davis-Emejuru groups have been negative, while Venezia's units with Bowman or Grant have been the weakest. Foul trouble for Simonovic or Tessitori (the +30 player) would be the biggest swing. With three games per team, no prediction of the final score is made.</p>
+<h2>Sources</h2>
+<ul>
+<li>Box scores and play-by-play: legabasket.it (via this repo's collector, <code>data/</code>), LBA games only</li>
+</ul>
+</main>
+</body>
+</html>
