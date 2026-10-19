@@ -22,4 +22,4 @@ Metrics to be tracked to measure player adherence to the philosophy and philosop
 5. **Live tagging console** Improve live tagging of the games.
 6. **Alerts definition** Define alerts based on specific metrics of interest (significant "increasing" or "decreasing" playing time, efficiency, etc.) for BC Roma team and opponents.
 
-7. Suggestions and corrections are welcome as comments on any page.
+Suggestions and corrections are welcome as comments on any page.
