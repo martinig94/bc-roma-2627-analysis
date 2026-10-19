@@ -76,6 +76,11 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   reviewed when its notes file (`weekly/snapshot/<date>/notes.md`, `weekly/opponent/<folder>/notes.md`) has `reviewed: yes` in the header;
   without it the banner says draft (no text yet) or work in progress (some text). Pages with a hand-written README or `document.md`
   are reviewed by definition. `weekly.py` prints the upcoming games still to review, and the landing page shows the same on the cards.
+* **Methodology and Work plan** are pages of the site written in `weekly/pages/methodology.md` and `weekly/pages/work-plan.md` (edit them like
+  any markdown file; `build_site.py` publishes them). **Comments** come from [utterances](https://utteranc.es): each page has a comment box
+  at the bottom, and a comment is stored as a GitHub issue of this repository (one per page, label `comment`), so readers need a GitHub
+  account. One-time setup: install the utterances app on the repository (https://github.com/apps/utterances); the repository is set in
+  `weekly/config.json` (`comments`; remove it to switch the box off).
 * **Your text** goes in `weekly/<kind>/.../notes.md` (created empty): `title:`, `summary:` and `## key` sections of markdown,
   e.g. `key_points`, `form`, `roster`, `assists`, `zones`, `efficiency` for the snapshot; `key_points`, `comparison`, `starters`,
   `shooting`, `players`, `lineups`, `expect` for the opponent; `key_points`, `story`, `tactics`, `players`, `next` for the review.

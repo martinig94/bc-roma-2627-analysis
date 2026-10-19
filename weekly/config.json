@@ -3,5 +3,10 @@
   "season": "2026/27",
   "league": "LBA Serie A",
   "author": "Giulia Martini",
-  "eurocup_file": "data/eurocup_2026_raw.txt"
+  "eurocup_file": "data/eurocup_2026_raw.txt",
+  "comments": {
+    "provider": "utterances",
+    "repo": "martinig94/bc-roma-2627-analysis",
+    "label": "comment"
+  }
 }

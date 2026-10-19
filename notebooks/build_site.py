@@ -38,6 +38,7 @@ WEEKLY = ROOT / "weekly"
 CFG = weekly_config.load()
 AUTHOR = CFG["author"]
 TPL = jinja2.Environment(loader=jinja2.FileSystemLoader(WEEKLY / "template"), autoescape=False, keep_trailing_newline=True)
+PAGES = ["methodology", "work-plan"]     # weekly/pages/<name>.md, in header order
 IMAGES = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}
 
 
@@ -136,8 +137,10 @@ def folder_name(home: str, away: str, day: str) -> str:
     return f"matchup_{home.replace(' ', '_')}_vs_{away.replace(' ', '_')}_before_{day}"
 
 
-def shell(title: str, body: str, root: str, nav: dict) -> str:
-    return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, nav=nav, site_title=CFG["site_title"], league=CFG["league"])
+def shell(title: str, body: str, root: str, nav: dict, comments: bool = False) -> str:
+    c = CFG.get("comments") or {}
+    return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, nav=nav, site_title=CFG["site_title"], league=CFG["league"],
+                                                   comments=comments, comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
 
 
 # ── page builders: each returns the list of entries it created ──────────────────
@@ -235,6 +238,19 @@ def build_snapshots(opponents: list[dict], tg: pd.DataFrame, today: date) -> lis
     return entries
 
 
+def build_info_pages() -> list[dict]:
+    """weekly/pages/*.md (Methodology, Work plan, ...) -> docs/<name>/index.html, in the order of PAGES; comments enabled."""
+    entries = []
+    for name in PAGES:
+        src = WEEKLY / "pages" / f"{name}.md"
+        shutil.rmtree(DOCS / name, ignore_errors=True)
+        if src.exists():
+            text = src.read_text(encoding="utf-8")
+            title = re.search(r"^# (.+)$", text, re.M).group(1)
+            entries.append({"slug": name, "title": title, "html": f'<div class="doc">{md_html(text)}</div>', "url": f"{name}/", "label": title})
+    return entries
+
+
 def build_nav(snaps: list[dict], opps: list[dict]) -> list[dict]:
     """The dropdown: one entry per game, newest first, opening the opponent analysis (which links to the BC Roma snapshot of
     the game) or, when there is no analysis, the snapshot itself."""
@@ -274,7 +290,7 @@ def build_reviews() -> list[dict]:
 def write_pages(kind: str, entries: list[dict], nav: dict) -> None:
     for e in entries:
         page = DOCS / kind / e["slug"] / "index.html"
-        page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav), encoding="utf-8")
+        page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav, comments=True), encoding="utf-8")
 
 
 def next_games(snaps: list[dict], opps: list[dict], today: date) -> list[dict]:
@@ -300,7 +316,9 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
     parts = [f"<h1>{CFG['site_title']}</h1>",
              f"<p>The season of {CFG['team']} ({CFG['league']} and EuroCup). The dropdown at the top lists the opponents, game by game: "
              "each page is the analysis of the opponent, with a link to the situation of the team before that game; both use only data from "
-             "before the game. Below, the next games and the review of every game played.</p>"]
+             "before the game. Below, the next games and the review of every game played. "
+             "<a href=\"methodology/\">Methodology</a> explains how the numbers are made and <a href=\"work-plan/\">Work plan</a> what is done and what comes next; "
+             "every page has a comment box at the bottom.</p>"]
     nxt = next_games(snaps, opps, today)
     if nxt:
         parts.append("<h2>Next games</h2><div class=\"cards\">")
@@ -331,7 +349,11 @@ def main() -> None:
     opps = build_opponents(tg, today)
     snaps = build_snapshots(opps, tg, today)
     reviews = build_reviews()
-    nav = {"games": build_nav(snaps, opps)}
+    pages = build_info_pages()
+    nav = {"games": build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"]} for p in pages]}
+    for p in pages:
+        (DOCS / p["slug"]).mkdir(parents=True, exist_ok=True)
+        (DOCS / p["slug"] / "index.html").write_text(shell(f"{p['title']} · {CFG['site_title']}", p["html"], "../", nav, comments=True), encoding="utf-8")
     write_pages("opponent", opps, nav); write_pages("snapshot", snaps, nav); write_pages("review", reviews, nav)
     build_landing(nav, snaps, opps, reviews, today)
     for stale in ("prematch.html", "analyses", "analyses.json", "weekly", "weekly.json"):   # replaced by the structure above

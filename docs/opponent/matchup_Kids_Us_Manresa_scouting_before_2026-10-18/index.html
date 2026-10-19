@@ -31,6 +31,10 @@
   .win { color:#2e9e5b; } .loss { color:#d94b4b; }
   .latest { border-left:6px solid var(--gold); }
   select { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
+  .doc table { display:table; width:100%; }
+  .doc th, .doc td { white-space:normal; text-align:left; vertical-align:top; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  .comments { margin-top:3rem; }
   .nav { display:flex; justify-content:space-between; margin-top:3rem; }
 </style>
 </head>
@@ -49,6 +53,9 @@
     
   </select>
   <a href="../../#reviews" style="font-weight:400">Game reviews</a>
+  <a href="../../methodology/" style="font-weight:400">Methodology</a>
+  <a href="../../work-plan/" style="font-weight:400">Work plan</a>
+  
 </div></header>
 <main>
 <h1>Kids&amp;Us Manresa scouting report (Liga Endesa + EuroCup)</h1>
@@ -949,6 +956,11 @@ Notae is also prone to turnovers.</p>
 </table>
 <h3>Shot charts of the main scorers</h3>
 <p><img alt="shot charts" src="04_shot_charts.png" /></p>
+<section class="comments">
+<h2>Comments</h2>
+<p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
+<script src="https://utteranc.es/client.js" repo="martinig94/bc-roma-2627-analysis" issue-term="pathname" label="comment" theme="preferred-color-scheme" crossorigin="anonymous" async></script>
+</section>
 </main>
 </body>
 </html>

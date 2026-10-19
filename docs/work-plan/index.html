@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work plan · BC Roma 2026/27 · weekly report</title>
+<style>
+  :root { --bg:#fff; --text:#1a1a2e; --muted:#5a5e73; --line:#e3e4ea; --gold:#F2C300; --card:#f6f6f9; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14141c; --text:#ececf3; --muted:#a3a6b8; --line:#2c2d3a; --card:#1d1d28; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, sans-serif; }
+  header { border-bottom:4px solid var(--gold); padding:14px 16px; }
+  .bar { max-width:980px; margin:0 auto; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  .bar a { text-decoration:none; font-weight:700; }
+  .bar .sub { color:var(--muted); font-size:.9rem; }
+  main { max-width:980px; margin:0 auto; padding:8px 16px 56px; }
+  img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
+  h1 { margin-bottom:.2rem; }
+  h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2.2rem; }
+  td img { max-width:none; width:44px; height:54px; object-fit:cover; object-position:top; border-radius:6px; display:block; }
+  td img.face { display:inline-block; width:34px; height:42px; vertical-align:middle; margin-right:8px; }
+  table { border-collapse:collapse; display:block; overflow-x:auto; }
+  th, td { padding:4px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  .mark { background:#fff2a8; color:#1a1a2e; padding:0 3px; border-radius:3px; }
+  blockquote { margin:1rem 0; padding:.2rem 1rem; border-left:4px solid var(--gold); color:var(--muted); }
+  details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
+  .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
+  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:10px; background:var(--card); text-decoration:none; color:inherit; }
+  .card:hover { border-color:var(--gold); }
+  .card .rd { color:var(--muted); font-size:.85rem; }
+  .card .score { font-size:1.4rem; font-weight:700; }
+  .win { color:#2e9e5b; } .loss { color:#d94b4b; }
+  .latest { border-left:6px solid var(--gold); }
+  select { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
+  .doc table { display:table; width:100%; }
+  .doc th, .doc td { white-space:normal; text-align:left; vertical-align:top; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  .comments { margin-top:3rem; }
+  .nav { display:flex; justify-content:space-between; margin-top:3rem; }
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a href="../">BC Roma 2026/27 · weekly report</a>
+  <select aria-label="Opponents" onchange="if(this.value)location.href='../'+this.value">
+    <option value="">Opponents &#9662;</option>
+    <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
+    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct</option>
+    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct</option>
+    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">at Maxima Roma · LBA round 3 · 11 Oct</option>
+    <option value="snapshot/2026-10-07/">vs Lietkabelis Panevezys · EuroCup · 7 Oct</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">vs Tortona · LBA round 2 · 4 Oct</option>
+    <option value="snapshot/2026-09-30/">at Bahcesehir College Istanbul · EuroCup · 30 Sep</option>
+    
+  </select>
+  <a href="../#reviews" style="font-weight:400">Game reviews</a>
+  <a href="../methodology/" style="font-weight:400">Methodology</a>
+  <a href="../work-plan/" style="font-weight:400">Work plan</a>
+  
+</div></header>
+<main>
+<div class="doc"><h1>Work plan</h1>
+<p>Where the project is and what comes next. The idea: the site publishes everything <strong>automatically first</strong>, and each page is then
+<strong>reviewed and improved by hand</strong>; comments from other users go in the box at the bottom of every page.</p>
+<h2>Weekly routine</h2>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>What</th>
+<th>Who</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Every morning, 06:40 UTC</td>
+<td>the GitHub Action collects finished LBA games, fetches the EuroCup data, regenerates what changed and rebuilds the site</td>
+<td>automatic</td>
+</tr>
+<tr>
+<td>Before each game</td>
+<td>open the next games on the home page; read the opponent analysis and the BC Roma snapshot; write key points, comparison and what to expect in the notes; set <code>reviewed: yes</code></td>
+<td>analyst</td>
+</tr>
+<tr>
+<td>After each game</td>
+<td>check the post-game review, write the story of the game and the tactical notes; the draft flags and the "games before" banners go away by themselves</td>
+<td>analyst</td>
+</tr>
+<tr>
+<td>When asked</td>
+<td>read the comments left on the pages and answer, or fold them into the text</td>
+<td>analyst</td>
+</tr>
+</tbody>
+</table>
+<h2>Status</h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily collection of LBA games, tests, automatic rebuild</td>
+<td>done</td>
+</tr>
+<tr>
+<td>Opponent analysis per game, with the comparison against BC Roma and the roster with photos</td>
+<td>done</td>
+</tr>
+<tr>
+<td>BC Roma snapshot before every game, in both competitions</td>
+<td>done</td>
+</tr>
+<tr>
+<td>Post-game reviews (LBA)</td>
+<td>done</td>
+</tr>
+<tr>
+<td>Flags: games before this one, automatic draft / work in progress</td>
+<td>done</td>
+</tr>
+<tr>
+<td>EuroCup standings of the group, from the EuroLeague results</td>
+<td>written, <strong>waiting for the first real run</strong> to confirm the data</td>
+</tr>
+<tr>
+<td>EuroCup headshots and rosters from the EuroLeague API</td>
+<td>written, waiting for the first real run</td>
+</tr>
+<tr>
+<td>Comments from other users</td>
+<td>on the pages; needs the utterances app installed once on the repository</td>
+</tr>
+<tr>
+<td>Positions and heights of the players</td>
+<td>to fill in (<code>data/roster.csv</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2>Next steps</h2>
+<ol>
+<li><strong>First real EuroCup run.</strong> After the next daily run, check <code>data/eurocup/</code> and the EuroCup table of the Manresa snapshot; fix
+   column names or the headshot field if the API differs from what was assumed.</li>
+<li><strong>Written content.</strong> Review the upcoming games first (Manresa, then Varese), then the past games' notes that are still empty.</li>
+<li><strong>Positions and heights.</strong> Fill in <code>data/roster.csv</code> for BC Roma and for the opponents that matter.</li>
+<li><strong>EuroCup box scores without hand entry.</strong> Use the EuroLeague API (box scores, play-by-play, shots) so that the EuroCup file and the
+   EuroCup-only limits (no assist matrix, no zones) go away.</li>
+<li><strong>EuroCup opponents.</strong> Generate the opponent analysis for EuroCup games like the LBA ones, instead of a hand-made page per club.</li>
+<li><strong>Reviews of EuroCup games</strong> with the same structure as the LBA reviews.</li>
+</ol>
+<h2>Ideas, not scheduled</h2>
+<ul>
+<li>A season page: BC Roma's trends across the season, both competitions.</li>
+<li>Player pages with the history of each player's numbers and minutes.</li>
+<li>Official EuroCup tie-breaks in the standings.</li>
+</ul>
+<p>Suggestions and corrections are welcome as comments on any page.</p></div>
+<section class="comments">
+<h2>Comments</h2>
+<p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
+<script src="https://utteranc.es/client.js" repo="martinig94/bc-roma-2627-analysis" issue-term="pathname" label="comment" theme="preferred-color-scheme" crossorigin="anonymous" async></script>
+</section>
+</main>
+</body>
+</html>
