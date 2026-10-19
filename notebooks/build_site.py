@@ -373,8 +373,7 @@ def build_info_pages() -> list[dict]:
 
 
 def build_nav(snaps: list[dict], opps: list[dict]) -> dict:
-    """The two dropdowns, newest first: the opponent analyses (a game without analysis is not in this one) and the snapshots
-    (every game, whether or not it has an analysis)."""
+    """The Opponents dropdown, newest first: the games that have an opponent analysis (snapshots are reached from the landing page)."""
     by_slug = {e["opponent_slug"]: e for e in snaps if e["opponent_slug"]}
     opponents = []
     for o in opps:
@@ -383,10 +382,8 @@ def build_nav(snaps: list[dict], opps: list[dict]) -> dict:
                  + f" · {day_label(e['date'])}") if e else f"{o['title']} · {day_label(o['game_date'])}"
         opponents.append({"date": o["game_date"], "url": f"opponent/{o['slug']}/",
                           "label": label + (" · old format" if o.get("legacy") else " · automatic only" if o.get("archive") else "")})
-    snapshots = [{"date": e["date"], "url": f"snapshot/{e['slug']}/", "label": e["data"]["label"] + (" · automatic only" if e.get("archive") else "")}
-                 for e in snaps]
     key = lambda r: r["date"]
-    return {"games": sorted(opponents, key=key, reverse=True), "snapshots": sorted(snapshots, key=key, reverse=True)}
+    return {"games": sorted(opponents, key=key, reverse=True)}
 
 
 def build_reviews() -> list[dict]:
