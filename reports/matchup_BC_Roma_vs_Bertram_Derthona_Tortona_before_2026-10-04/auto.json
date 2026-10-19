@@ -1,6 +1,6 @@
 {
   "kind": "opponent",
-  "version": 4,
+  "version": 5,
   "n_before": 12,
   "round": 2,
   "team": "BC Roma",
@@ -321,5 +321,149 @@
       "form": "W"
     }
   },
+  "assist_top": [
+    {
+      "passer": "Hubb",
+      "scorer": "Maddox",
+      "n": 3
+    },
+    {
+      "passer": "Hubb",
+      "scorer": "Bortolani",
+      "n": 2
+    },
+    {
+      "passer": "Durham",
+      "scorer": "Gorham",
+      "n": 1
+    },
+    {
+      "passer": "Durham",
+      "scorer": "Olejniczak",
+      "n": 1
+    },
+    {
+      "passer": "Gorham",
+      "scorer": "Alibegovic",
+      "n": 1
+    },
+    {
+      "passer": "Durham",
+      "scorer": "Bortolani",
+      "n": 1
+    }
+  ],
+  "turnovers": [
+    {
+      "name": "Alibegovic",
+      "gp": 1,
+      "min": 19.0,
+      "tov": 3,
+      "tov_min": 0.158,
+      "tov_pg": 3.0,
+      "worst_n": 3,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": true
+    },
+    {
+      "name": "Gorham",
+      "gp": 1,
+      "min": 31.0,
+      "tov": 2,
+      "tov_min": 0.065,
+      "tov_pg": 2.0,
+      "worst_n": 2,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": false
+    },
+    {
+      "name": "Hubb",
+      "gp": 1,
+      "min": 26.0,
+      "tov": 2,
+      "tov_min": 0.077,
+      "tov_pg": 2.0,
+      "worst_n": 2,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": true
+    },
+    {
+      "name": "Durham",
+      "gp": 1,
+      "min": 14.0,
+      "tov": 2,
+      "tov_min": 0.143,
+      "tov_pg": 2.0,
+      "worst_n": 2,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": false
+    },
+    {
+      "name": "Maddox",
+      "gp": 1,
+      "min": 25.0,
+      "tov": 1,
+      "tov_min": 0.04,
+      "tov_pg": 1.0,
+      "worst_n": 1,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": false
+    },
+    {
+      "name": "Olejniczak",
+      "gp": 1,
+      "min": 24.0,
+      "tov": 1,
+      "tov_min": 0.042,
+      "tov_pg": 1.0,
+      "worst_n": 1,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": false
+    },
+    {
+      "name": "Jallow",
+      "gp": 1,
+      "min": 23.0,
+      "tov": 1,
+      "tov_min": 0.043,
+      "tov_pg": 1.0,
+      "worst_n": 1,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": false
+    },
+    {
+      "name": "Bortolani",
+      "gp": 1,
+      "min": 18.0,
+      "tov": 0,
+      "tov_min": 0.0,
+      "tov_pg": 0.0,
+      "worst_n": 0,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": false
+    },
+    {
+      "name": "Pecchia",
+      "gp": 1,
+      "min": 18.0,
+      "tov": 0,
+      "tov_min": 0.0,
+      "tov_pg": 0.0,
+      "worst_n": 0,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": false
+    },
+    {
+      "name": "Gazzotti",
+      "gp": 1,
+      "min": 2.0,
+      "tov": 0,
+      "tov_min": 0.0,
+      "tov_pg": 0.0,
+      "worst_n": 0,
+      "worst_game": "vs Tezenis Verona (27/09)",
+      "top": false
+    }
+  ],
   "standings_md": "## LBA so far: results and standings\n\nAll 10 LBA games played before this match (rounds 1 to 2); home team first.\n\n- **Round 1**: **Treviso 109-94 BC Roma** · Venezia 85-73 Cantù · Reggio Emilia 78-83 Trento · Milano 83-79 Trieste · **Tortona 101-93 Verona** · Udine 87-63 Scafati · Maxima Roma 75-94 Napoli · Varese 69-90 Virtus Bologna\n- **Round 2**: Trento 90-93 Treviso · Napoli 99-93 Reggio Emilia\n\n![standings](00_standings.png)\n\n**Standings after round 2**\n\n| # | Team | Pts | W-L | Points for-against | Diff | Results |\n|---:|---|---:|:---:|:---:|---:|:---:|\n| 1 | Napoli | 4 | 2-0 | 193-168 | +25 | WW |\n| 2 | Treviso | 4 | 2-0 | 202-184 | +18 | WW |\n| 3 | Udine | 2 | 1-0 | 87-63 | +24 | W |\n| 4 | Virtus Bologna | 2 | 1-0 | 90-69 | +21 | W |\n| 5 | Venezia | 2 | 1-0 | 85-73 | +12 | W |\n| 6 | **Tortona** | 2 | 1-0 | 101-93 | +8 | W |\n| 7 | Milano | 2 | 1-0 | 83-79 | +4 | W |\n| 8 | Trento | 2 | 1-1 | 173-171 | +2 | WL |\n| 9 | Trieste | 0 | 0-1 | 79-83 | -4 | L |\n| 10 | Verona | 0 | 0-1 | 93-101 | -8 | L |\n| 11 | Reggio Emilia | 0 | 0-2 | 171-182 | -11 | LL |\n| 12 | Cantù | 0 | 0-1 | 73-85 | -12 | L |\n| 13 | **BC Roma** | 0 | 0-1 | 94-109 | -15 | L |\n| 14 | Maxima Roma | 0 | 0-1 | 75-94 | -19 | L |\n| 15 | Varese | 0 | 0-1 | 69-90 | -21 | L |\n| 16 | Scafati | 0 | 0-1 | 63-87 | -24 | L |\n\nTwo points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).\n"
 }

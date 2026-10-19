@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NB = ROOT / "notebooks"
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 4   # bump when the generated data changes shape: weekly.py regenerates older analyses
+VERSION = 5   # bump when the generated data changes shape: weekly.py regenerates older analyses
 
 
 def folder_name(home: str, away: str, date: str) -> str:
@@ -107,12 +107,20 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
 
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
+    fin = st.finished(games, date)
+    lba_ids = [int(x) for x in fin[(fin.home_team == opp) | (fin.away_team == opp)].game_id]
+    pbp = pd.read_csv(data / "pbp.csv")
+    pairs = ws.assist_pairs(pbp, lba_ids, opp)
+    box_lba = pd.read_csv(data / "box_scores.csv")
+    box_ast = int(box_lba[(box_lba.game_id.isin(lba_ids)) & (box_lba.team == opp) & (box_lba.row_type == "total")].ast.sum())
+    assist_top = ws.fig_assists(pairs, box_ast, folder, opp) if len(pairs) and box_ast else []
     auto = {
         "kind": "opponent", "version": VERSION, "n_before": current, "round": rnd, "team": team, "opponent": wr.short(opp), "opponent_full": opp, "home": bool(home),
         "home_team": g.home_team, "away_team": g.away_team, "date": date, "time": g.match_datetime[11:16],
         "venue": None if pd.isna(g.venue) else g.venue, "eurocup": bool(ec_teams),
         "eurocup_teams": [wr.short(t) for t in ec_teams], "league": CFG["league"], "roster": roster,
         "comparison": comparison(xbox, games, date, team, opp, ("LBA", "EC") if ec_teams else ("LBA",)),
+        "assist_top": assist_top, "turnovers": ws.turnover_table(xbox, opp),
         "standings_md": (folder / "standings.md").read_text(encoding="utf-8"),
     }
     (folder / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")

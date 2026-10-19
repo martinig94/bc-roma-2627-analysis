@@ -99,6 +99,29 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM) -> list[dict]:
     return rows
 
 
+# ── turnovers ───────────────────────────────────────────────────────────────────
+def turnover_table(box: pd.DataFrame, team: str = TEAM) -> list[dict]:
+    """Turnovers per player over the games in `box` (LBA + EuroCup rows of the team): total, per minute, and the game with the most.
+    The two highest single-game totals of the whole roster are flagged (`top`)."""
+    p = players(box, team).copy()
+    if p.empty:
+        return []
+    p["label"] = [f"{'at ' if h == 0 else 'vs '}{o} ({d[8:]}/{d[5:7]})" if pd.notna(h) else f"vs {o} ({d[8:]}/{d[5:7]})"
+                  for h, o, d in zip(p.get("home", pd.Series(index=p.index, dtype=float)), p.opponent, p.date)]
+    p = p.sort_values("date", ascending=False)
+    flagged = p.sort_values("tov", ascending=False, kind="stable").head(2)
+    top = {(r.player_surname, r.game_id) for r in flagged.itertuples() if r.tov > 0}
+    rows = []
+    for sur, g in p.groupby("player_surname"):
+        worst = g.sort_values("tov", ascending=False, kind="stable").iloc[0]
+        mins = g.sec.sum() / 60
+        rows.append({"name": sur.title(), "gp": len(g), "min": round(mins, 1), "tov": int(g.tov.sum()),
+                     "tov_min": round(g.tov.sum() / mins, 3) if mins else None, "tov_pg": round(g.tov.sum() / len(g), 1),
+                     "worst_n": int(worst.tov), "worst_game": worst.label, "top": (sur, worst.game_id) in top})
+    rows.sort(key=lambda r: (-r["tov"], -r["min"]))
+    return rows
+
+
 # ── playing time ────────────────────────────────────────────────────────────────
 def playing_time_flags(box: pd.DataFrame, game_id: str, game_date: str) -> list[dict]:
     """Players whose minutes in this game jumped versus their average in the games they played before it (LBA + EuroCup)."""

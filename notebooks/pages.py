@@ -67,9 +67,16 @@ def new_page(kind: str, a: dict, files: list[str], notes: dict | None = None) ->
 
 
 def ensure(kind: str, day: str, a: dict, files: list[str], notes: dict | None = None) -> tuple[Path, bool]:
-    """Create the page file if it does not exist yet. Returns (path, created)."""
+    """Create the page file if it does not exist yet. Returns (path, created).
+    A page nobody has touched (reviewed: no, body still equal to what was generated) is rewritten when the default page changed, so that
+    new blocks of the template reach it; a page with any work of yours is never touched."""
     path = page_path(kind, day)
     if path.exists():
+        meta, body = split_front(path.read_text(encoding="utf-8"))
+        if state(meta, body) == "draft":
+            fresh = new_page(kind, a, files, notes)
+            if split_front(fresh)[1] != body:
+                path.write_text(fresh, encoding="utf-8")
         return path, False
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(new_page(kind, a, files, notes), encoding="utf-8")
