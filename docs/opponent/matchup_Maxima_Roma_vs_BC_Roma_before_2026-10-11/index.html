@@ -19,6 +19,9 @@
   .brand img { height:32px; width:auto; background:none; border-radius:0; display:block; }
   .bar > a:not(.brand) { color:var(--ink); text-decoration:none; font-weight:500; }
   .bar > a:not(.brand):hover { color:var(--link); text-decoration:underline; }
+  .bar > a.right { margin-left:auto; }
+  @media (max-width:640px) { .bar > a.right { margin-left:0; } }
+  .author { max-width:980px; margin:0 auto; padding:0 16px 24px; color:var(--muted); font-size:.85rem; }
   main { max-width:980px; margin:0 auto; padding:12px 16px 56px; }
   img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
   h1 { margin:1.2rem 0 .6rem; line-height:1.25; }
@@ -95,6 +98,7 @@
   </select>
   
   <a href="../../compare/">Compare</a>
+  <a href="../../goal/">Goal</a>
   <a href="../../methodology/">Methodology</a>
   <a href="../../work-plan/">Work plan</a>
   
@@ -386,6 +390,7 @@
 <script src="https://utteranc.es/client.js" repo="martinig94/bc-roma-2627-analysis" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>
 </section>
 </main>
+<footer class="author">Author: Giulia Martini</footer>
 <div class="hl-tools" id="hl-tools" hidden>
   <span class="hl-colors" id="hl-colors" role="group" aria-label="Highlighter colour"></span>
   <button type="button" id="hl-clear" hidden>Clear highlights</button>
