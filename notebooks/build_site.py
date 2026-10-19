@@ -28,6 +28,7 @@ import markdown
 
 import pandas as pd
 
+import pages
 import weekly_config
 from player_names import photo_name
 from team_games import next_games as next_games_df, team_games
@@ -187,6 +188,7 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
         document = notes_dir / "document.md"
         state, game_day = "reviewed", day          # a page with your own text (README / document) counts as reviewed
         link = f"../../snapshot/{snap_of[slug]}/" if slug in snap_of else None
+        edit_file = None
         if readme.exists():                          # page with a README (hand-written, or written by a report script)
             text = readme.read_text(encoding="utf-8")
             title = re.search(r"^# (.+)$", text, re.M).group(1)
@@ -213,20 +215,20 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
                 game_day = snap_of[slug]             # the game itself (the folder name carries the data cut-off date)
         elif auto_path.exists():
             a = json.loads(auto_path.read_text(encoding="utf-8"))
-            n = parse_notes(notes_dir / "notes.md")
-            state, game_day = page_state(n), a["date"]
             a.update(date_long=long_date(a["date"]), team_suffix=ordinal(a["comparison"]["team"]["position"]),
                      opp_suffix=ordinal(a["comparison"]["opp"]["position"]))
             a["team_link"] = f"../../snapshot/{a['date']}/" if (ROOT / "reports" / "snapshot" / a["date"] / "auto.json").exists() else None
-            page_md = TPL.get_template("opponent.md.j2").render(a=a, n=n, author=AUTHOR, files=files)
-            title, rnd = n.get("title") or f"{a['home_team']} vs {a['away_team']}", a["round"]
-            link = None                              # the template has its own line
+            files += copy_images(pages.GAMES / a["date"], dest=dest)       # your own images, next to the page file
+            meta, body = pages.load("analysis", a["date"], a, files)       # weekly/games/<date>/analysis.md (or the default)
+            state, game_day = pages.state(meta, body), a["date"]
+            page_md = pages.expand(body, "analysis", a, files, AUTHOR)
+            title, rnd = meta.get("title") or f"{a['home_team']} vs {a['away_team']}", a["round"]
+            link, edit_file = None, pages.edit_path("analysis", a["date"])
         else:
             continue
         extra = f"BC Roma before this game: [pre-game snapshot]({link})." if link else ""
-        page_md = add_flags(page_md, flags_for(game_day, tg, today, state, f"weekly/opponent/{slug}/notes.md"), extra)
-        edit = (f"weekly/opponent/{slug}/document.md" if document.exists() else f"reports/{slug}/README.md" if readme.exists()
-                else f"weekly/opponent/{slug}/notes.md")      # the file that holds the text of the page
+        edit = edit_file or (f"weekly/opponent/{slug}/document.md" if document.exists() else f"reports/{slug}/README.md")  # file with the text
+        page_md = add_flags(page_md, flags_for(game_day, tg, today, state, edit), extra)
         entries.append({"slug": slug, "title": title, "date": day, "game_date": game_day, "round": rnd, "state": state, "html": md_html(page_md),
                         "edit": edit})
     entries.sort(key=lambda e: e["date"], reverse=True)
@@ -241,37 +243,23 @@ def build_snapshots(opponents: list[dict], tg: pd.DataFrame, today: date) -> lis
         if not (src / "auto.json").exists():
             continue
         a = json.loads((src / "auto.json").read_text(encoding="utf-8"))
-        notes_dir = WEEKLY / "snapshot" / src.name
-        n = parse_notes(notes_dir / "notes.md")
         if a.get("standings_table", {}).get("position"):
             a["standings_table"]["position_suffix"] = ordinal(a["standings_table"]["position"])
         a.setdefault("standings_table", {"kind": "LBA", "available": True})
         a.update(date_long=long_date(a["date"]), position_suffix=ordinal(a["position"]),
                  opponent_link=f"../../opponent/{a['opponent_analysis']}/" if a.get("opponent_analysis") in have_opp else None)
-        state = page_state(n)
-        page_md = add_flags(TPL.get_template("snapshot.md.j2").render(a=a, n=n, author=AUTHOR),
-                            flags_for(a["date"], tg, today, state, f"weekly/snapshot/{src.name}/notes.md"))
+        files = copy_images(src, pages.GAMES / a["date"], dest=DOCS / "snapshot" / src.name)     # generated images + your own
+        meta, body = pages.load("snapshot", a["date"], a, files)         # weekly/games/<date>/snapshot.md (or the default)
+        state = pages.state(meta, body)
+        page_md = add_flags(pages.expand(body, "snapshot", a, files, AUTHOR),
+                            flags_for(a["date"], tg, today, state, pages.edit_path("snapshot", a["date"])))
         short = f"{'at' if a['home'] is False else 'vs'} {a['opponent']}"
-        title = n.get("title") or f"{a['team']} {short}"
-        copy_images(src, notes_dir, dest=DOCS / "snapshot" / src.name)
+        title = meta.get("title") or f"{a['team']} {short}"
         entries.append({"slug": src.name, "title": title, "date": a["date"], "html": md_html(page_md), "state": state, "data": compare_data(a),
-                        "edit": f"weekly/snapshot/{src.name}/notes.md",
+                        "edit": pages.edit_path("snapshot", a["date"]),
                         "opponent": a["opponent"], "competition": a["competition"], "round": a["round"], "home": a["home"],
                         "opponent_slug": a.get("opponent_analysis") if a.get("opponent_analysis") in have_opp else None})
     entries.sort(key=lambda e: e["date"], reverse=True)
-    return entries
-
-
-def build_info_pages() -> list[dict]:
-    """weekly/pages/*.md (Methodology, Work plan, ...) -> docs/<name>/index.html, in the order of PAGES; comments enabled."""
-    entries = []
-    for name in PAGES:
-        src = WEEKLY / "pages" / f"{name}.md"
-        shutil.rmtree(DOCS / name, ignore_errors=True)
-        if src.exists():
-            text = src.read_text(encoding="utf-8")
-            title = re.search(r"^# (.+)$", text, re.M).group(1)
-            entries.append({"slug": name, "title": title, "html": f'<div class="doc">{md_html(text)}</div>', "url": f"{name}/", "edit": f"weekly/pages/{name}.md", "label": title})
     return entries
 
 
@@ -358,6 +346,19 @@ def build_compare(snaps: list[dict], nav: dict) -> dict | None:
     dest.mkdir(parents=True, exist_ok=True)
     (dest / "index.html").write_text(shell(f"Compare two situations · {CFG['site_title']}", body, "../", nav), encoding="utf-8")
     return {"url": "compare/", "label": "Compare"}
+
+
+def build_info_pages() -> list[dict]:
+    """weekly/pages/*.md (Methodology, Work plan, ...) -> docs/<name>/index.html, in the order of PAGES; comments enabled."""
+    entries = []
+    for name in PAGES:
+        src = WEEKLY / "pages" / f"{name}.md"
+        shutil.rmtree(DOCS / name, ignore_errors=True)
+        if src.exists():
+            text = src.read_text(encoding="utf-8")
+            title = re.search(r"^# (.+)$", text, re.M).group(1)
+            entries.append({"slug": name, "title": title, "html": f'<div class="doc">{md_html(text)}</div>', "url": f"{name}/", "edit": f"weekly/pages/{name}.md", "label": title})
+    return entries
 
 
 def build_nav(snaps: list[dict], opps: list[dict]) -> list[dict]:

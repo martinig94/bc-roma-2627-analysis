@@ -8,7 +8,7 @@ Where the project is and what comes next. The idea: the site publishes everythin
 | When | What | Who |
 |---|---|---|
 | Every morning, 06:40 UTC | the GitHub Action collects finished LBA games, fetches the EuroCup data, regenerates what changed and rebuilds the site | automatic |
-| Before each game | open the next games on the home page; read the opponent analysis and the BC Roma snapshot; write key points, comparison and what to expect in the notes; set `reviewed: yes` | analyst |
+| Before each game | open the next games on the home page; read the opponent analysis and the BC Roma snapshot; edit the two page files of the game (`weekly/games/<date>/analysis.md` and `snapshot.md`): write key points, comments and what to expect, add your plots, reorder or delete blocks; set `reviewed: yes` | analyst |
 | When asked | read the comments left on the pages and answer, or fold them into the text | analyst |
 
 

@@ -71,7 +71,7 @@ may differ slightly). An LBA table is never shown for a EuroCup game.
 ## Page status flags
 
 Pages are first generated automatically and then reviewed. For a game still to come, a banner at the top says *Automatic draft, not
-reviewed yet* (no text written), *Work in progress* (some text), or nothing once the notes file carries `reviewed: yes`. Other banners
+reviewed yet* (no text written), *Work in progress* (some text), or nothing once the page file carries `reviewed: yes` (a draft is a page that is still exactly what was generated). Other banners
 say which games before this one are not in the data yet.
 
 ## Limits to keep in mind
