@@ -1,7 +1,7 @@
 {
   "kind": "opponent",
   "version": 2,
-  "n_before": 29,
+  "n_before": 38,
   "round": 5,
   "team": "BC Roma",
   "opponent": "Varese",
@@ -24,75 +24,18 @@
       "name": "Hale",
       "pos": "",
       "height": "",
-      "gp": 3,
-      "min": 27.3,
-      "pts": 18.3,
-      "reb": 1.7,
-      "ast": 3.3,
-      "pir": 9.7,
-      "fg": "35 (16.3)",
-      "fg3": "36 (8.3)",
-      "ft": "86 (4.7)",
-      "ppg_lba": 18.3,
+      "gp": 4,
+      "min": 28.8,
+      "pts": 21.0,
+      "reb": 1.8,
+      "ast": 3.2,
+      "pir": 12.0,
+      "fg": "37 (17.5)",
+      "fg3": "39 (9.5)",
+      "ft": "81 (5.2)",
+      "ppg_lba": 21.0,
       "ppg_ec": null,
-      "sec_total": 4920
-    },
-    {
-      "player_id": 4034,
-      "photo": true,
-      "name": "Nikolic",
-      "pos": "",
-      "height": "",
-      "gp": 3,
-      "min": 25.3,
-      "pts": 6.7,
-      "reb": 4.7,
-      "ast": 1.0,
-      "pir": 7.0,
-      "fg": "62 (5.3)",
-      "fg3": "0 (0.7)",
-      "ft": "0 (0.7)",
-      "ppg_lba": 6.7,
-      "ppg_ec": null,
-      "sec_total": 4560
-    },
-    {
-      "player_id": 97,
-      "photo": true,
-      "name": "Alviti",
-      "pos": "",
-      "height": "",
-      "gp": 3,
-      "min": 24.0,
-      "pts": 10.0,
-      "reb": 4.0,
-      "ast": 2.3,
-      "pir": 14.0,
-      "fg": "62 (5.3)",
-      "fg3": "50 (3.3)",
-      "ft": "71 (2.3)",
-      "ppg_lba": 10.0,
-      "ppg_ec": null,
-      "sec_total": 4320
-    },
-    {
-      "player_id": 7428,
-      "photo": true,
-      "name": "Renfro",
-      "pos": "",
-      "height": "",
-      "gp": 3,
-      "min": 22.7,
-      "pts": 9.7,
-      "reb": 6.7,
-      "ast": 2.0,
-      "pir": 15.7,
-      "fg": "72 (6.0)",
-      "fg3": "– (0.0)",
-      "ft": "60 (1.7)",
-      "ppg_lba": 9.7,
-      "ppg_ec": null,
-      "sec_total": 4080
+      "sec_total": 6900
     },
     {
       "player_id": 9337,
@@ -100,37 +43,75 @@
       "name": "Duke",
       "pos": "",
       "height": "",
-      "gp": 3,
-      "min": 22.3,
-      "pts": 10.3,
-      "reb": 1.7,
-      "ast": 2.3,
-      "pir": 4.7,
-      "fg": "39 (9.3)",
-      "fg3": "22 (3.0)",
-      "ft": "58 (4.0)",
-      "ppg_lba": 10.3,
+      "gp": 4,
+      "min": 24.5,
+      "pts": 11.2,
+      "reb": 2.5,
+      "ast": 2.8,
+      "pir": 8.2,
+      "fg": "37 (9.5)",
+      "fg3": "18 (2.8)",
+      "ft": "71 (5.2)",
+      "ppg_lba": 11.2,
       "ppg_ec": null,
-      "sec_total": 4020
+      "sec_total": 5880
     },
     {
-      "player_id": 2790,
+      "player_id": 4034,
       "photo": true,
-      "name": "Ikangi",
+      "name": "Nikolic",
       "pos": "",
       "height": "",
-      "gp": 3,
-      "min": 19.0,
-      "pts": 3.3,
-      "reb": 2.0,
-      "ast": 1.3,
-      "pir": 0.7,
-      "fg": "27 (3.7)",
-      "fg3": "29 (2.3)",
-      "ft": "100 (0.7)",
-      "ppg_lba": 3.3,
+      "gp": 4,
+      "min": 24.0,
+      "pts": 6.8,
+      "reb": 4.2,
+      "ast": 1.0,
+      "pir": 6.2,
+      "fg": "62 (5.2)",
+      "fg3": "0 (0.5)",
+      "ft": "25 (1.0)",
+      "ppg_lba": 6.8,
       "ppg_ec": null,
-      "sec_total": 3420
+      "sec_total": 5760
+    },
+    {
+      "player_id": 97,
+      "photo": true,
+      "name": "Alviti",
+      "pos": "",
+      "height": "",
+      "gp": 4,
+      "min": 23.2,
+      "pts": 9.8,
+      "reb": 3.5,
+      "ast": 2.5,
+      "pir": 12.0,
+      "fg": "60 (5.0)",
+      "fg3": "50 (3.0)",
+      "ft": "75 (3.0)",
+      "ppg_lba": 9.8,
+      "ppg_ec": null,
+      "sec_total": 5580
+    },
+    {
+      "player_id": 7428,
+      "photo": true,
+      "name": "Renfro",
+      "pos": "",
+      "height": "",
+      "gp": 4,
+      "min": 21.0,
+      "pts": 8.2,
+      "reb": 5.2,
+      "ast": 1.5,
+      "pir": 11.5,
+      "fg": "70 (5.0)",
+      "fg3": "– (0.0)",
+      "ft": "62 (2.0)",
+      "ppg_lba": 8.2,
+      "ppg_ec": null,
+      "sec_total": 5040
     },
     {
       "player_id": 9335,
@@ -138,18 +119,37 @@
       "name": "Roby",
       "pos": "",
       "height": "",
-      "gp": 3,
-      "min": 16.0,
-      "pts": 3.0,
+      "gp": 4,
+      "min": 19.5,
+      "pts": 5.2,
       "reb": 4.0,
-      "ast": 1.3,
-      "pir": 1.0,
-      "fg": "21 (6.3)",
-      "fg3": "8 (4.0)",
+      "ast": 1.2,
+      "pir": 3.8,
+      "fg": "30 (7.5)",
+      "fg3": "16 (4.8)",
       "ft": "– (0.0)",
-      "ppg_lba": 3.0,
+      "ppg_lba": 5.2,
       "ppg_ec": null,
-      "sec_total": 2880
+      "sec_total": 4680
+    },
+    {
+      "player_id": 2790,
+      "photo": true,
+      "name": "Ikangi",
+      "pos": "",
+      "height": "",
+      "gp": 4,
+      "min": 17.0,
+      "pts": 2.5,
+      "reb": 1.5,
+      "ast": 1.0,
+      "pir": -1.2,
+      "fg": "25 (3.0)",
+      "fg3": "25 (2.0)",
+      "ft": "100 (0.5)",
+      "ppg_lba": 2.5,
+      "ppg_ec": null,
+      "sec_total": 4080
     },
     {
       "player_id": 3207,
@@ -157,18 +157,18 @@
       "name": "Librizzi",
       "pos": "",
       "height": "",
-      "gp": 3,
-      "min": 15.3,
-      "pts": 7.0,
-      "reb": 1.3,
-      "ast": 1.7,
-      "pir": 6.0,
-      "fg": "29 (5.7)",
-      "fg3": "33 (4.0)",
-      "ft": "88 (2.7)",
-      "ppg_lba": 7.0,
+      "gp": 4,
+      "min": 15.2,
+      "pts": 5.8,
+      "reb": 1.2,
+      "ast": 1.8,
+      "pir": 4.2,
+      "fg": "25 (5.0)",
+      "fg3": "27 (3.8)",
+      "ft": "90 (2.5)",
+      "ppg_lba": 5.8,
       "ppg_ec": null,
-      "sec_total": 2760
+      "sec_total": 3660
     },
     {
       "player_id": 7014,
@@ -176,18 +176,37 @@
       "name": "Kamagate",
       "pos": "",
       "height": "",
-      "gp": 3,
+      "gp": 4,
       "min": 14.0,
-      "pts": 6.3,
-      "reb": 4.0,
-      "ast": 1.7,
-      "pir": 7.3,
-      "fg": "73 (3.7)",
+      "pts": 6.2,
+      "reb": 4.2,
+      "ast": 1.2,
+      "pir": 8.0,
+      "fg": "73 (3.8)",
       "fg3": "– (0.0)",
-      "ft": "60 (1.7)",
-      "ppg_lba": 6.3,
+      "ft": "43 (1.8)",
+      "ppg_lba": 6.2,
       "ppg_ec": null,
-      "sec_total": 2520
+      "sec_total": 3360
+    },
+    {
+      "player_id": 6556,
+      "photo": true,
+      "name": "Villa",
+      "pos": "",
+      "height": "",
+      "gp": 3,
+      "min": 8.3,
+      "pts": 2.0,
+      "reb": 1.0,
+      "ast": 0.7,
+      "pir": 1.7,
+      "fg": "60 (1.7)",
+      "fg3": "0 (0.3)",
+      "ft": "0 (0.7)",
+      "ppg_lba": 2.0,
+      "ppg_ec": null,
+      "sec_total": 1500
     },
     {
       "player_id": 1617,
@@ -207,25 +226,6 @@
       "ppg_lba": 11.0,
       "ppg_ec": null,
       "sec_total": 1320
-    },
-    {
-      "player_id": 6556,
-      "photo": true,
-      "name": "Villa",
-      "pos": "",
-      "height": "",
-      "gp": 2,
-      "min": 8.0,
-      "pts": 2.0,
-      "reb": 1.0,
-      "ast": 0.5,
-      "pir": 0.0,
-      "fg": "50 (2.0)",
-      "fg3": "0 (0.5)",
-      "ft": "0 (1.0)",
-      "ppg_lba": 2.0,
-      "ppg_ec": null,
-      "sec_total": 960
     },
     {
       "player_id": 7626,
@@ -270,115 +270,115 @@
     "rows": [
       {
         "stat": "Games",
-        "team": "5 (3 LBA + 2 EuroCup)",
-        "opp": 3
+        "team": "6 (4 LBA + 2 EuroCup)",
+        "opp": 4
       },
       {
         "stat": "Record",
-        "team": "2-3",
-        "opp": "2-1"
+        "team": "2-4",
+        "opp": "2-2"
       },
       {
         "stat": "Points per game",
-        "team": 93.4,
-        "opp": 79.7
+        "team": 94.2,
+        "opp": 81.0
       },
       {
         "stat": "Points allowed per game",
-        "team": 90.6,
-        "opp": 83.7
+        "team": 92.8,
+        "opp": 84.5
       },
       {
         "stat": "Offensive rating",
-        "team": 122.4,
-        "opp": 101.6
+        "team": 122.3,
+        "opp": 103.4
       },
       {
         "stat": "Defensive rating",
-        "team": 119.2,
-        "opp": 109.9
+        "team": 120.7,
+        "opp": 110.2
       },
       {
         "stat": "Net rating",
-        "team": 3.2,
-        "opp": -8.3
+        "team": 1.6,
+        "opp": -6.8
       },
       {
         "stat": "Pace (possessions per 40')",
-        "team": 76.1,
-        "opp": 77.3
+        "team": 76.9,
+        "opp": 77.5
       },
       {
         "stat": "eFG%",
-        "team": 58.6,
-        "opp": 49.7
+        "team": 59.6,
+        "opp": 50.0
       },
       {
         "stat": "TOV% (per 100 poss.)",
-        "team": 17.6,
-        "opp": 21.3
+        "team": 17.8,
+        "opp": 21.7
       },
       {
         "stat": "OREB%",
-        "team": 37.0,
-        "opp": 35.0
+        "team": 34.8,
+        "opp": 36.6
       },
       {
         "stat": "FT rate (FTA/FGA)",
-        "team": 29.8,
-        "opp": 32.3
+        "team": 30.3,
+        "opp": 36.2
       },
       {
         "stat": "3PA per game",
-        "team": 30.0,
-        "opp": 27.7
+        "team": 30.5,
+        "opp": 27.8
       },
       {
         "stat": "3P%",
-        "team": 35.3,
-        "opp": 30.1
+        "team": 38.3,
+        "opp": 30.6
       },
       {
         "stat": "2P%",
-        "team": 63.2,
+        "team": 61.5,
         "opp": 53.0
       },
       {
         "stat": "FT%",
-        "team": 78.8,
-        "opp": 65.6
+        "team": 77.5,
+        "opp": 68.1
       },
       {
         "stat": "Assists per game",
-        "team": 19.6,
-        "opp": 19.0
+        "team": 19.2,
+        "opp": 18.0
       },
       {
         "stat": "Opp. eFG%",
-        "team": 53.9,
-        "opp": 50.0
+        "team": 54.1,
+        "opp": 50.8
       },
       {
         "stat": "Opp. TOV% (forced)",
         "team": 12.6,
-        "opp": 19.7
+        "opp": 21.8
       },
       {
         "stat": "DREB%",
-        "team": 67.4,
-        "opp": 61.5
+        "team": 66.7,
+        "opp": 58.5
       }
     ],
     "team": {
-      "record": "2-3",
-      "position": 12,
-      "form": "LWL"
+      "record": "2-4",
+      "position": 11,
+      "form": "LWLL"
     },
     "opp": {
-      "record": "2-1",
-      "position": 8,
-      "form": "LWW"
+      "record": "2-2",
+      "position": 10,
+      "form": "LWWL"
     }
   },
-  "standings_md": "## LBA so far: results and standings\n\nAll 24 LBA games played before this match (rounds 1 to 3); home team first.\n\n- **Round 1**: **Treviso 109-94 BC Roma** · Venezia 85-73 Cantù · Reggio Emilia 78-83 Trento · Milano 83-79 Trieste · Tortona 101-93 Verona · Udine 87-63 Scafati · Maxima Roma 75-94 Napoli · **Varese 69-90 Virtus Bologna**\n- **Round 2**: Trento 90-93 Treviso · Napoli 99-93 Reggio Emilia · **BC Roma 108-70 Tortona** · **Scafati 77-85 Varese** · Trieste 82-87 Venezia · Virtus Bologna 98-89 Maxima Roma · Cantù 84-85 Udine · Verona 75-72 Milano\n- **Round 3**: Udine 66-74 Trento · **Varese 85-84 Trieste** · Milano 106-77 Treviso · Reggio Emilia 93-86 Tortona · Cantù 80-99 Napoli · Scafati 82-89 Verona · **Maxima Roma 96-95 BC Roma** · Venezia 86-93 Virtus Bologna\n\n![standings](00_standings.png)\n\n**Standings after round 3**\n\n| # | Team | Pts | W-L | Points for-against | Diff | Results |\n|---:|---|---:|:---:|:---:|---:|:---:|\n| 1 | Napoli | 6 | 3-0 | 292-248 | +44 | WWW |\n| 2 | Virtus Bologna | 6 | 3-0 | 281-244 | +37 | WWW |\n| 3 | Verona | 4 | 2-1 | 257-255 | +2 | LWW |\n| 4 | Milano | 4 | 2-1 | 261-231 | +30 | WLW |\n| 5 | Treviso | 4 | 2-1 | 279-290 | -11 | WWL |\n| 6 | Trento | 4 | 2-1 | 247-237 | +10 | WLW |\n| 7 | Venezia | 4 | 2-1 | 258-248 | +10 | WWL |\n| 8 | **Varese** | 4 | 2-1 | 239-251 | -12 | LWW |\n| 9 | Udine | 4 | 2-1 | 238-221 | +17 | WWL |\n| 10 | Reggio Emilia | 2 | 1-2 | 264-268 | -4 | LLW |\n| 11 | Maxima Roma | 2 | 1-2 | 260-287 | -27 | LLW |\n| 12 | **BC Roma** | 2 | 1-2 | 297-275 | +22 | LWL |\n| 13 | Tortona | 2 | 1-2 | 257-294 | -37 | WLL |\n| 14 | Trieste | 0 | 0-3 | 245-255 | -10 | LLL |\n| 15 | Cantù | 0 | 0-3 | 237-269 | -32 | LLL |\n| 16 | Scafati | 0 | 0-3 | 222-261 | -39 | LLL |\n\nTwo points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).\n"
+  "standings_md": "## LBA so far: results and standings\n\nAll 32 LBA games played before this match (rounds 1 to 4); home team first.\n\n- **Round 1**: **Treviso 109-94 BC Roma** · Venezia 85-73 Cantù · Reggio Emilia 78-83 Trento · Milano 83-79 Trieste · Tortona 101-93 Verona · Udine 87-63 Scafati · Maxima Roma 75-94 Napoli · **Varese 69-90 Virtus Bologna**\n- **Round 2**: Trento 90-93 Treviso · Napoli 99-93 Reggio Emilia · **BC Roma 108-70 Tortona** · **Scafati 77-85 Varese** · Trieste 82-87 Venezia · Virtus Bologna 98-89 Maxima Roma · Cantù 84-85 Udine · Verona 75-72 Milano\n- **Round 3**: Udine 66-74 Trento · **Varese 85-84 Trieste** · Milano 106-77 Treviso · Reggio Emilia 93-86 Tortona · Cantù 80-99 Napoli · Scafati 82-89 Verona · **Maxima Roma 96-95 BC Roma** · Venezia 86-93 Virtus Bologna\n- **Round 4**: **BC Roma 98-104 Venezia** · Napoli 82-98 Milano · **Trento 87-85 Varese** · Treviso 102-86 Udine · Verona 94-81 Reggio Emilia · Trieste 92-72 Cantù · Virtus Bologna 108-83 Scafati · Tortona 75-89 Maxima Roma\n\n![standings](00_standings.png)\n\n**Standings after round 4**\n\n| # | Team | Pts | W-L | Points for-against | Diff | Results |\n|---:|---|---:|:---:|:---:|---:|:---:|\n| 1 | Virtus Bologna | 8 | 4-0 | 389-327 | +62 | WWWW |\n| 2 | Milano | 6 | 3-1 | 359-313 | +46 | WLWW |\n| 3 | Verona | 6 | 3-1 | 351-336 | +15 | LWWW |\n| 4 | Treviso | 6 | 3-1 | 381-376 | +5 | WWLW |\n| 5 | Venezia | 6 | 3-1 | 362-346 | +16 | WWLW |\n| 6 | Napoli | 6 | 3-1 | 374-346 | +28 | WWWL |\n| 7 | Trento | 6 | 3-1 | 334-322 | +12 | WLWW |\n| 8 | Udine | 4 | 2-2 | 324-323 | +1 | WWLL |\n| 9 | Maxima Roma | 4 | 2-2 | 349-362 | -13 | LLWW |\n| 10 | **Varese** | 4 | 2-2 | 324-338 | -14 | LWWL |\n| 11 | **BC Roma** | 2 | 1-3 | 395-379 | +16 | LWLL |\n| 12 | Reggio Emilia | 2 | 1-3 | 345-362 | -17 | LLWL |\n| 13 | Trieste | 2 | 1-3 | 337-327 | +10 | LLLW |\n| 14 | Tortona | 2 | 1-3 | 332-383 | -51 | WLLL |\n| 15 | Cantù | 0 | 0-4 | 309-361 | -52 | LLLL |\n| 16 | Scafati | 0 | 0-4 | 305-369 | -64 | LLLL |\n\nTwo points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).\n"
 }
