@@ -10,7 +10,7 @@ the opponent analysis links to the BC Roma snapshot of the same game, and a game
   Opponent analyses                one per opponent and game, with the comparison against the team
       reports/matchup_*_before_<date>/  README.md (hand-written, used as it is) or auto.json + weekly/opponent/<folder>/notes.md
       ->  docs/opponent/<folder>/
-  Game reviews (landing page)      post-game, one per played round
+  Game reviews (landing page)      post-game, one per played round; only when "reviews": true in weekly/config.json
       reports/review/round-NN/{auto.json, PNGs}  +  weekly/review/round-NN/notes.md      ->  docs/review/round-NN/
 
 Notes files: `title:`/`summary:` lines, then `## key` sections of markdown merged into the templates in weekly/template/.
@@ -161,7 +161,7 @@ def shell(title: str, body: str, root: str, nav: dict, comments: bool = False, e
     c = CFG.get("comments") or {}
     edit_url = f"https://github.com/{CFG['repo']}/edit/{CFG['branch']}/{edit}" if edit and CFG.get("repo") else None
     return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, nav=nav, site_title=CFG["site_title"], league=CFG["league"], season=CFG["season"],
-                                                   comments=comments, edit_url=edit_url, comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
+                                                   comments=comments, edit_url=edit_url, has_reviews=bool(CFG.get("reviews")), comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
 
 
 # ── page builders: each returns the list of entries it created ──────────────────
@@ -427,7 +427,8 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
     parts = [f"<h1>{CFG['site_title']}</h1>",
              f"<p>The season of {CFG['team']} ({CFG['league']} and EuroCup). The dropdown at the top lists the opponents, game by game: "
              "each page is the analysis of the opponent, with a link to the situation of the team before that game; both use only data from "
-             "before the game. Below, the next games, the situation of the team before each game (with a comparison of two games) and the review of every game played. "
+             "before the game. Below, the next games and the situation of the team before each game (with a comparison of two games)"
+             + (" and the review of every game played. " if reviews else ". ") +
              "<a href=\"methodology/\">Methodology</a> explains how the numbers are made and <a href=\"work-plan/\">Work plan</a> what is done and what comes next; "
              "every page has a comment box at the bottom.</p>"]
     nxt = next_games(snaps, opps, today)
@@ -490,7 +491,9 @@ def main() -> None:
     tg = team_games(ROOT / "data", CFG["team"])
     opps = build_opponents(tg, today)
     snaps = build_snapshots(opps, tg, today)
-    reviews = build_reviews()
+    reviews = build_reviews() if CFG.get("reviews") else []
+    if not reviews:
+        shutil.rmtree(DOCS / "review", ignore_errors=True)       # reviews switched off: nothing of them is published
     pages = build_info_pages()
     nav = {"games": build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"]} for p in pages]}
     if len(snaps) > 1:
