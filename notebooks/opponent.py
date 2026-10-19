@@ -5,7 +5,7 @@
 Runs the existing figure scripts (matchup_report.py, lineups_report.py, standings.py) into
 reports/matchup_<home>_vs_<away>_before_<date>/ and writes auto.json there (the BC Roma vs opponent comparison table).
 A folder that already exists is a frozen snapshot and is left alone; one with a hand-written README.md keeps it.
-Otherwise the page is rendered from weekly/template/opponent.md.j2 plus weekly/opponent/<folder>/notes.md (created empty).
+Otherwise the page is weekly/games/<date>/analysis.md (created once, see pages.py), with the automatic blocks filled in by build_site.py.
 Both teams' figures use their league games (LBA) plus their EuroCup games, for the teams that are in the EuroCup file.
 """
 from __future__ import annotations
@@ -19,6 +19,7 @@ from pathlib import Path
 
 import pandas as pd
 
+import pages
 import player_photos
 import standings as st
 import team_games as tgm
@@ -114,11 +115,9 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
         "standings_md": (folder / "standings.md").read_text(encoding="utf-8"),
     }
     (folder / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")
-    notes_dir = ROOT / "weekly" / "opponent" / folder.name
-    notes_dir.mkdir(parents=True, exist_ok=True)
-    if not (notes_dir / "notes.md").exists():
-        (notes_dir / "notes.md").write_text((ROOT / "weekly" / "template" / "notes_opponent.md").read_text(encoding="utf-8"), encoding="utf-8")
-        print(f"created {notes_dir / 'notes.md'} - write your text there")
+    page, created = pages.ensure("analysis", date, auto, sorted(f.name for f in folder.iterdir()))
+    if created:
+        print(f"created {page.relative_to(ROOT)} - the page you edit")
     print(f"opponent analysis round {rnd}: {wr.short(team)} vs {wr.short(opp)}  ->  {folder}")
     return folder
 

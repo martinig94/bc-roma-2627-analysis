@@ -3,9 +3,8 @@
     python notebooks/snapshot_report.py --game 2026-10-20          # the game is identified by its date
 
 The game can be finished or still to play (the list of games is team_games.py: LBA, EuroCup, weekly/schedule.csv).
-Writes reports/snapshot/<date>/ (figures, auto.json) and creates weekly/snapshot/<date>/notes.md from
-weekly/template/notes_snapshot.md if it does not exist yet. `build_site.py` merges them through
-weekly/template/snapshot.md.j2 into docs/snapshot/<date>/.
+Writes reports/snapshot/<date>/ (figures, auto.json) and, once, the page you edit: weekly/games/<date>/snapshot.md (see pages.py).
+`build_site.py` fills its automatic blocks into docs/snapshot/<date>/.
 """
 from __future__ import annotations
 
@@ -18,6 +17,7 @@ import pandas as pd
 
 import eurocup
 import lba_style
+import pages
 import player_photos
 import standings as st
 import team_games as tgm
@@ -137,11 +137,9 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     }
     (out / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
 
-    notes_dir = ROOT / "weekly" / "snapshot" / key
-    if not (notes_dir / "notes.md").exists():
-        notes_dir.mkdir(parents=True, exist_ok=True)
-        (notes_dir / "notes.md").write_text((ROOT / "weekly" / "template" / "notes_snapshot.md").read_text(encoding="utf-8"), encoding="utf-8")
-        print(f"created {notes_dir / 'notes.md'} - write your text there")
+    page, created = pages.ensure("snapshot", key, auto, sorted(f.name for f in out.iterdir()))
+    if created:
+        print(f"created {page.relative_to(ROOT)} - the page you edit")
     print(f"snapshot before {g.competition} game {key}: {wr.short(team)} {where(auto['home'])} {g.opponent}  ->  {out}")
     return out
 
