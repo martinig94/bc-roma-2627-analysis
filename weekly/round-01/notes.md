@@ -21,3 +21,11 @@ simply left out of the page. Images: put them in this folder and write ![caption
 
 ## next
 <!-- Preview of the next opponent and what to watch. -->
+
+## roster
+
+## assists
+
+## zones
+
+## efficiency

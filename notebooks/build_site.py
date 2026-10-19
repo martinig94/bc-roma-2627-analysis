@@ -69,7 +69,7 @@ def build_weekly() -> list[dict]:
         page_md = TPL.get_template("page.md.j2").render(a=a, n=n, author=AUTHOR)
         dest = DOCS / "weekly" / src.name
         dest.mkdir(parents=True)
-        for f in src.glob("*.png"):
+        for f in [*src.glob("*.png"), *src.glob("*.jpg")]:
             shutil.copy(f, dest / f.name)
         for f in notes_dir.glob("*"):
             if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}:
