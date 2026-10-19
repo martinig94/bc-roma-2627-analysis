@@ -1,0 +1,45 @@
+name: Rebuild site after a text edit
+
+# When someone edits a markdown file under weekly/ (for instance with the "Edit the text of this page" link on a page),
+# the site is rebuilt from the files already in the repository: no collection of games, no calls to the leagues' APIs.
+
+on:
+  push:
+    branches: [master]
+    paths: ["weekly/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect          # same group as the daily run: never two commits to docs/ at once
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build the site
+        run: python notebooks/build_site.py
+
+      - name: Commit the rebuilt site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "site already up to date"
+          else
+            git commit -m "site: rebuild after a text edit"
+            git push
+          fi
