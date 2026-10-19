@@ -109,8 +109,15 @@ def long_date(iso: str) -> str:
     return date.fromisoformat(iso).strftime("%A %d %B %Y")
 
 
+def mark_highlights(text: str) -> str:
+    """==text== -> a highlighted span (like the marked cells of a Word table); code spans are left alone."""
+    parts = re.split(r"(`[^`]*`)", text)
+    return "".join(p if p.startswith("`") else re.sub(r"(?<![=\w])==(?=\S)(.+?)(?<=\S)==(?![=\w])", r'<span class="mark">\1</span>', p)
+                   for p in parts)
+
+
 def md_html(text: str) -> str:
-    return markdown.markdown(text, extensions=["tables", "md_in_html", "sane_lists"])
+    return markdown.markdown(mark_highlights(text), extensions=["tables", "md_in_html", "sane_lists"])
 
 
 def copy_images(src: Path, *more: Path, dest: Path) -> list[str]:
@@ -137,10 +144,11 @@ def folder_name(home: str, away: str, day: str) -> str:
     return f"matchup_{home.replace(' ', '_')}_vs_{away.replace(' ', '_')}_before_{day}"
 
 
-def shell(title: str, body: str, root: str, nav: dict, comments: bool = False) -> str:
+def shell(title: str, body: str, root: str, nav: dict, comments: bool = False, edit: str | None = None) -> str:
     c = CFG.get("comments") or {}
+    edit_url = f"https://github.com/{CFG['repo']}/edit/{CFG['branch']}/{edit}" if edit and CFG.get("repo") else None
     return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, nav=nav, site_title=CFG["site_title"], league=CFG["league"], season=CFG["season"],
-                                                   comments=comments, comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
+                                                   comments=comments, edit_url=edit_url, comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
 
 
 # ── page builders: each returns the list of entries it created ──────────────────
@@ -205,7 +213,10 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
             continue
         extra = f"BC Roma before this game: [pre-game snapshot]({link})." if link else ""
         page_md = add_flags(page_md, flags_for(game_day, tg, today, state, f"weekly/opponent/{slug}/notes.md"), extra)
-        entries.append({"slug": slug, "title": title, "date": day, "game_date": game_day, "round": rnd, "state": state, "html": md_html(page_md)})
+        edit = (f"weekly/opponent/{slug}/document.md" if document.exists() else f"reports/{slug}/README.md" if readme.exists()
+                else f"weekly/opponent/{slug}/notes.md")      # the file that holds the text of the page
+        entries.append({"slug": slug, "title": title, "date": day, "game_date": game_day, "round": rnd, "state": state, "html": md_html(page_md),
+                        "edit": edit})
     entries.sort(key=lambda e: e["date"], reverse=True)
     return entries
 
@@ -232,6 +243,7 @@ def build_snapshots(opponents: list[dict], tg: pd.DataFrame, today: date) -> lis
         title = n.get("title") or f"{a['team']} {short}"
         copy_images(src, notes_dir, dest=DOCS / "snapshot" / src.name)
         entries.append({"slug": src.name, "title": title, "date": a["date"], "html": md_html(page_md), "state": state,
+                        "edit": f"weekly/snapshot/{src.name}/notes.md",
                         "opponent": a["opponent"], "competition": a["competition"], "round": a["round"], "home": a["home"],
                         "opponent_slug": a.get("opponent_analysis") if a.get("opponent_analysis") in have_opp else None})
     entries.sort(key=lambda e: e["date"], reverse=True)
@@ -247,7 +259,7 @@ def build_info_pages() -> list[dict]:
         if src.exists():
             text = src.read_text(encoding="utf-8")
             title = re.search(r"^# (.+)$", text, re.M).group(1)
-            entries.append({"slug": name, "title": title, "html": f'<div class="doc">{md_html(text)}</div>', "url": f"{name}/", "label": title})
+            entries.append({"slug": name, "title": title, "html": f'<div class="doc">{md_html(text)}</div>', "url": f"{name}/", "edit": f"weekly/pages/{name}.md", "label": title})
     return entries
 
 
@@ -281,6 +293,7 @@ def build_reviews() -> list[dict]:
         title = n.get("title") or f"Round {a['round']}: {a['team']} {a['score_for']}-{a['score_against']} {a['opponent']}"
         copy_images(src, notes_dir, dest=DOCS / "review" / src.name)
         entries.append({"slug": src.name, "round": a["round"], "title": title, "summary": n.get("summary", ""), "date": a["date"],
+                        "edit": f"weekly/review/{src.name}/notes.md",
                         "opponent": a["opponent"], "home": a["home"], "win": a["win"], "html": md_html(page_md),
                         "score": f"{a['score_for']}-{a['score_against']}", "record": a["record"], "position": a["position"]})
     entries.sort(key=lambda e: e["round"], reverse=True)
@@ -290,7 +303,7 @@ def build_reviews() -> list[dict]:
 def write_pages(kind: str, entries: list[dict], nav: dict) -> None:
     for e in entries:
         page = DOCS / kind / e["slug"] / "index.html"
-        page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav, comments=True), encoding="utf-8")
+        page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav, comments=True, edit=e.get("edit")), encoding="utf-8")
 
 
 def next_games(snaps: list[dict], opps: list[dict], today: date) -> list[dict]:
@@ -359,7 +372,7 @@ def main() -> None:
     nav = {"games": build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"]} for p in pages]}
     for p in pages:
         (DOCS / p["slug"]).mkdir(parents=True, exist_ok=True)
-        (DOCS / p["slug"] / "index.html").write_text(shell(f"{p['title']} · {CFG['site_title']}", p["html"], "../", nav, comments=True), encoding="utf-8")
+        (DOCS / p["slug"] / "index.html").write_text(shell(f"{p['title']} · {CFG['site_title']}", p["html"], "../", nav, comments=True, edit=p.get("edit")), encoding="utf-8")
     write_pages("opponent", opps, nav); write_pages("snapshot", snaps, nav); write_pages("review", reviews, nav)
     build_landing(nav, snaps, opps, reviews, today)
     for stale in ("prematch.html", "analyses", "analyses.json", "weekly", "weekly.json"):   # replaced by the structure above
