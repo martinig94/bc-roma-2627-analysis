@@ -59,9 +59,8 @@ analysis, which links to the BC Roma snapshot of the same game (a game without a
 
 ```bash
 python notebooks/weekly.py --collect    # pull new games, generate everything that is missing, build docs/
-# optional: write your text in the notes files it lists, then
-python notebooks/build_site.py          # re-render the pages
-git add -A && git commit && git push
+# then review and improve the pages it lists (see "Your pages" below), and push
+git add -A && git commit && git push      # the site is rebuilt after a push that touches weekly/
 ```
 
 `weekly.py --round 4` regenerates everything of one LBA round, `--game 2026-10-20` the snapshot of any game (stats corrections),
@@ -73,8 +72,8 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
 * **Flags at the top of a page**: *Games still to be played before this one* (the page is a preview), *Played but not collected yet*
   (the data of an earlier game is missing; fixed by the next collection), and, for a game still to come, *Automatic draft, not reviewed
   yet* / *Work in progress*. The idea: the site first publishes everything automatically, then you review and improve. A page counts as
-  reviewed when its notes file (`weekly/snapshot/<date>/notes.md`, `weekly/opponent/<folder>/notes.md`) has `reviewed: yes` in the header;
-  without it the banner says draft (no text yet) or work in progress (some text). Pages with a hand-written README or `document.md`
+  reviewed when its page file (`weekly/games/<date>/snapshot.md` or `analysis.md`) has `reviewed: yes` in the header;
+  without it the banner says draft (the page is still what was generated) or work in progress (you changed it). Pages with a hand-written README or `document.md`
   are reviewed by definition. `weekly.py` prints the upcoming games still to review, and the landing page shows the same on the cards.
 * **Methodology and Work plan** are pages of the site written in `weekly/pages/methodology.md` and `weekly/pages/work-plan.md` (edit them like
   any markdown file; `build_site.py` publishes them). **Comments** come from [utterances](https://utteranc.es): each page has a comment box
@@ -82,7 +81,7 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   account. One-time setup: install the utterances app on the repository (https://github.com/apps/utterances); the repository is set in
   `weekly/config.json` (`comments`; remove it to switch the box off).
 * **Editing from the page**: every page has an "Edit the text of this page" link that opens its markdown file in GitHub's web editor (the
-  notes of a snapshot, analysis or review; `document.md` or the README of an analysis written by hand; `weekly/pages/*.md` for Methodology and
+  page file of a snapshot or analysis, the notes of a review; `document.md` or the README of an analysis written by hand; `weekly/pages/*.md` for Methodology and
   Work plan). Saving it commits to `master` and the workflow *Rebuild site after a text edit* (`.github/workflows/site.yml`, runs only on
   changes under `weekly/`) rebuilds `docs/` in about a minute. People without write access get "Propose changes": GitHub forks the
   repository and opens a pull request that you merge. The repository and branch are `repo` and `branch` in `weekly/config.json`.
@@ -97,14 +96,24 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   highlights it (click again to remove; shift-click does the whole row), **Clear highlights** removes them all. It is for working live on
   a page (meetings, review sessions) and is kept in the browser of whoever clicks, not in the repository. For a highlight that stays
   for everybody, write `==text==` in the markdown file (for instance `| ==4.5== |` in a table written by hand, or in `document.md`).
-* **Your text** goes in `weekly/<kind>/.../notes.md` (created empty): `title:`, `summary:` and `## key` sections of markdown,
-  e.g. `key_points`, `form`, `roster`, `assists`, `zones`, `efficiency` for the snapshot; `key_points`, `comparison`, `starters`,
-  `shooting`, `players`, `lineups`, `expect` for the opponent; `key_points`, `story`, `tactics`, `players`, `next` for the review.
-  Empty sections are left out; put images in the same folder. An opponent folder `reports/matchup_*` with a hand-written
-  `README.md` is shown as it is (the three first analyses are like that).
-* **Layout**: `weekly/template/{snapshot,opponent,review}.md.j2` (page order, automatic parts, text slots) and `site.html.j2` (look).
-  To add a section, add its key to the matching `notes_*.md` and an `{% if n.key %}...{% endif %}` block to the template, or add a
-  figure in `weekly_sections.py` and its numbers to `auto` in the generator.
+* **Your pages** (snapshot and opponent analysis): one markdown file per game and page, `weekly/games/<date>/snapshot.md` (BC Roma before the
+  game) and `analysis.md` (the opponent). They are written once, the first time the game is generated, and **never overwritten**: they are
+  yours. `python notebooks/weekly.py --page 2026-10-24` prints their paths (creating them if missing). A page file is plain markdown:
+  * a few header lines at the top: `title:` (name in the dropdown), `reviewed:` (`no` / `yes`) and `generated:` (leave it);
+  * your text and your section titles: `##` headings, paragraphs, lists, `==highlights==`; reorder, delete or add sections freely;
+  * **live placeholders** for the automatic content, one per line: `{{ roster }}`, `{{ comparison }}`, `{{ standings }}`, `{{ lineups }}`,
+    `{{ team_numbers }}`, `{{ last_game }}`, `{{ assists }}`, `{{ zones }}`, `{{ efficiency }}`, `{{ season }}`..., and
+    `{{ figure: 07_key_players }}` for any generated image. They are replaced when the site is built and keep refreshing when the data
+    changes; delete the line to remove a block, move it to move the block. The comment at the top of each file lists them;
+  * **your own plots and images**: put the file in the same folder (`weekly/games/<date>/`) and write `![caption](my_plot.png)` where you
+    want it (drag and drop it with GitHub's "Add file / Upload files", or copy it locally). Ask Claude to draw a plot and it goes there.
+  Text in `<!-- comments -->` is not published (the prompts of a new page are comments); sections that stay empty are left out.
+  Pages written by hand (`reports/matchup_*/README.md`, `weekly/opponent/<folder>/document.md`) are shown as they are. The post-game reviews
+  still use `weekly/review/round-NN/notes.md` (`## key` sections: `key_points`, `story`, `tactics`, `players`, `next`).
+* **Layout**: `weekly/template/page_snapshot.md.j2` and `page_analysis.md.j2` are the default of a new page (change them and only new pages
+  change), `blocks.md.j2` holds the automatic blocks (the macros behind the placeholders, shared by all pages), `review.md.j2` the review,
+  `site.html.j2` the look. To add a block: add a macro to `blocks.md.j2`, put its numbers in `auto` (the generator) if needed, and add
+  `{{ name }}` to the pages that should show it. See `notebooks/pages.py` for how pages are read and expanded.
 * **Next games** on the landing page: the next game to play in each competition (LBA from `data/games.csv`, the others from
   `weekly/schedule.csv`), each with its snapshot and opponent analysis. Those pages are generated ahead of the game and regenerated
   by `weekly.py` whenever new games enter the data (`n_before` in their `auto.json`) (`date,time,competition,opponent,home,analysis`, `home` 1/0; `analysis` =
