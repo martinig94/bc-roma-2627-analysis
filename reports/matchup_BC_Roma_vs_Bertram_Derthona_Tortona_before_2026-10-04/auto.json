@@ -1,6 +1,6 @@
 {
   "kind": "opponent",
-  "version": 3,
+  "version": 4,
   "n_before": 12,
   "round": 2,
   "team": "BC Roma",
@@ -12,10 +12,8 @@
   "date": "2026-10-04",
   "time": "16:00",
   "venue": "Palazzetto dello Sport",
-  "eurocup": true,
-  "eurocup_teams": [
-    "BC Roma"
-  ],
+  "eurocup": false,
+  "eurocup_teams": [],
   "league": "LBA Serie A",
   "roster": [
     {
@@ -213,107 +211,107 @@
     "rows": [
       {
         "stat": "Games",
-        "team": "2 (1 LBA + 1 EuroCup)",
+        "team": 1,
         "opp": 1
       },
       {
         "stat": "Record",
-        "team": "0-2",
+        "team": "0-1",
         "opp": "1-0"
       },
       {
         "stat": "Points per game",
-        "team": 86.0,
+        "team": 94.0,
         "opp": 101.0
       },
       {
         "stat": "Points allowed per game",
-        "team": 100.0,
+        "team": 109.0,
         "opp": 93.0
       },
       {
         "stat": "Offensive rating",
-        "team": 114.5,
+        "team": 123.3,
         "opp": 135.8
       },
       {
         "stat": "Defensive rating",
-        "team": 129.6,
+        "team": 137.3,
         "opp": 120.0
       },
       {
         "stat": "Net rating",
-        "team": -15.1,
+        "team": -14.0,
         "opp": 15.8
       },
       {
         "stat": "Pace (possessions per 40')",
-        "team": 76.1,
+        "team": 77.8,
         "opp": 75.9
       },
       {
         "stat": "eFG%",
-        "team": 54.5,
+        "team": 56.3,
         "opp": 75.0
       },
       {
         "stat": "TOV% (per 100 poss.)",
-        "team": 18.0,
+        "team": 15.7,
         "opp": 16.1
       },
       {
         "stat": "OREB%",
-        "team": 38.0,
+        "team": 43.2,
         "opp": 19.0
       },
       {
         "stat": "FT rate (FTA/FGA)",
-        "team": 29.3,
+        "team": 29.6,
         "opp": 32.8
       },
       {
         "stat": "3PA per game",
-        "team": 32.0,
+        "team": 36.0,
         "opp": 18.0
       },
       {
         "stat": "3P%",
-        "team": 29.7,
+        "team": 33.3,
         "opp": 50.0
       },
       {
         "stat": "2P%",
-        "team": 63.8,
+        "team": 62.9,
         "opp": 75.0
       },
       {
         "stat": "FT%",
-        "team": 69.2,
+        "team": 66.7,
         "opp": 73.7
       },
       {
         "stat": "Assists per game",
-        "team": 19.5,
+        "team": 22.0,
         "opp": 21.0
       },
       {
         "stat": "Opp. eFG%",
-        "team": 59.0,
+        "team": 60.9,
         "opp": 50.6
       },
       {
         "stat": "Opp. TOV% (forced)",
-        "team": 13.0,
+        "team": 8.8,
         "opp": 12.9
       },
       {
         "stat": "DREB%",
-        "team": 61.6,
+        "team": 65.7,
         "opp": 51.2
       }
     ],
     "team": {
-      "record": "0-2",
+      "record": "0-1",
       "position": 13,
       "form": "L"
     },

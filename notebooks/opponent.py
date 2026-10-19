@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NB = ROOT / "notebooks"
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 3   # bump when the generated data changes shape: weekly.py regenerates older analyses
+VERSION = 4   # bump when the generated data changes shape: weekly.py regenerates older analyses
 
 
 def folder_name(home: str, away: str, date: str) -> str:
@@ -52,9 +52,9 @@ def run(script: str, *args: str) -> None:
         raise SystemExit(f"{script} failed:\n{r.stderr[-1500:]}")
 
 
-def comparison(box: pd.DataFrame, games: pd.DataFrame, date: str, team: str, opp: str) -> dict:
+def comparison(box: pd.DataFrame, games: pd.DataFrame, date: str, team: str, opp: str, comps: tuple = ("LBA", "EC")) -> dict:
     tab = st.standings(games, date)
-    prof = {t: ws.team_profile(box, t, ("LBA", "EC")) for t in (team, opp)}
+    prof = {t: ws.team_profile(box, t, comps) for t in (team, opp)}
     rows = []
     for k in prof[team]:
         rows.append({"stat": k, "team": prof[team][k], "opp": prof[opp].get(k, "–")})
@@ -98,7 +98,8 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
     if st.finished(games, date).empty:
         raise SystemExit(f"no games before {date}")
 
-    ec_teams = sorted({team, opp} & eurocup_teams(data))
+    ec_all = eurocup_teams(data)
+    ec_teams = sorted({team, opp} & ec_all) if {team, opp} <= ec_all else []   # EuroCup numbers only when both teams play it
     args = ["--home", g.home_team, "--away", g.away_team, "--before", date, "--out", "reports"]
     run("matchup_report.py", *args, *([] if ec_teams else ["--no-eurocup"]))
     run("lineups_report.py", "--team", team, "--team", opp, "--before", date, "--out", str(folder))
@@ -111,7 +112,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
         "home_team": g.home_team, "away_team": g.away_team, "date": date, "time": g.match_datetime[11:16],
         "venue": None if pd.isna(g.venue) else g.venue, "eurocup": bool(ec_teams),
         "eurocup_teams": [wr.short(t) for t in ec_teams], "league": CFG["league"], "roster": roster,
-        "comparison": comparison(xbox, games, date, team, opp),
+        "comparison": comparison(xbox, games, date, team, opp, ("LBA", "EC") if ec_teams else ("LBA",)),
         "standings_md": (folder / "standings.md").read_text(encoding="utf-8"),
     }
     (folder / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")
