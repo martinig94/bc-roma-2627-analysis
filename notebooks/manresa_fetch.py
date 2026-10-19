@@ -281,6 +281,18 @@ def fetch_shots(info: dict) -> list[dict]:
             and r["ID_ACTION"].strip()[1:3] == "FG"]
 
 
+def find_image_url(obj, key_hint: bool = False) -> str | None:
+    """First http(s) URL found under keys that look like image/photo/headshot in a (nested) API object."""
+    if isinstance(obj, str):
+        return obj if key_hint and obj.startswith("http") else None
+    items = obj.items() if isinstance(obj, dict) else enumerate(obj) if isinstance(obj, list) else []
+    for k, v in items:
+        hit = find_image_url(v, key_hint or bool(re.search(r"image|photo|head", str(k), re.I)))
+        if hit:
+            return hit
+    return None
+
+
 def fetch_heights() -> pd.DataFrame:
     """Roster heights (cm) and positions from the EuroLeague club endpoint."""
     rows = []
@@ -289,8 +301,29 @@ def fetch_heights() -> pd.DataFrame:
             continue
         info = person["person"]
         rows.append({"player": display_name(info["name"]), "height_cm": info["height"] or None,
-                     "position_en": person["positionName"]})
+                     "position_en": person["positionName"], "photo_url": find_image_url(person)})
     return pd.DataFrame(rows)
+
+
+def save_photos(heights: pd.DataFrame, size: int = 240) -> None:
+    """Thumbnails of the roster pictures into data/manresa/photos/<player key>.jpg (skipped when the API gave no URL)."""
+    import io
+    from PIL import Image
+    (OUT / "photos").mkdir(exist_ok=True)
+    for r in heights.itertuples():
+        if not isinstance(r.photo_url, str):
+            continue
+        try:
+            img = Image.open(io.BytesIO(get(r.photo_url).content)).convert("RGBA")
+        except Exception as exc:   # a missing picture must not stop the fetch
+            print(f"photo {r.player}: {exc}")
+            continue
+        bg = Image.new("RGB", img.size, "white"); bg.paste(img, mask=img.split()[3]); bg.thumbnail((size, size * 2))
+        bg.save(OUT / "photos" / f"{photo_name(r.player)}.jpg", quality=88, optimize=True)
+
+
+def photo_name(player: str) -> str:
+    return re.sub(r"\W+", "_", player_key(player)).strip("_")
 
 
 def main() -> None:
@@ -311,7 +344,9 @@ def main() -> None:
     pd.DataFrame(games).to_csv(OUT / "games.csv", index=False)
     pd.DataFrame(boxes).to_csv(OUT / "box.csv", index=False)
     pd.DataFrame(events).to_csv(OUT / "events.csv", index=False)
-    fetch_heights().to_csv(OUT / "heights.csv", index=False)
+    heights = fetch_heights()
+    heights.to_csv(OUT / "heights.csv", index=False)
+    save_photos(heights)
     print(f"{len(games)} games, {len(boxes)} box rows, {len(events)} events -> {OUT}")
 
 

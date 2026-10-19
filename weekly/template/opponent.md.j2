@@ -1,0 +1,73 @@
+{% from '_macros.j2' import roster_table %}# {{ a.home_team }} vs {{ a.away_team }}
+
+Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.venue }}{% endif %}
+
+**Pre-game analysis: only data from games played before {{ a.date_long }}.** League games{% if a.eurocup %} and EuroCup games{% endif %}; early in the season the samples are small, so read everything as tendencies, not established facts.{% if a.team_link %} The situation of {{ a.team }} before this game is [here]({{ a.team_link }}).{% endif %}
+
+{% if n.summary %}> {{ n.summary }}
+
+{% endif %}Author: {{ author }}
+
+{% if n.key_points %}## Key points
+
+{{ n.key_points }}
+
+{% endif %}
+{{ a.standings_md }}
+
+## {{ a.team }} and {{ a.opponent }} compared
+
+**{{ a.team }}**: {{ a.comparison.team.record }}, {{ a.comparison.team.position }}{{ a.team_suffix }}, last five {{ a.comparison.team.form }} · **{{ a.opponent }}**: {{ a.comparison.opp.record }}, {{ a.comparison.opp.position }}{{ a.opp_suffix }}, last five {{ a.comparison.opp.form }}
+
+| | {{ a.team }} | {{ a.opponent }} |
+|---|---:|---:|
+{% for r in a.comparison.rows %}| {{ r.stat }} | {{ r.team }} | {{ r.opp }} |
+{% endfor %}
+Ratings are points per 100 possessions. Games before this one in the league ({{ a.league }}) and, where the EuroCup file has them, the EuroCup{% if a.eurocup_teams %} (EuroCup data included for: {{ a.eurocup_teams|join(', ') }}){% else %} (no EuroCup data for either team){% endif %}.
+
+{% if n.comparison %}{{ n.comparison }}
+
+{% endif %}## {{ a.opponent }} roster
+
+Per-game averages before this game, league and EuroCup games. Shooting: percentage (attempts per game).
+
+{{ roster_table(a.roster) }}
+
+{% if '01_results_timeline.png' in files %}![results](01_results_timeline.png)
+
+{% endif %}{% if '02_starters_bench.png' in files %}## Starting five and bench
+
+{% if n.starters %}{{ n.starters }}
+
+{% endif %}![starters vs bench](02_starters_bench.png)
+
+{% if '03_minutes.png' in files %}![minutes](03_minutes.png)
+
+{% endif %}{% endif %}{% if '04_scoring_sources.png' in files %}## Scoring sources and shooting
+
+{% if n.shooting %}{{ n.shooting }}
+
+{% endif %}![scoring sources](04_scoring_sources.png)
+
+{% if '05_shooting.png' in files %}![shooting](05_shooting.png)
+
+{% endif %}{% if '06_hot_spots.png' in files %}![hot spots](06_hot_spots.png)
+
+{% endif %}{% endif %}{% if '07_key_players.png' in files %}## Key players
+
+{% if n.players %}{{ n.players }}
+
+{% endif %}![key players](07_key_players.png)
+
+{% for f, c in [('08_shot_distribution.png', 'shot distribution'), ('09_basic_stats.png', 'basic stats'), ('10_major_factors.png', 'major factors')] %}{% if f in files %}![{{ c }}]({{ f }})
+
+{% endif %}{% endfor %}{% endif %}{% for f in files if f.startswith('lineups_') %}{% if loop.first %}## Lineups
+
+{% if n.lineups %}{{ n.lineups }}
+
+{% endif %}{% endif %}![lineups]({{ f }})
+
+{% endfor %}{% if n.expect %}## What to expect
+
+{{ n.expect }}
+{% endif %}
