@@ -35,7 +35,7 @@ from urllib.request import Request, urlopen
 
 BASE = "https://www.legabasket.it/api"
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; lba-2627-data/0.1; research use)",
+    "User-Agent": "Mozilla/5.0 (compatible; bc-roma-2627-analysis/0.1; research use)",
     "Accept": "application/json",
     "Cache-Control": "no-cache",
 }
