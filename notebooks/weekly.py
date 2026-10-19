@@ -40,7 +40,8 @@ KINDS = ("snapshot", "opponent", "review")
 
 
 def has_text(notes: Path) -> bool:
-    return notes.exists() and bool(build_site.parse_notes(notes))
+    """Some text of yours in the notes (the `reviewed:` marker alone is not text)."""
+    return notes.exists() and any(k != "reviewed" for k in build_site.parse_notes(notes))
 
 
 def main() -> None:
@@ -67,7 +68,10 @@ def main() -> None:
     def snap_done(key: str) -> bool:
         """Generated, and with the data that is available now (a snapshot of a future game goes stale when games are collected)."""
         path = ROOT / "reports" / "snapshot" / key / "auto.json"
-        return path.exists() and json.loads(path.read_text(encoding="utf-8")).get("n_before") == team_games.n_before(tg, games_df, key)
+        if not path.exists():
+            return False
+        old = json.loads(path.read_text(encoding="utf-8"))
+        return old.get("n_before") == team_games.n_before(tg, games_df, key) and old.get("version") == snapshot_report.VERSION
     lba_targets = [int(r) for r in targets[targets.competition == "LBA"]["round"]]
     rep = lambda kind, r: ROOT / "reports" / kind / f"round-{r:02d}" / "auto.json"
     if a.game:
@@ -92,16 +96,27 @@ def main() -> None:
     if not a.no_build:
         build_site.main()
 
-    waiting = []
+    waiting, to_review = [], []
+    today = date.today().isoformat()
     for k in targets.key:
-        if not has_text(ROOT / "weekly" / "snapshot" / k / "notes.md"):
+        notes = ROOT / "weekly" / "snapshot" / k / "notes.md"
+        if not has_text(notes):
             waiting.append(f"snapshot {k}")
+        if k >= today and build_site.page_state(build_site.parse_notes(notes)) != "reviewed":
+            to_review.append(f"snapshot {k}")
     for r in done:
         if not has_text(ROOT / "weekly" / "review" / f"round-{r:02d}" / "notes.md"):
             waiting.append(f"review round {r}")
     for notes in sorted((ROOT / "weekly" / "opponent").glob("*/notes.md")):
-        if not (ROOT / "reports" / notes.parent.name / "README.md").exists() and not has_text(notes):
-            waiting.append(f"opponent {notes.parent.name.removeprefix('matchup_')}")
+        folder = notes.parent.name
+        if (ROOT / "reports" / folder / "README.md").exists():
+            continue
+        if not has_text(notes):
+            waiting.append(f"opponent {folder.removeprefix('matchup_')}")
+        if folder.rsplit("_before_", 1)[1] >= today and build_site.page_state(build_site.parse_notes(notes)) != "reviewed":
+            to_review.append(f"opponent {folder.removeprefix('matchup_')}")
+    if to_review:
+        print("\nUPCOMING GAMES TO REVIEW (flagged as draft on the site until `reviewed: yes` is set in their notes): " + "; ".join(to_review))
     if waiting:
         print("\nno text written yet (optional): " + "; ".join(waiting))
 

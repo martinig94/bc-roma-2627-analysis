@@ -28,6 +28,7 @@ import weekly_sections as ws
 ROOT = Path(__file__).resolve().parent.parent
 CFG = weekly_config.load()
 TEAM = CFG["team"]
+VERSION = 2   # bump when the generated data changes shape: weekly.py regenerates older snapshots
 
 
 def standings_md(games: pd.DataFrame, before: str, team: str, opp: str) -> str:
@@ -117,15 +118,13 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
         "kind": "snapshot", "key": key, "competition": g.competition, "round": None if pd.isna(g["round"]) else int(g["round"]),
         "team": team, "opponent": g.opponent, "opponent_full": opp, "home": None if nn(g.home) is None else bool(g.home),
         "date": date, "time": g.time, "venue": (None if venue.empty or pd.isna(venue.iloc[0]) else venue.iloc[0]) if is_lba else None,
-        "played": bool(g.finished), "n_before": tgm.n_before(tg, games, date), "opponent_analysis": nn(g.analysis),
+        "played": bool(g.finished), "version": VERSION, "n_before": tgm.n_before(tg, games, date), "opponent_analysis": nn(g.analysis),
         "record": f"{int(tab.loc[team, 'w'])}-{int(tab.loc[team, 'l'])}", "position": int(tab.loc[team, "pos"]), "points": int(tab.loc[team, "pts"]),
         "record_ec": f"{int(ec_before.win.sum())}-{int(len(ec_before) - ec_before.win.sum())}" if len(ec_before) else None,
         "form": "".join("W" if w else "L" for w in before.win.tail(5)),
         "last_game": {"competition": last.competition, "round": None if pd.isna(last["round"]) else int(last["round"]),
                       "opponent": last.opponent, "home": None if nn(last.home) is None else bool(last.home), "score_for": int(last.pf), "score_against": int(last.pa),
                       "win": bool(last.win), "date": last.date},
-        "missing": [f"{x.date} · {x.competition}{' round ' + str(int(x['round'])) if x.competition == 'LBA' else ''} {where(x.home)} {x.opponent}"
-                    for _, x in tg[(tg.date < date) & ~tg.finished].iterrows()],
         "playing_time": ws.playing_time_flags(xbox, str(last.game_id), last.date),
         "profile": {"LBA": ws.team_profile(xbox, team, ("LBA",)), "EuroCup": ws.team_profile(xbox, team, ("EC",))},
         "roster": roster,

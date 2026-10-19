@@ -1,6 +1,7 @@
 {% macro roster_table(roster) -%}
-| | Player | Pos | Ht | GP | MIN | PTS | REB | AST | PIR | FG% (FGA) | 3P% (3PA) | FT% (FTA) | PPG LBA | PPG EC |
-|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-{% for r in roster %}| {% if r.photo %}<img src="photo_{{ r.player_id }}.jpg" alt="{{ r.name }}" width="44">{% endif %} | **{{ r.name }}** | {{ r.pos or '–' }} | {{ r.height or '–' }} | {{ r.gp }} | {{ r.min }} | {{ r.pts }} | {{ r.reb }} | {{ r.ast }} | {{ r.pir }} | {{ r.fg }} | {{ r.fg3 }} | {{ r.ft }} | {{ r.ppg_lba if r.ppg_lba is not none else '–' }} | {{ r.ppg_ec if r.ppg_ec is not none else '–' }} |
+{% set ec = roster|selectattr('ppg_ec', 'ne', none)|list|length > 0 -%}
+| | Player | Pos | Ht | GP | MIN | PTS | REB | AST | PIR | FG% (FGA) | 3P% (3PA) | FT% (FTA) | PPG LBA |{% if ec %} PPG EC |{% endif %}
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|{% if ec %}---:|{% endif %}
+{% for r in roster %}| {% if r.photo %}<img src="photo_{{ r.player_id }}.jpg" alt="{{ r.name }}" width="44">{% endif %} | **{{ r.name }}** | {{ r.pos or '–' }} | {{ r.height or '–' }} | {{ r.gp }} | {{ r.min }} | {{ r.pts }} | {{ r.reb }} | {{ r.ast }} | {{ r.pir }} | {{ r.fg }} | {{ r.fg3 }} | {{ r.ft }} | {{ r.ppg_lba if r.ppg_lba is not none else '–' }} |{% if ec %} {{ r.ppg_ec if r.ppg_ec is not none else '–' }} |{% endif %}
 {% endfor %}
 {%- endmacro %}

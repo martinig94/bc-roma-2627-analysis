@@ -11,6 +11,7 @@
   "time": "16:00",
   "venue": "Palazzetto dello Sport",
   "played": false,
+  "version": 2,
   "n_before": 29,
   "opponent_analysis": "matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17",
   "record": "1-2",
@@ -28,7 +29,6 @@
     "win": false,
     "date": "2026-10-11"
   },
-  "missing": [],
   "playing_time": [],
   "profile": {
     "LBA": {
@@ -392,6 +392,12 @@
     "players": 9,
     "others": 10,
     "games": 2
+  },
+  "standings_table": {
+    "kind": "LBA",
+    "available": true,
+    "position": null,
+    "teams": null
   },
   "md": {
     "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Napoli | 6 | 3-0 | +44 | WWW |\n| 2 | Virtus Bologna | 6 | 3-0 | +37 | WWW |\n| 3 | Verona | 4 | 2-1 | +2 | LWW |\n| 4 | Milano | 4 | 2-1 | +30 | WLW |\n| 5 | Treviso | 4 | 2-1 | -11 | WWL |\n| 6 | Trento | 4 | 2-1 | +10 | WLW |\n| 7 | **Venezia** | 4 | 2-1 | +10 | WWL |\n| 8 | Varese | 4 | 2-1 | -12 | LWW |\n| 9 | Udine | 4 | 2-1 | +17 | WWL |\n| 10 | Reggio Emilia | 2 | 1-2 | -4 | LLW |\n| 11 | Maxima Roma | 2 | 1-2 | -27 | LLW |\n| 12 | **BC Roma** | 2 | 1-2 | +22 | LWL |\n| 13 | Tortona | 2 | 1-2 | -37 | WLL |\n| 14 | Trieste | 0 | 0-3 | -10 | LLL |\n| 15 | Cantù | 0 | 0-3 | -32 | LLL |\n| 16 | Scafati | 0 | 0-3 | -39 | LLL |",
