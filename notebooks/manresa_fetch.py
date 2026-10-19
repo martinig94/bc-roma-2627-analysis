@@ -25,6 +25,8 @@ from pathlib import Path
 import pandas as pd
 import requests
 
+from player_names import photo_name, player_key  # noqa: F401  (re-exported for manresa_report)
+
 OUT = Path(__file__).resolve().parent.parent / "data" / "manresa"
 HEADERS = {"User-Agent": "Mozilla/5.0 (BC Roma scouting; contact giulia.martini@un.org)"}
 ACB_CALENDAR = "https://www.acb.com/calendario"
@@ -52,19 +54,6 @@ def get(url: str) -> requests.Response:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return resp
-
-
-def player_key(name: str) -> str:
-    """Normalise 'Timmy Allen' and 'ALLEN, TIMMY' to the same 'allen t' key."""
-    name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
-    name = re.sub(r"[^a-z, ]", " ", name)
-    if "," in name:
-        last, first = (part.strip() for part in name.split(",", 1))
-    else:
-        first, _, last = name.strip().partition(" ")
-        last, first = (last or first), (first if last else "")
-    last = re.sub(r"\s+", " ", last).strip()
-    return f"{last} {first[:1]}".strip()
 
 
 def display_name(name: str) -> str:
@@ -320,10 +309,6 @@ def save_photos(heights: pd.DataFrame, size: int = 240) -> None:
             continue
         bg = Image.new("RGB", img.size, "white"); bg.paste(img, mask=img.split()[3]); bg.thumbnail((size, size * 2))
         bg.save(OUT / "photos" / f"{photo_name(r.player)}.jpg", quality=88, optimize=True)
-
-
-def photo_name(player: str) -> str:
-    return re.sub(r"\W+", "_", player_key(player)).strip("_")
 
 
 def main() -> None:

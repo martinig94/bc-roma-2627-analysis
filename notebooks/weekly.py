@@ -2,29 +2,36 @@
 
     python notebooks/weekly.py              # everything that is missing, then build docs/
     python notebooks/weekly.py --collect    # first pull new games from legabasket.it (python -m lba_data.collect)
-    python notebooks/weekly.py --round 4    # regenerate everything of round 4 (e.g. after a stats correction); your text is kept
+    python notebooks/weekly.py --round 4    # regenerate everything of LBA round 4 (e.g. after a stats correction); your text is kept
+    python notebooks/weekly.py --game 2026-10-20   # regenerate the snapshot of the game on that date (any competition)
     python notebooks/weekly.py --only snapshot,opponent   # a subset of: snapshot, opponent, review
     python notebooks/weekly.py --no-build   # figures and data only
 
 For every game of the team, by round N (settings in weekly/config.json):
-  snapshot  the team before game N, data from before it (needs a finished game before it, so N >= 2, up to the next game)
-  opponent  analysis of the opponent of game N with the comparison against the team (same data cut)
-  review    post-game review of game N (only once it is finished and collected)
+  snapshot  the team before the game, data from before it, for every game in every competition (LBA and EuroCup; needs a
+            game before it, up to the next game to be played). Folder = the date of the game.
+  opponent  analysis of the opponent of an LBA game with the comparison against the team (same data cut); other
+            competitions' opponents get a hand-made page (weekly/schedule.csv links it to the game)
+  review    post-game review of an LBA round (only once it is finished and collected)
 Your text lives in weekly/{snapshot,opponent,review}/.../notes.md, created empty the first time and never overwritten
 (a hand-written README.md in a reports/matchup_* folder is used as it is).
 """
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
+
+from datetime import date
 
 import pandas as pd
 
 import build_site
 import opponent
 import snapshot_report
+import team_games
 import weekly_config
 import weekly_report
 
@@ -39,7 +46,8 @@ def has_text(notes: Path) -> bool:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--collect", action="store_true", help="pull new games before generating")
-    ap.add_argument("--round", type=int, help="regenerate this round (all kinds that apply)")
+    ap.add_argument("--round", type=int, help="regenerate this LBA round (all kinds that apply)")
+    ap.add_argument("--game", help="regenerate the snapshot of the game on this date, YYYY-MM-DD")
     ap.add_argument("--only", default=",".join(KINDS), help="comma-separated subset of snapshot,opponent,review")
     ap.add_argument("--no-build", action="store_true")
     a = ap.parse_args()
@@ -51,19 +59,32 @@ def main() -> None:
     done = weekly_report.finished_rounds(games, team)
     if not done:
         raise SystemExit(f"no finished {team} game yet")
-    mine = set(int(r) for r in games[(games.home_team == team) | (games.away_team == team)]["round"])
-    # snapshot/opponent: every game with a finished game before it, up to the next one
-    upcoming = [r for r in range(2, max(done) + 2) if r in mine]
+    tg = team_games.team_games(ROOT / "data", team)
+    targets = team_games.snapshot_targets(tg, f"{date.today():%Y-%m-%d}")
+    rnd_key = {int(r["round"]): r["key"] for _, r in tg[tg.competition == "LBA"].iterrows()}
+    games_df = pd.read_csv(ROOT / "data" / "games.csv")
+
+    def snap_done(key: str) -> bool:
+        """Generated, and with the data that is available now (a snapshot of a future game goes stale when games are collected)."""
+        path = ROOT / "reports" / "snapshot" / key / "auto.json"
+        return path.exists() and json.loads(path.read_text(encoding="utf-8")).get("n_before") == team_games.n_before(tg, games_df, key)
+    lba_targets = [int(r) for r in targets[targets.competition == "LBA"]["round"]]
     rep = lambda kind, r: ROOT / "reports" / kind / f"round-{r:02d}" / "auto.json"
+    if a.game:
+        snaps = [a.game] if a.game in set(targets.key) else []
+    elif a.round:
+        snaps = [rnd_key[a.round]] if rnd_key.get(a.round) in set(targets.key) else []
+    else:
+        snaps = [k for k in targets.key if not snap_done(k)]
     todo = {
-        "snapshot": [a.round] if a.round in upcoming else [] if a.round else [r for r in upcoming if not rep("snapshot", r).exists()],
-        "opponent": [a.round] if a.round in upcoming else [] if a.round else upcoming,   # opponent.generate skips existing folders
-        "review": [a.round] if a.round in done else [] if a.round else [r for r in done if not rep("review", r).exists()],
+        "snapshot": snaps,
+        "opponent": [a.round] if a.round in lba_targets else [] if (a.round or a.game) else lba_targets,   # opponent.generate skips existing folders
+        "review": [a.round] if a.round in done else [] if (a.round or a.game) else [r for r in done if not rep("review", r).exists()],
     }
-    if a.round and not any(todo[k] for k in kinds):
-        raise SystemExit(f"round {a.round}: nothing to generate for {team}")
-    for r in (todo["snapshot"] if "snapshot" in kinds else []):
-        snapshot_report.generate(r, team)
+    if (a.round or a.game) and not any(todo[k] for k in kinds):
+        raise SystemExit(f"nothing to generate for {team} ({a.round or a.game})")
+    for k in (todo["snapshot"] if "snapshot" in kinds else []):
+        snapshot_report.generate(k, team)
     for r in (todo["opponent"] if "opponent" in kinds else []):
         opponent.generate(r, team, force=bool(a.round))
     for r in (todo["review"] if "review" in kinds else []):
@@ -72,9 +93,9 @@ def main() -> None:
         build_site.main()
 
     waiting = []
-    for r in upcoming:
-        if not has_text(ROOT / "weekly" / "snapshot" / f"round-{r:02d}" / "notes.md"):
-            waiting.append(f"snapshot round {r}")
+    for k in targets.key:
+        if not has_text(ROOT / "weekly" / "snapshot" / k / "notes.md"):
+            waiting.append(f"snapshot {k}")
     for r in done:
         if not has_text(ROOT / "weekly" / "review" / f"round-{r:02d}" / "notes.md"):
             waiting.append(f"review round {r}")

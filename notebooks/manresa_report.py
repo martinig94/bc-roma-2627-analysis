@@ -21,7 +21,7 @@ import lba_style
 from lba_style import (BLUE, GREEN, RED, SUP_KW, TEXT, TEXT2, draw_half_court, save_fig,
                        style_axes)
 from lineups_report import fig_lineups
-from manresa_fetch import photo_name, player_key
+from player_names import photo_name, player_key
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "manresa"

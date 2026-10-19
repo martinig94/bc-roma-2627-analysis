@@ -2,7 +2,7 @@
 
 Incremental collector for the Italian basketball league (Lega Basket Serie A) 2026/27 season,
 built on the undocumented JSON API behind [legabasket.it](https://www.legabasket.it).
-It runs every Monday morning on GitHub Actions, collects any newly finished games, and commits
+It runs every morning on GitHub Actions, collects any newly finished games, and commits
 the updated dataset — so `data/` grows on its own through the season.
 
 Season context: 16 teams, 30 rounds (andata/ritorno). Two Rome teams — **BC Roma** (team_id 1761,
@@ -50,11 +50,11 @@ See `notebooks/` for more.
 
 | | what | data used | page folder |
 |---|---|---|---|
-| **Team before each game** | BC Roma's situation before every game: record and standings, form, last game's playing-time flag, team numbers, roster with photos, assist matrix, shot zones, TS% vs PIR (LBA only, EuroCup only), season trend | only games played before that game | `docs/snapshot/round-NN/` |
+| **Team before each game** | BC Roma's situation before every game, **in both competitions** (LBA and EuroCup): LBA and EuroCup record, LBA standings, last results of both, last game's playing-time flag, team numbers (LBA and EuroCup columns), roster with photos, assist matrix and shot zones (LBA play-by-play), TS% vs PIR (LBA only, EuroCup only), every game so far | only games played before that game, in both competitions | `docs/snapshot/<date of the game>/` |
 | **Opponent analysis** | one per opponent and game, with the comparison table against BC Roma, results and standings, the opponent's roster with photos, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game: the league (LBA) plus the EuroCup, for the teams in the EuroCup file | `docs/opponent/<matchup folder>/` |
 | **Game reviews** (landing page) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
 
-**Every week** (the Monday GitHub Action collects the games, runs `weekly.py` and commits the result):
+**Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games are not collected, add them to the EuroCup file and `weekly/schedule.csv`):
 
 ```bash
 python notebooks/weekly.py --collect    # pull new games, generate everything that is missing, build docs/
@@ -63,8 +63,10 @@ python notebooks/build_site.py          # re-render the pages
 git add -A && git commit && git push
 ```
 
-`weekly.py --round 4` regenerates everything of one round (stats corrections), `--only snapshot,opponent,review` a subset;
-your text is never overwritten. The single steps are `snapshot_report.py --round N`, `opponent.py --round N`,
+`weekly.py --round 4` regenerates everything of one LBA round, `--game 2026-10-20` the snapshot of any game (stats corrections),
+`--only snapshot,opponent,review` a subset; your text is never overwritten. The list of games (LBA from `data/games.csv`, EuroCup from
+the EuroCup file, games still to play from `weekly/schedule.csv`) is `team_games.py`. A snapshot says when a game before it is not
+in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponent.py --round N`,
 `weekly_report.py --round N` (review) and `build_site.py`.
 
 * **Your text** goes in `weekly/<kind>/.../notes.md` (created empty): `title:`, `summary:` and `## key` sections of markdown,
@@ -75,6 +77,17 @@ your text is never overwritten. The single steps are `snapshot_report.py --round
 * **Layout**: `weekly/template/{snapshot,opponent,review}.md.j2` (page order, automatic parts, text slots) and `site.html.j2` (look).
   To add a section, add its key to the matching `notes_*.md` and an `{% if n.key %}...{% endif %}` block to the template, or add a
   figure in `weekly_sections.py` and its numbers to `auto` in the generator.
+* **Next games** on the landing page: the next game to play in each competition (LBA from `data/games.csv`, the others from
+  `weekly/schedule.csv`), each with its snapshot and opponent analysis. Those pages are generated ahead of the game and regenerated
+  by `weekly.py` whenever new games enter the data (`n_before` in their `auto.json`) (`date,time,competition,opponent,home,analysis`, `home` 1/0; `analysis` =
+  the `reports/matchup_*` folder). Add a row for every EuroCup game.
+* **A document of your own for an opponent**: put it as `weekly/opponent/<matchup folder>/document.md` (images next to it). It is
+  shown first, exactly as written, and the automatic report of that folder follows under "Automatic data report", so nothing of either
+  is lost. The Manresa page is built like that from the Word document (`pandoc doc.docx -t gfm`, highlights kept as `<span class="mark">`).
+* **Manresa photos**: `python notebooks/manresa_fetch.py` downloads them (EuroLeague roster API, needs network access to
+  `api-live.euroleague.net`) into `data/manresa/photos/<surname>_<initial>.jpg`; or put your own jpg files there under those names
+  (e.g. `notae_j.jpg`, `villar_r.jpg`). Then run `python notebooks/manresa_report.py --before 2026-10-18` and `python notebooks/build_site.py`:
+  the pictures appear in the roster table of the document and in the automatic report.
 * **Opponent figures** come from `matchup_report.py`, `lineups_report.py` and `standings.py` (`--before <date>`); each team's EuroCup
   games are added when the team is in the EuroCup file. Hand-written opponent pages get the roster with photos appended automatically
   (`roster.json` next to their README). Photos come from the league media server (box-score `player_p_key`); the Manresa report takes

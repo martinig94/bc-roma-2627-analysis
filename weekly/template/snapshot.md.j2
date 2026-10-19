@@ -1,11 +1,13 @@
-{% from '_macros.j2' import roster_table %}# {{ a.team }} before round {{ a.round }}: {{ 'vs' if a.home else 'at' }} {{ a.opponent }}
+{% from '_macros.j2' import roster_table %}# {{ a.team }} before {{ a.competition }}{% if a.round %} round {{ a.round }}{% endif %}: {{ 'at' if a.home is false else 'vs' }} {{ a.opponent }}
 
-Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.venue }}{% endif %}
+{{ a.competition }}{% if a.round %} round {{ a.round }}{% endif %} · {{ a.date_long }}{% if a.time %}, {{ a.time }}{% endif %}{% if a.venue %} · {{ a.venue }}{% endif %}
 
-**Pre-game snapshot: only data from games played before {{ a.date_long }}.**
+**Pre-game snapshot: only data from games played before {{ a.date_long }}, in both competitions.**
 {% if a.opponent_link %}The analysis of the opponent is [here]({{ a.opponent_link }}).{% endif %}
 
-{% if n.summary %}> {{ n.summary }}
+{% if a.missing %}> **Not in the data yet:** {{ a.missing|join('; ') }}. The snapshot does not include {{ 'it' if a.missing|length == 1 else 'them' }}; it is updated by the next collection of games.
+
+{% endif %}{% if n.summary %}> {{ n.summary }}
 
 {% endif %}Author: {{ author }}
 
@@ -16,13 +18,15 @@ Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.v
 {% endif %}
 ## Where {{ a.team }} stands
 
-**{{ a.record }} · {{ a.position }}{{ a.position_suffix }} in the standings ({{ a.points }} points) · last five: {{ a.form }}**
+**LBA: {{ a.record }} · {{ a.position }}{{ a.position_suffix }} in the standings ({{ a.points }} points){% if a.record_ec %} · EuroCup: {{ a.record_ec }}{% endif %} · last five games (both competitions): {{ a.form }}**
 
 {{ a.md.last_results }}
 
 {% if n.form %}{{ n.form }}
 
-{% endif %}![standings](standings.png)
+{% endif %}LBA standings before this game:
+
+![standings](standings.png)
 
 <details><summary>Standings table</summary>
 
@@ -32,7 +36,7 @@ Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.v
 
 ### Last game
 
-Round {{ a.last_game.round }}, {{ 'vs' if a.last_game.home else 'at' }} {{ a.last_game.opponent }}: **{{ 'win' if a.last_game.win else 'loss' }} {{ a.last_game.score_for }}-{{ a.last_game.score_against }}**.
+{{ a.last_game.competition }}{% if a.last_game.round %} round {{ a.last_game.round }}{% endif %}, {{ 'at' if a.last_game.home is false else 'vs' }} {{ a.last_game.opponent }} ({{ a.last_game.date }}): **{{ 'win' if a.last_game.win else 'loss' }} {{ a.last_game.score_for }}-{{ a.last_game.score_against }}**.
 
 {% if a.playing_time %}Significant increase in playing time in that game (at least 8' played and either +7' or +30% versus the average in earlier games):
 
@@ -42,11 +46,11 @@ Round {{ a.last_game.round }}, {{ 'vs' if a.last_game.home else 'at' }} {{ a.las
 {% endfor %}{% else %}No player had a significant increase in playing time in that game (flag: at least 8' played and either +7' or +30% versus the average in earlier games).
 {% endif %}
 
-## Team numbers, LBA to date
+## Team numbers to date
 
-| | |
-|---|---:|
-{% for k, v in a.profile.items() %}| {{ k }} | {{ v }} |
+| | LBA | EuroCup |
+|---|---:|---:|
+{% for k, v in a.profile.LBA.items() %}| {{ k }} | {{ v }} | {{ a.profile.EuroCup.get(k, '–') if a.profile.EuroCup else '–' }} |
 {% endfor %}
 Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = turnovers per 100 possessions · OREB% = share of available offensive rebounds · FT rate = free throw attempts per field goal attempt.
 
@@ -90,6 +94,6 @@ EuroCup: {{ a.ts_pir_ec.games }} game{{ 's' if a.ts_pir_ec.games != 1 else '' }}
 {% endif %}
 
 
-## Season so far
+## Every game so far
 
-![season](season.png)
+![form](season.png)
