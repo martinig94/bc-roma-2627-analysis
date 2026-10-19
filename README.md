@@ -75,6 +75,12 @@ your text is never overwritten. The single steps are `snapshot_report.py --round
 * **Layout**: `weekly/template/{snapshot,opponent,review}.md.j2` (page order, automatic parts, text slots) and `site.html.j2` (look).
   To add a section, add its key to the matching `notes_*.md` and an `{% if n.key %}...{% endif %}` block to the template, or add a
   figure in `weekly_sections.py` and its numbers to `auto` in the generator.
+* **Next game** on the landing page is the first game from today on in any competition: unfinished LBA games from `data/games.csv`
+  plus the other competitions' games in `weekly/schedule.csv` (`date,time,competition,opponent,home,analysis`, `home` 1/0; `analysis` =
+  the `reports/matchup_*` folder). Add a row for every EuroCup game.
+* **A document of your own for an opponent**: put it as `weekly/opponent/<matchup folder>/document.md` (images next to it). It is
+  shown first, exactly as written, and the automatic report of that folder follows under "Automatic data report", so nothing of either
+  is lost. The Manresa page is built like that from the Word document (`pandoc doc.docx -t gfm`, highlights kept as `<span class="mark">`).
 * **Opponent figures** come from `matchup_report.py`, `lineups_report.py` and `standings.py` (`--before <date>`); each team's EuroCup
   games are added when the team is in the EuroCup file. Hand-written opponent pages get the roster with photos appended automatically
   (`roster.json` next to their README). Photos come from the league media server (box-score `player_p_key`); the Manresa report takes

@@ -25,6 +25,9 @@ from pathlib import Path
 import jinja2
 import markdown
 
+import pandas as pd
+
+import standings as st
 import weekly_config
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -90,10 +93,21 @@ def build_opponents(nav_holder: dict) -> list[dict]:
         notes_dir = WEEKLY / "opponent" / slug
         files = copy_images(folder, dest=dest)
         readme, auto_path = folder / "README.md", folder / "auto.json"
-        if readme.exists():                          # hand-written page, used as it is
+        document = notes_dir / "document.md"
+        if readme.exists():                          # page with a README (hand-written, or written by a report script)
             text = readme.read_text(encoding="utf-8")
             title = re.search(r"^# (.+)$", text, re.M).group(1)
             page_md, rnd = text, None
+            if document.exists():
+                # your document (weekly/opponent/<folder>/document.md + its images) comes first, as written; the automatic
+                # README follows under its own heading, so nothing of either is lost
+                doc = document.read_text(encoding="utf-8")
+                title = re.search(r"^# (.+)$", doc, re.M).group(1)
+                auto = re.sub(r"^# .+\n", "", text, count=1, flags=re.M)
+                auto = re.sub(r"^(#{2,5}) ", lambda m: "#" + m.group(1) + " ", auto, flags=re.M)   # one level down
+                page_md = doc.rstrip() + "\n\n## Automatic data report\n\nGenerated from the data by `notebooks/" + \
+                    "manresa_report.py`; it repeats some of the sections above with the full figures.\n" + auto
+                files += copy_images(notes_dir, dest=dest)
             if (folder / "roster.json").exists():
                 roster = json.loads((folder / "roster.json").read_text(encoding="utf-8"))
                 block = TPL.from_string("{% from '_macros.j2' import roster_table %}## Roster\n\nPer-game averages before this game, "
@@ -169,7 +183,33 @@ def write_pages(kind: str, entries: list[dict], nav: dict) -> None:
         page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav), encoding="utf-8")
 
 
-def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[dict]) -> None:
+def next_game(snaps: list[dict], opps: list[dict], today: date) -> dict | None:
+    """The first game from today on, in any competition: LBA games not finished yet (data/games.csv) and the other
+    competitions' games listed in weekly/schedule.csv (date, time, competition, opponent, home, analysis folder)."""
+    team = CFG["team"]
+    cands = []
+    games = pd.read_csv(ROOT / "data" / "games.csv")
+    for _, g in games[(games.game_status.astype(str) != "2") & ((games.home_team == team) | (games.away_team == team))].iterrows():
+        day = g.match_datetime[:10]
+        home = g.home_team == team
+        opp = g.away_team if home else g.home_team
+        cands.append({"date": day, "time": g.match_datetime[11:16], "competition": CFG["league"], "opponent": st.short(opp), "home": home,
+                      "analysis": folder_name(g.home_team, g.away_team, day), "snapshot": f"round-{int(g['round']):02d}"})
+    sched = WEEKLY / "schedule.csv"
+    if sched.exists():
+        for r in pd.read_csv(sched, dtype=str, keep_default_na=False).itertuples():
+            cands.append({"date": r.date, "time": r.time, "competition": r.competition, "opponent": r.opponent,
+                          "home": {"1": True, "0": False}.get(r.home), "analysis": r.analysis or None, "snapshot": None})
+    cands = [c for c in cands if c["date"] >= f"{today:%Y-%m-%d}"]
+    if not cands:
+        return None
+    c = min(cands, key=lambda x: (x["date"], x["time"] or "99"))
+    c["analysis"] = c["analysis"] if c["analysis"] in {e["slug"] for e in opps} else None
+    c["snapshot"] = c["snapshot"] if c["snapshot"] in {e["slug"] for e in snaps} else None
+    return c
+
+
+def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[dict], today: date) -> None:
     def card(href: str, kicker: str, main: str, sub: str = "", latest: bool = False) -> str:
         return (f'<a class="card{" latest" if latest else ""}" href="{href}"><div class="rd">{kicker}</div>'
                 f'<div class="score">{main}</div><div class="rd">{sub}</div></a>')
@@ -177,15 +217,17 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
              f"<p>The {CFG['league']} season of {CFG['team']}, in three parts: the team's situation before every game, "
              "the analysis of every opponent, and the review of every game played. "
              "The first two are always available from the dropdowns at the top; each uses only data from before its game.</p>"]
-    if snaps or opps:
+    nxt = next_game(snaps, opps, today)
+    if nxt:
+        where = {True: "vs", False: "at", None: "vs"}[nxt["home"]]
+        when = f"{long_date(nxt['date'])}{', ' + nxt['time'] if nxt['time'] else ''} · {nxt['competition']}"
         parts.append("<h2>Next game</h2><div class=\"cards\">")
-        if snaps:
-            s = snaps[0]
-            parts.append(card(f"snapshot/{s['slug']}/", f"{CFG['team']} before round {s['round']} · {s['date']}",
-                              f"{'vs' if s['home'] else 'at'} {s['opponent']}", f"{s['record']} · {s['position']}{ordinal(s['position'])} in the standings", True))
-        o = next((x for x in opps if snaps and x["slug"] == snaps[0]["opponent_slug"]), None)
-        if o:
-            parts.append(card(f"opponent/{o['slug']}/", f"Opponent analysis · {o['date']}", o["title"], "with the comparison against " + CFG["team"]))
+        parts.append(card(f"snapshot/{nxt['snapshot']}/" if nxt["snapshot"] else (f"opponent/{nxt['analysis']}/" if nxt["analysis"] else "#"),
+                          when, f"{CFG['team']} {where} {nxt['opponent']}", "", True))
+        if nxt["snapshot"]:
+            parts.append(card(f"snapshot/{nxt['snapshot']}/", f"{CFG['team']} before the game", "Situation, roster, form", "pre-game snapshot"))
+        if nxt["analysis"]:
+            parts.append(card(f"opponent/{nxt['analysis']}/", f"{nxt['opponent']}", "Opponent analysis", "with the comparison against " + CFG["team"]))
         parts.append("</div>")
     if reviews:
         parts.append("<h2 id=\"reviews\">Game reviews</h2><div class=\"cards\">")
@@ -205,7 +247,7 @@ def main() -> None:
     reviews = build_reviews(nav)
     nav.setdefault("snapshot", []); nav.setdefault("opponent", [])
     write_pages("opponent", opps, nav); write_pages("snapshot", snaps, nav); write_pages("review", reviews, nav)
-    build_landing(nav, snaps, opps, reviews)
+    build_landing(nav, snaps, opps, reviews, date.today())
     for stale in ("prematch.html", "analyses", "analyses.json", "weekly", "weekly.json"):   # replaced by the structure above
         p = DOCS / stale
         shutil.rmtree(p) if p.is_dir() else p.unlink(missing_ok=True)
