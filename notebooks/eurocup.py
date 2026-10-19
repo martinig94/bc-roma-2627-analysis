@@ -98,6 +98,23 @@ def save_photos(people: pd.DataFrame, size: int = 240) -> int:
     return n
 
 
+# ── which rosters to fetch ──────────────────────────────────────────────────────
+def club_codes(results: pd.DataFrame, team: str, schedule: Path | None = None) -> list[str]:
+    """Club codes of the team, of every opponent it has played, and of the EuroCup opponents still to come in weekly/schedule.csv
+    (matched to the results by name), so the roster and headshots of the next opponent are there before the game."""
+    mine = results[(results.home == team) | (results.away == team)]
+    codes = {*mine.home_code, *mine.away_code}
+    if schedule is not None and schedule.exists():
+        names = {**dict(zip(results.home, results.home_code)), **dict(zip(results.away, results.away_code))}
+        for r in pd.read_csv(schedule, dtype=str, keep_default_na=False).itertuples():
+            if r.competition.lower() != "eurocup":
+                continue
+            hit = find_team(names, r.opponent)
+            if hit:
+                codes.add(names[hit])
+    return sorted(codes)
+
+
 # ── standings ───────────────────────────────────────────────────────────────────
 def load_results(data: Path = ROOT / "data") -> pd.DataFrame | None:
     path = data / "eurocup" / "results.csv"

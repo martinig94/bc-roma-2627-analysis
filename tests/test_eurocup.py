@@ -47,3 +47,12 @@ def test_other_group_is_not_mixed_in():
 def test_find_team_matches_spelling_differences():
     assert ec.find_team({"Kids&Us Manresa", "BC Roma"}, "Kids&Us Manresa") == "Kids&Us Manresa"
     assert ec.find_team({"Bahcesehir College Istanbul"}, "BAHCESEHIR COLLEGE ISTANBUL") == "Bahcesehir College Istanbul"
+
+
+def test_club_codes_include_the_next_opponent_from_the_schedule(tmp_path):
+    r = results().assign(home_code=lambda d: d.home, away_code=lambda d: d.away)
+    sched = tmp_path / "schedule.csv"
+    sched.write_text("date,time,competition,opponent,home,analysis\n2026-10-20,,EuroCup,D,0,\n2026-10-24,,LBA,Varese,1,\n")
+    assert ec.club_codes(r, "A") == ["A", "B", "C", "D"]                  # A's opponents so far, A included
+    assert ec.club_codes(r, "E", None) == ["E", "F"]                      # without the schedule: E and its opponent F
+    assert ec.club_codes(r, "E", sched) == ["D", "E", "F"]                # the EuroCup row adds D, the LBA row is ignored
