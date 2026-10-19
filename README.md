@@ -86,6 +86,10 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   Work plan). Saving it commits to `master` and the workflow *Rebuild site after a text edit* (`.github/workflows/site.yml`, runs only on
   changes under `weekly/`) rebuilds `docs/` in about a minute. People without write access get "Propose changes": GitHub forks the
   repository and opens a pull request that you merge. The repository and branch are `repo` and `branch` in `weekly/config.json`.
+* **Highlighting table cells**: every page with a table has a floating **✎ Highlighter** button. With it on, a click on a cell
+  highlights it (click again to remove; shift-click does the whole row), **Clear highlights** removes them all. It is for working live on
+  a page (meetings, review sessions) and is kept in the browser of whoever clicks, not in the repository. For a highlight that stays
+  for everybody, write `==text==` in the markdown file (for instance `| ==4.5== |` in a table written by hand, or in `document.md`).
 * **Your text** goes in `weekly/<kind>/.../notes.md` (created empty): `title:`, `summary:` and `## key` sections of markdown,
   e.g. `key_points`, `form`, `roster`, `assists`, `zones`, `efficiency` for the snapshot; `key_points`, `comparison`, `starters`,
   `shooting`, `players`, `lineups`, `expect` for the opponent; `key_points`, `story`, `tactics`, `players`, `next` for the review.
