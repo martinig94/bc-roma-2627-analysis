@@ -1,5 +1,7 @@
 {
   "kind": "snapshot",
+  "key": "2026-10-04",
+  "competition": "LBA",
   "round": 2,
   "team": "BC Roma",
   "opponent": "Tortona",
@@ -9,41 +11,78 @@
   "time": "16:00",
   "venue": "Palazzetto dello Sport",
   "played": true,
+  "opponent_analysis": "matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04",
   "record": "0-1",
   "position": 13,
   "points": 0,
-  "form": "L",
+  "record_ec": "0-1",
+  "form": "LL",
   "last_game": {
-    "round": 1,
-    "opponent": "Treviso",
+    "competition": "EuroCup",
+    "round": null,
+    "opponent": "Bahcesehir College Istanbul",
     "home": false,
-    "score_for": 94,
-    "score_against": 109,
+    "score_for": 78,
+    "score_against": 91,
     "win": false,
-    "date": "2026-09-26"
+    "date": "2026-09-30"
   },
-  "playing_time": [],
+  "missing": [],
+  "playing_time": [
+    {
+      "name": "Mezzanotte",
+      "now": 13.7,
+      "avg": 9.0,
+      "gp_before": 1,
+      "diff": 4.7,
+      "pct": 52
+    }
+  ],
   "profile": {
-    "GP": 1,
-    "Record": "0-1",
-    "Points per game": 94.0,
-    "Points allowed per game": 109.0,
-    "Offensive rating": 123.3,
-    "Defensive rating": 137.3,
-    "Net rating": -14.0,
-    "Pace (possessions per 40')": 77.8,
-    "eFG%": 56.3,
-    "TOV% (per 100 poss.)": 15.7,
-    "OREB%": 43.2,
-    "FT rate (FTA/FGA)": 29.6,
-    "3PA per game": 36.0,
-    "3P%": 33.3,
-    "2P%": 62.9,
-    "FT%": 66.7,
-    "Assists per game": 22.0,
-    "Opp. eFG%": 60.9,
-    "Opp. TOV% (forced)": 8.8,
-    "DREB%": 65.7
+    "LBA": {
+      "Games": 1,
+      "Record": "0-1",
+      "Points per game": 94.0,
+      "Points allowed per game": 109.0,
+      "Offensive rating": 123.3,
+      "Defensive rating": 137.3,
+      "Net rating": -14.0,
+      "Pace (possessions per 40')": 77.8,
+      "eFG%": 56.3,
+      "TOV% (per 100 poss.)": 15.7,
+      "OREB%": 43.2,
+      "FT rate (FTA/FGA)": 29.6,
+      "3PA per game": 36.0,
+      "3P%": 33.3,
+      "2P%": 62.9,
+      "FT%": 66.7,
+      "Assists per game": 22.0,
+      "Opp. eFG%": 60.9,
+      "Opp. TOV% (forced)": 8.8,
+      "DREB%": 65.7
+    },
+    "EuroCup": {
+      "Games": 1,
+      "Record": "0-1",
+      "Points per game": 78.0,
+      "Points allowed per game": 91.0,
+      "Offensive rating": 105.5,
+      "Defensive rating": 121.5,
+      "Net rating": -15.9,
+      "Pace (possessions per 40')": 74.4,
+      "eFG%": 52.4,
+      "TOV% (per 100 poss.)": 20.3,
+      "OREB%": 32.4,
+      "FT rate (FTA/FGA)": 29.0,
+      "3PA per game": 28.0,
+      "3P%": 25.0,
+      "2P%": 64.7,
+      "FT%": 72.2,
+      "Assists per game": 17.0,
+      "Opp. eFG%": 57.1,
+      "Opp. TOV% (forced)": 17.4,
+      "DREB%": 57.9
+    }
   },
   "roster": [
     {
@@ -326,6 +365,6 @@
   },
   "md": {
     "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Napoli | 4 | 2-0 | +25 | WW |\n| 2 | Treviso | 4 | 2-0 | +18 | WW |\n| 3 | Udine | 2 | 1-0 | +24 | W |\n| 4 | Virtus Bologna | 2 | 1-0 | +21 | W |\n| 5 | Venezia | 2 | 1-0 | +12 | W |\n| 6 | **Tortona** | 2 | 1-0 | +8 | W |\n| 7 | Milano | 2 | 1-0 | +4 | W |\n| 8 | Trento | 2 | 1-1 | +2 | WL |\n| 9 | Trieste | 0 | 0-1 | -4 | L |\n| 10 | Verona | 0 | 0-1 | -8 | L |\n| 11 | Reggio Emilia | 0 | 0-2 | -11 | LL |\n| 12 | Cantù | 0 | 0-1 | -12 | L |\n| 13 | **BC Roma** | 0 | 0-1 | -15 | L |\n| 14 | Maxima Roma | 0 | 0-1 | -19 | L |\n| 15 | Varese | 0 | 0-1 | -21 | L |\n| 16 | Scafati | 0 | 0-1 | -24 | L |",
-    "last_results": "- Round 1: **L** 94-109 at Treviso"
+    "last_results": "- 09-26 · round 1: **L** 94-109 at Treviso\n- 09-30 · EuroCup: **L** 78-91 at Bahcesehir College Istanbul"
   }
 }

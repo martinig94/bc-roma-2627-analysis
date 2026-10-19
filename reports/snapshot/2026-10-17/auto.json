@@ -1,5 +1,7 @@
 {
   "kind": "snapshot",
+  "key": "2026-10-17",
+  "competition": "LBA",
   "round": 4,
   "team": "BC Roma",
   "opponent": "Venezia",
@@ -9,11 +11,14 @@
   "time": "16:00",
   "venue": "Palazzetto dello Sport",
   "played": false,
+  "opponent_analysis": "matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17",
   "record": "1-2",
   "position": 12,
   "points": 2,
-  "form": "LWL",
+  "record_ec": "1-1",
+  "form": "LLWWL",
   "last_game": {
+    "competition": "LBA",
     "round": 3,
     "opponent": "Maxima Roma",
     "home": false,
@@ -22,28 +27,53 @@
     "win": false,
     "date": "2026-10-11"
   },
+  "missing": [],
   "playing_time": [],
   "profile": {
-    "GP": 3,
-    "Record": "1-2",
-    "Points per game": 99.0,
-    "Points allowed per game": 91.7,
-    "Offensive rating": 128.3,
-    "Defensive rating": 120.0,
-    "Net rating": 8.3,
-    "Pace (possessions per 40')": 76.8,
-    "eFG%": 60.6,
-    "TOV% (per 100 poss.)": 15.1,
-    "OREB%": 37.8,
-    "FT rate (FTA/FGA)": 27.9,
-    "3PA per game": 30.7,
-    "3P%": 37.0,
-    "2P%": 64.7,
-    "FT%": 77.6,
-    "Assists per game": 22.0,
-    "Opp. eFG%": 53.5,
-    "Opp. TOV% (forced)": 11.3,
-    "DREB%": 71.9
+    "LBA": {
+      "Games": 3,
+      "Record": "1-2",
+      "Points per game": 99.0,
+      "Points allowed per game": 91.7,
+      "Offensive rating": 128.3,
+      "Defensive rating": 120.0,
+      "Net rating": 8.3,
+      "Pace (possessions per 40')": 76.8,
+      "eFG%": 60.6,
+      "TOV% (per 100 poss.)": 15.1,
+      "OREB%": 37.8,
+      "FT rate (FTA/FGA)": 27.9,
+      "3PA per game": 30.7,
+      "3P%": 37.0,
+      "2P%": 64.7,
+      "FT%": 77.6,
+      "Assists per game": 22.0,
+      "Opp. eFG%": 53.5,
+      "Opp. TOV% (forced)": 11.3,
+      "DREB%": 71.9
+    },
+    "EuroCup": {
+      "Games": 2,
+      "Record": "1-1",
+      "Points per game": 85.0,
+      "Points allowed per game": 89.0,
+      "Offensive rating": 113.3,
+      "Defensive rating": 118.1,
+      "Net rating": -4.8,
+      "Pace (possessions per 40')": 75.2,
+      "eFG%": 55.2,
+      "TOV% (per 100 poss.)": 21.3,
+      "OREB%": 35.8,
+      "FT rate (FTA/FGA)": 33.1,
+      "3PA per game": 29.0,
+      "3P%": 32.8,
+      "2P%": 60.6,
+      "FT%": 80.5,
+      "Assists per game": 16.0,
+      "Opp. eFG%": 54.5,
+      "Opp. TOV% (forced)": 14.6,
+      "DREB%": 60.8
+    }
   },
   "roster": [
     {
@@ -364,6 +394,6 @@
   },
   "md": {
     "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Napoli | 6 | 3-0 | +44 | WWW |\n| 2 | Virtus Bologna | 6 | 3-0 | +37 | WWW |\n| 3 | Verona | 4 | 2-1 | +2 | LWW |\n| 4 | Milano | 4 | 2-1 | +30 | WLW |\n| 5 | Treviso | 4 | 2-1 | -11 | WWL |\n| 6 | Trento | 4 | 2-1 | +10 | WLW |\n| 7 | **Venezia** | 4 | 2-1 | +10 | WWL |\n| 8 | Varese | 4 | 2-1 | -12 | LWW |\n| 9 | Udine | 4 | 2-1 | +17 | WWL |\n| 10 | Reggio Emilia | 2 | 1-2 | -4 | LLW |\n| 11 | Maxima Roma | 2 | 1-2 | -27 | LLW |\n| 12 | **BC Roma** | 2 | 1-2 | +22 | LWL |\n| 13 | Tortona | 2 | 1-2 | -37 | WLL |\n| 14 | Trieste | 0 | 0-3 | -10 | LLL |\n| 15 | Cantù | 0 | 0-3 | -32 | LLL |\n| 16 | Scafati | 0 | 0-3 | -39 | LLL |",
-    "last_results": "- Round 1: **L** 94-109 at Treviso\n- Round 2: **W** 108-70 vs Tortona\n- Round 3: **L** 95-96 at Maxima Roma"
+    "last_results": "- 09-26 · round 1: **L** 94-109 at Treviso\n- 09-30 · EuroCup: **L** 78-91 at Bahcesehir College Istanbul\n- 10-04 · round 2: **W** 108-70 vs Tortona\n- 10-07 · EuroCup: **W** 92-87 vs Lietkabelis Panevezys\n- 10-11 · round 3: **L** 95-96 at Maxima Roma"
   }
 }

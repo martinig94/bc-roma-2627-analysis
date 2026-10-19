@@ -50,7 +50,7 @@ See `notebooks/` for more.
 
 | | what | data used | page folder |
 |---|---|---|---|
-| **Team before each game** | BC Roma's situation before every game: record and standings, form, last game's playing-time flag, team numbers, roster with photos, assist matrix, shot zones, TS% vs PIR (LBA only, EuroCup only), season trend | only games played before that game | `docs/snapshot/round-NN/` |
+| **Team before each game** | BC Roma's situation before every game, **in both competitions** (LBA and EuroCup): LBA and EuroCup record, LBA standings, last results of both, last game's playing-time flag, team numbers (LBA and EuroCup columns), roster with photos, assist matrix and shot zones (LBA play-by-play), TS% vs PIR (LBA only, EuroCup only), every game so far | only games played before that game, in both competitions | `docs/snapshot/<date of the game>/` |
 | **Opponent analysis** | one per opponent and game, with the comparison table against BC Roma, results and standings, the opponent's roster with photos, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game: the league (LBA) plus the EuroCup, for the teams in the EuroCup file | `docs/opponent/<matchup folder>/` |
 | **Game reviews** (landing page) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
 
@@ -63,8 +63,10 @@ python notebooks/build_site.py          # re-render the pages
 git add -A && git commit && git push
 ```
 
-`weekly.py --round 4` regenerates everything of one round (stats corrections), `--only snapshot,opponent,review` a subset;
-your text is never overwritten. The single steps are `snapshot_report.py --round N`, `opponent.py --round N`,
+`weekly.py --round 4` regenerates everything of one LBA round, `--game 2026-10-20` the snapshot of any game (stats corrections),
+`--only snapshot,opponent,review` a subset; your text is never overwritten. The list of games (LBA from `data/games.csv`, EuroCup from
+the EuroCup file, games still to play from `weekly/schedule.csv`) is `team_games.py`. A snapshot says when a game before it is not
+in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponent.py --round N`,
 `weekly_report.py --round N` (review) and `build_site.py`.
 
 * **Your text** goes in `weekly/<kind>/.../notes.md` (created empty): `title:`, `summary:` and `## key` sections of markdown,

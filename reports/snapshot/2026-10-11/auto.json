@@ -1,5 +1,7 @@
 {
   "kind": "snapshot",
+  "key": "2026-10-11",
+  "competition": "LBA",
   "round": 3,
   "team": "BC Roma",
   "opponent": "Maxima Roma",
@@ -9,58 +11,78 @@
   "time": "18:15",
   "venue": "PalaEur",
   "played": true,
+  "opponent_analysis": "matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11",
   "record": "1-1",
   "position": 8,
   "points": 2,
-  "form": "LW",
+  "record_ec": "1-1",
+  "form": "LLWW",
   "last_game": {
-    "round": 2,
-    "opponent": "Tortona",
+    "competition": "EuroCup",
+    "round": null,
+    "opponent": "Lietkabelis Panevezys",
     "home": true,
-    "score_for": 108,
-    "score_against": 70,
+    "score_for": 92,
+    "score_against": 87,
     "win": true,
-    "date": "2026-10-04"
+    "date": "2026-10-07"
   },
+  "missing": [],
   "playing_time": [
     {
-      "name": "Mezzanotte",
-      "now": 19.0,
-      "avg": 11.3,
-      "gp_before": 2,
-      "diff": 7.7,
-      "pct": 68
-    },
-    {
-      "name": "Emejuru",
-      "now": 16.0,
-      "avg": 10.8,
-      "gp_before": 2,
-      "diff": 5.2,
-      "pct": 49
+      "name": "Watson",
+      "now": 23.7,
+      "avg": 16.4,
+      "gp_before": 3,
+      "diff": 7.3,
+      "pct": 45
     }
   ],
   "profile": {
-    "GP": 2,
-    "Record": "1-1",
-    "Points per game": 101.0,
-    "Points allowed per game": 89.5,
-    "Offensive rating": 135.4,
-    "Defensive rating": 116.9,
-    "Net rating": 18.5,
-    "Pace (possessions per 40')": 75.6,
-    "eFG%": 65.7,
-    "TOV% (per 100 poss.)": 16.8,
-    "OREB%": 45.8,
-    "FT rate (FTA/FGA)": 29.1,
-    "3PA per game": 31.5,
-    "3P%": 38.1,
-    "2P%": 73.2,
-    "FT%": 66.7,
-    "Assists per game": 24.5,
-    "Opp. eFG%": 50.8,
-    "Opp. TOV% (forced)": 11.1,
-    "DREB%": 71.4
+    "LBA": {
+      "Games": 2,
+      "Record": "1-1",
+      "Points per game": 101.0,
+      "Points allowed per game": 89.5,
+      "Offensive rating": 135.4,
+      "Defensive rating": 116.9,
+      "Net rating": 18.5,
+      "Pace (possessions per 40')": 75.6,
+      "eFG%": 65.7,
+      "TOV% (per 100 poss.)": 16.8,
+      "OREB%": 45.8,
+      "FT rate (FTA/FGA)": 29.1,
+      "3PA per game": 31.5,
+      "3P%": 38.1,
+      "2P%": 73.2,
+      "FT%": 66.7,
+      "Assists per game": 24.5,
+      "Opp. eFG%": 50.8,
+      "Opp. TOV% (forced)": 11.1,
+      "DREB%": 71.4
+    },
+    "EuroCup": {
+      "Games": 2,
+      "Record": "1-1",
+      "Points per game": 85.0,
+      "Points allowed per game": 89.0,
+      "Offensive rating": 113.3,
+      "Defensive rating": 118.1,
+      "Net rating": -4.8,
+      "Pace (possessions per 40')": 75.2,
+      "eFG%": 55.2,
+      "TOV% (per 100 poss.)": 21.3,
+      "OREB%": 35.8,
+      "FT rate (FTA/FGA)": 33.1,
+      "3PA per game": 29.0,
+      "3P%": 32.8,
+      "2P%": 60.6,
+      "FT%": 80.5,
+      "Assists per game": 16.0,
+      "Opp. eFG%": 54.5,
+      "Opp. TOV% (forced)": 14.6,
+      "DREB%": 60.8
+    }
   },
   "roster": [
     {
@@ -381,6 +403,6 @@
   },
   "md": {
     "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Virtus Bologna | 4 | 2-0 | +30 | WW |\n| 2 | Treviso | 4 | 2-0 | +18 | WW |\n| 3 | Trento | 4 | 2-1 | +10 | WLW |\n| 4 | Napoli | 4 | 2-0 | +25 | WW |\n| 5 | Venezia | 4 | 2-0 | +17 | WW |\n| 6 | Udine | 4 | 2-1 | +17 | WWL |\n| 7 | Varese | 4 | 2-1 | -12 | LWW |\n| 8 | **BC Roma** | 2 | 1-1 | +23 | LW |\n| 9 | Tortona | 2 | 1-1 | -30 | WL |\n| 10 | Verona | 2 | 1-1 | -5 | LW |\n| 11 | Milano | 2 | 1-1 | +1 | WL |\n| 12 | Trieste | 0 | 0-3 | -10 | LLL |\n| 13 | Reggio Emilia | 0 | 0-2 | -11 | LL |\n| 14 | Cantù | 0 | 0-2 | -13 | LL |\n| 15 | **Maxima Roma** | 0 | 0-2 | -28 | LL |\n| 16 | Scafati | 0 | 0-2 | -32 | LL |",
-    "last_results": "- Round 1: **L** 94-109 at Treviso\n- Round 2: **W** 108-70 vs Tortona"
+    "last_results": "- 09-26 · round 1: **L** 94-109 at Treviso\n- 09-30 · EuroCup: **L** 78-91 at Bahcesehir College Istanbul\n- 10-04 · round 2: **W** 108-70 vs Tortona\n- 10-07 · EuroCup: **W** 92-87 vs Lietkabelis Panevezys"
   }
 }
