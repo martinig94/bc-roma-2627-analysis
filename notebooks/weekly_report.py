@@ -1,7 +1,9 @@
-"""Weekly BC Roma report: the automatic part (plots + tables) for one round.
+"""Weekly report of one team (weekly/config.json): the automatic part (plots + tables) for one round.
 
-    python notebooks/weekly_report.py --round 4            # BC Roma's game of round 4
-    python notebooks/weekly_report.py --round 4 --team "BC Roma"
+Normally run through `python notebooks/weekly.py`, which finds the new rounds by itself. Directly:
+
+    python notebooks/weekly_report.py --round 4            # the team's game of round 4 (regenerates it)
+    python notebooks/weekly_report.py --round 4 --team "Maxima Roma"
 
 Writes reports/weekly/round-04/:
   standings.png, margin.png, players.png, season.png   figures
@@ -24,10 +26,12 @@ import lba_style
 import standings as st
 import weekly_sections as ws
 import player_photos
-from lba_style import GOLD, GOLD_EDGE, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, style_axes
+import weekly_config
+from lba_style import GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, style_axes, team_color
 
 ROOT = Path(__file__).resolve().parent.parent
-TEAM = "BC Roma"
+CFG = weekly_config.load()
+TEAM = CFG["team"]
 FOES = "#4a7fc1"
 
 
@@ -81,6 +85,7 @@ def four_factors(t: pd.Series, o: pd.Series) -> dict:
 # ── figures ─────────────────────────────────────────────────────────────────────
 def fig_margin(g, pbp, team, out: Path) -> dict:
     p = pbp[pbp.game_id == g.game_id].dropna(subset=["score_home", "score_away"]).sort_values("seq")
+    GOLD, GOLD_EDGE = team_color(team)
     home = g.home_team == team
     m = (p.score_home - p.score_away) * (1 if home else -1)
     # elapsed_sec restarts every period: 10' quarters, 5' overtimes
@@ -105,6 +110,7 @@ def fig_players(box, g, team, out: Path) -> pd.DataFrame:
     cur = b[b.game_id == g.game_id].set_index("player_surname")
     prev = b[(b.game_id != g.game_id) & (b["round"] < g["round"])].groupby("player_surname").val.mean()
     d = cur[["sec", "val", "pts"]].join(prev.rename("avg_before"))
+    GOLD, GOLD_EDGE = team_color(team)
     d = d[d.sec >= 300].sort_values("val")
     d.index = d.index.str.title()
     fig, ax = plt.subplots(figsize=(10, 0.45 * len(d) + 1.8))
@@ -129,6 +135,7 @@ def fig_season(games, team, upto: int, out: Path) -> None:
     for _, x in gg.iterrows():
         rows.append((x.r, x.home_team, x.home_score, x.away_score)); rows.append((x.r, x.away_team, x.away_score, x.home_score))
     d = pd.DataFrame(rows, columns=["round", "team", "pf", "pa"])
+    GOLD, GOLD_EDGE = team_color(team)
     lgavg = d.groupby("round")[["pf"]].mean()
     me = d[d.team == team].set_index("round")
     fig, ax = plt.subplots(figsize=(10, 4.2))
@@ -191,18 +198,18 @@ def next_game(games, team, rnd) -> dict | None:
 
 
 # ── main ────────────────────────────────────────────────────────────────────────
-def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--round", type=int, required=True)
-    ap.add_argument("--team", default=TEAM)
-    ap.add_argument("--data", default=str(ROOT / "data"))
-    a = ap.parse_args()
-    data = Path(a.data)
+def finished_rounds(games: pd.DataFrame, team: str) -> list[int]:
+    g = games[((games.home_team == team) | (games.away_team == team)) & (games.game_status.astype(str) == "2")]
+    return sorted(int(r) for r in g["round"].unique())
+
+
+def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
+    """Write reports/weekly/round-NN/ (figures + auto.json) and, once, weekly/round-NN/notes.md. Returns the output folder."""
+    lba_style.AUTHOR = CFG["author"] or lba_style.AUTHOR
     games = pd.read_csv(data / "games.csv")
     box = pd.read_csv(data / "box_scores.csv")
     pbp = pd.read_csv(data / "pbp.csv")
-    g = find_game(games, a.team, a.round)
-    rnd, team = a.round, a.team
+    g = find_game(games, team, rnd)
     home = g.home_team == team
     opp = g.away_team if home else g.home_team
     pf, pa = (g.home_score, g.away_score) if home else (g.away_score, g.home_score)
@@ -221,7 +228,7 @@ def main() -> None:
     # extra sections: roster, playing time, assists, zones, TS% vs PIR
     date = g.match_datetime[:10]
     player_photos.main_quiet(team)
-    xbox = ws.load_box(data, rnd, date)
+    xbox = ws.load_box(data, rnd, date, CFG["eurocup_file"])
     lba_games = [int(x) for x in games[(games["round"] <= rnd) & (games.game_status.astype(str) == "2") &
                                        ((games.home_team == team) | (games.away_team == team))].game_id]
     pairs = ws.assist_pairs(pbp, lba_games, team)
@@ -229,10 +236,10 @@ def main() -> None:
     extra = {
         "roster": ws.roster_table(xbox, data),
         "playing_time": ws.playing_time_flags(xbox, str(g.game_id), date),
-        "assist_top": ws.fig_assists(pairs, box_ast, out),
+        "assist_top": ws.fig_assists(pairs, box_ast, out, team),
         "zone_share": ws.fig_zones(pbp, lba_games, int(g.game_id), out, team),
         "ts_pir_lba": ws.fig_ts_pir(xbox, "LBA", out, team=team),
-        "ts_pir_ec": ws.fig_ts_pir(xbox, "EC", out, team=team) if (xbox.competition == "EC").any() else None,
+        "ts_pir_ec": ws.fig_ts_pir(xbox, "EC", out, team=team) if ((xbox.competition == "EC") & (xbox.team == team)).any() else None,
     }
     photos = {r["player_id"] for r in extra["roster"] if r["photo"]}
     for pid in photos:
@@ -269,6 +276,16 @@ def main() -> None:
         (notes_dir / "notes.md").write_text(text, encoding="utf-8")
         print(f"created {notes_dir / 'notes.md'} - write your text there")
     print(f"round {rnd}: {short(team)} {pf}-{pa} {short(opp)}  ->  {out}")
+    return out
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--round", type=int, required=True)
+    ap.add_argument("--team", default=TEAM)
+    ap.add_argument("--data", default=str(ROOT / "data"))
+    a = ap.parse_args()
+    generate(a.round, a.team, Path(a.data))
 
 
 if __name__ == "__main__":

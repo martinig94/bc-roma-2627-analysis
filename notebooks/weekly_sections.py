@@ -12,11 +12,12 @@ import numpy as np
 import pandas as pd
 
 import lba_style
-from lba_style import (GOLD, GOLD_EDGE, GREEN, LEAGUE, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, shots_cm, style_axes)
+import weekly_config
+from lba_style import GREEN, LEAGUE, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, shots_cm, style_axes, team_color
 from matchup_report import parse_eurocup, plot_zone_heatmap, zone_stats
 
 ROOT = Path(__file__).resolve().parent.parent
-TEAM = "BC Roma"
+TEAM = weekly_config.load()["team"]
 POS_ORDER = {"PG": 0, "SG": 1, "G": 1, "SF": 2, "F": 2, "PF": 3, "C": 4}
 
 # playing-time flag: at least MIN_PLAYED seconds in the game and either +ABS_UP seconds or +REL_UP above the average before
@@ -24,14 +25,14 @@ MIN_PLAYED, ABS_UP, REL_UP = 8 * 60, 7 * 60, 0.30
 
 
 # ── data ────────────────────────────────────────────────────────────────────────
-def load_box(data: Path, upto_round: int, upto_date: str) -> pd.DataFrame:
+def load_box(data: Path, upto_round: int, upto_date: str, eurocup_file: str = "") -> pd.DataFrame:
     """LBA player/total rows (all teams, rounds <= upto_round) + EuroCup rows (all teams in the file, date <= upto_date)."""
     lba = pd.read_csv(data / "box_scores.csv")
     lba = lba[lba["round"] <= upto_round].copy()
     lba["competition"] = "LBA"; lba["date"] = lba.match_datetime.str[:10]; lba["game_id"] = lba.game_id.astype(str)
-    ec_path = data / "eurocup_2026_raw.txt"
+    ec_path = ROOT / eurocup_file if eurocup_file else None
     frames = [lba]
-    if ec_path.exists():
+    if ec_path and ec_path.exists():
         ec, _ = parse_eurocup(ec_path)
         frames.append(ec[ec.date <= upto_date])
     box = pd.concat(frames, ignore_index=True)
@@ -123,7 +124,7 @@ def assist_pairs(pbp: pd.DataFrame, games: list[int], team: str = TEAM) -> pd.Da
     return m[["game_id", "passer", "scorer", "pts"]]
 
 
-def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path) -> list[dict]:
+def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM) -> list[dict]:
     matrix = pairs.pivot_table(index="passer", columns="scorer", values="pts", aggfunc="size", fill_value=0)
     allp = matrix.index.union(matrix.columns)
     matrix = matrix.reindex(index=allp, columns=allp, fill_value=0)
@@ -142,7 +143,7 @@ def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path) -> list[dict]:
     ax.set_yticks(range(n), [f"{r} ({int(matrix.loc[r].sum())})" for r in matrix.index], fontsize=9)
     ax.xaxis.tick_top(); ax.xaxis.set_label_position("top")
     ax.set_xlabel("scorer (assisted baskets received)", labelpad=8); ax.set_ylabel("passer (assists given)")
-    fig.suptitle(f"BC Roma assist matrix, LBA ({len(pairs)} assisted baskets, {100 * len(pairs) / box_ast:.0f}% of box-score assists)", **SUP_KW)
+    fig.suptitle(f"{team} assist matrix, LBA ({len(pairs)} assisted baskets, {100 * len(pairs) / box_ast:.0f}% of box-score assists)", **SUP_KW)
     save_fig(fig, out / "assists.png"); plt.close(fig)
     top = pairs.groupby(["passer", "scorer"]).size().sort_values(ascending=False).head(6)
     return [{"passer": a, "scorer": b, "n": int(n_)} for (a, b), n_ in top.items()]
@@ -150,6 +151,7 @@ def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path) -> list[dict]:
 
 # ── shot zones ──────────────────────────────────────────────────────────────────
 def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int, out: Path, team: str = TEAM) -> dict:
+    GOLD, GOLD_EDGE = team_color(team)
     s = shots_cm(pbp[pbp.game_id.isin(games)])
     ref = zone_stats(s[s.team != team])
     mine = s[s.team == team]
@@ -158,7 +160,7 @@ def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int, out: Path, team
     mesh = plot_zone_heatmap(axes[0], mine, f"Season to date: {int(mine.made.sum())}/{len(mine)} FG in {mine.game_id.nunique()} LBA games", ref=ref)
     plot_zone_heatmap(axes[1], this, f"This game: {int(this.made.sum())}/{len(this)} FG")
     cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
-    fig.suptitle("BC Roma shooting by zone, LBA (small grey text: FG% of all other LBA teams in that zone)", **SUP_KW)
+    fig.suptitle(f"{team} shooting by zone, LBA (small grey text: FG% of all other LBA teams in that zone)", **SUP_KW)
     save_fig(fig, out / "zones.png"); plt.close(fig)
 
     # where the shots come from vs the league
@@ -168,8 +170,8 @@ def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int, out: Path, team
     sm, sl, sg = share(mine), share(s[s.team != team]), share(this)
     fig, ax = plt.subplots(figsize=(10, 4.8))
     x = np.arange(len(zs)); w = 0.27
-    ax.bar(x - w, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label="BC Roma, season")
-    ax.bar(x, sg, w, color="#F2C300", alpha=0.45, edgecolor=GOLD_EDGE, linewidth=0.6, label="BC Roma, this game")
+    ax.bar(x - w, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, season")
+    ax.bar(x, sg, w, color=GOLD, alpha=0.45, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, this game")
     ax.bar(x + w, sl, w, color=LEAGUE, label="other LBA teams")
     ax.set_xticks(x, [labels[z] for z in zs], rotation=25, ha="right", fontsize=9)
     ax.set_ylabel("% of field-goal attempts"); ax.legend(fontsize=8)
@@ -193,6 +195,7 @@ def ts_pir_table(box: pd.DataFrame, min_mpg: float) -> pd.DataFrame:
 
 def fig_ts_pir(box: pd.DataFrame, comp: str, out: Path, min_mpg: float = 10, team: str = TEAM) -> dict:
     """PIR (x) vs TS% (y), bubble = minutes per game; one competition only. Other teams' players in grey."""
+    GOLD, GOLD_EDGE = team_color(team)
     d = ts_pir_table(box[box.competition == comp], min_mpg)
     mine, other = d[d.team == team], d[d.team != team]
     name = {"LBA": "LBA", "EC": "EuroCup"}[comp]
@@ -211,7 +214,7 @@ def fig_ts_pir(box: pd.DataFrame, comp: str, out: Path, min_mpg: float = 10, tea
     ax.axvline(d.PIR.median(), color=TEXT2, lw=0.7, ls="--"); ax.axhline(d.TS.median(), color=TEXT2, lw=0.7, ls="--")
     ax.set_xlabel("PIR per game"); ax.set_ylabel("TS%")
     games = int(mine.GP.max()) if len(mine) else 0
-    ax.set_title(f"PIR vs true shooting, {name} games only (BC Roma: {games} game{'s' if games != 1 else ''}), "
+    ax.set_title(f"PIR vs true shooting, {name} games only ({team}: {games} game{'s' if games != 1 else ''}), "
                  f"dot size = minutes per game, min {min_mpg:.0f}'", **TITLE_KW)
     ax.legend(fontsize=9, loc="lower right"); style_axes(ax)
     fname = "ts_pir_lba.png" if comp == "LBA" else "ts_pir_eurocup.png"
