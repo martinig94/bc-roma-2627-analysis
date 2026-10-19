@@ -29,7 +29,7 @@ import pandas as pd
 
 import weekly_config
 from player_names import photo_name
-from team_games import team_games
+from team_games import next_games as next_games_df, team_games
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -193,18 +193,17 @@ def write_pages(kind: str, entries: list[dict], nav: dict) -> None:
         page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav), encoding="utf-8")
 
 
-def next_game(snaps: list[dict], opps: list[dict], today: date) -> dict | None:
-    """The first game from today on, in any competition (team_games.py: LBA, EuroCup, weekly/schedule.csv)."""
+def next_games(snaps: list[dict], opps: list[dict], today: date) -> list[dict]:
+    """The next game still to play in each competition, in date order (team_games.py: LBA, EuroCup, weekly/schedule.csv)."""
     tg = team_games(ROOT / "data", CFG["team"])
-    fut = tg[(~tg.finished) & (tg.date >= f"{today:%Y-%m-%d}")]
-    if fut.empty:
-        return None
-    c = fut.iloc[0]
-    home = None if c.home is None or pd.isna(c.home) else bool(c.home)
-    return {"date": c.date, "time": c.time or "", "competition": c.competition if c.competition != "LBA" else CFG["league"],
-            "opponent": c.opponent, "home": home,
-            "analysis": c.analysis if c.analysis in {e["slug"] for e in opps} else None,
-            "snapshot": c.key if c.key in {e["slug"] for e in snaps} else None}
+    out = []
+    for _, c in next_games_df(tg, f"{today:%Y-%m-%d}").iterrows():
+        home = None if c.home is None or pd.isna(c.home) else bool(c.home)
+        out.append({"date": c.date, "time": c.time or "", "competition": c.competition if c.competition != "LBA" else CFG["league"],
+                    "opponent": c.opponent, "home": home, "round": None if pd.isna(c["round"]) else int(c["round"]),
+                    "analysis": c.analysis if c.analysis in {e["slug"] for e in opps} else None,
+                    "snapshot": c.key if c.key in {e["slug"] for e in snaps} else None})
+    return out
 
 
 def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[dict], today: date) -> None:
@@ -215,17 +214,17 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
              f"<p>The season of {CFG['team']} ({CFG['league']} and EuroCup), in three parts: the team's situation before every game, "
              "the analysis of every opponent, and the review of every game played. "
              "The first two are always available from the dropdowns at the top; each uses only data from before its game.</p>"]
-    nxt = next_game(snaps, opps, today)
+    nxt = next_games(snaps, opps, today)
     if nxt:
-        where = {True: "vs", False: "at", None: "vs"}[nxt["home"]]
-        when = f"{long_date(nxt['date'])}{', ' + nxt['time'] if nxt['time'] else ''} · {nxt['competition']}"
-        parts.append("<h2>Next game</h2><div class=\"cards\">")
-        parts.append(card(f"snapshot/{nxt['snapshot']}/" if nxt["snapshot"] else (f"opponent/{nxt['analysis']}/" if nxt["analysis"] else "#"),
-                          when, f"{CFG['team']} {where} {nxt['opponent']}", "", True))
-        if nxt["snapshot"]:
-            parts.append(card(f"snapshot/{nxt['snapshot']}/", f"{CFG['team']} before the game", "Situation, roster, form", "pre-game snapshot"))
-        if nxt["analysis"]:
-            parts.append(card(f"opponent/{nxt['analysis']}/", f"{nxt['opponent']}", "Opponent analysis", "with the comparison against " + CFG["team"]))
+        parts.append("<h2>Next games</h2><div class=\"cards\">")
+        for i, n in enumerate(nxt):
+            where = "at" if n["home"] is False else "vs"
+            when = f"{long_date(n['date'])}{', ' + n['time'] if n['time'] else ''} · {n['competition']}{' round ' + str(n['round']) if n['round'] else ''}"
+            href = f"snapshot/{n['snapshot']}/" if n["snapshot"] else (f"opponent/{n['analysis']}/" if n["analysis"] else "#")
+            parts.append(card(href, when, f"{CFG['team']} {where} {n['opponent']}",
+                              "pre-game snapshot" if n["snapshot"] else "", i == 0))
+            if n["analysis"]:
+                parts.append(card(f"opponent/{n['analysis']}/", n["opponent"], "Opponent analysis", "with the comparison against " + CFG["team"]))
         parts.append("</div>")
     if reviews:
         parts.append("<h2 id=\"reviews\">Game reviews</h2><div class=\"cards\">")

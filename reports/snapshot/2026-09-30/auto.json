@@ -11,6 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
+  "n_before": 9,
   "opponent_analysis": null,
   "record": "0-1",
   "position": 13,

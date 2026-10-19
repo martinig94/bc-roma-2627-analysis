@@ -77,8 +77,9 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
 * **Layout**: `weekly/template/{snapshot,opponent,review}.md.j2` (page order, automatic parts, text slots) and `site.html.j2` (look).
   To add a section, add its key to the matching `notes_*.md` and an `{% if n.key %}...{% endif %}` block to the template, or add a
   figure in `weekly_sections.py` and its numbers to `auto` in the generator.
-* **Next game** on the landing page is the first game from today on in any competition: unfinished LBA games from `data/games.csv`
-  plus the other competitions' games in `weekly/schedule.csv` (`date,time,competition,opponent,home,analysis`, `home` 1/0; `analysis` =
+* **Next games** on the landing page: the next game to play in each competition (LBA from `data/games.csv`, the others from
+  `weekly/schedule.csv`), each with its snapshot and opponent analysis. Those pages are generated ahead of the game and regenerated
+  by `weekly.py` whenever new games enter the data (`n_before` in their `auto.json`) (`date,time,competition,opponent,home,analysis`, `home` 1/0; `analysis` =
   the `reports/matchup_*` folder). Add a row for every EuroCup game.
 * **A document of your own for an opponent**: put it as `weekly/opponent/<matchup folder>/document.md` (images next to it). It is
   shown first, exactly as written, and the automatic report of that folder follows under "Automatic data report", so nothing of either

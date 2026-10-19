@@ -66,10 +66,21 @@ def team_games(data: Path, team: str = CFG["team"]) -> pd.DataFrame:
     return tg
 
 
-def snapshot_targets(tg: pd.DataFrame, today: str) -> pd.DataFrame:
-    """Games that get a pre-game snapshot: those with a game of the team before them, up to the next game to be played.
-    Games of the past whose data is not collected yet are included (their data cut is complete)."""
+def next_games(tg: pd.DataFrame, today: str) -> pd.DataFrame:
+    """The next game still to play in each competition (one row per competition), in date order."""
     future = tg[(~tg.finished) & (tg.date >= today)]
-    cutoff = future.date.min() if len(future) else "9999-12-31"
-    t = tg[(tg.date <= cutoff) & (tg.index > 0)]
-    return t
+    return future.groupby("competition", sort=False).head(1).sort_values(["date", "time"])
+
+
+def snapshot_targets(tg: pd.DataFrame, today: str) -> pd.DataFrame:
+    """Games that get a pre-game snapshot: those with a game of the team before them, up to the next game to be played in
+    every competition. Games of the past whose data is not collected yet are included (their data cut is complete)."""
+    nxt = next_games(tg, today)
+    cutoff = nxt.date.max() if len(nxt) else "9999-12-31"
+    return tg[(tg.date <= cutoff) & (tg.index > 0)]
+
+
+def n_before(tg: pd.DataFrame, games: pd.DataFrame, date: str) -> int:
+    """Fingerprint of the data available before `date`: finished team games (any competition) and finished league games.
+    A page generated for a future game is regenerated when this changes."""
+    return int(((tg.date < date) & tg.finished).sum()) + int(((games.game_status.astype(str) == "2") & (games.match_datetime.str[:10] < date)).sum())
