@@ -30,18 +30,18 @@
 
 Height in cm (EuroLeague roster), position from ACB role / EuroLeague roster. PPG split: Liga Endesa / EuroCup.
 
-- **JD Notae** (SG, 187 cm, 7 GP): 21.2 min, **13.7 pts**, 2.0 reb, 2.4 ast, FG 45% / 3P 29% / FT 71%; PPG 13.0 ACB / 14.7 EC. Volume shooter from 3 (5.0 att, 29%).
-- **Chibuzo Agbo** (SF, 200 cm, 7 GP): 20.3 min, **9.0 pts**, 2.1 reb, 0.4 ast, FG 44% / 3P 42% / FT 62%; PPG 10.2 ACB / 7.3 EC. Volume shooter from 3 (5.4 att, 42%).
-- **Nick Ongenda** (C, 211 cm, 7 GP): 18.8 min, **10.1 pts**, 3.6 reb, 1.0 ast, FG 58% / 3P - / FT 65%; PPG 10.2 ACB / 10.0 EC. Role player.
-- **Timmy Allen** (PF, 198 cm, 5 GP): 25.7 min, **21.4 pts**, 4.2 reb, 2.0 ast, FG 54% / 3P 46% / FT 76%; PPG 20.5 ACB / 22.0 EC. Primary scorer, volume shooter from 3 (4.8 att, 46%), turnover-prone (2.6).
-- **Yordan Minchev** (PF, 205 cm, 7 GP): 17.5 min, **5.4 pts**, 5.6 reb, 1.3 ast, FG 37% / 3P 23% / FT 42%; PPG 7.2 ACB / 3.0 EC. Role player.
-- **Rafael Villar** (PG, 191 cm, 6 GP): 19.2 min, **4.5 pts**, 1.8 reb, 3.3 ast, FG 46% / 3P 17% / FT 43%; PPG 7.0 ACB / 2.0 EC. Role player.
-- **Lukasz Kolenda** (SG, 195 cm, 6 GP): 19.1 min, **8.2 pts**, 2.2 reb, 1.8 ast, FG 41% / 3P 28% / FT 82%; PPG 10.3 ACB / 6.0 EC. Role player.
-- **Ferran Bassas** (PG, 181 cm, 6 GP): 19.0 min, **3.7 pts**, 2.0 reb, 4.5 ast, FG 24% / 3P 16% / FT 78%; PPG 1.8 ACB / 7.5 EC. Main creator.
-- **Pablo Tamba** (SF, 200 cm, 7 GP): 13.1 min, **4.7 pts**, 2.6 reb, 0.6 ast, FG 68% / 3P 33% / FT 42%; PPG 4.5 ACB / 5.0 EC. Role player.
-- **Hugo Benitez** (PG, 192 cm, 4 GP): 19.2 min, **8.2 pts**, 1.5 reb, 4.0 ast, FG 54% / 3P 17% / FT 50%; PPG 7.3 ACB / 11.0 EC. Main creator, weak at the line (50%).
-- **Eric Vila** (PF, 209 cm, 5 GP): 12.2 min, **1.8 pts**, 2.6 reb, 0.6 ast, FG 21% / 3P 0% / FT 75%; PPG 1.7 ACB / 2.0 EC. Role player.
-- **Pierre Oriola** (C, 208 cm, 3 GP): 19.6 min, **12.0 pts**, 6.0 reb, 0.7 ast, FG 50% / 3P 0% / FT 70%; PPG 11.5 ACB / 13.0 EC. Rebounder.
+- **JD Notae** (SG, 187 cm, 7 GP): 21.2 min, **13.7 pts**, 2.0 reb, 2.4 ast, 2P 56% / 3P 29% / FT 71%; PPG 13.0 ACB / 14.7 EC. Volume shooter from 3 (5.0 att, 29%).
+- **Chibuzo Agbo** (SF, 200 cm, 7 GP): 20.3 min, **9.0 pts**, 2.1 reb, 0.4 ast, 2P 50% / 3P 42% / FT 62%; PPG 10.2 ACB / 7.3 EC. Volume shooter from 3 (5.4 att, 42%).
+- **Nick Ongenda** (C, 211 cm, 7 GP): 18.8 min, **10.1 pts**, 3.6 reb, 1.0 ast, 2P 58% / 3P - / FT 65%; PPG 10.2 ACB / 10.0 EC. Role player.
+- **Timmy Allen** (PF, 198 cm, 5 GP): 25.7 min, **21.4 pts**, 4.2 reb, 2.0 ast, 2P 59% / 3P 46% / FT 76%; PPG 20.5 ACB / 22.0 EC. Primary scorer, volume shooter from 3 (4.8 att, 46%), turnover-prone (2.6).
+- **Yordan Minchev** (PF, 205 cm, 7 GP): 17.5 min, **5.4 pts**, 5.6 reb, 1.3 ast, 2P 43% / 3P 23% / FT 42%; PPG 7.2 ACB / 3.0 EC. Role player.
+- **Rafael Villar** (PG, 191 cm, 6 GP): 19.2 min, **4.5 pts**, 1.8 reb, 3.3 ast, 2P 75% / 3P 17% / FT 43%; PPG 7.0 ACB / 2.0 EC. Role player.
+- **Lukasz Kolenda** (SG, 195 cm, 6 GP): 19.1 min, **8.2 pts**, 2.2 reb, 1.8 ast, 2P 53% / 3P 28% / FT 82%; PPG 10.3 ACB / 6.0 EC. Role player.
+- **Ferran Bassas** (PG, 181 cm, 6 GP): 19.0 min, **3.7 pts**, 2.0 reb, 4.5 ast, 2P 50% / 3P 16% / FT 78%; PPG 1.8 ACB / 7.5 EC. Main creator.
+- **Pablo Tamba** (SF, 200 cm, 7 GP): 13.1 min, **4.7 pts**, 2.6 reb, 0.6 ast, 2P 85% / 3P 33% / FT 42%; PPG 4.5 ACB / 5.0 EC. Role player.
+- **Hugo Benitez** (PG, 192 cm, 4 GP): 19.2 min, **8.2 pts**, 1.5 reb, 4.0 ast, 2P 65% / 3P 17% / FT 50%; PPG 7.3 ACB / 11.0 EC. Main creator, weak at the line (50%).
+- **Eric Vila** (PF, 209 cm, 5 GP): 12.2 min, **1.8 pts**, 2.6 reb, 0.6 ast, 2P 75% / 3P 0% / FT 75%; PPG 1.7 ACB / 2.0 EC. Role player.
+- **Pierre Oriola** (C, 208 cm, 3 GP): 19.6 min, **12.0 pts**, 6.0 reb, 0.7 ast, 2P 55% / 3P 0% / FT 70%; PPG 11.5 ACB / 13.0 EC. Rebounder.
 
 ## Lineups
 

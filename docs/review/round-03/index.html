@@ -35,6 +35,18 @@
   blockquote p { margin:.3rem 0; }
   code { background:var(--soft); padding:0 4px; border-radius:3px; }
   details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
+  /* main sections that open and close: the h2 becomes the clickable title */
+  details.sec { margin:2.2rem 0 0; }
+  details.sec > summary { list-style:none; display:flex; align-items:center; gap:.6rem; font-weight:inherit; border-bottom:1px solid var(--line); }
+  details.sec > summary::-webkit-details-marker { display:none; }
+  details.sec > summary::before { content:"\25BE"; color:var(--link); font-size:1.1rem; width:1rem; flex:none; }
+  details.sec:not([open]) > summary::before { content:"\25B8"; }
+  details.sec > summary h2 { margin:0; padding:.2rem 0 .3rem; border:0; flex:1; }
+  details.sec > summary:hover h2 { color:var(--link); }
+  .sec-body { padding-top:.4rem; }
+  .sec-tools { margin:1.2rem 0 0; font-size:.85rem; text-align:right; }
+  .sec-tools button { font:inherit; padding:2px 10px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; margin-left:6px; }
+  .sec-tools button:hover { border-color:var(--gold); background:var(--flag); }
   .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
   .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:8px; background:var(--soft); text-decoration:none; color:var(--ink); }
   .card:hover { border-color:var(--gold); background:var(--flag); color:var(--ink); }
@@ -67,7 +79,7 @@
 </head>
 <body>
 <header><div class="bar">
-  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27 &middot; weekly report</span></a>
+  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27</span></a>
   <select aria-label="Opponents" onchange="if(this.value)location.href='../../'+this.value">
     <option value="">Opponents &#9662;</option>
     <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
@@ -95,7 +107,7 @@
 <p>A 95-96 defeat at PalaEur in the first Rome derby of the season.</p>
 </blockquote>
 <p>Author: Giulia Martini</p>
-<h2>The game in numbers</h2>
+<details class="sec" open><summary><h2>The game in numbers</h2></summary><div class="sec-body">
 <table>
 <thead>
 <tr>
@@ -205,7 +217,7 @@
 </tbody>
 </table>
 <p>eFG% = (2P + 1.5 × 3P) / FGA · TOV% = turnovers per 100 possessions · OREB% = share of available offensive rebounds · FT rate = free throw attempts per field goal attempt.</p>
-<h2>Players</h2>
+</div></details><details class="sec" open><summary><h2>Players</h2></summary><div class="sec-body">
 <p><img alt="players" src="players.png" /></p>
 <h3>Playing time</h3>
 <p>No player had a significant increase in playing time (flag: at least 8' played and either +7' or +30% versus the average in earlier games).</p>
@@ -248,7 +260,7 @@ Bold = starter.
 
 </details>
 
-<h2>Round 3 across the league</h2>
+</div></details><details class="sec" open><summary><h2>Round 3 across the league</h2></summary><div class="sec-body">
 <ul>
 <li>Udine 66-74 Trento</li>
 <li>Varese 85-84 Trieste</li>
@@ -283,10 +295,10 @@ Bold = starter.
 
 </details>
 
-<h2>Season so far</h2>
+</div></details><details class="sec" open><summary><h2>Season so far</h2></summary><div class="sec-body">
 <p><img alt="season" src="season.png" /></p>
-<h2>Next up</h2>
-<p>Round 4: Venezia (home), 2026-10-17 at 16:00.</p>
+</div></details><details class="sec" open><summary><h2>Next up</h2></summary><div class="sec-body">
+<p>Round 4: Venezia (home), 2026-10-17 at 16:00.</p></div></details>
 <section class="comments">
 <h2>Comments</h2>
 <p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
@@ -297,6 +309,20 @@ Bold = starter.
   <button type="button" id="hl-clear" hidden>Clear highlights</button>
   <button type="button" id="hl-toggle" aria-pressed="false" title="Click table cells to highlight them (shift-click: the whole row). Kept in this browser only.">&#9998; Highlighter</button>
 </div>
+<script>
+// Collapse all / Expand all above the first section of a page
+(function () {
+  var secs = [].slice.call(document.querySelectorAll("main details.sec"));
+  if (secs.length < 2) return;
+  var bar = document.createElement("p"); bar.className = "sec-tools";
+  [["Collapse all", false], ["Expand all", true]].forEach(function (b) {
+    var btn = document.createElement("button"); btn.type = "button"; btn.textContent = b[0];
+    btn.addEventListener("click", function () { secs.forEach(function (d) { d.open = b[1]; }); });
+    bar.appendChild(btn);
+  });
+  secs[0].parentNode.insertBefore(bar, secs[0]);
+})();
+</script>
 <script>
 // Live highlighter: with it on, a click on a table cell highlights it (shift-click: the row). Saved in this browser only.
 (function () {
