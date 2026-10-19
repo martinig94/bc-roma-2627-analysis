@@ -22,10 +22,13 @@ from pathlib import Path
 import jinja2
 import markdown
 
+import weekly_config
+
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 WEEKLY = ROOT / "weekly"
-AUTHOR = "Giulia Martini"
+CFG = weekly_config.load()
+AUTHOR = CFG["author"]
 TPL = jinja2.Environment(loader=jinja2.FileSystemLoader(WEEKLY / "template"), autoescape=False, keep_trailing_newline=True)
 
 
@@ -51,7 +54,7 @@ def md_html(text: str) -> str:
 
 
 def shell(title: str, body: str, root: str) -> str:
-    return TPL.get_template("site.html.j2").render(title=title, body=body, root=root)
+    return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, site_title=CFG["site_title"], league=CFG["league"])
 
 
 def build_weekly() -> list[dict]:
@@ -75,7 +78,7 @@ def build_weekly() -> list[dict]:
             if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}:
                 shutil.copy(f, dest / f.name)
         title = n.get("title") or f"Round {a['round']}: {a['team']} {a['score_for']}-{a['score_against']} {a['opponent']}"
-        (dest / "index.html").write_text(shell(f"{title} · BC Roma weekly", md_html(page_md), "../../"), encoding="utf-8")
+        (dest / "index.html").write_text(shell(f"{title} · {CFG['site_title']}", md_html(page_md), "../../"), encoding="utf-8")
         weeks.append({"slug": src.name, "round": a["round"], "title": title, "summary": n.get("summary", ""), "date": a["date"],
                       "opponent": a["opponent"], "home": a["home"], "win": a["win"],
                       "score": f"{a['score_for']}-{a['score_against']}", "record": a["record"], "position": a["position"]})
@@ -85,7 +88,7 @@ def build_weekly() -> list[dict]:
 
 def build_landing(weeks: list[dict]) -> None:
     if not weeks:
-        body = "<h1>BC Roma 2026/27 weekly report</h1><p>The first report is coming soon.</p>"
+        body = f"<h1>{CFG['site_title']}</h1><p>The first report is coming soon.</p>"
     else:
         cards = []
         for i, w in enumerate(weeks):
@@ -97,11 +100,11 @@ def build_landing(weeks: list[dict]) -> None:
                 f'<div class="rd">Round {w["round"]} · {w["date"]}{" · latest" if i == 0 else ""}</div>'
                 f'<div class="score"><span class="{cls}">{"W" if w["win"] else "L"}</span> {w["score"]} {where} {w["opponent"]}</div>'
                 f'<div class="rd">{w["record"]} · {w["position"]}{ordinal(w["position"])} in the standings</div>{summary}</a>')
-        body = ("<h1>BC Roma 2026/27 weekly report</h1>"
-                "<p>One report per round of the LBA Serie A: the game, the players, the league table. "
+        body = (f"<h1>{CFG['site_title']}</h1>"
+                f"<p>One report per round of the {CFG['league']}: the game, the players, the league table. "
                 "Pre-match opponent analyses are <a href=\"prematch.html\">here</a>.</p>"
                 f'<div class="cards">{"".join(cards)}</div>')
-    (DOCS / "index.html").write_text(shell("BC Roma weekly report", body, ""), encoding="utf-8")
+    (DOCS / "index.html").write_text(shell(CFG["site_title"], body, ""), encoding="utf-8")
     (DOCS / "weekly.json").write_text(json.dumps(weeks, indent=2, ensure_ascii=False), encoding="utf-8")
 
 

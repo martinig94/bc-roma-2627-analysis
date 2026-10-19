@@ -1,6 +1,6 @@
 """Download and cache player photos (thumbnails) from the legabasket.it media CDN.
 
-    python notebooks/player_photos.py                 # every player of BC Roma found in data/raw
+    python notebooks/player_photos.py                 # every player of the configured team found in data/raw
     python notebooks/player_photos.py --team "Maxima Roma"
 
 The box-score JSON carries `player_p_key` (only on some payloads); the original picture is
@@ -16,6 +16,8 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 from PIL import Image
+
+import weekly_config
 
 ROOT = Path(__file__).resolve().parent.parent
 PHOTOS = ROOT / "data" / "photos"
@@ -54,7 +56,7 @@ def fetch(player_id: int, key: str) -> Path | None:
     return dest
 
 
-def main_quiet(team: str = "BC Roma") -> None:
+def main_quiet(team: str) -> None:
     """Fetch the photos that are not cached yet (no-op offline); used by weekly_report.py."""
     for pid, key in photo_keys(team).items():
         fetch(pid, key)
@@ -62,7 +64,7 @@ def main_quiet(team: str = "BC Roma") -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--team", default="BC Roma")
+    ap.add_argument("--team", default=weekly_config.load()["team"])
     a = ap.parse_args()
     keys = photo_keys(a.team)
     for pid, key in keys.items():
