@@ -101,7 +101,7 @@ Author: {{ author }}
 |---|---:|---:|
 {% for r in a.comparison.rows %}| {{ r.stat }} | {{ r.team }} | {{ r.opp }} |
 {% endfor %}
-Ratings are points per 100 possessions. Games before this one in the league ({{ a.league }}) and, where the EuroCup file has them, the EuroCup{% if a.eurocup_teams %} (EuroCup data included for: {{ a.eurocup_teams|join(', ') }}){% else %} (no EuroCup data for either team){% endif %}.
+Ratings are points per 100 possessions. Games before this one{% if a.eurocup %} in the league ({{ a.league }}) and in the EuroCup (both teams play it){% else %} in the league ({{ a.league }}) only: the comparison uses EuroCup games only when both teams play the EuroCup{% endif %}.
 {%- endmacro %}
 
 {% macro lineups(a, files, author, kind) -%}
@@ -112,7 +112,7 @@ Ratings are points per 100 possessions. Games before this one in the league ({{ 
 
 {# ─── both ─── #}
 {% macro roster(a, files, author, kind) -%}
-Per-game averages before this game, {{ 'LBA + EuroCup' if kind == 'snapshot' else 'league and EuroCup games' }}. Shooting: percentage (attempts per game).
+Per-game averages before this game, {{ 'LBA + EuroCup' if kind == 'snapshot' else 'league and EuroCup games' }}. Shooting: 2P%, 3P% and FT%, each followed by the attempts **per game** in brackets (2PA, 3PA, FTA).
 
 {{ roster_table(a.roster) }}
 {%- endmacro %}
