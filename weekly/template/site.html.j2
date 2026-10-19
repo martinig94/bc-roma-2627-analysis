@@ -89,6 +89,11 @@
     {% for o in nav.games %}<option value="{{ o.url }}">{{ o.label }}</option>
     {% endfor %}
   </select>
+  <select aria-label="Snapshots" onchange="if(this.value)location.href='{{ root }}'+this.value">
+    <option value="">Snapshots &#9662;</option>
+    {% for o in nav.snapshots %}<option value="{{ o.url }}">{{ o.label }}</option>
+    {% endfor %}
+  </select>
   {% if has_reviews %}<a href="{{ root }}#reviews">Game reviews</a>{% endif %}
   {% for pg in nav.pages %}<a href="{{ root }}{{ pg.url }}">{{ pg.label }}</a>
   {% endfor %}
