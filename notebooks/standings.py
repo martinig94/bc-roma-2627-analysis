@@ -127,10 +127,11 @@ def standings_md(games: pd.DataFrame, before: str | None, highlight: list[str]) 
     return "\n".join(lines)
 
 
-def fig_standings(games: pd.DataFrame, before: str | None, highlight: list[str], out: Path) -> None:
+def fig_standings(games: pd.DataFrame, before: str | None, highlight: list[str], out: Path, title_label: str = "LBA 2026/27") -> None:
     t = standings(games, before)
     rounds = results_by_round(games, before)["round"]
-    n = int(rounds.max()) if len(rounds) else 0
+    rounds_done = int(rounds.max()) if len(rounds) else 0
+    n = int(t.gp.max())      # games of the team that played most: sizes the results column
     fig, ax = plt.subplots(figsize=(10, 6.4))
     y = np.arange(len(t))[::-1]
     others = [h for h in highlight if h != "BC Roma"]
@@ -158,7 +159,7 @@ def fig_standings(games: pd.DataFrame, before: str | None, highlight: list[str],
     style_axes(ax, "x")
     ax.set_title("bar label: wins-losses and point difference; teams on the same points ordered by head-to-head, then difference",
                  fontsize=9, color=TEXT2, loc="left")
-    fig.suptitle(f"LBA 2026/27 standings after round {n}", **SUP_KW)
+    fig.suptitle(f"{title_label} standings after round {rounds_done}", **SUP_KW)
     save_fig(fig, out / "00_standings.png"); plt.close(fig)
 
 

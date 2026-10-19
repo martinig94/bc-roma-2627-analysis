@@ -92,6 +92,13 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   games are added when the team is in the EuroCup file. Hand-written opponent pages get the roster with photos appended automatically
   (`roster.json` next to their README). Photos come from the league media server (box-score `player_p_key`); the Manresa report takes
   them from the EuroLeague roster API when `manresa_fetch.py` runs (`data/manresa/photos/`).
+* **EuroCup data**: `python notebooks/eurocup_fetch.py` (run by the daily workflow; needs the EuroLeague API, i.e. network access to
+  `api-live.euroleague.net`) writes `data/eurocup/results.csv` (every game of the season, through the
+  [`euroleague-api`](https://github.com/giasemidis/euroleague_api) package), `people.csv` and `photos/` (rosters with headshots, from the
+  club "people" endpoint). The snapshot of a EuroCup game shows the **EuroCup table of BC Roma's group** as of that date, computed from
+  `results.csv` (a group = the teams connected through the schedule; ranking by wins, head-to-head, point difference), never the LBA table.
+  Without `results.csv` the page says the standings are not available yet. EuroCup box scores are still the hand-made file
+  (`data/eurocup_2026_raw.txt`).
 * **Roster positions and heights**: `data/roster.csv` (new players are appended blank). Photos: `data/photos/` (fetched automatically).
 * **Another team or season**: change `weekly/config.json`; the code has no team name in it.
 * Enable the site once in the repository settings: Pages, source "Deploy from a branch", branch `master`, folder `/docs`.

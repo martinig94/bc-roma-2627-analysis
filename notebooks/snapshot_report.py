@@ -16,6 +16,7 @@ from pathlib import Path
 
 import pandas as pd
 
+import eurocup
 import lba_style
 import player_photos
 import standings as st
@@ -80,8 +81,28 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     lba_games = [int(x) for x in lba_before.game_id]
     last = before.iloc[-1]
 
-    st.fig_standings(games, date, [team, opp] if is_lba else [team], out)
-    (out / "00_standings.png").replace(out / "standings.png")
+    # standings: the table of the competition of the game (EuroCup group for a EuroCup game, never the LBA one)
+    table = {"kind": g.competition, "available": True, "position": None, "teams": None}
+    if is_lba:
+        st.fig_standings(games, date, [team, opp], out)
+        (out / "00_standings.png").replace(out / "standings.png")
+        standings_table = standings_md(games, date, team, opp)
+    else:
+        results = eurocup.load_results(data)
+        frame = eurocup.games_frame(results, team) if results is not None and team in set(results.home) | set(results.away) else None
+        if frame is None or st.finished(frame, date).empty:
+            table["available"] = False       # no EuroCup results yet (data/eurocup/results.csv comes from eurocup_fetch.py)
+            standings_table = ""
+        else:
+            opp_feed = eurocup.find_team(set(frame.home_team) | set(frame.away_team), opp)
+            lba_style.SOURCE_NOTE = "EuroLeague live API"
+            st.fig_standings(frame, date, [team] + ([opp_feed] if opp_feed else []), out, title_label="EuroCup 2026/27")
+            lba_style.SOURCE_NOTE = "legabasket.it play-by-play"
+            (out / "00_standings.png").replace(out / "standings.png")
+            standings_table = standings_md(frame, date, team, opp_feed or "")
+            tab_ec = st.standings(frame, date)
+            table.update(position=int(tab_ec.loc[team, "pos"]), teams=len(tab_ec),
+                         record=f"{int(tab_ec.loc[team, 'w'])}-{int(tab_ec.loc[team, 'l'])}")
     ws.fig_form(before, out, team)
     box_lba = pd.read_csv(data / "box_scores.csv")
     box_ast = int(box_lba[(box_lba.game_id.isin(lba_games)) & (box_lba.team == team) & (box_lba.row_type == "total")].ast.sum())
@@ -112,7 +133,8 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
         "zone_share": ws.fig_zones(pbp, lba_games, None, out, team),
         "ts_pir_lba": ws.fig_ts_pir(xbox, "LBA", out, team=team),
         "ts_pir_ec": ws.fig_ts_pir(xbox, "EC", out, team=team) if ((xbox.competition == "EC") & (xbox.team == team)).any() else None,
-        "md": {"standings": standings_md(games, date, team, opp if is_lba else ""), "last_results": last_results_md(before)},
+        "standings_table": table,
+        "md": {"standings": standings_table, "last_results": last_results_md(before)},
     }
     (out / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
 
