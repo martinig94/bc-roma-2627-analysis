@@ -35,18 +35,6 @@
   blockquote p { margin:.3rem 0; }
   code { background:var(--soft); padding:0 4px; border-radius:3px; }
   details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
-  /* main sections that open and close: the h2 becomes the clickable title */
-  details.sec { margin:2.2rem 0 0; }
-  details.sec > summary { list-style:none; display:flex; align-items:center; gap:.6rem; font-weight:inherit; border-bottom:1px solid var(--line); }
-  details.sec > summary::-webkit-details-marker { display:none; }
-  details.sec > summary::before { content:"\25BE"; color:var(--link); font-size:1.1rem; width:1rem; flex:none; }
-  details.sec:not([open]) > summary::before { content:"\25B8"; }
-  details.sec > summary h2 { margin:0; padding:.2rem 0 .3rem; border:0; flex:1; }
-  details.sec > summary:hover h2 { color:var(--link); }
-  .sec-body { padding-top:.4rem; }
-  .sec-tools { margin:1.2rem 0 0; font-size:.85rem; text-align:right; }
-  .sec-tools button { font:inherit; padding:2px 10px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; margin-left:6px; }
-  .sec-tools button:hover { border-color:var(--gold); background:var(--flag); }
   .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
   .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:8px; background:var(--soft); text-decoration:none; color:var(--ink); }
   .card:hover { border-color:var(--gold); background:var(--flag); color:var(--ink); }
@@ -79,40 +67,56 @@
 </head>
 <body>
 <header><div class="bar">
-  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27</span></a>
+  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27 &middot; weekly report</span></a>
   <select aria-label="Opponents" onchange="if(this.value)location.href='../../'+this.value">
     <option value="">Opponents &#9662;</option>
     <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
-    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct · old format</option>
-    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct · old format</option>
-    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">at Maxima Roma · LBA round 3 · 11 Oct · old format</option>
+    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct</option>
+    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct</option>
+    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">at Maxima Roma · LBA round 3 · 11 Oct</option>
     <option value="snapshot/2026-10-07/">vs Lietkabelis Panevezys · EuroCup · 7 Oct</option>
-    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">vs Tortona · LBA round 2 · 4 Oct · automatic only</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">vs Tortona · LBA round 2 · 4 Oct</option>
     <option value="snapshot/2026-09-30/">at Bahcesehir College Istanbul · EuroCup · 30 Sep</option>
     
   </select>
-  
+  <a href="../../#reviews">Game reviews</a>
   <a href="../../compare/">Compare</a>
   <a href="../../methodology/">Methodology</a>
   <a href="../../work-plan/">Work plan</a>
   
 </div></header>
 <main>
-<p class="edit"><a href="https://github.com/martinig94/bc-roma-2627-analysis/edit/master/weekly/games/2026-10-07/snapshot.md" target="_blank" rel="noopener">&#9998; Edit the text of this page</a>
+<p class="edit"><a href="https://github.com/martinig94/bc-roma-2627-analysis/edit/master/weekly/snapshot/2026-10-07/notes.md" target="_blank" rel="noopener">&#9998; Edit the text of this page</a>
 <span class="muted">opens its markdown file on GitHub; once saved, the site is rebuilt within a few minutes</span></p>
 <h1>BC Roma before EuroCup: vs Lietkabelis Panevezys</h1>
 <p>EuroCup · Wednesday 07 October 2026</p>
 <p><strong>Pre-game snapshot: only data from games played before Wednesday 07 October 2026, in both competitions.</strong>
 <a href="../../compare/?b=2026-10-07">Compare this situation with another game</a>.</p>
 <p>Author: Giulia Martini</p>
-<details class="sec" open><summary><h2>Where BC Roma stands</h2></summary><div class="sec-body">
-<p><strong>EuroCup: 0-1 · LBA: 1-1 · 6th in the standings (2 points) · last five games (both competitions): LLW</strong></p>
+<h2>Where BC Roma stands</h2>
+<p><strong>EuroCup: 0-1 · 6th of 8 in its group · LBA: 1-1 · 6th in the standings (2 points) · last five games (both competitions): LLW</strong></p>
 <ul>
 <li>09-26 · round 1: <strong>L</strong> 94-109 at Treviso</li>
 <li>09-30 · EuroCup: <strong>L</strong> 78-91 at Bahcesehir College Istanbul</li>
 <li>10-04 · round 2: <strong>W</strong> 108-70 vs Tortona</li>
 </ul>
-<p>EuroCup standings are not available yet: they are computed from the EuroCup results (<code>data/eurocup/results.csv</code>), which the daily run fetches from the EuroLeague API.</p>
+<p>EuroCup standings before this game (the group of BC Roma):</p>
+<p><img alt="standings" src="standings.png" /></p>
+<details><summary>Standings table</summary>
+
+| # | Team | Pts | W-L | Diff | Results |
+| ---: | --- | ---: | :---: | ---: | :---: |
+| 1 | Paok Thessaloniki | 4 | 2-0 | +18 | WW |
+| 2 | Ratiopharm Ulm | 2 | 1-0 | +14 | W |
+| 3 | Bahcesehir College Istanbul | 2 | 1-0 | +13 | W |
+| 4 | **Lietkabelis Panevezys** | 2 | 1-0 | +3 | W |
+| 5 | Bosna Bh Telecom Sarajevo | 0 | 0-2 | -6 | LL |
+| 6 | **BC Roma** | 0 | 0-1 | -13 | L |
+| 7 | Balkan Botevgrad | 0 | 0-1 | -14 | L |
+| 8 | Kids&Us Manresa | 0 | 0-1 | -15 | L |
+
+</details>
+
 <h3>Last game</h3>
 <p>LBA round 2, vs Tortona (2026-10-04): <strong>win 108-70</strong>.</p>
 <p>Significant increase in playing time in that game (at least 8' played and either +7' or +30% versus the average in earlier games):</p>
@@ -140,7 +144,7 @@
 </tr>
 </tbody>
 </table>
-</div></details><details class="sec" open><summary><h2>Team numbers to date</h2></summary><div class="sec-body">
+<h2>Team numbers to date</h2>
 <table>
 <thead>
 <tr>
@@ -253,7 +257,7 @@
 </tbody>
 </table>
 <p>Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = turnovers per 100 possessions · OREB% = share of available offensive rebounds · FT rate = free throw attempts per field goal attempt.</p>
-</div></details><details class="sec" open><summary><h2>Roster</h2></summary><div class="sec-body">
+<h2>Roster</h2>
 <p>Per-game averages before this game, LBA + EuroCup. Shooting: percentage (attempts per game).</p>
 <table>
 <thead>
@@ -268,7 +272,7 @@
 <th style="text-align: right;">REB</th>
 <th style="text-align: right;">AST</th>
 <th style="text-align: right;">PIR</th>
-<th style="text-align: right;">FG% (FGA)</th>
+<th style="text-align: right;">2P% (2PA)</th>
 <th style="text-align: right;">3P% (3PA)</th>
 <th style="text-align: right;">FT% (FTA)</th>
 <th style="text-align: right;">PPG LBA</th>
@@ -287,7 +291,7 @@
 <td style="text-align: right;">4.7</td>
 <td style="text-align: right;">2.7</td>
 <td style="text-align: right;">7.0</td>
-<td style="text-align: right;">38 (10.7)</td>
+<td style="text-align: right;">47 (5.7)</td>
 <td style="text-align: right;">27 (5.0)</td>
 <td style="text-align: right;">50 (3.3)</td>
 <td style="text-align: right;">12.0</td>
@@ -304,7 +308,7 @@
 <td style="text-align: right;">4.3</td>
 <td style="text-align: right;">3.7</td>
 <td style="text-align: right;">17.7</td>
-<td style="text-align: right;">60 (8.3)</td>
+<td style="text-align: right;">72 (6.0)</td>
 <td style="text-align: right;">29 (2.3)</td>
 <td style="text-align: right;">89 (3.0)</td>
 <td style="text-align: right;">12.0</td>
@@ -321,7 +325,7 @@
 <td style="text-align: right;">3.7</td>
 <td style="text-align: right;">7.0</td>
 <td style="text-align: right;">27.3</td>
-<td style="text-align: right;">56 (11.3)</td>
+<td style="text-align: right;">80 (5.0)</td>
 <td style="text-align: right;">37 (6.3)</td>
 <td style="text-align: right;">93 (5.0)</td>
 <td style="text-align: right;">15.0</td>
@@ -338,7 +342,7 @@
 <td style="text-align: right;">8.0</td>
 <td style="text-align: right;">0.7</td>
 <td style="text-align: right;">19.3</td>
-<td style="text-align: right;">72 (9.7)</td>
+<td style="text-align: right;">83 (7.7)</td>
 <td style="text-align: right;">33 (2.0)</td>
 <td style="text-align: right;">50 (2.0)</td>
 <td style="text-align: right;">17.0</td>
@@ -355,7 +359,7 @@
 <td style="text-align: right;">2.0</td>
 <td style="text-align: right;">2.7</td>
 <td style="text-align: right;">8.7</td>
-<td style="text-align: right;">50 (8.0)</td>
+<td style="text-align: right;">57 (2.3)</td>
 <td style="text-align: right;">47 (5.7)</td>
 <td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">15.0</td>
@@ -372,7 +376,7 @@
 <td style="text-align: right;">1.3</td>
 <td style="text-align: right;">4.0</td>
 <td style="text-align: right;">8.7</td>
-<td style="text-align: right;">48 (7.0)</td>
+<td style="text-align: right;">75 (4.0)</td>
 <td style="text-align: right;">11 (3.0)</td>
 <td style="text-align: right;">100 (0.7)</td>
 <td style="text-align: right;">10.5</td>
@@ -389,7 +393,7 @@
 <td style="text-align: right;">1.7</td>
 <td style="text-align: right;">0.7</td>
 <td style="text-align: right;">5.0</td>
-<td style="text-align: right;">56 (6.0)</td>
+<td style="text-align: right;">80 (1.7)</td>
 <td style="text-align: right;">46 (4.3)</td>
 <td style="text-align: right;">33 (3.0)</td>
 <td style="text-align: right;">13.0</td>
@@ -406,7 +410,7 @@
 <td style="text-align: right;">2.0</td>
 <td style="text-align: right;">0.0</td>
 <td style="text-align: right;">1.3</td>
-<td style="text-align: right;">29 (2.3)</td>
+<td style="text-align: right;">33 (1.0)</td>
 <td style="text-align: right;">25 (1.3)</td>
 <td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">2.5</td>
@@ -440,7 +444,7 @@
 <td style="text-align: right;">1.0</td>
 <td style="text-align: right;">1.0</td>
 <td style="text-align: right;">3.0</td>
-<td style="text-align: right;">0 (1.0)</td>
+<td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">0 (1.0)</td>
 <td style="text-align: right;">100 (2.0)</td>
 <td style="text-align: right;">2.0</td>
@@ -499,20 +503,20 @@
 </tr>
 </tbody>
 </table>
-</div></details><details class="sec" open><summary><h2>Assists</h2></summary><div class="sec-body">
+<h2>Assists</h2>
 <p><img alt="assist matrix" src="assists.png" /></p>
 <p>Passer (rows) to scorer (columns), assisted baskets linked in the LBA play-by-play, games before this one. Most frequent pairs: Mannion → Simonovic (7), Mannion → Stevenson (4), Mannion → Strautins (3), Davis → Stevenson (3), Ayayi → Simonovic (3).</p>
-</div></details><details class="sec" open><summary><h2>Shot zones</h2></summary><div class="sec-body">
+<h2>Shot zones</h2>
 <p><img alt="shooting by zone" src="zones.png" /></p>
 <p><img alt="shot distribution by zone" src="zone_share.png" /></p>
-</div></details><details class="sec" open><summary><h2>Efficiency: true shooting vs PIR</h2></summary><div class="sec-body">
+<h2>Efficiency: true shooting vs PIR</h2>
 <h3>LBA games only</h3>
 <p><img alt="TS% vs PIR, LBA" src="ts_pir_lba.png" /></p>
 <h3>EuroCup games only</h3>
 <p><img alt="TS% vs PIR, EuroCup" src="ts_pir_eurocup.png" /></p>
 <p>EuroCup: 1 game for BC Roma; the grey dots are the players of the other teams in the EuroCup box scores collected so far, so read it as a very small sample.</p>
-</div></details><details class="sec" open><summary><h2>Every game so far</h2></summary><div class="sec-body">
-<p><img alt="form" src="season.png" /></p></div></details>
+<h2>Every game so far</h2>
+<p><img alt="form" src="season.png" /></p>
 <section class="comments">
 <h2>Comments</h2>
 <p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
@@ -523,20 +527,6 @@
   <button type="button" id="hl-clear" hidden>Clear highlights</button>
   <button type="button" id="hl-toggle" aria-pressed="false" title="Click table cells to highlight them (shift-click: the whole row). Kept in this browser only.">&#9998; Highlighter</button>
 </div>
-<script>
-// Collapse all / Expand all above the first section of a page
-(function () {
-  var secs = [].slice.call(document.querySelectorAll("main details.sec"));
-  if (secs.length < 2) return;
-  var bar = document.createElement("p"); bar.className = "sec-tools";
-  [["Collapse all", false], ["Expand all", true]].forEach(function (b) {
-    var btn = document.createElement("button"); btn.type = "button"; btn.textContent = b[0];
-    btn.addEventListener("click", function () { secs.forEach(function (d) { d.open = b[1]; }); });
-    bar.appendChild(btn);
-  });
-  secs[0].parentNode.insertBefore(bar, secs[0]);
-})();
-</script>
 <script>
 // Live highlighter: with it on, a click on a table cell highlights it (shift-click: the row). Saved in this browser only.
 (function () {
