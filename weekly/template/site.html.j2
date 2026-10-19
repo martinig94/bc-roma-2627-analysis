@@ -31,6 +31,10 @@
   .win { color:#2e9e5b; } .loss { color:#d94b4b; }
   .latest { border-left:6px solid var(--gold); }
   select { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
+  .doc table { display:table; width:100%; }
+  .doc th, .doc td { white-space:normal; text-align:left; vertical-align:top; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  .comments { margin-top:3rem; }
   .nav { display:flex; justify-content:space-between; margin-top:3rem; }
 </style>
 </head>
@@ -43,9 +47,16 @@
     {% endfor %}
   </select>
   <a href="{{ root }}#reviews" style="font-weight:400">Game reviews</a>
+  {% for pg in nav.pages %}<a href="{{ root }}{{ pg.url }}" style="font-weight:400">{{ pg.label }}</a>
+  {% endfor %}
 </div></header>
 <main>
 {{ body }}
+{% if comments and comments_repo %}<section class="comments">
+<h2>Comments</h2>
+<p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
+<script src="https://utteranc.es/client.js" repo="{{ comments_repo }}" issue-term="pathname" label="{{ comments_label }}" theme="preferred-color-scheme" crossorigin="anonymous" async></script>
+</section>{% endif %}
 </main>
 </body>
 </html>

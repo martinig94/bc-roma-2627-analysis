@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULTS = {"team": "BC Roma", "season": "2026/27", "league": "LBA Serie A", "author": "", "eurocup_file": ""}
+DEFAULTS = {"team": "BC Roma", "season": "2026/27", "league": "LBA Serie A", "author": "", "eurocup_file": "", "comments": {}}
 
 
 def load() -> dict:
