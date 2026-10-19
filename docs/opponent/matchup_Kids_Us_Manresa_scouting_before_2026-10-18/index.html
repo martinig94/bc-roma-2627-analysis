@@ -35,6 +35,18 @@
   blockquote p { margin:.3rem 0; }
   code { background:var(--soft); padding:0 4px; border-radius:3px; }
   details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
+  /* main sections that open and close: the h2 becomes the clickable title */
+  details.sec { margin:2.2rem 0 0; }
+  details.sec > summary { list-style:none; display:flex; align-items:center; gap:.6rem; font-weight:inherit; border-bottom:1px solid var(--line); }
+  details.sec > summary::-webkit-details-marker { display:none; }
+  details.sec > summary::before { content:"\25BE"; color:var(--link); font-size:1.1rem; width:1rem; flex:none; }
+  details.sec:not([open]) > summary::before { content:"\25B8"; }
+  details.sec > summary h2 { margin:0; padding:.2rem 0 .3rem; border:0; flex:1; }
+  details.sec > summary:hover h2 { color:var(--link); }
+  .sec-body { padding-top:.4rem; }
+  .sec-tools { margin:1.2rem 0 0; font-size:.85rem; text-align:right; }
+  .sec-tools button { font:inherit; padding:2px 10px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; margin-left:6px; }
+  .sec-tools button:hover { border-color:var(--gold); background:var(--flag); }
   .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
   .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:8px; background:var(--soft); text-decoration:none; color:var(--ink); }
   .card:hover { border-color:var(--gold); background:var(--flag); color:var(--ink); }
@@ -67,7 +79,7 @@
 </head>
 <body>
 <header><div class="bar">
-  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27 &middot; weekly report</span></a>
+  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27</span></a>
   <select aria-label="Opponents" onchange="if(this.value)location.href='../../'+this.value">
     <option value="">Opponents &#9662;</option>
     <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
@@ -91,7 +103,7 @@
 <h1>Kids&amp;Us Manresa scouting report (Liga Endesa + EuroCup)</h1>
 <p>BC Roma before this game: <a href="../../snapshot/2026-10-20/">pre-game snapshot</a>.</p>
 <p>Oct 18, 2026 · Author: Giulia Martini</p>
-<h2>Tuesday's game: key points</h2>
+<details class="sec" open><summary><h2>Tuesday's game: key points</h2></summary><div class="sec-body">
 <p>Without Allen and Villar, Manresa lose 25.9 of their 87.0 points per game and their top scorer by PIR (20.4). They are 0-2 without Allen this season, scoring 82.0 per game against 89.0 with him.</p>
 <ul>
 <li>
@@ -114,7 +126,7 @@
 </li>
 </ul>
 <p>Based solely on the data (7 games, small sample), with no assessment of plays or tactics. Percentages on low attempt volumes are not commented.</p>
-<h2>Roster</h2>
+</div></details><details class="sec" open><summary><h2>Roster</h2></summary><div class="sec-body">
 <p>Manresa most likely lose their primary scorer for Tuesday: Timmy Allen (21.4 pts) and Rafael Villar are both out. Players are ordered by position (PG, SG, SF, PF, C), then by minutes per game.</p>
 <table>
 <thead>
@@ -342,7 +354,7 @@
 </li>
 </ul>
 <p>Height in cm from the EuroLeague roster; position from ACB role / EuroLeague roster. Per-game stats combine Liga Endesa and EuroCup. Shooting attempts per game in brackets (Synergy team box score); percentages on low attempt volumes are not commented. Based solely on the data, with no assessment of plays or tactics.</p>
-<h2>Assists</h2>
+</div></details><details class="sec" open><summary><h2>Assists</h2></summary><div class="sec-body">
 <p>Bassas is the main passer (24 assisted baskets) and Ongenda the main finisher (22 received). Villar to Allen (5) was a top combination, and both are out on Tuesday.</p>
 <p><img alt="Kids&amp;Us Manresa assist matrix, Liga Endesa + EuroCup" src="doc_image1.png" /></p>
 <p>Passer (rows) to scorer (columns): 111 assisted baskets linked from the play-by-play, about 90% of box-score assists.</p>
@@ -380,11 +392,11 @@
 </tr>
 </tbody>
 </table>
-<h2>Turnovers</h2>
+</div></details><details class="sec" open><summary><h2>Turnovers</h2></summary><div class="sec-body">
 <p>Manresa average 13.9 turnovers per game, 15.0% of their possessions. Allen has the most per game (2.6, out on Tuesday); Bassas has the highest rate, 32.6% of his possessions.<br />
 <strong>Struggles when trapped after a P&amp;R, or the screener defense commits.</strong><br />
 Notae is also prone to turnovers.</p>
-<h2>Lineups (work in progress)</h2>
+</div></details><details class="sec" open><summary><h2>Lineups (work in progress)</h2></summary><div class="sec-body">
 <p>The most-used five (Agbo / Notae / Ongenda / Villar / Allen, +37 per 40) cannot play on Tuesday.  </p>
 <p><strong>Most used line-up without Villar and Allen (17 possessions)</strong></p>
 <p>#6 Bassas<br />
@@ -405,7 +417,7 @@ Notae is also prone to turnovers.</p>
 #13 Notae<br />
 #14 Ongenda</p>
 <p>Slower line-up in offense, set plays</p>
-<h2>Shots analysis</h2>
+</div></details><details class="sec" open><summary><h2>Shots analysis</h2></summary><div class="sec-body">
 <h3>Chibuzo Agbo</h3>
 <p><img alt="Chibuzo Agbo shot chart" src="doc_image2.png" /></p>
 <p>Very good percentages also guarded, catch and shoot primarily</p>
@@ -415,7 +427,7 @@ Notae is also prone to turnovers.</p>
 <h3>Team without Allen and Villar</h3>
 <p><img alt="Kids&amp;Us Manresa shot chart without Allen and Villar" src="doc_image4.png" /></p>
 <p>Good percentages from 3P right wing, poor on the left.</p>
-<h2>Automatic data report</h2>
+</div></details><details class="sec" open><summary><h2>Automatic data report</h2></summary><div class="sec-body">
 <p>Generated from the data by <code>notebooks/manresa_report.py</code>; it repeats some of the sections above with the full figures.</p>
 <p><em>Prepared for BC Roma. Data as of 2026-10-18: 7 games (4 Liga Endesa, 3 EuroCup). Sources: acb.com live stats, EuroLeague live API. Small sample, read as tendencies.</em></p>
 <p><strong>Availability:</strong> out of the last game (2026-10-17, Liga Endesa vs Unicaja): Timmy Allen, Rafael Villar, Lukasz Kolenda.</p>
@@ -982,7 +994,7 @@ Notae is also prone to turnovers.</p>
 </tbody>
 </table>
 <h3>Shot charts of the main scorers</h3>
-<p><img alt="shot charts" src="04_shot_charts.png" /></p>
+<p><img alt="shot charts" src="04_shot_charts.png" /></p></div></details>
 <section class="comments">
 <h2>Comments</h2>
 <p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
@@ -993,6 +1005,20 @@ Notae is also prone to turnovers.</p>
   <button type="button" id="hl-clear" hidden>Clear highlights</button>
   <button type="button" id="hl-toggle" aria-pressed="false" title="Click table cells to highlight them (shift-click: the whole row). Kept in this browser only.">&#9998; Highlighter</button>
 </div>
+<script>
+// Collapse all / Expand all above the first section of a page
+(function () {
+  var secs = [].slice.call(document.querySelectorAll("main details.sec"));
+  if (secs.length < 2) return;
+  var bar = document.createElement("p"); bar.className = "sec-tools";
+  [["Collapse all", false], ["Expand all", true]].forEach(function (b) {
+    var btn = document.createElement("button"); btn.type = "button"; btn.textContent = b[0];
+    btn.addEventListener("click", function () { secs.forEach(function (d) { d.open = b[1]; }); });
+    bar.appendChild(btn);
+  });
+  secs[0].parentNode.insertBefore(bar, secs[0]);
+})();
+</script>
 <script>
 // Live highlighter: with it on, a click on a table cell highlights it (shift-click: the row). Saved in this browser only.
 (function () {

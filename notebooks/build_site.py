@@ -116,8 +116,20 @@ def mark_highlights(text: str) -> str:
                    for p in parts)
 
 
+def sections(html_text: str) -> str:
+    """Every main heading (h2) and what follows it up to the next one becomes a <details open> section that can be closed.
+    What comes before the first h2 (title, banners, intro) stays outside."""
+    parts = re.split(r"(<h2(?: [^>]*)?>.*?</h2>)", html_text, flags=re.S)
+    if len(parts) < 3:
+        return html_text
+    out = [parts[0]]
+    for head, body in zip(parts[1::2], parts[2::2]):
+        out.append(f'<details class="sec" open><summary>{head}</summary><div class="sec-body">{body}</div></details>')
+    return "".join(out)
+
+
 def md_html(text: str) -> str:
-    return markdown.markdown(mark_highlights(text), extensions=["tables", "md_in_html", "sane_lists"])
+    return sections(markdown.markdown(mark_highlights(text), extensions=["tables", "md_in_html", "sane_lists"]))
 
 
 def copy_images(src: Path, *more: Path, dest: Path) -> list[str]:
