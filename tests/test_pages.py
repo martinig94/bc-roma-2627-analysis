@@ -53,3 +53,19 @@ def test_empty_sections_are_left_out():
     out = pages.prune_empty(md)
     assert "Key points" not in out and "Empty sub" not in out
     assert "## Real" in out and "### Full sub" in out
+
+
+def test_archive_flag_only_for_a_past_automatic_page():
+    from datetime import date
+
+    import pandas as pd
+
+    import build_site as b
+    tg = pd.DataFrame({"date": pd.Series([], dtype=str), "finished": pd.Series([], dtype=bool), "opponent": pd.Series([], dtype=str),
+                       "competition": pd.Series([], dtype=str), "round": pd.Series([], dtype=float), "home": pd.Series([], dtype=object)})
+    today = date(2026, 10, 19)
+    assert any("Archive, automatic only" in f for f in b.flags_for("2026-10-04", tg, today, "draft", "x.md", archive=True))
+    assert not b.flags_for("2026-10-04", tg, today, "reviewed", "x.md", archive=True)            # reviewed: yes removes it
+    assert not b.flags_for("2026-10-04", tg, today, "progress", "x.md", archive=True)            # the analyst worked on it
+    assert not b.flags_for("2026-10-04", tg, today, "draft", "x.md", archive=False)              # snapshots are not flagged
+    assert any("Automatic draft" in f for f in b.flags_for("2026-10-24", tg, today, "draft", "x.md", archive=True))   # upcoming: draft flag
