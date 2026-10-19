@@ -3,7 +3,7 @@
 {{ a.competition }}{% if a.round %} round {{ a.round }}{% endif %} · {{ a.date_long }}{% if a.time %}, {{ a.time }}{% endif %}{% if a.venue %} · {{ a.venue }}{% endif %}
 
 **Pre-game snapshot: only data from games played before {{ a.date_long }}, in both competitions.**
-{% if a.opponent_link %}The analysis of the opponent is [here]({{ a.opponent_link }}).{% endif %}
+{% if a.opponent_link %}The analysis of the opponent is [here]({{ a.opponent_link }}). {% endif %}[Compare this situation with another game](../../compare/?b={{ a.date }}).
 
 {% if n.summary %}> {{ n.summary }}
 

@@ -55,6 +55,12 @@
   .hl-tools button[aria-pressed="true"] { background:var(--gold); }
   .hl-tools button:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
   @media print { .hl-tools, .edit { display:none; } }
+  .pick label { margin-right:12px; }
+  .pick select { width:auto; min-width:260px; }
+  .button { display:inline-block; padding:5px 14px; border:1px solid var(--gold); border-radius:999px; background:var(--gold); color:var(--ink); text-decoration:none; font-weight:600; }
+  .button:hover { background:var(--flag); color:var(--ink); }
+  .cmp-pick select { width:auto; min-width:300px; }
+  .cmp-pick button { font:inherit; padding:3px 10px; border:1px solid #cfc7b3; border-radius:6px; background:var(--paper); cursor:pointer; }
   .muted { color:var(--muted); font-size:.9rem; }
   .comments { margin-top:3rem; }
 </style>
@@ -74,6 +80,7 @@
     
   </select>
   <a href="../#reviews">Game reviews</a>
+  <a href="../compare/">Compare</a>
   <a href="../methodology/">Methodology</a>
   <a href="../work-plan/">Work plan</a>
   
@@ -168,6 +175,8 @@ may differ slightly). An LBA table is never shown for a EuroCup game.</p>
 <li><strong>TS% vs PIR</strong>: players with at least 10 minutes per game; dot size is minutes per game; one plot with LBA games only and one with
   EuroCup games only. The grey dots are other teams' players in the same competition (in the EuroCup, only the teams present in the
   file).</li>
+<li><strong>Compare two situations</strong>: the page <em>Compare</em> puts two snapshots side by side (record and position, team numbers, roster averages) and
+  shows B minus A in brackets. The figures are the ones of the snapshots, so each side uses only the data available before its game.</li>
 <li><strong>Opponent comparison</strong>: the table puts BC Roma and the opponent side by side with the definitions above; the figures of the analysis
   (scoring sources, hot spots, key players, lineups) come from the same data cut.</li>
 <li><strong>Five-man lineups</strong>: rebuilt from the substitutions in the play-by-play; best and worst units need a minimum of minutes together

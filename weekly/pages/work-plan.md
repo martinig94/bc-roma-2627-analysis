@@ -20,6 +20,7 @@ Where the project is and what comes next. The idea: the site publishes everythin
 | Opponent analysis per game, with the comparison against BC Roma and the roster with photos | done |
 | BC Roma snapshot before every game, in both competitions | done |
 | Post-game reviews (LBA) | done |
+| Compare the situation of two games (landing page and *Compare* page) | done |
 | Flags: games before this one, automatic draft / work in progress | done |
 | EuroCup standings of the group, from the EuroLeague results | written, **waiting for the first real run** to confirm the data |
 | EuroCup headshots and rosters from the EuroLeague API | written, waiting for the first real run |
