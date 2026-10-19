@@ -4,60 +4,70 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BC Roma vs Bertram Derthona Tortona · BC Roma 2026/27 · weekly report</title>
+<link rel="icon" type="image/png" href="../../assets/logo.png">
 <style>
-  :root { --bg:#fff; --text:#1a1a2e; --muted:#5a5e73; --line:#e3e4ea; --gold:#F2C300; --card:#f6f6f9; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#14141c; --text:#ececf3; --muted:#a3a6b8; --line:#2c2d3a; --card:#1d1d28; } }
-  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, sans-serif; }
-  header { border-bottom:4px solid var(--gold); padding:14px 16px; }
-  .bar { max-width:980px; margin:0 auto; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
-  .bar a { text-decoration:none; font-weight:700; }
-  .bar .sub { color:var(--muted); font-size:.9rem; }
-  main { max-width:980px; margin:0 auto; padding:8px 16px 56px; }
+  /* Light, sober palette from the BC Roma logo: warm near-black text, the logo gold only as accent (borders, rules, tints);
+     links and small accents use a deeper gold so every text colour keeps a contrast of 5:1 or more on white. */
+  :root { color-scheme: light; --paper:#fff; --soft:#faf7ef; --tint:#f5ebcb; --flag:#fbf6e6; --ink:#1f1b14; --muted:#5e584b;
+          --line:#e7e1d3; --gold:#e8b018; --link:#7a5600; --win:#1e7b45; --loss:#b3302f; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color:var(--link); }
+  a:hover { color:var(--ink); }
+  header { border-bottom:3px solid var(--gold); padding:12px 16px; background:var(--paper); }
+  .bar { max-width:980px; margin:0 auto; display:flex; gap:10px 16px; align-items:center; flex-wrap:wrap; }
+  .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--muted); font-size:.78rem; letter-spacing:.03em; text-transform:uppercase; }
+  .brand img { height:32px; width:auto; background:none; border-radius:0; display:block; }
+  .bar > a:not(.brand) { color:var(--ink); text-decoration:none; font-weight:500; }
+  .bar > a:not(.brand):hover { color:var(--link); text-decoration:underline; }
+  main { max-width:980px; margin:0 auto; padding:12px 16px 56px; }
   img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
-  h1 { margin-bottom:.2rem; }
+  h1 { margin:1.2rem 0 .6rem; line-height:1.25; }
+  h1::after { content:""; display:block; width:56px; height:3px; background:var(--gold); margin-top:.5rem; }
   h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2.2rem; }
+  h3 { margin-top:1.6rem; }
   td img { max-width:none; width:44px; height:54px; object-fit:cover; object-position:top; border-radius:6px; display:block; }
   td img.face { display:inline-block; width:34px; height:42px; vertical-align:middle; margin-right:8px; }
   table { border-collapse:collapse; display:block; overflow-x:auto; }
-  th, td { padding:4px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
-  .mark { background:#fff2a8; color:#1a1a2e; padding:0 3px; border-radius:3px; }
-  blockquote { margin:1rem 0; padding:.2rem 1rem; border-left:4px solid var(--gold); color:var(--muted); }
+  th { background:var(--tint); color:var(--ink); border-bottom:2px solid var(--gold); }
+  th, td { padding:5px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  .mark { background:#fff2a8; color:var(--ink); padding:0 3px; border-radius:3px; }
+  blockquote { margin:1rem 0; padding:.5rem 1rem; border-left:4px solid var(--gold); background:var(--flag); color:var(--ink); border-radius:0 6px 6px 0; }
+  blockquote p { margin:.3rem 0; }
+  code { background:var(--soft); padding:0 4px; border-radius:3px; }
   details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
   .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
-  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:10px; background:var(--card); text-decoration:none; color:inherit; }
-  .card:hover { border-color:var(--gold); }
+  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:8px; background:var(--soft); text-decoration:none; color:var(--ink); }
+  .card:hover { border-color:var(--gold); background:var(--flag); color:var(--ink); }
   .card .rd { color:var(--muted); font-size:.85rem; }
-  .card .score { font-size:1.4rem; font-weight:700; }
-  .win { color:#2e9e5b; } .loss { color:#d94b4b; }
-  .latest { border-left:6px solid var(--gold); }
-  select { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
-  .nav { display:flex; justify-content:space-between; margin-top:3rem; }
+  .card .score { font-size:1.35rem; font-weight:700; }
+  .win { color:var(--win); } .loss { color:var(--loss); }
+  .latest { border-left:5px solid var(--gold); }
+  select { font:inherit; padding:5px 8px; border:1px solid #cfc7b3; border-radius:6px; background:var(--paper); color:var(--ink); width:210px; max-width:100%; }
+  select:focus-visible, a:focus-visible, summary:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
+  .doc table { display:table; width:100%; }
+  .doc th, .doc td { white-space:normal; text-align:left; vertical-align:top; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  .comments { margin-top:3rem; }
 </style>
 </head>
 <body>
 <header><div class="bar">
-  <a href="../../">BC Roma 2026/27 · weekly report</a>
-  <select aria-label="Before each game" onchange="if(this.value)location.href='../../'+this.value">
-    <option value="">Team before each game &#9662;</option>
-    <option value="snapshot/2026-10-24/">2026-10-24 · LBA R5 at Varese</option>
-    <option value="snapshot/2026-10-20/">2026-10-20 · EuroCup at Kids&Us Manresa</option>
-    <option value="snapshot/2026-10-17/">2026-10-17 · LBA R4 vs Venezia</option>
-    <option value="snapshot/2026-10-11/">2026-10-11 · LBA R3 at Maxima Roma</option>
-    <option value="snapshot/2026-10-07/">2026-10-07 · EuroCup vs Lietkabelis Panevezys</option>
-    <option value="snapshot/2026-10-04/">2026-10-04 · LBA R2 vs Tortona</option>
-    <option value="snapshot/2026-09-30/">2026-09-30 · EuroCup at Bahcesehir College Istanbul</option>
+  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27 &middot; weekly report</span></a>
+  <select aria-label="Opponents" onchange="if(this.value)location.href='../../'+this.value">
+    <option value="">Opponents &#9662;</option>
+    <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
+    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct</option>
+    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct</option>
+    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">at Maxima Roma · LBA round 3 · 11 Oct</option>
+    <option value="snapshot/2026-10-07/">vs Lietkabelis Panevezys · EuroCup · 7 Oct</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">vs Tortona · LBA round 2 · 4 Oct</option>
+    <option value="snapshot/2026-09-30/">at Bahcesehir College Istanbul · EuroCup · 30 Sep</option>
     
   </select>
-  <select aria-label="Opponent analysis" onchange="if(this.value)location.href='../../'+this.value">
-    <option value="">Opponent analysis &#9662;</option>
-    <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">Openjobmetis Varese vs BC Roma · 2026-10-24</option>
-    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">Kids&Us Manresa scouting report (Liga Endesa + EuroCup) · 2026-10-18</option>
-    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">BC Roma vs Umana Reyer Venezia · 2026-10-17</option>
-    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">Derby della Capitale — Maxima Roma vs BC Roma · 2026-10-11</option>
-    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">BC Roma vs Bertram Derthona Tortona · 2026-10-04</option>
-    
-  </select>
-  <a href="../../#reviews" style="font-weight:400">Game reviews</a>
+  <a href="../../#reviews">Game reviews</a>
+  <a href="../../methodology/">Methodology</a>
+  <a href="../../work-plan/">Work plan</a>
+  
 </div></header>
 <main>
 <h1>BC Roma vs Bertram Derthona Tortona</h1>
@@ -246,7 +256,7 @@
 <tr>
 <td>Games</td>
 <td style="text-align: right;">2 (1 LBA + 1 EuroCup)</td>
-<td style="text-align: right;">1 (1 LBA + 0 EuroCup)</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr>
 <td>Record</td>
@@ -365,7 +375,6 @@
 <th style="text-align: right;">3P% (3PA)</th>
 <th style="text-align: right;">FT% (FTA)</th>
 <th style="text-align: right;">PPG LBA</th>
-<th style="text-align: right;">PPG EC</th>
 </tr>
 </thead>
 <tbody>
@@ -384,7 +393,6 @@
 <td style="text-align: right;">0 (1.0)</td>
 <td style="text-align: right;">100 (2.0)</td>
 <td style="text-align: right;">14.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_7048.jpg" alt="Hubb" width="44"></td>
@@ -401,7 +409,6 @@
 <td style="text-align: right;">40 (5.0)</td>
 <td style="text-align: right;">100 (3.0)</td>
 <td style="text-align: right;">13.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_9351.jpg" alt="Maddox" width="44"></td>
@@ -418,7 +425,6 @@
 <td style="text-align: right;">67 (6.0)</td>
 <td style="text-align: right;">33 (3.0)</td>
 <td style="text-align: right;">23.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_9038.jpg" alt="Olejniczak" width="44"></td>
@@ -435,7 +441,6 @@
 <td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">75 (4.0)</td>
 <td style="text-align: right;">11.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_9006.jpg" alt="Jallow" width="44"></td>
@@ -452,7 +457,6 @@
 <td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">100 (1.0)</td>
 <td style="text-align: right;">5.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_75.jpg" alt="Alibegovic" width="44"></td>
@@ -469,7 +473,6 @@
 <td style="text-align: right;">0 (1.0)</td>
 <td style="text-align: right;">67 (3.0)</td>
 <td style="text-align: right;">10.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_656.jpg" alt="Bortolani" width="44"></td>
@@ -486,7 +489,6 @@
 <td style="text-align: right;">50 (4.0)</td>
 <td style="text-align: right;">50 (2.0)</td>
 <td style="text-align: right;">13.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_4268.jpg" alt="Pecchia" width="44"></td>
@@ -503,7 +505,6 @@
 <td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">2.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_9009.jpg" alt="Durham" width="44"></td>
@@ -520,7 +521,6 @@
 <td style="text-align: right;">100 (1.0)</td>
 <td style="text-align: right;">100 (1.0)</td>
 <td style="text-align: right;">10.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 <tr>
 <td><img src="photo_2313.jpg" alt="Gazzotti" width="44"></td>
@@ -537,7 +537,6 @@
 <td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">– (0.0)</td>
 <td style="text-align: right;">0.0</td>
-<td style="text-align: right;">–</td>
 </tr>
 </tbody>
 </table>
@@ -557,6 +556,11 @@
 <h2>Lineups</h2>
 <p><img alt="lineups" src="lineups_BC_Roma.png" /></p>
 <p><img alt="lineups" src="lineups_Bertram_Derthona_Tortona.png" /></p>
+<section class="comments">
+<h2>Comments</h2>
+<p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
+<script src="https://utteranc.es/client.js" repo="martinig94/bc-roma-2627-analysis" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>
+</section>
 </main>
 </body>
 </html>

@@ -11,6 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
+  "version": 2,
   "n_before": 19,
   "opponent_analysis": null,
   "record": "1-1",
@@ -28,7 +29,6 @@
     "win": true,
     "date": "2026-10-04"
   },
-  "missing": [],
   "playing_time": [
     {
       "name": "Mezzanotte",
@@ -410,8 +410,14 @@
     "others": 10,
     "games": 1
   },
+  "standings_table": {
+    "kind": "EuroCup",
+    "available": false,
+    "position": null,
+    "teams": null
+  },
   "md": {
-    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Virtus Bologna | 4 | 2-0 | +30 | WW |\n| 2 | Napoli | 4 | 2-0 | +25 | WW |\n| 3 | Udine | 4 | 2-0 | +25 | WW |\n| 4 | Treviso | 4 | 2-0 | +18 | WW |\n| 5 | Venezia | 4 | 2-0 | +17 | WW |\n| 6 | **BC Roma** | 2 | 1-1 | +23 | LW |\n| 7 | Tortona | 2 | 1-1 | -30 | WL |\n| 8 | Verona | 2 | 1-1 | -5 | LW |\n| 9 | Trento | 2 | 1-1 | +2 | WL |\n| 10 | Varese | 2 | 1-1 | -13 | LW |\n| 11 | Milano | 2 | 1-1 | +1 | WL |\n| 12 | Trieste | 0 | 0-2 | -9 | LL |\n| 13 | Reggio Emilia | 0 | 0-2 | -11 | LL |\n| 14 | Cantù | 0 | 0-2 | -13 | LL |\n| 15 | Maxima Roma | 0 | 0-2 | -28 | LL |\n| 16 | Scafati | 0 | 0-2 | -32 | LL |",
+    "standings": "",
     "last_results": "- 09-26 · round 1: **L** 94-109 at Treviso\n- 09-30 · EuroCup: **L** 78-91 at Bahcesehir College Istanbul\n- 10-04 · round 2: **W** 108-70 vs Tortona"
   }
 }
