@@ -53,9 +53,18 @@ Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = 
 {%- endmacro %}
 
 {% macro assists(a, files, author, kind) -%}
-![assist matrix](assists.png)
+{% if a.assist_top %}![assist matrix](assists.png)
 
-Passer (rows) to scorer (columns), assisted baskets linked in the LBA play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}
+Passer (rows) to scorer (columns), assisted baskets linked in the LBA play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% else %}*No assist matrix yet: too few assisted baskets linked in the LBA play-by-play before this game.*{% endif %}
+{%- endmacro %}
+
+{% macro analysis_turnovers(a, files, author, kind) -%}
+{% if a.turnovers %}| Player | GP | MIN | TO | TO/min | Most TO in a game |
+|---|---:|---:|---:|---:|---|
+{% for r in a.turnovers %}| **{{ r.name }}** | {{ r.gp }} | {{ r.min }} | {{ r.tov }} | {{ '%.3f'|format(r.tov_min) if r.tov_min is not none else '–' }} | {% if r.top %}=={{ r.worst_n }} {{ r.worst_game }}=={% else %}{{ r.worst_n }} {{ r.worst_game }}{% endif %} |
+{% endfor %}
+TO = turnovers in the games before this one (league and EuroCup where the team plays it); TO/min = turnovers per minute played. The last column is the game in which the player lost the most balls; the two worst single-game totals of the whole roster are highlighted.
+{% else %}*No turnover data yet.*{% endif %}
 {%- endmacro %}
 
 {% macro zones(a, files, author, kind) -%}

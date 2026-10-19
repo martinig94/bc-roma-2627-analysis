@@ -206,7 +206,8 @@ def fig_timeline(box, A, B, out):
                      f"{g.pts.mean():.0f} for / {g.opp_pts.mean():.0f} against per game", **TITLE_KW)
         ax.legend(fontsize=8, loc="upper center", ncol=2, bbox_to_anchor=(0.5, 1.0) if SOCIAL else (0.5, 1.0)); style_axes(ax, "y")
         ax.set_ylim(0, max(115, g[["pts", "opp_pts"]].max().max() + 12) + (14 if SOCIAL else 0))
-    sup(fig, "Results so far — LBA and EuroCup")
+    comps = {c for t in (A, B) for c in game_list(box, t).competition}
+    sup(fig, "Results so far — " + " and ".join(n for c, n in (("LBA", "LBA"), ("EC", "EuroCup")) if c in comps))
     save(fig, out / "01_results_timeline.png"); plt.close(fig)
 
 
