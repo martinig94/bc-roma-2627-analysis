@@ -372,24 +372,21 @@ def build_info_pages() -> list[dict]:
     return entries
 
 
-def build_nav(snaps: list[dict], opps: list[dict]) -> list[dict]:
-    """The dropdown: one entry per game, newest first, opening the opponent analysis (which links to the BC Roma snapshot of
-    the game) or, when there is no analysis, the snapshot itself."""
-    rows, used = [], set()
-    old = {o["slug"] for o in opps if o.get("legacy")}
-    auto_only = {o["slug"] for o in opps if o.get("archive")}
-    for e in snaps:
-        where = "at" if e["home"] is False else "vs"
-        comp = e["competition"] + (f" round {e['round']}" if e["round"] else "")
-        url = f"opponent/{e['opponent_slug']}/" if e["opponent_slug"] else f"snapshot/{e['slug']}/"
-        used.add(e["opponent_slug"])
-        rows.append({"date": e["date"], "url": url, "label": f"{where} {e['opponent']} · {comp} · {day_label(e['date'])}"
-                                                             + (" · old format" if e["opponent_slug"] in old else " · automatic only" if e["opponent_slug"] in auto_only else "")})
-    for o in opps:                                   # analyses of games without a snapshot
-        if o["slug"] not in used:
-            rows.append({"date": o["game_date"], "url": f"opponent/{o['slug']}/",
-                         "label": f"{o['title']} · {day_label(o['game_date'])}" + (" · old format" if o.get("legacy") else " · automatic only" if o.get("archive") else "")})
-    return sorted(rows, key=lambda r: r["date"], reverse=True)
+def build_nav(snaps: list[dict], opps: list[dict]) -> dict:
+    """The two dropdowns, newest first: the opponent analyses (a game without analysis is not in this one) and the snapshots
+    (every game, whether or not it has an analysis)."""
+    by_slug = {e["opponent_slug"]: e for e in snaps if e["opponent_slug"]}
+    opponents = []
+    for o in opps:
+        e = by_slug.get(o["slug"])
+        label = (f"{'at' if e['home'] is False else 'vs'} {e['opponent']} · {e['competition']}" + (f" round {e['round']}" if e["round"] else "")
+                 + f" · {day_label(e['date'])}") if e else f"{o['title']} · {day_label(o['game_date'])}"
+        opponents.append({"date": o["game_date"], "url": f"opponent/{o['slug']}/",
+                          "label": label + (" · old format" if o.get("legacy") else " · automatic only" if o.get("archive") else "")})
+    snapshots = [{"date": e["date"], "url": f"snapshot/{e['slug']}/", "label": e["data"]["label"] + (" · automatic only" if e.get("archive") else "")}
+                 for e in snaps]
+    key = lambda r: r["date"]
+    return {"games": sorted(opponents, key=key, reverse=True), "snapshots": sorted(snapshots, key=key, reverse=True)}
 
 
 def build_reviews() -> list[dict]:
@@ -511,7 +508,7 @@ def main() -> None:
     if not reviews:
         shutil.rmtree(DOCS / "review", ignore_errors=True)       # reviews switched off: nothing of them is published
     pages = build_info_pages()
-    nav = {"games": build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"]} for p in pages]}
+    nav = {**build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"]} for p in pages]}
     if len(snaps) > 1:
         nav["pages"].insert(0, {"url": "compare/", "label": "Compare"})
     build_compare(snaps, nav)
