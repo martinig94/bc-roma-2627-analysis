@@ -55,23 +55,27 @@ def pct(m, a) -> str:
 
 
 # ── roster ──────────────────────────────────────────────────────────────────────
-def roster_file(data: Path, raw_players: pd.DataFrame) -> pd.DataFrame:
-    """data/roster.csv (player_id, surname, position, height_cm): hand-maintained, new players are appended blank."""
+def roster_file(data: Path, raw_players: pd.DataFrame, team: str) -> pd.DataFrame:
+    """data/roster.csv (player_id, surname, team, position, height_cm): hand-maintained, new players are appended blank."""
     path = data / "roster.csv"
-    cur = pd.read_csv(path) if path.exists() else pd.DataFrame(columns=["player_id", "surname", "position", "height_cm"])
+    cols = ["player_id", "surname", "team", "position", "height_cm"]
+    cur = pd.read_csv(path) if path.exists() else pd.DataFrame(columns=cols)
+    if "team" not in cur:                       # older file: those players are all the configured team's
+        cur.insert(2, "team", TEAM)
     new = raw_players[~raw_players.player_id.isin(cur.player_id)][["player_id", "player_surname"]].drop_duplicates("player_id")
     if len(new):
-        add = pd.DataFrame({"player_id": new.player_id.astype(int), "surname": new.player_surname.str.title(), "position": "", "height_cm": ""})
+        add = pd.DataFrame({"player_id": new.player_id.astype(int), "surname": new.player_surname.str.title(), "team": team,
+                            "position": "", "height_cm": ""})
         cur = pd.concat([cur, add], ignore_index=True)
-        cur.to_csv(path, index=False)
-        print(f"{path}: added {len(add)} player(s), fill in position (PG/SG/SF/PF/C) and height_cm")
+        print(f"{path}: added {len(add)} {team} player(s), fill in position (PG/SG/SF/PF/C) and height_cm")
+    cur[cols].to_csv(path, index=False)
     return cur
 
 
-def roster_table(box: pd.DataFrame, data: Path) -> list[dict]:
-    p = players(box)
+def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM) -> list[dict]:
+    p = players(box, team)
     lba_ids = p[p.competition == "LBA"].drop_duplicates("player_surname").set_index("player_surname").player_id
-    rost = roster_file(data, p[p.competition == "LBA"]).set_index("player_id")
+    rost = roster_file(data, p[p.competition == "LBA"], team).set_index("player_id")
     photos = {int(f.stem) for f in (data / "photos").glob("*.jpg")}
     rows = []
     for sur, g in p.groupby("player_surname"):
@@ -235,9 +239,10 @@ def fig_ts_pir(box: pd.DataFrame, comp: str, out: Path, min_mpg: float = 10, tea
 
 
 # ── team profile (LBA, to date) ─────────────────────────────────────────────────
-def team_profile(box: pd.DataFrame, team: str) -> dict:
-    """Season-to-date team numbers from LBA games (box = rows of load_box*, all teams): record, pace, ratings, four factors."""
-    tot = box[(box.competition == "LBA") & (box.row_type == "total")]
+def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)) -> dict:
+    """Season-to-date team numbers (box = rows of load_box*, all teams): record, pace, ratings, four factors.
+    comps: competitions to include, "LBA" and/or "EC" (EuroCup games are only in the data for some teams)."""
+    tot = box[box.competition.isin(comps) & (box.row_type == "total")]
     mine = tot[tot.team == team].set_index("game_id")
     if mine.empty:
         return {}
@@ -247,10 +252,11 @@ def team_profile(box: pd.DataFrame, team: str) -> dict:
     pm, po = poss(mine), poss(opp)
     fga, ofga = mine.fg2a + mine.fg3a, opp.fg2a + opp.fg3a
     wins = int((mine.pts > opp.pts).sum())
-    minutes = mine.sec.sum() / 300
+    minutes = np.where(mine.competition == "EC", 40, mine.sec / 300).sum()   # EuroCup totals carry 2400 s, not 5 x 2400
     r = lambda x, d=1: round(float(x), d)
     return {
-        "GP": n, "Record": f"{wins}-{n - wins}",
+        "Games": n if len(comps) == 1 else f"{n} ({(mine.competition == 'LBA').sum()} LBA + {(mine.competition == 'EC').sum()} EuroCup)",
+        "Record": f"{wins}-{n - wins}",
         "Points per game": r(mine.pts.mean()), "Points allowed per game": r(opp.pts.mean()),
         "Offensive rating": r(100 * mine.pts.sum() / pm.sum()), "Defensive rating": r(100 * opp.pts.sum() / po.sum()),
         "Net rating": r(100 * mine.pts.sum() / pm.sum() - 100 * opp.pts.sum() / po.sum()),

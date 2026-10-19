@@ -9,6 +9,7 @@ notebooks/build_site.py to publish it. Samples are tiny early in the season: rea
 from __future__ import annotations
 
 import argparse
+import shutil
 from datetime import date
 from pathlib import Path
 
@@ -20,7 +21,7 @@ import lba_style
 from lba_style import (BLUE, GREEN, RED, SUP_KW, TEXT, TEXT2, draw_half_court, save_fig,
                        style_axes)
 from lineups_report import fig_lineups
-from manresa_fetch import player_key
+from manresa_fetch import photo_name, player_key
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "manresa"
@@ -499,10 +500,15 @@ def write_readme(out: Path, title_date: str, games: pd.DataFrame, table: pd.Data
     L += ["", "## Top 12 by total minutes", "", "![top players](01_top_players.png)", "",
           "Height in cm (EuroLeague roster), position from ACB role / EuroLeague roster. "
           "PPG split: Liga Endesa / EuroCup.", ""]
+    photos = DATA / "photos"
     for r in table.itertuples():
+        img = ""
+        if (photos / f"{photo_name(r.player)}.jpg").exists():      # copied next to the README, picked up by build_site.py
+            shutil.copy(photos / f"{photo_name(r.player)}.jpg", out / f"photo_{photo_name(r.player)}.jpg")
+            img = f'<img src="photo_{photo_name(r.player)}.jpg" alt="{r.player}" width="44" align="left"> '
         ht = f"{r.height:.0f} cm" if pd.notna(r.height) else "height n/a"
         three = f"{r.fg3_pct:.0f}%" if r.fg3a else "-"
-        L.append(f"- **{r.player}** ({r.role}, {ht}, {int(r.gp)} GP): {r.mpg:.1f} min, **{r.pts_pg:.1f} pts**, "
+        L.append(f"- {img}**{r.player}** ({r.role}, {ht}, {int(r.gp)} GP): {r.mpg:.1f} min, **{r.pts_pg:.1f} pts**, "
                  f"{r.reb_pg:.1f} reb, {r.ast_pg:.1f} ast, FG {r.fg_pct:.0f}% / 3P {three} / "
                  f"FT {r.ft_pct:.0f}%; PPG {r.ppg_acb:.1f} ACB / {r.ppg_eur:.1f} EC. "
                  f"{tag(pd.Series(r._asdict())).capitalize()}.")
