@@ -28,13 +28,24 @@
   .card .score { font-size:1.4rem; font-weight:700; }
   .win { color:#2e9e5b; } .loss { color:#d94b4b; }
   .latest { border-left:6px solid var(--gold); }
+  select { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--text); max-width:100%; }
   .nav { display:flex; justify-content:space-between; margin-top:3rem; }
 </style>
 </head>
 <body>
 <header><div class="bar">
   <a href="{{ root }}">{{ site_title }}</a>
-  <span class="sub">{{ league }} &middot; <a href="{{ root }}prematch.html" style="font-weight:400">pre-match analyses</a></span>
+  <select aria-label="{{ nav.snapshot_label|default('Before each game') }}" onchange="if(this.value)location.href='{{ root }}'+this.value">
+    <option value="">Team before each game &#9662;</option>
+    {% for o in nav.snapshot %}<option value="{{ o.url }}">{{ o.label }}</option>
+    {% endfor %}
+  </select>
+  <select aria-label="Opponent analysis" onchange="if(this.value)location.href='{{ root }}'+this.value">
+    <option value="">Opponent analysis &#9662;</option>
+    {% for o in nav.opponent %}<option value="{{ o.url }}">{{ o.label }}</option>
+    {% endfor %}
+  </select>
+  <a href="{{ root }}#reviews" style="font-weight:400">Game reviews</a>
 </div></header>
 <main>
 {{ body }}

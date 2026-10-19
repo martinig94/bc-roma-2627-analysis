@@ -1,15 +1,13 @@
-"""Weekly report of one team (weekly/config.json): the automatic part (plots + tables) for one round.
+"""Post-game review of one team (weekly/config.json): the automatic part (plots + tables) for one round.
 
 Normally run through `python notebooks/weekly.py`, which finds the new rounds by itself. Directly:
 
     python notebooks/weekly_report.py --round 4            # the team's game of round 4 (regenerates it)
     python notebooks/weekly_report.py --round 4 --team "Maxima Roma"
 
-Writes reports/weekly/round-04/:
-  standings.png, margin.png, players.png, season.png   figures
-  auto.json                                            numbers and markdown snippets used by the page template
-and creates weekly/round-04/notes.md from weekly/template/notes.md if it does not exist yet (the hand-written part).
-`build_site.py` merges the two through weekly/template/page.md.j2 into docs/weekly/round-04/.
+Writes reports/review/round-04/ (figures, auto.json) and creates weekly/review/round-04/notes.md from
+weekly/template/notes_review.md if it does not exist yet (the hand-written part).
+`build_site.py` merges the two through weekly/template/review.md.j2 into docs/review/round-04/.
 """
 from __future__ import annotations
 
@@ -25,7 +23,6 @@ import pandas as pd
 import lba_style
 import standings as st
 import weekly_sections as ws
-import player_photos
 import weekly_config
 from lba_style import GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, style_axes, team_color
 
@@ -204,7 +201,7 @@ def finished_rounds(games: pd.DataFrame, team: str) -> list[int]:
 
 
 def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
-    """Write reports/weekly/round-NN/ (figures + auto.json) and, once, weekly/round-NN/notes.md. Returns the output folder."""
+    """Post-game review: write reports/review/round-NN/ (figures + auto.json) and, once, weekly/review/round-NN/notes.md. Returns the output folder."""
     lba_style.AUTHOR = CFG["author"] or lba_style.AUTHOR
     games = pd.read_csv(data / "games.csv")
     box = pd.read_csv(data / "box_scores.csv")
@@ -214,7 +211,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     opp = g.away_team if home else g.home_team
     pf, pa = (g.home_score, g.away_score) if home else (g.away_score, g.home_score)
 
-    out = ROOT / "reports" / "weekly" / f"round-{rnd:02d}"
+    out = ROOT / "reports" / "review" / f"round-{rnd:02d}"
     out.mkdir(parents=True, exist_ok=True)
     lba_style.STAMP_NOTE = f"through round {rnd}"
 
@@ -225,25 +222,9 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     fig_players(box, g, team, out)
     fig_season(games, team, rnd, out)
 
-    # extra sections: roster, playing time, assists, zones, TS% vs PIR
     date = g.match_datetime[:10]
-    player_photos.main_quiet(team)
     xbox = ws.load_box(data, rnd, date, CFG["eurocup_file"])
-    lba_games = [int(x) for x in games[(games["round"] <= rnd) & (games.game_status.astype(str) == "2") &
-                                       ((games.home_team == team) | (games.away_team == team))].game_id]
-    pairs = ws.assist_pairs(pbp, lba_games, team)
-    box_ast = int(box[(box.game_id.isin(lba_games)) & (box.team == team) & (box.row_type == "total")].ast.sum())
-    extra = {
-        "roster": ws.roster_table(xbox, data),
-        "playing_time": ws.playing_time_flags(xbox, str(g.game_id), date),
-        "assist_top": ws.fig_assists(pairs, box_ast, out, team),
-        "zone_share": ws.fig_zones(pbp, lba_games, int(g.game_id), out, team),
-        "ts_pir_lba": ws.fig_ts_pir(xbox, "LBA", out, team=team),
-        "ts_pir_ec": ws.fig_ts_pir(xbox, "EC", out, team=team) if ((xbox.competition == "EC") & (xbox.team == team)).any() else None,
-    }
-    photos = {r["player_id"] for r in extra["roster"] if r["photo"]}
-    for pid in photos:
-        shutil.copy(data / "photos" / f"{pid}.jpg", out / f"photo_{pid}.jpg")
+    extra = {"playing_time": ws.playing_time_flags(xbox, str(g.game_id), date)}
 
     q = quarter_scores(g, pbp)
     qs = [(h, aw) if home else (aw, h) for h, aw in q]
@@ -269,10 +250,10 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     }
     (out / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    notes_dir = ROOT / "weekly" / f"round-{rnd:02d}"
+    notes_dir = ROOT / "weekly" / "review" / f"round-{rnd:02d}"
     if not (notes_dir / "notes.md").exists():
         notes_dir.mkdir(parents=True, exist_ok=True)
-        text = (ROOT / "weekly" / "template" / "notes.md").read_text(encoding="utf-8").replace("{{round}}", str(rnd))
+        text = (ROOT / "weekly" / "template" / "notes_review.md").read_text(encoding="utf-8").replace("{{round}}", str(rnd))
         (notes_dir / "notes.md").write_text(text, encoding="utf-8")
         print(f"created {notes_dir / 'notes.md'} - write your text there")
     print(f"round {rnd}: {short(team)} {pf}-{pa} {short(opp)}  ->  {out}")
