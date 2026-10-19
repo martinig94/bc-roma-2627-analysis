@@ -86,6 +86,10 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   Work plan). Saving it commits to `master` and the workflow *Rebuild site after a text edit* (`.github/workflows/site.yml`, runs only on
   changes under `weekly/`) rebuilds `docs/` in about a minute. People without write access get "Propose changes": GitHub forks the
   repository and opens a pull request that you merge. The repository and branch are `repo` and `branch` in `weekly/config.json`.
+* **Landing page sections**: *Next games* (opponent analyses), *BC Roma: situation, roster, form* (a dropdown of the pre-game snapshots, the
+  upcoming ones as cards, and a picker to compare two games) and *Game reviews*. The *Compare* page (`docs/compare/`, also in the header) is
+  one static page: the numbers of every snapshot are embedded in it and the two situations are drawn side by side in the browser
+  (`?a=<date>&b=<date>` in the address selects the games; each snapshot links to it with itself as B).
 * **Highlighting table cells**: every page with a table has a floating **✎ Highlighter** button. With it on, a click on a cell
   highlights it (click again to remove; shift-click does the whole row), **Clear highlights** removes them all. It is for working live on
   a page (meetings, review sessions) and is kept in the browser of whoever clicks, not in the repository. For a highlight that stays
