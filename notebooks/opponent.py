@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NB = ROOT / "notebooks"
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 2   # bump when the generated data changes shape: weekly.py regenerates older analyses
+VERSION = 3   # bump when the generated data changes shape: weekly.py regenerates older analyses
 
 
 def folder_name(home: str, away: str, date: str) -> str:
