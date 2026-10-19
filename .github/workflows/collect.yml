@@ -1,4 +1,4 @@
-name: Collect LBA 2026/27 data
+name: Update data and site (LBA, EuroCup)
 
 on:
   schedule:
