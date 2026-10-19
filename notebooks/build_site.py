@@ -242,7 +242,7 @@ def build_snapshots(opponents: list[dict], tg: pd.DataFrame, today: date) -> lis
         short = f"{'at' if a['home'] is False else 'vs'} {a['opponent']}"
         title = n.get("title") or f"{a['team']} {short}"
         copy_images(src, notes_dir, dest=DOCS / "snapshot" / src.name)
-        entries.append({"slug": src.name, "title": title, "date": a["date"], "html": md_html(page_md), "state": state,
+        entries.append({"slug": src.name, "title": title, "date": a["date"], "html": md_html(page_md), "state": state, "data": compare_data(a),
                         "edit": f"weekly/snapshot/{src.name}/notes.md",
                         "opponent": a["opponent"], "competition": a["competition"], "round": a["round"], "home": a["home"],
                         "opponent_slug": a.get("opponent_analysis") if a.get("opponent_analysis") in have_opp else None})
@@ -261,6 +261,91 @@ def build_info_pages() -> list[dict]:
             title = re.search(r"^# (.+)$", text, re.M).group(1)
             entries.append({"slug": name, "title": title, "html": f'<div class="doc">{md_html(text)}</div>', "url": f"{name}/", "edit": f"weekly/pages/{name}.md", "label": title})
     return entries
+
+
+def compare_data(a: dict) -> dict:
+    """What the compare page needs from one snapshot (numbers only, small)."""
+    where = "at" if a["home"] is False else "vs"
+    comp = a["competition"] + (f" round {a['round']}" if a["round"] else "")
+    keep = ("player_id", "photo", "name", "pos", "height", "gp", "min", "pts", "reb", "ast", "pir", "fg", "fg3", "ft")
+    return {"key": a["date"], "label": f"{a['date']} · {where} {a['opponent']} · {comp}", "date": a["date"], "game": f"{where} {a['opponent']} ({comp})",
+            "record": a["record"], "position": a["position"], "points": a["points"], "record_ec": a.get("record_ec"), "form": a["form"],
+            "profile": a.get("profile") or {}, "roster": [{k: r.get(k) for k in keep} for r in a["roster"]]}
+
+
+COMPARE_JS = r"""
+(function () {
+  var D = JSON.parse(document.getElementById("snapdata").textContent);
+  var by = {}; D.forEach(function (d) { by[d.key] = d; });
+  var A = document.getElementById("cmpA"), B = document.getElementById("cmpB"), out = document.getElementById("cmpOut");
+  D.forEach(function (d) { [A, B].forEach(function (sel) { sel.add(new Option(d.label, d.key)); }); });
+  var q = new URLSearchParams(location.search);
+  A.value = by[q.get("a")] ? q.get("a") : (D[D.length - 2] || D[0]).key;
+  B.value = by[q.get("b")] ? q.get("b") : D[D.length - 1].key;
+  var num = function (x) { return typeof x === "number" && isFinite(x); };
+  var delta = function (a, b) { if (!num(a) || !num(b)) return ""; var d = Math.round((b - a) * 10) / 10;
+                                return ' <span class="muted">(' + (d > 0 ? "+" : d < 0 ? "−" : "±") + Math.abs(d) + ")</span>"; };
+  var ord = function (n) { var m = n % 100, r = n % 10; return n + (m >= 11 && m <= 13 ? "th" : r === 1 ? "st" : r === 2 ? "nd" : r === 3 ? "rd" : "th"); };
+  var fmt = function (x) { return x === null || x === undefined || x === "" ? "–" : x; };
+  var pair = function (a, b) { return fmt(a) + " → " + fmt(b) + delta(a, b); };
+  var esc = function (t) { return String(t).replace(/[&<>]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;"}[c]; }); };
+  function render() {
+    var a = by[A.value], b = by[B.value];
+    history.replaceState(null, "", "?a=" + a.key + "&b=" + b.key);
+    var h = '<h2>The two situations</h2><table><thead><tr><th></th><th>A</th><th>B</th></tr></thead><tbody>' +
+      row("Before the game", esc(a.game), esc(b.game)) + row("Date", a.date, b.date) +
+      row("LBA record", a.record, b.record) + row("LBA position", ord(a.position), ord(b.position)) +
+      row("LBA points", a.points, b.points) + row("EuroCup record", fmt(a.record_ec), fmt(b.record_ec)) +
+      row("Last five games", a.form, b.form) + '</tbody></table>' +
+      '<p><a href="../snapshot/' + a.key + '/">Open snapshot A</a> · <a href="../snapshot/' + b.key + '/">Open snapshot B</a></p>';
+    // team numbers
+    var comps = [["LBA", "LBA"], ["EuroCup", "EuroCup"]].filter(function (c) { return (a.profile[c[0]] && Object.keys(a.profile[c[0]]).length) || (b.profile[c[0]] && Object.keys(b.profile[c[0]]).length); });
+    var keys = []; comps.forEach(function (c) { [a, b].forEach(function (s) { Object.keys(s.profile[c[0]] || {}).forEach(function (k) { if (keys.indexOf(k) < 0) keys.push(k); }); }); });
+    h += '<h2>Team numbers</h2><table><thead><tr><th></th>' + comps.map(function (c) { return "<th>" + c[1] + ": A → B</th>"; }).join("") + "</tr></thead><tbody>";
+    keys.forEach(function (k) { h += "<tr><td>" + esc(k) + "</td>" + comps.map(function (c) {
+      var x = (a.profile[c[0]] || {})[k], y = (b.profile[c[0]] || {})[k]; return "<td>" + pair(x, y) + "</td>"; }).join("") + "</tr>"; });
+    h += '</tbody></table><p class="muted">Ratings are points per 100 possessions. The change in brackets is B minus A.</p>';
+    // roster
+    var names = [], seen = {};
+    b.roster.concat(a.roster).forEach(function (r) { if (!seen[r.name]) { seen[r.name] = 1; names.push(r.name); } });
+    var get = function (s, n) { return s.roster.filter(function (r) { return r.name === n; })[0]; };
+    var cols = [["gp", "GP"], ["min", "MIN"], ["pts", "PTS"], ["reb", "REB"], ["ast", "AST"], ["pir", "PIR"]];
+    h += '<h2>Roster, per-game averages</h2><table><thead><tr><th></th><th>Player</th>' + cols.map(function (c) { return "<th>" + c[1] + "</th>"; }).join("") + "</tr></thead><tbody>";
+    names.forEach(function (n) {
+      var x = get(a, n), y = get(b, n), p = y && y.photo ? [b.key, y.player_id] : x && x.photo ? [a.key, x.player_id] : null;
+      h += "<tr><td>" + (p ? '<img class="face" src="../snapshot/' + p[0] + "/photo_" + p[1] + '.jpg" alt="">' : "") + "</td><td><strong>" + esc(n) + "</strong></td>" +
+        cols.map(function (c) { return "<td>" + pair(x ? x[c[0]] : null, y ? y[c[0]] : null) + "</td>"; }).join("") + "</tr>";
+    });
+    h += "</tbody></table>";
+    out.innerHTML = h;
+  }
+  function row(l, x, y) { return "<tr><td>" + l + "</td><td>" + x + "</td><td>" + y + "</td></tr>"; }
+  A.addEventListener("change", render); B.addEventListener("change", render);
+  document.getElementById("cmpSwap").addEventListener("click", function () { var t = A.value; A.value = B.value; B.value = t; render(); });
+  render();
+})();
+"""
+
+
+def build_compare(snaps: list[dict], nav: dict) -> dict | None:
+    """compare/index.html: two selects (any two snapshots) and the situations side by side, drawn in the browser from embedded data."""
+    shutil.rmtree(DOCS / "compare", ignore_errors=True)
+    if len(snaps) < 2:
+        return None
+    data = sorted((e["data"] for e in snaps), key=lambda d: d["date"])
+    blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+    body = ('<div class="doc"><h1>Compare two situations</h1>'
+            "<p>Pick two games: the page puts the situation of the team before each of them side by side (record and position, team numbers, "
+            "roster averages), with the change from A to B. Every figure comes from the pre-game snapshots, so each side uses only the "
+            "data available before its game.</p>"
+            '<p class="cmp-pick"><label>A <select id="cmpA"></select></label> <button type="button" id="cmpSwap" title="Swap A and B">&#8646;</button> '
+            '<label>B <select id="cmpB"></select></label></p>'
+            '<div id="cmpOut"></div></div>'
+            f'<script type="application/json" id="snapdata">{blob}</script><script>{COMPARE_JS}</script>')
+    dest = DOCS / "compare"
+    dest.mkdir(parents=True, exist_ok=True)
+    (dest / "index.html").write_text(shell(f"Compare two situations · {CFG['site_title']}", body, "../", nav), encoding="utf-8")
+    return {"url": "compare/", "label": "Compare"}
 
 
 def build_nav(snaps: list[dict], opps: list[dict]) -> list[dict]:
@@ -329,7 +414,7 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
     parts = [f"<h1>{CFG['site_title']}</h1>",
              f"<p>The season of {CFG['team']} ({CFG['league']} and EuroCup). The dropdown at the top lists the opponents, game by game: "
              "each page is the analysis of the opponent, with a link to the situation of the team before that game; both use only data from "
-             "before the game. Below, the next games and the review of every game played. "
+             "before the game. Below, the next games, the situation of the team before each game (with a comparison of two games) and the review of every game played. "
              "<a href=\"methodology/\">Methodology</a> explains how the numbers are made and <a href=\"work-plan/\">Work plan</a> what is done and what comes next; "
              "every page has a comment box at the bottom.</p>"]
     nxt = next_games(snaps, opps, today)
@@ -338,13 +423,38 @@ def build_landing(nav: dict, snaps: list[dict], opps: list[dict], reviews: list[
         for i, n in enumerate(nxt):
             where = "at" if n["home"] is False else "vs"
             when = f"{long_date(n['date'])}{', ' + n['time'] if n['time'] else ''} · {n['competition']}{' round ' + str(n['round']) if n['round'] else ''}"
-            main_href = f"opponent/{n['analysis']}/" if n["analysis"] else (f"snapshot/{n['snapshot']}/" if n["snapshot"] else "#")
-            state = n["analysis_state"] or n["snapshot_state"]
-            parts.append(card(main_href, when, f"{CFG['team']} {where} {n['opponent']}", badge(state) or "opponent analysis", i == 0))
-            if n["analysis"] and n["snapshot"]:
-                parts.append(card(f"snapshot/{n['snapshot']}/", f"{CFG['team']} before the game", "Situation, roster, form",
-                                  badge(n["snapshot_state"]) or "pre-game snapshot"))
+            href = f"opponent/{n['analysis']}/" if n["analysis"] else (f"snapshot/{n['snapshot']}/" if n["snapshot"] else "#")
+            parts.append(card(href, when, f"{CFG['team']} {where} {n['opponent']}",
+                              badge(n["analysis_state"] or n["snapshot_state"]) or "opponent analysis", i == 0))
         parts.append("</div>")
+    if snaps:
+        opts = "".join(f'<option value="snapshot/{e["slug"]}/">{e["data"]["label"]}</option>' for e in snaps)
+        optk = "".join(f'<option value="{e["slug"]}">{e["data"]["label"]}</option>' for e in snaps)
+        upcoming = [e for e in snaps if e["date"] >= f"{today:%Y-%m-%d}"]
+        parts.append(f'<h2 id="situation">{CFG["team"]}: situation, roster, form</h2>'
+                     "<p>The situation of the team before each game: record and standings, form, team numbers, roster with photos, assists, shot zones "
+                     "and efficiency, using only the data available before the game.</p>"
+                     f'<p class="pick"><label>Situation before <select id="snapPick"><option value="">choose a game &#9662;</option>{opts}</select></label></p>')
+        if upcoming:
+            parts.append('<div class="cards">' + "".join(
+                card(f"snapshot/{e['slug']}/", f"Before the game · {long_date(e['date'])}",
+                     f"{CFG['team']} {'at' if e['home'] is False else 'vs'} {e['opponent']}", badge(e["state"]) or "pre-game snapshot")
+                for e in sorted(upcoming, key=lambda e: e["date"])) + "</div>")
+        if len(snaps) > 1:
+            parts.append('<h3>Compare two situations</h3><p class="pick"><label>A <select id="cmpA">' + optk + '</select></label> '
+                         '<label>B <select id="cmpB">' + optk + '</select></label> '
+                         '<a class="button" id="cmpGo" href="compare/">Compare</a></p>')
+        parts.append("""<script>
+(function () {
+  var pick = document.getElementById("snapPick");
+  if (pick) pick.addEventListener("change", function () { if (pick.value) location.href = pick.value; });
+  var A = document.getElementById("cmpA"), B = document.getElementById("cmpB"), go = document.getElementById("cmpGo");
+  if (!A) return;
+  if (A.options.length > 1) { A.selectedIndex = 1; B.selectedIndex = 0; }   // options are newest first: A = the game before the latest, B = the latest
+  var upd = function () { go.href = "compare/?a=" + A.value + "&b=" + B.value; };
+  A.addEventListener("change", upd); B.addEventListener("change", upd); upd();
+})();
+</script>""")
     if reviews:
         parts.append("<h2 id=\"reviews\">Game reviews</h2><div class=\"cards\">")
         for i, w in enumerate(reviews):
@@ -370,6 +480,9 @@ def main() -> None:
     reviews = build_reviews()
     pages = build_info_pages()
     nav = {"games": build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"]} for p in pages]}
+    if len(snaps) > 1:
+        nav["pages"].insert(0, {"url": "compare/", "label": "Compare"})
+    build_compare(snaps, nav)
     for p in pages:
         (DOCS / p["slug"]).mkdir(parents=True, exist_ok=True)
         (DOCS / p["slug"] / "index.html").write_text(shell(f"{p['title']} · {CFG['site_title']}", p["html"], "../", nav, comments=True, edit=p.get("edit")), encoding="utf-8")
