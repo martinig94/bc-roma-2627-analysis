@@ -2,10 +2,10 @@ name: Collect LBA 2026/27 data
 
 on:
   schedule:
-    # Every Monday 06:10 UTC (08:10 Rome) — after the weekend round.
-    # Midweek rounds (turni infrasettimanali) get picked up the following Monday,
-    # or run it by hand from the Actions tab.
-    - cron: "10 6 * * 1"
+    # Every morning 06:40 UTC (08:40 Rome): picks up whatever finished the day before, weekend and midweek rounds
+    # alike. A morning without a new game changes nothing and commits nothing (the collector only fetches games it
+    # has not stored yet). GitHub can start scheduled runs late; run it by hand from the Actions tab when in a hurry.
+    - cron: "40 6 * * *"
   workflow_dispatch:
 
 permissions:
