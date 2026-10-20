@@ -1,0 +1,18 @@
+player,play_type,shot_type,fga,fgm
+Hale,P&R Ball Handler,"Dribble jumper, 3PT",18,8
+Hale,P&R Ball Handler,To basket,11,3
+Hale,P&R Ball Handler,"Dribble jumper, mid-range",3,2
+Hale,P&R Ball Handler,"Dribble jumper, short (<17 ft)",2,0
+Hale,Isolation,"Dribble jumper, 3PT",7,4
+Hale,Isolation,To basket,3,0
+Hale,Isolation,"Dribble jumper, short (<17 ft)",2,1
+Duke,P&R Ball Handler,To basket,9,5
+Duke,P&R Ball Handler,"Dribble jumper, 3PT",3,0
+Duke,P&R Ball Handler,"Dribble jumper, mid-range",2,0
+Duke,P&R Ball Handler,"Dribble jumper, short (<17 ft)",1,0
+Roby,Spot Up,"Open, 3PT",7,1
+Roby,Spot Up,"Guarded, 3PT",3,2
+Roby,Spot Up,"Dribble jumper, 3PT",2,0
+Roby,Spot Up,To basket,2,0
+Roby,Spot Up,"Dribble jumper, mid-range",1,0
+Roby,Spot Up,"Guarded, mid-range",1,1

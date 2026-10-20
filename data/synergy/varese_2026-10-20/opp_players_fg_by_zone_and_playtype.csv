@@ -1,0 +1,113 @@
+player,dimension,category,fgm,fga
+Hale,shot_location,Paint,7,24
+Hale,shot_location,Mid-range,4,8
+Hale,shot_location,Corner 3,0,3
+Hale,shot_location,Wing 3,10,21
+Hale,shot_location,Top 3,5,15
+Hale,play_type,Spot Up,1,9
+Hale,play_type,Transition,3,7
+Hale,play_type,P&R Ball Handler,13,34
+Hale,play_type,P&R Roll Man,0,1
+Hale,play_type,Cut,2,3
+Hale,play_type,Offensive Rebounds (Put Backs),0,0
+Hale,play_type,Isolation,5,12
+Hale,play_type,Off Screen,2,4
+Hale,play_type,Other,0,1
+Duke,shot_location,Paint,12,22
+Duke,shot_location,Mid-range,0,4
+Duke,shot_location,Corner 3,1,6
+Duke,shot_location,Wing 3,0,3
+Duke,shot_location,Top 3,1,2
+Duke,play_type,Spot Up,3,7
+Duke,play_type,Transition,2,7
+Duke,play_type,P&R Ball Handler,5,15
+Duke,play_type,P&R Roll Man,0,0
+Duke,play_type,Cut,0,1
+Duke,play_type,Offensive Rebounds (Put Backs),1,2
+Duke,play_type,Isolation,0,1
+Duke,play_type,Off Screen,0,0
+Duke,play_type,Other,3,4
+Alviti,shot_location,Paint,6,8
+Alviti,shot_location,Mid-range,0,0
+Alviti,shot_location,Corner 3,2,5
+Alviti,shot_location,Wing 3,2,5
+Alviti,shot_location,Top 3,2,2
+Alviti,play_type,Spot Up,3,6
+Alviti,play_type,Transition,1,2
+Alviti,play_type,P&R Ball Handler,1,1
+Alviti,play_type,P&R Roll Man,0,0
+Alviti,play_type,Cut,0,1
+Alviti,play_type,Offensive Rebounds (Put Backs),3,3
+Alviti,play_type,Isolation,0,0
+Alviti,play_type,Off Screen,3,5
+Alviti,play_type,Other,1,2
+Renfro,shot_location,Paint,14,21
+Renfro,shot_location,Mid-range,0,0
+Renfro,shot_location,Corner 3,0,0
+Renfro,shot_location,Wing 3,0,0
+Renfro,shot_location,Top 3,0,0
+Renfro,play_type,Spot Up,0,0
+Renfro,play_type,Transition,0,2
+Renfro,play_type,P&R Ball Handler,0,0
+Renfro,play_type,P&R Roll Man,4,5
+Renfro,play_type,Cut,8,10
+Renfro,play_type,Offensive Rebounds (Put Backs),2,4
+Renfro,play_type,Isolation,0,0
+Renfro,play_type,Off Screen,0,0
+Renfro,play_type,Other,0,0
+Nikolic,shot_location,Paint,13,16
+Nikolic,shot_location,Mid-range,0,1
+Nikolic,shot_location,Corner 3,0,2
+Nikolic,shot_location,Wing 3,0,0
+Nikolic,shot_location,Top 3,0,1
+Nikolic,play_type,Spot Up,0,2
+Nikolic,play_type,Transition,4,5
+Nikolic,play_type,P&R Ball Handler,0,0
+Nikolic,play_type,P&R Roll Man,3,3
+Nikolic,play_type,Cut,5,7
+Nikolic,play_type,Offensive Rebounds (Put Backs),1,2
+Nikolic,play_type,Isolation,0,0
+Nikolic,play_type,Off Screen,0,0
+Nikolic,play_type,Other,0,1
+Kamagate,shot_location,Paint,11,15
+Kamagate,shot_location,Mid-range,0,0
+Kamagate,shot_location,Corner 3,0,0
+Kamagate,shot_location,Wing 3,0,0
+Kamagate,shot_location,Top 3,0,0
+Kamagate,play_type,Spot Up,1,1
+Kamagate,play_type,Transition,1,2
+Kamagate,play_type,P&R Ball Handler,0,0
+Kamagate,play_type,P&R Roll Man,1,2
+Kamagate,play_type,Cut,4,4
+Kamagate,play_type,Offensive Rebounds (Put Backs),3,5
+Kamagate,play_type,Isolation,0,0
+Kamagate,play_type,Off Screen,0,0
+Kamagate,play_type,Other,1,1
+Librizzi,shot_location,Paint,1,3
+Librizzi,shot_location,Mid-range,0,0
+Librizzi,shot_location,Corner 3,0,3
+Librizzi,shot_location,Wing 3,4,8
+Librizzi,shot_location,Top 3,0,3
+Librizzi,play_type,Spot Up,2,9
+Librizzi,play_type,Transition,1,1
+Librizzi,play_type,P&R Ball Handler,2,7
+Librizzi,play_type,P&R Roll Man,0,0
+Librizzi,play_type,Cut,0,0
+Librizzi,play_type,Offensive Rebounds (Put Backs),0,0
+Librizzi,play_type,Isolation,0,0
+Librizzi,play_type,Off Screen,0,0
+Librizzi,play_type,Other,0,0
+Roby,shot_location,Paint,5,9
+Roby,shot_location,Mid-range,1,2
+Roby,shot_location,Corner 3,2,8
+Roby,shot_location,Wing 3,0,7
+Roby,shot_location,Top 3,1,4
+Roby,play_type,Spot Up,4,16
+Roby,play_type,Transition,2,6
+Roby,play_type,P&R Ball Handler,0,0
+Roby,play_type,P&R Roll Man,1,3
+Roby,play_type,Cut,1,3
+Roby,play_type,Offensive Rebounds (Put Backs),1,1
+Roby,play_type,Isolation,0,0
+Roby,play_type,Off Screen,0,0
+Roby,play_type,Other,0,1
