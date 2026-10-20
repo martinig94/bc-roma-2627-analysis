@@ -1,6 +1,6 @@
 club,player,height_cm,position,photo_url
-BAH,Luka Mitrovic,206,Center,https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png
-BAH,Yigit Acar,196,Forward,https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png
+BAH,Luka Mitrovic,206,Center,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjHGF4tl/e5d19e96-8eca-4e19-9852-5f08865cf3a7.png
+BAH,Yigit Acar,196,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/52db3c4a-6afc-4cd8-b1b5-a2430b84e0b3.png
 BAH,David Dileo,203,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/7de8364b-dbb3-4bfb-a46b-164ae2eb803a.png
 BAH,Kenan Sipahi,197,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/d10c6123-9100-48fc-a310-735854b42cb3.png
 BAH,Trevion Williams,208,Center,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/843e1a55-485e-4dc6-ac68-b7e506b0a195.png
@@ -58,3 +58,21 @@ LKB,Veljko Ilic,208,Center,https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91
 LKB,Zygimantas Simonis,194,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOO1/3dabedbf-a434-4b07-93cf-3cc2843a4c35.png
 LKB,Alexander Schumacher,190,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOO1/a0d8b307-97d0-49f3-a216-7964d4f112a6.png
 LKB,Keondre Kennedy,198,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOO1/e963103c-5215-48db-b7e3-f91bf685ba08.png
+MAN,Gerard Fernandez,185,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png
+MAN,Gustav Drejer Erichsen,205,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png
+MAN,Michael Enabulele,203,Center,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png
+MAN,Guillem Naspler,197,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png
+MAN,Lucas Sanchez,192,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png
+MAN,Yordan Minchev,205,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/efb72d38-0a47-4c86-a84f-99c792ad6c9a.png
+MAN,Rafa Villar,191,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/e4d41089-6f39-49fe-976d-3a613d66a6d2.png
+MAN,Pierre Oriola,208,Center,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/ac123249-b2d8-46a7-a93c-30d8e8d944bc.png
+MAN,Nick Ongenda,211,Center,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/c6d8959a-cb85-473b-aef0-48283fb7f358.png
+MAN,Chibuzo Agbo,200,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/df5b0290-ce63-409e-ac7c-7caa9dad5469.png
+MAN,Pablo Tamba,200,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/751f6afd-cbe6-4e61-ba01-b4c927bafb20.png
+MAN,Ferran Bassas,181,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/0643ad4c-706e-4223-86e9-d2b6944f955c.png
+MAN,Lucas Beaufort,193,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/fa8a8c38-5ce6-4029-98ec-b8729a7c2024.png
+MAN,Eric Vila,209,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/6141b16f-e3be-4c1a-9aff-aa89e3ca6023.png
+MAN,Hugo Benitez,192,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/d38d124e-fb04-4cac-aef9-89b2333049e1.png
+MAN,Lukasz Kolenda,195,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/38733a29-dd4c-4a96-916e-1c4c1abd689e.png
+MAN,Jd Notae,187,Guard,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/54b576d7-8a4a-4573-bd26-f2f9d9d010ab.png
+MAN,Timmy Allen,198,Forward,https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS4/fa5eab3e-447f-4eee-9a79-bd7f0273ea6b.png
