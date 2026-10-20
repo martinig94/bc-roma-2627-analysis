@@ -127,6 +127,20 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
             "ppg_lba": round(lba.pts.mean(), 1) if len(lba) else None, "ppg_ec": round(ec.pts.mean(), 1) if len(ec) else None,
             "sec_total": int(g.sec.sum()),
         })
+    played = {r["player_id"] for r in rows}
+    for pid, bio in bios.items():       # on the roster but no game yet: listed with 0 GP
+        if pid in played:
+            continue
+        rr = rost.loc[pid] if pid in rost.index else None
+        pos = "" if rr is None or pd.isna(rr.position) else str(rr.position)
+        rows.append({
+            "player_id": pid, "photo": pid in photos, "name": str(bio["surname"]).title(),
+            "pos": pos or (bio["role"] if isinstance(bio.get("role"), str) else ""), "height": _num(bio.get("height_cm")), "gp": 0,
+            "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
+            "country": bio["country"] if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
+            "birth_date": bio["birth_date"] if isinstance(bio.get("birth_date"), str) else "",
+            "min": "–", "pts": "–", "reb": "–", "ast": "–", "pir": "–", "fg2": "–", "fg3": "–", "ft": "–",
+            "ppg_lba": None, "ppg_ec": None, "sec_total": 0})
     rows.sort(key=lambda r: (POS_ORDER.get(r["pos"], 9), -r["sec_total"]))
     return rows
 

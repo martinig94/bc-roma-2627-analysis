@@ -1,232 +1,232 @@
-year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,country,height_cm,weight_kg,start_date,end_date
-2026,1765,Acqua S.Bernardo Cantù,9012,Savion,Flagg,1,Ala,1999-05-26,Alvin,USA,201,102,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,9342,Hassani,Gravett,3,Guardia,1996-07-16,Viia Rica,USA,188,85,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,6619,Leonardo,Okeke,8,Centro,2003-07-16,Monza,ITA,213,108,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,3880,Riccardo,Moraschini,9,Guardia/Ala,1991-01-08,Cento,ITA,194,99,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,4217,Matteo,Parravicini,10,Playmaker,2001-07-04,Varese,ITA,187,83,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,9073,Simone,Ventura,11,Guardia/Ala,2009-06-06,Desio,ITA,196,,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,9365,Isaiah,Miles,15,Ala,1994-06-09,Baltimora,USA,203,100,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,9343,Chad,Brown,22,Centro,1996-09-06,Deltona,USA,206,111,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,2494,Andrejs,Grazulis,24,Ala,1993-07-21,Koknese,LVA,202,101,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,3855,Davide,Moretti,25,Play/Guardia,1998-03-25,Bologna,ITA,191,81,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,5660,Liam,Udom,27,Guardia/Ala,2000-06-27,Bagno a Ripoli,ITA,199,85,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,6133,Osvaldas,Olisevicius,31,Ala,1993-01-10,,LTU,200,90,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,9109,Federico,Bagordo,36,-,2009-10-08,Trieste,ITA,,,2026-07-01,2027-06-30
-2026,1765,Acqua S.Bernardo Cantù,1205,Semaj,Christon,,Playmaker,1992-11-01,Cincinnati,USA,191,86,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,6189,Joseph,Mobio,3,Ala,1998-05-26,Tivoli,ITA,199,94,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,6653,Skylar,Spencer,6,Centro,1994-07-11,Inglewood,USA,205,107,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,9358,Zan,Sisko,11,Playmaker,1997-06-29,Lubiana,SVN,191,84,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,9057,Alessandro,Pavan,15,-,2008-01-02,Treviso,ITA,201,106,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,9196,Mak,Bjedov,18,-,2008-07-26,,ITA,,,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,821,Lorenzo,Bucarelli,21,Guardia,1998-03-06,Firenze,ITA,198,93,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,425,Eimantas,Bendzius,22,Ala,1990-04-23,Klaipeda,LTU,207,102,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,9302,Raequan,Battle,24,Ala,2001-02-19,Marysville,USA,196,85,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,9021,Nick,McGlynn,26,Centro,1996-10-06,Madison,USA,206,106,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,7539,Mattia,Grassi,30,Ala,2007-10-05,Pavia,ITA,200,89,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,9030,Andrea,Calzavara,31,Playmaker,2001-12-16,Gallarate,ITA,195,86,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,6562,Matteo,Cavallero,34,Ala,2003-05-12,Milano,ITA,203,95,2026-07-01,2027-06-30
-2026,1771,APU Old Wild West Udine,7391,Denzel,Valentine,45,Guardia,1993-11-16,Lansing,USA,198,97,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,854,Jason,Burnell,0,Ala,1997-08-15,DeLand,USA,201,100,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,9031,R.J.,Cole,2,Playmaker,1999-08-24,Union City,USA,185,84,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,9378,Moses,Wright,5,Ala/Centro,1998-12-23,Raleigh,USA,207,106,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,1775,Ousmane,Diop,6,Centro,2000-02-19,Rufisque,ITA,204,100,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,5568,Stefano,Tonut,7,Guardia,1993-11-07,Cantù,ITA,194,100,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,7405,Leandro,Bolmaro,10,Play/Guardia,2000-09-11,Las Varillas,ITA,198,91,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,5499,Darius,Thompson,13,Playmaker,1995-05-04,Murfreesboro,ITA,193,89,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,7541,Baptiste,Chauveau,15,-,2008-02-25,,FRA,,,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,4692,Giampaolo,Ricci,17,Ala,1991-09-27,Roma,ITA,202,102,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,2103,Diego,Flaccadori,21,Play/Guardia,1996-04-05,Seriate,ITA,195,80,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,6156,Devon,Hall,22,Guardia,1995-08-07,Virginia Beach,USA,195,97,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,9008,Marko,Guduric,23,Guardia/Ala,1995-05-08,Priboj,SRB,198,96,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,9388,Garrison,Mathews,24,Guardia,1996-10-24,Franklin,USA,196,98,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,9344,Alec,Peters,25,Ala,1995-04-13,Washington,USA,206,107,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,9007,Devin,Booker,31,Centro,1991-02-28,Whitmire,USA,206,98,2026-07-01,2027-06-30
-2026,1751,Armani Olimpia Milano,45,Nicola,Akele,45,Ala,1995-11-07,Treviso,ITA,203,98,2026-07-01,2027-06-30
-2026,1761,BC Roma,6138,Niccolò,Mannion,1,Playmaker,2001-03-14,Siena,ITA,190,86,2026-07-01,2027-06-30
-2026,1761,BC Roma,9385,Paul,Watson,3,Guardia,1994-12-30,Phoenix,USA,198,95,2026-07-01,2027-06-30
-2026,1761,BC Roma,6258,Corey,Davis,5,Playmaker,1997-06-04,Lafayette,USA,185,86,2026-07-01,2027-06-30
-2026,1761,BC Roma,9379,Giovanni,Emejuru,7,Centro,2002-12-21,San Severino Marche,ITA,208,121,2026-07-01,2027-06-30
-2026,1761,BC Roma,6188,Riccardo,Tavernelli,8,Play/Guardia,1991-03-16,Lissone,ITA,188,82,2026-07-01,2027-06-30
-2026,1761,BC Roma,9381,Trentyn,Flowers,9,Ala,2005-03-08,Baltimora,USA,206,84,2026-07-01,2027-06-30
-2026,1761,BC Roma,9384,Erik,Stevenson,10,Play/Guardia,1999-04-28,Lacey,USA,193,93,2026-07-01,2027-06-30
-2026,1761,BC Roma,9380,Gerald,Ayayi,11,Playmaker,2001-08-24,Saint-Étienne,FRA,190,88,2026-07-01,2027-06-30
-2026,1761,BC Roma,5369,Arturs,Strautins,12,Ala,1998-10-23,Jurmala,ITA,198,100,2026-07-01,2027-06-30
-2026,1761,BC Roma,9386,Giannis,Odzebe,13,Ala,2008-11-23,,COD,196,86,2026-07-01,2027-06-30
-2026,1761,BC Roma,9382,Marko,Simonovic,19,Centro,1999-10-15,Kolasin,MNE,213,100,2026-07-01,2027-06-30
-2026,1761,BC Roma,9436,Kelly,Olynyk,22,Centro,1991-04-19,Toronto,CAN,213,109,2026-07-01,2027-06-30
-2026,1761,BC Roma,3710,Andrea,Mezzanotte,24,Ala,1998-04-08,Ponte San Pietro,ITA,207,98,2026-07-01,2027-06-30
-2026,1761,BC Roma,9383,Mike,Iuzzolino,33,Guardia,2002-01-01,Pittsburgh,USA,185,81,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,7048,Prentiss,Hubb,3,Play/Guardia,1999-03-19,Upper Marlboro,USA,190,80,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,7431,Justin,Gorham,4,Ala,1998-08-06,Columbia,USA,201,102,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,4268,Andrea,Pecchia,6,Ala,1997-11-16,Segrate,ITA,197,90,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,75,Amar,Alibegovic,7,Ala,1995-03-31,Corvalis,ITA,206,109,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,9121,Gabriele,Furfaro,8,-,2010-04-13,Savona,ITA,,,2027-07-10,2027-06-30
-2026,1752,Bertram Derthona Tortona,7537,Edoardo,Di Meo,9,Guardia,2008-05-12,Cuneo,ITA,190,89,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,656,Giordano,Bortolani,12,Guardia,2000-12-02,Sant'Agata di Militello,ITA,194,85,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,9038,Dominik,Olejniczak,17,Centro,1996-07-01,Torun,POL,213,118,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,9351,Dante,Maddox,21,Guardia,2002-02-15,Chicago,USA,188,91,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,2313,Giulio,Gazzotti,24,Centro,1991-09-23,Bologna,ITA,202,104,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,9006,Karim,Jallow,35,Ala,1997-04-13,Monaco,DEU,198,90,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,9009,Aljami,Durham,42,Playmaker,1998-09-30,Liburn,USA,193,97,2026-07-01,2027-06-30
-2026,1752,Bertram Derthona Tortona,1875,Paul,Eboua,00,Ala/Centro,2000-02-15,Yaoundè,ITA,203,97,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,9330,Darius,Brown,0,Playmaker,1999-07-28,Pasadena,USA,188,88,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,9329,Charles,Brown,4,Ala,1997-02-02,Philadelphia,USA,198,86,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,439,Alessandro,Bertini,5,Guardia/Ala,2002-12-26,Brescia,ITA,194,93,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,7279,Cheickh,Niang,7,Ala,2008-09-16,Lecco,ITA,196,94,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,9328,Quincy,Olivari,8,Guardia,2001-05-27,Atlanta,USA,190,91,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,7674,Cosimo,Flauto,9,-,2009-01-01,Firenze,ITA,,,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,2148,Toto,Forray,10,Playmaker,1986-03-20,Buenos Aires,ITA,187,90,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,7119,Federico,Cattapan,11,-,2008-05-27,Camposampiero,ITA,,,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,7599,Antonio,Barra,12,-,2008-06-04,Torino,ITA,,,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,7600,Giulio,Vergnaghi,12,-,2008-04-08,Cuneo,ITA,,,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,9442,Talel,Fezzani,12,-,2009-08-26,Rovereto,ITA,,,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,7449,Selom,Mawugbe,21,Centro,1998-07-20,Los Angeles,USA,207,105,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,9327,Isaiah,Bigelow,24,Ala,2000-01-05,Greensboro,USA,201,95,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,378,Jordan,Bayehe,26,Centro,1999-10-16,Yaoundè,ITA,204,100,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,9431,Mansour,Bayo,29,-,2009-02-08,,GMB,,,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,9170,Josè Alfred,Medina Bouza,30,-,2007-05-01,,CUB,,,2026-07-01,2027-06-30
-2026,1763,Dolomiti Energia Trentino,7452,Patrick,Hassan,68,Play/Guardia,2007-01-20,Roma,ITA,185,82,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,3200,Alessandro,Lever,4,Ala/Centro,1998-12-04,Bolzano,ITA,208,107,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,9443,Vincenzo,Brancaccio,5,-,2009-05-10,Napoli,ITA,,,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,2770,Antonio,Iannuzzi,7,Centro,1991-04-21,Avellino,ITA,205,103,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,7030,Charlie Edward,Moore,8,Play/Guardia,1998-02-03,Chicago,USA,180,82,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,6436,Francesco,Spinelli,9,-,2005-09-29,Napoli,ITA,,,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,1142,Marco,Ceron,11,Guardia,1992-06-16,Mirano,ITA,196,82,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,2293,Garrett,Nevels,12,Play/Guardia,1992-11-26,Los Angeles,USA,188,,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,9347,Mezie,Offurum,13,Ala,2000-05-21,Rockville,USA,203,104,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,7319,Rodney,McGruder,17,Guardia,1991-05-21,Landover,USA,193,93,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,9348,Ze'Rik,Onyema,21,Centro,2001-10-31,San Antonio,USA,206,107,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,9345,Ithiel,Horton,24,Play/Guardia,2000-06-26,Roselle,USA,196,91,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,3526,Bruno,Mascolo,33,Playmaker,1996-08-04,Castellamare di Stabia,ITA,186,85,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,9346,Brandon,Johnson,88,Ala/Centro,2002-01-15,Raleigh,USA,203,95,2026-07-01,2027-06-30
-2026,1768,Longobardi Scafati Basket,9429,Lorenzo,Toro,,-,2009-02-18,Salerno,ITA,,,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,536,Miro,Bilan,2,Centro,1989-07-21,Sibenik,HRV,213,122,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,9374,Aaron,Holiday,3,Playmaker,1996-09-30,Louisiana,USA,183,84,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,9391,Hunter,Tyson,4,Ala,2000-06-13,Monroe,USA,203,,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,76,Mirza,Alibegovic,5,Guardia,1992-09-25,Corvallis,ITA,195,95,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,9409,Francesco,Carnevale,8,-,2007-05-11,Castel di Sangro,ITA,,,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,3185,Brynton,Lemar,11,Guardia,1995-01-23,San Diego,USA,193,88,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,5764,Giovanni,Veronesi,16,Guardia/Ala,1998-03-21,Brescia,ITA,196,,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,9375,Xavier,Moon,17,Guardia,1995-01-02,Goodwater,USA,183,75,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,7222,Andrea,Bresciani,18,-,2008-01-04,Siena,ITA,,,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,625,Federico,Bonacini,23,Guardia,1999-01-23,Sassuolo,ITA,190,83,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,5913,Carl,Wheatle,24,Ala,1998-03-24,Londra,ITA,200,88,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,934,Gora,Camara,29,Centro,2001-04-12,,ITA,214,114,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,9377,Matt,Ryan,32,Ala,1997-02-11,White Plains,USA,201,98,2026-07-01,2027-06-30
-2026,1762,Maxima Roma,774,John,Brown,00,Ala/Centro,1992-01-28,Jacksonville,USA,203,,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,5299,Marco,Spissu,0,Playmaker,1995-02-05,Sassari,ITA,185,80,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,9355,Zac,Seljaas,1,Ala,1997-07-11,Utah,USA,200,100,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,9356,Jeff,Dowtin,3,Playmaker,1997-05-10,Upper Marlboro,USA,191,80,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,7153,Emanuel,Esposito,4,-,2008-02-27,Castel Volturno,ITA,,,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,1965,Leonardo,Faggian,10,Guardia/Ala,2004-02-06,Treviso,ITA,195,82,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,6142,John,Petrucelli,11,Guardia/Ala,1992-10-27,Hicksville,ITA,193,86,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,7097,Assane,Sankare,12,Ala,2007-04-10,Senegal,ITA,204,100,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,9357,Jack,White,14,Ala,1997-08-05,Traraigon,AUS,200,101,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,6605,Markel,Brown,22,Guardia,1992-01-29,Alexandria,USA,191,86,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,9026,Andrej,Jakimovski,23,Ala,2001-03-18,Kriva Palanka,ITA,201,99,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,5433,Kaleb,Tarczewski,25,Centro,1993-02-26,Claremont,USA,212,111,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,6186,Guglielmo,Caruso,30,Centro,1999-07-03,Napoli,ITA,208,105,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,5594,Leonardo,Totè,35,Ala/Centro,1997-07-08,Negrar,ITA,212,107,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,9032,Jahmi'us,Ramsey,37,Guardia,2001-06-09,Arlington,USA,191,87,2026-07-01,2027-06-30
-2026,1772,Napoli Basketball,6153,Scott,Ulaneo,,Centro,1998-06-27,Roma,ITA,208,102,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,969,Alessandro,Cappelletti,0,Playmaker,1995-10-22,Assisi,ITA,186,82,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,9331,Chico,Carter,2,Guardia,2000-11-03,Columbia,USA,191,87,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,9041,Brekkott,Chapman,3,Ala,1996-04-07,Roy,USA,206,97,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,4879,DeWayne,Russell,4,Playmaker,1994-02-10,Peoria,USA,180,70,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,9014,Ed,Croswell,7,Centro,1999-09-06,Philadelphia,USA,203,109,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,7566,Alessandro,Manfredotti,8,Guardia,2008-12-18,Reggio Emilia,ITA,192,92,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,7606,Alessandro,Vettori,10,Guardia,2008-03-16,Treviso,ITA,188,90,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,3714,Federico,Miaschi,11,Playmaker,2000-04-26,Genova,ITA,200,90,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,9042,Ike,Anigbogu,13,Centro,1998-10-16,San Diego,NGA,206,,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,9332,Gregorio,Allinei,19,Guardia/Ala,2004-04-21,Firenze,ITA,194,90,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,7607,Antonio,Iaquinta,24,-,2008-06-27,Merano,ITA,,,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,1189,Matteo,Chillo,26,Ala,1993-06-15,Bologna,ITA,203,104,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,6191,JP,Macura,55,Guardia/Ala,1995-06-05,Lakeville,USA,196,93,2026-07-01,2027-06-30
-2026,1764,Nutribullet Treviso Basket,9333,Valentine,Chery,97,Centro,1997-09-24,Saint-Priest-en-Jarez,FRA,201,95,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,97,Davide,Alviti,2,Ala,1996-11-05,Alatri,ITA,200,92,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,9337,David,Duke,3,Guardia,1999-10-13,Providence,USA,193,93,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,6556,Mauro,Villa,5,Guardia/Ala,2004-07-07,,ARG,194,96,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,9336,William,McDowell-White,7,Playmaker,1998-04-13,Brisbane,AUS,196,89,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,1617,Amedeo,Della Valle,8,Guardia,1993-04-11,Alba,ITA,194,90,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,4034,Stefan,Nikolic,11,Ala,1997-05-29,Belgrado,ITA,203,100,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,9334,Hunter,Hale,12,Guardia,1997-06-25,Kalamazoo,USA,191,84,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,3207,Matteo,Librizzi,13,Playmaker,2002-04-06,Varese,ITA,180,70,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,7428,Nate,Renfro,15,Centro,1996-12-11,Tucson,USA,203,93,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,7014,Ismael,Kamagate,17,Centro,2001-01-17,Parigi,FRA,211,100,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,7626,Robert,Kangur,19,Guardia,2009-04-16,,EST,,,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,9335,Isaiah,Roby,22,Ala,1998-02-03,Dixon,USA,203,104,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,3155,Maximilian,Ladurner,34,Centro,2001-12-06,Merano,ITA,207,104,2026-07-01,2027-06-30
-2026,1766,Openjobmetis Varese,2790,Iris,Ikangi,35,Ala,1994-02-21,Voghera,ITA,200,88,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,6604,Colbey,Ross,4,Playmaker,1998-10-22,Aurora,USA,185,84,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,7614,Mattia,Cossutta,5,-,2007-04-20,Trieste,ITA,,,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,9005,Abramo,Canka,7,Guardia/Ala,2002-03-18,Genova,ITA,198,90,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,1592,Lodovico,Deangeli,8,Guardia/Ala,2000-05-19,Trieste,ITA,205,90,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,6993,Langston,Galloway,9,Guardia,1991-12-09,Baton Rouge,USA,188,91,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,4890,Michele,Ruzzier,10,Playmaker,1993-02-09,Trieste,ITA,183,80,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,7616,Emanuele,Martucci,11,-,2007-08-03,Trieste,ITA,,,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,949,Francesco,Candussi,13,Centro,1994-02-23,Palmanova,ITA,211,109,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,7617,Lorenzo,Bregant,16,-,2008-09-24,Trieste,ITA,,,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,7420,Luka,Brajkovic,17,Centro,1999-06-26,Feldkirch,AUT,208,113,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,9390,Lajae,Jones,25,Guardia,2004-05-21,Neptune Beach,USA,201,100,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,7007,Sean,McDermott,30,Ala,1996-11-03,Anderson,USA,198,88,2026-07-01,2027-06-30
-2026,1767,Pallacanestro Trieste,7478,Davide,Paiano,,Ala,2005-05-26,Trieste,ITA,199,,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9350,Matteo,Oliveri,0,Guardia,2007-05-17,Borgomanero,ITA,191,90,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,7411,Federico,Poser,3,Centro,1999-08-17,Mareno di Piave,ITA,203,104,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,6616,C.J.,Massinburg,5,Guardia,1997-04-14,Charlotte,USA,192,92,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9349,Mike,Tobey,10,Centro,1994-10-10,Monroe,SVN,213,115,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,6486,Andrea,Loro,11,Ala,2003-06-30,Borgomanero,ITA,202,95,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9341,Andrew,Andrews,12,Playmaker,1993-05-25,Porland,USA,188,91,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9407,Matteo,Zumerle,12,-,2008-04-14,Verona,ITA,,,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,106,Lorenzo,Ambrosin,14,Guardia,1997-10-07,Motta di Livenza,ITA,195,90,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9123,Malick,Mane El Hadji Maodo,15,Centro,2007-12-31,,SEN,211,97,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,7412,Federico,Zampini,18,Playmaker,1999-06-27,Perugia,ITA,191,90,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9339,Izaiah,Brockington,21,Ala,1999-07-12,Towson,USA,195,90,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9408,Filippo,Pantano,21,-,2008-01-15,San Bonifacio,ITA,,,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9340,RJ,Melendez,22,Ala,2002-12-03,Arecibo,,210,95,2026-07-01,2027-06-30
-2026,1769,Tezenis Verona,9338,Jermaine,Samuels,00,Ala,1998-11-13,Franklin,USA,198,104,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,6499,Octavio,Maretto,1,Guardia,2004-04-07,Buenos Aires,ITA,186,84,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,1670,Giovanni,De Nicolao,5,Playmaker,1996-06-10,,ITA,185,85,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,954,Leonardo,Candi,7,Play/Guardia,1997-03-30,Bologna,ITA,186,87,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,6648,Ky,Bowman,8,Play/Guardia,1997-06-16,Havelock,USA,188,86,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,9359,Sir'Jabari,Rice,10,Guardia,1998-12-28,Houston,USA,198,88,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,9360,Enoch,Boakye,13,Centro,2003-03-24,Toronto,CAN,213,115,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,2852,Giga,Janelidze,14,Ala,1995-04-03,,ITA,201,96,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,9362,Louis,Olinde,19,Ala,1998-03-19,Amburgo,DEU,203,94,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,4214,Jordan,Parks,22,Ala,1994-04-06,Queens,USA,198,102,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,9363,Glynn,Watson,30,Playmaker,1997-03-03,Chicago,USA,185,85,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,2534,Erick,Green,32,Play/Guardia,1992-05-09,Inglewood,USA,191,83,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,7079,Kyle,Wiltjer,33,Ala,1992-10-20,Portland,CAN,204,106,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,7166,Gabriele,Turconi,40,-,2008-06-29,Cittiglio,ITA,,,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,9250,Federico,Fasolo,40,-,2008-07-22,Vicenza,ITA,,,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,6994,Sasha,Grant,44,Ala,2002-02-15,Cagliari,ITA,198,101,2026-07-01,2027-06-30
-2026,1753,Umana Reyer Venezia,5481,Amedeo,Tessitori,00,Centro,1994-10-07,Pisa,ITA,208,113,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,314,Jaylen,Barford,0,Guardia,1996-01-23,Jackson,USA,191,92,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,9352,Rob,Edwards,2,Guardia,1997-01-20,Detroit,USA,196,94,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,9139,JT,Thor,4,Ala,2002-08-26,Omaha,USA,208,92,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,6640,Riccardo,Rossato,6,Play/Guardia,1996-09-18,Venezia,ITA,190,85,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,6309,Tomas,Woldetensae,7,Ala,1998-04-30,Bologna,ITA,196,91,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,5823,Riccardo,Visconti,9,Guardia,1998-10-08,Torino,ITA,197,88,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,7195,Luca,Manfredotti,11,Ala,2008-02-10,Castelnovo Monti,ITA,198,88,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,5663,Lorenzo,Uglietti,16,Playmaker,1994-06-27,Torino,ITA,192,84,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,7565,Arseniy,Hadzhyiev,19,-,2008-01-07,Reggio Emilia,ITA,,,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,5125,Luca,Severini,20,Ala,1996-06-20,Loreto,ITA,204,95,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,6887,Elhadji,Fainke,25,Centro,2005-02-12,Mali,ITA,203,94,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,9036,Jaime,Echenique,26,Centro,1997-04-27,Barranquilla,COL,211,117,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,7034,Derek,Ogbeide,34,Centro,1997-03-28,Lagos,NGA,206,113,2026-07-01,2027-06-30
-2026,1760,UNA Hotels Reggio Emilia,9353,Speedy,Smith,44,Playmaker,1993-01-28,Saint Petersburgh,USA,191,84,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9366,Rasheed,Bello,0,Playmaker,2003-07-21,Illinois,USA,183,84,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9367,Trent,Frazier,1,Guardia,1998-09-08,Florida,USA,188,79,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9368,Marcus,Carr,2,Playmaker,1999-07-06,Toronto,CAN,188,84,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9369,Kevin,Kokila,3,Centro,2001-09-03,Bondy,FRA,205,110,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,1051,Davide,Casarin,7,Guardia,2003-05-22,Venezia,ITA,196,85,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9370,Wendell,Moore,8,Guardia,2001-09-18,Texas,USA,196,98,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9371,Kessler,Edwards,9,Ala,2000-08-09,California,USA,203,93,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,274,Tommaso,Baldasso,11,Guardia,1998-01-29,Torino,ITA,192,88,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,6797,Matteo,Baiocchi,13,Playmaker,2007-08-02,Bologna,ITA,191,86,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9187,Marco,Milazzo,15,-,2009-01-04,Imola,ITA,,,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9004,Derrick,Alston,21,Ala,1997-09-17,Houston,USA,206,90,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,2608,Daniel,Hackett,23,Playmaker,1987-12-19,Forlimpopoli,ITA,197,94,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,7132,Francesco,Ferrari,24,Ala,2005-08-18,Novara,ITA,204,90,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9043,Aliou,Diarra,31,Centro,2001-12-31,Kayes,MLI,207,87,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,9372,Bo,Klintman,34,Ala,2003-03-06,Malmo,SWE,206,102,2026-07-01,2027-06-30
-2026,1750,Virtus Costa Bologna,1774,Mouhamet Rassoul,Diouf,35,Centro,2001-09-10,,SEN,206,105,2026-07-01,2027-06-30
+year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,country,height_cm,weight_kg,start_date,end_date,picture_key
+2026,1765,Acqua S.Bernardo Cantù,9012,Savion,Flagg,1,Ala,1999-05-26,Alvin,USA,201,102,2026-07-01,2027-06-30,yKap6EmwVwjru7Ccexuo9eeR
+2026,1765,Acqua S.Bernardo Cantù,9342,Hassani,Gravett,3,Guardia,1996-07-16,Viia Rica,USA,188,85,2026-07-01,2027-06-30,dRFZCHPgTXDE5KjiQAg3Somy
+2026,1765,Acqua S.Bernardo Cantù,6619,Leonardo,Okeke,8,Centro,2003-07-16,Monza,ITA,213,108,2026-07-01,2027-06-30,fneE17nhRuinDVL46CR67qwa
+2026,1765,Acqua S.Bernardo Cantù,3880,Riccardo,Moraschini,9,Guardia/Ala,1991-01-08,Cento,ITA,194,99,2026-07-01,2027-06-30,z2eUfLNaS71r6Hod1dS94o7s
+2026,1765,Acqua S.Bernardo Cantù,4217,Matteo,Parravicini,10,Playmaker,2001-07-04,Varese,ITA,187,83,2026-07-01,2027-06-30,KjZdyY3KSNJwLFQ1P6zREFvH
+2026,1765,Acqua S.Bernardo Cantù,9073,Simone,Ventura,11,Guardia/Ala,2009-06-06,Desio,ITA,196,,2026-07-01,2027-06-30,eExtPub7AHViq9J6rcjB9JEk
+2026,1765,Acqua S.Bernardo Cantù,9365,Isaiah,Miles,15,Ala,1994-06-09,Baltimora,USA,203,100,2026-07-01,2027-06-30,K894BMc2YxWrUCNbGK6Uukf7
+2026,1765,Acqua S.Bernardo Cantù,9343,Chad,Brown,22,Centro,1996-09-06,Deltona,USA,206,111,2026-07-01,2027-06-30,akusdDTh5aockSzULejg6c6X
+2026,1765,Acqua S.Bernardo Cantù,2494,Andrejs,Grazulis,24,Ala,1993-07-21,Koknese,LVA,202,101,2026-07-01,2027-06-30,nmU4ZUXXcTmqGjRERRibRa5K
+2026,1765,Acqua S.Bernardo Cantù,3855,Davide,Moretti,25,Play/Guardia,1998-03-25,Bologna,ITA,191,81,2026-07-01,2027-06-30,H5Ze34vGXUM1wuhDUktKkNd4
+2026,1765,Acqua S.Bernardo Cantù,5660,Liam,Udom,27,Guardia/Ala,2000-06-27,Bagno a Ripoli,ITA,199,85,2026-07-01,2027-06-30,ZjPJx4hdsXSztHRbXXHptZYf
+2026,1765,Acqua S.Bernardo Cantù,6133,Osvaldas,Olisevicius,31,Ala,1993-01-10,,LTU,200,90,2026-07-01,2027-06-30,
+2026,1765,Acqua S.Bernardo Cantù,9109,Federico,Bagordo,36,-,2009-10-08,Trieste,ITA,,,2026-07-01,2027-06-30,
+2026,1765,Acqua S.Bernardo Cantù,1205,Semaj,Christon,,Playmaker,1992-11-01,Cincinnati,USA,191,86,2026-07-01,2027-06-30,4KVSZAXKqBZHLtdnYQ5aYJGi
+2026,1771,APU Old Wild West Udine,6189,Joseph,Mobio,3,Ala,1998-05-26,Tivoli,ITA,199,94,2026-07-01,2027-06-30,yECJAdc65HMQgYPcg8qnN2e8
+2026,1771,APU Old Wild West Udine,6653,Skylar,Spencer,6,Centro,1994-07-11,Inglewood,USA,205,107,2026-07-01,2027-06-30,G9g2q5JSxRAhUAQrejPufRDV
+2026,1771,APU Old Wild West Udine,9358,Zan,Sisko,11,Playmaker,1997-06-29,Lubiana,SVN,191,84,2026-07-01,2027-06-30,ocWYP6U3286abaoyWDdscDBd
+2026,1771,APU Old Wild West Udine,9057,Alessandro,Pavan,15,-,2008-01-02,Treviso,ITA,201,106,2026-07-01,2027-06-30,XoxCb7U8UC9EuqCVLNJhc1R7
+2026,1771,APU Old Wild West Udine,9196,Mak,Bjedov,18,-,2008-07-26,,ITA,,,2026-07-01,2027-06-30,
+2026,1771,APU Old Wild West Udine,821,Lorenzo,Bucarelli,21,Guardia,1998-03-06,Firenze,ITA,198,93,2026-07-01,2027-06-30,W4L2HziW63chvWFuKWZ29aCh
+2026,1771,APU Old Wild West Udine,425,Eimantas,Bendzius,22,Ala,1990-04-23,Klaipeda,LTU,207,102,2026-07-01,2027-06-30,zYhMyR6geJRhsSQ6uPijcVEo
+2026,1771,APU Old Wild West Udine,9302,Raequan,Battle,24,Ala,2001-02-19,Marysville,USA,196,85,2026-07-01,2027-06-30,zWATznYyWedF69cVMWUzkjsh
+2026,1771,APU Old Wild West Udine,9021,Nick,McGlynn,26,Centro,1996-10-06,Madison,USA,206,106,2026-07-01,2027-06-30,qHhsrfTCYT1ASk4p6mgGtCav
+2026,1771,APU Old Wild West Udine,7539,Mattia,Grassi,30,Ala,2007-10-05,Pavia,ITA,200,89,2026-07-01,2027-06-30,rjq6up2td4jWUZPB3xBUg5tQ
+2026,1771,APU Old Wild West Udine,9030,Andrea,Calzavara,31,Playmaker,2001-12-16,Gallarate,ITA,195,86,2026-07-01,2027-06-30,kDS1ZGddGx6eAbVqTq4AyBq8
+2026,1771,APU Old Wild West Udine,6562,Matteo,Cavallero,34,Ala,2003-05-12,Milano,ITA,203,95,2026-07-01,2027-06-30,GnJWz72a7gzKjfTenJd9qNZk
+2026,1771,APU Old Wild West Udine,7391,Denzel,Valentine,45,Guardia,1993-11-16,Lansing,USA,198,97,2026-07-01,2027-06-30,hc8DpKMwet75HSXBqMah9YMC
+2026,1751,Armani Olimpia Milano,854,Jason,Burnell,0,Ala,1997-08-15,DeLand,USA,201,100,2026-07-01,2027-06-30,Ns3LrxMsg7Ybwb9pA9EvEf1s
+2026,1751,Armani Olimpia Milano,9031,R.J.,Cole,2,Playmaker,1999-08-24,Union City,USA,185,84,2026-07-01,2027-06-30,idZAVeN3sY4ikg2m8nAKcvbU
+2026,1751,Armani Olimpia Milano,9378,Moses,Wright,5,Ala/Centro,1998-12-23,Raleigh,USA,207,106,2026-07-01,2027-06-30,o7H9E3HH4mUNwmaytUqWAMNy
+2026,1751,Armani Olimpia Milano,1775,Ousmane,Diop,6,Centro,2000-02-19,Rufisque,ITA,204,100,2026-07-01,2027-06-30,HtXm1JB6KjhC3kAELyemtM97
+2026,1751,Armani Olimpia Milano,5568,Stefano,Tonut,7,Guardia,1993-11-07,Cantù,ITA,194,100,2026-07-01,2027-06-30,GUfmxC6nP5fgKzz2KK7MQwUy
+2026,1751,Armani Olimpia Milano,7405,Leandro,Bolmaro,10,Play/Guardia,2000-09-11,Las Varillas,ITA,198,91,2026-07-01,2027-06-30,iQmPPoEkYqFtmzd9YoQWyn2m
+2026,1751,Armani Olimpia Milano,5499,Darius,Thompson,13,Playmaker,1995-05-04,Murfreesboro,ITA,193,89,2026-07-01,2027-06-30,u5rP7uVG4LxKMdi6ADnFXrth
+2026,1751,Armani Olimpia Milano,7541,Baptiste,Chauveau,15,-,2008-02-25,,FRA,,,2026-07-01,2027-06-30,
+2026,1751,Armani Olimpia Milano,4692,Giampaolo,Ricci,17,Ala,1991-09-27,Roma,ITA,202,102,2026-07-01,2027-06-30,HvssSTdgiq1GZVpW7yLmPob3
+2026,1751,Armani Olimpia Milano,2103,Diego,Flaccadori,21,Play/Guardia,1996-04-05,Seriate,ITA,195,80,2026-07-01,2027-06-30,bp1Vbf5bpNRCxcQ7t6PeWnkR
+2026,1751,Armani Olimpia Milano,6156,Devon,Hall,22,Guardia,1995-08-07,Virginia Beach,USA,195,97,2026-07-01,2027-06-30,K98G2vQTv1AHRd5gCMmWD1Vm
+2026,1751,Armani Olimpia Milano,9008,Marko,Guduric,23,Guardia/Ala,1995-05-08,Priboj,SRB,198,96,2026-07-01,2027-06-30,mZMhWkLTBWvrkDPkbK1i4FwQ
+2026,1751,Armani Olimpia Milano,9388,Garrison,Mathews,24,Guardia,1996-10-24,Franklin,USA,196,98,2026-07-01,2027-06-30,9SZyQYuuwTjaSuVoykadyTav
+2026,1751,Armani Olimpia Milano,9344,Alec,Peters,25,Ala,1995-04-13,Washington,USA,206,107,2026-07-01,2027-06-30,b8fhCHkS8KpSRXqyguNe9FhV
+2026,1751,Armani Olimpia Milano,9007,Devin,Booker,31,Centro,1991-02-28,Whitmire,USA,206,98,2026-07-01,2027-06-30,MrZ5KTzEnp9Dr7jfsJVrA1hk
+2026,1751,Armani Olimpia Milano,45,Nicola,Akele,45,Ala,1995-11-07,Treviso,ITA,203,98,2026-07-01,2027-06-30,sgwgsNL364vhCY9a838fmcKP
+2026,1761,BC Roma,6138,Niccolò,Mannion,1,Playmaker,2001-03-14,Siena,ITA,190,86,2026-07-01,2027-06-30,sKXtUh52gUYaPUnWa85A4xbL
+2026,1761,BC Roma,9385,Paul,Watson,3,Guardia,1994-12-30,Phoenix,USA,198,95,2026-07-01,2027-06-30,CqeRADxCpckPG13ooEzw2hjc
+2026,1761,BC Roma,6258,Corey,Davis,5,Playmaker,1997-06-04,Lafayette,USA,185,86,2026-07-01,2027-06-30,XwU2DCwZL39ig5cWm6sXZMnz
+2026,1761,BC Roma,9379,Giovanni,Emejuru,7,Centro,2002-12-21,San Severino Marche,ITA,208,121,2026-07-01,2027-06-30,9vxuiFQUP6xd9SS43WnhZfQE
+2026,1761,BC Roma,6188,Riccardo,Tavernelli,8,Play/Guardia,1991-03-16,Lissone,ITA,188,82,2026-07-01,2027-06-30,
+2026,1761,BC Roma,9381,Trentyn,Flowers,9,Ala,2005-03-08,Baltimora,USA,206,84,2026-07-01,2027-06-30,U4uXhnCptPYSDQ7s1qe2kmkz
+2026,1761,BC Roma,9384,Erik,Stevenson,10,Play/Guardia,1999-04-28,Lacey,USA,193,93,2026-07-01,2027-06-30,Q4NUBMCcS5HZyNPfeon9dddi
+2026,1761,BC Roma,9380,Gerald,Ayayi,11,Playmaker,2001-08-24,Saint-Étienne,FRA,190,88,2026-07-01,2027-06-30,wdm9w7UexGb9zaSL8ySBKp1b
+2026,1761,BC Roma,5369,Arturs,Strautins,12,Ala,1998-10-23,Jurmala,ITA,198,100,2026-07-01,2027-06-30,sxFTNuxYMuv5ZAunCKKgAvBS
+2026,1761,BC Roma,9386,Giannis,Odzebe,13,Ala,2008-11-23,,COD,196,86,2026-07-01,2027-06-30,Heu8w7a1pTGsYxQXz5iXAB8g
+2026,1761,BC Roma,9382,Marko,Simonovic,19,Centro,1999-10-15,Kolasin,MNE,213,100,2026-07-01,2027-06-30,trLUuWNG7Argu8egkLDawbFk
+2026,1761,BC Roma,9436,Kelly,Olynyk,22,Centro,1991-04-19,Toronto,CAN,213,109,2026-07-01,2027-06-30,
+2026,1761,BC Roma,3710,Andrea,Mezzanotte,24,Ala,1998-04-08,Ponte San Pietro,ITA,207,98,2026-07-01,2027-06-30,s5RKkwDtNUmRNJNazMdMAiA9
+2026,1761,BC Roma,9383,Mike,Iuzzolino,33,Guardia,2002-01-01,Pittsburgh,USA,185,81,2026-07-01,2027-06-30,hv1d9NioB2oHDzjXLkyFxUEz
+2026,1752,Bertram Derthona Tortona,7048,Prentiss,Hubb,3,Play/Guardia,1999-03-19,Upper Marlboro,USA,190,80,2026-07-01,2027-06-30,zu5vpuhH1T7Lzr4hQAB5hDvu
+2026,1752,Bertram Derthona Tortona,7431,Justin,Gorham,4,Ala,1998-08-06,Columbia,USA,201,102,2026-07-01,2027-06-30,v3SESWf5Yj8ncKKyhBWE4PAL
+2026,1752,Bertram Derthona Tortona,4268,Andrea,Pecchia,6,Ala,1997-11-16,Segrate,ITA,197,90,2026-07-01,2027-06-30,FPkGAtkTXqkP4wGMzemxFJx8
+2026,1752,Bertram Derthona Tortona,75,Amar,Alibegovic,7,Ala,1995-03-31,Corvalis,ITA,206,109,2026-07-01,2027-06-30,pZpWxP6Z5UPXzXW79y3aTAYn
+2026,1752,Bertram Derthona Tortona,9121,Gabriele,Furfaro,8,-,2010-04-13,Savona,ITA,,,2027-07-10,2027-06-30,
+2026,1752,Bertram Derthona Tortona,7537,Edoardo,Di Meo,9,Guardia,2008-05-12,Cuneo,ITA,190,89,2026-07-01,2027-06-30,vBmUD5PyaeFDr6PbBs9wVHnt
+2026,1752,Bertram Derthona Tortona,656,Giordano,Bortolani,12,Guardia,2000-12-02,Sant'Agata di Militello,ITA,194,85,2026-07-01,2027-06-30,EYnqsAcTHcLjw8nY76gxQe1Q
+2026,1752,Bertram Derthona Tortona,9038,Dominik,Olejniczak,17,Centro,1996-07-01,Torun,POL,213,118,2026-07-01,2027-06-30,rSUqNXhDQ2VunqZmtfEKLDne
+2026,1752,Bertram Derthona Tortona,9351,Dante,Maddox,21,Guardia,2002-02-15,Chicago,USA,188,91,2026-07-01,2027-06-30,nuLR4nhhdbu4HtV1do8PeK8c
+2026,1752,Bertram Derthona Tortona,2313,Giulio,Gazzotti,24,Centro,1991-09-23,Bologna,ITA,202,104,2026-07-01,2027-06-30,4sSjqjdatgxUNevx6qSNrgCH
+2026,1752,Bertram Derthona Tortona,9006,Karim,Jallow,35,Ala,1997-04-13,Monaco,DEU,198,90,2026-07-01,2027-06-30,47AL9CqS5Zr5NiQCtLKskrSs
+2026,1752,Bertram Derthona Tortona,9009,Aljami,Durham,42,Playmaker,1998-09-30,Liburn,USA,193,97,2026-07-01,2027-06-30,A1UBeAsvmVU6VFYS3yJyotBw
+2026,1752,Bertram Derthona Tortona,1875,Paul,Eboua,00,Ala/Centro,2000-02-15,Yaoundè,ITA,203,97,2026-07-01,2027-06-30,sKRbrm95mc2qW8D2BSrzvq7D
+2026,1763,Dolomiti Energia Trentino,9330,Darius,Brown,0,Playmaker,1999-07-28,Pasadena,USA,188,88,2026-07-01,2027-06-30,kC9Wxt6qoaNJKfwksDWshs9M
+2026,1763,Dolomiti Energia Trentino,9329,Charles,Brown,4,Ala,1997-02-02,Philadelphia,USA,198,86,2026-07-01,2027-06-30,4t8U5uPzSKpYj1Wxynp6teNx
+2026,1763,Dolomiti Energia Trentino,439,Alessandro,Bertini,5,Guardia/Ala,2002-12-26,Brescia,ITA,194,93,2026-07-01,2027-06-30,5Nah8ve2kQC8mmHS3cJBmKJ4
+2026,1763,Dolomiti Energia Trentino,7279,Cheickh,Niang,7,Ala,2008-09-16,Lecco,ITA,196,94,2026-07-01,2027-06-30,YW5pxWatG5mPHgTnn9NGaXS6
+2026,1763,Dolomiti Energia Trentino,9328,Quincy,Olivari,8,Guardia,2001-05-27,Atlanta,USA,190,91,2026-07-01,2027-06-30,M541NkCeXQSFq755sjdB8UQ4
+2026,1763,Dolomiti Energia Trentino,7674,Cosimo,Flauto,9,-,2009-01-01,Firenze,ITA,,,2026-07-01,2027-06-30,
+2026,1763,Dolomiti Energia Trentino,2148,Toto,Forray,10,Playmaker,1986-03-20,Buenos Aires,ITA,187,90,2026-07-01,2027-06-30,xirWmWKiMXPkDgV59BswW4Zx
+2026,1763,Dolomiti Energia Trentino,7119,Federico,Cattapan,11,-,2008-05-27,Camposampiero,ITA,,,2026-07-01,2027-06-30,Vp5giUZr11dJofeKvdBWaLHk
+2026,1763,Dolomiti Energia Trentino,7599,Antonio,Barra,12,-,2008-06-04,Torino,ITA,,,2026-07-01,2027-06-30,
+2026,1763,Dolomiti Energia Trentino,7600,Giulio,Vergnaghi,12,-,2008-04-08,Cuneo,ITA,,,2026-07-01,2027-06-30,
+2026,1763,Dolomiti Energia Trentino,9442,Talel,Fezzani,12,-,2009-08-26,Rovereto,ITA,,,2026-07-01,2027-06-30,
+2026,1763,Dolomiti Energia Trentino,7449,Selom,Mawugbe,21,Centro,1998-07-20,Los Angeles,USA,207,105,2026-07-01,2027-06-30,45fNixmyUEpLVD31pKpUZVt1
+2026,1763,Dolomiti Energia Trentino,9327,Isaiah,Bigelow,24,Ala,2000-01-05,Greensboro,USA,201,95,2026-07-01,2027-06-30,YTGi3N6SkKHUz96bGzHbQ4q3
+2026,1763,Dolomiti Energia Trentino,378,Jordan,Bayehe,26,Centro,1999-10-16,Yaoundè,ITA,204,100,2026-07-01,2027-06-30,DYCLbGWxcn1tYAGcwAnkwiDR
+2026,1763,Dolomiti Energia Trentino,9431,Mansour,Bayo,29,-,2009-02-08,,GMB,,,2026-07-01,2027-06-30,
+2026,1763,Dolomiti Energia Trentino,9170,Josè Alfred,Medina Bouza,30,-,2007-05-01,,CUB,,,2026-07-01,2027-06-30,APSkZAmzaoqMhRoC3msL1YBo
+2026,1763,Dolomiti Energia Trentino,7452,Patrick,Hassan,68,Play/Guardia,2007-01-20,Roma,ITA,185,82,2026-07-01,2027-06-30,NX8oGnBKP3saSz4Uopxrpj3v
+2026,1768,Longobardi Scafati Basket,3200,Alessandro,Lever,4,Ala/Centro,1998-12-04,Bolzano,ITA,208,107,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,9443,Vincenzo,Brancaccio,5,-,2009-05-10,Napoli,ITA,,,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,2770,Antonio,Iannuzzi,7,Centro,1991-04-21,Avellino,ITA,205,103,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,7030,Charlie Edward,Moore,8,Play/Guardia,1998-02-03,Chicago,USA,180,82,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,6436,Francesco,Spinelli,9,-,2005-09-29,Napoli,ITA,,,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,1142,Marco,Ceron,11,Guardia,1992-06-16,Mirano,ITA,196,82,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,2293,Garrett,Nevels,12,Play/Guardia,1992-11-26,Los Angeles,USA,188,,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,9347,Mezie,Offurum,13,Ala,2000-05-21,Rockville,USA,203,104,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,7319,Rodney,McGruder,17,Guardia,1991-05-21,Landover,USA,193,93,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,9348,Ze'Rik,Onyema,21,Centro,2001-10-31,San Antonio,USA,206,107,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,9345,Ithiel,Horton,24,Play/Guardia,2000-06-26,Roselle,USA,196,91,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,3526,Bruno,Mascolo,33,Playmaker,1996-08-04,Castellamare di Stabia,ITA,186,85,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,9346,Brandon,Johnson,88,Ala/Centro,2002-01-15,Raleigh,USA,203,95,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,9429,Lorenzo,Toro,,-,2009-02-18,Salerno,ITA,,,2026-07-01,2027-06-30,
+2026,1762,Maxima Roma,536,Miro,Bilan,2,Centro,1989-07-21,Sibenik,HRV,213,122,2026-07-01,2027-06-30,hDPEL1tCrwey3d1PLzMFJ7pJ
+2026,1762,Maxima Roma,9374,Aaron,Holiday,3,Playmaker,1996-09-30,Louisiana,USA,183,84,2026-07-01,2027-06-30,EBP9bcXDmn54Y74mwZBhj6ba
+2026,1762,Maxima Roma,9391,Hunter,Tyson,4,Ala,2000-06-13,Monroe,USA,203,,2026-07-01,2027-06-30,xMchXDeSHe8s8TeR5CWUUDuc
+2026,1762,Maxima Roma,76,Mirza,Alibegovic,5,Guardia,1992-09-25,Corvallis,ITA,195,95,2026-07-01,2027-06-30,Cx9Jyg8zFa2WqE3fFHuHeupb
+2026,1762,Maxima Roma,9409,Francesco,Carnevale,8,-,2007-05-11,Castel di Sangro,ITA,,,2026-07-01,2027-06-30,BNTcyMAtVZVRX6rtLF3VYbop
+2026,1762,Maxima Roma,3185,Brynton,Lemar,11,Guardia,1995-01-23,San Diego,USA,193,88,2026-07-01,2027-06-30,SUty4qaJedfXA852a52jY8H2
+2026,1762,Maxima Roma,5764,Giovanni,Veronesi,16,Guardia/Ala,1998-03-21,Brescia,ITA,196,,2026-07-01,2027-06-30,WJkczpGbN2VkAVS1cxZXi7DK
+2026,1762,Maxima Roma,9375,Xavier,Moon,17,Guardia,1995-01-02,Goodwater,USA,183,75,2026-07-01,2027-06-30,aQEXbZU2tXozY4Qb6FU73awP
+2026,1762,Maxima Roma,7222,Andrea,Bresciani,18,-,2008-01-04,Siena,ITA,,,2026-07-01,2027-06-30,
+2026,1762,Maxima Roma,625,Federico,Bonacini,23,Guardia,1999-01-23,Sassuolo,ITA,190,83,2026-07-01,2027-06-30,y14A5pRB76KCnCRxsHHjwVe6
+2026,1762,Maxima Roma,5913,Carl,Wheatle,24,Ala,1998-03-24,Londra,ITA,200,88,2026-07-01,2027-06-30,oPM1eDGEvH9so5Xc4Q9QCiPU
+2026,1762,Maxima Roma,934,Gora,Camara,29,Centro,2001-04-12,,ITA,214,114,2026-07-01,2027-06-30,hDm4csphWSsNi5S3ZaVNNvsd
+2026,1762,Maxima Roma,9377,Matt,Ryan,32,Ala,1997-02-11,White Plains,USA,201,98,2026-07-01,2027-06-30,ugGGSVK5dNPZEPg24VWayiom
+2026,1762,Maxima Roma,774,John,Brown,00,Ala/Centro,1992-01-28,Jacksonville,USA,203,,2026-07-01,2027-06-30,D7h7dj1AAEc1ETDzdzgZozse
+2026,1772,Napoli Basketball,5299,Marco,Spissu,0,Playmaker,1995-02-05,Sassari,ITA,185,80,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,9355,Zac,Seljaas,1,Ala,1997-07-11,Utah,USA,200,100,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,9356,Jeff,Dowtin,3,Playmaker,1997-05-10,Upper Marlboro,USA,191,80,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,7153,Emanuel,Esposito,4,-,2008-02-27,Castel Volturno,ITA,,,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,1965,Leonardo,Faggian,10,Guardia/Ala,2004-02-06,Treviso,ITA,195,82,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,6142,John,Petrucelli,11,Guardia/Ala,1992-10-27,Hicksville,ITA,193,86,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,7097,Assane,Sankare,12,Ala,2007-04-10,Senegal,ITA,204,100,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,9357,Jack,White,14,Ala,1997-08-05,Traraigon,AUS,200,101,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,6605,Markel,Brown,22,Guardia,1992-01-29,Alexandria,USA,191,86,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,9026,Andrej,Jakimovski,23,Ala,2001-03-18,Kriva Palanka,ITA,201,99,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,5433,Kaleb,Tarczewski,25,Centro,1993-02-26,Claremont,USA,212,111,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,6186,Guglielmo,Caruso,30,Centro,1999-07-03,Napoli,ITA,208,105,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,5594,Leonardo,Totè,35,Ala/Centro,1997-07-08,Negrar,ITA,212,107,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,9032,Jahmi'us,Ramsey,37,Guardia,2001-06-09,Arlington,USA,191,87,2026-07-01,2027-06-30,
+2026,1772,Napoli Basketball,6153,Scott,Ulaneo,,Centro,1998-06-27,Roma,ITA,208,102,2026-07-01,2027-06-30,
+2026,1764,Nutribullet Treviso Basket,969,Alessandro,Cappelletti,0,Playmaker,1995-10-22,Assisi,ITA,186,82,2026-07-01,2027-06-30,gBKiHTMzKiQajAAfFGjxAssf
+2026,1764,Nutribullet Treviso Basket,9331,Chico,Carter,2,Guardia,2000-11-03,Columbia,USA,191,87,2026-07-01,2027-06-30,mpQjC9hV7L5inFXjehStGVCL
+2026,1764,Nutribullet Treviso Basket,9041,Brekkott,Chapman,3,Ala,1996-04-07,Roy,USA,206,97,2026-07-01,2027-06-30,S1uWwNcEGSshYtUYapiymE7M
+2026,1764,Nutribullet Treviso Basket,4879,DeWayne,Russell,4,Playmaker,1994-02-10,Peoria,USA,180,70,2026-07-01,2027-06-30,n5PY2w7v73YWQHPNWUNYmuDV
+2026,1764,Nutribullet Treviso Basket,9014,Ed,Croswell,7,Centro,1999-09-06,Philadelphia,USA,203,109,2026-07-01,2027-06-30,
+2026,1764,Nutribullet Treviso Basket,7566,Alessandro,Manfredotti,8,Guardia,2008-12-18,Reggio Emilia,ITA,192,92,2026-07-01,2027-06-30,iVmL8fXJ5TMyc6DfCLA6NEuT
+2026,1764,Nutribullet Treviso Basket,7606,Alessandro,Vettori,10,Guardia,2008-03-16,Treviso,ITA,188,90,2026-07-01,2027-06-30,UDwVtB2MXmQLcSMhGavpBMj3
+2026,1764,Nutribullet Treviso Basket,3714,Federico,Miaschi,11,Playmaker,2000-04-26,Genova,ITA,200,90,2026-07-01,2027-06-30,Anb83njddQ88MZWvWdZ4YkJr
+2026,1764,Nutribullet Treviso Basket,9042,Ike,Anigbogu,13,Centro,1998-10-16,San Diego,NGA,206,,2026-07-01,2027-06-30,eNePF3FEwau1vBLPUFtEfEBM
+2026,1764,Nutribullet Treviso Basket,9332,Gregorio,Allinei,19,Guardia/Ala,2004-04-21,Firenze,ITA,194,90,2026-07-01,2027-06-30,vcEjLiSLXW6H3CKuNg66TVYJ
+2026,1764,Nutribullet Treviso Basket,7607,Antonio,Iaquinta,24,-,2008-06-27,Merano,ITA,,,2026-07-01,2027-06-30,
+2026,1764,Nutribullet Treviso Basket,1189,Matteo,Chillo,26,Ala,1993-06-15,Bologna,ITA,203,104,2026-07-01,2027-06-30,c8iKZf1v4Sf3hmtApxDZk6op
+2026,1764,Nutribullet Treviso Basket,6191,JP,Macura,55,Guardia/Ala,1995-06-05,Lakeville,USA,196,93,2026-07-01,2027-06-30,5nKdg3haXGqcT2YHseWm58rK
+2026,1764,Nutribullet Treviso Basket,9333,Valentine,Chery,97,Centro,1997-09-24,Saint-Priest-en-Jarez,FRA,201,95,2026-07-01,2027-06-30,qqa5d8y7Vwz71EqHDvKEY6CK
+2026,1766,Openjobmetis Varese,97,Davide,Alviti,2,Ala,1996-11-05,Alatri,ITA,200,92,2026-07-01,2027-06-30,CchJHtkhZVSmQAXmhEwFBn4L
+2026,1766,Openjobmetis Varese,9337,David,Duke,3,Guardia,1999-10-13,Providence,USA,193,93,2026-07-01,2027-06-30,6N1Ks6yy9KPwWkcFbXVcJZcg
+2026,1766,Openjobmetis Varese,6556,Mauro,Villa,5,Guardia/Ala,2004-07-07,,ARG,194,96,2026-07-01,2027-06-30,mJYnH6624rUkTGuceNJgVcpG
+2026,1766,Openjobmetis Varese,9336,William,McDowell-White,7,Playmaker,1998-04-13,Brisbane,AUS,196,89,2026-07-01,2027-06-30,LCEh9YUj4gTxDrxTK3TjQv6H
+2026,1766,Openjobmetis Varese,1617,Amedeo,Della Valle,8,Guardia,1993-04-11,Alba,ITA,194,90,2026-07-01,2027-06-30,DNJUWG65QQScc7DeaK4JWZRE
+2026,1766,Openjobmetis Varese,4034,Stefan,Nikolic,11,Ala,1997-05-29,Belgrado,ITA,203,100,2026-07-01,2027-06-30,Ddi38yCKML7j3mCqu96844bY
+2026,1766,Openjobmetis Varese,9334,Hunter,Hale,12,Guardia,1997-06-25,Kalamazoo,USA,191,84,2026-07-01,2027-06-30,HHLnP5nvmRq1VdFN6JTFJaaW
+2026,1766,Openjobmetis Varese,3207,Matteo,Librizzi,13,Playmaker,2002-04-06,Varese,ITA,180,70,2026-07-01,2027-06-30,Wac698aTf4Jtmp8sSPYcQXKE
+2026,1766,Openjobmetis Varese,7428,Nate,Renfro,15,Centro,1996-12-11,Tucson,USA,203,93,2026-07-01,2027-06-30,eJuFYGHN3zB332C9CxptzLo2
+2026,1766,Openjobmetis Varese,7014,Ismael,Kamagate,17,Centro,2001-01-17,Parigi,FRA,211,100,2026-07-01,2027-06-30,LEit4KTfrYneexx3nS1AgwtF
+2026,1766,Openjobmetis Varese,7626,Robert,Kangur,19,Guardia,2009-04-16,,EST,,,2026-07-01,2027-06-30,SyL6ab1vjsZRSZSMNFPQXukC
+2026,1766,Openjobmetis Varese,9335,Isaiah,Roby,22,Ala,1998-02-03,Dixon,USA,203,104,2026-07-01,2027-06-30,p9jAuQ2uJXojNuXug92Ryvig
+2026,1766,Openjobmetis Varese,3155,Maximilian,Ladurner,34,Centro,2001-12-06,Merano,ITA,207,104,2026-07-01,2027-06-30,qGSQ7PxXzzzwKUxv6A4RXpbC
+2026,1766,Openjobmetis Varese,2790,Iris,Ikangi,35,Ala,1994-02-21,Voghera,ITA,200,88,2026-07-01,2027-06-30,QJduXmQxJ8Y3B7ysxBqYZ3xk
+2026,1767,Pallacanestro Trieste,6604,Colbey,Ross,4,Playmaker,1998-10-22,Aurora,USA,185,84,2026-07-01,2027-06-30,PnZ6toCqcXNkE23qFzHfchjY
+2026,1767,Pallacanestro Trieste,7614,Mattia,Cossutta,5,-,2007-04-20,Trieste,ITA,,,2026-07-01,2027-06-30,MK2SkbFmn4WuxtpC1zEkNhFm
+2026,1767,Pallacanestro Trieste,9005,Abramo,Canka,7,Guardia/Ala,2002-03-18,Genova,ITA,198,90,2026-07-01,2027-06-30,UM6KJ2wGm2zah5Bt6xiynzTd
+2026,1767,Pallacanestro Trieste,1592,Lodovico,Deangeli,8,Guardia/Ala,2000-05-19,Trieste,ITA,205,90,2026-07-01,2027-06-30,vhLmiReYzdx5qeFXsxB9j2SW
+2026,1767,Pallacanestro Trieste,6993,Langston,Galloway,9,Guardia,1991-12-09,Baton Rouge,USA,188,91,2026-07-01,2027-06-30,ZdZ2XVRewy738qb2tbn44e2X
+2026,1767,Pallacanestro Trieste,4890,Michele,Ruzzier,10,Playmaker,1993-02-09,Trieste,ITA,183,80,2026-07-01,2027-06-30,meWDyCCaYy9myY1KTPnzBhJK
+2026,1767,Pallacanestro Trieste,7616,Emanuele,Martucci,11,-,2007-08-03,Trieste,ITA,,,2026-07-01,2027-06-30,aHtkkLTdr79Qsgb3CUjZQ4dz
+2026,1767,Pallacanestro Trieste,949,Francesco,Candussi,13,Centro,1994-02-23,Palmanova,ITA,211,109,2026-07-01,2027-06-30,NsuYQ72j4mRrpCUu5DB8B4ef
+2026,1767,Pallacanestro Trieste,7617,Lorenzo,Bregant,16,-,2008-09-24,Trieste,ITA,,,2026-07-01,2027-06-30,
+2026,1767,Pallacanestro Trieste,7420,Luka,Brajkovic,17,Centro,1999-06-26,Feldkirch,AUT,208,113,2026-07-01,2027-06-30,udcmGrJDF4zWwbp49Kj7KL49
+2026,1767,Pallacanestro Trieste,9390,Lajae,Jones,25,Guardia,2004-05-21,Neptune Beach,USA,201,100,2026-07-01,2027-06-30,mQ2aa3guQt7wJxrzPg3WEWsW
+2026,1767,Pallacanestro Trieste,7007,Sean,McDermott,30,Ala,1996-11-03,Anderson,USA,198,88,2026-07-01,2027-06-30,HzwVayVGDMxALc9MBuCcfSJ3
+2026,1767,Pallacanestro Trieste,7478,Davide,Paiano,,Ala,2005-05-26,Trieste,ITA,199,,2026-07-01,2027-06-30,EMzf8bn44CwKzLoE2QC3z2yF
+2026,1769,Tezenis Verona,9350,Matteo,Oliveri,0,Guardia,2007-05-17,Borgomanero,ITA,191,90,2026-07-01,2027-06-30,zQWjvMXAwi9ys4BgbJp8oCTA
+2026,1769,Tezenis Verona,7411,Federico,Poser,3,Centro,1999-08-17,Mareno di Piave,ITA,203,104,2026-07-01,2027-06-30,Fxs3CJMyZSePfp9a2HcMEx4Z
+2026,1769,Tezenis Verona,6616,C.J.,Massinburg,5,Guardia,1997-04-14,Charlotte,USA,192,92,2026-07-01,2027-06-30,eiAMmucgbbK2vm7m9NkeoGtQ
+2026,1769,Tezenis Verona,9349,Mike,Tobey,10,Centro,1994-10-10,Monroe,SVN,213,115,2026-07-01,2027-06-30,75ojhGhHctYg1nCFdq94NCrK
+2026,1769,Tezenis Verona,6486,Andrea,Loro,11,Ala,2003-06-30,Borgomanero,ITA,202,95,2026-07-01,2027-06-30,eyjkajoqQRtgvGUKY699LKEH
+2026,1769,Tezenis Verona,9341,Andrew,Andrews,12,Playmaker,1993-05-25,Porland,USA,188,91,2026-07-01,2027-06-30,mFs7xD6hFHPQfxx6iGumE7hm
+2026,1769,Tezenis Verona,9407,Matteo,Zumerle,12,-,2008-04-14,Verona,ITA,,,2026-07-01,2027-06-30,
+2026,1769,Tezenis Verona,106,Lorenzo,Ambrosin,14,Guardia,1997-10-07,Motta di Livenza,ITA,195,90,2026-07-01,2027-06-30,8dQgaTER6wxGYUrXMRZqjrvJ
+2026,1769,Tezenis Verona,9123,Malick,Mane El Hadji Maodo,15,Centro,2007-12-31,,SEN,211,97,2026-07-01,2027-06-30,5354Spxc3z85eNLrzz7c4BQq
+2026,1769,Tezenis Verona,7412,Federico,Zampini,18,Playmaker,1999-06-27,Perugia,ITA,191,90,2026-07-01,2027-06-30,P36urwqHYpdeirF7FPrhpZgU
+2026,1769,Tezenis Verona,9339,Izaiah,Brockington,21,Ala,1999-07-12,Towson,USA,195,90,2026-07-01,2027-06-30,4rq2T1y6Cn5UFG3Vw45KMTEa
+2026,1769,Tezenis Verona,9408,Filippo,Pantano,21,-,2008-01-15,San Bonifacio,ITA,,,2026-07-01,2027-06-30,
+2026,1769,Tezenis Verona,9340,RJ,Melendez,22,Ala,2002-12-03,Arecibo,,210,95,2026-07-01,2027-06-30,5BkBfVhvxxYKBrcN4iNMeXKW
+2026,1769,Tezenis Verona,9338,Jermaine,Samuels,00,Ala,1998-11-13,Franklin,USA,198,104,2026-07-01,2027-06-30,HuXFu5Jv39JJYCwcc3pugzCh
+2026,1753,Umana Reyer Venezia,6499,Octavio,Maretto,1,Guardia,2004-04-07,Buenos Aires,ITA,186,84,2026-07-01,2027-06-30,jLrPKZrpHtAUnFFrvkkWwDkT
+2026,1753,Umana Reyer Venezia,1670,Giovanni,De Nicolao,5,Playmaker,1996-06-10,,ITA,185,85,2026-07-01,2027-06-30,XkqWPEKJ9vQ4uvqPNdzeDfBn
+2026,1753,Umana Reyer Venezia,954,Leonardo,Candi,7,Play/Guardia,1997-03-30,Bologna,ITA,186,87,2026-07-01,2027-06-30,dvfNpELi62yCzHf6XpeZCDav
+2026,1753,Umana Reyer Venezia,6648,Ky,Bowman,8,Play/Guardia,1997-06-16,Havelock,USA,188,86,2026-07-01,2027-06-30,W8jGLruAPoUHE9CytD56HuBn
+2026,1753,Umana Reyer Venezia,9359,Sir'Jabari,Rice,10,Guardia,1998-12-28,Houston,USA,198,88,2026-07-01,2027-06-30,gLZAyFB1EUVtEfogZzh92czZ
+2026,1753,Umana Reyer Venezia,9360,Enoch,Boakye,13,Centro,2003-03-24,Toronto,CAN,213,115,2026-07-01,2027-06-30,qeE6kNqAdcdun8CE3hqoAW4F
+2026,1753,Umana Reyer Venezia,2852,Giga,Janelidze,14,Ala,1995-04-03,,ITA,201,96,2026-07-01,2027-06-30,dD2sgNi64TDfHLp634dC8Jqe
+2026,1753,Umana Reyer Venezia,9362,Louis,Olinde,19,Ala,1998-03-19,Amburgo,DEU,203,94,2026-07-01,2027-06-30,c7Hcst3QkUSETbJz9Le3jCmM
+2026,1753,Umana Reyer Venezia,4214,Jordan,Parks,22,Ala,1994-04-06,Queens,USA,198,102,2026-07-01,2027-06-30,ZwsHN2srqiapfYeyNZGvZQRK
+2026,1753,Umana Reyer Venezia,9363,Glynn,Watson,30,Playmaker,1997-03-03,Chicago,USA,185,85,2026-07-01,2027-06-30,j9rpuED7cbvkeqaMrfARdZeB
+2026,1753,Umana Reyer Venezia,2534,Erick,Green,32,Play/Guardia,1992-05-09,Inglewood,USA,191,83,2026-07-01,2027-06-30,pd557HNaZsB6KXUWnnXsBPje
+2026,1753,Umana Reyer Venezia,7079,Kyle,Wiltjer,33,Ala,1992-10-20,Portland,CAN,204,106,2026-07-01,2027-06-30,MT1XWiNMTLAcS1CLH91WMC5b
+2026,1753,Umana Reyer Venezia,7166,Gabriele,Turconi,40,-,2008-06-29,Cittiglio,ITA,,,2026-07-01,2027-06-30,nwyCY9inmDsZULAaJ96TSpwQ
+2026,1753,Umana Reyer Venezia,9250,Federico,Fasolo,40,-,2008-07-22,Vicenza,ITA,,,2026-07-01,2027-06-30,
+2026,1753,Umana Reyer Venezia,6994,Sasha,Grant,44,Ala,2002-02-15,Cagliari,ITA,198,101,2026-07-01,2027-06-30,A5BU5AkkNDo2SKaHNgyAJPDL
+2026,1753,Umana Reyer Venezia,5481,Amedeo,Tessitori,00,Centro,1994-10-07,Pisa,ITA,208,113,2026-07-01,2027-06-30,fePWY2Z3vcZgZ6CtYNkcJUjn
+2026,1760,UNA Hotels Reggio Emilia,314,Jaylen,Barford,0,Guardia,1996-01-23,Jackson,USA,191,92,2026-07-01,2027-06-30,nySueTP118aEmyoVvUSuePYY
+2026,1760,UNA Hotels Reggio Emilia,9352,Rob,Edwards,2,Guardia,1997-01-20,Detroit,USA,196,94,2026-07-01,2027-06-30,GBQfcrRwFvvvzHoDzRNQj8Xw
+2026,1760,UNA Hotels Reggio Emilia,9139,JT,Thor,4,Ala,2002-08-26,Omaha,USA,208,92,2026-07-01,2027-06-30,BMYtPwxrCs6JNqfcQ8NGiGbj
+2026,1760,UNA Hotels Reggio Emilia,6640,Riccardo,Rossato,6,Play/Guardia,1996-09-18,Venezia,ITA,190,85,2026-07-01,2027-06-30,onz7B4xr365h6t5HL2nooSDR
+2026,1760,UNA Hotels Reggio Emilia,6309,Tomas,Woldetensae,7,Ala,1998-04-30,Bologna,ITA,196,91,2026-07-01,2027-06-30,tzyCysCGEe468QSigPE4RGsQ
+2026,1760,UNA Hotels Reggio Emilia,5823,Riccardo,Visconti,9,Guardia,1998-10-08,Torino,ITA,197,88,2026-07-01,2027-06-30,4DqyMbVEkSoxG1BpH1163U9s
+2026,1760,UNA Hotels Reggio Emilia,7195,Luca,Manfredotti,11,Ala,2008-02-10,Castelnovo Monti,ITA,198,88,2026-07-01,2027-06-30,7dsdfjTeLXaAjVn5EbmvuMuP
+2026,1760,UNA Hotels Reggio Emilia,5663,Lorenzo,Uglietti,16,Playmaker,1994-06-27,Torino,ITA,192,84,2026-07-01,2027-06-30,zLE7bJXJWNbaeMr4woXk5WiE
+2026,1760,UNA Hotels Reggio Emilia,7565,Arseniy,Hadzhyiev,19,-,2008-01-07,Reggio Emilia,ITA,,,2026-07-01,2027-06-30,
+2026,1760,UNA Hotels Reggio Emilia,5125,Luca,Severini,20,Ala,1996-06-20,Loreto,ITA,204,95,2026-07-01,2027-06-30,KcLPNDg3oJmb3LD9p4brEEDH
+2026,1760,UNA Hotels Reggio Emilia,6887,Elhadji,Fainke,25,Centro,2005-02-12,Mali,ITA,203,94,2026-07-01,2027-06-30,2GaURqCxY7iRNyTm5wTKKGrK
+2026,1760,UNA Hotels Reggio Emilia,9036,Jaime,Echenique,26,Centro,1997-04-27,Barranquilla,COL,211,117,2026-07-01,2027-06-30,KaMUJc74LDHSUNt8pjpyXa4V
+2026,1760,UNA Hotels Reggio Emilia,7034,Derek,Ogbeide,34,Centro,1997-03-28,Lagos,NGA,206,113,2026-07-01,2027-06-30,uZHhs4fuWrfTUV4AN8UYgS7c
+2026,1760,UNA Hotels Reggio Emilia,9353,Speedy,Smith,44,Playmaker,1993-01-28,Saint Petersburgh,USA,191,84,2026-07-01,2027-06-30,pSX4KemBZoUKSCmYaqFHp132
+2026,1750,Virtus Costa Bologna,9366,Rasheed,Bello,0,Playmaker,2003-07-21,Illinois,USA,183,84,2026-07-01,2027-06-30,eAfakPWZm4ZS8erwohue77Eb
+2026,1750,Virtus Costa Bologna,9367,Trent,Frazier,1,Guardia,1998-09-08,Florida,USA,188,79,2026-07-01,2027-06-30,4A3karAwtP3sR62Sw4ukiZgd
+2026,1750,Virtus Costa Bologna,9368,Marcus,Carr,2,Playmaker,1999-07-06,Toronto,CAN,188,84,2026-07-01,2027-06-30,ok8Kowe8LjSMqk8fVRkcztAA
+2026,1750,Virtus Costa Bologna,9369,Kevin,Kokila,3,Centro,2001-09-03,Bondy,FRA,205,110,2026-07-01,2027-06-30,TgE9srWuwJxYgdC6ZPcBHfvc
+2026,1750,Virtus Costa Bologna,1051,Davide,Casarin,7,Guardia,2003-05-22,Venezia,ITA,196,85,2026-07-01,2027-06-30,7Pzsjry9anUUeU69cN37puYx
+2026,1750,Virtus Costa Bologna,9370,Wendell,Moore,8,Guardia,2001-09-18,Texas,USA,196,98,2026-07-01,2027-06-30,Ra5AW7vAk8AmAwu9odpifa9d
+2026,1750,Virtus Costa Bologna,9371,Kessler,Edwards,9,Ala,2000-08-09,California,USA,203,93,2026-07-01,2027-06-30,3zLkYxEk68q1M2KLvGJUm7L5
+2026,1750,Virtus Costa Bologna,274,Tommaso,Baldasso,11,Guardia,1998-01-29,Torino,ITA,192,88,2026-07-01,2027-06-30,5kd5KzrHbSVjMAmsTc26yUZK
+2026,1750,Virtus Costa Bologna,6797,Matteo,Baiocchi,13,Playmaker,2007-08-02,Bologna,ITA,191,86,2026-07-01,2027-06-30,YoqZWjvwHFxtTP2FYCUJrKwR
+2026,1750,Virtus Costa Bologna,9187,Marco,Milazzo,15,-,2009-01-04,Imola,ITA,,,2026-07-01,2027-06-30,
+2026,1750,Virtus Costa Bologna,9004,Derrick,Alston,21,Ala,1997-09-17,Houston,USA,206,90,2026-07-01,2027-06-30,aX7pjgftNWGb3T3gG4VtGmgL
+2026,1750,Virtus Costa Bologna,2608,Daniel,Hackett,23,Playmaker,1987-12-19,Forlimpopoli,ITA,197,94,2026-07-01,2027-06-30,6b3SitiBrogi3xdxv9LuuFXa
+2026,1750,Virtus Costa Bologna,7132,Francesco,Ferrari,24,Ala,2005-08-18,Novara,ITA,204,90,2026-07-01,2027-06-30,fDQLs3UmqxARS86DjVLTFVZX
+2026,1750,Virtus Costa Bologna,9043,Aliou,Diarra,31,Centro,2001-12-31,Kayes,MLI,207,87,2026-07-01,2027-06-30,oioc8kMkf3KCkFURutWYhJmK
+2026,1750,Virtus Costa Bologna,9372,Bo,Klintman,34,Ala,2003-03-06,Malmo,SWE,206,102,2026-07-01,2027-06-30,nxjHXdX5EQzFEKo8UZNERaUk
+2026,1750,Virtus Costa Bologna,1774,Mouhamet Rassoul,Diouf,35,Centro,2001-09-10,,SEN,206,105,2026-07-01,2027-06-30,Q4VDUg4q9FgbJ6kbGXGzSeyE

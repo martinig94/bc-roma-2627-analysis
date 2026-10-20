@@ -28,7 +28,7 @@ PBP_CSV = DATA / "pbp.csv"
 TEAMS_CSV = DATA / "teams.csv"
 ROSTERS_CSV = DATA / "team_rosters.csv"
 ROSTER_FIELDS = ["year", "team_id", "team", "player_id", "name", "surname", "number", "role", "birth_date",
-                 "place_of_birth", "country", "height_cm", "weight_kg", "start_date", "end_date"]
+                 "place_of_birth", "country", "height_cm", "weight_kg", "start_date", "end_date", "picture_key"]
 
 DEFAULT_CHAMP = 602   # Regular Season 2026/27
 DEFAULT_YEAR = 2026
@@ -56,7 +56,7 @@ def roster_rows(team_id: int, team: str, payload: dict, year: int) -> list[dict]
              "surname": p.get("surname"), "number": p.get("player_number"), "role": p.get("player_role"),
              "birth_date": p.get("birth_date"), "place_of_birth": p.get("place_of_birth"), "country": p.get("country"),
              "height_cm": p.get("height"), "weight_kg": p.get("weight"), "start_date": p.get("start_date"),
-             "end_date": p.get("end_date")} for p in payload.get("players", [])]
+             "end_date": p.get("end_date"), "picture_key": p.get("player_picture_key")} for p in payload.get("players", [])]
 
 
 def collect_rosters(teams: list[dict], year: int) -> None:
