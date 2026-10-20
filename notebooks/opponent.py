@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NB = ROOT / "notebooks"
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 5   # bump when the generated data changes shape: weekly.py regenerates older analyses
+VERSION = 6   # bump when the generated data changes shape: weekly.py regenerates older analyses
 
 
 def folder_name(home: str, away: str, date: str) -> str:
@@ -66,7 +66,7 @@ def comparison(box: pd.DataFrame, games: pd.DataFrame, date: str, team: str, opp
 def write_roster(folder: Path, opp: str, date: str, data: Path) -> list[dict]:
     """The opponent's roster before `date` (league + EuroCup, with photos) as roster.json + photo_<id>.jpg in the folder."""
     player_photos.main_quiet(opp)
-    roster = ws.roster_table(ws.load_box_before(data, date, CFG["eurocup_file"]), data, opp)
+    roster = ws.roster_table(ws.load_box_before(data, date, CFG["eurocup_file"]), data, opp, asof=date)
     for r in roster:
         if r["photo"]:
             shutil.copy(data / "photos" / f"{r['player_id']}.jpg", folder / f"photo_{r['player_id']}.jpg")

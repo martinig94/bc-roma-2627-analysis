@@ -21,6 +21,9 @@ they are not a supported API: expect them to change without notice.
         -> pbp.actions: every event with period, clock, score, player, team,
            x/y (0-100, % of the court) and shot/foul qualifiers; `legend`
            maps qualifier codes to descriptions.
+    GET /api/teams/get-team-roster?id=<team>&year=<year>
+        -> the "giocatori" table of the team page (legabasket.it/protagonisti/squadre/<year>/<team>/...):
+           `players` with number, role, birth date/place, nationality, height, weight and contract dates.
     GET /api/matches/get-championship-matches-shots-by-id?id=<game>&info=1
         -> zone-aggregated shooting per team (derived; the pbp has the raw shots).
 """
@@ -89,3 +92,7 @@ def play_by_play(game_id: int) -> dict:
         "championships/get-championships-matches-play-by-play",
         {"id": game_id, "info": "true", "sort": "asc"},
     )
+
+
+def team_roster(team_id: int, year: int) -> dict:
+    return get("teams/get-team-roster", {"id": team_id, "year": year})

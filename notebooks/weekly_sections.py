@@ -18,7 +18,8 @@ from matchup_report import parse_eurocup, plot_zone_heatmap, zone_stats
 
 ROOT = Path(__file__).resolve().parent.parent
 TEAM = weekly_config.load()["team"]
-POS_ORDER = {"PG": 0, "SG": 1, "G": 1, "SF": 2, "F": 2, "PF": 3, "C": 4}
+POS_ORDER = {"PG": 0, "SG": 1, "G": 1, "SF": 2, "F": 2, "PF": 3, "C": 4,
+             "Playmaker": 0, "Guardia": 1, "Guardia/Ala": 1, "Ala": 2, "Ala/Centro": 3, "Centro": 4}   # the last six: legabasket.it roles
 
 # playing-time flag: at least MIN_PLAYED seconds in the game and either +ABS_UP seconds or +REL_UP above the average before
 MIN_PLAYED, ABS_UP, REL_UP = 8 * 60, 7 * 60, 0.30
@@ -72,7 +73,32 @@ def roster_file(data: Path, raw_players: pd.DataFrame, team: str) -> pd.DataFram
     return cur
 
 
-def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM) -> list[dict]:
+def roster_bios(data: Path, team: str) -> dict[int, dict]:
+    """player_id -> row of data/team_rosters.csv (the "giocatori" table of the team page on legabasket.it), empty if not collected."""
+    path = data / "team_rosters.csv"
+    if not path.exists():
+        return {}
+    df = pd.read_csv(path)
+    df = df[df.team == team]
+    return {int(r["player_id"]): r for r in df.to_dict("records")}
+
+
+def age_on(birth: str, asof: str) -> int | None:
+    if not isinstance(birth, str) or not birth:
+        return None
+    b, d = pd.Timestamp(birth), pd.Timestamp(asof)
+    return int(d.year - b.year - ((d.month, d.day) < (b.month, b.day)))
+
+
+def _num(v) -> str:
+    return "" if v is None or pd.isna(v) else str(int(float(v)))
+
+
+def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | None = None) -> list[dict]:
+    """One row per player of `team` in `box`; bio columns (number, role, age on `asof`, nationality, weight, birth date) come from
+    data/team_rosters.csv and fill position and height when data/roster.csv leaves them blank."""
+    asof = asof or pd.Timestamp.today().strftime("%Y-%m-%d")
+    bios = roster_bios(data, team)
     p = players(box, team)
     lba_ids = p[p.competition == "LBA"].drop_duplicates("player_surname").set_index("player_surname").player_id
     rost = roster_file(data, p[p.competition == "LBA"], team).set_index("player_id")
@@ -81,12 +107,18 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM) -> list[dict]:
     for sur, g in p.groupby("player_surname"):
         pid = int(lba_ids[sur]) if sur in lba_ids.index else None
         r = rost.loc[pid] if pid in rost.index else None
+        bio = bios.get(pid, {})
         pos = "" if r is None or pd.isna(r.position) else str(r.position)
+        pos = pos or (bio.get("role") if isinstance(bio.get("role"), str) else "")
         ht = "" if r is None or pd.isna(r.height_cm) or r.height_cm == "" else str(int(float(r.height_cm)))
+        ht = ht or _num(bio.get("height_cm"))
         n = len(g); fga = g.fg2a.sum() + g.fg3a.sum()
         lba, ec = g[g.competition == "LBA"], g[g.competition == "EC"]
         rows.append({
             "player_id": pid, "photo": pid in photos, "name": sur.title(), "pos": pos, "height": ht, "gp": n,
+            "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
+            "country": bio.get("country") if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
+            "birth_date": bio.get("birth_date") if isinstance(bio.get("birth_date"), str) else "",
             "min": round(g.sec.sum() / 60 / n, 1), "pts": round(g.pts.sum() / n, 1), "reb": round((g.oreb + g.dreb).sum() / n, 1),
             "ast": round(g.ast.sum() / n, 1), "pir": round(g.val.sum() / n, 1),
             "fg2": f"{pct(g.fg2m.sum(), g.fg2a.sum())} ({g.fg2a.sum() / n:.1f})",
@@ -95,6 +127,20 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM) -> list[dict]:
             "ppg_lba": round(lba.pts.mean(), 1) if len(lba) else None, "ppg_ec": round(ec.pts.mean(), 1) if len(ec) else None,
             "sec_total": int(g.sec.sum()),
         })
+    played = {r["player_id"] for r in rows}
+    for pid, bio in bios.items():       # on the roster but no game yet: listed with 0 GP
+        if pid in played:
+            continue
+        rr = rost.loc[pid] if pid in rost.index else None
+        pos = "" if rr is None or pd.isna(rr.position) else str(rr.position)
+        rows.append({
+            "player_id": pid, "photo": pid in photos, "name": str(bio["surname"]).title(),
+            "pos": pos or (bio["role"] if isinstance(bio.get("role"), str) else ""), "height": _num(bio.get("height_cm")), "gp": 0,
+            "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
+            "country": bio["country"] if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
+            "birth_date": bio["birth_date"] if isinstance(bio.get("birth_date"), str) else "",
+            "min": "–", "pts": "–", "reb": "–", "ast": "–", "pir": "–", "fg2": "–", "fg3": "–", "ft": "–",
+            "ppg_lba": None, "ppg_ec": None, "sec_total": 0})
     rows.sort(key=lambda r: (POS_ORDER.get(r["pos"], 9), -r["sec_total"]))
     return rows
 
