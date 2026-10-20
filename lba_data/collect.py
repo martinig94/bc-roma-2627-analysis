@@ -26,6 +26,9 @@ GAMES_CSV = DATA / "games.csv"
 BOX_CSV = DATA / "box_scores.csv"
 PBP_CSV = DATA / "pbp.csv"
 TEAMS_CSV = DATA / "teams.csv"
+ROSTERS_CSV = DATA / "team_rosters.csv"
+ROSTER_FIELDS = ["year", "team_id", "team", "player_id", "name", "surname", "number", "role", "birth_date",
+                 "place_of_birth", "country", "height_cm", "weight_kg", "start_date", "end_date", "picture_key"]
 
 DEFAULT_CHAMP = 602   # Regular Season 2026/27
 DEFAULT_YEAR = 2026
@@ -46,6 +49,36 @@ def _existing_game_ids(path: Path) -> set[int]:
         return set()
     with path.open(newline="", encoding="utf-8") as fh:
         return {int(r["game_id"]) for r in csv.DictReader(fh) if r.get("game_id")}
+
+
+def roster_rows(team_id: int, team: str, payload: dict, year: int) -> list[dict]:
+    return [{"year": year, "team_id": team_id, "team": team, "player_id": p["id"], "name": p.get("name"),
+             "surname": p.get("surname"), "number": p.get("player_number"), "role": p.get("player_role"),
+             "birth_date": p.get("birth_date"), "place_of_birth": p.get("place_of_birth"), "country": p.get("country"),
+             "height_cm": p.get("height"), "weight_kg": p.get("weight"), "start_date": p.get("start_date"),
+             "end_date": p.get("end_date"), "picture_key": p.get("player_picture_key")} for p in payload.get("players", [])]
+
+
+def collect_rosters(teams: list[dict], year: int) -> None:
+    """The "giocatori" table of every team page -> data/team_rosters.csv (rewritten each run: rosters change in-season).
+    A team whose call fails keeps its rows from the previous file."""
+    prev = []
+    if ROSTERS_CSV.exists():
+        with ROSTERS_CSV.open(newline="", encoding="utf-8") as fh:
+            prev = [r for r in csv.DictReader(fh) if r["year"] == str(year)]
+    rows: list[dict] = []
+    for t in teams:
+        name = t.get("name") or t.get("full_name")
+        try:
+            got = roster_rows(t["id"], name, api.team_roster(t["id"], year), year)
+        except Exception as exc:  # noqa: BLE001 - the rest of the collection does not depend on it
+            print(f"roster {name}: FAILED {exc}", file=sys.stderr)
+            got = [r for r in prev if r["team_id"] == str(t["id"])]
+        rows += got
+        time.sleep(0.3)
+    if rows:
+        _write_csv(ROSTERS_CSV, ROSTER_FIELDS, rows)
+        print(f"rosters: {len(rows)} players, {len(teams)} teams", file=sys.stderr)
 
 
 def fetch_calendar(champ: int) -> list[dict]:
@@ -82,6 +115,8 @@ def main(argv: list[str] | None = None) -> int:
     teams = api.teams(args.year)
     _write_csv(TEAMS_CSV, ["team_id", "team", "year"],
                [{"team_id": t["id"], "team": t.get("name") or t.get("full_name"), "year": args.year} for t in teams])
+
+    collect_rosters(teams, args.year)
 
     calendar = fetch_calendar(args.champ)
     games = [game_row(m) for m in calendar]

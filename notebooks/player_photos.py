@@ -10,6 +10,7 @@ data/photos/<player_id>.jpg and committed, so building the site never needs the 
 from __future__ import annotations
 
 import argparse
+import csv
 import io
 import json
 from pathlib import Path
@@ -38,6 +39,15 @@ def photo_keys(team: str) -> dict[int, str]:
     return keys
 
 
+def roster_keys(team: str) -> dict[int, str]:
+    """player_id -> picture key from data/team_rosters.csv: the whole roster, also players who have not played yet."""
+    path = ROOT / "data" / "team_rosters.csv"
+    if not path.exists():
+        return {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        return {int(r["player_id"]): r["picture_key"] for r in csv.DictReader(fh) if r["team"] == team and r.get("picture_key")}
+
+
 def fetch(player_id: int, key: str) -> Path | None:
     dest = PHOTOS / f"{player_id}.jpg"
     if dest.exists():
@@ -58,7 +68,7 @@ def fetch(player_id: int, key: str) -> Path | None:
 
 def main_quiet(team: str) -> None:
     """Fetch the photos that are not cached yet (no-op offline); used by weekly_report.py."""
-    for pid, key in photo_keys(team).items():
+    for pid, key in {**photo_keys(team), **roster_keys(team)}.items():
         fetch(pid, key)
 
 
@@ -66,7 +76,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--team", default=weekly_config.load()["team"])
     a = ap.parse_args()
-    keys = photo_keys(a.team)
+    keys = {**photo_keys(a.team), **roster_keys(a.team)}
     for pid, key in keys.items():
         print(pid, fetch(pid, key))
 
