@@ -1,0 +1,75 @@
+player,play_type,poss,pts,ppp
+Hale,Spot Up,9,3,0.333
+Duke,Spot Up,10,11,1.1
+Roby,Spot Up,17,11,0.647
+Alviti,Spot Up,7,11,1.571
+Renfro,Spot Up,1,0,0.0
+Librizzi,Spot Up,10,5,0.5
+Nikolic,Spot Up,2,0,0.0
+Kamagate,Spot Up,1,2,2.0
+Ikangi,Spot Up,10,5,0.5
+Della Valle,Spot Up,1,2,2.0
+Villa,Spot Up,1,0,0.0
+Kangur,Spot Up,1,0,0.0
+Hale,Transition,8,10,1.25
+Duke,Transition,12,7,0.583
+Roby,Transition,6,4,0.667
+Alviti,Transition,3,2,0.667
+Renfro,Transition,2,0,0.0
+Librizzi,Transition,2,5,2.5
+Nikolic,Transition,6,8,1.333
+Kamagate,Transition,2,2,1.0
+Ikangi,Transition,1,3,3.0
+Villa,Transition,3,4,1.333
+Hale,P&R Ball Handler,42,40,0.952
+Duke,P&R Ball Handler,22,13,0.591
+Alviti,P&R Ball Handler,2,3,1.5
+Librizzi,P&R Ball Handler,10,8,0.8
+Della Valle,P&R Ball Handler,8,8,1.0
+Villa,P&R Ball Handler,1,1,1.0
+Hale,Isolation,16,22,1.375
+Duke,Isolation,1,0,0.0
+Roby,Isolation,1,0,0.0
+Librizzi,Isolation,3,0,0.0
+Della Valle,Isolation,3,0,0.0
+Hale,P&R Roll Man,1,0,0.0
+Roby,P&R Roll Man,4,2,0.5
+Renfro,P&R Roll Man,7,8,1.143
+Nikolic,P&R Roll Man,6,6,1.0
+Kamagate,P&R Roll Man,7,2,0.286
+Della Valle,P&R Roll Man,1,1,1.0
+Hale,Cut,3,4,1.333
+Duke,Cut,1,0,0.0
+Roby,Cut,3,2,0.667
+Alviti,Cut,4,2,0.5
+Renfro,Cut,12,18,1.5
+Nikolic,Cut,10,11,1.1
+Kamagate,Cut,7,11,1.571
+Ikangi,Cut,2,2,1.0
+Hale,Handoffs,4,0,0.0
+Duke,Handoffs,3,3,1.0
+Roby,Handoffs,1,0,0.0
+Alviti,Handoffs,1,3,3.0
+Della Valle,Handoffs,1,0,0.0
+Duke,Offensive Rebounds (Put Backs),3,4,1.333
+Roby,Offensive Rebounds (Put Backs),1,2,2.0
+Alviti,Offensive Rebounds (Put Backs),3,6,2.0
+Renfro,Offensive Rebounds (Put Backs),4,4,1.0
+Librizzi,Offensive Rebounds (Put Backs),1,1,1.0
+Nikolic,Offensive Rebounds (Put Backs),2,2,1.0
+Kamagate,Offensive Rebounds (Put Backs),5,6,1.2
+Villa,Offensive Rebounds (Put Backs),1,2,2.0
+Kamagate,Post-Up,2,2,1.0
+Hale,Off Screen,4,4,1.0
+Alviti,Off Screen,7,11,1.571
+Hale,Miscellaneous Plays,2,0,0.0
+Duke,Miscellaneous Plays,5,7,1.4
+Roby,Miscellaneous Plays,1,0,0.0
+Alviti,Miscellaneous Plays,4,1,0.25
+Renfro,Miscellaneous Plays,5,3,0.6
+Librizzi,Miscellaneous Plays,5,4,0.8
+Nikolic,Miscellaneous Plays,3,0,0.0
+Kamagate,Miscellaneous Plays,2,0,0.0
+Ikangi,Miscellaneous Plays,2,0,0.0
+Villa,Miscellaneous Plays,1,0,0.0
+Kangur,Miscellaneous Plays,1,0,0.0
