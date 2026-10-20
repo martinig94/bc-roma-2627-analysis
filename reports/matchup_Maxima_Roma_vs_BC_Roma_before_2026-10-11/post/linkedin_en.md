@@ -9,4 +9,4 @@
 Built only on box scores and play-by-play, so no comment here on schemes, coverages or set plays. Numbers say BC Roma by a handful in a high-80s game.
 
 Full analysis (EN): martinig94.github.io/about_me/Derby_Roma_2026.html
-Code and data: github.com/martinig94/lba-2627-data. For details on data and method, just message me.
+Code and data: github.com/martinig94/bc-roma-2627-analysis. For details on data and method, just message me.

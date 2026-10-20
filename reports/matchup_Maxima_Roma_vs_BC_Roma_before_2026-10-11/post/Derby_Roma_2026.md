@@ -7,7 +7,7 @@ nav-menu: false
 show_tile: false
 ---
 
-*Published 11 October 2026, a few hours before tip-off. [Versione italiana](/about_me/Derby_Roma_2026_it.html). Numbers are season to date: two LBA games per team plus two EuroCup games each, so read everything as early tendencies rather than established facts. Code and data: [lba-2627-data](https://github.com/martinig94/lba-2627-data).*
+*Published 11 October 2026, a few hours before tip-off. [Versione italiana](/about_me/Derby_Roma_2026_it.html). Numbers are season to date: two LBA games per team plus two EuroCup games each, so read everything as early tendencies rather than established facts. Code and data: [bc-roma-2627-analysis](https://github.com/martinig94/bc-roma-2627-analysis).*
 
 ## Why this game
 
