@@ -1,0 +1,29 @@
+team,side,metric,value,league_rank,gauge_pct_synergy,axis_left,axis_right
+Varese,offense,PPP,0.855,597,52.4,0.482,1.193
+Varese,offense,Possessions/game,90.5,273,28.3,71.3,139.0
+Varese,offense,eFG%,48.1,552,51.7,28.3,66.7
+Varese,offense,TO%,19.2,694,61.1,40.4,5.6
+Varese,offense,%FT,13.6,195,58.3,5.0,19.8
+Varese,offense,Score%,39.2,607,47.5,24.5,55.4
+Varese,offense,FG%,41.3,587,49.0,24.1,59.3
+Varese,defense,PPP,0.924,342,40.4,1.193,0.527
+Varese,defense,Possessions/game,91.7,531,75.1,152.0,71.7
+Varese,defense,eFG%,52.4,455,36.7,66.4,28.3
+Varese,defense,TO%,18.2,104,48.0,5.6,31.8
+Varese,defense,%FT,14.5,634,43.3,23.3,3.1
+Varese,defense,Score%,42.5,358,44.0,55.4,26.1
+Varese,defense,FG%,44.8,388,42.0,57.9,26.7
+BC Roma,offense,PPP,1.026,83,76.5,0.482,1.193
+BC Roma,offense,Possessions/game,88.9,354,25.9,71.3,139.0
+BC Roma,offense,eFG%,56.7,70,73.9,28.3,66.7
+BC Roma,offense,TO%,15.4,440,71.8,40.4,5.6
+BC Roma,offense,%FT,13.2,239,55.3,5.0,19.8
+BC Roma,offense,Score%,46.5,83,71.0,24.5,55.4
+BC Roma,offense,FG%,48.6,95,69.6,24.1,59.3
+BC Roma,defense,PPP,0.98,551,32.0,1.193,0.527
+BC Roma,defense,Possessions/game,92.0,543,74.7,152.0,71.7
+BC Roma,defense,eFG%,52.2,436,37.3,66.4,28.3
+BC Roma,defense,TO%,12.4,642,26.0,5.6,31.8
+BC Roma,defense,%FT,13.7,555,47.7,23.3,3.1
+BC Roma,defense,Score%,45.2,591,35.0,55.4,26.1
+BC Roma,defense,FG%,45.4,445,40.2,57.9,26.7

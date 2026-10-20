@@ -7,7 +7,7 @@ nav-menu: false
 show_tile: false
 ---
 
-*Pubblicato l'11 ottobre 2026, poche ore prima della palla a due. [English version](/about_me/Derby_Roma_2026.html). I numeri sono quelli della stagione fin qui: due partite di LBA per squadra più due di EuroCup ciascuna, quindi vanno letti come tendenze iniziali, non come certezze. Codice e dati: [lba-2627-data](https://github.com/martinig94/lba-2627-data).*
+*Pubblicato l'11 ottobre 2026, poche ore prima della palla a due. [English version](/about_me/Derby_Roma_2026.html). I numeri sono quelli della stagione fin qui: due partite di LBA per squadra più due di EuroCup ciascuna, quindi vanno letti come tendenze iniziali, non come certezze. Codice e dati: [bc-roma-2627-analysis](https://github.com/martinig94/bc-roma-2627-analysis).*
 
 ## Perché questa partita
 

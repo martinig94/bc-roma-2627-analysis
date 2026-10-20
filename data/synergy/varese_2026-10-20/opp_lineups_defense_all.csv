@@ -1,0 +1,31 @@
+ids,poss,opp_pts,opp_fgm,opp_fga,opp_to,has_dv,lineup,opp_ppp
+2-3-11-12-17,28,18,7,20,6,False,Alviti / Duke / Nikolic / Hale / Kamagate,0.6428571428571429
+2-5-11-12-15,17,20,6,11,2,False,Alviti / Villa / Nikolic / Hale / Renfro,1.1764705882352942
+2-3-11-12-15,17,21,7,13,1,False,Alviti / Duke / Nikolic / Hale / Renfro,1.2352941176470589
+2-8-11-12-15,16,17,5,13,1,True,Alviti / Della Valle / Nikolic / Hale / Renfro,1.0625
+2-11-12-13-15,14,8,3,9,4,False,Alviti / Nikolic / Hale / Librizzi / Renfro,0.5714285714285714
+2-3-12-15-22,13,11,3,8,4,False,Alviti / Duke / Hale / Renfro / Roby,0.8461538461538461
+2-3-12-17-22,13,13,6,10,2,False,Alviti / Duke / Hale / Kamagate / Roby,1.0
+3-13-15-22-35,12,10,4,8,3,False,Duke / Librizzi / Renfro / Roby / Ikangi,0.8333333333333334
+3-13-17-22-35,12,13,5,7,1,False,Duke / Librizzi / Kamagate / Roby / Ikangi,1.0833333333333333
+3-11-13-17-35,12,6,3,10,2,False,Duke / Nikolic / Librizzi / Kamagate / Ikangi,0.5
+2-12-15-22-35,11,11,5,10,1,False,Alviti / Hale / Renfro / Roby / Ikangi,1.0
+12-13-15-22-35,9,6,2,5,4,False,Hale / Librizzi / Renfro / Roby / Ikangi,0.6666666666666666
+3-12-15-22-35,9,9,2,5,1,False,Duke / Hale / Renfro / Roby / Ikangi,1.0
+3-8-15-22-35,9,2,1,7,2,True,Duke / Della Valle / Renfro / Roby / Ikangi,0.2222222222222222
+3-11-13-22-35,8,7,2,5,2,False,Duke / Nikolic / Librizzi / Roby / Ikangi,0.875
+2-3-11-12-35,8,2,1,4,4,False,Alviti / Duke / Nikolic / Hale / Ikangi,0.25
+2-11-12-13-17,8,5,0,4,1,False,Alviti / Nikolic / Hale / Librizzi / Kamagate,0.625
+3-8-11-22-35,8,8,3,5,2,True,Duke / Della Valle / Nikolic / Roby / Ikangi,1.0
+2-11-12-15-35,8,6,1,6,0,False,Alviti / Nikolic / Hale / Renfro / Ikangi,0.75
+3-11-12-15-35,8,6,2,4,3,False,Duke / Nikolic / Hale / Renfro / Ikangi,0.75
+3-11-13-15-35,6,12,5,5,1,False,Duke / Nikolic / Librizzi / Renfro / Ikangi,2.0
+3-11-12-15-22,6,6,2,5,0,False,Duke / Nikolic / Hale / Renfro / Roby,1.0
+2-12-13-17-22,6,8,2,3,1,False,Alviti / Hale / Librizzi / Kamagate / Roby,1.3333333333333333
+3-12-17-22-35,5,5,1,3,1,False,Duke / Hale / Kamagate / Roby / Ikangi,1.0
+2-3-11-12-22,5,7,2,4,0,False,Alviti / Duke / Nikolic / Hale / Roby,1.4
+5-13-17-19-22,5,4,1,1,2,False,Villa / Librizzi / Kamagate / Kangur / Roby,0.8
+2-3-11-13-17,5,8,2,3,1,False,Alviti / Duke / Nikolic / Librizzi / Kamagate,1.6
+2-3-13-17-22,5,1,0,4,0,False,Alviti / Duke / Librizzi / Kamagate / Roby,0.2
+8-11-13-15-35,5,3,0,3,0,True,Della Valle / Nikolic / Librizzi / Renfro / Ikangi,0.6
+5-12-13-17-22,5,5,1,2,1,False,Villa / Hale / Librizzi / Kamagate / Roby,1.0
