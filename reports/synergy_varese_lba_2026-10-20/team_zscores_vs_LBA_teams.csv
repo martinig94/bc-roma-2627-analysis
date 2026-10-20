@@ -1,0 +1,49 @@
+team,side,metric,value,league_mean,league_sd,z_better_is_higher,basis
+BC Roma,offense,PPP,1.026,0.988,0.085,0.45,all_games
+BC Roma,offense,eFG%,56.7,53.831,4.55,0.63,all_games
+BC Roma,offense,TO%,15.4,14.594,2.241,-0.36,all_games
+BC Roma,offense,%FT,13.2,13.513,2.023,-0.154,all_games
+BC Roma,offense,Score%,46.5,45.138,3.803,0.358,all_games
+BC Roma,offense,FG%,48.6,46.363,4.231,0.529,all_games
+Varese,offense,PPP,0.855,0.988,0.085,-1.569,all_games
+Varese,offense,eFG%,48.1,53.831,4.55,-1.26,all_games
+Varese,offense,TO%,19.2,14.594,2.241,-2.056,all_games
+Varese,offense,%FT,13.6,13.513,2.023,0.043,all_games
+Varese,offense,Score%,39.2,45.138,3.803,-1.561,all_games
+Varese,offense,FG%,41.3,46.363,4.231,-1.197,all_games
+BC Roma,defense,PPP,0.98,0.988,0.072,0.111,all_games
+BC Roma,defense,eFG%,52.2,53.812,3.957,0.408,all_games
+BC Roma,defense,TO%,12.4,14.612,2.421,-0.914,all_games
+BC Roma,defense,%FT,13.7,13.512,2.572,-0.073,all_games
+BC Roma,defense,Score%,45.2,45.119,2.694,-0.03,all_games
+BC Roma,defense,FG%,45.4,46.306,3.571,0.254,all_games
+Varese,defense,PPP,0.924,0.988,0.072,0.884,all_games
+Varese,defense,eFG%,52.4,53.812,3.957,0.357,all_games
+Varese,defense,TO%,18.2,14.612,2.421,1.482,all_games
+Varese,defense,%FT,14.5,13.512,2.572,-0.384,all_games
+Varese,defense,Score%,42.5,45.119,2.694,0.972,all_games
+Varese,defense,FG%,44.8,46.306,3.571,0.422,all_games
+BC Roma,offense,PPP,1.101,0.988,0.085,1.336,serieA_only
+BC Roma,offense,eFG%,62.0,53.831,4.55,1.795,serieA_only
+BC Roma,offense,TO%,14.5,14.594,2.241,0.042,serieA_only
+BC Roma,offense,%FT,11.5,13.513,2.023,-0.995,serieA_only
+BC Roma,offense,Score%,49.4,45.138,3.803,1.121,serieA_only
+BC Roma,offense,FG%,52.6,46.363,4.231,1.474,serieA_only
+Varese,offense,PPP,0.885,0.988,0.085,-1.215,serieA_only
+Varese,offense,eFG%,50.4,53.831,4.55,-0.754,serieA_only
+Varese,offense,TO%,18.6,14.594,2.241,-1.788,serieA_only
+Varese,offense,%FT,13.1,13.513,2.023,-0.204,serieA_only
+Varese,offense,Score%,40.7,45.138,3.803,-1.167,serieA_only
+Varese,offense,FG%,43.8,46.363,4.231,-0.606,serieA_only
+BC Roma,defense,PPP,1.058,0.988,0.072,-0.967,serieA_only
+BC Roma,defense,eFG%,54.0,53.812,3.957,-0.047,serieA_only
+BC Roma,defense,TO%,9.7,14.612,2.421,-2.029,serieA_only
+BC Roma,defense,%FT,16.4,13.512,2.572,-1.123,serieA_only
+BC Roma,defense,Score%,48.9,45.119,2.694,-1.404,serieA_only
+BC Roma,defense,FG%,47.1,46.306,3.571,-0.222,serieA_only
+Varese,defense,PPP,0.914,0.988,0.072,1.022,serieA_only
+Varese,defense,eFG%,50.4,53.812,3.957,0.862,serieA_only
+Varese,defense,TO%,18.1,14.612,2.421,1.441,serieA_only
+Varese,defense,%FT,16.2,13.512,2.572,-1.045,serieA_only
+Varese,defense,Score%,43.2,45.119,2.694,0.712,serieA_only
+Varese,defense,FG%,44.1,46.306,3.571,0.618,serieA_only
