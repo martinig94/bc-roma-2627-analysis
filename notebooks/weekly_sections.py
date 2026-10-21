@@ -98,7 +98,7 @@ def _num(v) -> str:
 
 
 def ec_people(data: Path, team: str) -> dict[str, dict]:
-    """EuroCup club page of a team (data/eurocup/people.csv): last name -> {pos, height, photo}, for the players of teams that have no LBA data.
+    """EuroCup club page of a team (data/eurocup/people.csv): last name -> {pos, height, number, photo}, for the players of teams that have no LBA data.
     Last names that two players share are left out (no way to tell them apart in the box score)."""
     from player_names import photo_name
     people, results = data / "eurocup" / "people.csv", data / "eurocup" / "results.csv"
@@ -113,6 +113,7 @@ def ec_people(data: Path, team: str) -> dict[str, dict]:
         clean = re.sub(r"\b(jr|sr|ii|iii)\b\.?", "", unicodedata.normalize("NFKD", r.player).encode("ascii", "ignore").decode().lower()).split()
         stem = photo_name(r.player)
         info = {"pos": r.position if isinstance(r.position, str) else "", "height": "" if pd.isna(r.height_cm) or r.height_cm < 150 else str(int(r.height_cm)),
+                "number": _num(getattr(r, "number", None)),
                 "photo": stem if (data / "eurocup" / "photos" / f"{stem}.jpg").exists() else None}
         for k in range(1, len(clean)):                       # every tail of the name: "de laat", "laat"
             key = " ".join(clean[k:])
@@ -142,12 +143,13 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
         e = ecp.get(re.sub(r"\b(jr|sr|ii|iii)\b\.?", "", sur.lower()).strip())
         if e:
             pos, ht = pos or e["pos"], ht or e["height"]
+        num = _num(bio.get("number")) or (e["number"] if e else "")
         n = len(g); fga = g.fg2a.sum() + g.fg3a.sum()
         lba, ec = g[g.competition == "LBA"], g[g.competition == "EC"]
         rows.append({
             "player_id": pid if pid is not None or not (e and e["photo"]) else f"ec_{e['photo']}",
             "photo": pid in photos or bool(e and e["photo"]), "name": sur.title(), "pos": pos, "height": ht, "gp": n,
-            "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
+            "number": num, "age": age_on(bio.get("birth_date"), asof),
             "country": bio.get("country") if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
             "birth_date": bio.get("birth_date") if isinstance(bio.get("birth_date"), str) else "",
             "min": round(g.sec.sum() / 60 / n, 1), "pts": round(g.pts.sum() / n, 1), "reb": round((g.oreb + g.dreb).sum() / n, 1),
