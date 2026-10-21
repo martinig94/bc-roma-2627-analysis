@@ -47,3 +47,8 @@ gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
 46,3,2026-10-14,ULM,Ratiopharm Ulm,102,BOS,Bosna Bh Telecom Sarajevo,93,True
 47,3,2026-10-13,BAH,Bahcesehir College Istanbul,100,MAN,Kids&Us Manresa,88,True
 48,3,2026-10-13,BCR,BC Roma,77,BLK,Balkan Botevgrad,72,True
+50,4,2026-10-20,RTK,Rostock Seawolves,79,ARI,Aris Thessaloniki,110,True
+55,4,2026-10-20,TTK,Turk Telekom Ankara,84,SIA,Siauliai Basketball,94,True
+59,4,2026-10-20,BUD,Buducnost Voli Podgorica,104,KLA,Neptunas Klaipeda,89,True
+61,4,2026-10-20,BLK,Balkan Botevgrad,57,LKB,Lietkabelis Panevezys,64,True
+62,4,2026-10-20,MAN,Kids&Us Manresa,108,BCR,BC Roma,88,True
