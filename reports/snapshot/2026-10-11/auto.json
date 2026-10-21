@@ -11,7 +11,7 @@
   "time": "18:15",
   "venue": "PalaEur",
   "played": true,
-  "version": 5,
+  "version": 6,
   "n_before": 22,
   "opponent_analysis": "matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11",
   "record": "1-1",
@@ -58,6 +58,8 @@
       "2P%": 73.2,
       "FT%": 66.7,
       "Assists per game": 24.5,
+      "Offensive rebounds per game": 13.5,
+      "Defensive rebounds per game": 27.5,
       "Opp. eFG%": 50.8,
       "Opp. TOV% (forced)": 11.1,
       "DREB%": 71.4
@@ -80,6 +82,8 @@
       "2P%": 60.6,
       "FT%": 80.5,
       "Assists per game": 16.0,
+      "Offensive rebounds per game": 12.0,
+      "Defensive rebounds per game": 24.0,
       "Opp. eFG%": 54.5,
       "Opp. TOV% (forced)": 14.6,
       "DREB%": 60.8

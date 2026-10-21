@@ -408,6 +408,7 @@ def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)
         "3PA per game": r(mine.fg3a.mean()), "3P%": r(100 * mine.fg3m.sum() / mine.fg3a.sum()),
         "2P%": r(100 * mine.fg2m.sum() / mine.fg2a.sum()), "FT%": r(100 * mine.ftm.sum() / mine.fta.sum()),
         "Assists per game": r(mine.ast.mean()),
+        "Offensive rebounds per game": r(mine.oreb.mean()), "Defensive rebounds per game": r(mine.dreb.mean()),
         "Opp. eFG%": r(100 * (opp.fg2m + 1.5 * opp.fg3m).sum() / ofga.sum()),
         "Opp. TOV% (forced)": r(100 * opp.tov.sum() / po.sum()),
         "DREB%": r(100 * mine.dreb.sum() / (mine.dreb + opp.oreb).sum()),
