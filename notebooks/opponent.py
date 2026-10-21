@@ -20,6 +20,7 @@ from pathlib import Path
 
 import pandas as pd
 
+import lba_style
 import pages
 import player_photos
 import standings as st
@@ -32,7 +33,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NB = ROOT / "notebooks"
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 7   # bump when the generated data changes shape: weekly.py regenerates older analyses
+VERSION = 8   # bump when the generated data changes shape: weekly.py regenerates older analyses
 
 
 def folder_name(home: str, away: str, date: str) -> str:
@@ -110,6 +111,8 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
 
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
+    lba_style.STAMP_NOTE = f"games before {pd.Timestamp(date):%d %b %Y} (pre-match snapshot)"
+    ws.fig_starting_fives(xbox, opp, folder)
     fin = st.finished(games, date)
     lba_ids = [int(x) for x in fin[(fin.home_team == opp) | (fin.away_team == opp)].game_id]
     pbp = pd.read_csv(data / "pbp.csv")
@@ -171,11 +174,14 @@ def generate_eurocup(date: str, team: str = TEAM, data: Path = ROOT / "data", fo
     run("lineups_report.py", "--team", team, "--team", opp, "--before", date, "--out", str(folder), "--competition", "EC")
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
+    lba_style.STAMP_NOTE, lba_style.SOURCE_NOTE = f"games before {pd.Timestamp(date):%d %b %Y} (pre-match snapshot)", "EuroLeague live API"
+    ws.fig_starting_fives(xbox, opp, folder)
     ec_box = xbox[xbox.competition == "EC"]
     ec_ids = sorted(ec_box[(ec_box.team == opp) & (ec_box.row_type == "total")].game_id.unique())
     pairs = ws.assist_pairs(pd.read_csv(data / "eurocup" / "pbp.csv"), ec_ids, opp)
     box_ast = int(ec_box[(ec_box.game_id.isin(ec_ids)) & (ec_box.team == opp) & (ec_box.row_type == "total")].ast.sum())
     assist_top = ws.fig_assists(pairs, box_ast, folder, opp, "EuroCup") if len(pairs) and box_ast else []
+    lba_style.SOURCE_NOTE = "legabasket.it play-by-play"
     rnd_no = None
     sched = results[(results.date == date) & ((results.home == opp) | (results.away == opp))]
     if len(sched):

@@ -58,6 +58,21 @@ Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = 
 Passer (rows) to scorer (columns), assisted baskets linked in the {{ 'EuroCup' if a.competition == 'EuroCup' else 'LBA' }} play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% else %}*No assist matrix yet: too few assisted baskets linked in the {{ 'EuroCup' if a.competition == 'EuroCup' else 'LBA' }} play-by-play before this game.*{% endif %}
 {%- endmacro %}
 
+{% macro snapshot_assists(a, files, author, kind) -%}
+{% if a.assist_top %}{% if a.assist_top_ec %}### LBA
+
+{% endif %}![assist matrix](assists.png)
+
+Passer (rows) to scorer (columns), assisted baskets linked in the LBA play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% else %}*No LBA assist matrix yet: too few assisted baskets linked in the LBA play-by-play before this game.*{% endif %}
+{% if a.assist_top_ec %}
+### EuroCup
+
+![assist matrix, EuroCup](assists_eurocup.png)
+
+Same, from the EuroCup play-by-play (EuroLeague API; the assist is linked to the made basket before it). Most frequent pairs: {% for t in a.assist_top_ec[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}
+{% endif %}
+{%- endmacro %}
+
 {% macro analysis_turnovers(a, files, author, kind) -%}
 {% if a.turnovers %}| Player | GP | MIN | TO | TO/min | Most TO in a game |
 |---|---:|---:|---:|---:|---|
@@ -68,9 +83,18 @@ TO = turnovers in the games before this one (league and EuroCup where the team p
 {%- endmacro %}
 
 {% macro zones(a, files, author, kind) -%}
-![shooting by zone](zones.png)
+{% if a.zone_share_ec %}### LBA
+
+{% endif %}![shooting by zone](zones.png)
 
 ![shot distribution by zone](zone_share.png)
+{% if a.zone_share_ec %}
+### EuroCup
+
+![shooting by zone, EuroCup](zones_eurocup.png)
+
+![shot distribution by zone, EuroCup](zone_share_eurocup.png)
+{% endif %}
 {%- endmacro %}
 
 {% macro efficiency(a, files, author, kind) -%}

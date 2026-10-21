@@ -131,6 +131,7 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   starting five and bench · scoring sources, tendencies and shooting maps · key players (shooting, other stats) · ball movement (assists,
   turnovers) · lineups · what to expect · highlights. A section that is still empty shows a **grey box** ("This section will be filled when the
   game is reviewed"): the `{{ pending }}` line of the page file; replace it with your text. Change the template and only new pages change.
+* **Starting fives**: every analysis has the grid of the opponent's last 5 games (LBA and EuroCup), `11_starting_fives.png`: starter (S, minutes), bench minutes, absences. The snapshots show the assist matrix and the shot zones of BC Roma for LBA and, when it has EuroCup games, for the EuroCup too (`assists_eurocup.png`, `zones_eurocup.png`).
 * **EuroCup analysis**: a EuroCup game gets exactly the same analysis as an LBA game (same sections, same figures: hot spots, assists, lineups
   included), built only from EuroCup data (the other EuroCup teams are the league reference). The data comes from the EuroLeague API through the
   [`euroleague-api`](https://github.com/giasemidis/euroleague_api) package: box scores and shot zones in `data/eurocup_2026_raw.txt`, and

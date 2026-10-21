@@ -1,6 +1,6 @@
 title: 
 reviewed: no
-generated: 79f76699a2
+generated: 78b64dcf8c
 
 <!--
 HOW TO EDIT THIS PAGE (this comment is not shown on the site)
@@ -17,7 +17,7 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
 - Highlight with ==text==. When you are done, set "reviewed: yes" at the top of the file.
 Blocks of this page: {{ header }} {{ standings }} {{ comparison }} {{ roster }} {{ assists }} {{ turnovers }} {{ lineups }} {{ pending }} and
 {{ figure: name }} for any generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting,
-06_hot_spots, 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors).
+06_hot_spots, 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors, 11_starting_fives).
 THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, same order); only the content changes.
 -->
 
@@ -54,6 +54,8 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 ## Starting five and bench
 
 {{ pending }}
+
+{{ figure: 11_starting_fives }}
 
 {{ figure: 02_starters_bench }}
 

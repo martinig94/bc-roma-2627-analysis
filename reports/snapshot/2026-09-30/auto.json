@@ -11,7 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
-  "version": 4,
+  "version": 5,
   "n_before": 9,
   "opponent_analysis": null,
   "record": "0-1",
@@ -449,6 +449,8 @@
       "I": 2.9
     }
   },
+  "assist_top_ec": [],
+  "zone_share_ec": null,
   "ts_pir_lba": {
     "file": "ts_pir_lba.png",
     "players": 8,

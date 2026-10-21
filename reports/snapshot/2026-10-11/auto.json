@@ -11,7 +11,7 @@
   "time": "18:15",
   "venue": "PalaEur",
   "played": true,
-  "version": 4,
+  "version": 5,
   "n_before": 22,
   "opponent_analysis": "matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11",
   "record": "1-1",
@@ -479,6 +479,62 @@
       "I": 6.0
     }
   },
+  "assist_top_ec": [
+    {
+      "passer": "Mannion",
+      "scorer": "Simonovic",
+      "n": 4
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Simonovic",
+      "n": 2
+    },
+    {
+      "passer": "Mannion",
+      "scorer": "Ayayi",
+      "n": 2
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Strautins",
+      "n": 2
+    },
+    {
+      "passer": "Mannion",
+      "scorer": "Watson",
+      "n": 2
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Mezzanotte",
+      "n": 1
+    }
+  ],
+  "zone_share_ec": {
+    "season": {
+      "A": 23.4,
+      "B": 14.5,
+      "C": 10.5,
+      "D": 0.8,
+      "E": 1.6,
+      "F": 2.4,
+      "G": 11.3,
+      "H": 25.8,
+      "I": 9.7
+    },
+    "league": {
+      "A": 18.9,
+      "B": 19.6,
+      "C": 14.0,
+      "D": 1.4,
+      "E": 7.7,
+      "F": 0.7,
+      "G": 4.9,
+      "H": 23.8,
+      "I": 9.1
+    }
+  },
   "ts_pir_lba": {
     "file": "ts_pir_lba.png",
     "players": 9,
@@ -488,7 +544,7 @@
   "ts_pir_ec": {
     "file": "ts_pir_eurocup.png",
     "players": 9,
-    "others": 10,
+    "others": 311,
     "games": 2
   },
   "standings_table": {

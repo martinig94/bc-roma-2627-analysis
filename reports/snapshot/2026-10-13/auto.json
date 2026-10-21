@@ -11,7 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
-  "version": 4,
+  "version": 5,
   "n_before": 29,
   "opponent_analysis": null,
   "record": "1-2",
@@ -468,6 +468,62 @@
       "G": 7.0,
       "H": 26.5,
       "I": 6.5
+    }
+  },
+  "assist_top_ec": [
+    {
+      "passer": "Mannion",
+      "scorer": "Simonovic",
+      "n": 4
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Simonovic",
+      "n": 2
+    },
+    {
+      "passer": "Mannion",
+      "scorer": "Ayayi",
+      "n": 2
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Strautins",
+      "n": 2
+    },
+    {
+      "passer": "Mannion",
+      "scorer": "Watson",
+      "n": 2
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Mezzanotte",
+      "n": 1
+    }
+  ],
+  "zone_share_ec": {
+    "season": {
+      "A": 23.4,
+      "B": 14.5,
+      "C": 10.5,
+      "D": 0.8,
+      "E": 1.6,
+      "F": 2.4,
+      "G": 11.3,
+      "H": 25.8,
+      "I": 9.7
+    },
+    "league": {
+      "A": 18.9,
+      "B": 19.6,
+      "C": 14.0,
+      "D": 1.4,
+      "E": 7.7,
+      "F": 0.7,
+      "G": 4.9,
+      "H": 23.8,
+      "I": 9.1
     }
   },
   "ts_pir_lba": {
