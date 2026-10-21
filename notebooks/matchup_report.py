@@ -30,6 +30,7 @@ import numpy as np
 import pandas as pd
 
 import lba_style
+from player_names import ec_surname
 import standings as lba_standings
 from lba_style import (save_fig, draw_zone_fill, BLUE, DPI, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS, ZONE_LABELS,
                        assign_zone_arr, draw_half_court, mins, shots_cm, style_axes, team_color)
@@ -72,7 +73,6 @@ def short(name: str) -> str:
 # ── EuroCup file ────────────────────────────────────────────────────────────────
 EC_TEAM_MAP = {"ROMA BASKETBALL": "BC Roma", "MAXIMA ROMA": "Maxima Roma"}
 EC_CODE_MAP = {"BCR": "BC Roma", "MRO": "Maxima Roma"}
-EC_NAME_FIX = {"BONACINI": "BONACCINI"}   # EuroCup spelling -> Legabasket spelling
 EC_DATES = {6: "2026-09-30", 16: "2026-09-30", 24: "2026-10-06", 29: "2026-10-07"}   # gamecode -> date
 
 
@@ -102,8 +102,7 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
         else:
             m = f[4]
             sec = 0 if m in ("DNP", "") else int(m.split(":")[0]) * 60 + int(m.split(":")[1])
-            surname = f[2].split(",")[0].replace(" JR.", "").replace(" JR", "").replace(" III", "").strip()
-            surname = EC_NAME_FIX.get(surname, surname)
+            surname = ec_surname(f[2])
             rows.append(dict(game_id=f"EC{gc}", competition="EC", team=team, row_type="player", player_surname=surname,
                              starter=int(f[3]), sec=sec, pts=int(f[5]), fg2m=int(f[6]), fg2a=int(f[7]), fg3m=int(f[8]),
                              fg3a=int(f[9]), ftm=int(f[10]), fta=int(f[11]), oreb=int(f[12]), dreb=int(f[13]),
@@ -117,6 +116,7 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
             sel = (box.game_id == f"EC{gc}") & (box.team == team)
             box.loc[sel, "opponent"] = other[0]; box.loc[sel, "opp_pts"] = other[1]
     box["reb"] = box.oreb + box.dreb
+    box["home"] = [int(games[int(g[2:])][0][0] == t) for g, t in zip(box.game_id, box.team)]    # the first team listed in a game is the home team
     dates, codes = dict(EC_DATES), dict(EC_CODE_MAP)
     feed = path.parent / "eurocup" / "results.csv"            # every game of the season: gamecode -> date, club code -> team name
     if feed.exists():
@@ -348,11 +348,11 @@ def fig_hot_spots(pbp, A, B, out):
     fig, axes = grid(2, figsize=(15, 8))
     for ax, team in zip(axes, (A, B)):
         st = s[s.team == team]
-        mesh = plot_zone_heatmap(ax, st, f"{team} — {int(st.made.sum())}/{len(st)} FG in {st.game_id.nunique()} LBA games", ref=ref)
+        mesh = plot_zone_heatmap(ax, st, f"{team} — {int(st.made.sum())}/{len(st)} FG in {st.game_id.nunique()} {COMP_NAME} games", ref=ref)
     if not SOCIAL:
         cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
-    sup(fig, "Hot spots — FG% by zone, LBA games (third line = FG% of all other LBA teams in that zone)",
-        "Hot spots — FG% by zone, LBA games (red = cold, green = hot)")
+    sup(fig, f"Hot spots — FG% by zone, {COMP_NAME} games (third line = FG% of all other {COMP_NAME} teams in that zone)",
+        f"Hot spots — FG% by zone, {COMP_NAME} games (red = cold, green = hot)")
     save(fig, out / "06_hot_spots.png"); plt.close(fig)
     # per-zone attempt share for the text
     share = {tm: s[s.team == tm].zone.value_counts(normalize=True).round(3).to_dict() for tm in (A, B)}
@@ -514,7 +514,7 @@ def main():
     ap.add_argument("--eurocup", default=None, help="path to the EuroCup raw file (default data/eurocup_2026_raw.txt)")
     ap.add_argument("--no-eurocup", action="store_true")
     ap.add_argument("--competition", choices=["LBA", "EC"], default="LBA",
-                    help="EC: a EuroCup game: EuroCup box scores only, the EuroCup group table, the other EuroCup teams as the league (no hot spots: no coordinates)")
+                    help="EC: a EuroCup game: EuroCup box scores and play-by-play only, the EuroCup group table, the other EuroCup teams as the league")
     ap.add_argument("--out", default="reports")
     ap.add_argument("--social", action="store_true", help="also write portrait 4:5 (1080x1350) versions of figures 01, 04, 06, 09 into <out>/social/")
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: use only games played before this date (frozen pre-match "
@@ -527,7 +527,7 @@ def main():
     if a.competition == "EC":
         global COMP, COMP_NAME
         COMP, COMP_NAME = "EC", "EuroCup"
-        box, pbp = box.iloc[0:0], pbp.iloc[0:0]
+        box, pbp = box.iloc[0:0], pbp.iloc[0:0]          # replaced below by the EuroCup box scores and play-by-play
     import lba_style
     if a.before:
         from datetime import date as _d
@@ -543,6 +543,9 @@ def main():
         if a.before:
             ec_box = ec_box[ec_box.date < a.before]; ec_zones = ec_zones[ec_zones.game_id.isin(ec_box.game_id.unique())]
         box = pd.concat([box, ec_box], ignore_index=True)
+        if a.competition == "EC":
+            pbp = pd.read_csv(data / "eurocup" / "pbp.csv")
+            pbp = pbp[pbp.game_id.isin(ec_box.game_id.unique())]
     A, B = a.home, a.away
     if a.competition == "EC":
         import eurocup
@@ -559,7 +562,7 @@ def main():
     fig_minutes(box, A, B, out)
     srcA, srcB, lg_src = fig_scoring_sources(box, pbp, ec_zones, A, B, out)
     lines = fig_shooting(box, A, B, out)
-    share = fig_hot_spots(pbp, A, B, out) if COMP == "LBA" else {}      # the EuroCup shots carry zones, not coordinates
+    share = fig_hot_spots(pbp, A, B, out)
     pts = fig_key_players(box, A, B, out)
     fig_shot_distribution(box, A, B, out)
     basic = fig_basic_stats(box, A, B, out)

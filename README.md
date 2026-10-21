@@ -131,8 +131,11 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   starting five and bench · scoring sources, tendencies and shooting maps · key players (shooting, other stats) · ball movement (assists,
   turnovers) · lineups · what to expect · highlights. A section that is still empty shows a **grey box** ("This section will be filled when the
   game is reviewed"): the `{{ pending }}` line of the page file; replace it with your text. Change the template and only new pages change.
-* **EuroCup analysis**: a EuroCup game gets the same analysis, built only from EuroCup data (the other EuroCup teams are the league reference; no
-  hot spots, assists or lineups, which need the LBA play-by-play). Add the game to `weekly/schedule.csv` with the `analysis` column set to
+* **EuroCup analysis**: a EuroCup game gets exactly the same analysis as an LBA game (same sections, same figures: hot spots, assists, lineups
+  included), built only from EuroCup data (the other EuroCup teams are the league reference). The data comes from the EuroLeague API through the
+  [`euroleague-api`](https://github.com/giasemidis/euroleague_api) package: box scores and shot zones in `data/eurocup_2026_raw.txt`, and
+  `data/eurocup/pbp.csv`, the play-by-play in the same columns as the LBA `data/pbp.csv` (shot positions from the package's shot data, assists
+  linked to the preceding made basket), so the LBA code reads both. Both files are appended by `eurocup_fetch.py` in the daily run. Add the game to `weekly/schedule.csv` with the `analysis` column set to
   `matchup_<home>_vs_<away>_before_<date>` (team names as in `data/eurocup/results.csv`, spaces as `_`); the daily run, or
   `python notebooks/opponent.py --eurocup <date>`, generates it and creates `weekly/games/<date>/analysis.md`. A folder with a hand-written README or
   `document.md` there is kept as it is (Manresa).

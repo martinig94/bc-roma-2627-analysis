@@ -135,8 +135,8 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
 
 
 def generate_eurocup(date: str, team: str = TEAM, data: Path = ROOT / "data", force: bool = False) -> Path | None:
-    """The same analysis for a EuroCup game (the game of `date` in team_games.py): EuroCup box scores only, the EuroCup group table, the other
-    EuroCup teams as the league. No lineups, assists or hot spots (the play-by-play with names and coordinates is the LBA's)."""
+    """The same analysis for a EuroCup game (the game of `date` in team_games.py), built from the EuroCup data only (box scores, shots and
+    play-by-play from the EuroLeague API): the EuroCup group table, the other EuroCup teams as the league."""
     import eurocup
     tg = tgm.team_games(data, team)
     rows = tg[(tg.competition == "EuroCup") & (tg.date == date)]
@@ -168,8 +168,14 @@ def generate_eurocup(date: str, team: str = TEAM, data: Path = ROOT / "data", fo
     if st.finished(frame, date).empty:
         raise SystemExit(f"no EuroCup games before {date}")
     run("matchup_report.py", "--home", home_team, "--away", away_team, "--before", date, "--out", "reports", "--competition", "EC")
+    run("lineups_report.py", "--team", team, "--team", opp, "--before", date, "--out", str(folder), "--competition", "EC")
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
+    ec_box = xbox[xbox.competition == "EC"]
+    ec_ids = sorted(ec_box[(ec_box.team == opp) & (ec_box.row_type == "total")].game_id.unique())
+    pairs = ws.assist_pairs(pd.read_csv(data / "eurocup" / "pbp.csv"), ec_ids, opp)
+    box_ast = int(ec_box[(ec_box.game_id.isin(ec_ids)) & (ec_box.team == opp) & (ec_box.row_type == "total")].ast.sum())
+    assist_top = ws.fig_assists(pairs, box_ast, folder, opp, "EuroCup") if len(pairs) and box_ast else []
     rnd_no = None
     sched = results[(results.date == date) & ((results.home == opp) | (results.away == opp))]
     if len(sched):
@@ -179,7 +185,7 @@ def generate_eurocup(date: str, team: str = TEAM, data: Path = ROOT / "data", fo
         "opponent": wr.short(opp), "opponent_full": opp, "home": at_home, "home_team": home_team, "away_team": away_team,
         "date": date, "time": g.time, "venue": None, "eurocup": True, "eurocup_teams": [wr.short(team), wr.short(opp)], "league": "EuroCup",
         "roster": roster, "comparison": comparison(xbox, frame, date, team, opp, ("EC",)),
-        "assist_top": [], "turnovers": ws.turnover_table(xbox, opp),
+        "assist_top": assist_top, "turnovers": ws.turnover_table(xbox, opp),
         "standings_md": (folder / "standings.md").read_text(encoding="utf-8"),
     }
     (folder / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")

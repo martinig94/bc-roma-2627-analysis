@@ -24,6 +24,7 @@ import io
 import re
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 import standings as st
@@ -161,6 +162,80 @@ def update_raw(results: pd.DataFrame, path: Path = RAW) -> list[int]:
     if added:
         i = lines.index("ZONES")
         path.write_text("\n".join(lines[:i] + new_box + lines[i:] + new_zones) + "\n", encoding="utf-8")
+    return added
+
+
+# ── play-by-play (same columns as data/pbp.csv, so the LBA code reads it unchanged) ──────────────────
+PBP = DATA / "pbp.csv"
+PBP_EVENT = {"2FGM": "2 punti segnato", "2FGA": "2 punti sbagliato", "3FGM": "3 punti segnato", "3FGA": "3 punti sbagliato",
+             "FTM": "Tiro libero segnato", "FTA": "Tiro libero sbagliato", "AS": "Assist", "TO": "Palla persa", "ST": "Palla recuperata",
+             "D": "Rimbalzo difensivo", "O": "Rimbalzo offensivo", "FV": "Stoppata", "AG": "Stoppata subita", "CM": "Fallo commesso",
+             "RV": "Fallo Subito", "IN": "Ingresso", "OUT": "Uscita", "BP": "Inizio Tempo", "EP": "Fine Tempo"}
+PBP_COLS = ["game_id", "seq", "period", "clock", "elapsed_sec", "score_home", "score_away", "team", "player_id", "player_name", "player_surname",
+            "event", "x", "y", "linked_seq"]
+MADE = ("2 punti segnato", "3 punti segnato")
+
+
+def fetch_game_pbp(gamecode: int, home_code: str, names: dict[str, str], season: int = SEASON) -> pd.DataFrame:
+    """One game in the LBA play-by-play layout. The EuroLeague shot list gives the court position of every field goal attempt (centimetres, basket at
+    the origin, both ends folded to one half): it is written back as the percent-of-court x/y that lba_style.shots_cm expects. The assist is linked to
+    the made basket that precedes it (the feed does not link them)."""
+    from euroleague_api.play_by_play_data import PlayByPlay
+    from euroleague_api.shot_data import ShotData
+    from player_names import ec_surname
+    pbp = PlayByPlay("U").get_game_play_by_play_data(season, gamecode)
+    pbp = pbp[pbp.PLAYTYPE.isin(PBP_EVENT)].sort_values("NUMBEROFPLAY").copy()
+    shots = ShotData("U").get_game_shot_data(season, gamecode)
+    shots = shots[shots.ID_ACTION.isin(ZONE_ACTIONS) & ~((shots.COORD_X == -1) & (shots.COORD_Y == -1))].set_index("NUM_ANOT")
+    shots = shots[~shots.index.duplicated()]
+    left = 600 * np.where(pbp.PERIOD <= 4, 1, 0.5)
+    secs = lambda t: int(t.split(":")[0]) * 60 + int(t.split(":")[1]) if isinstance(t, str) and ":" in t else 0
+    rem = np.where(pbp.PLAYTYPE == "BP", left, pbp.MARKERTIME.map(secs))     # the clock shows the time left in the period
+    out = pd.DataFrame({
+        "game_id": f"EC{gamecode}", "seq": pbp.NUMBEROFPLAY.values, "period": pbp.PERIOD.values,
+        "clock": [f"{int(r // 60):02d}:{int(r % 60):02d}" for r in rem], "elapsed_sec": (left - rem).astype(int),
+        "team": [names.get(c, c) if isinstance(c, str) and c.strip() else None for c in pbp.CODETEAM],
+        "player_id": pbp.PLAYER_ID.values, "event": pbp.PLAYTYPE.map(PBP_EVENT).values,
+    })
+    raw = pbp.PLAYER.fillna("").values
+    out["player_name"] = [r.split(",")[1].strip().title() if "," in r else None for r in raw]
+    out["player_surname"] = [ec_surname(r).title() if r else None for r in raw]
+    out["is_home"] = (pbp.CODETEAM.str.strip() == home_code).values
+    for col in ("POINTS_A", "POINTS_B"):
+        out[col] = pbp[col].values
+    out["score_home"] = out.POINTS_A.ffill().fillna(0).astype(int)
+    out["score_away"] = out.POINTS_B.ffill().fillna(0).astype(int)
+    sx = shots.reindex(pbp.NUMBEROFPLAY.values)
+    on_court = out.event.str.contains("punti", na=False).values
+    cx, cy = np.where(on_court, sx.COORD_X.values, np.nan), np.where(on_court, sx.COORD_Y.values, np.nan)
+    out["x"] = ((cy + 157.5) / 28).round(2)             # inverse of lba_style.shots_cm
+    out["y"] = (cx / 15 + 50).round(2)
+    out["linked_seq"] = np.nan
+    last = {}                                           # team -> (seq, position in the frame) of its last made basket without an assist
+    for i, r in enumerate(out.itertuples()):
+        if r.event in MADE:
+            last[r.team] = (r.seq, i)
+        elif r.event == "Assist" and r.team in last and i - last[r.team][1] <= 6:
+            out.iat[i, out.columns.get_loc("linked_seq")] = last.pop(r.team)[0]
+    return out[PBP_COLS]
+
+
+def update_pbp(results: pd.DataFrame, path: Path = PBP) -> list[int]:
+    """Append the played games that are not in data/eurocup/pbp.csv yet. Returns the game codes added; a game that fails is tried again next run."""
+    old = pd.read_csv(path) if path.exists() else pd.DataFrame(columns=PBP_COLS)
+    have = {int(str(g)[2:]) for g in old.game_id.unique()}
+    names = {**dict(zip(results.home_code, results.home)), **dict(zip(results.away_code, results.away))}
+    frames, added = [old], []
+    for r in results[results.played & ~results.gamecode.isin(have)].itertuples():
+        try:
+            frames.append(fetch_game_pbp(int(r.gamecode), r.home_code, names))
+        except Exception as exc:
+            print(f"play-by-play of game {r.gamecode}: {exc}")
+            continue
+        added.append(int(r.gamecode))
+    if added:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        pd.concat(frames, ignore_index=True).to_csv(path, index=False)
     return added
 
 

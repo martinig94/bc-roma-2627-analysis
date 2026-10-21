@@ -399,7 +399,38 @@
       "form": "LLL"
     }
   },
-  "assist_top": [],
+  "assist_top": [
+    {
+      "passer": "Atic",
+      "scorer": "Perry",
+      "n": 4
+    },
+    {
+      "passer": "Atic",
+      "scorer": "Domask",
+      "n": 3
+    },
+    {
+      "passer": "Domask",
+      "scorer": "Perry",
+      "n": 3
+    },
+    {
+      "passer": "Pipes",
+      "scorer": "Popovic",
+      "n": 3
+    },
+    {
+      "passer": "Pipes",
+      "scorer": "Browne",
+      "n": 2
+    },
+    {
+      "passer": "Pipes",
+      "scorer": "Hawkins",
+      "n": 2
+    }
+  ],
   "turnovers": [
     {
       "name": "Browne",
@@ -409,7 +440,7 @@
       "tov_min": 0.268,
       "tov_pg": 3.3,
       "worst_n": 5,
-      "worst_game": "vs Lietkabelis Panevezys (30/09)",
+      "worst_game": "at Lietkabelis Panevezys (30/09)",
       "top": true
     },
     {
@@ -420,7 +451,7 @@
       "tov_min": 0.125,
       "tov_pg": 3.0,
       "worst_n": 4,
-      "worst_game": "vs Ratiopharm Ulm (14/10)",
+      "worst_game": "at Ratiopharm Ulm (14/10)",
       "top": true
     },
     {
@@ -431,7 +462,7 @@
       "tov_min": 0.113,
       "tov_pg": 2.3,
       "worst_n": 3,
-      "worst_game": "vs Ratiopharm Ulm (14/10)",
+      "worst_game": "at Ratiopharm Ulm (14/10)",
       "top": false
     },
     {
@@ -442,7 +473,7 @@
       "tov_min": 0.086,
       "tov_pg": 2.0,
       "worst_n": 3,
-      "worst_game": "vs Lietkabelis Panevezys (30/09)",
+      "worst_game": "at Lietkabelis Panevezys (30/09)",
       "top": false
     },
     {
@@ -453,7 +484,7 @@
       "tov_min": 0.096,
       "tov_pg": 2.0,
       "worst_n": 3,
-      "worst_game": "vs Ratiopharm Ulm (14/10)",
+      "worst_game": "at Ratiopharm Ulm (14/10)",
       "top": false
     },
     {
@@ -464,7 +495,7 @@
       "tov_min": 0.072,
       "tov_pg": 1.3,
       "worst_n": 3,
-      "worst_game": "vs Ratiopharm Ulm (14/10)",
+      "worst_game": "at Ratiopharm Ulm (14/10)",
       "top": false
     },
     {
@@ -475,7 +506,7 @@
       "tov_min": 0.073,
       "tov_pg": 1.3,
       "worst_n": 2,
-      "worst_game": "vs Lietkabelis Panevezys (30/09)",
+      "worst_game": "at Lietkabelis Panevezys (30/09)",
       "top": false
     },
     {
@@ -486,7 +517,7 @@
       "tov_min": 0.083,
       "tov_pg": 1.5,
       "worst_n": 2,
-      "worst_game": "vs Lietkabelis Panevezys (30/09)",
+      "worst_game": "at Lietkabelis Panevezys (30/09)",
       "top": false
     },
     {
@@ -497,7 +528,7 @@
       "tov_min": 0.028,
       "tov_pg": 0.7,
       "worst_n": 1,
-      "worst_game": "vs Ratiopharm Ulm (14/10)",
+      "worst_game": "at Ratiopharm Ulm (14/10)",
       "top": false
     },
     {
@@ -508,7 +539,7 @@
       "tov_min": 0.032,
       "tov_pg": 0.7,
       "worst_n": 1,
-      "worst_game": "vs Ratiopharm Ulm (14/10)",
+      "worst_game": "at Ratiopharm Ulm (14/10)",
       "top": false
     },
     {
@@ -519,7 +550,7 @@
       "tov_min": 0.065,
       "tov_pg": 1.0,
       "worst_n": 1,
-      "worst_game": "vs Ratiopharm Ulm (14/10)",
+      "worst_game": "at Ratiopharm Ulm (14/10)",
       "top": false
     }
   ],

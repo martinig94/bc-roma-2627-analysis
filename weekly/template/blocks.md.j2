@@ -53,9 +53,9 @@ Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = 
 {%- endmacro %}
 
 {% macro assists(a, files, author, kind) -%}
-{% if a.competition == 'EuroCup' %}*Assist pairs are only available for LBA games (play-by-play with the passer linked to the scorer); the EuroCup data has box scores and shot zones only.*{% elif a.assist_top %}![assist matrix](assists.png)
+{% if a.assist_top %}![assist matrix](assists.png)
 
-Passer (rows) to scorer (columns), assisted baskets linked in the LBA play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% else %}*No assist matrix yet: too few assisted baskets linked in the LBA play-by-play before this game.*{% endif %}
+Passer (rows) to scorer (columns), assisted baskets linked in the {{ 'EuroCup' if a.competition == 'EuroCup' else 'LBA' }} play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% else %}*No assist matrix yet: too few assisted baskets linked in the {{ 'EuroCup' if a.competition == 'EuroCup' else 'LBA' }} play-by-play before this game.*{% endif %}
 {%- endmacro %}
 
 {% macro analysis_turnovers(a, files, author, kind) -%}
