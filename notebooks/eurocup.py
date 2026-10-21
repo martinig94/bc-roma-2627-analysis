@@ -9,7 +9,7 @@ the club rosters (height, position, headshot) come from the club "people" endpoi
 Needs network access to the host, so it runs in the daily GitHub Action; the files it writes are committed:
 
   data/eurocup/results.csv    one row per game of the season, played or not: gamecode, round, date, teams, scores, played
-  data/eurocup/people.csv     club, player, height_cm, position, photo_url
+  data/eurocup/people.csv     club, player, height_cm, position, number, photo_url
   data/eurocup/photos/<photo_name>.jpg   headshot thumbnails (name key as in player_names.photo_name)
 
 Standings are computed here from results.csv, as of any date, for the group of the team: EuroCup's regular season is played in
@@ -74,7 +74,7 @@ def fetch_people(club: str, season: int = SEASON) -> pd.DataFrame:
             continue
         info = person["person"]
         rows.append({"club": club, "player": display_name(info["name"]), "height_cm": info.get("height") or None,
-                     "position": person.get("positionName"), "photo_url": find_image_url(person)})
+                     "position": person.get("positionName"), "number": person.get("dorsal") or None, "photo_url": find_image_url(person)})
     return pd.DataFrame(rows)
 
 
