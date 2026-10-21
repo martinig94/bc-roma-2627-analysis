@@ -29,11 +29,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import lba_style
 import standings as lba_standings
 from lba_style import (save_fig, draw_zone_fill, BLUE, DPI, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS, ZONE_LABELS,
                        assign_zone_arr, draw_half_court, mins, shots_cm, style_axes, team_color)
 
 PAINT_CM = 450
+COMP, COMP_NAME = "LBA", "LBA"       # the competition the reference figures (league averages, key players, basic stats) are drawn from; "EC" for a EuroCup-only report
 SOCIAL = False          # --social: portrait 4:5 versions (1080x1350) of selected figures for Instagram
 SOCIAL_SIZE = (6.0, 7.5)   # inches; the saved PNG is padded to exactly 1080x1350 px
 
@@ -115,9 +117,15 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
             sel = (box.game_id == f"EC{gc}") & (box.team == team)
             box.loc[sel, "opponent"] = other[0]; box.loc[sel, "opp_pts"] = other[1]
     box["reb"] = box.oreb + box.dreb
-    box["date"] = box.game_id.str[2:].astype(int).map(EC_DATES)
-    zones = pd.DataFrame([dict(game_id=f"EC{f[0]}", team=EC_CODE_MAP.get(f[1], f[1]), zone=f[2], action=f[3], n=int(f[4]))
-                          for f in zone_lines])
+    dates, codes = dict(EC_DATES), dict(EC_CODE_MAP)
+    feed = path.parent / "eurocup" / "results.csv"            # every game of the season: gamecode -> date, club code -> team name
+    if feed.exists():
+        res = pd.read_csv(feed)
+        dates.update(dict(zip(res.gamecode, res.date)))
+        codes.update({**dict(zip(res.home_code, res.home)), **dict(zip(res.away_code, res.away))})
+    box["date"] = box.game_id.str[2:].astype(int).map(dates)
+    zones = pd.DataFrame([dict(game_id=f"EC{f[0]}", team=codes.get(f[1], f[1]), zone=f[2], action=f[3], n=int(f[4]))
+                          for f in zone_lines], columns=["game_id", "team", "zone", "action", "n"])
     return box, zones
 
 
@@ -212,7 +220,7 @@ def fig_timeline(box, A, B, out):
 
 
 def fig_starters_bench(box, A, B, out):
-    p = box[(box.row_type == "player") & (box.competition == "LBA")]
+    p = box[(box.row_type == "player") & (box.competition == COMP)]
     lg_tot = p.groupby(["game_id", "team", "starter"]).pts.sum().unstack("starter").fillna(0)
     lg_st, lg_bn = lg_tot[1].mean(), lg_tot[0].mean()
     fig, axes = plt.subplots(1, 2, figsize=(14, 5), sharey=True)
@@ -233,7 +241,7 @@ def fig_starters_bench(box, A, B, out):
         ax.set_title(f"{team}\nstarters {sb.starters.mean():.0f} + bench {sb.bench.mean():.0f} per game "
                      f"({100 * sb.bench.sum() / (sb.starters.sum() + sb.bench.sum()):.0f}% from the bench)", **TITLE_KW)
         ax.legend(fontsize=8, loc="upper left"); style_axes(ax, "y")
-    fig.suptitle("Points from the starting five vs the bench (dashed: LBA league averages)", **SUP_KW)
+    fig.suptitle(f"Points from the starting five vs the bench (dashed: {COMP_NAME} league averages)", **SUP_KW)
     save_fig(fig, out / "02_starters_bench.png"); plt.close(fig)
 
 
@@ -257,10 +265,10 @@ def fig_minutes(box, A, B, out):
 
 def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
     lg_src = []
-    for tm in box[box.competition == "LBA"].team.unique():
+    for tm in box[box.competition == COMP].team.unique():
         if tm in (A, B):
             continue
-        lg_src.append(scoring_sources(box[box.competition == "LBA"], pbp, ec_zones, tm))
+        lg_src.append(scoring_sources(box[box.competition == COMP], pbp, ec_zones, tm))
     lg = pd.concat(lg_src)
     lg_mean = lg[["paint", "mid", "three", "ft", "fg3a", "fga"]].mean()
     srcA, srcB = scoring_sources(box, pbp, ec_zones, A), scoring_sources(box, pbp, ec_zones, B)
@@ -273,7 +281,7 @@ def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
         axes[0].bar(x + (i - 1) * w, m, w, color=fill, edgecolor=edge, linewidth=0.6, label=f"{team} ({len(src)} g)")
         for xi, v in zip(x, m):
             axes[0].text(xi + (i - 1) * w, v + 0.6, f"{v:.0f}", ha="center", fontsize=8, color=TEXT2)
-    axes[0].bar(x + w, lg_mean[cats], w, color=LEAGUE, label="LBA league avg")
+    axes[0].bar(x + w, lg_mean[cats], w, color=LEAGUE, label=f"{COMP_NAME} league avg")
     for xi, v in zip(x, lg_mean[cats]):
         axes[0].text(xi + w, v + 0.6, f"{v:.0f}", ha="center", fontsize=8, color=TEXT2)
     axes[0].set_xticks(x); axes[0].set_xticklabels(labels); axes[0].set_ylabel("points per game")
@@ -285,8 +293,8 @@ def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
         axes[1].text(xi, v + 0.5, f"{v:.1f}\n({100 * s:.0f}% of FGA)", ha="center", fontsize=8.5, color=TEXT2)
     axes[1].set_xticks([0, 1, 2]); axes[1].set_xticklabels([A, B, "league"], fontsize=9); axes[1].set_ylim(0, max(vals) * 1.3)
     axes[1].set_title("Three-point attempts per game", **TITLE_KW); style_axes(axes[1], "y")
-    sup(fig, "Scoring sources and three-point volume, all competitions (league = other LBA teams)",
-        "Where the points come from — all competitions (league = other LBA teams)")
+    sup(fig, f"Scoring sources and three-point volume, all competitions (league = other {COMP_NAME} teams)",
+        f"Where the points come from — all competitions (league = other {COMP_NAME} teams)")
     save(fig, out / "04_scoring_sources.png"); plt.close(fig)
     return srcA, srcB, lg_mean
 
@@ -294,7 +302,7 @@ def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
 def fig_shooting(box, A, B, out):
     keys = ["2P%", "3P%", "FT%", "eFG%", "TS%"]
     lines = {A: shooting_line(box, A), B: shooting_line(box, B),
-             "league": shooting_line(box[(box.competition == "LBA") & ~box.team.isin([A, B])])}
+             "league": shooting_line(box[(box.competition == COMP) & ~box.team.isin([A, B])])}
     fig, ax = plt.subplots(figsize=(11, 5))
     x = np.arange(len(keys)); w = 0.27
     for i, (name, ln) in enumerate(lines.items()):
@@ -304,7 +312,7 @@ def fig_shooting(box, A, B, out):
         for xi, v in zip(x, vals):
             ax.text(xi + (i - 1) * w, v + 0.8, f"{v:.0f}", ha="center", fontsize=8.5, color=TEXT2)
     ax.set_xticks(x); ax.set_xticklabels(keys); ax.set_ylim(0, 100); ax.set_ylabel("%")
-    ax.set_title("Shooting percentages, season to date (all competitions; league = other LBA teams)", **TITLE_KW)
+    ax.set_title(f"Shooting percentages, season to date (all competitions; league = other {COMP_NAME} teams)", **TITLE_KW)
     ax.legend(fontsize=9); style_axes(ax, "y")
     save_fig(fig, out / "05_shooting.png"); plt.close(fig)
     return lines
@@ -353,8 +361,8 @@ def fig_hot_spots(pbp, A, B, out):
 
 
 def fig_key_players(box, A, B, out, min_mpg=10):
-    pts = {tm: player_table(box[box.competition == "LBA"], tm) for tm in (A, B)}   # LBA only, same basis as the league dots
-    lgp = box[(box.competition == "LBA") & (box.row_type == "player") & ~box.team.isin([A, B])]
+    pts = {tm: player_table(box[box.competition == COMP], tm) for tm in (A, B)}   # LBA only, same basis as the league dots
+    lgp = box[(box.competition == COMP) & (box.row_type == "player") & ~box.team.isin([A, B])]
     lg = lgp.groupby(["team", "player_surname"]).agg(GP=("game_id", "nunique"), sec=("sec", "sum"), pts=("pts", "sum"), val=("val", "sum"),
                                                      fg2a=("fg2a", "sum"), fg3a=("fg3a", "sum"), fta=("fta", "sum")).reset_index()
     lg["MPG"] = lg.sec / 60 / lg.GP; lg["PIR"] = lg.val / lg.GP
@@ -362,7 +370,7 @@ def fig_key_players(box, A, B, out, min_mpg=10):
     lg = lg[lg.MPG >= min_mpg]
     fig, ax = plt.subplots(figsize=(13, 8.5))
     size = lambda mpg: mpg / 36 * 420 + 40
-    ax.scatter(lg.PIR, lg["TS%"], s=size(lg.MPG), c=LEAGUE, alpha=0.4, edgecolors="none", label="other LBA players", zorder=2)
+    ax.scatter(lg.PIR, lg["TS%"], s=size(lg.MPG), c=LEAGUE, alpha=0.4, edgecolors="none", label=f"other {COMP_NAME} players", zorder=2)
     both = pd.concat([pts[tm][pts[tm].MPG >= min_mpg].assign(team=tm) for tm in (A, B)])
     cands = pd.concat([both[["Player", "team", "PIR", "TS%", "MPG"]],
                        lg.assign(Player=lg.player_surname.str.title())[["Player", "team", "PIR", "TS%", "MPG"]]])
@@ -383,16 +391,16 @@ def fig_key_players(box, A, B, out, min_mpg=10):
     ax.axvline(lg.PIR.median(), color=TEXT2, lw=0.7, ls="--"); ax.axhline(lg["TS%"].median(), color=TEXT2, lw=0.7, ls="--")
     ax.text(lg.PIR.median() + 0.2, ax.get_ylim()[0] + 1.5, "league median PIR", color=TEXT2, fontsize=8)
     ax.text(ax.get_xlim()[0] + 0.3, lg["TS%"].median() + 0.8, "league median TS%", color=TEXT2, fontsize=8)
-    ax.set_xlabel("PIR per game (LBA valutazione)"); ax.set_ylabel("TS%")
+    ax.set_xlabel("PIR per game (LBA valutazione)" if COMP == "LBA" else "PIR per game"); ax.set_ylabel("TS%")
     ax.set_title(f"Key players — PIR vs true shooting, dot size = minutes per game (min {min_mpg}')\n"
-                 "LBA games only, all players on the same basis", **TITLE_KW)
+                 f"{COMP_NAME} games only, all players on the same basis", **TITLE_KW)
     ax.legend(fontsize=9, loc="lower right"); style_axes(ax)
     save_fig(fig, out / "07_key_players.png"); plt.close(fig)
     return pts
 
 
 def fig_shot_distribution(box, A, B, out):
-    """Share of the team's field-goal attempts per player, split into twos and threes (LBA+EC)."""
+    """Share of the team's field-goal attempts per player, split into twos and threes (all the games in `box`: LBA+EC, or EC only)."""
     fig, axes = plt.subplots(1, 2, figsize=(14, 6.5))
     for ax, team, i in ((axes[0], A, 0), (axes[1], B, 1)):
         p = box[(box.team == team) & (box.row_type == "player")]
@@ -414,7 +422,7 @@ def fig_shot_distribution(box, A, B, out):
         top3 = g.share.head(3).sum()
         ax.set_title(f"{team} — {int(tot)} FGA in {p.game_id.nunique()} games\ntop 3 take {top3:.0f}%, top 5 take {g.share.head(5).sum():.0f}%", **TITLE_KW)
         ax.legend(fontsize=8, loc="lower right"); style_axes(ax, "x")
-    fig.suptitle("Who takes the shots — share of team FGA per player (LBA+EC)", **SUP_KW)
+    fig.suptitle(f"Who takes the shots — share of team FGA per player ({'EuroCup' if COMP == 'EC' else 'LBA+EC'})", **SUP_KW)
     save_fig(fig, out / "08_shot_distribution.png"); plt.close(fig)
 
 
@@ -436,7 +444,7 @@ def basic_line(box_tot: pd.DataFrame) -> pd.Series:
 
 def fig_basic_stats(box, A, B, out):
     """Assists, rebounds, steals, blocks, turnovers, fouls: per game and per 100 possessions (LBA only)."""
-    tot = box[(box.competition == "LBA") & (box.row_type == "total")]
+    tot = box[(box.competition == COMP) & (box.row_type == "total")]
     lines = {A: basic_line(tot[tot.team == A]), B: basic_line(tot[tot.team == B]), "league": basic_line(tot[~tot.team.isin([A, B])])}
     fig, axes = grid(2, figsize=(16, 5.6))
     x = np.arange(len(BASIC_STATS)); w = 0.27
@@ -452,10 +460,10 @@ def fig_basic_stats(box, A, B, out):
         ax.set_title(f"Basic stats {title}", **TITLE_KW); ax.legend(fontsize=9); style_axes(ax, "y")
     pace = " · ".join(f"{n}: {ln.poss:.1f} poss/g, {ln.pts_p100:.0f} pts per 100" for n, ln in lines.items())
     if SOCIAL:
-        fig.suptitle(f"Team comparison — LBA games only\n({int(lines[A].games)} per team; league = other 14 teams)", **SUP_KW)
+        fig.suptitle(f"Team comparison — {COMP_NAME} games only\n({int(lines[A].games)} per team; league = the other teams)", **SUP_KW)
         axes[1].set_xlabel("per 100 possessions (FGA − OREB + TOV + 0.44·FTA)\n" + pace.replace(" · ", "\n"), fontsize=7.5, color=TEXT2)
     else:
-        fig.suptitle(f"Team comparison — LBA games only ({int(lines[A].games)} per team; league = other 14 teams)\n{pace}", **SUP_KW)
+        fig.suptitle(f"Team comparison — {COMP_NAME} games only ({int(lines[A].games)} per team; league = the other teams)\n{pace}", **SUP_KW)
         axes[1].set_xlabel("possessions estimated as FGA − OREB + TOV + 0.44·FTA", fontsize=8, color=TEXT2)
     save(fig, out / "09_basic_stats.png"); plt.close(fig)
     return pd.DataFrame(lines)
@@ -470,7 +478,7 @@ def fig_major_factors(box, A, B, out, close=0.8, max_players=3):
     3rd when they are within `close` (80%) of the leader's share. LBA only. Grey = rest of the roster."""
     fig, axes = plt.subplots(1, 2, figsize=(16, 7.2), sharey=True)
     for ax, team, ti in ((axes[0], A, 0), (axes[1], B, 1)):
-        p = box[(box.competition == "LBA") & (box.row_type == "player") & (box.team == team)]
+        p = box[(box.competition == COMP) & (box.row_type == "player") & (box.team == team)]
         totals = p.groupby("player_surname")[[k for k, _ in FACTOR_STATS]].sum()
         fill, edge = team_color(team, ti)
         shades = [fill, "#e8d77a" if fill == "#F2C300" else "#6b6b7a", "#f3e7b3" if fill == "#F2C300" else "#a8a8b4"]
@@ -494,7 +502,7 @@ def fig_major_factors(box, A, B, out, close=0.8, max_players=3):
         ax.set_xlim(0, 135); ax.set_xticks([0, 25, 50, 75, 100]); ax.set_xlabel("% of the team total")
         ax.set_title(f"{team}", **TITLE_KW); style_axes(ax, "x")
     axes[0].invert_yaxis()   # shared y: invert once
-    fig.suptitle("Who carries each category — share of the team total, LBA games only\n"
+    fig.suptitle(f"Who carries each category — share of the team total, {COMP_NAME} games only\n"
                  f"leader shown; 2nd and 3rd added when within {int(close * 100)}% of the leader's share", **SUP_KW)
     save_fig(fig, out / "10_major_factors.png"); plt.close(fig)
 
@@ -505,6 +513,8 @@ def main():
     ap.add_argument("--data", default=str(Path(__file__).resolve().parent.parent / "data"))
     ap.add_argument("--eurocup", default=None, help="path to the EuroCup raw file (default data/eurocup_2026_raw.txt)")
     ap.add_argument("--no-eurocup", action="store_true")
+    ap.add_argument("--competition", choices=["LBA", "EC"], default="LBA",
+                    help="EC: a EuroCup game: EuroCup box scores only, the EuroCup group table, the other EuroCup teams as the league (no hot spots: no coordinates)")
     ap.add_argument("--out", default="reports")
     ap.add_argument("--social", action="store_true", help="also write portrait 4:5 (1080x1350) versions of figures 01, 04, 06, 09 into <out>/social/")
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: use only games played before this date (frozen pre-match "
@@ -514,8 +524,12 @@ def main():
     suffix = f"_before_{a.before}" if a.before else ""
     out = Path(a.out) / f"matchup_{a.home.replace(' ', '_')}_vs_{a.away.replace(' ', '_')}{suffix}"; out.mkdir(parents=True, exist_ok=True)
     games, box, pbp = load_lba(data)
+    if a.competition == "EC":
+        global COMP, COMP_NAME
+        COMP, COMP_NAME = "EC", "EuroCup"
+        box, pbp = box.iloc[0:0], pbp.iloc[0:0]
+    import lba_style
     if a.before:
-        import lba_style
         from datetime import date as _d
         lba_style.STAMP_NOTE = f"games before {_d.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
         box = box[box.date < a.before]; pbp = pbp[pbp.game_id.isin(box.game_id.unique())]
@@ -524,20 +538,28 @@ def main():
     ec_zones = pd.DataFrame(columns=["game_id", "team", "zone", "action", "n"])
     if not a.no_eurocup and ec_path.exists():
         ec_box, ec_zones = parse_eurocup(ec_path)
-        ec_box = ec_box[ec_box.team.isin([a.home, a.away])]
+        if a.competition != "EC":
+            ec_box = ec_box[ec_box.team.isin([a.home, a.away])]
         if a.before:
             ec_box = ec_box[ec_box.date < a.before]; ec_zones = ec_zones[ec_zones.game_id.isin(ec_box.game_id.unique())]
         box = pd.concat([box, ec_box], ignore_index=True)
     A, B = a.home, a.away
-    all_games = pd.read_csv(data / "games.csv")   # standings use every finished LBA game before the cut-off
-    lba_standings.fig_standings(all_games, a.before, [A, B], out)
-    (out / "standings.md").write_text(lba_standings.standings_md(all_games, a.before, [A, B]), encoding="utf-8")
+    if a.competition == "EC":
+        import eurocup
+        frame = eurocup.games_frame(eurocup.load_results(data), A)       # the group of the first team
+        lba_style.SOURCE_NOTE = "EuroLeague live API"
+        lba_standings.fig_standings(frame, a.before, [A, B], out, title_label="EuroCup 2026/27")
+        (out / "standings.md").write_text(lba_standings.standings_md(frame, a.before, [A, B], "EuroCup"), encoding="utf-8")
+    else:
+        all_games = pd.read_csv(data / "games.csv")   # standings use every finished LBA game before the cut-off
+        lba_standings.fig_standings(all_games, a.before, [A, B], out)
+        (out / "standings.md").write_text(lba_standings.standings_md(all_games, a.before, [A, B]), encoding="utf-8")
     fig_timeline(box, A, B, out)
     fig_starters_bench(box, A, B, out)
     fig_minutes(box, A, B, out)
     srcA, srcB, lg_src = fig_scoring_sources(box, pbp, ec_zones, A, B, out)
     lines = fig_shooting(box, A, B, out)
-    share = fig_hot_spots(pbp, A, B, out)
+    share = fig_hot_spots(pbp, A, B, out) if COMP == "LBA" else {}      # the EuroCup shots carry zones, not coordinates
     pts = fig_key_players(box, A, B, out)
     fig_shot_distribution(box, A, B, out)
     basic = fig_basic_stats(box, A, B, out)

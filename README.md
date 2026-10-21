@@ -58,7 +58,7 @@ snapshot of the same game). Every snapshot, including those of games without an 
 | **Opponent analysis** (the dropdown) | one per opponent and game, with the comparison table against BC Roma, results and standings, the opponent's roster with photos, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game: the league (LBA) plus the EuroCup, for the teams in the EuroCup file | `docs/opponent/<matchup folder>/` |
 | **Game reviews** (landing page; **off by default**, switch `"reviews": true` in `weekly/config.json`) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
 
-**Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games are not collected, add them to the EuroCup file and `weekly/schedule.csv`):
+**Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games come from the EuroLeague API, and a EuroCup game still to play is added by hand to `weekly/schedule.csv`):
 
 ```bash
 python notebooks/weekly.py --collect    # pull new games, generate everything that is missing, build docs/
@@ -126,6 +126,16 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   change), `blocks.md.j2` holds the automatic blocks (the macros behind the placeholders, shared by all pages), `review.md.j2` the review,
   `site.html.j2` the look. To add a block: add a macro to `blocks.md.j2`, put its numbers in `auto` (the generator) if needed, and add
   `{{ name }}` to the pages that should show it. See `notebooks/pages.py` for how pages are read and expanded.
+* **Standard structure of an analysis** (`weekly/template/page_analysis.md.j2`, the default of every new analysis page, LBA or EuroCup): Key points ·
+  results and standings (with the results timeline) · the two teams compared (table, basic stats, space for the Synergy radar) · opponent roster ·
+  starting five and bench · scoring sources, tendencies and shooting maps · key players (shooting, other stats) · ball movement (assists,
+  turnovers) · lineups · what to expect · highlights. A section that is still empty shows a **grey box** ("This section will be filled when the
+  game is reviewed"): the `{{ pending }}` line of the page file; replace it with your text. Change the template and only new pages change.
+* **EuroCup analysis**: a EuroCup game gets the same analysis, built only from EuroCup data (the other EuroCup teams are the league reference; no
+  hot spots, assists or lineups, which need the LBA play-by-play). Add the game to `weekly/schedule.csv` with the `analysis` column set to
+  `matchup_<home>_vs_<away>_before_<date>` (team names as in `data/eurocup/results.csv`, spaces as `_`); the daily run, or
+  `python notebooks/opponent.py --eurocup <date>`, generates it and creates `weekly/games/<date>/analysis.md`. A folder with a hand-written README or
+  `document.md` there is kept as it is (Manresa).
 * **Next games** on the landing page: the next game to play in each competition (LBA from `data/games.csv`, the others from
   `weekly/schedule.csv`), each with its snapshot and opponent analysis. Those pages are generated ahead of the game and regenerated
   by `weekly.py` whenever new games enter the data (`n_before` in their `auto.json`) (`date,time,competition,opponent,home,analysis`, `home` 1/0; `analysis` =
@@ -146,8 +156,8 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   [`euroleague-api`](https://github.com/giasemidis/euroleague_api) package), `people.csv` and `photos/` (rosters with headshots, from the
   club "people" endpoint). The snapshot of a EuroCup game shows the **EuroCup table of BC Roma's group** as of that date, computed from
   `results.csv` (a group = the teams connected through the schedule; ranking by wins, head-to-head, point difference), never the LBA table.
-  Without `results.csv` the page says the standings are not available yet. EuroCup box scores are still the hand-made file
-  (`data/eurocup_2026_raw.txt`).
+  Without `results.csv` the page says the standings are not available yet. EuroCup box scores come from the file
+  (`data/eurocup_2026_raw.txt`: box scores and shot zones of every EuroCup game played, appended by `eurocup_fetch.py`, so the daily run keeps it current).
 * **Roster positions and heights**: `data/roster.csv` (new players are appended blank). Photos: `data/photos/` (fetched automatically).
 * **Look**: light and sober, in the BC Roma palette. The logo is `weekly/assets/logo.png` (copied to `docs/assets/`, also the favicon); the
   colours are the variables at the top of `weekly/template/site.html.j2` (logo gold for borders and rules only, a deeper gold for links, warm

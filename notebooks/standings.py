@@ -34,6 +34,9 @@ SHORT = {
     "Nutribullet Treviso Basket": "Treviso", "Openjobmetis Varese": "Varese", "Pallacanestro Trieste": "Trieste",
     "Tezenis Verona": "Verona", "Umana Reyer Venezia": "Venezia", "UNA Hotels Reggio Emilia": "Reggio Emilia",
     "Virtus Costa Bologna": "Virtus Bologna",
+    # EuroCup (names as in the EuroLeague results feed)
+    "Bahcesehir College Istanbul": "Bahcesehir", "Balkan Botevgrad": "Botevgrad", "Bosna Bh Telecom Sarajevo": "Bosna",
+    "Kids&Us Manresa": "Manresa", "Lietkabelis Panevezys": "Lietkabelis", "Paok Thessaloniki": "PAOK", "Ratiopharm Ulm": "Ulm",
 }
 
 
@@ -101,13 +104,13 @@ def _bold(team: str, highlight: list[str], text: str | None = None) -> str:
     return f"**{text}**" if team in highlight else text
 
 
-def standings_md(games: pd.DataFrame, before: str | None, highlight: list[str]) -> str:
+def standings_md(games: pd.DataFrame, before: str | None, highlight: list[str], league: str = "LBA") -> str:
     t = standings(games, before)
     res = results_by_round(games, before)
     rounds = sorted(res["round"].unique())
-    lines = ["## LBA so far: results and standings", ""]
+    lines = [f"## {league} so far: results and standings", ""]
     rnd_txt = f"round {rounds[0]}" if len(rounds) == 1 else f"rounds {rounds[0]} to {rounds[-1]}"
-    lines.append(f"All {len(res)} LBA games played before this match ({rnd_txt}); home team first.")
+    lines.append(f"All {len(res)} {league} games played before this match ({rnd_txt}); home team first.")
     lines.append("")
     for r in rounds:
         rr = res[res["round"] == r]
