@@ -72,6 +72,11 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ figure: 05_shooting }}
 
+{{ figure: 06_hot_spots }}
+
+- Varese shots below or at league average in each zone.    
+- Varese has a higher number of shots in the close mid-range compared to BC Roma.
+
 ![Varese play types](02_opponent_playtypes.png)
 ![Varese play types and PPP ](03_playtype_ppp_ref_vs_opp.png)
 
@@ -81,8 +86,6 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 ![Varese play types per players ](06_players_playtype_mix.png)
 - Isolation situations are mainly played by Hale who is the player with the highest number of possessions of the team.  
 - Put backs are mainly distributed among Kamagate, Renfro, Duke. Alvit, Nikolic, Libbrizi and Roby have a lower share.  
-
-{{ figure: 06_hot_spots }}
 
 ## Key players
 
