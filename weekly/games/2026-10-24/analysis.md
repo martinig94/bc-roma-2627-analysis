@@ -141,11 +141,11 @@ The most productive lineup is:
 defense (1.60 Points allowed per possession)➡️ ⚠ Check if they play significant minutes.
 
 ![lineups2](08_lineups_offense_vs_defense.png)
-Other lineups to be investigated are:
-- Alviti, Hale, Villa, Nikolic, Renfro (1.38 scored, 1.18 allowed)
-- Alviti, Duke, Hale, Nikolic, Renfro (1.00 scored, 1.24 allowed)
-- Alviti, Nikolic, Renfro, Hale, Librizzi (4) (0.47 scored, 0.57 allowed) - best defensive lineup with considerable number of possessions
-➡️ ⚠️ *CHECK* clips and investigate play types and shot selections.
+Other lineups to be investigated are:  
+- Alviti, Hale, Villa, Nikolic, Renfro (1.38 scored, 1.18 allowed).  
+- Alviti, Duke, Hale, Nikolic, Renfro (1.00 scored, 1.24 allowed).  
+- Alviti, Nikolic, Renfro, Hale, Librizzi (4) (0.47 scored, 0.57 allowed). - Best defensive lineup with a significant number of possessions.  
+➡️ ⚠️ *CHECK* clips and investigate play types and shot selections.  
 ![lineups2](09_lineups_style_profile.png)
 Playing tendencies differ greatly between lineups:  
 - 62% FGA of lineup 4 are 3FGA, while is 37% for lineup 1.  
