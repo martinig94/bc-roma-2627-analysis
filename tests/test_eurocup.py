@@ -81,3 +81,18 @@ def test_eurocup_shot_positions_round_trip_through_the_lba_shot_code():
     pbp = pd.DataFrame({"event": ["3 punti segnato"], "x": [(cy + 157.5) / 28], "y": [cx / 15 + 50], "player_surname": ["Sims"]})
     s = lba_style.shots_cm(pbp)
     assert abs(s.cx.iloc[0] - cx) < 1 and abs(s.cy.iloc[0] - cy) < 1 and s.made.iloc[0] and s.pts.iloc[0] == 3
+
+
+def test_upcoming_rows_make_schedule_rows_for_unplayed_games_only():
+    club = lambda code, name: {"club": {"code": code, "name": name}}
+    games = [
+        {"played": True, "date": "2026-10-20T20:30:00", "local": club("MAN", "Kids&Us Manresa"), "road": club("BCR", "Roma Basketball")},
+        {"played": False, "date": "2026-10-27T20:00:00", "local": club("BCR", "Roma Basketball"), "road": club("BOS", "BOSNA BH Telecom Sarajevo")},
+        {"played": False, "date": "2026-11-03T19:00:00", "local": club("PAO", "PAOK"), "road": club("BCR", "Roma Basketball")},
+    ]
+    names = {"BCR": "BC Roma", "BOS": "Bosna Bh Telecom Sarajevo"}
+    rows = ec.upcoming_rows(games, "BCR", names)
+    assert [(r["date"], r["time"], r["home"], r["opponent"]) for r in rows] == [
+        ("2026-10-27", "20:00", "1", "Bosna Bh Telecom Sarajevo"), ("2026-11-03", "19:00", "0", "Paok")]
+    assert rows[0]["analysis"] == "matchup_BC_Roma_vs_Bosna_Bh_Telecom_Sarajevo_before_2026-10-27"
+    assert rows[1]["analysis"] == "matchup_Paok_vs_BC_Roma_before_2026-11-03"

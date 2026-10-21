@@ -99,6 +99,58 @@ def save_photos(people: pd.DataFrame, size: int = 240) -> int:
     return n
 
 
+# ── the team's upcoming games into weekly/schedule.csv ────────────────────────────
+SCHEDULE = ROOT / "weekly" / "schedule.csv"
+SCHEDULE_COLS = ["date", "time", "competition", "opponent", "home", "analysis"]
+GAMES = "https://api-live.euroleague.net/v2/competitions/U/seasons/U{season}/games?teamCode={club}&limit=100"
+
+
+def upcoming_rows(games: list[dict], club: str, names: dict[str, str]) -> list[dict]:
+    """schedule.csv rows for the games of `club` not played yet, from the games endpoint of the EuroLeague API (it lists the whole season).
+    `names`: club code -> team name as in the results feed. `analysis` is the folder name opponent.py builds (matchup_<home>_vs_<away>_before_<date>)."""
+    rows = []
+    for g in games:
+        if g.get("played"):
+            continue
+        home, road = g["local"]["club"], g["road"]["club"]
+        at_home = home["code"].strip() == club
+        opp = road if at_home else home
+        opp_name = names.get(opp["code"].strip()) or team_name(opp["name"])
+        team = names[club]
+        h, a = (team, opp_name) if at_home else (opp_name, team)
+        day = g["date"][:10]
+        rows.append({"date": day, "time": g["date"][11:16], "competition": "EuroCup", "opponent": opp_name, "home": "1" if at_home else "0",
+                     "analysis": f"matchup_{h.replace(' ', '_')}_vs_{a.replace(' ', '_')}_before_{day}"})
+    return sorted(rows, key=lambda r: r["date"])
+
+
+def update_schedule(results: pd.DataFrame, team: str, path: Path = SCHEDULE, season: int = SEASON) -> int:
+    """Keep the EuroCup games still to play in weekly/schedule.csv up to date (dates change, games are added): rows of the games to come are
+    replaced by the API's. Rows you wrote by hand are never touched: a row of a game already played, or whose analysis folder has a hand-written
+    README.md / document.md. Returns the number of games to come."""
+    import requests
+    names = {**dict(zip(results.home_code, results.home)), **dict(zip(results.away_code, results.away))}
+    club = next((c for c, n in names.items() if n == team), None)
+    if club is None:
+        return 0
+    r = requests.get(GAMES.format(season=season, club=club), headers={"Accept": "application/json"}, timeout=60)
+    r.raise_for_status()
+    new = upcoming_rows(r.json()["data"], club, names)
+    old = pd.read_csv(path, dtype=str, keep_default_na=False) if path.exists() else pd.DataFrame(columns=SCHEDULE_COLS)
+    played = set(results[results.played].date)
+
+    def by_hand(row) -> bool:
+        slug = row.analysis
+        return (row.competition != "EuroCup" or row.date in played or bool(slug) and not slug.startswith("matchup_")
+                or bool(slug) and ((ROOT / "reports" / slug / "README.md").exists() or (ROOT / "weekly" / "opponent" / slug / "document.md").exists()))
+
+    keep = old[[by_hand(x) for x in old.itertuples()]]
+    out = pd.concat([keep, pd.DataFrame(new, columns=SCHEDULE_COLS)], ignore_index=True)
+    out = out.drop_duplicates(["competition", "date"], keep="first").sort_values(["date", "time"], kind="stable")
+    out[SCHEDULE_COLS].to_csv(path, index=False)
+    return len(new)
+
+
 # ── box scores into the raw file ────────────────────────────────────────────────
 RAW = ROOT / "data" / "eurocup_2026_raw.txt"
 RAW_NAME = {"BCR": "ROMA BASKETBALL"}      # club codes whose name in the raw file differs from the results feed (see matchup_report.EC_TEAM_MAP)
