@@ -11,7 +11,7 @@
   "time": "20:00",
   "venue": null,
   "played": false,
-  "version": 4,
+  "version": 5,
   "n_before": 40,
   "opponent_analysis": "matchup_BC_Roma_vs_Bosna_Bh_Telecom_Sarajevo_before_2026-10-27",
   "record": "1-3",
@@ -485,6 +485,62 @@
       "G": 8.5,
       "H": 25.1,
       "I": 6.6
+    }
+  },
+  "assist_top_ec": [
+    {
+      "passer": "Mannion",
+      "scorer": "Simonovic",
+      "n": 5
+    },
+    {
+      "passer": "Mannion",
+      "scorer": "Olynyk",
+      "n": 4
+    },
+    {
+      "passer": "Mannion",
+      "scorer": "Strautins",
+      "n": 4
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Simonovic",
+      "n": 3
+    },
+    {
+      "passer": "Mannion",
+      "scorer": "Watson",
+      "n": 3
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Strautins",
+      "n": 2
+    }
+  ],
+  "zone_share_ec": {
+    "season": {
+      "A": 23.6,
+      "B": 15.2,
+      "C": 12.4,
+      "D": 0.4,
+      "E": 2.0,
+      "F": 2.8,
+      "G": 10.8,
+      "H": 24.0,
+      "I": 8.8
+    },
+    "league": {
+      "A": 13.8,
+      "B": 24.1,
+      "C": 12.4,
+      "D": 0.7,
+      "E": 5.7,
+      "F": 0.7,
+      "G": 5.7,
+      "H": 26.2,
+      "I": 10.6
     }
   },
   "ts_pir_lba": {
