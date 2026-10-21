@@ -58,7 +58,7 @@ snapshot of the same game). Every snapshot, including those of games without an 
 | **Opponent analysis** (the dropdown) | one per opponent and game, with the comparison table against BC Roma, results and standings, the opponent's roster with photos, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game: the league (LBA) plus the EuroCup, for the teams in the EuroCup file | `docs/opponent/<matchup folder>/` |
 | **Game reviews** (landing page; **off by default**, switch `"reviews": true` in `weekly/config.json`) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
 
-**Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games come from the EuroLeague API, and a EuroCup game still to play is added by hand to `weekly/schedule.csv`):
+**Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games, results and the games still to play come from the EuroLeague API: `eurocup_fetch.py` keeps the EuroCup rows of `weekly/schedule.csv` up to date, so the next EuroCup game gets its snapshot and analysis by itself):
 
 ```bash
 python notebooks/weekly.py --collect    # pull new games, generate everything that is missing, build docs/
@@ -136,9 +136,9 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   included), built only from EuroCup data (the other EuroCup teams are the league reference). The data comes from the EuroLeague API through the
   [`euroleague-api`](https://github.com/giasemidis/euroleague_api) package: box scores and shot zones in `data/eurocup_2026_raw.txt`, and
   `data/eurocup/pbp.csv`, the play-by-play in the same columns as the LBA `data/pbp.csv` (shot positions from the package's shot data, assists
-  linked to the preceding made basket), so the LBA code reads both. Both files are appended by `eurocup_fetch.py` in the daily run. Add the game to `weekly/schedule.csv` with the `analysis` column set to
-  `matchup_<home>_vs_<away>_before_<date>` (team names as in `data/eurocup/results.csv`, spaces as `_`); the daily run, or
-  `python notebooks/opponent.py --eurocup <date>`, generates it and creates `weekly/games/<date>/analysis.md`. A folder with a hand-written README or
+  linked to the preceding made basket), so the LBA code reads both. Both files are appended by `eurocup_fetch.py` in the daily run. The games still to play are written into `weekly/schedule.csv` by `eurocup_fetch.py` (rows replaced at each run, so changed dates follow;
+  `analysis` = `matchup_<home>_vs_<away>_before_<date>`; a row you wrote by hand, or whose folder has a hand-written README / `document.md`, is never touched); the daily run, or
+  `python notebooks/opponent.py --eurocup <date>`, generates the analysis and creates `weekly/games/<date>/analysis.md`. A folder with a hand-written README or
   `document.md` there is kept as it is (Manresa).
 * **Next games** on the landing page: the next game to play in each competition (LBA from `data/games.csv`, the others from
   `weekly/schedule.csv`), each with its snapshot and opponent analysis. Those pages are generated ahead of the game and regenerated
