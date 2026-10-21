@@ -27,7 +27,7 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## Key points
 
-{{ pending }}
+<!-- Key points: bullet list of the takeaways. -->
 
 ## LBA so far: results and standings
 
@@ -75,12 +75,12 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 ![Varese play types](02_opponent_playtypes.png)
 ![Varese play types and PPP ](03_playtype_ppp_ref_vs_opp.png)
 
-- Compared to BC Roma: Varese plays more P&R where the ball handler ends the action (shot, FD or lost ball) with 0.86 PPP compared to 1.10 of Bc Roma
-- The second more common conclusion for Varese is spot up (PPP 0.7)
-- Varese is efficient on offensive rebounds (PPP 1.35 compared to 1.00 for BC Roma) ➡️ ⚠️ check main offensive rebounders
+- Compared to BC Roma: Varese plays more P&R where the ball handler ends the action (shot, FD or lost ball) with 0.86 PPP compared to 1.10 of Bc Roma.  
+- The second more common conclusion for Varese is spot up (PPP 0.7).  
+- Varese is efficient on offensive rebounds (PPP 1.35 compared to 1.00 for BC Roma) ➡️ ⚠️ CHECK main offensive rebounders.
 ![Varese play types per players ](06_players_playtype_mix.png)
-- Isolation situations are mainly played by Hale who is the player with the highest number of possessions of the team
-- Put backs are mainly distributed among Kamagate, Renfro, Duke. Alvit, Nikolic, Libbrizi and Roby have a lower share. 
+- Isolation situations are mainly played by Hale who is the player with the highest number of possessions of the team.  
+- Put backs are mainly distributed among Kamagate, Renfro, Duke. Alvit, Nikolic, Libbrizi and Roby have a lower share.  
 
 {{ figure: 06_hot_spots }}
 
@@ -91,16 +91,16 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ figure: 07_key_players }}
 ![Players volume efficiency](04_players_volume_efficiency.png)
-Varese has:
-- Hale with 22.25 possessions per game, 20.8 points per game below 50% eFG%
-- Duke with 14.25 possessions per game, 11.2 points per game with around 40 eFG%
-- Nikolic, Renfro, Kamagate an Alviti with similar statistics (PPG between 6.8 and 9.8, around 7 possessions per game, high eFG%)
+Varese has:  
+- Hale with 22.25 possessions per game, 20.8 points per game below 50% eFG%.  
+- Duke with 14.25 possessions per game, 11.2 points per game with around 40 eFG%.  
+- Nikolic, Renfro, Kamagate an Alviti with similar statistics (PPG between 6.8 and 9.8, around 7 possessions per game, high eFG%).  
 
 {{ figure: 08_shot_distribution }}
 
 ![Hale radar plot](05_player_hale_shot_profile.png)
 ![Duke radar plot](05_player_duke_shot_profile.png)
-![Renfro radar plot](05_player_renfro_shot_profile.png)
+![Renfro radar plot](05_player_Renfro_shot_profile.png)
 ![Alviti radar plot](05_player_alviti_shot_profile.png)
 ![Libbrizi radar plot](05_player_librizzi_shot_profile.png)
 ![Roby radar plot](05_player_roby_shot_profile.png)
@@ -130,24 +130,24 @@ Varese has:
 
 In the first 4 LBA games, Varese used 22 different lineups with at least 5 offensive possessions, excluding the ones with Della Valle.
 
-The most-used lineup is:
+The most-used lineup is:  
 - Hale, Duke, Alviti, Nikolic, Kamagate (1). With 0.7 points per possession scored and 0.64 allowed, it was used more than twice as much as any other lineup.
 
-The most productive lineup is:
+The most productive lineup is:  
 - Alviti, Librizzi, Duke, Nikolic, Kamagate — used for only 5 possessions. This lineup is also the least effective in 
-defense (1.60 Points allowed per possession)➡️ ⚠ Check if they play significant minutes
+defense (1.60 Points allowed per possession)➡️ ⚠ Check if they play significant minutes.
 
 ![lineups2](08_lineups_offense_vs_defense.png)
 Other lineups to be investigated are:
 - Alviti, Hale, Villa, Nikolic, Renfro (1.38 scored, 1.18 allowed)
 - Alviti, Duke, Hale, Nikolic, Renfro (1.00 scored, 1.24 allowed)
 - Alviti, Nikolic, Renfro, Hale, Librizzi (4) (0.47 scored, 0.57 allowed) - best defensive lineup with considerable number of possessions
-➡️⚠️ Check clips and investigate play types and shot selections.
+➡️ ⚠️ *CHECK* clips and investigate play types and shot selections.
 ![lineups2](09_lineups_style_profile.png)
-Playing tendencies differ greatly between lineups:
-- 62% FGA of lineup 4 are 3FGA, while is 37% for lineup 1.
-- Alviti, Duke, Ale, Renfro, Roby have the highest eFG% and second TO% (0.33)  
-- Duke, Kamagate, Librizzi, Ikangi, Roby have the highest TO% (0.36)
+Playing tendencies differ greatly between lineups:  
+- 62% FGA of lineup 4 are 3FGA, while is 37% for lineup 1.  
+- Alviti, Duke, Ale, Renfro, Roby have the highest eFG% and second TO% (0.33).  
+- Duke, Kamagate, Librizzi, Ikangi, Roby have the highest TO% (0.36).  
 
 {{ lineups }}
 
