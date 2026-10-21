@@ -55,7 +55,22 @@ Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = 
 {% macro assists(a, files, author, kind) -%}
 {% if a.assist_top %}![assist matrix](assists.png)
 
-Passer (rows) to scorer (columns), assisted baskets linked in the LBA play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% else %}*No assist matrix yet: too few assisted baskets linked in the LBA play-by-play before this game.*{% endif %}
+Passer (rows) to scorer (columns), assisted baskets linked in the {{ 'EuroCup' if a.competition == 'EuroCup' else 'LBA' }} play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% else %}*No assist matrix yet: too few assisted baskets linked in the {{ 'EuroCup' if a.competition == 'EuroCup' else 'LBA' }} play-by-play before this game.*{% endif %}
+{%- endmacro %}
+
+{% macro snapshot_assists(a, files, author, kind) -%}
+{% if a.assist_top %}{% if a.assist_top_ec %}### LBA
+
+{% endif %}![assist matrix](assists.png)
+
+Passer (rows) to scorer (columns), assisted baskets linked in the LBA play-by-play, games before this one. Most frequent pairs: {% for t in a.assist_top[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% else %}*No LBA assist matrix yet: too few assisted baskets linked in the LBA play-by-play before this game.*{% endif %}
+{% if a.assist_top_ec %}
+### EuroCup
+
+![assist matrix, EuroCup](assists_eurocup.png)
+
+Same, from the EuroCup play-by-play (EuroLeague API; the assist is linked to the made basket before it). Most frequent pairs: {% for t in a.assist_top_ec[:5] %}{{ t.passer }} → {{ t.scorer }} ({{ t.n }}){{ ', ' if not loop.last else '.' }}{% endfor %}
+{% endif %}
 {%- endmacro %}
 
 {% macro analysis_turnovers(a, files, author, kind) -%}
@@ -68,9 +83,18 @@ TO = turnovers in the games before this one (league and EuroCup where the team p
 {%- endmacro %}
 
 {% macro zones(a, files, author, kind) -%}
-![shooting by zone](zones.png)
+{% if a.zone_share_ec %}### LBA
+
+{% endif %}![shooting by zone](zones.png)
 
 ![shot distribution by zone](zone_share.png)
+{% if a.zone_share_ec %}
+### EuroCup
+
+![shooting by zone, EuroCup](zones_eurocup.png)
+
+![shot distribution by zone, EuroCup](zone_share_eurocup.png)
+{% endif %}
 {%- endmacro %}
 
 {% macro efficiency(a, files, author, kind) -%}
@@ -92,9 +116,9 @@ EuroCup: {{ a.ts_pir_ec.games }} game{{ 's' if a.ts_pir_ec.games != 1 else '' }}
 
 {# ─── opponent analysis ─── #}
 {% macro analysis_header(a, files, author, kind) -%}
-Round {{ a.round }} · {{ a.date_long }}, {{ a.time }}{% if a.venue %} · {{ a.venue }}{% endif %}
+{% if a.competition == 'EuroCup' %}EuroCup{% if a.round %} round {{ a.round }}{% endif %}{% else %}Round {{ a.round }}{% endif %} · {{ a.date_long }}{% if a.time %}, {{ a.time }}{% endif %}{% if a.venue %} · {{ a.venue }}{% endif %}
 
-**Pre-game analysis: only data from games played before {{ a.date_long }}.** League games{% if a.eurocup %} and EuroCup games{% endif %}; early in the season the samples are small, so read everything as tendencies, not established facts.
+**Pre-game analysis: only data from games played before {{ a.date_long }}.** {% if a.competition == 'EuroCup' %}EuroCup games only (the other EuroCup teams are the league reference){% else %}League games{% if a.eurocup %} and EuroCup games{% endif %}{% endif %}; early in the season the samples are small, so read everything as tendencies, not established facts.
 
 Author: {{ author }}
 {%- endmacro %}
@@ -110,13 +134,18 @@ Author: {{ author }}
 |---|---:|---:|
 {% for r in a.comparison.rows %}| {{ r.stat }} | {{ r.team }} | {{ r.opp }} |
 {% endfor %}
-Ratings are points per 100 possessions. Games before this one{% if a.eurocup %} in the league ({{ a.league }}) and in the EuroCup (both teams play it){% else %} in the league ({{ a.league }}) only: the comparison uses EuroCup games only when both teams play the EuroCup{% endif %}.
+Ratings are points per 100 possessions. Games before this one{% if a.competition == 'EuroCup' %} in the EuroCup only (the league table of the page is the EuroCup group){% elif a.eurocup %} in the league ({{ a.league }}) and in the EuroCup (both teams play it){% else %} in the league ({{ a.league }}) only: the comparison uses EuroCup games only when both teams play the EuroCup{% endif %}.
 {%- endmacro %}
 
 {% macro lineups(a, files, author, kind) -%}
 {% for f in files if f.startswith('lineups_') %}![lineups]({{ f }})
 
 {% endfor %}
+{%- endmacro %}
+
+{# ─── empty section of an analysis: a grey box until the text is written ─── #}
+{% macro pending(a, files, author, kind) -%}
+<div class="pending">This section will be filled when the game is reviewed</div>
 {%- endmacro %}
 
 {# ─── both ─── #}

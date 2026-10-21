@@ -58,7 +58,7 @@ snapshot of the same game). Every snapshot, including those of games without an 
 | **Opponent analysis** (the dropdown) | one per opponent and game, with the comparison table against BC Roma, results and standings, the opponent's roster with photos, starters and bench, scoring sources, shooting, hot spots, key players, lineups | only games played before that game: the league (LBA) plus the EuroCup, for the teams in the EuroCup file | `docs/opponent/<matchup folder>/` |
 | **Game reviews** (landing page; **off by default**, switch `"reviews": true` in `weekly/config.json`) | post-game: quarters, margin chart, team numbers, PIR vs average, playing-time flag, box scores, round results | through that game | `docs/review/round-NN/` |
 
-**Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games are not collected, add them to the EuroCup file and `weekly/schedule.csv`):
+**Every week** (the GitHub Action runs every morning at 06:40 UTC: it collects the games finished the day before, runs `weekly.py` and commits the result when there is something new; EuroCup games, results and the games still to play come from the EuroLeague API: `eurocup_fetch.py` keeps the EuroCup rows of `weekly/schedule.csv` up to date, so the next EuroCup game gets its snapshot and analysis by itself):
 
 ```bash
 python notebooks/weekly.py --collect    # pull new games, generate everything that is missing, build docs/
@@ -126,6 +126,20 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   change), `blocks.md.j2` holds the automatic blocks (the macros behind the placeholders, shared by all pages), `review.md.j2` the review,
   `site.html.j2` the look. To add a block: add a macro to `blocks.md.j2`, put its numbers in `auto` (the generator) if needed, and add
   `{{ name }}` to the pages that should show it. See `notebooks/pages.py` for how pages are read and expanded.
+* **Standard structure of an analysis** (`weekly/template/page_analysis.md.j2`, the default of every new analysis page, LBA or EuroCup): Key points ·
+  results and standings (with the results timeline) · the two teams compared (table, basic stats, space for the Synergy radar) · opponent roster ·
+  starting five and bench · scoring sources, tendencies and shooting maps · key players (shooting, other stats) · ball movement (assists,
+  turnovers) · lineups · what to expect · highlights. A section that is still empty shows a **grey box** ("This section will be filled when the
+  game is reviewed"): the `{{ pending }}` line of the page file; replace it with your text. Change the template and only new pages change.
+* **Starting fives**: every analysis has the grid of the opponent's last 5 games (LBA and EuroCup), `11_starting_fives.png`: starter (S, minutes), bench minutes, absences. The snapshots show the assist matrix and the shot zones of BC Roma for LBA and, when it has EuroCup games, for the EuroCup too (`assists_eurocup.png`, `zones_eurocup.png`).
+* **EuroCup analysis**: a EuroCup game gets exactly the same analysis as an LBA game (same sections, same figures: hot spots, assists, lineups
+  included), built only from EuroCup data (the other EuroCup teams are the league reference). The data comes from the EuroLeague API through the
+  [`euroleague-api`](https://github.com/giasemidis/euroleague_api) package: box scores and shot zones in `data/eurocup_2026_raw.txt`, and
+  `data/eurocup/pbp.csv`, the play-by-play in the same columns as the LBA `data/pbp.csv` (shot positions from the package's shot data, assists
+  linked to the preceding made basket), so the LBA code reads both. Both files are appended by `eurocup_fetch.py` in the daily run. The games still to play are written into `weekly/schedule.csv` by `eurocup_fetch.py` (rows replaced at each run, so changed dates follow;
+  `analysis` = `matchup_<home>_vs_<away>_before_<date>`; a row you wrote by hand, or whose folder has a hand-written README / `document.md`, is never touched); the daily run, or
+  `python notebooks/opponent.py --eurocup <date>`, generates the analysis and creates `weekly/games/<date>/analysis.md`. A folder with a hand-written README or
+  `document.md` there is kept as it is (Manresa).
 * **Next games** on the landing page: the next game to play in each competition (LBA from `data/games.csv`, the others from
   `weekly/schedule.csv`), each with its snapshot and opponent analysis. Those pages are generated ahead of the game and regenerated
   by `weekly.py` whenever new games enter the data (`n_before` in their `auto.json`) (`date,time,competition,opponent,home,analysis`, `home` 1/0; `analysis` =
@@ -146,8 +160,8 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   [`euroleague-api`](https://github.com/giasemidis/euroleague_api) package), `people.csv` and `photos/` (rosters with headshots, from the
   club "people" endpoint). The snapshot of a EuroCup game shows the **EuroCup table of BC Roma's group** as of that date, computed from
   `results.csv` (a group = the teams connected through the schedule; ranking by wins, head-to-head, point difference), never the LBA table.
-  Without `results.csv` the page says the standings are not available yet. EuroCup box scores are still the hand-made file
-  (`data/eurocup_2026_raw.txt`).
+  Without `results.csv` the page says the standings are not available yet. EuroCup box scores come from the file
+  (`data/eurocup_2026_raw.txt`: box scores and shot zones of every EuroCup game played, appended by `eurocup_fetch.py`, so the daily run keeps it current).
 * **Roster positions and heights**: `data/roster.csv` (new players are appended blank). Photos: `data/photos/` (fetched automatically).
 * **Look**: light and sober, in the BC Roma palette. The logo is `weekly/assets/logo.png` (copied to `docs/assets/`, also the favicon); the
   colours are the variables at the top of `weekly/template/site.html.j2` (logo gold for borders and rules only, a deeper gold for links, warm

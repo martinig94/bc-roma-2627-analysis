@@ -1,4 +1,4 @@
-{% macro slot(key, prompt) -%}{% if notes and notes.get(key) %}{{ notes[key] }}{% else %}<!-- {{ prompt }} -->{% endif %}{%- endmacro -%}
+{% macro slot(key) -%}{% if notes and notes.get(key) %}{{ notes[key] }}{% else %}[[ pending ]]{% endif %}{%- endmacro -%}
 title: {{ notes.get('title', '') if notes else '' }}
 reviewed: {{ notes.get('reviewed', 'no') if notes else 'no' }}
 generated: {{ generated }}
@@ -8,11 +8,18 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
 - This file is yours: it is never overwritten. Reorder, delete or add sections and text freely.
 - The lines like [[ comparison ]] or [[ figure: 07_key_players ]] are automatic blocks: they are filled in when the site is built
   and keep refreshing when the data changes. Delete a line to remove its block, move it to move the block.
+- [[ pending ]] is a grey box saying "This section will be filled when the game is reviewed". Replace it with your text (or your
+  plots) when you write the section; a section without text and without a box is left out of the page.
 - Your own plots and images: put the file in this folder (weekly/games/<date>/) and write ![caption](file.png).
+  The Synergy plots (python notebooks/synergy_scouting_plots.py data/synergy/<folder>) go here by name:
+  01b_team_radar_zscore_competition_only, 02_opponent_playtypes, 03_playtype_ppp_ref_vs_opp, 06_players_playtype_mix,
+  04_players_volume_efficiency, 05_player_<name>_shot_profile (one per player), 07_lineups_usage_vs_ppp,
+  08_lineups_offense_vs_defense, 09_lineups_style_profile.
 - Highlight with ==text==. When you are done, set "reviewed: yes" at the top of the file.
-Blocks of this page: [[ header ]] [[ standings ]] [[ comparison ]] [[ roster ]] [[ assists ]] [[ turnovers ]] [[ lineups ]] and [[ figure: name ]] for any
-generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting, 06_hot_spots,
-07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors).
+Blocks of this page: [[ header ]] [[ standings ]] [[ comparison ]] [[ roster ]] [[ assists ]] [[ turnovers ]] [[ lineups ]] [[ pending ]] and
+[[ figure: name ]] for any generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting,
+06_hot_spots, 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors, 11_starting_fives).
+THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, same order); only the content changes.
 -->
 
 # {{ a.home_team }} vs {{ a.away_team }}
@@ -21,66 +28,78 @@ generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_
 
 ## Key points
 
-{{ slot('key_points', 'Key points: bullet list of the takeaways.') }}
+{{ slot('key_points') }}
 
-## LBA so far: results and standings
+## {{ 'EuroCup' if a.competition == 'EuroCup' else 'LBA' }} so far: results and standings
 
 [[ standings ]]
+{% if '01_results_timeline.png' in files %}
+### Results timeline
 
+[[ figure: 01_results_timeline ]]
+{% endif %}
 ## {{ a.team }} and {{ a.opponent }} compared
 
 [[ comparison ]]
+{% if '09_basic_stats.png' in files %}
+### The two teams at a glance
 
-{{ slot('comparison', 'Comparison: how the two teams compare.') }}
-{% if '01_results_timeline.png' in files %}
-[[ figure: 01_results_timeline ]]
+[[ figure: 09_basic_stats ]]
 {% endif %}
+{{ slot('comparison') }}
+
 ## {{ a.opponent }} roster
 
 [[ roster ]]
-{% if '02_starters_bench.png' in files %}
+
 ## Starting five and bench
 
-{{ slot('starters', 'Starting five, bench and minutes.') }}
-
+{{ slot('starters') }}
+{% if '11_starting_fives.png' in files %}
+[[ figure: 11_starting_fives ]]
+{% endif %}{% if '02_starters_bench.png' in files %}
 [[ figure: 02_starters_bench ]]
-{% if '03_minutes.png' in files %}
+{% endif %}{% if '03_minutes.png' in files %}
 [[ figure: 03_minutes ]]
-{% endif %}{% endif %}
-## Assists
+{% endif %}
+## Scoring sources, tendencies and shooting maps
 
-{{ slot('assists', 'Assists: ball movement and the main passer-scorer pairs.') }}
+{{ slot('shooting') }}
+{% for f in ['04_scoring_sources', '05_shooting', '06_hot_spots'] %}{% if f ~ '.png' in files %}
+[[ figure: {{ f }} ]]
+{% endif %}{% endfor %}
+## Key players
+
+### Shooting
+
+{{ slot('players') }}
+{% for f in ['07_key_players', '08_shot_distribution'] %}{% if f ~ '.png' in files %}
+[[ figure: {{ f }} ]]
+{% endif %}{% endfor %}
+{% if '10_major_factors.png' in files %}### Other stats
+
+[[ figure: 10_major_factors ]]
+{% endif %}
+## Ball movement
+
+### Assists
 
 [[ assists ]]
 
-## Turnovers
-
-{{ slot('turnovers', 'Turnovers: who loses the ball and when.') }}
+### Turnovers
 
 [[ turnovers ]]
-{% if '04_scoring_sources.png' in files %}
-## Scoring sources and shooting
 
-{{ slot('shooting', 'Scoring sources, shooting and hot spots.') }}
-
-[[ figure: 04_scoring_sources ]]
-{% for f in ['05_shooting', '06_hot_spots'] %}{% if f ~ '.png' in files %}
-[[ figure: {{ f }} ]]
-{% endif %}{% endfor %}{% endif %}{% if '07_key_players.png' in files %}
-## Key players
-
-{{ slot('players', 'Key players and shot distribution.') }}
-
-[[ figure: 07_key_players ]]
-{% for f in ['08_shot_distribution', '09_basic_stats', '10_major_factors'] %}{% if f ~ '.png' in files %}
-[[ figure: {{ f }} ]]
-{% endif %}{% endfor %}{% endif %}{% if has_lineups %}
 ## Lineups
 
-{{ slot('lineups', 'Five-man units.') }}
-
+{{ slot('lineups') }}
+{% if has_lineups %}
 [[ lineups ]]
 {% endif %}
 ## What to expect
 
-{{ slot('expect', 'What to expect in the game.') }}
+{{ slot('expect') }}
+
+## Highlights
+
+{{ slot('highlights') }}

@@ -69,3 +69,24 @@ def test_archive_flag_only_for_a_past_automatic_page():
     assert not b.flags_for("2026-10-04", tg, today, "progress", "x.md", archive=True)            # the analyst worked on it
     assert not b.flags_for("2026-10-04", tg, today, "draft", "x.md", archive=False)              # hand-written pages are not flagged
     assert any("Automatic draft" in f for f in b.flags_for("2026-10-24", tg, today, "draft", "x.md", archive=True))   # upcoming: draft flag
+
+
+def test_new_analysis_has_the_standard_sections_in_order():
+    """Every analysis page has the same sections in the same order; an empty one gets the grey box."""
+    text = pages.new_page("analysis", {**A, "home_team": "BC Roma", "away_team": "Bosna", "opponent": "Bosna"}, [])
+    heads = [line for line in text.splitlines() if line.startswith("## ")]
+    assert heads == ["## Key points", "## LBA so far: results and standings", "## BC Roma and Bosna compared", "## Bosna roster",
+                     "## Starting five and bench", "## Scoring sources, tendencies and shooting maps", "## Key players", "## Ball movement",
+                     "## Lineups", "## What to expect", "## Highlights"]
+    assert "### Shooting" in text and "### Assists" in text and "### Turnovers" in text
+
+
+def test_pending_box_is_grey_and_keeps_the_section():
+    out = pages.expand("## Key points\n\n{{ pending }}\n\n## Empty\n\n## Next\n\ntext\n", "analysis", {}, [])
+    assert 'class="pending"' in out and "This section will be filled when the game is reviewed" in out
+    assert "## Key points" in out and "## Empty" not in out        # a section with no text and no box is left out
+
+
+def test_eurocup_analysis_names_the_competition_in_its_heading():
+    text = pages.new_page("analysis", {**A, "competition": "EuroCup"}, [])
+    assert "## EuroCup so far: results and standings" in text
