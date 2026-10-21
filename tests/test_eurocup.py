@@ -56,3 +56,43 @@ def test_club_codes_include_the_next_opponent_from_the_schedule(tmp_path):
     assert ec.club_codes(r, "A") == ["A", "B", "C", "D"]                  # A's opponents so far, A included
     assert ec.club_codes(r, "E", None) == ["E", "F"]                      # without the schedule: E and its opponent F
     assert ec.club_codes(r, "E", sched) == ["D", "E", "F"]                # the EuroCup row adds D, the LBA row is ignored
+
+
+def test_raw_file_parser_takes_dates_and_club_codes_from_the_results_feed(tmp_path):
+    """Games of any EuroCup team are in the raw file: dates and zone team names come from data/eurocup/results.csv, not from a fixed map."""
+    from matchup_report import parse_eurocup
+    (tmp_path / "eurocup").mkdir()
+    r = results()
+    r.loc[len(r)] = (7, 4, "2026-10-21", "BOS", "Bosna Bh Telecom Sarajevo", 80, "MAN", "Kids&Us Manresa", 70, True)
+    r.to_csv(tmp_path / "eurocup" / "results.csv", index=False)
+    row = lambda team, who, pts: f"7|{team}|{who}|1|10:00|{pts}|1|2|1|2|1|2|1|2|1|1|1|0|2|2|0|9"
+    raw = tmp_path / "raw.txt"
+    raw.write_text("\n".join(["BOX", row("BOSNA BH TELECOM SARAJEVO", "PERRY, REGINALD", 8), "7|BOSNA BH TELECOM SARAJEVO|TOTAL|||80|1|2|1|2|1|2|1|2|1|1|1|0|2|2||90",
+                              "7|KIDS&US MANRESA|TOTAL|||70|1|2|1|2|1|2|1|2|1|1|1|0|2|2||80", "ZONES", "7|BOS|B|2FGM|4"]) + "\n", encoding="utf-8")
+    box, zones = parse_eurocup(raw)
+    assert set(box.date) == {"2026-10-21"} and set(box.team) == {"Bosna Bh Telecom Sarajevo", "Kids&Us Manresa"}
+    assert list(zones.team) == ["Bosna Bh Telecom Sarajevo"]
+
+
+def test_eurocup_shot_positions_round_trip_through_the_lba_shot_code():
+    """data/eurocup/pbp.csv stores the EuroLeague centimetre coordinates as the percent-of-court x/y of the LBA play-by-play."""
+    import lba_style
+    cx, cy = 169.0, 696.0                                    # a corner-ish three, basket at the origin
+    pbp = pd.DataFrame({"event": ["3 punti segnato"], "x": [(cy + 157.5) / 28], "y": [cx / 15 + 50], "player_surname": ["Sims"]})
+    s = lba_style.shots_cm(pbp)
+    assert abs(s.cx.iloc[0] - cx) < 1 and abs(s.cy.iloc[0] - cy) < 1 and s.made.iloc[0] and s.pts.iloc[0] == 3
+
+
+def test_upcoming_rows_make_schedule_rows_for_unplayed_games_only():
+    club = lambda code, name: {"club": {"code": code, "name": name}}
+    games = [
+        {"played": True, "date": "2026-10-20T20:30:00", "local": club("MAN", "Kids&Us Manresa"), "road": club("BCR", "Roma Basketball")},
+        {"played": False, "date": "2026-10-27T20:00:00", "local": club("BCR", "Roma Basketball"), "road": club("BOS", "BOSNA BH Telecom Sarajevo")},
+        {"played": False, "date": "2026-11-03T19:00:00", "local": club("PAO", "PAOK"), "road": club("BCR", "Roma Basketball")},
+    ]
+    names = {"BCR": "BC Roma", "BOS": "Bosna Bh Telecom Sarajevo"}
+    rows = ec.upcoming_rows(games, "BCR", names)
+    assert [(r["date"], r["time"], r["home"], r["opponent"]) for r in rows] == [
+        ("2026-10-27", "20:00", "1", "Bosna Bh Telecom Sarajevo"), ("2026-11-03", "19:00", "0", "Paok")]
+    assert rows[0]["analysis"] == "matchup_BC_Roma_vs_Bosna_Bh_Telecom_Sarajevo_before_2026-10-27"
+    assert rows[1]["analysis"] == "matchup_Paok_vs_BC_Roma_before_2026-11-03"

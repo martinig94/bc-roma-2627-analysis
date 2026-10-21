@@ -41,3 +41,12 @@ def find_image_url(obj, key_hint: bool = False) -> str | None:
         if hit:
             return hit
     return None
+
+
+EC_NAME_FIX = {"BONACINI": "BONACCINI"}   # EuroCup spelling -> Legabasket spelling
+
+
+def ec_surname(raw: str) -> str:
+    """'WATSON JR, PAUL' (EuroLeague box score / play-by-play) -> 'WATSON': surname only, generation suffixes dropped, LBA spelling."""
+    sur = raw.split(",")[0].replace(" JR.", "").replace(" JR", "").replace(" III", "").strip()
+    return EC_NAME_FIX.get(sur, sur)

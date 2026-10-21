@@ -28,7 +28,7 @@ import weekly_sections as ws
 ROOT = Path(__file__).resolve().parent.parent
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 4   # bump when the generated data changes shape: weekly.py regenerates older snapshots
+VERSION = 6   # bump when the generated data changes shape: weekly.py regenerates older snapshots
 
 
 def standings_md(games: pd.DataFrame, before: str, team: str, opp: str) -> str:
@@ -53,6 +53,12 @@ def last_results_md(before: pd.DataFrame, n: int = 5) -> str:
         label = f"round {int(x['round'])}" if x.competition == "LBA" else x.competition
         items.append(f"- {x.date[5:]} · {label}: **{'W' if x.win else 'L'}** {int(x.pf)}-{int(x.pa)} {where(x.home)} {x.opponent}")
     return "\n".join(items)
+
+
+def lba_style_shots(pbp: pd.DataFrame, games: list, team: str) -> pd.DataFrame:
+    """The team's field-goal attempts with a position in those games (empty when there are none)."""
+    s = lba_style.shots_cm(pbp[pbp.game_id.isin(games)])
+    return s[s.team == team]
 
 
 def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
@@ -112,6 +118,20 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
         if r["photo"]:
             shutil.copy(data / "photos" / f"{r['player_id']}.jpg", out / f"photo_{r['player_id']}.jpg")
 
+    ec_ids = [str(x) for x in ec_before.game_id]
+    ec_pbp_path = data / "eurocup" / "pbp.csv"
+    assist_ec, zone_ec = [], None
+    if ec_ids and ec_pbp_path.exists():                       # the same two figures from the EuroCup play-by-play
+        pbp_ec = pd.read_csv(ec_pbp_path)
+        ec_tot = xbox[(xbox.competition == "EC") & (xbox.team == team) & (xbox.row_type == "total") & xbox.game_id.isin(ec_ids)]
+        lba_style.SOURCE_NOTE = "EuroLeague live API"
+        pairs_ec = ws.assist_pairs(pbp_ec, ec_ids, team)
+        if len(pairs_ec) and int(ec_tot.ast.sum()):
+            assist_ec = ws.fig_assists(pairs_ec, int(ec_tot.ast.sum()), out, team, "EuroCup", "assists_eurocup")
+        if len(lba_style_shots(pbp_ec, ec_ids, team)):
+            zone_ec = ws.fig_zones(pbp_ec, ec_ids, None, out, team, "EuroCup", "_eurocup")
+        lba_style.SOURCE_NOTE = "legabasket.it play-by-play"
+
     tab = st.standings(games, date)
     venue = games[games.game_id == g.game_id].venue
     auto = {
@@ -130,6 +150,7 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
         "roster": roster,
         "assist_top": ws.fig_assists(ws.assist_pairs(pbp, lba_games, team), box_ast, out, team),
         "zone_share": ws.fig_zones(pbp, lba_games, None, out, team),
+        "assist_top_ec": assist_ec, "zone_share_ec": zone_ec,
         "ts_pir_lba": ws.fig_ts_pir(xbox, "LBA", out, team=team),
         "ts_pir_ec": ws.fig_ts_pir(xbox, "EC", out, team=team) if ((xbox.competition == "EC") & (xbox.team == team)).any() else None,
         "standings_table": table,

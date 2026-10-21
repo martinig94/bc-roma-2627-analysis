@@ -33,6 +33,7 @@
   table { border-collapse:collapse; display:block; overflow-x:auto; }
   th { background:var(--tint); color:var(--ink); border-bottom:2px solid var(--gold); }
   th, td { padding:5px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  .pending { background:#ececee; color:#55595f; border:1px dashed #b4b8be; border-radius:6px; padding:.9rem 1.1rem; margin:.9rem 0; font-style:italic; }
   .mark { background:#fff2a8; color:var(--ink); padding:0 3px; border-radius:3px; }
   blockquote { margin:1rem 0; padding:.5rem 1rem; border-left:4px solid var(--gold); background:var(--flag); color:var(--ink); border-radius:0 6px 6px 0; }
   blockquote p { margin:.3rem 0; }
@@ -89,6 +90,7 @@
   <a class="brand" href="../"><img src="../assets/logo.png" alt="BC Roma"><span>2026/27</span></a>
   <select aria-label="Opponents" onchange="if(this.value)location.href='../'+this.value">
     <option value="">Opponents &#9662;</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bosna_Bh_Telecom_Sarajevo_before_2026-10-27/">vs Bosna Bh Telecom Sarajevo · EuroCup · 27 Oct</option>
     <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
     <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct · old format</option>
     <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct · old format</option>
@@ -130,9 +132,9 @@ judgement about plays or tactics: the pages are built from box scores and play-b
 <td>fetched by the same daily run; not yet confirmed on real data</td>
 </tr>
 <tr>
-<td>EuroCup box scores of BC Roma, Maxima Roma and their opponents</td>
-<td>EuroLeague live stats, entered by hand</td>
-<td>file <code>data/eurocup_2026_raw.txt</code>, updated by hand</td>
+<td>EuroCup box scores and shot zones of every EuroCup game played</td>
+<td>EuroLeague live API (<code>euroleague-api</code> package)</td>
+<td>file <code>data/eurocup_2026_raw.txt</code>, new games appended by the daily run (<code>notebooks/eurocup_fetch.py</code>)</td>
 </tr>
 <tr>
 <td>Manresa (Liga Endesa and EuroCup)</td>

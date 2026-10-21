@@ -8,7 +8,8 @@ opponent (short name), opponent_full, home (True/False/None when unknown), finis
 the EuroCup file), analysis (opponent-analysis folder, when there is one).
 
 Sources: data/games.csv (LBA, all rounds), the EuroCup file of weekly/config.json (games played, parse_eurocup), and
-weekly/schedule.csv for games still to play in other competitions (and any whose data is not in the file yet).
+weekly/schedule.csv for games still to play in other competitions (and any whose data is not in the file yet; for the others it adds the time
+and the `analysis` folder).
 In the EuroCup file the first team listed in a game is the home team.
 """
 from __future__ import annotations
@@ -53,9 +54,12 @@ def team_games(data: Path, team: str = CFG["team"]) -> pd.DataFrame:
                          "pf": int(mine.pts), "pa": int(mine.opp_pts), "game_id": gid, "analysis": None})
     sched = ROOT / "weekly" / "schedule.csv"
     if sched.exists():
-        have = {(r["competition"], r["date"]) for r in rows}
+        have = {(r["competition"], r["date"]): r for r in rows}
         for r in pd.read_csv(sched, dtype=str, keep_default_na=False).itertuples():
-            if (r.competition, r.date) in have:
+            if (r.competition, r.date) in have:        # played and in the data: the schedule still gives the time and the hand-made analysis
+                row = have[(r.competition, r.date)]
+                row["time"] = row["time"] or r.time
+                row["analysis"] = row["analysis"] or r.analysis or None
                 continue
             rows.append({"date": r.date, "time": r.time, "competition": r.competition, "round": None, "opponent": r.opponent,
                          "opponent_full": r.opponent, "home": {"1": True, "0": False}.get(r.home), "finished": False,

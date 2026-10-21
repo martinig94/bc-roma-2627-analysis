@@ -11,7 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
-  "version": 4,
+  "version": 6,
   "n_before": 9,
   "opponent_analysis": null,
   "record": "0-1",
@@ -49,6 +49,8 @@
       "2P%": 62.9,
       "FT%": 66.7,
       "Assists per game": 22.0,
+      "Offensive rebounds per game": 16.0,
+      "Defensive rebounds per game": 23.0,
       "Opp. eFG%": 60.9,
       "Opp. TOV% (forced)": 8.8,
       "DREB%": 65.7
@@ -449,6 +451,8 @@
       "I": 2.9
     }
   },
+  "assist_top_ec": [],
+  "zone_share_ec": null,
   "ts_pir_lba": {
     "file": "ts_pir_lba.png",
     "players": 8,

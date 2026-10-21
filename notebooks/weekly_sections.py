@@ -5,6 +5,8 @@ Every function takes the data as of the round being reported (LBA games up to th
 """
 from __future__ import annotations
 
+import re
+import unicodedata
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -18,7 +20,8 @@ from matchup_report import parse_eurocup, plot_zone_heatmap, zone_stats
 
 ROOT = Path(__file__).resolve().parent.parent
 TEAM = weekly_config.load()["team"]
-POS_ORDER = {"PG": 0, "SG": 1, "G": 1, "SF": 2, "F": 2, "PF": 3, "C": 4,
+POS_ORDER = {"Guard": 1, "Forward": 2, "Center": 4,          # EuroCup club pages
+             "PG": 0, "SG": 1, "G": 1, "SF": 2, "F": 2, "PF": 3, "C": 4,
              "Playmaker": 0, "Guardia": 1, "Guardia/Ala": 1, "Ala": 2, "Ala/Centro": 3, "Centro": 4}   # the last six: legabasket.it roles
 
 # playing-time flag: at least MIN_PLAYED seconds in the game and either +ABS_UP seconds or +REL_UP above the average before
@@ -94,6 +97,29 @@ def _num(v) -> str:
     return "" if v is None or pd.isna(v) else str(int(float(v)))
 
 
+def ec_people(data: Path, team: str) -> dict[str, dict]:
+    """EuroCup club page of a team (data/eurocup/people.csv): last name -> {pos, height, photo}, for the players of teams that have no LBA data.
+    Last names that two players share are left out (no way to tell them apart in the box score)."""
+    from player_names import photo_name
+    people, results = data / "eurocup" / "people.csv", data / "eurocup" / "results.csv"
+    if not people.exists() or not results.exists():
+        return {}
+    res = pd.read_csv(results)
+    codes = {**dict(zip(res.home, res.home_code)), **dict(zip(res.away, res.away_code))}
+    df = pd.read_csv(people)
+    df = df[df.club == codes.get(team)]
+    out: dict[str, dict] = {}
+    for r in df.itertuples():
+        clean = re.sub(r"\b(jr|sr|ii|iii)\b\.?", "", unicodedata.normalize("NFKD", r.player).encode("ascii", "ignore").decode().lower()).split()
+        stem = photo_name(r.player)
+        info = {"pos": r.position if isinstance(r.position, str) else "", "height": "" if pd.isna(r.height_cm) or r.height_cm < 150 else str(int(r.height_cm)),
+                "photo": stem if (data / "eurocup" / "photos" / f"{stem}.jpg").exists() else None}
+        for k in range(1, len(clean)):                       # every tail of the name: "de laat", "laat"
+            key = " ".join(clean[k:])
+            out[key] = None if key in out else info
+    return {k: v for k, v in out.items() if v}
+
+
 def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | None = None) -> list[dict]:
     """One row per player of `team` in `box`; bio columns (number, role, age on `asof`, nationality, weight, birth date) come from
     data/team_rosters.csv and fill position and height when data/roster.csv leaves them blank."""
@@ -102,6 +128,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
     p = players(box, team)
     lba_ids = p[p.competition == "LBA"].drop_duplicates("player_surname").set_index("player_surname").player_id
     rost = roster_file(data, p[p.competition == "LBA"], team).set_index("player_id")
+    ecp = ec_people(data, team) if lba_ids.empty else {}          # a team that is only in the EuroCup data: its club page gives position, height, photo
     photos = {int(f.stem) for f in (data / "photos").glob("*.jpg")}
     rows = []
     for sur, g in p.groupby("player_surname"):
@@ -112,10 +139,14 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
         pos = pos or (bio.get("role") if isinstance(bio.get("role"), str) else "")
         ht = "" if r is None or pd.isna(r.height_cm) or r.height_cm == "" else str(int(float(r.height_cm)))
         ht = ht or _num(bio.get("height_cm"))
+        e = ecp.get(re.sub(r"\b(jr|sr|ii|iii)\b\.?", "", sur.lower()).strip())
+        if e:
+            pos, ht = pos or e["pos"], ht or e["height"]
         n = len(g); fga = g.fg2a.sum() + g.fg3a.sum()
         lba, ec = g[g.competition == "LBA"], g[g.competition == "EC"]
         rows.append({
-            "player_id": pid, "photo": pid in photos, "name": sur.title(), "pos": pos, "height": ht, "gp": n,
+            "player_id": pid if pid is not None or not (e and e["photo"]) else f"ec_{e['photo']}",
+            "photo": pid in photos or bool(e and e["photo"]), "name": sur.title(), "pos": pos, "height": ht, "gp": n,
             "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
             "country": bio.get("country") if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
             "birth_date": bio.get("birth_date") if isinstance(bio.get("birth_date"), str) else "",
@@ -143,6 +174,46 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
             "ppg_lba": None, "ppg_ec": None, "sec_total": 0})
     rows.sort(key=lambda r: (POS_ORDER.get(r["pos"], 9), -r["sec_total"]))
     return rows
+
+
+# ── starting fives of the last games ───────────────────────────────────────────
+def fig_starting_fives(box: pd.DataFrame, team: str, out: Path, n: int = 5, top: int = 12, idx: int = 1) -> list[dict]:
+    """Grid players x last `n` games (LBA and EuroCup, date order): team colour = starter (S, minutes), grey = bench minutes, red = out of the game.
+    Rows: the `top` players by minutes over all the games in `box`, plus anyone who started. Written to 11_starting_fives.png."""
+    p = box[(box.team == team) & (box.row_type == "player")]
+    tot = box[(box.team == team) & (box.row_type == "total")].sort_values(["date", "game_id"]).tail(n)
+    if tot.empty:
+        return []
+    mins_total = p.groupby("player_surname").sec.sum().sort_values(ascending=False)
+    rotation = list(mins_total.head(top).index)
+    players = rotation + [x for x in p[p.starter == 1].player_surname.unique() if x not in rotation]
+    fill, edge = team_color(team, idx)
+    fig, ax = plt.subplots(figsize=(1.35 * len(tot) + 2.6, 0.42 * len(players) + 2.2))
+    fives = []
+    for j, g in enumerate(tot.itertuples()):
+        row = p[p.game_id == g.game_id].drop_duplicates("player_surname").set_index("player_surname")
+        fives.append({"date": g.date, "opponent": g.opponent, "starters": sorted(x.title() for x in row[row.starter == 1].index)})
+        for i, name in enumerate(players):
+            r = row.loc[name] if name in row.index else None
+            if r is None or r.sec <= 0:
+                color, text = "#d64545", "OUT"
+            elif r.starter == 1:
+                color, text = fill, f"S {r.sec / 60:.0f}'"
+            else:
+                color, text = "#e6e6ee", f"{r.sec / 60:.0f}'"
+            ax.add_patch(plt.Rectangle((j, -i - 1), 0.94, 0.88, color=color))
+            ax.text(j + 0.47, -i - 0.56, text, ha="center", va="center", fontsize=9, color="white" if text == "OUT" else TEXT,
+                    fontweight="bold" if text == "OUT" else None)
+    ax.set_xlim(-0.05, len(tot)); ax.set_ylim(-len(players) - 0.1, 0)
+    ax.set_yticks([-i - 0.56 for i in range(len(players))], [x.title() for x in players], fontsize=9)
+    opp_pts = box[(box.row_type == "total") & (box.team != team) & box.game_id.isin(tot.game_id)].groupby("game_id").pts.first()
+    labels = [f"{g.date[5:]}\n{str(g.opponent).split()[0][:11]}\n{'LBA' if g.competition == 'LBA' else 'EC'} {int(g.pts)}-{int(opp_pts.get(g.game_id, 0))}"
+              for g in tot.itertuples()]
+    ax.set_xticks([j + 0.47 for j in range(len(tot))], labels, fontsize=8)
+    ax.xaxis.tick_top(); ax.tick_params(length=0); ax.spines[:].set_visible(False)
+    fig.suptitle(f"{team}: starters (S), bench minutes and absences, last {len(tot)} games (LBA and EuroCup)", **SUP_KW)
+    save_fig(fig, out / "11_starting_fives.png"); plt.close(fig)
+    return fives
 
 
 # ── turnovers ───────────────────────────────────────────────────────────────────
@@ -203,7 +274,7 @@ def assist_pairs(pbp: pd.DataFrame, games: list[int], team: str = TEAM) -> pd.Da
     return m[["game_id", "passer", "scorer", "pts"]]
 
 
-def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM) -> list[dict]:
+def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM, league: str = "LBA", name: str = "assists") -> list[dict]:
     matrix = pairs.pivot_table(index="passer", columns="scorer", values="pts", aggfunc="size", fill_value=0)
     allp = matrix.index.union(matrix.columns)
     matrix = matrix.reindex(index=allp, columns=allp, fill_value=0)
@@ -222,14 +293,14 @@ def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM) 
     ax.set_yticks(range(n), [f"{r} ({int(matrix.loc[r].sum())})" for r in matrix.index], fontsize=9)
     ax.xaxis.tick_top(); ax.xaxis.set_label_position("top")
     ax.set_xlabel("scorer (assisted baskets received)", labelpad=8); ax.set_ylabel("passer (assists given)")
-    fig.suptitle(f"{team} assist matrix, LBA ({len(pairs)} assisted baskets, {100 * len(pairs) / box_ast:.0f}% of box-score assists)", **SUP_KW)
-    save_fig(fig, out / "assists.png"); plt.close(fig)
+    fig.suptitle(f"{team} assist matrix, {league} ({len(pairs)} assisted baskets, {100 * len(pairs) / box_ast:.0f}% of box-score assists)", **SUP_KW)
+    save_fig(fig, out / f"{name}.png"); plt.close(fig)
     top = pairs.groupby(["passer", "scorer"]).size().sort_values(ascending=False).head(6)
     return [{"passer": a, "scorer": b, "n": int(n_)} for (a, b), n_ in top.items()]
 
 
 # ── shot zones ──────────────────────────────────────────────────────────────────
-def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int | None, out: Path, team: str = TEAM) -> dict:
+def fig_zones(pbp: pd.DataFrame, games: list, game_id: int | None, out: Path, team: str = TEAM, league: str = "LBA", suffix: str = "") -> dict:
     GOLD, GOLD_EDGE = team_color(team)
     s = shots_cm(pbp[pbp.game_id.isin(games)])
     ref = zone_stats(s[s.team != team])
@@ -237,12 +308,12 @@ def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int | None, out: Pat
     this = mine[mine.game_id == game_id] if game_id is not None else mine.iloc[0:0]
     fig, axes = plt.subplots(1, 2 if game_id is not None else 1, figsize=(15, 8) if game_id is not None else (8.5, 8))
     axes = np.atleast_1d(axes)
-    mesh = plot_zone_heatmap(axes[0], mine, f"Season to date: {int(mine.made.sum())}/{len(mine)} FG in {mine.game_id.nunique()} LBA games", ref=ref)
+    mesh = plot_zone_heatmap(axes[0], mine, f"Season to date: {int(mine.made.sum())}/{len(mine)} FG in {mine.game_id.nunique()} {league} games", ref=ref)
     if game_id is not None:
         plot_zone_heatmap(axes[1], this, f"This game: {int(this.made.sum())}/{len(this)} FG")
     cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
-    fig.suptitle(f"{team} shooting by zone, LBA (small grey text: FG% of all other LBA teams in that zone)", **SUP_KW)
-    save_fig(fig, out / "zones.png"); plt.close(fig)
+    fig.suptitle(f"{team} shooting by zone, {league} (small grey text: FG% of all other {league} teams in that zone)", **SUP_KW)
+    save_fig(fig, out / f"zones{suffix}.png"); plt.close(fig)
 
     # where the shots come from vs the league
     labels = lba_style.ZONE_LABELS
@@ -254,15 +325,15 @@ def fig_zones(pbp: pd.DataFrame, games: list[int], game_id: int | None, out: Pat
     if game_id is not None:
         ax.bar(x - w, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, season")
         ax.bar(x, sg, w, color=GOLD, alpha=0.45, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, this game")
-        ax.bar(x + w, sl, w, color=LEAGUE, label="other LBA teams")
+        ax.bar(x + w, sl, w, color=LEAGUE, label=f"other {league} teams")
     else:
         ax.bar(x - w / 2, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, season")
-        ax.bar(x + w / 2, sl, w, color=LEAGUE, label="other LBA teams")
+        ax.bar(x + w / 2, sl, w, color=LEAGUE, label=f"other {league} teams")
     ax.set_xticks(x, [labels[z] for z in zs], rotation=25, ha="right", fontsize=9)
     ax.set_ylabel("% of field-goal attempts"); ax.legend(fontsize=8)
     style_axes(ax, "y")
     ax.set_title("Shot distribution by zone: where the attempts come from", loc="left", **TITLE_KW)
-    save_fig(fig, out / "zone_share.png"); plt.close(fig)
+    save_fig(fig, out / f"zone_share{suffix}.png"); plt.close(fig)
     return {"season": {z: round(float(v), 1) for z, v in sm.items()}, "league": {z: round(float(v), 1) for z, v in sl.items()}}
 
 
@@ -337,6 +408,7 @@ def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)
         "3PA per game": r(mine.fg3a.mean()), "3P%": r(100 * mine.fg3m.sum() / mine.fg3a.sum()),
         "2P%": r(100 * mine.fg2m.sum() / mine.fg2a.sum()), "FT%": r(100 * mine.ftm.sum() / mine.fta.sum()),
         "Assists per game": r(mine.ast.mean()),
+        "Offensive rebounds per game": r(mine.oreb.mean()), "Defensive rebounds per game": r(mine.dreb.mean()),
         "Opp. eFG%": r(100 * (opp.fg2m + 1.5 * opp.fg3m).sum() / ofga.sum()),
         "Opp. TOV% (forced)": r(100 * opp.tov.sum() / po.sum()),
         "DREB%": r(100 * mine.dreb.sum() / (mine.dreb + opp.oreb).sum()),

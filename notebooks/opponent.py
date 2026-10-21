@@ -1,6 +1,7 @@
 """Opponent analysis before one BC Roma game, using only data from before that game, with a comparison against BC Roma.
 
     python notebooks/opponent.py --round 5          # analysis of BC Roma's round-5 opponent
+    python notebooks/opponent.py --eurocup 2026-10-27   # analysis of the opponent of a EuroCup game (by date)
 
 Runs the existing figure scripts (matchup_report.py, lineups_report.py, standings.py) into
 reports/matchup_<home>_vs_<away>_before_<date>/ and writes auto.json there (the BC Roma vs opponent comparison table).
@@ -19,6 +20,7 @@ from pathlib import Path
 
 import pandas as pd
 
+import lba_style
 import pages
 import player_photos
 import standings as st
@@ -31,7 +33,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NB = ROOT / "notebooks"
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 6   # bump when the generated data changes shape: weekly.py regenerates older analyses
+VERSION = 9   # bump when the generated data changes shape: weekly.py regenerates older analyses
 
 
 def folder_name(home: str, away: str, date: str) -> str:
@@ -53,6 +55,7 @@ def run(script: str, *args: str) -> None:
 
 
 def comparison(box: pd.DataFrame, games: pd.DataFrame, date: str, team: str, opp: str, comps: tuple = ("LBA", "EC")) -> dict:
+    """`games`: the games of the table the positions come from (the LBA games, or the EuroCup group's for a EuroCup game)."""
     tab = st.standings(games, date)
     prof = {t: ws.team_profile(box, t, comps) for t in (team, opp)}
     rows = []
@@ -69,7 +72,8 @@ def write_roster(folder: Path, opp: str, date: str, data: Path) -> list[dict]:
     roster = ws.roster_table(ws.load_box_before(data, date, CFG["eurocup_file"]), data, opp, asof=date)
     for r in roster:
         if r["photo"]:
-            shutil.copy(data / "photos" / f"{r['player_id']}.jpg", folder / f"photo_{r['player_id']}.jpg")
+            src = data / "eurocup" / "photos" / f"{str(r['player_id']).removeprefix('ec_')}.jpg" if str(r["player_id"]).startswith("ec_") else data / "photos" / f"{r['player_id']}.jpg"
+            shutil.copy(src, folder / f"photo_{r['player_id']}.jpg")
     (folder / "roster.json").write_text(json.dumps(roster, indent=2, ensure_ascii=False), encoding="utf-8")
     return roster
 
@@ -107,6 +111,8 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
 
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
+    lba_style.STAMP_NOTE = f"games before {pd.Timestamp(date):%d %b %Y} (pre-match snapshot)"
+    ws.fig_starting_fives(xbox, opp, folder)
     fin = st.finished(games, date)
     lba_ids = [int(x) for x in fin[(fin.home_team == opp) | (fin.away_team == opp)].game_id]
     pbp = pd.read_csv(data / "pbp.csv")
@@ -131,13 +137,84 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data", force: bool
     return folder
 
 
+def generate_eurocup(date: str, team: str = TEAM, data: Path = ROOT / "data", force: bool = False) -> Path | None:
+    """The same analysis for a EuroCup game (the game of `date` in team_games.py), built from the EuroCup data only (box scores, shots and
+    play-by-play from the EuroLeague API): the EuroCup group table, the other EuroCup teams as the league."""
+    import eurocup
+    tg = tgm.team_games(data, team)
+    rows = tg[(tg.competition == "EuroCup") & (tg.date == date)]
+    if rows.empty:
+        raise SystemExit(f"{team} has no EuroCup game on {date}")
+    g = rows.iloc[0]
+    results = eurocup.load_results(data)
+    if results is None:
+        raise SystemExit("no EuroCup results yet (data/eurocup/results.csv comes from eurocup_fetch.py)")
+    frame = eurocup.games_frame(results, team)
+    names = set(frame.home_team) | set(frame.away_team)
+    opp = eurocup.find_team(names, g.opponent_full)
+    if opp is None:
+        raise SystemExit(f"{g.opponent_full} is not in the EuroCup results")
+    at_home = True if pd.isna(g.home) else bool(g.home)
+    home_team, away_team = (team, opp) if at_home else (opp, team)
+    folder = ROOT / "reports" / (g.analysis if isinstance(g.analysis, str) and g.analysis else folder_name(home_team, away_team, date))
+    games = pd.read_csv(data / "games.csv")
+    current = tgm.n_before(tg, games, date)
+    if folder.exists():
+        if (folder / "README.md").exists() or (ROOT / "weekly" / "opponent" / folder.name / "document.md").exists():
+            print(f"opponent analysis written by hand, left alone: {folder.name}")
+            return folder
+        auto_path = folder / "auto.json"
+        old = json.loads(auto_path.read_text(encoding="utf-8")) if auto_path.exists() else {}
+        if not force and old.get("n_before") == current and old.get("version") == VERSION:
+            print(f"opponent analysis up to date: {folder.name}")
+            return folder
+    if st.finished(frame, date).empty:
+        raise SystemExit(f"no EuroCup games before {date}")
+    run("matchup_report.py", "--home", home_team, "--away", away_team, "--before", date, "--out", "reports", "--competition", "EC")
+    run("lineups_report.py", "--team", team, "--team", opp, "--before", date, "--out", str(folder), "--competition", "EC")
+    xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
+    roster = write_roster(folder, opp, date, data)
+    lba_style.STAMP_NOTE, lba_style.SOURCE_NOTE = f"games before {pd.Timestamp(date):%d %b %Y} (pre-match snapshot)", "EuroLeague live API"
+    ws.fig_starting_fives(xbox, opp, folder)
+    ec_box = xbox[xbox.competition == "EC"]
+    ec_ids = sorted(ec_box[(ec_box.team == opp) & (ec_box.row_type == "total")].game_id.unique())
+    pairs = ws.assist_pairs(pd.read_csv(data / "eurocup" / "pbp.csv"), ec_ids, opp)
+    box_ast = int(ec_box[(ec_box.game_id.isin(ec_ids)) & (ec_box.team == opp) & (ec_box.row_type == "total")].ast.sum())
+    assist_top = ws.fig_assists(pairs, box_ast, folder, opp, "EuroCup") if len(pairs) and box_ast else []
+    lba_style.SOURCE_NOTE = "legabasket.it play-by-play"
+    rnd_no = None
+    sched = results[(results.date == date) & ((results.home == opp) | (results.away == opp))]
+    if len(sched):
+        rnd_no = int(sched.iloc[0]["round"])
+    auto = {
+        "kind": "opponent", "version": VERSION, "n_before": current, "competition": "EuroCup", "round": rnd_no, "team": team,
+        "opponent": wr.short(opp), "opponent_full": opp, "home": at_home, "home_team": home_team, "away_team": away_team,
+        "date": date, "time": g.time, "venue": None, "eurocup": True, "eurocup_teams": [wr.short(team), wr.short(opp)], "league": "EuroCup",
+        "roster": roster, "comparison": comparison(xbox, frame, date, team, opp, ("EC",)),
+        "assist_top": assist_top, "turnovers": ws.turnover_table(xbox, opp),
+        "standings_md": (folder / "standings.md").read_text(encoding="utf-8"),
+    }
+    (folder / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")
+    page, created = pages.ensure("analysis", date, auto, sorted(f.name for f in folder.iterdir()))
+    if created:
+        print(f"created {page.relative_to(ROOT)} - the page you edit")
+    print(f"opponent analysis EuroCup {date}: {wr.short(team)} vs {wr.short(opp)}  ->  {folder}")
+    return folder
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--round", type=int, required=True)
+    ap.add_argument("--round", type=int)
+    ap.add_argument("--eurocup", metavar="DATE", help="EuroCup game of this date (YYYY-MM-DD) instead of an LBA round")
     ap.add_argument("--team", default=TEAM)
     ap.add_argument("--data", default=str(ROOT / "data"))
     a = ap.parse_args()
-    generate(a.round, a.team, Path(a.data))
+    if a.eurocup:
+        generate_eurocup(a.eurocup, a.team, Path(a.data), force=True)
+    elif a.round:
+        generate(a.round, a.team, Path(a.data))
+    else:
+        ap.error("--round or --eurocup is required")
 
 
 if __name__ == "__main__":

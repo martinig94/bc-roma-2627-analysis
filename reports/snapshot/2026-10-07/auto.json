@@ -11,7 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
-  "version": 4,
+  "version": 6,
   "n_before": 19,
   "opponent_analysis": null,
   "record": "1-1",
@@ -66,6 +66,8 @@
       "2P%": 73.2,
       "FT%": 66.7,
       "Assists per game": 24.5,
+      "Offensive rebounds per game": 13.5,
+      "Defensive rebounds per game": 27.5,
       "Opp. eFG%": 50.8,
       "Opp. TOV% (forced)": 11.1,
       "DREB%": 71.4
@@ -88,6 +90,8 @@
       "2P%": 64.7,
       "FT%": 72.2,
       "Assists per game": 17.0,
+      "Offensive rebounds per game": 11.0,
+      "Defensive rebounds per game": 22.0,
       "Opp. eFG%": 57.1,
       "Opp. TOV% (forced)": 17.4,
       "DREB%": 57.9
@@ -487,6 +491,62 @@
       "I": 6.0
     }
   },
+  "assist_top_ec": [
+    {
+      "passer": "Mannion",
+      "scorer": "Ayayi",
+      "n": 2
+    },
+    {
+      "passer": "Mannion",
+      "scorer": "Simonovic",
+      "n": 2
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Simonovic",
+      "n": 1
+    },
+    {
+      "passer": "Davis",
+      "scorer": "Stevenson",
+      "n": 1
+    },
+    {
+      "passer": "Ayayi",
+      "scorer": "Strautins",
+      "n": 1
+    },
+    {
+      "passer": "Davis",
+      "scorer": "Strautins",
+      "n": 1
+    }
+  ],
+  "zone_share_ec": {
+    "season": {
+      "A": 27.4,
+      "B": 4.8,
+      "C": 16.1,
+      "D": 0.0,
+      "E": 1.6,
+      "F": 4.8,
+      "G": 9.7,
+      "H": 21.0,
+      "I": 14.5
+    },
+    "league": {
+      "A": 30.0,
+      "B": 12.9,
+      "C": 11.4,
+      "D": 1.4,
+      "E": 4.3,
+      "F": 1.4,
+      "G": 7.1,
+      "H": 17.1,
+      "I": 14.3
+    }
+  },
   "ts_pir_lba": {
     "file": "ts_pir_lba.png",
     "players": 9,
@@ -496,7 +556,7 @@
   "ts_pir_ec": {
     "file": "ts_pir_eurocup.png",
     "players": 9,
-    "others": 10,
+    "others": 300,
     "games": 1
   },
   "standings_table": {
@@ -507,7 +567,7 @@
     "record": "0-1"
   },
   "md": {
-    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Paok Thessaloniki | 4 | 2-0 | +18 | WW |\n| 2 | Ratiopharm Ulm | 2 | 1-0 | +14 | W |\n| 3 | Bahcesehir College Istanbul | 2 | 1-0 | +13 | W |\n| 4 | **Lietkabelis Panevezys** | 2 | 1-0 | +3 | W |\n| 5 | Bosna Bh Telecom Sarajevo | 0 | 0-2 | -6 | LL |\n| 6 | **BC Roma** | 0 | 0-1 | -13 | L |\n| 7 | Balkan Botevgrad | 0 | 0-1 | -14 | L |\n| 8 | Kids&Us Manresa | 0 | 0-1 | -15 | L |",
+    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | PAOK | 4 | 2-0 | +18 | WW |\n| 2 | Ulm | 2 | 1-0 | +14 | W |\n| 3 | Bahcesehir | 2 | 1-0 | +13 | W |\n| 4 | **Lietkabelis** | 2 | 1-0 | +3 | W |\n| 5 | Bosna | 0 | 0-2 | -6 | LL |\n| 6 | **BC Roma** | 0 | 0-1 | -13 | L |\n| 7 | Botevgrad | 0 | 0-1 | -14 | L |\n| 8 | Manresa | 0 | 0-1 | -15 | L |",
     "last_results": "- 09-26 · round 1: **L** 94-109 at Treviso\n- 09-30 · EuroCup: **L** 78-91 at Bahcesehir College Istanbul\n- 10-04 · round 2: **W** 108-70 vs Tortona"
   }
 }

@@ -10,8 +10,9 @@
 For every game of the team, by round N (settings in weekly/config.json):
   snapshot  the team before the game, data from before it, for every game in every competition (LBA and EuroCup; needs a
             game before it, up to the next game to be played). Folder = the date of the game.
-  opponent  analysis of the opponent of an LBA game with the comparison against the team (same data cut); other
-            competitions' opponents get a hand-made page (weekly/schedule.csv links it to the game)
+  opponent  analysis of the opponent of an LBA game with the comparison against the team (same data cut); for a EuroCup game the same
+            analysis from the EuroCup data, when weekly/schedule.csv names its folder (`analysis`: matchup_<home>_vs_<away>_before_<date>);
+            a hand-written folder there (README.md or document.md) is kept as it is
   review    post-game review of an LBA round (only once it is finished and collected); OFF unless "reviews": true in weekly/config.json
 Your pages are weekly/games/<date>/{snapshot,analysis}.md (created the first time, never overwritten; see pages.py) and
 weekly/review/round-NN/notes.md
@@ -105,6 +106,9 @@ def main() -> None:
         snapshot_report.generate(k, team)
     for r in (todo["opponent"] if "opponent" in kinds else []):
         opponent.generate(r, team, force=bool(a.round))
+    if "opponent" in kinds and not (a.round or a.game):       # EuroCup games listed in weekly/schedule.csv with an analysis folder (no hand-written README there)
+        for _, r in targets[(targets.competition == "EuroCup") & targets.analysis.notna()].iterrows():
+            opponent.generate_eurocup(r.date, team)
     for r in (todo["review"] if "review" in kinds else []):
         weekly_report.generate(r, team)
     if not a.no_build:

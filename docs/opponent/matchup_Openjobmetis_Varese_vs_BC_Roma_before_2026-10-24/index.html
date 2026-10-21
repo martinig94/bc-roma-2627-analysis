@@ -33,6 +33,7 @@
   table { border-collapse:collapse; display:block; overflow-x:auto; }
   th { background:var(--tint); color:var(--ink); border-bottom:2px solid var(--gold); }
   th, td { padding:5px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  .pending { background:#ececee; color:#55595f; border:1px dashed #b4b8be; border-radius:6px; padding:.9rem 1.1rem; margin:.9rem 0; font-style:italic; }
   .mark { background:#fff2a8; color:var(--ink); padding:0 3px; border-radius:3px; }
   blockquote { margin:1rem 0; padding:.5rem 1rem; border-left:4px solid var(--gold); background:var(--flag); color:var(--ink); border-radius:0 6px 6px 0; }
   blockquote p { margin:.3rem 0; }
@@ -89,6 +90,7 @@
   <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27</span></a>
   <select aria-label="Opponents" onchange="if(this.value)location.href='../../'+this.value">
     <option value="">Opponents &#9662;</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bosna_Bh_Telecom_Sarajevo_before_2026-10-27/">vs Bosna Bh Telecom Sarajevo · EuroCup · 27 Oct</option>
     <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
     <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct · old format</option>
     <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct · old format</option>
@@ -108,14 +110,16 @@
 <span class="muted">opens its markdown file on GitHub; once saved, the site is rebuilt within a few minutes</span></p>
 <h1>Openjobmetis Varese vs BC Roma</h1>
 <blockquote>
-<p>⚠ <strong>Played but not collected yet:</strong> at Kids&amp;Us Manresa (EuroCup, 20 Oct). Not included here; the next collection of games updates this page.</p>
 <p>✎ <strong>Work in progress:</strong> some text is written but the page is not marked as reviewed yet. Set <code>reviewed: yes</code> in <code>weekly/games/2026-10-24/analysis.md</code> when done.</p>
 </blockquote>
 <p>➜ <strong>BC Roma before this game:</strong> <a href="../../snapshot/2026-10-24/">situation, roster and form (pre-game snapshot)</a></p>
 <p>Round 5 · Saturday 24 October 2026, 20:00 · Itelyum Arena</p>
 <p><strong>Pre-game analysis: only data from games played before Saturday 24 October 2026.</strong> League games; early in the season the samples are small, so read everything as tendencies, not established facts.</p>
 <p>Author: Giulia Martini</p>
-<details class="sec" open><summary><h2>LBA so far: results and standings</h2></summary><div class="sec-body">
+<details class="sec" open><summary><h2>Key points</h2></summary><div class="sec-body">
+<div class="pending">This section will be filled when the game is reviewed</div>
+
+</div></details><details class="sec" open><summary><h2>LBA so far: results and standings</h2></summary><div class="sec-body">
 <p>All 32 LBA games played before this match (rounds 1 to 4); home team first.</p>
 <ul>
 <li><strong>Round 1</strong>: <strong>Treviso 109-94 BC Roma</strong> · Venezia 85-73 Cantù · Reggio Emilia 78-83 Trento · Milano 83-79 Trieste · Tortona 101-93 Verona · Udine 87-63 Scafati · Maxima Roma 75-94 Napoli · <strong>Varese 69-90 Virtus Bologna</strong></li>
@@ -382,6 +386,16 @@
 <td>Assists per game</td>
 <td style="text-align: right;">20.8</td>
 <td style="text-align: right;">18.0</td>
+</tr>
+<tr>
+<td>Offensive rebounds per game</td>
+<td style="text-align: right;">11.2</td>
+<td style="text-align: right;">14.0</td>
+</tr>
+<tr>
+<td>Defensive rebounds per game</td>
+<td style="text-align: right;">27.0</td>
+<td style="text-align: right;">20.8</td>
 </tr>
 <tr>
 <td>Opp. eFG%</td>
@@ -718,9 +732,11 @@
 </table>
 <p><strong>Out: Della Valle is expected to miss the next game</strong></p>
 </div></details><details class="sec" open><summary><h2>Starting five and bench</h2></summary><div class="sec-body">
+<div class="pending">This section will be filled when the game is reviewed</div>
+
 <p><img alt="starters bench" src="02_starters_bench.png" /></p>
 <p><img alt="minutes" src="03_minutes.png" /></p>
-<p>Missing: starting-five lineup plot of the last games</p>
+<p><img alt="starting fives" src="11_starting_fives.png" /></p>
 </div></details><details class="sec" open><summary><h2>Scoring sources, tendencies and shooting maps</h2></summary><div class="sec-body">
 <p><img alt="scoring sources" src="04_scoring_sources.png" /></p>
 <p><img alt="shooting" src="05_shooting.png" /></p>
@@ -746,7 +762,7 @@ Varese has:
 <p><img alt="shot distribution" src="08_shot_distribution.png" /></p>
 <p><img alt="Hale radar plot" src="05_player_hale_shot_profile.png" />
 <img alt="Duke radar plot" src="05_player_duke_shot_profile.png" />
-<img alt="Renfro radar plot" src="05_player_Renfro_shot_profile.png" />
+<img alt="Renfro radar plot" src="05_player_renfro_shot_profile.png" />
 <img alt="Alviti radar plot" src="05_player_alviti_shot_profile.png" />
 <img alt="Libbrizi radar plot" src="05_player_librizzi_shot_profile.png" />
 <img alt="Roby radar plot" src="05_player_roby_shot_profile.png" />
@@ -897,7 +913,12 @@ Playing tendencies differ greatly between lineups:
 - Alviti, Duke, Ale, Renfro, Roby have the highest eFG% and second TO% (0.33)<br />
 - Duke, Kamagate, Librizzi, Ikangi, Roby have the highest TO% (0.36)</p>
 <p><img alt="lineups" src="lineups_BC_Roma.png" /></p>
-<p><img alt="lineups" src="lineups_Openjobmetis_Varese.png" /></p></div></details>
+<p><img alt="lineups" src="lineups_Openjobmetis_Varese.png" /></p>
+</div></details><details class="sec" open><summary><h2>What to expect</h2></summary><div class="sec-body">
+<div class="pending">This section will be filled when the game is reviewed</div>
+
+</div></details><details class="sec" open><summary><h2>Highlights</h2></summary><div class="sec-body">
+<div class="pending">This section will be filled when the game is reviewed</div></div></details>
 <section class="comments">
 <h2>Comments</h2>
 <p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
