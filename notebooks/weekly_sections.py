@@ -234,7 +234,7 @@ def assist_pairs(pbp: pd.DataFrame, games: list[int], team: str = TEAM) -> pd.Da
     return m[["game_id", "passer", "scorer", "pts"]]
 
 
-def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM) -> list[dict]:
+def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM, league: str = "LBA") -> list[dict]:
     matrix = pairs.pivot_table(index="passer", columns="scorer", values="pts", aggfunc="size", fill_value=0)
     allp = matrix.index.union(matrix.columns)
     matrix = matrix.reindex(index=allp, columns=allp, fill_value=0)
@@ -253,7 +253,7 @@ def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM) 
     ax.set_yticks(range(n), [f"{r} ({int(matrix.loc[r].sum())})" for r in matrix.index], fontsize=9)
     ax.xaxis.tick_top(); ax.xaxis.set_label_position("top")
     ax.set_xlabel("scorer (assisted baskets received)", labelpad=8); ax.set_ylabel("passer (assists given)")
-    fig.suptitle(f"{team} assist matrix, LBA ({len(pairs)} assisted baskets, {100 * len(pairs) / box_ast:.0f}% of box-score assists)", **SUP_KW)
+    fig.suptitle(f"{team} assist matrix, {league} ({len(pairs)} assisted baskets, {100 * len(pairs) / box_ast:.0f}% of box-score assists)", **SUP_KW)
     save_fig(fig, out / "assists.png"); plt.close(fig)
     top = pairs.groupby(["passer", "scorer"]).size().sort_values(ascending=False).head(6)
     return [{"passer": a, "scorer": b, "n": int(n_)} for (a, b), n_ in top.items()]

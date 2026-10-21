@@ -72,3 +72,12 @@ def test_raw_file_parser_takes_dates_and_club_codes_from_the_results_feed(tmp_pa
     box, zones = parse_eurocup(raw)
     assert set(box.date) == {"2026-10-21"} and set(box.team) == {"Bosna Bh Telecom Sarajevo", "Kids&Us Manresa"}
     assert list(zones.team) == ["Bosna Bh Telecom Sarajevo"]
+
+
+def test_eurocup_shot_positions_round_trip_through_the_lba_shot_code():
+    """data/eurocup/pbp.csv stores the EuroLeague centimetre coordinates as the percent-of-court x/y of the LBA play-by-play."""
+    import lba_style
+    cx, cy = 169.0, 696.0                                    # a corner-ish three, basket at the origin
+    pbp = pd.DataFrame({"event": ["3 punti segnato"], "x": [(cy + 157.5) / 28], "y": [cx / 15 + 50], "player_surname": ["Sims"]})
+    s = lba_style.shots_cm(pbp)
+    assert abs(s.cx.iloc[0] - cx) < 1 and abs(s.cy.iloc[0] - cy) < 1 and s.made.iloc[0] and s.pts.iloc[0] == 3

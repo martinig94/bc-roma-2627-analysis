@@ -1,6 +1,6 @@
 title: 
 reviewed: no
-generated: 857ccad677
+generated: 79f76699a2
 
 <!--
 HOW TO EDIT THIS PAGE (this comment is not shown on the site)
@@ -67,6 +67,8 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ figure: 05_shooting }}
 
+{{ figure: 06_hot_spots }}
+
 ## Key players
 
 ### Shooting
@@ -94,6 +96,8 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 ## Lineups
 
 {{ pending }}
+
+{{ lineups }}
 
 ## What to expect
 

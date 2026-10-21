@@ -1,4 +1,4 @@
-"""Five-man lineup report for one or more teams, LBA games only: most used, best and worst units.
+"""Five-man lineup report for one or more teams, LBA games only (--competition EC: EuroCup games): most used, best and worst units.
 
     python notebooks/lineups_report.py --team "BC Roma" --team "Umana Reyer Venezia" \
         --before 2026-10-17 --out reports/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17
@@ -102,10 +102,18 @@ def main() -> None:
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: only games before this date")
     ap.add_argument("--min-minutes", type=int, default=3)
     ap.add_argument("--top", type=int, default=5)
+    ap.add_argument("--competition", choices=["LBA", "EC"], default="LBA", help="EC: EuroCup games (data/eurocup_2026_raw.txt and data/eurocup/pbp.csv)")
     a = ap.parse_args()
-    box = pd.read_csv(Path(a.data) / "box_scores.csv")
-    pbp = pd.read_csv(Path(a.data) / "pbp.csv")
-    box["date"] = box.match_datetime.str[:10]
+    league = "LBA" if a.competition == "LBA" else "EuroCup"
+    if a.competition == "EC":
+        from matchup_report import parse_eurocup
+        box = parse_eurocup(Path(a.data) / "eurocup_2026_raw.txt")[0]
+        pbp = pd.read_csv(Path(a.data) / "eurocup" / "pbp.csv")
+        lba_style.SOURCE_NOTE = "EuroLeague live API"
+    else:
+        box = pd.read_csv(Path(a.data) / "box_scores.csv")
+        pbp = pd.read_csv(Path(a.data) / "pbp.csv")
+        box["date"] = box.match_datetime.str[:10]
     stamp = "season to date"
     if a.before:
         box = box[box.date < a.before]
@@ -121,7 +129,7 @@ def main() -> None:
             print(f"\n{title}")
             print(df.assign(lineup=df.lineup.map(" · ".join), min=(df.secs / 60).round(1), net40=df.net40.round(1))
                   [["lineup", "min", "pm", "net40", "stints", "games"]].to_string(index=False))
-        print(fig_lineups(agg, team, a.min_minutes * 60, a.top, out, stamp))
+        print(fig_lineups(agg, team, a.min_minutes * 60, a.top, out, stamp, league))
 
 
 if __name__ == "__main__":

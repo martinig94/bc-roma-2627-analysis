@@ -1,6 +1,6 @@
 """Fetch EuroCup results and club rosters (headshots) into data/eurocup/. See eurocup.py for what is written.
 
-    python notebooks/eurocup_fetch.py                  # results, box scores of the new games + the rosters of the team and of every opponent in the schedule
+    python notebooks/eurocup_fetch.py                  # results, box scores and play-by-play of the new games + the rosters of the team and of every opponent in the schedule
     python notebooks/eurocup_fetch.py --clubs BCR MAN  # chosen EuroLeague club codes
 """
 from __future__ import annotations
@@ -24,6 +24,8 @@ def main() -> None:
     print(f"{len(results)} games ({int(results.played.sum())} played) -> {ec.DATA / 'results.csv'}")
     added = ec.update_raw(results)
     print(f"box scores of {len(added)} new game(s) added to {ec.RAW.relative_to(ec.ROOT)}: {added}")
+    added_pbp = ec.update_pbp(results)
+    print(f"play-by-play of {len(added_pbp)} new game(s) added to {ec.PBP.relative_to(ec.ROOT)}: {added_pbp}")
     codes = a.clubs
     if not codes:
         codes = ec.club_codes(results, team, ec.ROOT / "weekly" / "schedule.csv")
