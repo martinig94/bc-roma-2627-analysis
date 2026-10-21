@@ -11,7 +11,7 @@
   "time": "16:00",
   "venue": "Palazzetto dello Sport",
   "played": true,
-  "version": 5,
+  "version": 6,
   "n_before": 12,
   "opponent_analysis": "matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04",
   "record": "0-1",
@@ -58,6 +58,8 @@
       "2P%": 62.9,
       "FT%": 66.7,
       "Assists per game": 22.0,
+      "Offensive rebounds per game": 16.0,
+      "Defensive rebounds per game": 23.0,
       "Opp. eFG%": 60.9,
       "Opp. TOV% (forced)": 8.8,
       "DREB%": 65.7
@@ -80,6 +82,8 @@
       "2P%": 64.7,
       "FT%": 72.2,
       "Assists per game": 17.0,
+      "Offensive rebounds per game": 11.0,
+      "Defensive rebounds per game": 22.0,
       "Opp. eFG%": 57.1,
       "Opp. TOV% (forced)": 17.4,
       "DREB%": 57.9

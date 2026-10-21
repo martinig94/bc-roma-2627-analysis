@@ -1,6 +1,6 @@
 {
   "kind": "opponent",
-  "version": 8,
+  "version": 9,
   "n_before": 40,
   "round": 5,
   "team": "BC Roma",
@@ -439,6 +439,16 @@
         "stat": "Assists per game",
         "team": 20.8,
         "opp": 18.0
+      },
+      {
+        "stat": "Offensive rebounds per game",
+        "team": 11.2,
+        "opp": 14.0
+      },
+      {
+        "stat": "Defensive rebounds per game",
+        "team": 27.0,
+        "opp": 20.8
       },
       {
         "stat": "Opp. eFG%",

@@ -28,7 +28,7 @@ import weekly_sections as ws
 ROOT = Path(__file__).resolve().parent.parent
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 5   # bump when the generated data changes shape: weekly.py regenerates older snapshots
+VERSION = 6   # bump when the generated data changes shape: weekly.py regenerates older snapshots
 
 
 def standings_md(games: pd.DataFrame, before: str, team: str, opp: str) -> str:

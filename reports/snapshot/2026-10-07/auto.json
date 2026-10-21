@@ -11,7 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
-  "version": 5,
+  "version": 6,
   "n_before": 19,
   "opponent_analysis": null,
   "record": "1-1",
@@ -66,6 +66,8 @@
       "2P%": 73.2,
       "FT%": 66.7,
       "Assists per game": 24.5,
+      "Offensive rebounds per game": 13.5,
+      "Defensive rebounds per game": 27.5,
       "Opp. eFG%": 50.8,
       "Opp. TOV% (forced)": 11.1,
       "DREB%": 71.4
@@ -88,6 +90,8 @@
       "2P%": 64.7,
       "FT%": 72.2,
       "Assists per game": 17.0,
+      "Offensive rebounds per game": 11.0,
+      "Defensive rebounds per game": 22.0,
       "Opp. eFG%": 57.1,
       "Opp. TOV% (forced)": 17.4,
       "DREB%": 57.9
