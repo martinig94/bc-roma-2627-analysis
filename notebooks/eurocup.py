@@ -98,6 +98,72 @@ def save_photos(people: pd.DataFrame, size: int = 240) -> int:
     return n
 
 
+# ── box scores into the raw file ────────────────────────────────────────────────
+RAW = ROOT / "data" / "eurocup_2026_raw.txt"
+RAW_NAME = {"BCR": "ROMA BASKETBALL"}      # club codes whose name in the raw file differs from the results feed (see matchup_report.EC_TEAM_MAP)
+ZONE_ACTIONS = ("2FGM", "2FGA", "3FGM", "3FGA")
+
+
+def _i(x) -> int:
+    return 0 if x is None or pd.isna(x) else int(x)
+
+
+def fetch_game_lines(gamecode: int, names: dict[str, str], season: int = SEASON) -> tuple[list[str], list[str]]:
+    """Raw-file lines of one played game: (BOX lines, ZONES lines). Format: notebooks/eurocup_fetch.md.
+    `names` maps club code -> team name as written in the file. Team totals are the sum of the players and the team row; PIR is the API's team total."""
+    from euroleague_api.boxscore_data import BoxScoreData
+    from euroleague_api.shot_data import ShotData
+    df = BoxScoreData("U").get_players_boxscore_stats(season, gamecode)
+    box, order, quarters = [], [], []
+    for code in dict.fromkeys(df.Team):
+        t = df[df.Team == code]
+        name = names.get(code, code)
+        order.append(name)
+        players = t[~t.Player.isin(["Team", "Total"])]
+        rows = t[t.Player != "Total"]          # the "Team" row carries the team rebounds (and the like): part of the totals, not a player
+        cols = ["Points", "FieldGoalsMade2", "FieldGoalsAttempted2", "FieldGoalsMade3", "FieldGoalsAttempted3", "FreeThrowsMade", "FreeThrowsAttempted",
+                "OffensiveRebounds", "DefensiveRebounds", "Assistances", "Steals", "Turnovers", "BlocksFavour", "FoulsCommited", "FoulsReceived"]
+        for r in players.itertuples():
+            m = r.Minutes if isinstance(r.Minutes, str) and ":" in r.Minutes else "DNP"
+            vals = [_i(getattr(r, c)) for c in cols] + [_i(r.Plusminus), _i(r.Valuation)]
+            box.append("|".join([str(gamecode), name, r.Player, str(_i(r.IsStarter)), m, *map(str, vals)]))
+        tot = [str(int(rows[c].fillna(0).sum())) for c in cols]
+        val = int(t[t.Player == "Total"].Valuation.iloc[0])
+        box.append("|".join([str(gamecode), name, "TOTAL", "", "", *tot, "", str(val)]))
+    try:
+        q = BoxScoreData("U").get_teams_boxscore_quarter_scores(season, gamecode)
+        parts = [f"{r.Team}:{r.Quarter1}-{r.Quarter2}-{r.Quarter3}-{r.Quarter4}" for r in q.itertuples()]
+        if parts:
+            box.append(f"{gamecode}|QUARTERS|" + ";".join(parts))
+    except Exception:
+        pass            # the quarters line is informational; nothing reads it
+    sh = ShotData("U").get_game_shot_data(season, gamecode)
+    sh = sh[sh.ID_ACTION.isin(ZONE_ACTIONS) & sh.ZONE.astype(str).str.strip().ne("")]
+    zones = [f"{gamecode}|{code}|{zone}|{act}|{n}" for (code, zone, act), n in sh.groupby(["TEAM", "ZONE", "ID_ACTION"]).size().items()]
+    return box, zones
+
+
+def update_raw(results: pd.DataFrame, path: Path = RAW) -> list[int]:
+    """Append the played games that are not in the raw file yet (every team of the EuroCup, so that the league reference is complete).
+    Returns the game codes added. A game that cannot be fetched is skipped and tried again on the next run."""
+    lines = path.read_text(encoding="utf-8").splitlines() if path.exists() else ["BOX", "ZONES"]
+    have = {int(l.split("|")[0]) for l in lines if re.match(r"^\d+\|", l)}
+    names = {**dict(zip(results.home_code, results.home)), **dict(zip(results.away_code, results.away))}
+    names = {c: RAW_NAME.get(c, n.upper()) for c, n in names.items()}
+    new_box, new_zones, added = [], [], []
+    for gc in results[results.played & ~results.gamecode.isin(have)].gamecode:
+        try:
+            b, z = fetch_game_lines(int(gc), names)
+        except Exception as exc:
+            print(f"box score of game {gc}: {exc}")
+            continue
+        new_box += b; new_zones += z; added.append(int(gc))
+    if added:
+        i = lines.index("ZONES")
+        path.write_text("\n".join(lines[:i] + new_box + lines[i:] + new_zones) + "\n", encoding="utf-8")
+    return added
+
+
 # ── which rosters to fetch ──────────────────────────────────────────────────────
 def club_codes(results: pd.DataFrame, team: str, schedule: Path | None = None) -> list[str]:
     """Club codes of the team, of every opponent it has played, and of the EuroCup opponents still to come in weekly/schedule.csv

@@ -8,6 +8,12 @@ Each game has two pages you can write on. Work only in `weekly/games/<date>/`:
 | BC Roma before the game | `weekly/games/<date>/snapshot.md` |
 
 Example: Varese vs BC Roma is `weekly/games/2026-10-24/analysis.md`.
+Every analysis has the same sections in the same order (the structure of the Varese page): Key points, results and standings, the
+two teams compared, roster, starting five and bench, scoring sources / tendencies / shooting maps, key players, ball movement,
+lineups, what to expect, highlights. A section that is still empty shows a grey box *"This section will be filled when the game is
+reviewed"* (the line `{{ pending }}`): replace that line with your text and plots. The Synergy plots of the opponent go in the same
+folder (`python notebooks/synergy_scouting_plots.py data/synergy/<folder> --out ...`, then copy the PNGs next to `analysis.md`).
+
 Never edit `docs/` or `reports/`: they are generated and get overwritten. Your file is never overwritten.
 
 ## Steps

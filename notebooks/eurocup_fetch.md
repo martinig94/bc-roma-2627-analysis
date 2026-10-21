@@ -1,6 +1,6 @@
 # Refreshing the EuroCup data
 
-`data/eurocup_2026_raw.txt` holds EuroCup box scores and per-zone shot counts for the two Rome teams,
+`data/eurocup_2026_raw.txt` holds EuroCup box scores and per-zone shot counts of every game played (all teams),
 pulled from the EuroLeague live API (same source as the `euroleague_api` package used in basketball_analytics).
 
 Endpoints (season code `U2026` = EuroCup 2026/27):
@@ -23,7 +23,10 @@ ZONES
 gamecode|teamcode|zone|action|count                 (teamcode BCR / MRO; action 2FGM, 2FGA(miss), 3FGM, 3FGA(miss))
 ```
 
-Add new games by appending lines; the game date goes in `EC_DATES` in `notebooks/matchup_report.py`.
+`python notebooks/eurocup_fetch.py` (run by the daily workflow) appends every played game that is not in the file yet, all teams, in this format
+(`eurocup.update_raw`): team names are the results-feed names in capitals (`ROMA BASKETBALL` for BC Roma), team totals are the sum of the players and the
+"Team" row (team rebounds), PIR is the API's team total. The game date comes from `data/eurocup/results.csv`; `EC_DATES` in
+`notebooks/matchup_report.py` is only the fallback for games that are not in it. A line can still be added by hand.
 Zones A/B/C (≤4.49 m from the rim) are what the report counts as "points in the paint", matching the
 4.5 m distance rule used on the Legabasket coordinates.
 

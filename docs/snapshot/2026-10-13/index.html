@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BC Roma vs Balkan Botevgrad · BC Roma 2026/27 · weekly report</title>
+<link rel="icon" type="image/png" href="../../assets/logo.png">
+<style>
+  /* Light, sober palette from the BC Roma logo: warm near-black text, the logo gold only as accent (borders, rules, tints);
+     links and small accents use a deeper gold so every text colour keeps a contrast of 5:1 or more on white. */
+  :root { color-scheme: light; --paper:#fff; --soft:#faf7ef; --tint:#f5ebcb; --flag:#fbf6e6; --ink:#1f1b14; --muted:#5e584b;
+          --line:#e7e1d3; --gold:#e8b018; --link:#7a5600; --win:#1e7b45; --loss:#b3302f; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color:var(--link); }
+  a:hover { color:var(--ink); }
+  header { border-bottom:3px solid var(--gold); padding:12px 16px; background:var(--paper); }
+  .bar { max-width:980px; margin:0 auto; display:flex; gap:10px 16px; align-items:center; flex-wrap:wrap; }
+  .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--muted); font-size:.78rem; letter-spacing:.03em; text-transform:uppercase; }
+  .brand img { height:32px; width:auto; background:none; border-radius:0; display:block; }
+  .bar > a:not(.brand) { color:var(--ink); text-decoration:none; font-weight:500; }
+  .bar > a:not(.brand):hover { color:var(--link); text-decoration:underline; }
+  .bar > a.right { margin-left:auto; }
+  @media (max-width:640px) { .bar > a.right { margin-left:0; } }
+  .author { max-width:980px; margin:0 auto; padding:0 16px 24px; color:var(--muted); font-size:.85rem; }
+  main { max-width:980px; margin:0 auto; padding:12px 16px 56px; }
+  img { max-width:100%; height:auto; background:#fff; border-radius:4px; }
+  h1 { margin:1.2rem 0 .6rem; line-height:1.25; }
+  h1::after { content:""; display:block; width:56px; height:3px; background:var(--gold); margin-top:.5rem; }
+  h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2.2rem; }
+  h3 { margin-top:1.6rem; }
+  td img { max-width:none; width:44px; height:54px; object-fit:cover; object-position:top; border-radius:6px; display:block; }
+  td img.face { display:inline-block; width:34px; height:42px; vertical-align:middle; margin-right:8px; }
+  table { border-collapse:collapse; display:block; overflow-x:auto; }
+  th { background:var(--tint); color:var(--ink); border-bottom:2px solid var(--gold); }
+  th, td { padding:5px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  .pending { background:#ececee; color:#55595f; border:1px dashed #b4b8be; border-radius:6px; padding:.9rem 1.1rem; margin:.9rem 0; font-style:italic; }
+  .mark { background:#fff2a8; color:var(--ink); padding:0 3px; border-radius:3px; }
+  blockquote { margin:1rem 0; padding:.5rem 1rem; border-left:4px solid var(--gold); background:var(--flag); color:var(--ink); border-radius:0 6px 6px 0; }
+  blockquote p { margin:.3rem 0; }
+  code { background:var(--soft); padding:0 4px; border-radius:3px; }
+  details { margin:.8rem 0; } summary { cursor:pointer; font-weight:600; }
+  /* main sections that open and close: the h2 becomes the clickable title */
+  details.sec { margin:2.2rem 0 0; }
+  details.sec > summary { list-style:none; display:flex; align-items:center; gap:.6rem; font-weight:inherit; border-bottom:1px solid var(--line); }
+  details.sec > summary::-webkit-details-marker { display:none; }
+  details.sec > summary::before { content:"\25BE"; color:var(--link); font-size:1.1rem; width:1rem; flex:none; }
+  details.sec:not([open]) > summary::before { content:"\25B8"; }
+  details.sec > summary h2 { margin:0; padding:.2rem 0 .3rem; border:0; flex:1; }
+  details.sec > summary:hover h2 { color:var(--link); }
+  .sec-body { padding-top:.4rem; }
+  .sec-tools { margin:1.2rem 0 0; font-size:.85rem; text-align:right; }
+  .sec-tools button { font:inherit; padding:2px 10px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; margin-left:6px; }
+  .sec-tools button:hover { border-color:var(--gold); background:var(--flag); }
+  .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); margin-top:1rem; }
+  .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:8px; background:var(--soft); text-decoration:none; color:var(--ink); }
+  .card:hover { border-color:var(--gold); background:var(--flag); color:var(--ink); }
+  .card .rd { color:var(--muted); font-size:.85rem; }
+  .card .score { font-size:1.35rem; font-weight:700; }
+  .win { color:var(--win); } .loss { color:var(--loss); }
+  .latest { border-left:5px solid var(--gold); }
+  select { font:inherit; padding:5px 8px; border:1px solid #cfc7b3; border-radius:6px; background:var(--paper); color:var(--ink); width:210px; max-width:100%; }
+  select:focus-visible, a:focus-visible, summary:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
+  .doc table { display:table; width:100%; }
+  .doc th, .doc td { white-space:normal; text-align:left; vertical-align:top; }
+  .edit { margin:.6rem 0 0; font-size:.9rem; }
+  .edit a { font-weight:600; }
+  .hl { background:var(--hl, #ffe27a) !important; box-shadow:inset 0 0 0 1px rgba(0,0,0,.35); }
+  .hl-colors { display:none; gap:6px; align-items:center; background:var(--paper); border:1px solid var(--gold); border-radius:999px; padding:4px 8px; box-shadow:0 1px 4px rgba(0,0,0,.15); }
+  body.hl-mode .hl-colors { display:flex; }
+  .hl-colors button { width:22px; height:22px; padding:0; border-radius:50%; border:2px solid transparent; box-shadow:0 0 0 1px rgba(0,0,0,.35); cursor:pointer; }
+  .hl-colors button[aria-pressed="true"] { border-color:var(--ink); }
+  body.hl-mode main table td { cursor:cell; }
+  .hl-tools { position:fixed; right:16px; bottom:16px; display:flex; gap:8px; z-index:5; }
+  .hl-tools button { font:inherit; font-size:.85rem; padding:6px 12px; border:1px solid var(--gold); border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,.15); }
+  .hl-tools button[aria-pressed="true"] { background:var(--gold); }
+  .hl-tools button:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
+  @media print { .hl-tools, .edit { display:none; } }
+  .pick label { margin-right:12px; }
+  .pick select { width:auto; min-width:260px; }
+  .button { display:inline-block; padding:5px 14px; border:1px solid var(--gold); border-radius:999px; background:var(--gold); color:var(--ink); text-decoration:none; font-weight:600; }
+  .button:hover { background:var(--flag); color:var(--ink); }
+  .cmp-pick select { width:auto; min-width:300px; }
+  .cmp-pick button { font:inherit; padding:3px 10px; border:1px solid #cfc7b3; border-radius:6px; background:var(--paper); cursor:pointer; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  .comments { margin-top:3rem; }
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../"><img src="../../assets/logo.png" alt="BC Roma"><span>2026/27</span></a>
+  <select aria-label="Opponents" onchange="if(this.value)location.href='../../'+this.value">
+    <option value="">Opponents &#9662;</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bosna_Bh_Telecom_Sarajevo_before_2026-10-27/">vs Bosna Bh Telecom Sarajevo · EuroCup · 27 Oct</option>
+    <option value="opponent/matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24/">at Varese · LBA round 5 · 24 Oct</option>
+    <option value="opponent/matchup_Kids_Us_Manresa_scouting_before_2026-10-18/">at Kids&Us Manresa · EuroCup · 20 Oct · old format</option>
+    <option value="opponent/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17/">vs Venezia · LBA round 4 · 17 Oct · old format</option>
+    <option value="opponent/matchup_Maxima_Roma_vs_BC_Roma_before_2026-10-11/">at Maxima Roma · LBA round 3 · 11 Oct · old format</option>
+    <option value="opponent/matchup_BC_Roma_vs_Bertram_Derthona_Tortona_before_2026-10-04/">vs Tortona · LBA round 2 · 4 Oct · automatic only</option>
+    
+  </select>
+  
+  <a href="../../compare/">Compare</a>
+  <a href="../../goal/" class="right">Goal</a>
+  <a href="../../methodology/">Methodology</a>
+  <a href="../../work-plan/">Work plan</a>
+  
+</div></header>
+<main>
+<p class="edit"><a href="https://github.com/martinig94/bc-roma-2627-analysis/edit/master/weekly/games/2026-10-13/snapshot.md" target="_blank" rel="noopener">&#9998; Edit the text of this page</a>
+<span class="muted">opens its markdown file on GitHub; once saved, the site is rebuilt within a few minutes</span></p>
+<h1>BC Roma before EuroCup: vs Balkan Botevgrad</h1>
+<blockquote>
+<p>🗄 <strong>Archive, automatic only:</strong> this game has been played and no analysis of it is planned; the page is what the data produced (tables and figures), with no text of the analyst. Set <code>reviewed: yes</code> in <code>weekly/games/2026-10-13/snapshot.md</code> to remove this note.</p>
+</blockquote>
+<p>EuroCup · Tuesday 13 October 2026</p>
+<p><strong>Pre-game snapshot: only data from games played before Tuesday 13 October 2026, in both competitions.</strong>
+<a href="../../compare/?b=2026-10-13">Compare this situation with another game</a>.</p>
+<p>Author: Giulia Martini</p>
+<details class="sec" open><summary><h2>Where BC Roma stands</h2></summary><div class="sec-body">
+<p><strong>EuroCup: 1-1 · 4th of 8 in its group · LBA: 1-2 · 12th in the standings (2 points) · last five games (both competitions): LLWWL</strong></p>
+<ul>
+<li>09-26 · round 1: <strong>L</strong> 94-109 at Treviso</li>
+<li>09-30 · EuroCup: <strong>L</strong> 78-91 at Bahcesehir College Istanbul</li>
+<li>10-04 · round 2: <strong>W</strong> 108-70 vs Tortona</li>
+<li>10-07 · EuroCup: <strong>W</strong> 92-87 vs Lietkabelis Panevezys</li>
+<li>10-11 · round 3: <strong>L</strong> 95-96 at Maxima Roma</li>
+</ul>
+<p>EuroCup standings before this game (the group of BC Roma):</p>
+<p><img alt="standings" src="standings.png" /></p>
+<details><summary>Standings table</summary>
+
+| # | Team | Pts | W-L | Diff | Results |
+| ---: | --- | ---: | :---: | ---: | :---: |
+| 1 | Bahcesehir | 4 | 2-0 | +52 | WW |
+| 2 | PAOK | 4 | 2-0 | +18 | WW |
+| 3 | Manresa | 2 | 1-1 | -3 | LW |
+| 4 | **BC Roma** | 2 | 1-1 | -8 | LW |
+| 5 | Ulm | 2 | 1-1 | +2 | WL |
+| 6 | Lietkabelis | 2 | 1-1 | -2 | WL |
+| 7 | Bosna | 0 | 0-2 | -6 | LL |
+| 8 | **Botevgrad** | 0 | 0-2 | -53 | LL |
+
+</details>
+
+<h3>Last game</h3>
+<p>LBA round 3, at Maxima Roma (2026-10-11): <strong>loss 95-96</strong>.</p>
+<p>No player had a significant increase in playing time in that game (flag: at least 8' played and either +7' or +30% versus the average in earlier games).</p>
+</div></details><details class="sec" open><summary><h2>Team numbers to date</h2></summary><div class="sec-body">
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">LBA</th>
+<th style="text-align: right;">EuroCup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Games</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>Record</td>
+<td style="text-align: right;">1-2</td>
+<td style="text-align: right;">1-1</td>
+</tr>
+<tr>
+<td>Points per game</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: right;">85.0</td>
+</tr>
+<tr>
+<td>Points allowed per game</td>
+<td style="text-align: right;">91.7</td>
+<td style="text-align: right;">89.0</td>
+</tr>
+<tr>
+<td>Offensive rating</td>
+<td style="text-align: right;">128.3</td>
+<td style="text-align: right;">113.3</td>
+</tr>
+<tr>
+<td>Defensive rating</td>
+<td style="text-align: right;">120.0</td>
+<td style="text-align: right;">118.1</td>
+</tr>
+<tr>
+<td>Net rating</td>
+<td style="text-align: right;">8.3</td>
+<td style="text-align: right;">-4.8</td>
+</tr>
+<tr>
+<td>Pace (possessions per 40')</td>
+<td style="text-align: right;">76.8</td>
+<td style="text-align: right;">75.2</td>
+</tr>
+<tr>
+<td>eFG%</td>
+<td style="text-align: right;">60.6</td>
+<td style="text-align: right;">55.2</td>
+</tr>
+<tr>
+<td>TOV% (per 100 poss.)</td>
+<td style="text-align: right;">15.1</td>
+<td style="text-align: right;">21.3</td>
+</tr>
+<tr>
+<td>OREB%</td>
+<td style="text-align: right;">37.8</td>
+<td style="text-align: right;">35.8</td>
+</tr>
+<tr>
+<td>FT rate (FTA/FGA)</td>
+<td style="text-align: right;">27.9</td>
+<td style="text-align: right;">33.1</td>
+</tr>
+<tr>
+<td>3PA per game</td>
+<td style="text-align: right;">30.7</td>
+<td style="text-align: right;">29.0</td>
+</tr>
+<tr>
+<td>3P%</td>
+<td style="text-align: right;">37.0</td>
+<td style="text-align: right;">32.8</td>
+</tr>
+<tr>
+<td>2P%</td>
+<td style="text-align: right;">64.7</td>
+<td style="text-align: right;">60.6</td>
+</tr>
+<tr>
+<td>FT%</td>
+<td style="text-align: right;">77.6</td>
+<td style="text-align: right;">80.5</td>
+</tr>
+<tr>
+<td>Assists per game</td>
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">16.0</td>
+</tr>
+<tr>
+<td>Opp. eFG%</td>
+<td style="text-align: right;">53.5</td>
+<td style="text-align: right;">54.5</td>
+</tr>
+<tr>
+<td>Opp. TOV% (forced)</td>
+<td style="text-align: right;">11.3</td>
+<td style="text-align: right;">14.6</td>
+</tr>
+<tr>
+<td>DREB%</td>
+<td style="text-align: right;">71.9</td>
+<td style="text-align: right;">60.8</td>
+</tr>
+</tbody>
+</table>
+<p>Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = turnovers per 100 possessions · OREB% = share of available offensive rebounds · FT rate = free throw attempts per field goal attempt.</p>
+</div></details><details class="sec" open><summary><h2>Roster</h2></summary><div class="sec-body">
+<p>Per-game averages before this game, LBA + EuroCup. Shooting: 2P%, 3P% and FT%, each followed by the attempts <strong>per game</strong> in brackets (2PA, 3PA, FTA).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">#</th>
+<th>Player</th>
+<th>Pos</th>
+<th style="text-align: right;">Age</th>
+<th>Nat</th>
+<th style="text-align: right;">Ht</th>
+<th style="text-align: right;">Wt</th>
+<th style="text-align: right;">GP</th>
+<th style="text-align: right;">MIN</th>
+<th style="text-align: right;">PTS</th>
+<th style="text-align: right;">REB</th>
+<th style="text-align: right;">AST</th>
+<th style="text-align: right;">PIR</th>
+<th style="text-align: right;">2P% (2PA)</th>
+<th style="text-align: right;">3P% (3PA)</th>
+<th style="text-align: right;">FT% (FTA)</th>
+<th style="text-align: right;">PPG LBA</th>
+<th style="text-align: right;">PPG EC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="photo_6138.jpg" alt="Mannion" width="44"></td>
+<td style="text-align: right;">1</td>
+<td><strong>Mannion</strong></td>
+<td>Playmaker</td>
+<td style="text-align: right;">25</td>
+<td>ITA</td>
+<td style="text-align: right;">190</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">27.6</td>
+<td style="text-align: right;">20.8</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">27.4</td>
+<td style="text-align: right;">82 (5.6)</td>
+<td style="text-align: right;">34 (6.4)</td>
+<td style="text-align: right;">96 (5.2)</td>
+<td style="text-align: right;">18.0</td>
+<td style="text-align: right;">25.0</td>
+</tr>
+<tr>
+<td><img src="photo_9380.jpg" alt="Ayayi" width="44"></td>
+<td style="text-align: right;">11</td>
+<td><strong>Ayayi</strong></td>
+<td>Playmaker</td>
+<td style="text-align: right;">25</td>
+<td>FRA</td>
+<td style="text-align: right;">190</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">24.7</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">62 (5.2)</td>
+<td style="text-align: right;">30 (2.0)</td>
+<td style="text-align: right;">88 (3.2)</td>
+<td style="text-align: right;">10.3</td>
+<td style="text-align: right;">12.0</td>
+</tr>
+<tr>
+<td><img src="photo_6258.jpg" alt="Davis" width="44"></td>
+<td style="text-align: right;">5</td>
+<td><strong>Davis</strong></td>
+<td>Playmaker</td>
+<td style="text-align: right;">29</td>
+<td>USA</td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">22.1</td>
+<td style="text-align: right;">8.2</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">9.6</td>
+<td style="text-align: right;">57 (4.2)</td>
+<td style="text-align: right;">25 (3.2)</td>
+<td style="text-align: right;">100 (1.0)</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">4.0</td>
+</tr>
+<tr>
+<td><img src="photo_9385.jpg" alt="Watson" width="44"></td>
+<td style="text-align: right;">3</td>
+<td><strong>Watson</strong></td>
+<td>Guardia</td>
+<td style="text-align: right;">31</td>
+<td>USA</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">18.2</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">2.2</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">78 (1.8)</td>
+<td style="text-align: right;">55 (4.0)</td>
+<td style="text-align: right;">33 (1.8)</td>
+<td style="text-align: right;">12.0</td>
+<td style="text-align: right;">7.0</td>
+</tr>
+<tr>
+<td><img src="photo_9383.jpg" alt="Iuzzolino" width="44"></td>
+<td style="text-align: right;">33</td>
+<td><strong>Iuzzolino</strong></td>
+<td>Guardia</td>
+<td style="text-align: right;">24</td>
+<td>USA</td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.7</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">100 (0.3)</td>
+<td style="text-align: right;">– (0.0)</td>
+<td style="text-align: right;">– (0.0)</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td><img src="photo_5369.jpg" alt="Strautins" width="44"></td>
+<td style="text-align: right;">12</td>
+<td><strong>Strautins</strong></td>
+<td>Ala</td>
+<td style="text-align: right;">27</td>
+<td>ITA</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">27.0</td>
+<td style="text-align: right;">10.8</td>
+<td style="text-align: right;">4.2</td>
+<td style="text-align: right;">1.6</td>
+<td style="text-align: right;">6.8</td>
+<td style="text-align: right;">46 (4.8)</td>
+<td style="text-align: right;">33 (4.8)</td>
+<td style="text-align: right;">57 (2.8)</td>
+<td style="text-align: right;">12.7</td>
+<td style="text-align: right;">8.0</td>
+</tr>
+<tr>
+<td><img src="photo_3710.jpg" alt="Mezzanotte" width="44"></td>
+<td style="text-align: right;">24</td>
+<td><strong>Mezzanotte</strong></td>
+<td>Ala</td>
+<td style="text-align: right;">28</td>
+<td>ITA</td>
+<td style="text-align: right;">207</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">13.9</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">1.6</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">50 (0.8)</td>
+<td style="text-align: right;">29 (1.4)</td>
+<td style="text-align: right;">– (0.0)</td>
+<td style="text-align: right;">2.3</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+<tr>
+<td><img src="photo_9381.jpg" alt="Flowers" width="44"></td>
+<td style="text-align: right;">9</td>
+<td><strong>Flowers</strong></td>
+<td>Ala</td>
+<td style="text-align: right;">21</td>
+<td>USA</td>
+<td style="text-align: right;">206</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">25 (2.0)</td>
+<td style="text-align: right;">0 (0.5)</td>
+<td style="text-align: right;">100 (2.0)</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr>
+<td><img src="photo_9386.jpg" alt="Odzebe" width="44"></td>
+<td style="text-align: right;">13</td>
+<td><strong>Odzebe</strong></td>
+<td>Ala</td>
+<td style="text-align: right;">17</td>
+<td>COD</td>
+<td style="text-align: right;">196</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">100 (0.5)</td>
+<td style="text-align: right;">0 (0.5)</td>
+<td style="text-align: right;">– (0.0)</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">2.0</td>
+</tr>
+<tr>
+<td><img src="photo_9382.jpg" alt="Simonovic" width="44"></td>
+<td style="text-align: right;">19</td>
+<td><strong>Simonovic</strong></td>
+<td>Centro</td>
+<td style="text-align: right;">26</td>
+<td>MNE</td>
+<td style="text-align: right;">213</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">26.4</td>
+<td style="text-align: right;">15.4</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">19.2</td>
+<td style="text-align: right;">80 (7.0)</td>
+<td style="text-align: right;">33 (1.8)</td>
+<td style="text-align: right;">80 (3.0)</td>
+<td style="text-align: right;">14.3</td>
+<td style="text-align: right;">17.0</td>
+</tr>
+<tr>
+<td><img src="photo_9379.jpg" alt="Emejuru" width="44"></td>
+<td style="text-align: right;">7</td>
+<td><strong>Emejuru</strong></td>
+<td>Centro</td>
+<td style="text-align: right;">23</td>
+<td>ITA</td>
+<td style="text-align: right;">208</td>
+<td style="text-align: right;">121</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">12.3</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">3.6</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">38 (2.6)</td>
+<td style="text-align: right;">– (0.0)</td>
+<td style="text-align: right;">67 (1.2)</td>
+<td style="text-align: right;">2.7</td>
+<td style="text-align: right;">3.0</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: right;">22</td>
+<td><strong>Olynyk</strong></td>
+<td>Centro</td>
+<td style="text-align: right;">35</td>
+<td>CAN</td>
+<td style="text-align: right;">213</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+</tr>
+<tr>
+<td><img src="photo_9384.jpg" alt="Stevenson" width="44"></td>
+<td style="text-align: right;">10</td>
+<td><strong>Stevenson</strong></td>
+<td>Play/Guardia</td>
+<td style="text-align: right;">27</td>
+<td>USA</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">23.2</td>
+<td style="text-align: right;">10.4</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">9.4</td>
+<td style="text-align: right;">50 (3.2)</td>
+<td style="text-align: right;">37 (6.0)</td>
+<td style="text-align: right;">75 (0.8)</td>
+<td style="text-align: right;">13.0</td>
+<td style="text-align: right;">6.5</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: right;">8</td>
+<td><strong>Tavernelli</strong></td>
+<td>Play/Guardia</td>
+<td style="text-align: right;">35</td>
+<td>ITA</td>
+<td style="text-align: right;">188</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">– (0.0)</td>
+<td style="text-align: right;">– (0.0)</td>
+<td style="text-align: right;">– (0.0)</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">–</td>
+</tr>
+</tbody>
+</table>
+</div></details><details class="sec" open><summary><h2>Assists</h2></summary><div class="sec-body">
+<p><em>Assist pairs are only available for LBA games (play-by-play with the passer linked to the scorer); the EuroCup data has box scores and shot zones only.</em></p>
+</div></details><details class="sec" open><summary><h2>Shot zones</h2></summary><div class="sec-body">
+<p><img alt="shooting by zone" src="zones.png" /></p>
+<p><img alt="shot distribution by zone" src="zone_share.png" /></p>
+</div></details><details class="sec" open><summary><h2>Efficiency: true shooting vs PIR</h2></summary><div class="sec-body">
+<h3>LBA games only</h3>
+<p><img alt="TS% vs PIR, LBA" src="ts_pir_lba.png" /></p>
+<h3>EuroCup games only</h3>
+<p><img alt="TS% vs PIR, EuroCup" src="ts_pir_eurocup.png" /></p>
+<p>EuroCup: 2 games for BC Roma; the grey dots are the players of the other teams in the EuroCup box scores collected so far, so read it as a very small sample.</p>
+</div></details><details class="sec" open><summary><h2>Every game so far</h2></summary><div class="sec-body">
+<p><img alt="form" src="season.png" /></p></div></details>
+<section class="comments">
+<h2>Comments</h2>
+<p class="muted">Anyone with a GitHub account can comment here; the comments are kept as a GitHub issue of the repository, one per page.</p>
+<script src="https://utteranc.es/client.js" repo="martinig94/bc-roma-2627-analysis" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>
+</section>
+</main>
+<footer class="author">Author: Giulia Martini</footer>
+<div class="hl-tools" id="hl-tools" hidden>
+  <span class="hl-colors" id="hl-colors" role="group" aria-label="Highlighter colour"></span>
+  <button type="button" id="hl-clear" hidden>Clear highlights</button>
+  <button type="button" id="hl-toggle" aria-pressed="false" title="Click table cells to highlight them (shift-click: the whole row). Kept in this browser only.">&#9998; Highlighter</button>
+</div>
+<script>
+// Collapse all / Expand all above the first section of a page
+(function () {
+  var secs = [].slice.call(document.querySelectorAll("main details.sec"));
+  if (secs.length < 2) return;
+  var bar = document.createElement("p"); bar.className = "sec-tools";
+  [["Collapse all", false], ["Expand all", true]].forEach(function (b) {
+    var btn = document.createElement("button"); btn.type = "button"; btn.textContent = b[0];
+    btn.addEventListener("click", function () { secs.forEach(function (d) { d.open = b[1]; }); });
+    bar.appendChild(btn);
+  });
+  secs[0].parentNode.insertBefore(bar, secs[0]);
+})();
+</script>
+<script>
+// Live highlighter: with it on, a click on a table cell highlights it in the chosen colour (shift-click: the row);
+// click again with the same colour to remove it, with another colour to recolour it. Saved in this browser only.
+(function () {
+  var tables = [].slice.call(document.querySelectorAll("main table"));
+  if (!tables.length) return;
+  var COLORS = [["#ffe27a", "yellow"], ["#a8e6a1", "green"], ["#9fd3f5", "blue"], ["#f7b3d0", "pink"], ["#ffb980", "orange"]];
+  var KEY = "bcroma-highlights:" + location.pathname, saved = {}, cur = 0;
+  try {
+    var raw = JSON.parse(localStorage.getItem(KEY) || "{}");
+    if (Array.isArray(raw)) raw.forEach(function (k) { saved[k] = COLORS[0][0]; }); else saved = raw;   // older versions: a list of cells, all yellow
+  } catch (e) {}
+  var cells = [].slice.call(document.querySelectorAll("main table td"));
+  var id = function (td) { return tables.indexOf(td.closest("table")) + ":" + td.parentNode.rowIndex + ":" + td.cellIndex; };
+  var store = function () { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} };
+  var paint = function (td, c) { if (c) { td.classList.add("hl"); td.style.setProperty("--hl", c); } else { td.classList.remove("hl"); td.style.removeProperty("--hl"); } };
+  cells.forEach(function (td) { paint(td, saved[id(td)]); });
+  var tools = document.getElementById("hl-tools"), toggle = document.getElementById("hl-toggle"), clear = document.getElementById("hl-clear"), box = document.getElementById("hl-colors");
+  COLORS.forEach(function (c, i) {
+    var b = document.createElement("button"); b.type = "button"; b.style.background = c[0]; b.title = c[1]; b.setAttribute("aria-label", c[1]); b.setAttribute("aria-pressed", i === 0);
+    b.addEventListener("click", function () { cur = i; [].forEach.call(box.children, function (x, j) { x.setAttribute("aria-pressed", j === i); }); });
+    box.appendChild(b);
+  });
+  tools.hidden = false;
+  toggle.addEventListener("click", function () {
+    var on = toggle.getAttribute("aria-pressed") !== "true";
+    toggle.setAttribute("aria-pressed", on); document.body.classList.toggle("hl-mode", on); clear.hidden = !on;
+  });
+  clear.addEventListener("click", function () { cells.forEach(function (td) { paint(td, null); }); saved = {}; store(); });
+  document.addEventListener("click", function (ev) {
+    if (!document.body.classList.contains("hl-mode")) return;
+    var td = ev.target.closest && ev.target.closest("main table td");
+    if (!td) return;
+    ev.preventDefault();
+    var targets = ev.shiftKey ? [].slice.call(td.parentNode.cells).filter(function (c) { return c.tagName === "TD"; }) : [td];
+    var color = COLORS[cur][0], remove = saved[id(td)] === color;
+    targets.forEach(function (c) { if (remove) { delete saved[id(c)]; paint(c, null); } else { saved[id(c)] = color; paint(c, color); } });
+    store();
+  });
+})();
+</script>
+</body>
+</html>

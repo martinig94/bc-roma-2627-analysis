@@ -9,7 +9,7 @@ judgement about plays or tactics: the pages are built from box scores and play-b
 |---|---|---|
 | LBA games, box scores, play-by-play with shot coordinates, standings inputs | legabasket.it JSON API (not official, can change without notice) | collected every morning by a GitHub Action, only games not stored yet |
 | EuroCup results of every game, club rosters, headshots | EuroLeague live API (the one wrapped by the [`euroleague-api`](https://github.com/giasemidis/euroleague_api) package) | fetched by the same daily run; not yet confirmed on real data |
-| EuroCup box scores of BC Roma, Maxima Roma and their opponents | EuroLeague live stats, entered by hand | file `data/eurocup_2026_raw.txt`, updated by hand |
+| EuroCup box scores and shot zones of every EuroCup game played | EuroLeague live API (`euroleague-api` package) | file `data/eurocup_2026_raw.txt`, new games appended by the daily run (`notebooks/eurocup_fetch.py`) |
 | Manresa (Liga Endesa and EuroCup) | acb.com live stats and the EuroLeague live API | `notebooks/manresa_fetch.py` |
 | Player photos | league media server (picture key in the box score), EuroLeague roster endpoint | downloaded once, stored as small thumbnails |
 | Positions and heights | filled in by hand | `data/roster.csv` |

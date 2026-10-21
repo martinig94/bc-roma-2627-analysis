@@ -56,3 +56,19 @@ def test_club_codes_include_the_next_opponent_from_the_schedule(tmp_path):
     assert ec.club_codes(r, "A") == ["A", "B", "C", "D"]                  # A's opponents so far, A included
     assert ec.club_codes(r, "E", None) == ["E", "F"]                      # without the schedule: E and its opponent F
     assert ec.club_codes(r, "E", sched) == ["D", "E", "F"]                # the EuroCup row adds D, the LBA row is ignored
+
+
+def test_raw_file_parser_takes_dates_and_club_codes_from_the_results_feed(tmp_path):
+    """Games of any EuroCup team are in the raw file: dates and zone team names come from data/eurocup/results.csv, not from a fixed map."""
+    from matchup_report import parse_eurocup
+    (tmp_path / "eurocup").mkdir()
+    r = results()
+    r.loc[len(r)] = (7, 4, "2026-10-21", "BOS", "Bosna Bh Telecom Sarajevo", 80, "MAN", "Kids&Us Manresa", 70, True)
+    r.to_csv(tmp_path / "eurocup" / "results.csv", index=False)
+    row = lambda team, who, pts: f"7|{team}|{who}|1|10:00|{pts}|1|2|1|2|1|2|1|2|1|1|1|0|2|2|0|9"
+    raw = tmp_path / "raw.txt"
+    raw.write_text("\n".join(["BOX", row("BOSNA BH TELECOM SARAJEVO", "PERRY, REGINALD", 8), "7|BOSNA BH TELECOM SARAJEVO|TOTAL|||80|1|2|1|2|1|2|1|2|1|1|1|0|2|2||90",
+                              "7|KIDS&US MANRESA|TOTAL|||70|1|2|1|2|1|2|1|2|1|1|1|0|2|2||80", "ZONES", "7|BOS|B|2FGM|4"]) + "\n", encoding="utf-8")
+    box, zones = parse_eurocup(raw)
+    assert set(box.date) == {"2026-10-21"} and set(box.team) == {"Bosna Bh Telecom Sarajevo", "Kids&Us Manresa"}
+    assert list(zones.team) == ["Bosna Bh Telecom Sarajevo"]

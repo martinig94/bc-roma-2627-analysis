@@ -5,6 +5,8 @@ Every function takes the data as of the round being reported (LBA games up to th
 """
 from __future__ import annotations
 
+import re
+import unicodedata
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -18,7 +20,8 @@ from matchup_report import parse_eurocup, plot_zone_heatmap, zone_stats
 
 ROOT = Path(__file__).resolve().parent.parent
 TEAM = weekly_config.load()["team"]
-POS_ORDER = {"PG": 0, "SG": 1, "G": 1, "SF": 2, "F": 2, "PF": 3, "C": 4,
+POS_ORDER = {"Guard": 1, "Forward": 2, "Center": 4,          # EuroCup club pages
+             "PG": 0, "SG": 1, "G": 1, "SF": 2, "F": 2, "PF": 3, "C": 4,
              "Playmaker": 0, "Guardia": 1, "Guardia/Ala": 1, "Ala": 2, "Ala/Centro": 3, "Centro": 4}   # the last six: legabasket.it roles
 
 # playing-time flag: at least MIN_PLAYED seconds in the game and either +ABS_UP seconds or +REL_UP above the average before
@@ -94,6 +97,29 @@ def _num(v) -> str:
     return "" if v is None or pd.isna(v) else str(int(float(v)))
 
 
+def ec_people(data: Path, team: str) -> dict[str, dict]:
+    """EuroCup club page of a team (data/eurocup/people.csv): last name -> {pos, height, photo}, for the players of teams that have no LBA data.
+    Last names that two players share are left out (no way to tell them apart in the box score)."""
+    from player_names import photo_name
+    people, results = data / "eurocup" / "people.csv", data / "eurocup" / "results.csv"
+    if not people.exists() or not results.exists():
+        return {}
+    res = pd.read_csv(results)
+    codes = {**dict(zip(res.home, res.home_code)), **dict(zip(res.away, res.away_code))}
+    df = pd.read_csv(people)
+    df = df[df.club == codes.get(team)]
+    out: dict[str, dict] = {}
+    for r in df.itertuples():
+        clean = re.sub(r"\b(jr|sr|ii|iii)\b\.?", "", unicodedata.normalize("NFKD", r.player).encode("ascii", "ignore").decode().lower()).split()
+        stem = photo_name(r.player)
+        info = {"pos": r.position if isinstance(r.position, str) else "", "height": "" if pd.isna(r.height_cm) or r.height_cm < 150 else str(int(r.height_cm)),
+                "photo": stem if (data / "eurocup" / "photos" / f"{stem}.jpg").exists() else None}
+        for k in range(1, len(clean)):                       # every tail of the name: "de laat", "laat"
+            key = " ".join(clean[k:])
+            out[key] = None if key in out else info
+    return {k: v for k, v in out.items() if v}
+
+
 def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | None = None) -> list[dict]:
     """One row per player of `team` in `box`; bio columns (number, role, age on `asof`, nationality, weight, birth date) come from
     data/team_rosters.csv and fill position and height when data/roster.csv leaves them blank."""
@@ -102,6 +128,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
     p = players(box, team)
     lba_ids = p[p.competition == "LBA"].drop_duplicates("player_surname").set_index("player_surname").player_id
     rost = roster_file(data, p[p.competition == "LBA"], team).set_index("player_id")
+    ecp = ec_people(data, team) if lba_ids.empty else {}          # a team that is only in the EuroCup data: its club page gives position, height, photo
     photos = {int(f.stem) for f in (data / "photos").glob("*.jpg")}
     rows = []
     for sur, g in p.groupby("player_surname"):
@@ -112,10 +139,14 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
         pos = pos or (bio.get("role") if isinstance(bio.get("role"), str) else "")
         ht = "" if r is None or pd.isna(r.height_cm) or r.height_cm == "" else str(int(float(r.height_cm)))
         ht = ht or _num(bio.get("height_cm"))
+        e = ecp.get(re.sub(r"\b(jr|sr|ii|iii)\b\.?", "", sur.lower()).strip())
+        if e:
+            pos, ht = pos or e["pos"], ht or e["height"]
         n = len(g); fga = g.fg2a.sum() + g.fg3a.sum()
         lba, ec = g[g.competition == "LBA"], g[g.competition == "EC"]
         rows.append({
-            "player_id": pid, "photo": pid in photos, "name": sur.title(), "pos": pos, "height": ht, "gp": n,
+            "player_id": pid if pid is not None or not (e and e["photo"]) else f"ec_{e['photo']}",
+            "photo": pid in photos or bool(e and e["photo"]), "name": sur.title(), "pos": pos, "height": ht, "gp": n,
             "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
             "country": bio.get("country") if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
             "birth_date": bio.get("birth_date") if isinstance(bio.get("birth_date"), str) else "",
