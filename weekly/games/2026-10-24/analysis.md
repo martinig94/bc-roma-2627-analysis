@@ -171,6 +171,7 @@ Playing tendencies differ greatly between lineups:
 ## Defensive attitude
 - Varese takes opponents high and defends them man to man full court.
 - They tend to switch on P&Rs also if Librizzi is on the ball handler.
+- Varese allows an average of 1.065 PPP on isolation plays (below average) and 1.049 PPP on spot-ups (average).
 
 {{ pending }}
 
