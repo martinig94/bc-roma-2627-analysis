@@ -1,0 +1,337 @@
+"""Download Kids&Us Manresa 2026/27 games (Liga Endesa + EuroCup) into data/manresa/.
+
+    python notebooks/manresa_fetch.py
+
+Sources (no API key needed):
+  * Liga Endesa: live.acb.com game pages (box score and play list are embedded as JSON in the page).
+  * EuroCup: EuroLeague live API (results, Boxscore, PlayByPlay) and the club roster for heights.
+
+Output CSVs (one row per ...):
+  games.csv   game
+  box.csv     Manresa player per game
+  events.csv  Manresa substitution / period boundary with the running score, used for lineups
+  assists.csv assisted made field goal (passer, scorer, points) between Manresa players
+  shots.csv   EuroCup field-goal attempts with court coordinates (cm, basket at origin);
+              ACB publishes no shot locations
+"""
+from __future__ import annotations
+
+import json
+import re
+import unicodedata
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+import pandas as pd
+import requests
+
+from player_names import display_name, find_image_url, photo_name, player_key  # noqa: F401
+from weekly_config import ROOT
+from weekly_config import load as load_config
+
+OUT = ROOT / "data" / "manresa"
+_CFG = load_config()
+# Contact details in the user agent come from weekly/config.json (author) so the feeds can reach whoever runs the scraper.
+HEADERS = {"User-Agent": f"Mozilla/5.0 ({_CFG['team']} scouting; contact {_CFG['author']})"}
+HTTP_TIMEOUT = 60                    # seconds
+COMP_ACB, COMP_EUROCUP = "Liga Endesa", "EuroCup"
+MANRESA_CODE = "MAN"                 # EuroLeague club code
+MANRESA_NAME = "Manresa"             # part of the ACB team full name
+MANRESA_HOME_SLUG_PREFIX = "kidsandus-manresa-vs"     # ACB game slugs of Manresa home games start with this
+REGULATION_PERIODS = 4
+PERIOD_SECONDS = 600                 # 10-minute quarter
+OVERTIME_SECONDS = 300               # 5-minute overtime
+EL_ASSIST_MAX_GAP = 10               # an assist is linked to a made basket at most this many plays earlier
+PHOTO_SIZE = 240                     # px, side of the thumbnail box (height allowed up to twice that)
+PHOTO_QUALITY = 88                   # JPEG quality
+ACB_CALENDAR = "https://www.acb.com/calendario"
+ACB_GAME = "https://live.acb.com/partidos/{slug}/{page}"
+EL_RESULTS = "https://api-live.euroleague.net/v1/results?seasonCode=U2026"
+EL_BOX = "https://live.euroleague.net/api/Boxscore?gamecode={n}&seasoncode=U2026"
+EL_PBP = "https://live.euroleague.net/api/PlayByPlay?gamecode={n}&seasoncode=U2026"
+EL_PEOPLE = "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/clubs/MAN/people"
+ES_MONTHS = {"ene": "01", "feb": "02", "mar": "03", "abr": "04", "may": "05", "jun": "06", "jul": "07",
+             "ago": "08", "sep": "09", "oct": "10", "nov": "11", "dic": "12"}
+PERIOD_QUARTERS = ("FirstQuarter", "SecondQuarter", "ThirdQuarter", "ForthQuarter", "ExtraTime")
+# ACB numeric play types for substitutions (checked against starters + on-court counts).
+ACB_SUB_IN, ACB_SUB_OUT, ACB_STARTERS = 112, 115, 599
+# Made field goals (2P, 3P, dunk) and assist types (checked against the per-player assist counters).
+ACB_MADE_3PT = 94
+ACB_MADE_FG, ACB_ASSIST = {93, ACB_MADE_3PT, 100}, {107, 108, 119}
+EL_MADE_FG = {"2FGM", "3FGM", "DUNK"}
+EL_POINTS = "https://live.euroleague.net/api/Points?gamecode={n}&seasoncode=U2026"
+BOX_COLS = ["pts", "fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "oreb", "dreb", "ast", "stl", "tov",
+            "blk", "pf", "plus_minus"]
+
+
+def get(url: str) -> requests.Response:
+    """GET with a polite user agent; raises on HTTP errors."""
+    resp = requests.get(url, headers=HEADERS, timeout=HTTP_TIMEOUT)
+    resp.raise_for_status()
+    resp.encoding = "utf-8"
+    return resp
+
+
+def minutes_to_seconds(clock: str) -> int:
+    """'27:31' -> 1651."""
+    minutes, seconds = clock.split(":")
+    return int(minutes) * 60 + int(seconds)
+
+
+def period_start(period: int) -> int:
+    """Elapsed seconds at the start of a period (4 x 10 min, 5 min overtimes)."""
+    if period <= REGULATION_PERIODS:
+        return PERIOD_SECONDS * (period - 1)
+    return PERIOD_SECONDS * REGULATION_PERIODS + OVERTIME_SECONDS * (period - REGULATION_PERIODS - 1)
+
+
+def period_length(period: int) -> int:
+    """Length in seconds of a period."""
+    return PERIOD_SECONDS if period <= REGULATION_PERIODS else OVERTIME_SECONDS
+
+
+def flight_json(html: str, key: str) -> list | dict:
+    """Pull `"key": [json list]` out of the Next.js flight payload embedded in an ACB page."""
+    parts = re.findall(r'self\.__next_f\.push\(\[1,"(.*?)"\]\)</script>', html, re.S)
+    text = "".join(json.loads(f'"{part}"') for part in parts)
+    start = text.index(f'"{key}":[') + len(key) + 3
+    return json.JSONDecoder().raw_decode(text[start:])[0]
+
+
+# ------------------------------------------------------------------------------ Liga Endesa
+def acb_game_slugs() -> list[str]:
+    """Slugs ('kidsandus-manresa-vs-x-105386') of played Manresa games, in game-id order."""
+    html = get(ACB_CALENDAR).text
+    slugs = set(re.findall(r'live\.acb\.com/partidos/([^"/]*manresa[^"/]*)/estadisticas', html))
+    return sorted(slugs, key=lambda s: int(s.rsplit("-", 1)[1]))
+
+
+def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]:
+    """Return (game row, Manresa box rows, Manresa events, assists) for one ACB game."""
+    game_id = slug.rsplit("-", 1)[1]
+    page = get(ACB_GAME.format(slug=slug, page="estadisticas")).text
+    stats = flight_json(page, "teamBoxscores")
+    day, month, year = re.search(r"(\d{1,2}) ([a-z]+) (\d{4}) \|", page).groups()
+    game_date = f"{year}-{ES_MONTHS[month[:3]]}-{int(day):02d}"
+    plays = flight_json(get(ACB_GAME.format(slug=slug, page="jugadas")).text, "plays")
+    plays = sorted(plays, key=lambda p: p["order"])
+    man_home = slug.startswith(MANRESA_HOME_SLUG_PREFIX)
+
+    teams = {}
+    for team in stats:
+        name = team["team"]["fullName"]
+        players = team["statsByPeriods"][0]["stats"]["players"]
+        teams["man" if MANRESA_NAME in name else "opp"] = (name, players)
+    id_name = {p["player"]["id"]: p["player"]["nickname"] for p in teams["man"][1]}
+
+    box = []
+    for p in teams["man"][1]:
+        if minutes_to_seconds(p["playTime"]) == 0:
+            continue
+        box.append({
+            "comp": COMP_ACB, "game_id": game_id, "player": p["player"]["nickname"],
+            "role_es": p["player"]["gameRole"], "starter": int(p["isStarted"]),
+            "sec": minutes_to_seconds(p["playTime"]), "pts": p["points"],
+            "fg2m": p["twoPointersMade"], "fg2a": p["twoPointersAttempted"],
+            "fg3m": p["threePointersMade"], "fg3a": p["threePointersAttempted"],
+            "ftm": p["freeThrowsMade"], "fta": p["freeThrowsAttempted"],
+            "oreb": p["offRebounds"], "dreb": p["defRebounds"], "ast": p["assists"],
+            "stl": p["steals"], "tov": p["turnovers"], "blk": p["blocks"],
+            "pf": p["personalFouls"], "plus_minus": p["plusMinus"], "pf_drawn": p["foulsDrawn"],
+            "blk_against": p["receivedBlocks"], "rating": p["rating"],
+        })
+
+    def score(play: dict) -> tuple[int, int]:
+        home, away = play["scoreHome"], play["scoreAway"]
+        return (home, away) if man_home else (away, home)
+
+    assists, made = [], None
+    for play in plays:
+        if play["playType"] in ACB_MADE_FG:
+            made = play
+        elif play["playType"] in ACB_ASSIST and made is not None:
+            same_moment = all(made[k] == play[k] for k in ("quarter", "minute", "second", "local"))
+            passer, scorer = id_name.get(play["playerLicenseId"]), id_name.get(made["playerLicenseId"])
+            if same_moment and passer and scorer:
+                assists.append({"comp": COMP_ACB, "game_id": game_id, "passer": passer,
+                                "scorer": scorer, "pts": 3 if made["playType"] == ACB_MADE_3PT else 2})
+
+    events, last = [], {}
+    for play in plays:
+        if play["playType"] in (ACB_SUB_IN, ACB_SUB_OUT) and play["playerLicenseId"] in id_name:
+            kind = "IN" if play["playType"] == ACB_SUB_IN else "OUT"
+            player = id_name[play["playerLicenseId"]]
+        elif play["playType"] == ACB_STARTERS and play["playerLicenseId"] in id_name:
+            kind, player = "START", id_name[play["playerLicenseId"]]
+        else:
+            if play["quarter"]:
+                last[play["quarter"]] = play
+            continue
+        left = play["minute"] * 60 + play["second"]
+        quarter = max(play["quarter"], 1)
+        man_pts, opp_pts = score(play)
+        elapsed = 0 if kind == "START" else period_start(quarter) + period_length(quarter) - left
+        events.append({"comp": COMP_ACB, "game_id": game_id, "period": quarter,
+                       "elapsed": elapsed,
+                       "kind": kind, "player": player, "man": man_pts, "opp": opp_pts})
+    for quarter, play in last.items():
+        man_pts, opp_pts = score(play)
+        events.append({"comp": COMP_ACB, "game_id": game_id, "period": quarter,
+                       "elapsed": period_start(quarter) + period_length(quarter), "kind": "END",
+                       "player": "", "man": man_pts, "opp": opp_pts})
+
+    final = score(plays[-1])
+    opponent = teams["opp"][0]
+    game = {"comp": COMP_ACB, "game_id": game_id, "date": game_date, "opponent": opponent,
+            "home": int(man_home), "man_pts": final[0], "opp_pts": final[1]}
+    return game, box, events, assists
+
+
+# --------------------------------------------------------------------------------- EuroCup
+def eurocup_games() -> list[dict]:
+    """Played EuroCup games of Manresa from the EuroLeague results feed."""
+    root = ET.fromstring(get(EL_RESULTS).content)
+    games = []
+    for node in root.iter("game"):
+        if node.findtext("played") != "true" or MANRESA_CODE not in (node.findtext("homecode"),
+                                                                       node.findtext("awaycode")):
+            continue
+        games.append({"number": int(node.findtext("gamenumber")), "date": node.findtext("date"),
+                      "home": node.findtext("homecode") == MANRESA_CODE})
+    return sorted(games, key=lambda g: g["number"])
+
+
+def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[dict]]:
+    """Return (game row, Manresa box rows, Manresa events, assists) for one EuroCup game."""
+    number, game_id = info["number"], f"EC{info['number']}"
+    box_json = get(EL_BOX.format(n=number)).json()
+    pbp = get(EL_PBP.format(n=number)).json()
+
+    box, opponent = [], ""
+    for team in box_json["Stats"]:
+        code = team["PlayersStats"][0]["Team"].strip() if team["PlayersStats"] else ""
+        is_man = code == MANRESA_CODE
+        if not is_man:
+            opponent = team["Team"].title()
+            continue
+        for p in team["PlayersStats"]:
+            if p["Minutes"] in ("DNP", "", None):
+                continue
+            box.append({
+                "comp": COMP_EUROCUP, "game_id": game_id, "player": display_name(p["Player"]),
+                "role_es": "", "starter": p["IsStarter"], "sec": minutes_to_seconds(p["Minutes"]),
+                "pts": p["Points"], "fg2m": p["FieldGoalsMade2"], "fg2a": p["FieldGoalsAttempted2"],
+                "fg3m": p["FieldGoalsMade3"], "fg3a": p["FieldGoalsAttempted3"],
+                "ftm": p["FreeThrowsMade"], "fta": p["FreeThrowsAttempted"],
+                "oreb": p["OffensiveRebounds"], "dreb": p["DefensiveRebounds"],
+                "ast": p["Assistances"], "stl": p["Steals"], "tov": p["Turnovers"],
+                "blk": p["BlocksFavour"], "pf": p["FoulsCommited"], "plus_minus": p["Plusminus"],
+                "pf_drawn": p["FoulsReceived"], "blk_against": p["BlocksAgainst"],
+                "rating": p["Valuation"],
+            })
+    team_a_is_man = pbp["CodeTeamA"].strip() == MANRESA_CODE
+
+    events = [{"comp": COMP_EUROCUP, "game_id": game_id, "period": 1, "elapsed": 0, "kind": "START",
+               "player": row["player"], "man": 0, "opp": 0} for row in box if row["starter"]]
+    home = away = 0
+    assists, made = [], None
+    man_score = opp_score = 0
+    for period, key in enumerate(PERIOD_QUARTERS, start=1):
+        rows = pbp.get(key) or []
+        if not rows:
+            continue
+        for row in sorted(rows, key=lambda r: r["NUMBEROFPLAY"]):
+            if row["PLAYTYPE"] in EL_MADE_FG:
+                made = row
+            elif (row["PLAYTYPE"] == "AS" and made is not None and row["CODETEAM"].strip() == MANRESA_CODE
+                  and made["CODETEAM"].strip() == MANRESA_CODE
+                  and row["NUMBEROFPLAY"] - made["NUMBEROFPLAY"] <= EL_ASSIST_MAX_GAP):
+                assists.append({"comp": COMP_EUROCUP, "game_id": game_id, "passer": display_name(row["PLAYER"]),
+                                "scorer": display_name(made["PLAYER"]),
+                                "pts": 3 if made["PLAYTYPE"] == "3FGM" else 2})
+            if row["POINTS_A"] is not None:
+                home = row["POINTS_A"]
+            if row["POINTS_B"] is not None:
+                away = row["POINTS_B"]
+            man_score, opp_score = (home, away) if team_a_is_man else (away, home)
+            if row["PLAYTYPE"] in ("IN", "OUT") and row["CODETEAM"].strip() == MANRESA_CODE:
+                left = minutes_to_seconds(row["MARKERTIME"]) if row["MARKERTIME"] else 0
+                events.append({"comp": COMP_EUROCUP, "game_id": game_id, "period": period,
+                               "elapsed": period_start(period) + period_length(period) - left,
+                               "kind": row["PLAYTYPE"], "player": display_name(row["PLAYER"]),
+                               "man": man_score, "opp": opp_score})
+        events.append({"comp": COMP_EUROCUP, "game_id": game_id, "period": period,
+                       "elapsed": period_start(period) + period_length(period), "kind": "END",
+                       "player": "", "man": man_score, "opp": opp_score})
+    game = {"comp": COMP_EUROCUP, "game_id": game_id,
+            "date": pd.to_datetime(info["date"], format="%b %d, %Y").strftime("%Y-%m-%d"),
+            "opponent": opponent,
+            "home": int(info["home"]), "man_pts": man_score, "opp_pts": opp_score}
+    return game, box, events, assists
+
+
+def fetch_shots(info: dict) -> list[dict]:
+    """Manresa field-goal attempts with coordinates for one EuroCup game."""
+    rows = get(EL_POINTS.format(n=info["number"])).json()["Rows"]
+    return [{"game_id": f"EC{info['number']}", "player": display_name(r["PLAYER"]),
+             "made": int(r["ID_ACTION"].strip().endswith("M")), "three": int(r["ID_ACTION"].startswith("3")),
+             "x": r["COORD_X"], "y": r["COORD_Y"], "zone": r["ZONE"].strip()}
+            for r in rows if r["TEAM"].strip() == MANRESA_CODE and r["ID_ACTION"].strip()[:1] in "23"
+            and r["ID_ACTION"].strip()[1:3] == "FG"]
+
+
+def fetch_heights() -> pd.DataFrame:
+    """Roster heights (cm) and positions from the EuroLeague club endpoint."""
+    rows = []
+    for person in get(EL_PEOPLE).json():
+        if person["type"] != "J" and person["typeName"] != "Player":
+            continue
+        info = person["person"]
+        rows.append({"player": display_name(info["name"]), "height_cm": info["height"] or None,
+                     "position_en": person["positionName"], "photo_url": find_image_url(person)})
+    return pd.DataFrame(rows)
+
+
+def save_photos(heights: pd.DataFrame, size: int = PHOTO_SIZE) -> None:
+    """Thumbnails of the roster pictures into data/manresa/photos/<player key>.jpg (skipped when the API gave no URL)."""
+    import io
+    from PIL import Image
+    (OUT / "photos").mkdir(exist_ok=True)
+    for r in heights.itertuples():
+        if not isinstance(r.photo_url, str):
+            continue
+        try:
+            img = Image.open(io.BytesIO(get(r.photo_url).content)).convert("RGBA")
+        except Exception as exc:   # a missing picture must not stop the fetch
+            print(f"photo {r.player}: {exc}")
+            continue
+        bg = Image.new("RGB", img.size, "white"); bg.paste(img, mask=img.split()[3]); bg.thumbnail((size, size * 2))
+        bg.save(OUT / "photos" / f"{photo_name(r.player)}.jpg", quality=PHOTO_QUALITY, optimize=True)
+
+
+def main() -> None:
+    """Fetch everything and write the CSVs."""
+    OUT.mkdir(parents=True, exist_ok=True)
+    games, boxes, events, assists = [], [], [], []
+    ec_games = eurocup_games()
+    parsed = [parse_acb_game(slug) for slug in acb_game_slugs()]
+    parsed += [parse_eurocup_game(info) for info in ec_games]
+    for game, box, evs, ast in parsed:
+        games.append(game)
+        boxes += box
+        events += evs
+        assists += ast
+    pd.DataFrame(assists).to_csv(OUT / "assists.csv", index=False)
+    pd.DataFrame([row for info in ec_games for row in fetch_shots(info)]).to_csv(
+        OUT / "shots.csv", index=False)
+    pd.DataFrame(games).to_csv(OUT / "games.csv", index=False)
+    pd.DataFrame(boxes).to_csv(OUT / "box.csv", index=False)
+    pd.DataFrame(events).to_csv(OUT / "events.csv", index=False)
+    heights = fetch_heights()
+    heights.to_csv(OUT / "heights.csv", index=False)
+    save_photos(heights)
+    print(f"{len(games)} games, {len(boxes)} box rows, {len(events)} events -> {OUT}")
+
+
+if __name__ == "__main__":
+    main()

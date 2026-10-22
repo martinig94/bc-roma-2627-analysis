@@ -1,0 +1,79 @@
+name: Update data and site (LBA, EuroCup)
+
+on:
+  schedule:
+    # Every morning 06:40 UTC (08:40 Rome): picks up whatever finished the day before, weekend and midweek rounds
+    # alike. A morning without a new game changes nothing and commits nothing (the collector only fetches games it
+    # has not stored yet). GitHub can start scheduled runs late; run it by hand from the Actions tab when in a hurry.
+    - cron: "40 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Collect new games
+        id: collect
+        continue-on-error: true   # commit whatever was collected even if some games failed
+        run: python -m lba_data.collect
+
+      - name: EuroCup results and rosters (EuroLeague API)
+        id: eurocup
+        continue-on-error: true   # the report falls back to "EuroCup standings not available yet"
+        run: python notebooks/eurocup_fetch.py
+
+      - name: Weekly report for the new rounds
+        id: weekly
+        continue-on-error: true   # a report problem must not block committing the data
+        run: python notebooks/weekly.py
+
+      - name: Commit updated data and reports
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data reports weekly
+          if git diff --cached --quiet; then
+            echo "no new games"
+          else
+            n=$(git diff --cached --numstat -- data/raw | wc -l)
+            git commit -m "data and weekly report: collect $(date -u +%Y-%m-%d) (${n} raw files changed)"
+            git push
+          fi
+
+      - name: Fail the run if the collector, the EuroCup fetch or the report reported errors
+        if: steps.collect.outcome == 'failure' || steps.eurocup.outcome == 'failure' || steps.weekly.outcome == 'failure'
+        run: exit 1
+
+  # The site is built from the committed files and published by site.yml (docs/ is not committed any more).
+  # Runs even if a collection step failed, so whatever was collected is published.
+  deploy:
+    needs: collect
+    if: always()
+    uses: ./.github/workflows/site.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

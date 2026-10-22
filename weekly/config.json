@@ -1,0 +1,29 @@
+{
+  "team": "BC Roma",
+  "season": "2026/27",
+  "league": "LBA Serie A",
+  "author": "Giulia Martini",
+  "eurocup_file": "data/eurocup_2026_raw.txt",
+  "comments": {
+    "provider": "utterances",
+    "repo": "martinig94/bc-roma-2627-analysis",
+    "label": "comment"
+  },
+  "links": [
+    {
+      "label": "BC Roma official website",
+      "url": "https://www.officialbcroma.com/"
+    },
+    {
+      "label": "Lega Basket Serie A (LBA)",
+      "url": "https://www.legabasket.it/"
+    },
+    {
+      "label": "EuroCup",
+      "url": "https://www.euroleaguebasketball.net/eurocup/"
+    }
+  ],
+  "repo": "martinig94/bc-roma-2627-analysis",
+  "branch": "master",
+  "reviews": false
+}

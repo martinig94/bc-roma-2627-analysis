@@ -1,0 +1,58 @@
+name: Build and deploy the site
+
+# The site (docs/) is no longer committed: it is built here from the files in the repository and published with GitHub Pages
+# ("Source: GitHub Actions"). It is rebuilt
+#   * when you push a change to weekly/ (pages, config), reports/, data/ or the build scripts, for instance a page edited with
+#     the "Edit the text of this page" link;
+#   * after every daily data collection (collect.yml calls this workflow, because a push made with the workflow's own token
+#     does not start other workflows);
+#   * by hand from the Actions tab.
+# No collection of games, no calls to the leagues' APIs: only the files already in the repository are used.
+
+on:
+  push:
+    branches: [master]
+    paths: ["weekly/**", "reports/**", "data/**", "notebooks/**", "requirements.txt", ".github/workflows/site.yml"]
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build the site
+        run: |
+          python notebooks/build_site.py
+          touch docs/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

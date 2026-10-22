@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.pyc
+.venv/
+
+# Sportradar API key (never commit)
+sportradar_key.txt
+.env
+
+# The site is built and deployed by GitHub Actions (.github/workflows/site.yml); never committed
+docs/
