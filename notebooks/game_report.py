@@ -2,6 +2,9 @@
 
     python notebooks/game_report.py --game 25602 --team "BC Roma" --out reports/
 
+``--team`` defaults to the team in weekly/config.json. Writes rotation.png, lineups.png, shotmap.png
+and shot_profile.png into ``<out>/<game>_<team>/``.
+
 Lineups are reconstructed from the play-by-play (starters from the box score, then every
 "Ingresso"/"Uscita"). Shot profile includes the league (all other collected games) as reference.
 """
@@ -14,13 +17,36 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from lba_style import (save_fig, BLUE, DPI, GOLD, GOLD_EDGE, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW,
+import weekly_config
+from lba_style import (save_fig, BLUE, GOLD, GOLD_EDGE, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW,
                        draw_half_court, mins, shots_cm, style_axes, team_bar_kw)
 
-PERIOD_LEN = 600
+ROOT = weekly_config.ROOT
+PERIOD_LEN = 600   # seconds in a regulation quarter
+OT_LEN = 300       # seconds in an overtime period
+REGULATION_PERIODS = 4
+TICK_STEP = 300    # x-axis tick spacing of the rotation chart (seconds)
+LABEL_PAD = 40     # gap between the end of the game and the plus/minus labels (seconds)
+OPP_EDGE = "#6f7590"      # edge of the opponent's markers on the shot chart
+PERIOD_LINE = "#cfd1db"   # quarter separators on the rotation chart
+NEG_EDGE = "#a83a3a"      # edge of red (negative plus/minus) rotation bars
+# Shot-profile zones: distance bin edges (cm from the basket) and their labels.
+ZONE_EDGES = [0, 200, 450, 674, 9999]
+ZONE_NAMES = ["rim\n<2 m", "paint\n2–4.5 m", "mid-range\n4.5–6.75 m", "three"]
+BAR_WIDTH = 0.27   # width of one bar in the three-series shot-profile groups
+TOP_LINEUPS = 8
 
 
-def load(data: Path, game_id: int):
+def load(data: Path, game_id: int) -> tuple[pd.Series, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Load the league files and slice one game.
+
+    Args:
+        data: Folder holding games.csv, box_scores.csv and pbp.csv.
+        game_id: Game to slice out.
+
+    Returns:
+        ``(game_row, box_all, pbp_all, box_game, pbp_game)``; the game's play-by-play is sorted by ``seq``.
+    """
     games = pd.read_csv(data / "games.csv")
     box = pd.read_csv(data / "box_scores.csv")
     pbp = pd.read_csv(data / "pbp.csv")
@@ -29,11 +55,14 @@ def load(data: Path, game_id: int):
 
 
 def game_clock(pbp: pd.DataFrame) -> pd.Series:
-    prior = np.where(pbp.period <= 4, (pbp.period - 1) * PERIOD_LEN, 4 * PERIOD_LEN + (pbp.period - 5) * 300)
+    """Return seconds since tip-off for every play-by-play row (overtimes last ``OT_LEN``)."""
+    prior = np.where(pbp.period <= REGULATION_PERIODS, (pbp.period - 1) * PERIOD_LEN,
+                     REGULATION_PERIODS * PERIOD_LEN + (pbp.period - REGULATION_PERIODS - 1) * OT_LEN)
     return pd.Series(prior + pbp.elapsed_sec.values, index=pbp.index)
 
 
 def fmt_clock(sec: float) -> str:
+    """Format game seconds as ``Q2`` at a period start, else ``Q2 4:30`` (elapsed in the period)."""
     q = int(sec // PERIOD_LEN) + 1
     return f"Q{q}" if sec % PERIOD_LEN == 0 else f"Q{q} {int(sec % PERIOD_LEN) // 60:d}:{int(sec % 60):02d}"
 
@@ -71,7 +100,8 @@ def stints(pbp: pd.DataFrame, box: pd.DataFrame, team: str) -> tuple[pd.DataFram
 
 
 # ── figures ─────────────────────────────────────────────────────────────────────
-def fig_rotation(pbp, box, team, g, out):
+def fig_rotation(pbp: pd.DataFrame, box: pd.DataFrame, team: str, g: pd.Series, out: Path) -> None:
+    """Save rotation.png: score margin on top, one row of on-court stints per player below."""
     p_st, _ = stints(pbp, box, team)
     pbp = pbp.copy(); pbp["t"] = game_clock(pbp)
     home = bool(box[box.team == team].home.iloc[0])
@@ -92,17 +122,17 @@ def fig_rotation(pbp, box, team, g, out):
     ax0.set_title("Score margin and rotation", **TITLE_KW)
     for i, n in enumerate(names):
         v = pm.get(n, 0)
-        kw = team_bar_kw() if v >= 0 else dict(color=RED, edgecolor="#a83a3a", linewidth=0.6)
+        kw = team_bar_kw() if v >= 0 else dict(color=RED, edgecolor=NEG_EDGE, linewidth=0.6)
         for _, s in p_st[p_st.player == n].iterrows():
             ax1.barh(i, s.end - s.start, left=s.start, height=0.62, **kw)
-        ax1.text(end + 40, i, f"{v:+.0f}", va="center", ha="left", color=GREEN if v > 0 else RED if v < 0 else TEXT2,
+        ax1.text(end + LABEL_PAD, i, f"{v:+.0f}", va="center", ha="left", color=GREEN if v > 0 else RED if v < 0 else TEXT2,
                  fontsize=9, fontweight="bold")
     ax1.set_yticks(range(len(names))); ax1.set_yticklabels([f"{n}  ({mins(secs[n] / 60)})" for n in names]); ax1.invert_yaxis()
-    ax1.text(end + 40, -0.9, "+/-", color=TEXT2, fontsize=9, ha="left")
+    ax1.text(end + LABEL_PAD, -0.9, "+/-", color=TEXT2, fontsize=9, ha="left")
     for q in range(1, int(end // PERIOD_LEN) + 1):
         for ax in (ax0, ax1):
-            ax.axvline(q * PERIOD_LEN, color="#cfd1db", lw=1)
-    ticks = np.arange(0, end + 1, 300)
+            ax.axvline(q * PERIOD_LEN, color=PERIOD_LINE, lw=1)
+    ticks = np.arange(0, end + 1, TICK_STEP)
     ax1.set_xticks(ticks); ax1.set_xticklabels([("End" if t == end else fmt_clock(t)) if t % PERIOD_LEN == 0 else "" for t in ticks])
     ax1.set_xlim(0, end + 260); style_axes(ax1, "x")
     fig.suptitle(f"{team} — {g.home_team} {g.home_score}–{g.away_score} {g.away_team}, round {g['round']}, {str(g.match_datetime)[:10]}", **SUP_KW)
@@ -111,7 +141,9 @@ def fig_rotation(pbp, box, team, g, out):
     save_fig(fig, out / "rotation.png"); plt.close(fig)
 
 
-def fig_lineups(pbp, box, team, g, out, top=8):
+def fig_lineups(pbp: pd.DataFrame, box: pd.DataFrame, team: str, g: pd.Series, out: Path,
+                top: int = TOP_LINEUPS) -> pd.DataFrame:
+    """Save lineups.png (minutes and plus/minus of the ``top`` five-man units) and return the table."""
     _, lu = stints(pbp, box, team)
     agg = lu.groupby("lineup").agg(secs=("secs", "sum"), pm=("plus_minus", "sum")).reset_index()
     agg = agg[agg.secs > 0].sort_values("secs", ascending=False).head(top)
@@ -139,9 +171,10 @@ def fig_lineups(pbp, box, team, g, out, top=8):
     return agg
 
 
-def fig_shotmap(shots_game, team, opp, g, out):
+def fig_shotmap(shots_game: pd.DataFrame, team: str, opp: str, g: pd.Series, out: Path) -> None:
+    """Save shotmap.png: every field-goal attempt of the game, one half court per team."""
     fig, axes = plt.subplots(1, 2, figsize=(14, 7.2))
-    for ax, tm, col, edge in ((axes[0], team, GOLD, GOLD_EDGE), (axes[1], opp, LEAGUE, "#6f7590")):
+    for ax, tm, col, edge in ((axes[0], team, GOLD, GOLD_EDGE), (axes[1], opp, LEAGUE, OPP_EDGE)):
         s = shots_game[shots_game.team == tm]
         draw_half_court(ax)
         miss, made = s[~s.made], s[s.made]
@@ -155,11 +188,13 @@ def fig_shotmap(shots_game, team, opp, g, out):
     save_fig(fig, out / "shotmap.png"); plt.close(fig)
 
 
-def fig_shot_profile(shots_game, shots_league, team, opp, g, out):
-    zones = ["rim\n<2 m", "paint\n2–4.5 m", "mid-range\n4.5–6.75 m", "three"]
+def fig_shot_profile(shots_game: pd.DataFrame, shots_league: pd.DataFrame, team: str, opp: str,
+                     g: pd.Series, out: Path) -> None:
+    """Save shot_profile.png: share of attempts and points per attempt by distance zone vs the league."""
+    zones = ZONE_NAMES
 
-    def tab(s):
-        z = pd.cut(s.dist, [0, 200, 450, 674, 9999], labels=zones)
+    def tab(s: pd.DataFrame) -> pd.DataFrame:
+        z = pd.cut(s.dist, ZONE_EDGES, labels=zones)
         d = s.assign(z=z, p=s.made * s.pts).groupby("z", observed=False).agg(att=("made", "size"), pts=("p", "sum"))
         d["share"] = 100 * d.att / d.att.sum(); d["ppa"] = d.pts / d.att.replace(0, np.nan)
         return d.reindex(zones)
@@ -168,7 +203,7 @@ def fig_shot_profile(shots_game, shots_league, team, opp, g, out):
               (opp, tab(shots_game[shots_game.team == opp]), BLUE, BLUE),
               ("league (other games)", tab(shots_league), LEAGUE, LEAGUE)]
     fig, axes = plt.subplots(1, 2, figsize=(13, 4.6), gridspec_kw={"wspace": 0.25})
-    x = np.arange(4); w = 0.27
+    x = np.arange(len(zones)); w = BAR_WIDTH
     for i, (name, d, col, edge) in enumerate(series):
         off = (i - 1) * w
         axes[0].bar(x + off, d.share, w, color=col, edgecolor=edge, linewidth=0.6, label=name)
@@ -185,11 +220,12 @@ def fig_shot_profile(shots_game, shots_league, team, opp, g, out):
     save_fig(fig, out / "shot_profile.png"); plt.close(fig)
 
 
-def main():
+def main() -> None:
+    """Parse the command line and write the four single-game figures."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--game", type=int, required=True)
-    ap.add_argument("--team", required=True)
-    ap.add_argument("--data", default=str(Path(__file__).resolve().parent.parent / "data"))
+    ap.add_argument("--team", default=weekly_config.load()["team"])
+    ap.add_argument("--data", default=str(ROOT / "data"))
     ap.add_argument("--out", default="reports")
     a = ap.parse_args()
     out = Path(a.out) / f"{a.game}_{a.team.replace(' ', '_')}"; out.mkdir(parents=True, exist_ok=True)

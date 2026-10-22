@@ -24,9 +24,8 @@ import argparse
 import json
 import subprocess
 import sys
-from pathlib import Path
-
 from datetime import date
+from pathlib import Path
 
 import pandas as pd
 
@@ -38,16 +37,24 @@ import team_games
 import weekly_config
 import weekly_report
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = weekly_config.ROOT
+DATA = ROOT / "data"
+REPORTS = ROOT / "reports"
+REVIEW_NOTES_DIR = ROOT / "weekly" / "review"
 KINDS = ("snapshot", "opponent", "review")
+PAGE_KINDS = ("snapshot", "analysis")      # the per-game page files of pages.KINDS
+COLLECT_MODULE = "lba_data.collect"
+DAY_FORMAT = "%Y-%m-%d"
+AUTO_JSON = "auto.json"                    # marker written next to every generated report
 
 
 def has_text(notes: Path) -> bool:
-    """Some text of yours in the notes (the `reviewed:` marker alone is not text)."""
+    """Return True if the notes file holds some of your text (the `reviewed:` marker alone is not text)."""
     return notes.exists() and any(k != "reviewed" for k in build_site.parse_notes(notes))
 
 
 def main() -> None:
+    """Generate whatever is new for the configured team, then rebuild docs/ (options in the module docstring)."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--collect", action="store_true", help="pull new games before generating")
     ap.add_argument("--round", type=int, help="regenerate this LBA round (all kinds that apply)")
@@ -57,7 +64,8 @@ def main() -> None:
     ap.add_argument("--no-build", action="store_true")
     a = ap.parse_args()
     kinds = [k for k in a.only.split(",") if k in KINDS]
-    cfg = weekly_config.load(); team = cfg["team"]
+    cfg = weekly_config.load()
+    team = cfg["team"]
     if "review" in kinds and not cfg.get("reviews"):          # no automatic post-game reviews unless switched on
         kinds.remove("review")
         if a.only != ",".join(KINDS):
@@ -70,25 +78,28 @@ def main() -> None:
                 print(f"{kind}: no generated page for this game (written by hand, or not generated yet)")
         return
     if a.collect:
-        subprocess.run([sys.executable, "-m", "lba_data.collect"], cwd=ROOT, check=True)
-    games = pd.read_csv(ROOT / "data" / "games.csv")
+        subprocess.run([sys.executable, "-m", COLLECT_MODULE], cwd=ROOT, check=True)
+    games = pd.read_csv(DATA / "games.csv")
     done = weekly_report.finished_rounds(games, team)
     if not done:
         raise SystemExit(f"no finished {team} game yet")
-    tg = team_games.team_games(ROOT / "data", team)
-    targets = team_games.snapshot_targets(tg, f"{date.today():%Y-%m-%d}")
-    rnd_key = {int(r["round"]): r["key"] for _, r in tg[tg.competition == "LBA"].iterrows()}
-    games_df = pd.read_csv(ROOT / "data" / "games.csv")
+    tg = team_games.team_games(DATA, team)
+    targets = team_games.snapshot_targets(tg, f"{date.today():{DAY_FORMAT}}")
+    rnd_key = {int(r["round"]): r["key"] for _, r in tg[tg.competition == team_games.LBA].iterrows()}
 
     def snap_done(key: str) -> bool:
         """Generated, and with the data that is available now (a snapshot of a future game goes stale when games are collected)."""
-        path = ROOT / "reports" / "snapshot" / key / "auto.json"
+        path = REPORTS / "snapshot" / key / AUTO_JSON
         if not path.exists():
             return False
         old = json.loads(path.read_text(encoding="utf-8"))
-        return old.get("n_before") == team_games.n_before(tg, games_df, key) and old.get("version") == snapshot_report.VERSION
-    lba_targets = [int(r) for r in targets[targets.competition == "LBA"]["round"]]
-    rep = lambda kind, r: ROOT / "reports" / kind / f"round-{r:02d}" / "auto.json"
+        return old.get("n_before") == team_games.n_before(tg, games, key) and old.get("version") == snapshot_report.VERSION
+    lba_targets = [int(r) for r in targets[targets.competition == team_games.LBA]["round"]]
+
+    def rep(kind: str, rnd: int) -> Path:
+        """Return the auto.json marker of a round-level report."""
+        return REPORTS / kind / f"round-{rnd:02d}" / AUTO_JSON
+
     if a.game:
         snaps = [a.game] if a.game in set(targets.key) else []
     elif a.round:
@@ -107,7 +118,7 @@ def main() -> None:
     for r in (todo["opponent"] if "opponent" in kinds else []):
         opponent.generate(r, team, force=bool(a.round))
     if "opponent" in kinds and not (a.round or a.game):       # EuroCup games listed in weekly/schedule.csv with an analysis folder (no hand-written README there)
-        for _, r in targets[(targets.competition == "EuroCup") & targets.analysis.notna()].iterrows():
+        for _, r in targets[(targets.competition == team_games.EUROCUP) & targets.analysis.notna()].iterrows():
             opponent.generate_eurocup(r.date, team)
     for r in (todo["review"] if "review" in kinds else []):
         weekly_report.generate(r, team)
@@ -116,7 +127,7 @@ def main() -> None:
 
     waiting, to_review = [], []
     today = date.today().isoformat()
-    for kind in ("snapshot", "analysis"):
+    for kind in PAGE_KINDS:
         for path in sorted(pages.GAMES.glob(f"*/{pages.KINDS[kind]}")):
             day = path.parent.name
             st_ = pages.state(*pages.split_front(path.read_text(encoding="utf-8")))
@@ -125,12 +136,12 @@ def main() -> None:
             if day >= today and st_ != "reviewed":
                 to_review.append(f"{kind} {day}")
     for r in (done if cfg.get("reviews") else []):
-        if not has_text(ROOT / "weekly" / "review" / f"round-{r:02d}" / "notes.md"):
+        if not has_text(REVIEW_NOTES_DIR / f"round-{r:02d}" / "notes.md"):
             waiting.append(f"review round {r}")
-    old = sorted(f.parent.name.removeprefix("matchup_") for f in (ROOT / "reports").glob("matchup_*/README.md"))
+    old = sorted(f.parent.name.removeprefix("matchup_") for f in REPORTS.glob("matchup_*/README.md"))
     if old:
         print("\nANALYSES IN THE OLD FORMAT (hand-written, flagged on the site; not built from the game-page files): " + "; ".join(old))
-    past = [f"{kind} {p.parent.name}" for kind in ("snapshot", "analysis") for p in sorted(pages.GAMES.glob(f"*/{pages.KINDS[kind]}"))
+    past = [f"{kind} {p.parent.name}" for kind in PAGE_KINDS for p in sorted(pages.GAMES.glob(f"*/{pages.KINDS[kind]}"))
             if p.parent.name < today and pages.state(*pages.split_front(p.read_text(encoding="utf-8"))) == "draft"]
     if past:
         print("\nANALYSES OF PAST GAMES THAT ARE AUTOMATIC ONLY (flagged as archive on the site; `reviewed: yes` removes the flag): " + "; ".join(past))

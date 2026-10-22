@@ -1,4 +1,6 @@
 """Game pages (notebooks/pages.py): header, state, block expansion. No data needed."""
+from __future__ import annotations
+
 import sys
 from pathlib import Path
 
@@ -10,13 +12,15 @@ A = {"team": "BC Roma", "opponent": "Varese", "competition": "LBA", "round": 5, 
      "home_team": "Openjobmetis Varese", "away_team": "BC Roma"}
 
 
-def test_split_front_reads_the_header_lines_only():
+def test_split_front_reads_the_header_lines_only() -> None:
+    """Check split front reads the header lines only."""
     meta, body = pages.split_front("title: A game\nreviewed: no\ngenerated: abc\n\n# Heading\nplain: text\n")
     assert meta == {"title": "A game", "reviewed": "no", "generated": "abc"}
     assert body.startswith("# Heading") and "plain: text" in body
 
 
-def test_new_page_is_a_draft_until_edited():
+def test_new_page_is_a_draft_until_edited() -> None:
+    """Check new page is a draft until edited."""
     text = pages.new_page("snapshot", A, ["standings.png"])
     meta, body = pages.split_front(text)
     assert pages.state(meta, body) == "draft"
@@ -24,18 +28,21 @@ def test_new_page_is_a_draft_until_edited():
     assert pages.state({**meta, "reviewed": "yes"}, body) == "reviewed"
 
 
-def test_trailing_whitespace_and_final_newline_do_not_count_as_work():
+def test_trailing_whitespace_and_final_newline_do_not_count_as_work() -> None:
+    """Check trailing whitespace and final newline do not count as work."""
     meta, body = pages.split_front(pages.new_page("snapshot", A, []))
     noisy = "\n".join(line + "  " for line in body.splitlines()) + "\n\n"
     assert pages.state(meta, noisy) == "draft"
 
 
-def test_notes_carried_over_make_the_page_work_in_progress():
+def test_notes_carried_over_make_the_page_work_in_progress() -> None:
+    """Check notes carried over make the page work in progress."""
     meta, body = pages.split_front(pages.new_page("analysis", A, ["lineups_BC_Roma.png"], {"lineups": "Prova"}))
     assert "Prova" in body and pages.state(meta, body) == "progress"
 
 
-def test_expand_fills_blocks_but_not_comments_or_code():
+def test_expand_fills_blocks_but_not_comments_or_code() -> None:
+    """Check expand fills blocks but not comments or code."""
     body = "# T\n\n<!-- {{ roster }} -->\n\n`{{ roster }}`\n\n{{ figure: 07_key_players }}\n\n{{ nonsense }}\n"
     out = pages.expand(body, "analysis", {"team": "BC Roma"}, ["07_key_players.png"])
     assert "![key players](07_key_players.png)" in out
@@ -44,18 +51,21 @@ def test_expand_fills_blocks_but_not_comments_or_code():
     assert "<!--" not in out                             # prompts for the editor are not published
 
 
-def test_missing_figure_is_reported_not_crashing():
+def test_missing_figure_is_reported_not_crashing() -> None:
+    """Check missing figure is reported not crashing."""
     assert "not available" in pages.expand("{{ figure: nope }}", "analysis", {}, [])
 
 
-def test_empty_sections_are_left_out():
+def test_empty_sections_are_left_out() -> None:
+    """Check empty sections are left out."""
     md = "# T\n\n## Key points\n\n## Real\n\ntext\n\n### Empty sub\n\n### Full sub\n\nmore\n"
     out = pages.prune_empty(md)
     assert "Key points" not in out and "Empty sub" not in out
     assert "## Real" in out and "### Full sub" in out
 
 
-def test_archive_flag_only_for_a_past_automatic_page():
+def test_archive_flag_only_for_a_past_automatic_page() -> None:
+    """Check archive flag only for a past automatic page."""
     from datetime import date
 
     import pandas as pd
@@ -71,7 +81,7 @@ def test_archive_flag_only_for_a_past_automatic_page():
     assert any("Automatic draft" in f for f in b.flags_for("2026-10-24", tg, today, "draft", "x.md", archive=True))   # upcoming: draft flag
 
 
-def test_new_analysis_has_the_standard_sections_in_order():
+def test_new_analysis_has_the_standard_sections_in_order() -> None:
     """Every analysis page has the same sections in the same order; an empty one gets the grey box."""
     text = pages.new_page("analysis", {**A, "home_team": "BC Roma", "away_team": "Bosna", "opponent": "Bosna"}, [])
     heads = [line for line in text.splitlines() if line.startswith("## ")]
@@ -81,12 +91,14 @@ def test_new_analysis_has_the_standard_sections_in_order():
     assert "### Shooting" in text and "### Assists" in text and "### Turnovers" in text
 
 
-def test_pending_box_is_grey_and_keeps_the_section():
+def test_pending_box_is_grey_and_keeps_the_section() -> None:
+    """Check pending box is grey and keeps the section."""
     out = pages.expand("## Key points\n\n{{ pending }}\n\n## Empty\n\n## Next\n\ntext\n", "analysis", {}, [])
     assert 'class="pending"' in out and "This section will be filled when the game is reviewed" in out
     assert "## Key points" in out and "## Empty" not in out        # a section with no text and no box is left out
 
 
-def test_eurocup_analysis_names_the_competition_in_its_heading():
+def test_eurocup_analysis_names_the_competition_in_its_heading() -> None:
+    """Check eurocup analysis names the competition in its heading."""
     text = pages.new_page("analysis", {**A, "competition": "EuroCup"}, [])
     assert "## EuroCup so far: results and standings" in text

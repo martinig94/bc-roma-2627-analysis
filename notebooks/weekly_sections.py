@@ -12,11 +12,13 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.lines import Line2D
 
 import lba_style
 import weekly_config
-from lba_style import GREEN, LEAGUE, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, shots_cm, style_axes, team_color
+from lba_style import BLUE, GREEN, LEAGUE, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, shots_cm, style_axes, team_color
 from matchup_report import apply_starter_overrides, parse_eurocup, plot_zone_heatmap, zone_stats
+from player_names import photo_name
 
 ROOT = Path(__file__).resolve().parent.parent
 TEAM = weekly_config.load()["team"]
@@ -27,13 +29,35 @@ POS_ORDER = {"Guard": 1, "Forward": 2, "Center": 4,          # EuroCup club page
 # playing-time flag: at least MIN_PLAYED seconds in the game and either +ABS_UP seconds or +REL_UP above the average before
 MIN_PLAYED, ABS_UP, REL_UP = 8 * 60, 7 * 60, 0.30
 
+COMP_LBA, COMP_EC = "LBA", "EC"          # values of the `competition` column of load_box()
+ALL_ROUNDS, END_OF_TIME = 10**6, "9999-12-31"   # "no limit" for load_box(upto_round, upto_date)
+ROSTER_COLS = ["player_id", "surname", "team", "position", "height_cm"]   # data/roster.csv
+MIN_PLAUSIBLE_HEIGHT_CM = 150            # EuroCup club pages sometimes carry a placeholder height below this
+NAME_SUFFIX_RE = r"\b(jr|sr|ii|iii)\b\.?"   # dropped when matching surnames across sources
+NO_VALUE = "–"                           # shown for a figure that does not exist
+FTA_POSSESSION_WEIGHT = 0.44             # standard estimate: free-throw attempts that end a possession
+EC_GAME_MIN = 40                         # EuroCup totals carry 2400 s for the whole team, not 5 x 2400
+TEAM_SEC_PER_MIN = 300                   # LBA totals carry 5 players x 60 s per team minute
+BOX_MIN_PER_GAME = 40                    # minutes in a regulation game, for the pace figure
+MIN_ASSIST_LINKS = 4                     # assist matrix: drop players involved in fewer assisted baskets than this
+EVENT_ASSIST, EVENT_MADE = "Assist", "punti segnato"   # play-by-play event names (Italian feed)
+MAX_MPG_FOR_BUBBLE, BUBBLE_SCALE, BUBBLE_MIN = 36, 420, 40   # TS% vs PIR: bubble area = mpg / 36 * 420 + 40
+OUT_COLOR, BENCH_COLOR = "#d64545", "#e6e6ee"   # starting-fives grid: out of the game / bench minutes
+
 
 # ── data ────────────────────────────────────────────────────────────────────────
 def load_box(data: Path, upto_round: int, upto_date: str, eurocup_file: str = "") -> pd.DataFrame:
-    """LBA player/total rows (all teams, rounds <= upto_round) + EuroCup rows (all teams in the file, date <= upto_date)."""
+    """Return LBA player/total rows (all teams, rounds <= upto_round) + EuroCup rows (all teams in the file, date <= upto_date).
+
+    Args:
+        data: Folder with box_scores.csv (and the starter overrides).
+        upto_round: Last LBA round to include.
+        upto_date: Last EuroCup date (YYYY-MM-DD) to include.
+        eurocup_file: EuroCup box-score file relative to the project root; empty for none.
+    """
     lba = apply_starter_overrides(pd.read_csv(data / "box_scores.csv"), data)
     lba = lba[lba["round"] <= upto_round].copy()
-    lba["competition"] = "LBA"; lba["date"] = lba.match_datetime.str[:10]; lba["game_id"] = lba.game_id.astype(str)
+    lba["competition"] = COMP_LBA; lba["date"] = lba.match_datetime.str[:10]; lba["game_id"] = lba.game_id.astype(str)
     ec_path = ROOT / eurocup_file if eurocup_file else None
     frames = [lba]
     if ec_path and ec_path.exists():
@@ -45,24 +69,26 @@ def load_box(data: Path, upto_round: int, upto_date: str, eurocup_file: str = ""
 
 
 def load_box_before(data: Path, before: str, eurocup_file: str = "") -> pd.DataFrame:
-    """Everything available before a game: LBA and EuroCup rows dated strictly before `before` (YYYY-MM-DD)."""
-    box = load_box(data, 10**6, "9999-12-31", eurocup_file)
+    """Return everything available before a game: LBA and EuroCup rows dated strictly before `before` (YYYY-MM-DD)."""
+    box = load_box(data, ALL_ROUNDS, END_OF_TIME, eurocup_file)
     return box[box.date < before].copy()
 
 
 def players(box: pd.DataFrame, team: str = TEAM) -> pd.DataFrame:
+    """Return the player rows of ``team`` in ``box`` that have court time."""
     return box[(box.row_type == "player") & (box.team == team) & (box.sec > 0)]
 
 
-def pct(m, a) -> str:
-    return "–" if not a else f"{100 * m / a:.0f}"
+def pct(m: float, a: float) -> str:
+    """Return ``m`` made of ``a`` attempts as a whole-number percentage string, or a dash when there are none."""
+    return NO_VALUE if not a else f"{100 * m / a:.0f}"
 
 
 # ── roster ──────────────────────────────────────────────────────────────────────
 def roster_file(data: Path, raw_players: pd.DataFrame, team: str) -> pd.DataFrame:
-    """data/roster.csv (player_id, surname, team, position, height_cm): hand-maintained, new players are appended blank."""
+    """Return data/roster.csv (player_id, surname, team, position, height_cm): hand-maintained, new players are appended blank."""
     path = data / "roster.csv"
-    cols = ["player_id", "surname", "team", "position", "height_cm"]
+    cols = ROSTER_COLS
     cur = pd.read_csv(path) if path.exists() else pd.DataFrame(columns=cols)
     if "team" not in cur:                       # older file: those players are all the configured team's
         cur.insert(2, "team", TEAM)
@@ -77,7 +103,7 @@ def roster_file(data: Path, raw_players: pd.DataFrame, team: str) -> pd.DataFram
 
 
 def roster_bios(data: Path, team: str) -> dict[int, dict]:
-    """player_id -> row of data/team_rosters.csv (the "giocatori" table of the team page on legabasket.it), empty if not collected."""
+    """Return player_id -> row of data/team_rosters.csv (the "giocatori" table of the team page on legabasket.it), empty if not collected."""
     path = data / "team_rosters.csv"
     if not path.exists():
         return {}
@@ -87,20 +113,20 @@ def roster_bios(data: Path, team: str) -> dict[int, dict]:
 
 
 def age_on(birth: str, asof: str) -> int | None:
+    """Return the age in whole years on ``asof`` of someone born on ``birth`` (YYYY-MM-DD), or None if unknown."""
     if not isinstance(birth, str) or not birth:
         return None
     b, d = pd.Timestamp(birth), pd.Timestamp(asof)
     return int(d.year - b.year - ((d.month, d.day) < (b.month, b.day)))
 
 
-def _num(v) -> str:
+def _num(v: object) -> str:
     return "" if v is None or pd.isna(v) else str(int(float(v)))
 
 
 def ec_people(data: Path, team: str) -> dict[str, dict]:
-    """EuroCup club page of a team (data/eurocup/people.csv): last name -> {pos, height, number, photo}, for the players of teams that have no LBA data.
+    """Return the EuroCup club page of a team (data/eurocup/people.csv): last name -> {pos, height, number, photo}, for the players of teams that have no LBA data.
     Last names that two players share are left out (no way to tell them apart in the box score)."""
-    from player_names import photo_name
     people, results = data / "eurocup" / "people.csv", data / "eurocup" / "results.csv"
     if not people.exists() or not results.exists():
         return {}
@@ -110,9 +136,9 @@ def ec_people(data: Path, team: str) -> dict[str, dict]:
     df = df[df.club == codes.get(team)]
     out: dict[str, dict] = {}
     for r in df.itertuples():
-        clean = re.sub(r"\b(jr|sr|ii|iii)\b\.?", "", unicodedata.normalize("NFKD", r.player).encode("ascii", "ignore").decode().lower()).split()
+        clean = re.sub(NAME_SUFFIX_RE, "", unicodedata.normalize("NFKD", r.player).encode("ascii", "ignore").decode().lower()).split()
         stem = photo_name(r.player)
-        info = {"pos": r.position if isinstance(r.position, str) else "", "height": "" if pd.isna(r.height_cm) or r.height_cm < 150 else str(int(r.height_cm)),
+        info = {"pos": r.position if isinstance(r.position, str) else "", "height": "" if pd.isna(r.height_cm) or r.height_cm < MIN_PLAUSIBLE_HEIGHT_CM else str(int(r.height_cm)),
                 "number": _num(getattr(r, "number", None)),
                 "photo": stem if (data / "eurocup" / "photos" / f"{stem}.jpg").exists() else None}
         for k in range(1, len(clean)):                       # every tail of the name: "de laat", "laat"
@@ -122,13 +148,13 @@ def ec_people(data: Path, team: str) -> dict[str, dict]:
 
 
 def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | None = None) -> list[dict]:
-    """One row per player of `team` in `box`; bio columns (number, role, age on `asof`, nationality, weight, birth date) come from
+    """Return one row per player of `team` in `box`; bio columns (number, role, age on `asof`, nationality, weight, birth date) come from
     data/team_rosters.csv and fill position and height when data/roster.csv leaves them blank."""
     asof = asof or pd.Timestamp.today().strftime("%Y-%m-%d")
     bios = roster_bios(data, team)
     p = players(box, team)
-    lba_ids = p[p.competition == "LBA"].drop_duplicates("player_surname").set_index("player_surname").player_id
-    rost = roster_file(data, p[p.competition == "LBA"], team).set_index("player_id")
+    lba_ids = p[p.competition == COMP_LBA].drop_duplicates("player_surname").set_index("player_surname").player_id
+    rost = roster_file(data, p[p.competition == COMP_LBA], team).set_index("player_id")
     ecp = ec_people(data, team) if lba_ids.empty else {}          # a team that is only in the EuroCup data: its club page gives position, height, photo
     photos = {int(f.stem) for f in (data / "photos").glob("*.jpg")}
     rows = []
@@ -140,12 +166,12 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
         pos = pos or (bio.get("role") if isinstance(bio.get("role"), str) else "")
         ht = "" if r is None or pd.isna(r.height_cm) or r.height_cm == "" else str(int(float(r.height_cm)))
         ht = ht or _num(bio.get("height_cm"))
-        e = ecp.get(re.sub(r"\b(jr|sr|ii|iii)\b\.?", "", sur.lower()).strip())
+        e = ecp.get(re.sub(NAME_SUFFIX_RE, "", sur.lower()).strip())
         if e:
             pos, ht = pos or e["pos"], ht or e["height"]
         num = _num(bio.get("number")) or (e["number"] if e else "")
         n = len(g); fga = g.fg2a.sum() + g.fg3a.sum()
-        lba, ec = g[g.competition == "LBA"], g[g.competition == "EC"]
+        lba, ec = g[g.competition == COMP_LBA], g[g.competition == COMP_EC]
         rows.append({
             "player_id": pid if pid is not None or not (e and e["photo"]) else f"ec_{e['photo']}",
             "photo": pid in photos or bool(e and e["photo"]), "name": sur.title(), "pos": pos, "height": ht, "gp": n,
@@ -173,7 +199,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
             "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
             "country": bio["country"] if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
             "birth_date": bio["birth_date"] if isinstance(bio.get("birth_date"), str) else "",
-            "min": "–", "pts": "–", "reb": "–", "oreb": "–", "ast": "–", "pir": "–", "fd": "–", "pf": "–", "fg2": "–", "fg3": "–", "ft": "–",
+            **dict.fromkeys(("min", "pts", "reb", "oreb", "ast", "pir", "fd", "pf", "fg2", "fg3", "ft"), NO_VALUE),
             "ppg_lba": None, "ppg_ec": None, "sec_total": 0})
     rows.sort(key=lambda r: (POS_ORDER.get(r["pos"], 9), -r["sec_total"]))
     return rows
@@ -181,7 +207,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
 
 # ── starting fives of the last games ───────────────────────────────────────────
 def fig_starting_fives(box: pd.DataFrame, team: str, out: Path, n: int = 5, top: int = 12, idx: int = 1) -> list[dict]:
-    """Grid players x last `n` games (LBA and EuroCup, date order): team colour = starter (S, minutes), grey = bench minutes, red = out of the game.
+    """Save 11_starting_fives.png and return the starters of each game. Grid players x last `n` games (LBA and EuroCup, date order): team colour = starter (S, minutes), grey = bench minutes, red = out of the game.
     Rows: the `top` players by minutes over all the games in `box`, plus anyone who started. Written to 11_starting_fives.png."""
     p = box[(box.team == team) & (box.row_type == "player")]
     tot = box[(box.team == team) & (box.row_type == "total")].sort_values(["date", "game_id"]).tail(n)
@@ -199,18 +225,18 @@ def fig_starting_fives(box: pd.DataFrame, team: str, out: Path, n: int = 5, top:
         for i, name in enumerate(players):
             r = row.loc[name] if name in row.index else None
             if r is None or r.sec <= 0:
-                color, text = "#d64545", "OUT"
+                color, text = OUT_COLOR, "OUT"
             elif r.starter == 1:
                 color, text = fill, f"S {r.sec / 60:.0f}'"
             else:
-                color, text = "#e6e6ee", f"{r.sec / 60:.0f}'"
+                color, text = BENCH_COLOR, f"{r.sec / 60:.0f}'"
             ax.add_patch(plt.Rectangle((j, -i - 1), 0.94, 0.88, color=color))
             ax.text(j + 0.47, -i - 0.56, text, ha="center", va="center", fontsize=9, color="white" if text == "OUT" else TEXT,
                     fontweight="bold" if text == "OUT" else None)
     ax.set_xlim(-0.05, len(tot)); ax.set_ylim(-len(players) - 0.1, 0)
     ax.set_yticks([-i - 0.56 for i in range(len(players))], [x.title() for x in players], fontsize=9)
     opp_pts = box[(box.row_type == "total") & (box.team != team) & box.game_id.isin(tot.game_id)].groupby("game_id").pts.first()
-    labels = [f"{g.date[5:]}\n{str(g.opponent).split()[0][:11]}\n{'LBA' if g.competition == 'LBA' else 'EC'} {int(g.pts)}-{int(opp_pts.get(g.game_id, 0))}"
+    labels = [f"{g.date[5:]}\n{str(g.opponent).split()[0][:11]}\n{'LBA' if g.competition == COMP_LBA else 'EC'} {int(g.pts)}-{int(opp_pts.get(g.game_id, 0))}"
               for g in tot.itertuples()]
     ax.set_xticks([j + 0.47 for j in range(len(tot))], labels, fontsize=8)
     ax.xaxis.tick_top(); ax.tick_params(length=0); ax.spines[:].set_visible(False)
@@ -221,7 +247,7 @@ def fig_starting_fives(box: pd.DataFrame, team: str, out: Path, n: int = 5, top:
 
 # ── turnovers ───────────────────────────────────────────────────────────────────
 def turnover_table(box: pd.DataFrame, team: str = TEAM) -> list[dict]:
-    """Turnovers per player over the games in `box` (LBA + EuroCup rows of the team): total, per minute, and the game with the most.
+    """Return turnovers per player over the games in `box` (LBA + EuroCup rows of the team): total, per minute, and the game with the most.
     The two highest single-game totals of the whole roster are flagged (`top`)."""
     p = players(box, team).copy()
     if p.empty:
@@ -244,11 +270,11 @@ def turnover_table(box: pd.DataFrame, team: str = TEAM) -> list[dict]:
 
 # ── playing time ────────────────────────────────────────────────────────────────
 def playing_time_flags(box: pd.DataFrame, game_id: str, game_date: str) -> list[dict]:
-    """Players whose minutes in this game jumped versus their average in the games they played before it (LBA + EuroCup)."""
+    """Return the players whose minutes in this game jumped versus their average in the games they played before it (LBA + EuroCup)."""
     p = players(box)
     cur = p[p.game_id == str(game_id)].set_index("player_surname")
     prev = p[(p.game_id != str(game_id)) & (p.date <= game_date)]
-    prev = prev[~((prev.date == game_date) & (prev.competition == "LBA"))]
+    prev = prev[~((prev.date == game_date) & (prev.competition == COMP_LBA))]
     if prev.empty:   # first game of the season: nothing to compare with
         return []
     avg = prev.groupby("player_surname").sec.agg(["mean", "size"])
@@ -268,9 +294,10 @@ def playing_time_flags(box: pd.DataFrame, game_id: str, game_date: str) -> list[
 
 # ── assists ─────────────────────────────────────────────────────────────────────
 def assist_pairs(pbp: pd.DataFrame, games: list[int], team: str = TEAM) -> pd.DataFrame:
+    """Return one row per assisted basket of ``team`` in ``games``: game_id, passer, scorer, pts."""
     p = pbp[pbp.game_id.isin(games)]
-    a = p[(p.event == "Assist") & (p.team == team)][["game_id", "player_surname", "linked_seq"]].dropna(subset=["linked_seq"])
-    shots = p[p.event.str.contains("punti segnato", na=False)][["game_id", "seq", "player_surname", "event"]]
+    a = p[(p.event == EVENT_ASSIST) & (p.team == team)][["game_id", "player_surname", "linked_seq"]].dropna(subset=["linked_seq"])
+    shots = p[p.event.str.contains(EVENT_MADE, na=False)][["game_id", "seq", "player_surname", "event"]]
     m = a.merge(shots, left_on=["game_id", "linked_seq"], right_on=["game_id", "seq"], suffixes=("_passer", "_scorer"))
     m["passer"] = m.player_surname_passer.str.title(); m["scorer"] = m.player_surname_scorer.str.title()
     m["pts"] = m.event.str[0].astype(int)
@@ -278,11 +305,21 @@ def assist_pairs(pbp: pd.DataFrame, games: list[int], team: str = TEAM) -> pd.Da
 
 
 def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM, league: str = "LBA", name: str = "assists") -> list[dict]:
+    """Save the assist matrix <name>.png and return the six most frequent passer-scorer pairs.
+
+    Args:
+        pairs: Output of ``assist_pairs``.
+        box_ast: Box-score assists, to show how many are matched to a basket.
+        out: Output folder.
+        team: Team name for the title.
+        league: Competition name for the title.
+        name: File stem of the PNG.
+    """
     matrix = pairs.pivot_table(index="passer", columns="scorer", values="pts", aggfunc="size", fill_value=0)
     allp = matrix.index.union(matrix.columns)
     matrix = matrix.reindex(index=allp, columns=allp, fill_value=0)
     involved = matrix.sum(axis=1) + matrix.sum(axis=0)
-    keep = involved[involved >= 4].index
+    keep = involved[involved >= MIN_ASSIST_LINKS].index
     matrix = matrix.loc[keep, keep]
     order = matrix.sum(axis=1).sort_values(ascending=False).index
     matrix = matrix.loc[order, order]
@@ -303,8 +340,13 @@ def fig_assists(pairs: pd.DataFrame, box_ast: int, out: Path, team: str = TEAM, 
 
 
 # ── shot zones ──────────────────────────────────────────────────────────────────
-def fig_zones(pbp: pd.DataFrame, games: list, game_id: int | None, out: Path, team: str = TEAM, league: str = "LBA", suffix: str = "") -> dict:
-    GOLD, GOLD_EDGE = team_color(team)
+def fig_zones(pbp: pd.DataFrame, games: list, game_id: int | None, out: Path, team: str = TEAM, league: str = "LBA",
+              suffix: str = "") -> dict:
+    """Save zones<suffix>.png and zone_share<suffix>.png; return the season and league shot share (%) per zone.
+
+    ``game_id`` None skips the single-game panel and bars.
+    """
+    gold, gold_edge = team_color(team)
     s = shots_cm(pbp[pbp.game_id.isin(games)])
     ref = zone_stats(s[s.team != team])
     mine = s[s.team == team]
@@ -326,11 +368,11 @@ def fig_zones(pbp: pd.DataFrame, games: list, game_id: int | None, out: Path, te
     fig, ax = plt.subplots(figsize=(10, 4.8))
     x = np.arange(len(zs)); w = 0.27
     if game_id is not None:
-        ax.bar(x - w, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, season")
-        ax.bar(x, sg, w, color=GOLD, alpha=0.45, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, this game")
+        ax.bar(x - w, sm, w, color=gold, edgecolor=gold_edge, linewidth=0.6, label=f"{team}, season")
+        ax.bar(x, sg, w, color=gold, alpha=0.45, edgecolor=gold_edge, linewidth=0.6, label=f"{team}, this game")
         ax.bar(x + w, sl, w, color=LEAGUE, label=f"other {league} teams")
     else:
-        ax.bar(x - w / 2, sm, w, color=GOLD, edgecolor=GOLD_EDGE, linewidth=0.6, label=f"{team}, season")
+        ax.bar(x - w / 2, sm, w, color=gold, edgecolor=gold_edge, linewidth=0.6, label=f"{team}, season")
         ax.bar(x + w / 2, sl, w, color=LEAGUE, label=f"other {league} teams")
     ax.set_xticks(x, [labels[z] for z in zs], rotation=25, ha="right", fontsize=9)
     ax.set_ylabel("% of field-goal attempts"); ax.legend(fontsize=8)
@@ -342,27 +384,28 @@ def fig_zones(pbp: pd.DataFrame, games: list, game_id: int | None, out: Path, te
 
 # ── TS% vs PIR ──────────────────────────────────────────────────────────────────
 def ts_pir_table(box: pd.DataFrame, min_mpg: float) -> pd.DataFrame:
+    """Return per-player GP, MPG, PIR and TS% for the rows in ``box``, keeping players with at least ``min_mpg``."""
     p = box[(box.row_type == "player") & (box.sec > 0)]
     g = p.groupby(["team", "player_surname"]).agg(GP=("game_id", "nunique"), sec=("sec", "sum"), pts=("pts", "sum"), val=("val", "sum"),
                                                   fga=("fg2a", "sum"), fg3a=("fg3a", "sum"), fta=("fta", "sum")).reset_index()
     g["fga"] = g.fga + g.fg3a
     g["MPG"] = g.sec / 60 / g.GP; g["PIR"] = g.val / g.GP
-    g["TS"] = 100 * g.pts / (2 * (g.fga + 0.44 * g.fta)).replace(0, np.nan)
+    g["TS"] = 100 * g.pts / (2 * (g.fga + FTA_POSSESSION_WEIGHT * g.fta)).replace(0, np.nan)
     g["Player"] = g.player_surname.str.title()
     return g[g.MPG >= min_mpg].dropna(subset=["TS"])
 
 
 def fig_ts_pir(box: pd.DataFrame, comp: str, out: Path, min_mpg: float = 10, team: str = TEAM) -> dict:
     """PIR (x) vs TS% (y), bubble = minutes per game; one competition only. Other teams' players in grey."""
-    GOLD, GOLD_EDGE = team_color(team)
+    gold, gold_edge = team_color(team)
     d = ts_pir_table(box[box.competition == comp], min_mpg)
     mine, other = d[d.team == team], d[d.team != team]
-    name = {"LBA": "LBA", "EC": "EuroCup"}[comp]
-    size = lambda mpg: mpg / 36 * 420 + 40
+    name = {COMP_LBA: "LBA", COMP_EC: "EuroCup"}[comp]
+    size = lambda mpg: mpg / MAX_MPG_FOR_BUBBLE * BUBBLE_SCALE + BUBBLE_MIN
     fig, ax = plt.subplots(figsize=(12, 7.5))
     ax.scatter(other.PIR, other.TS, s=size(other.MPG), c=LEAGUE, alpha=0.4, edgecolors="none", zorder=2,
                label=f"other {name} players")
-    ax.scatter(mine.PIR, mine.TS, s=size(mine.MPG), c=GOLD, edgecolors=GOLD_EDGE, linewidths=0.8, zorder=3, label=team)
+    ax.scatter(mine.PIR, mine.TS, s=size(mine.MPG), c=gold, edgecolors=gold_edge, linewidths=0.8, zorder=3, label=team)
     for j, (_, r) in enumerate(mine.sort_values("PIR").iterrows()):
         ax.annotate(f"{r.Player} ({r.MPG:.0f}')", (r.PIR, r.TS), xytext=(6, 6 if j % 2 else -12), textcoords="offset points", fontsize=8.5, color=TEXT)
     best = d.sort_values("PIR", ascending=False).iloc[0]
@@ -376,14 +419,14 @@ def fig_ts_pir(box: pd.DataFrame, comp: str, out: Path, min_mpg: float = 10, tea
     ax.set_title(f"PIR vs true shooting, {name} games only ({team}: {games} game{'s' if games != 1 else ''}), "
                  f"dot size = minutes per game, min {min_mpg:.0f}'", **TITLE_KW)
     ax.legend(fontsize=9, loc="lower right"); style_axes(ax)
-    fname = "ts_pir_lba.png" if comp == "LBA" else "ts_pir_eurocup.png"
+    fname = "ts_pir_lba.png" if comp == COMP_LBA else "ts_pir_eurocup.png"
     save_fig(fig, out / fname); plt.close(fig)
     return {"file": fname, "players": len(mine), "others": len(other), "games": games}
 
 
 # ── team profile (LBA, to date) ─────────────────────────────────────────────────
-def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)) -> dict:
-    """Season-to-date team numbers (box = rows of load_box*, all teams): record, pace, ratings, four factors.
+def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = (COMP_LBA,)) -> dict:
+    """Return season-to-date team numbers (box = rows of load_box*, all teams): record, pace, ratings, four factors.
     comps: competitions to include, "LBA" and/or "EC" (EuroCup games are only in the data for some teams)."""
     tot = box[box.competition.isin(comps) & (box.row_type == "total")]
     mine = tot[tot.team == team].set_index("game_id")
@@ -391,19 +434,19 @@ def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)
         return {}
     opp = tot[tot.opponent == team].set_index("game_id").reindex(mine.index)
     n = len(mine)
-    poss = lambda t: t.fg2a + t.fg3a - t.oreb + t.tov + 0.44 * t.fta
+    poss = lambda t: t.fg2a + t.fg3a - t.oreb + t.tov + FTA_POSSESSION_WEIGHT * t.fta
     pm, po = poss(mine), poss(opp)
     fga, ofga = mine.fg2a + mine.fg3a, opp.fg2a + opp.fg3a
     wins = int((mine.pts > opp.pts).sum())
-    minutes = np.where(mine.competition == "EC", 40, mine.sec / 300).sum()   # EuroCup totals carry 2400 s, not 5 x 2400
+    minutes = np.where(mine.competition == COMP_EC, EC_GAME_MIN, mine.sec / TEAM_SEC_PER_MIN).sum()   # EuroCup totals carry 2400 s, not 5 x 2400
     r = lambda x, d=1: round(float(x), d)
     return {
-        "Games": f"{n} ({(mine.competition == 'LBA').sum()} LBA + {(mine.competition == 'EC').sum()} EuroCup)" if (mine.competition == "EC").any() and len(comps) > 1 else n,
+        "Games": f"{n} ({(mine.competition == COMP_LBA).sum()} LBA + {(mine.competition == COMP_EC).sum()} EuroCup)" if (mine.competition == COMP_EC).any() and len(comps) > 1 else n,
         "Record": f"{wins}-{n - wins}",
         "Points per game": r(mine.pts.mean()), "Points allowed per game": r(opp.pts.mean()),
         "Offensive rating": r(100 * mine.pts.sum() / pm.sum()), "Defensive rating": r(100 * opp.pts.sum() / po.sum()),
         "Net rating": r(100 * mine.pts.sum() / pm.sum() - 100 * opp.pts.sum() / po.sum()),
-        "Pace (possessions per 40')": r(40 * ((pm + po) / 2).sum() / minutes),
+        "Pace (possessions per 40')": r(BOX_MIN_PER_GAME * ((pm + po) / 2).sum() / minutes),
         "eFG%": r(100 * (mine.fg2m + 1.5 * mine.fg3m).sum() / fga.sum()),
         "TOV% (per 100 poss.)": r(100 * mine.tov.sum() / pm.sum()),
         "FT rate (FTA/FGA)": r(100 * mine.fta.sum() / fga.sum()),
@@ -421,24 +464,22 @@ def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)
 # ── form across competitions ────────────────────────────────────────────────────
 def fig_form(before: pd.DataFrame, out: Path, team: str = TEAM) -> None:
     """Points scored and conceded in every game played so far, in date order; circles = league, squares = EuroCup."""
-    from matplotlib.lines import Line2D
-    GOLD, GOLD_EDGE = team_color(team)
-    blue = "#4a7fc1"
+    gold, gold_edge = team_color(team)
     n = len(before)
     x = np.arange(1, n + 1)
     fig, ax = plt.subplots(figsize=(max(9.0, 1.05 * n + 3), 4.8))
-    ax.plot(x, before.pf, color=GOLD_EDGE, lw=2.2, zorder=2)
-    ax.plot(x, before.pa, color=blue, lw=2.2, zorder=2)
+    ax.plot(x, before.pf, color=gold_edge, lw=2.2, zorder=2)
+    ax.plot(x, before.pa, color=BLUE, lw=2.2, zorder=2)
     for i, (_, r) in enumerate(before.iterrows(), start=1):
-        mk = "o" if r.competition == "LBA" else "s"
-        ax.scatter(i, r.pf, marker=mk, s=95, color=GOLD, edgecolor=GOLD_EDGE, zorder=3)
-        ax.scatter(i, r.pa, marker=mk, s=75, color=blue, zorder=3)
+        mk = "o" if r.competition == COMP_LBA else "s"
+        ax.scatter(i, r.pf, marker=mk, s=95, color=gold, edgecolor=gold_edge, zorder=3)
+        ax.scatter(i, r.pa, marker=mk, s=75, color=BLUE, zorder=3)
         ax.text(i, r.pf + 3, int(r.pf), ha="center", fontsize=9, color=TEXT)
-        ax.text(i, r.pa - 7, int(r.pa), ha="center", fontsize=9, color=blue)
+        ax.text(i, r.pa - 7, int(r.pa), ha="center", fontsize=9, color=BLUE)
     ax.set_xticks(x, [f"{o[:15]}\n{d[8:]}/{d[5:7]}" for o, d in zip(before.opponent, before.date)], fontsize=8.5)
     ax.set_ylabel("points")
-    ax.legend(handles=[Line2D([], [], color=GOLD_EDGE, marker="o", mfc=GOLD, label=f"{team} scored"),
-                       Line2D([], [], color=blue, marker="o", label=f"{team} conceded"),
+    ax.legend(handles=[Line2D([], [], color=gold_edge, marker="o", mfc=gold, label=f"{team} scored"),
+                       Line2D([], [], color=BLUE, marker="o", label=f"{team} conceded"),
                        Line2D([], [], color=TEXT2, marker="o", ls="", label="league (LBA)"),
                        Line2D([], [], color=TEXT2, marker="s", ls="", label="EuroCup")], loc="upper left", ncol=4, fontsize=8)
     style_axes(ax, "y")

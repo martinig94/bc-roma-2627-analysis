@@ -25,34 +25,51 @@ import numpy as np
 import pandas as pd
 
 import lba_style
+import weekly_config
 from lba_style import LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, style_axes, team_color
 
-CLUTCH_SEC, CLUTCH_MARGIN = 300, 5
-EC_CODE = {"BCR": "BC Roma", "MRO": "Maxima Roma"}
-EC_DATES = {6: "2026-09-30", 16: "2026-09-30", 24: "2026-10-06", 29: "2026-10-07"}
-EC_NAME_FIX = {"BONACINI": "Bonaccini"}
+CFG = weekly_config.load()
+EC_Q4_FILE = "eurocup_2026_q4_pbp.txt"   # default EuroCup 4th-quarter extract inside the data folder
+CLUTCH_SEC, CLUTCH_MARGIN = 300, 5   # last 5:00 (seconds on the clock) and score within 5 points
+CLUTCH_FROM_PERIOD = 4               # clutch time starts in the 4th quarter (overtimes included)
+CITY_RIVAL = "Maxima Roma"           # second team of the default comparison
+EC_CODE = {"BCR": CFG["team"], "MRO": CITY_RIVAL}   # EuroCup club code -> team name used in the LBA data
+EC_DATES = {6: "2026-09-30", 16: "2026-09-30", 24: "2026-10-06", 29: "2026-10-07"}   # EuroCup game number -> date
+EC_NAME_FIX = {"BONACINI": "Bonaccini"}   # misspelt surnames in the EuroCup feed
+EC_SUFFIXES = (" JR.", " JR", " III")     # name suffixes dropped from EuroCup surnames
+LBA_EVENT_KINDS = {"2 punti segnato": "fg2m", "2 punti sbagliato": "fg2a", "3 punti segnato": "fg3m",
+                   "3 punti sbagliato": "fg3a", "Tiro libero segnato": "ftm", "Tiro libero sbagliato": "fta",
+                   "Assist": "ast", "Palla persa": "tov", "Palla recuperata": "stl", "Rimbalzo difensivo": "reb",
+                   "Rimbalzo offensivo": "reb", "Fallo Subito": "fd"}   # legabasket.it event -> kind
+EC_EVENT_KINDS = {"2FGM": "fg2m", "2FGA": "fg2a", "3FGM": "fg3m", "3FGA": "fg3a", "FTM": "ftm", "FTA": "fta",
+                  "AS": "ast", "TO": "tov", "ST": "stl", "D": "reb", "O": "reb", "RV": "fd"}   # EuroCup PLAYTYPE -> kind
+KIND_COLS = ["fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "ast", "tov", "stl", "reb", "fd"]
+TEAM_KIND_COLS = ["fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "ast", "tov"]
+TURNOVER_FLAG = 2   # a player with this many clutch turnovers is shown in red
 
 
 def _clock(c: str) -> int:
+    """Convert a ``m:ss`` clock string to seconds."""
     m, s = str(c).split(":")
     return int(m) * 60 + int(s)
 
 
 # ── LBA ─────────────────────────────────────────────────────────────────────────
 def lba_events(pbp: pd.DataFrame, games: pd.DataFrame) -> pd.DataFrame:
-    """One row per clutch event: game, label, team, opp, player, kind (pts2m/pts2a/pts3m/pts3a/ftm/fta/ast/tov/stl/reb/fd)."""
+    """Return one row per LBA clutch event.
+
+    Columns: game_id, label, competition, team, opp, player, kind (fg2m/fg2a/fg3m/fg3a/ftm/fta/ast/tov/
+    stl/reb/fd) and rem (seconds left on the clock). The margin is measured before the event.
+    """
     p = pbp.copy()
     p["rem"] = p.clock.map(_clock)
     p = p.sort_values(["game_id", "seq"])
     post = (p.score_home - p.score_away).abs()
     p["margin"] = post.groupby(p.game_id).shift(1).fillna(post)     # margin BEFORE the event (NBA convention)
-    p = p[(p.period >= 4) & (p.rem <= CLUTCH_SEC) & (p.margin <= CLUTCH_MARGIN)]
+    p = p[(p.period >= CLUTCH_FROM_PERIOD) & (p.rem <= CLUTCH_SEC) & (p.margin <= CLUTCH_MARGIN)]
     p = p.merge(games[["game_id", "home_team", "away_team", "home_score", "away_score", "match_datetime"]], on="game_id")
-    kinds = {"2 punti segnato": "fg2m", "2 punti sbagliato": "fg2a", "3 punti segnato": "fg3m", "3 punti sbagliato": "fg3a",
-             "Tiro libero segnato": "ftm", "Tiro libero sbagliato": "fta", "Assist": "ast", "Palla persa": "tov",
-             "Palla recuperata": "stl", "Rimbalzo difensivo": "reb", "Rimbalzo offensivo": "reb", "Fallo Subito": "fd"}
-    p = p[p.event.isin(kinds)].copy()
-    p["kind"] = p.event.map(kinds)
+    p = p[p.event.isin(LBA_EVENT_KINDS)].copy()
+    p["kind"] = p.event.map(LBA_EVENT_KINDS)
     p["player"] = p.player_surname.fillna("").str.title()
     p["opp"] = np.where(p.team == p.home_team, p.away_team, p.home_team)
     p["label"] = p.apply(lambda r: f"{r.home_team} {r.home_score}–{r.away_score} {r.away_team} (LBA)", axis=1)
@@ -62,16 +79,18 @@ def lba_events(pbp: pd.DataFrame, games: pd.DataFrame) -> pd.DataFrame:
 
 # ── EuroCup ─────────────────────────────────────────────────────────────────────
 def ec_events(path: Path) -> pd.DataFrame:
+    """Return the EuroCup clutch events from the 4th-quarter extract, same columns as ``lba_events``.
+
+    The label keeps ``{A}``/``{B}`` placeholders for the final score (see ``final_scores_ec``); ``_game``
+    is the EuroCup game number.
+    """
     rows, game, teams, prev_margin = [], None, {}, {}
-    kinds = {"2FGM": "fg2m", "2FGA": "fg2a", "3FGM": "fg3m", "3FGA": "fg3a", "FTM": "ftm", "FTA": "fta", "AS": "ast",
-             "TO": "tov", "ST": "stl", "D": "reb", "O": "reb", "RV": "fd"}
     for ln in path.read_text(encoding="utf-8").splitlines():
         if ln.startswith("#GAME"):
             toks = ln.split()
-            game = int(toks[1]); teams = dict(t.split("=", 1) for t in " ".join(toks[2:]).split(" ", 1)[0:1])
+            game = int(toks[1])
             # header is "#GAME 16 BAH=Bahcesehir College Istanbul BCR=Roma Basketball": parse codes manually
             rest = ln.split(" ", 2)[2]
-            codes = [t for t in rest.replace("=", " = ").split() if t.isupper() and len(t) == 3 and t not in ("THE",)]
             teams = {}
             parts = rest.split()
             cur = None
@@ -85,7 +104,7 @@ def ec_events(path: Path) -> pd.DataFrame:
         if not ln.strip() or ln.startswith("#"):
             continue
         per, clk, code, player, pt, a, b = ln.split("|")
-        if pt not in kinds or not code:
+        if pt not in EC_EVENT_KINDS or not code:
             prev_margin[game] = abs(int(a) - int(b)); continue
         a, b = int(a), int(b)
         margin_pre = prev_margin.get(game, abs(a - b)); prev_margin[game] = abs(a - b)
@@ -95,16 +114,19 @@ def ec_events(path: Path) -> pd.DataFrame:
         team = EC_CODE.get(code, teams[code].title())
         opp_code = [c for c in order if c != code][0]
         opp = EC_CODE.get(opp_code, teams[opp_code].title())
-        surname = player.split(",")[0].replace(" JR.", "").replace(" JR", "").replace(" III", "").strip().title()
+        surname = player.split(",")[0]
+        for suffix in EC_SUFFIXES:
+            surname = surname.replace(suffix, "")
+        surname = surname.strip().title()
         surname = EC_NAME_FIX.get(surname.upper(), surname)
         nm = lambda c: EC_CODE.get(c, teams[c].title())
         rows.append(dict(game_id=f"EC{game}", label=f"{nm(order[0])} {{A}}–{{B}} {nm(order[1])} (EuroCup)",
-                         competition="EC", team=team, opp=opp, player=surname, kind=kinds[pt], rem=rem, _game=game))
+                         competition="EC", team=team, opp=opp, player=surname, kind=EC_EVENT_KINDS[pt], rem=rem, _game=game))
     df = pd.DataFrame(rows)
     return df
 
 
-def final_scores_ec(path: Path) -> dict:
+def final_scores_ec(path: Path) -> dict[int, tuple[int, int]]:
     """Final score per EC game from the last forward-filled row."""
     out, game = {}, None
     for ln in path.read_text(encoding="utf-8").splitlines():
@@ -117,8 +139,9 @@ def final_scores_ec(path: Path) -> dict:
 
 # ── aggregation ─────────────────────────────────────────────────────────────────
 def per_player(ev: pd.DataFrame) -> pd.DataFrame:
+    """Return clutch counting stats per (team, player) from the event table."""
     k = ev.groupby(["team", "player", "kind"]).size().unstack(fill_value=0)
-    for c in ["fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "ast", "tov", "stl", "reb", "fd"]:
+    for c in KIND_COLS:
         if c not in k: k[c] = 0
     k["pts"] = 2 * k.fg2m + 3 * k.fg3m + k.ftm
     k["fgm"], k["fga"] = k.fg2m + k.fg3m, k.fg2m + k.fg2a + k.fg3m + k.fg3a
@@ -128,8 +151,9 @@ def per_player(ev: pd.DataFrame) -> pd.DataFrame:
 
 
 def per_team(ev: pd.DataFrame) -> pd.DataFrame:
+    """Return clutch counting stats, points and games per team from the event table."""
     k = ev.groupby(["team", "kind"]).size().unstack(fill_value=0)
-    for c in ["fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "ast", "tov"]:
+    for c in TEAM_KIND_COLS:
         if c not in k: k[c] = 0
     k["pts"] = 2 * k.fg2m + 3 * k.fg3m + k.ftm
     k["fgm"], k["fga"] = k.fg2m + k.fg3m, k.fg2m + k.fg2a + k.fg3m + k.fg3a
@@ -139,6 +163,7 @@ def per_team(ev: pd.DataFrame) -> pd.DataFrame:
 
 # ── figure ──────────────────────────────────────────────────────────────────────
 def plot(teams: list[str], ev: pd.DataFrame, league_ev: pd.DataFrame, out: Path) -> None:
+    """Save 11_clutch.png: one panel per team with clutch points per player and the league reference."""
     pp = per_player(ev); tt = per_team(ev)
     lg = per_team(league_ev)
     lg_fg = lg.fgm.sum() / max(lg.fga.sum(), 1); lg_tov_per_game = lg.tov.sum() / max(lg.games.sum(), 1)
@@ -164,7 +189,7 @@ def plot(teams: list[str], ev: pd.DataFrame, league_ev: pd.DataFrame, out: Path)
             if r.ast: line += f" · {r.ast} ast"
             if r.tov: line += f" · {r.tov} TO"
             if r.fd: line += f" · {r.fd} FD"
-            ax.text(r.pts + 0.25, yi, line, va="center", ha="left", fontsize=8.5, color=RED if r.tov >= 2 else TEXT2)
+            ax.text(r.pts + 0.25, yi, line, va="center", ha="left", fontsize=8.5, color=RED if r.tov >= TURNOVER_FLAG else TEXT2)
         ax.set_yticks(y); ax.set_yticklabels(d.player, fontsize=10)
         ax.set_xlim(0, xmax); ax.set_xlabel("points in clutch time"); ax.xaxis.set_major_locator(MaxNLocator(integer=True))
         t = tt.loc[team] if team in tt.index else None
@@ -176,17 +201,18 @@ def plot(teams: list[str], ev: pd.DataFrame, league_ev: pd.DataFrame, out: Path)
     fig.suptitle("Clutch time: last 5:00 of the 4th quarter / OT, score within 5 points", **SUP_KW)
     foot = (f"Games with clutch minutes: " + "; ".join(labels) + "\n"
             f"League reference (other LBA teams, same rounds): {lg_pts_per_game:.0f} pts and {lg_tov_per_game:.1f} TO per close finish, "
-            f"FG {lg_fg:.0%}. FD = fouls drawn. Red text = 2+ turnovers. Data: LBA play-by-play + EuroCup play-by-play.")
+            f"FG {lg_fg:.0%}. FD = fouls drawn. Red text = {TURNOVER_FLAG}+ turnovers. Data: LBA play-by-play + EuroCup play-by-play.")
     fig.text(0.01, -0.075, foot, ha="left", va="top", fontsize=8, color=TEXT2, wrap=True)
     save_fig(fig, out / "11_clutch.png")
     plt.close(fig)
 
 
-def main():
+def main() -> None:
+    """Parse the command line, build the clutch table and write the figure plus a printed summary."""
     ap = argparse.ArgumentParser()
-    ap.add_argument("--teams", nargs="+", default=["BC Roma", "Maxima Roma"])
+    ap.add_argument("--teams", nargs="+", default=[CFG["team"], CITY_RIVAL])
     ap.add_argument("--data", default="data")
-    ap.add_argument("--eurocup", default=None, help="EC 4th-quarter pbp extract (default data/eurocup_2026_q4_pbp.txt)")
+    ap.add_argument("--eurocup", default=None, help=f"EC 4th-quarter pbp extract (default data/{EC_Q4_FILE})")
     ap.add_argument("--no-eurocup", action="store_true")
     ap.add_argument("--out", default="reports")
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: use only games played before this date")
@@ -198,7 +224,7 @@ def main():
         lba_style.STAMP_NOTE = f"games before {date.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
         games = games[games.date < a.before]; pbp = pbp[pbp.game_id.isin(games.game_id)]
     ev = lba_events(pbp, games)
-    ec_path = Path(a.eurocup) if a.eurocup else data / "eurocup_2026_q4_pbp.txt"
+    ec_path = Path(a.eurocup) if a.eurocup else data / EC_Q4_FILE
     if not a.no_eurocup and ec_path.exists():
         ec = ec_events(ec_path)
         if a.before:

@@ -26,9 +26,24 @@ import pandas as pd
 import requests
 
 from player_names import display_name, find_image_url, photo_name, player_key  # noqa: F401
+from weekly_config import ROOT
+from weekly_config import load as load_config
 
-OUT = Path(__file__).resolve().parent.parent / "data" / "manresa"
-HEADERS = {"User-Agent": "Mozilla/5.0 (BC Roma scouting; contact giulia.martini@un.org)"}
+OUT = ROOT / "data" / "manresa"
+_CFG = load_config()
+# Contact details in the user agent come from weekly/config.json (author) so the feeds can reach whoever runs the scraper.
+HEADERS = {"User-Agent": f"Mozilla/5.0 ({_CFG['team']} scouting; contact {_CFG['author']})"}
+HTTP_TIMEOUT = 60                    # seconds
+COMP_ACB, COMP_EUROCUP = "Liga Endesa", "EuroCup"
+MANRESA_CODE = "MAN"                 # EuroLeague club code
+MANRESA_NAME = "Manresa"             # part of the ACB team full name
+MANRESA_HOME_SLUG_PREFIX = "kidsandus-manresa-vs"     # ACB game slugs of Manresa home games start with this
+REGULATION_PERIODS = 4
+PERIOD_SECONDS = 600                 # 10-minute quarter
+OVERTIME_SECONDS = 300               # 5-minute overtime
+EL_ASSIST_MAX_GAP = 10               # an assist is linked to a made basket at most this many plays earlier
+PHOTO_SIZE = 240                     # px, side of the thumbnail box (height allowed up to twice that)
+PHOTO_QUALITY = 88                   # JPEG quality
 ACB_CALENDAR = "https://www.acb.com/calendario"
 ACB_GAME = "https://live.acb.com/partidos/{slug}/{page}"
 EL_RESULTS = "https://api-live.euroleague.net/v1/results?seasonCode=U2026"
@@ -41,7 +56,8 @@ PERIOD_QUARTERS = ("FirstQuarter", "SecondQuarter", "ThirdQuarter", "ForthQuarte
 # ACB numeric play types for substitutions (checked against starters + on-court counts).
 ACB_SUB_IN, ACB_SUB_OUT, ACB_STARTERS = 112, 115, 599
 # Made field goals (2P, 3P, dunk) and assist types (checked against the per-player assist counters).
-ACB_MADE_FG, ACB_ASSIST = {93, 94, 100}, {107, 108, 119}
+ACB_MADE_3PT = 94
+ACB_MADE_FG, ACB_ASSIST = {93, ACB_MADE_3PT, 100}, {107, 108, 119}
 EL_MADE_FG = {"2FGM", "3FGM", "DUNK"}
 EL_POINTS = "https://live.euroleague.net/api/Points?gamecode={n}&seasoncode=U2026"
 BOX_COLS = ["pts", "fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "oreb", "dreb", "ast", "stl", "tov",
@@ -50,7 +66,7 @@ BOX_COLS = ["pts", "fg2m", "fg2a", "fg3m", "fg3a", "ftm", "fta", "oreb", "dreb",
 
 def get(url: str) -> requests.Response:
     """GET with a polite user agent; raises on HTTP errors."""
-    resp = requests.get(url, headers=HEADERS, timeout=60)
+    resp = requests.get(url, headers=HEADERS, timeout=HTTP_TIMEOUT)
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return resp
@@ -64,12 +80,14 @@ def minutes_to_seconds(clock: str) -> int:
 
 def period_start(period: int) -> int:
     """Elapsed seconds at the start of a period (4 x 10 min, 5 min overtimes)."""
-    return 600 * (period - 1) if period <= 4 else 2400 + 300 * (period - 5)
+    if period <= REGULATION_PERIODS:
+        return PERIOD_SECONDS * (period - 1)
+    return PERIOD_SECONDS * REGULATION_PERIODS + OVERTIME_SECONDS * (period - REGULATION_PERIODS - 1)
 
 
 def period_length(period: int) -> int:
     """Length in seconds of a period."""
-    return 600 if period <= 4 else 300
+    return PERIOD_SECONDS if period <= REGULATION_PERIODS else OVERTIME_SECONDS
 
 
 def flight_json(html: str, key: str) -> list | dict:
@@ -97,13 +115,13 @@ def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]
     game_date = f"{year}-{ES_MONTHS[month[:3]]}-{int(day):02d}"
     plays = flight_json(get(ACB_GAME.format(slug=slug, page="jugadas")).text, "plays")
     plays = sorted(plays, key=lambda p: p["order"])
-    man_home = slug.startswith("kidsandus-manresa-vs")
+    man_home = slug.startswith(MANRESA_HOME_SLUG_PREFIX)
 
     teams = {}
     for team in stats:
         name = team["team"]["fullName"]
         players = team["statsByPeriods"][0]["stats"]["players"]
-        teams["man" if "Manresa" in name else "opp"] = (name, players)
+        teams["man" if MANRESA_NAME in name else "opp"] = (name, players)
     id_name = {p["player"]["id"]: p["player"]["nickname"] for p in teams["man"][1]}
 
     box = []
@@ -111,7 +129,7 @@ def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]
         if minutes_to_seconds(p["playTime"]) == 0:
             continue
         box.append({
-            "comp": "Liga Endesa", "game_id": game_id, "player": p["player"]["nickname"],
+            "comp": COMP_ACB, "game_id": game_id, "player": p["player"]["nickname"],
             "role_es": p["player"]["gameRole"], "starter": int(p["isStarted"]),
             "sec": minutes_to_seconds(p["playTime"]), "pts": p["points"],
             "fg2m": p["twoPointersMade"], "fg2a": p["twoPointersAttempted"],
@@ -135,8 +153,8 @@ def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]
             same_moment = all(made[k] == play[k] for k in ("quarter", "minute", "second", "local"))
             passer, scorer = id_name.get(play["playerLicenseId"]), id_name.get(made["playerLicenseId"])
             if same_moment and passer and scorer:
-                assists.append({"comp": "Liga Endesa", "game_id": game_id, "passer": passer,
-                                "scorer": scorer, "pts": 3 if made["playType"] == 94 else 2})
+                assists.append({"comp": COMP_ACB, "game_id": game_id, "passer": passer,
+                                "scorer": scorer, "pts": 3 if made["playType"] == ACB_MADE_3PT else 2})
 
     events, last = [], {}
     for play in plays:
@@ -153,18 +171,18 @@ def parse_acb_game(slug: str) -> tuple[dict, list[dict], list[dict], list[dict]]
         quarter = max(play["quarter"], 1)
         man_pts, opp_pts = score(play)
         elapsed = 0 if kind == "START" else period_start(quarter) + period_length(quarter) - left
-        events.append({"comp": "Liga Endesa", "game_id": game_id, "period": quarter,
+        events.append({"comp": COMP_ACB, "game_id": game_id, "period": quarter,
                        "elapsed": elapsed,
                        "kind": kind, "player": player, "man": man_pts, "opp": opp_pts})
     for quarter, play in last.items():
         man_pts, opp_pts = score(play)
-        events.append({"comp": "Liga Endesa", "game_id": game_id, "period": quarter,
+        events.append({"comp": COMP_ACB, "game_id": game_id, "period": quarter,
                        "elapsed": period_start(quarter) + period_length(quarter), "kind": "END",
                        "player": "", "man": man_pts, "opp": opp_pts})
 
     final = score(plays[-1])
     opponent = teams["opp"][0]
-    game = {"comp": "Liga Endesa", "game_id": game_id, "date": game_date, "opponent": opponent,
+    game = {"comp": COMP_ACB, "game_id": game_id, "date": game_date, "opponent": opponent,
             "home": int(man_home), "man_pts": final[0], "opp_pts": final[1]}
     return game, box, events, assists
 
@@ -175,11 +193,11 @@ def eurocup_games() -> list[dict]:
     root = ET.fromstring(get(EL_RESULTS).content)
     games = []
     for node in root.iter("game"):
-        if node.findtext("played") != "true" or "MAN" not in (node.findtext("homecode"),
-                                                              node.findtext("awaycode")):
+        if node.findtext("played") != "true" or MANRESA_CODE not in (node.findtext("homecode"),
+                                                                       node.findtext("awaycode")):
             continue
         games.append({"number": int(node.findtext("gamenumber")), "date": node.findtext("date"),
-                      "home": node.findtext("homecode") == "MAN"})
+                      "home": node.findtext("homecode") == MANRESA_CODE})
     return sorted(games, key=lambda g: g["number"])
 
 
@@ -192,7 +210,7 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[d
     box, opponent = [], ""
     for team in box_json["Stats"]:
         code = team["PlayersStats"][0]["Team"].strip() if team["PlayersStats"] else ""
-        is_man = code == "MAN"
+        is_man = code == MANRESA_CODE
         if not is_man:
             opponent = team["Team"].title()
             continue
@@ -200,7 +218,7 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[d
             if p["Minutes"] in ("DNP", "", None):
                 continue
             box.append({
-                "comp": "EuroCup", "game_id": game_id, "player": display_name(p["Player"]),
+                "comp": COMP_EUROCUP, "game_id": game_id, "player": display_name(p["Player"]),
                 "role_es": "", "starter": p["IsStarter"], "sec": minutes_to_seconds(p["Minutes"]),
                 "pts": p["Points"], "fg2m": p["FieldGoalsMade2"], "fg2a": p["FieldGoalsAttempted2"],
                 "fg3m": p["FieldGoalsMade3"], "fg3a": p["FieldGoalsAttempted3"],
@@ -211,9 +229,9 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[d
                 "pf_drawn": p["FoulsReceived"], "blk_against": p["BlocksAgainst"],
                 "rating": p["Valuation"],
             })
-    team_a_is_man = pbp["CodeTeamA"].strip() == "MAN"
+    team_a_is_man = pbp["CodeTeamA"].strip() == MANRESA_CODE
 
-    events = [{"comp": "EuroCup", "game_id": game_id, "period": 1, "elapsed": 0, "kind": "START",
+    events = [{"comp": COMP_EUROCUP, "game_id": game_id, "period": 1, "elapsed": 0, "kind": "START",
                "player": row["player"], "man": 0, "opp": 0} for row in box if row["starter"]]
     home = away = 0
     assists, made = [], None
@@ -225,10 +243,10 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[d
         for row in sorted(rows, key=lambda r: r["NUMBEROFPLAY"]):
             if row["PLAYTYPE"] in EL_MADE_FG:
                 made = row
-            elif (row["PLAYTYPE"] == "AS" and made is not None and row["CODETEAM"].strip() == "MAN"
-                  and made["CODETEAM"].strip() == "MAN"
-                  and row["NUMBEROFPLAY"] - made["NUMBEROFPLAY"] <= 10):
-                assists.append({"comp": "EuroCup", "game_id": game_id, "passer": display_name(row["PLAYER"]),
+            elif (row["PLAYTYPE"] == "AS" and made is not None and row["CODETEAM"].strip() == MANRESA_CODE
+                  and made["CODETEAM"].strip() == MANRESA_CODE
+                  and row["NUMBEROFPLAY"] - made["NUMBEROFPLAY"] <= EL_ASSIST_MAX_GAP):
+                assists.append({"comp": COMP_EUROCUP, "game_id": game_id, "passer": display_name(row["PLAYER"]),
                                 "scorer": display_name(made["PLAYER"]),
                                 "pts": 3 if made["PLAYTYPE"] == "3FGM" else 2})
             if row["POINTS_A"] is not None:
@@ -236,16 +254,16 @@ def parse_eurocup_game(info: dict) -> tuple[dict, list[dict], list[dict], list[d
             if row["POINTS_B"] is not None:
                 away = row["POINTS_B"]
             man_score, opp_score = (home, away) if team_a_is_man else (away, home)
-            if row["PLAYTYPE"] in ("IN", "OUT") and row["CODETEAM"].strip() == "MAN":
+            if row["PLAYTYPE"] in ("IN", "OUT") and row["CODETEAM"].strip() == MANRESA_CODE:
                 left = minutes_to_seconds(row["MARKERTIME"]) if row["MARKERTIME"] else 0
-                events.append({"comp": "EuroCup", "game_id": game_id, "period": period,
+                events.append({"comp": COMP_EUROCUP, "game_id": game_id, "period": period,
                                "elapsed": period_start(period) + period_length(period) - left,
                                "kind": row["PLAYTYPE"], "player": display_name(row["PLAYER"]),
                                "man": man_score, "opp": opp_score})
-        events.append({"comp": "EuroCup", "game_id": game_id, "period": period,
+        events.append({"comp": COMP_EUROCUP, "game_id": game_id, "period": period,
                        "elapsed": period_start(period) + period_length(period), "kind": "END",
                        "player": "", "man": man_score, "opp": opp_score})
-    game = {"comp": "EuroCup", "game_id": game_id,
+    game = {"comp": COMP_EUROCUP, "game_id": game_id,
             "date": pd.to_datetime(info["date"], format="%b %d, %Y").strftime("%Y-%m-%d"),
             "opponent": opponent,
             "home": int(info["home"]), "man_pts": man_score, "opp_pts": opp_score}
@@ -258,7 +276,7 @@ def fetch_shots(info: dict) -> list[dict]:
     return [{"game_id": f"EC{info['number']}", "player": display_name(r["PLAYER"]),
              "made": int(r["ID_ACTION"].strip().endswith("M")), "three": int(r["ID_ACTION"].startswith("3")),
              "x": r["COORD_X"], "y": r["COORD_Y"], "zone": r["ZONE"].strip()}
-            for r in rows if r["TEAM"].strip() == "MAN" and r["ID_ACTION"].strip()[:1] in "23"
+            for r in rows if r["TEAM"].strip() == MANRESA_CODE and r["ID_ACTION"].strip()[:1] in "23"
             and r["ID_ACTION"].strip()[1:3] == "FG"]
 
 
@@ -274,7 +292,7 @@ def fetch_heights() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def save_photos(heights: pd.DataFrame, size: int = 240) -> None:
+def save_photos(heights: pd.DataFrame, size: int = PHOTO_SIZE) -> None:
     """Thumbnails of the roster pictures into data/manresa/photos/<player key>.jpg (skipped when the API gave no URL)."""
     import io
     from PIL import Image
@@ -288,7 +306,7 @@ def save_photos(heights: pd.DataFrame, size: int = 240) -> None:
             print(f"photo {r.player}: {exc}")
             continue
         bg = Image.new("RGB", img.size, "white"); bg.paste(img, mask=img.split()[3]); bg.thumbnail((size, size * 2))
-        bg.save(OUT / "photos" / f"{photo_name(r.player)}.jpg", quality=88, optimize=True)
+        bg.save(OUT / "photos" / f"{photo_name(r.player)}.jpg", quality=PHOTO_QUALITY, optimize=True)
 
 
 def main() -> None:

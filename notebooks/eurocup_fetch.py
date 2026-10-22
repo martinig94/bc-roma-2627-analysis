@@ -13,15 +13,20 @@ import eurocup as ec
 import weekly_config
 
 
+RESULTS_CSV = ec.DATA / "results.csv"
+PEOPLE_CSV = ec.DATA / "people.csv"
+
+
 def main() -> None:
+    """Fetch EuroCup results, schedule, box scores, play-by-play, rosters and headshots into data/eurocup/."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--clubs", nargs="*", help="club codes whose rosters to fetch (default: the team, its opponents so far and the EuroCup opponents in weekly/schedule.csv)")
     a = ap.parse_args()
     team = weekly_config.load()["team"]
     ec.DATA.mkdir(parents=True, exist_ok=True)
     results = ec.fetch_results()
-    results.to_csv(ec.DATA / "results.csv", index=False)
-    print(f"{len(results)} games ({int(results.played.sum())} played) -> {ec.DATA / 'results.csv'}")
+    results.to_csv(RESULTS_CSV, index=False)
+    print(f"{len(results)} games ({int(results.played.sum())} played) -> {RESULTS_CSV}")
     try:                       # a failed schedule fetch must not stop the box scores
         print(f"{ec.update_schedule(results, team)} EuroCup game(s) still to play of {team} in {ec.SCHEDULE.relative_to(ec.ROOT)}")
     except Exception as exc:
@@ -32,8 +37,8 @@ def main() -> None:
     print(f"play-by-play of {len(added_pbp)} new game(s) added to {ec.PBP.relative_to(ec.ROOT)}: {added_pbp}")
     codes = a.clubs
     if not codes:
-        codes = ec.club_codes(results, team, ec.ROOT / "weekly" / "schedule.csv")
-    people = []
+        codes = ec.club_codes(results, team, ec.SCHEDULE)
+    people: list[pd.DataFrame] = []
     for club in codes:
         try:
             people.append(ec.fetch_people(club))
@@ -41,7 +46,7 @@ def main() -> None:
             print(f"roster {club}: {exc}")
     if people:
         all_people = pd.concat(people, ignore_index=True)
-        all_people.to_csv(ec.DATA / "people.csv", index=False)
+        all_people.to_csv(PEOPLE_CSV, index=False)
         print(f"{len(all_people)} players, {ec.save_photos(all_people)} new headshots")
 
 

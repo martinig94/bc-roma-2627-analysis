@@ -1,4 +1,4 @@
-"""The editable pages of a game: weekly/games/<date>/snapshot.md (BC Roma before the game) and analysis.md (the opponent).
+"""The editable pages of a game: weekly/games/<date>/snapshot.md (our team before the game) and analysis.md (the opponent).
 
 A page file is written once, by the generators (weekly.py), and never overwritten: it is yours. It is plain markdown with
   * a few header lines at the top (title:, reviewed:, generated:),
@@ -16,21 +16,41 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from typing import Any
 
 import jinja2
 
 ROOT = Path(__file__).resolve().parent.parent
 GAMES = ROOT / "weekly" / "games"
+GAMES_REL = "weekly/games"                                     # GAMES relative to ROOT, for the paths shown to the user
 TPL = jinja2.Environment(loader=jinja2.FileSystemLoader(ROOT / "weekly" / "template"), autoescape=False, keep_trailing_newline=True,
                          undefined=jinja2.ChainableUndefined)
 KINDS = {"snapshot": "snapshot.md", "analysis": "analysis.md"}
+BLOCKS_TEMPLATE = "blocks.md.j2"                               # macros that render the {{ block }} lines
+PAGE_TEMPLATE = "page_{kind}.md.j2"                            # default text of a page, one per kind
+REPORTS = ROOT / "reports"
+SNAPSHOT_AUTO = "auto.json"                                    # generated data of a snapshot or an analysis folder
+ANALYSIS_HAND_WRITTEN = "README.md"                            # an analysis written by hand has no page file
+FINGERPRINT_LEN = 10                                           # hex digits of the SHA-1 kept as the body fingerprint
+REVIEWED_VALUES = {"yes", "y", "true", "1", "reviewed"}        # accepted values of `reviewed:` in the header
+LINEUPS_PREFIX = "lineups_"                                    # figure files that switch the lineups section on
+HEADING_LEVELS = (3, 2)                                        # heading levels pruned when empty, deepest first
 SKIP = re.compile(r"(<!--.*?-->|`[^`\n]*`)", re.S)            # comments and code spans are never expanded
 BLOCK = re.compile(r"\{\{\s*([a-z_]+)\s*(?::\s*([^{}]*?))?\s*\}\}")
 
 
 # ── file format ─────────────────────────────────────────────────────────────────
-def split_front(text: str) -> tuple[dict, str]:
-    """(header values, body): the header is the run of `key: value` lines at the top, up to the first blank line."""
+def split_front(text: str) -> tuple[dict[str, str], str]:
+    """Split a page into its header values and its body.
+
+    The header is the run of `key: value` lines at the top, up to the first blank line.
+
+    Args:
+        text: Full text of a page file.
+
+    Returns:
+        (header values with lower-case keys, body).
+    """
     meta, lines = {}, text.lstrip("﻿").split("\n")
     i = 0
     while i < len(lines) and re.match(r"^[A-Za-z_]+:", lines[i]):
@@ -41,32 +61,36 @@ def split_front(text: str) -> tuple[dict, str]:
 
 
 def fingerprint(body: str) -> str:
+    """Return a short whitespace-insensitive hash of a page body."""
     norm = "\n".join(line.rstrip() for line in body.strip().splitlines())
-    return hashlib.sha1(norm.encode("utf-8")).hexdigest()[:10]
+    return hashlib.sha1(norm.encode("utf-8")).hexdigest()[:FINGERPRINT_LEN]
 
 
 def page_path(kind: str, day: str) -> Path:
+    """Return the file of the page of `kind` for the game on `day`."""
     return GAMES / day / KINDS[kind]
 
 
 def edit_path(kind: str, day: str) -> str:
-    return f"weekly/games/{day}/{KINDS[kind]}"
+    """Return the repo-relative path of the page, as shown to the person editing it."""
+    return f"{GAMES_REL}/{day}/{KINDS[kind]}"
 
 
 # ── creation ────────────────────────────────────────────────────────────────────
-def default_text(kind: str, a: dict, files: list[str], notes: dict | None = None, generated: str = "") -> str:
-    tpl = TPL.get_template(f"page_{kind}.md.j2")
-    text = tpl.render(a=a, files=files, notes=notes, generated=generated, has_lineups=any(f.startswith("lineups_") for f in files))
+def default_text(kind: str, a: dict[str, Any], files: list[str], notes: dict | None = None, generated: str = "") -> str:
+    """Render the default page of `kind` from the generated data `a` and the figure `files`; `notes` and `generated` fill the header."""
+    tpl = TPL.get_template(PAGE_TEMPLATE.format(kind=kind))
+    text = tpl.render(a=a, files=files, notes=notes, generated=generated, has_lineups=any(f.startswith(LINEUPS_PREFIX) for f in files))
     return re.sub(r"\[\[\s*(.*?)\s*\]\]", r"{{ \1 }}", text)       # [[ block ]] in the templates -> {{ block }} in the page
 
 
-def new_page(kind: str, a: dict, files: list[str], notes: dict | None = None) -> str:
+def new_page(kind: str, a: dict[str, Any], files: list[str], notes: dict | None = None) -> str:
     """The text of a new page; `generated:` fingerprints the automatic body, so that notes carried over from the old files show as work done."""
     fp = fingerprint(split_front(default_text(kind, a, files))[1])
     return default_text(kind, a, files, notes, fp)
 
 
-def ensure(kind: str, day: str, a: dict, files: list[str], notes: dict | None = None) -> tuple[Path, bool]:
+def ensure(kind: str, day: str, a: dict[str, Any], files: list[str], notes: dict | None = None) -> tuple[Path, bool]:
     """Create the page file if it does not exist yet. Returns (path, created).
     A page nobody has touched (reviewed: no, body still equal to what was generated) is rewritten when the default page changed, so that
     new blocks of the template reach it; a page with any work of yours is never touched."""
@@ -83,7 +107,7 @@ def ensure(kind: str, day: str, a: dict, files: list[str], notes: dict | None = 
     return path, True
 
 
-def load(kind: str, day: str, a: dict, files: list[str]) -> tuple[dict, str]:
+def load(kind: str, day: str, a: dict[str, Any], files: list[str]) -> tuple[dict[str, str], str]:
     """(header, body) of the page: the file, or the default page built in memory when the file is not there yet."""
     path = page_path(kind, day)
     if path.exists():
@@ -91,14 +115,16 @@ def load(kind: str, day: str, a: dict, files: list[str]) -> tuple[dict, str]:
     return split_front(new_page(kind, a, files))
 
 
-def state(meta: dict, body: str) -> str:
-    if meta.get("reviewed", "").strip().lower() in {"yes", "y", "true", "1", "reviewed"}:
+def state(meta: dict[str, str], body: str) -> str:
+    """Return the state of a page: "reviewed", "draft" (body is still the generated one) or "progress"."""
+    if meta.get("reviewed", "").strip().lower() in REVIEWED_VALUES:
         return "reviewed"
     return "draft" if meta.get("generated") and fingerprint(body) == meta["generated"] else "progress"
 
 
 # ── expansion ───────────────────────────────────────────────────────────────────
 def figure_md(arg: str, files: list[str]) -> str:
+    """Return the markdown image of the figure `arg` (name with or without extension), or a note if the file is missing."""
     name = arg if "." in arg else f"{arg}.png"
     if name not in files:
         return f"*(figure `{arg}` is not available)*"
@@ -106,9 +132,9 @@ def figure_md(arg: str, files: list[str]) -> str:
     return f"![{caption}]({name})"
 
 
-def expand(body: str, kind: str, a: dict, files: list[str], author: str = "") -> str:
+def expand(body: str, kind: str, a: dict[str, Any], files: list[str], author: str = "") -> str:
     """Replace the {{ block }} lines of a page with the generated markdown (comments and code spans are left as they are)."""
-    mod = TPL.get_template("blocks.md.j2").module
+    mod = TPL.get_template(BLOCKS_TEMPLATE).module
 
     def block(m: re.Match) -> str:
         name, arg = m.group(1), (m.group(2) or "").strip()
@@ -128,7 +154,7 @@ def expand(body: str, kind: str, a: dict, files: list[str], author: str = "") ->
 def prune_empty(md: str) -> str:
     """Drop headings (## and ###) that have nothing under them before the next heading of the same or a higher level: the prompts
     of a page that is still a draft are comments, so its empty sections are simply not shown."""
-    for level in (3, 2):
+    for level in HEADING_LEVELS:
         md = re.sub(rf"^#{{{level}}} [^\n]*\n(?:[ \t]*\n)*(?=^#{{1,{level}}} |\Z)", "", md, flags=re.M)
     return md
 
@@ -138,15 +164,15 @@ def ensure_for(day: str, notes: dict | None = None) -> list[tuple[str, Path | No
     """Create the page files of the game on `day` from the data already generated (reports/): [(kind, path or None, created)].
     The analysis page exists only for generated analyses; one written by hand (README.md / document.md) has no page file."""
     out = []
-    snap = ROOT / "reports" / "snapshot" / day / "auto.json"
+    snap = REPORTS / "snapshot" / day / SNAPSHOT_AUTO
     if not snap.exists():
         return [("snapshot", None, False), ("analysis", None, False)]
     a = json.loads(snap.read_text(encoding="utf-8"))
     path, created = ensure("snapshot", day, a, sorted(f.name for f in snap.parent.iterdir()), (notes or {}).get("snapshot"))
     out.append(("snapshot", path, created))
-    folder = ROOT / "reports" / (a.get("opponent_analysis") or "-")
-    if (folder / "auto.json").exists() and not (folder / "README.md").exists():
-        auto = json.loads((folder / "auto.json").read_text(encoding="utf-8"))
+    folder = REPORTS / (a.get("opponent_analysis") or "-")
+    if (folder / SNAPSHOT_AUTO).exists() and not (folder / ANALYSIS_HAND_WRITTEN).exists():
+        auto = json.loads((folder / SNAPSHOT_AUTO).read_text(encoding="utf-8"))
         path, created = ensure("analysis", day, auto, sorted(f.name for f in folder.iterdir()), (notes or {}).get("analysis"))
         out.append(("analysis", path, created))
     else:

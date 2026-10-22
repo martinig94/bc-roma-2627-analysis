@@ -12,6 +12,7 @@ import argparse
 import json
 import shutil
 from pathlib import Path
+from typing import Any
 
 import pandas as pd
 
@@ -25,43 +26,63 @@ import weekly_config
 import weekly_report as wr
 import weekly_sections as ws
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = weekly_config.ROOT
 CFG = weekly_config.load()
 TEAM = CFG["team"]
 VERSION = 7   # bump when the generated data changes shape: weekly.py regenerates older snapshots
+LBA = "LBA"                                  # competition label of the LBA games in team_games
+EUROCUP = eurocup.COMPETITION                # competition label of the EuroCup games in team_games
+EUROCUP_BOX = "EC"                           # competition code of EuroCup rows in the box-score frame
+EL_SOURCE_NOTE = "EuroLeague live API"       # chart stamp for figures drawn from EuroCup data
+LBA_SOURCE_NOTE = lba_style.SOURCE_NOTE      # chart stamp default (restored after the EuroCup figures)
+LAST_RESULTS = 5                             # games listed under "last results" and in the form string
+STANDINGS_PNG = "standings.png"              # name of the standings figure inside the snapshot folder
 
 
 def standings_md(games: pd.DataFrame, before: str, team: str, opp: str) -> str:
+    """Return the standings as a markdown table, with `team` and `opp` in bold."""
     t = st.standings(games, before)
     rows = [[x.pos, f"**{wr.short(tm)}**" if tm in (team, opp) else wr.short(tm), x.pts, f"{x.w}-{x.l}", f"{x['diff']:+d}", x.form]
             for tm, x in t.iterrows()]
     return wr.md_table(["#", "Team", "Pts", "W-L", "Diff", "Results"], rows, ["---:", "---", "---:", ":---:", "---:", ":---:"])
 
 
-def nn(x):
-    """None for missing values (NaN from the data frame), else the value."""
+def nn(x: Any) -> Any:
+    """Return None for missing values (NaN from the data frame), else the value."""
     return None if x is None or (not isinstance(x, (str, bool)) and pd.isna(x)) else x
 
 
-def where(home) -> str:
+def where(home: bool | None) -> str:
+    """Return "at" for an away game and "vs" otherwise (home or unknown)."""
     return "at" if nn(home) is False else "vs"
 
 
-def last_results_md(before: pd.DataFrame, n: int = 5) -> str:
+def last_results_md(before: pd.DataFrame, n: int = LAST_RESULTS) -> str:
+    """Return the last `n` finished games as a markdown list."""
     items = []
     for _, x in before.tail(n).iterrows():
-        label = f"round {int(x['round'])}" if x.competition == "LBA" else x.competition
+        label = f"round {int(x['round'])}" if x.competition == LBA else x.competition
         items.append(f"- {x.date[5:]} · {label}: **{'W' if x.win else 'L'}** {int(x.pf)}-{int(x.pa)} {where(x.home)} {x.opponent}")
     return "\n".join(items)
 
 
-def lba_style_shots(pbp: pd.DataFrame, games: list, team: str) -> pd.DataFrame:
+def lba_style_shots(pbp: pd.DataFrame, games: list[Any], team: str) -> pd.DataFrame:
     """The team's field-goal attempts with a position in those games (empty when there are none)."""
     s = lba_style.shots_cm(pbp[pbp.game_id.isin(games)])
     return s[s.team == team]
 
 
 def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
+    """Build reports/snapshot/<key>/ (figures, auto.json) and the editable page for the game on `key`; return the folder.
+
+    Args:
+        key: Date of the game, YYYY-MM-DD.
+        team: Team the snapshot is about.
+        data: Folder with the LBA and EuroCup CSVs.
+
+    Raises:
+        SystemExit: If the team has no game on `key` or no earlier finished game.
+    """
     lba_style.AUTHOR = CFG["author"] or lba_style.AUTHOR
     games = pd.read_csv(data / "games.csv")
     pbp = pd.read_csv(data / "pbp.csv")
@@ -74,9 +95,9 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     before = tg[(tg.date < date) & tg.finished]
     if before.empty:
         raise SystemExit(f"no {team} game before {date}: nothing to snapshot")
-    lba_before = before[before.competition == "LBA"]
-    ec_before = before[before.competition == "EuroCup"]
-    is_lba = g.competition == "LBA"
+    lba_before = before[before.competition == LBA]
+    ec_before = before[before.competition == EUROCUP]
+    is_lba = g.competition == LBA
     opp = g.opponent_full
 
     out = ROOT / "reports" / "snapshot" / key
@@ -92,7 +113,7 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     table = {"kind": g.competition, "available": True, "position": None, "teams": None}
     if is_lba:
         st.fig_standings(games, date, [team, opp], out)
-        (out / "00_standings.png").replace(out / "standings.png")
+        (out / st.STANDINGS_PNG).replace(out / STANDINGS_PNG)
         standings_table = standings_md(games, date, team, opp)
     else:
         results = eurocup.load_results(data)
@@ -102,10 +123,10 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
             standings_table = ""
         else:
             opp_feed = eurocup.find_team(set(frame.home_team) | set(frame.away_team), opp)
-            lba_style.SOURCE_NOTE = "EuroLeague live API"
-            st.fig_standings(frame, date, [team] + ([opp_feed] if opp_feed else []), out, title_label="EuroCup 2026/27")
-            lba_style.SOURCE_NOTE = "legabasket.it play-by-play"
-            (out / "00_standings.png").replace(out / "standings.png")
+            lba_style.SOURCE_NOTE = EL_SOURCE_NOTE
+            st.fig_standings(frame, date, [team] + ([opp_feed] if opp_feed else []), out, title_label=f"{EUROCUP} {CFG['season']}")
+            lba_style.SOURCE_NOTE = LBA_SOURCE_NOTE
+            (out / st.STANDINGS_PNG).replace(out / STANDINGS_PNG)
             standings_table = standings_md(frame, date, team, opp_feed or "")
             tab_ec = st.standings(frame, date)
             table.update(position=int(tab_ec.loc[team, "pos"]), teams=len(tab_ec),
@@ -123,14 +144,14 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     assist_ec, zone_ec = [], None
     if ec_ids and ec_pbp_path.exists():                       # the same two figures from the EuroCup play-by-play
         pbp_ec = pd.read_csv(ec_pbp_path)
-        ec_tot = xbox[(xbox.competition == "EC") & (xbox.team == team) & (xbox.row_type == "total") & xbox.game_id.isin(ec_ids)]
-        lba_style.SOURCE_NOTE = "EuroLeague live API"
+        ec_tot = xbox[(xbox.competition == EUROCUP_BOX) & (xbox.team == team) & (xbox.row_type == "total") & xbox.game_id.isin(ec_ids)]
+        lba_style.SOURCE_NOTE = EL_SOURCE_NOTE
         pairs_ec = ws.assist_pairs(pbp_ec, ec_ids, team)
         if len(pairs_ec) and int(ec_tot.ast.sum()):
-            assist_ec = ws.fig_assists(pairs_ec, int(ec_tot.ast.sum()), out, team, "EuroCup", "assists_eurocup")
+            assist_ec = ws.fig_assists(pairs_ec, int(ec_tot.ast.sum()), out, team, EUROCUP, "assists_eurocup")
         if len(lba_style_shots(pbp_ec, ec_ids, team)):
-            zone_ec = ws.fig_zones(pbp_ec, ec_ids, None, out, team, "EuroCup", "_eurocup")
-        lba_style.SOURCE_NOTE = "legabasket.it play-by-play"
+            zone_ec = ws.fig_zones(pbp_ec, ec_ids, None, out, team, EUROCUP, "_eurocup")
+        lba_style.SOURCE_NOTE = LBA_SOURCE_NOTE
 
     tab = st.standings(games, date)
     venue = games[games.game_id == g.game_id].venue
@@ -141,18 +162,18 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
         "played": bool(g.finished), "version": VERSION, "n_before": tgm.n_before(tg, games, date), "opponent_analysis": nn(g.analysis),
         "record": f"{int(tab.loc[team, 'w'])}-{int(tab.loc[team, 'l'])}", "position": int(tab.loc[team, "pos"]), "points": int(tab.loc[team, "pts"]),
         "record_ec": f"{int(ec_before.win.sum())}-{int(len(ec_before) - ec_before.win.sum())}" if len(ec_before) else None,
-        "form": "".join("W" if w else "L" for w in before.win.tail(5)),
+        "form": "".join("W" if w else "L" for w in before.win.tail(LAST_RESULTS)),
         "last_game": {"competition": last.competition, "round": None if pd.isna(last["round"]) else int(last["round"]),
                       "opponent": last.opponent, "home": None if nn(last.home) is None else bool(last.home), "score_for": int(last.pf), "score_against": int(last.pa),
                       "win": bool(last.win), "date": last.date},
         "playing_time": ws.playing_time_flags(xbox, str(last.game_id), last.date),
-        "profile": {"LBA": ws.team_profile(xbox, team, ("LBA",)), "EuroCup": ws.team_profile(xbox, team, ("EC",))},
+        "profile": {LBA: ws.team_profile(xbox, team, (LBA,)), EUROCUP: ws.team_profile(xbox, team, (EUROCUP_BOX,))},
         "roster": roster,
         "assist_top": ws.fig_assists(ws.assist_pairs(pbp, lba_games, team), box_ast, out, team),
         "zone_share": ws.fig_zones(pbp, lba_games, None, out, team),
         "assist_top_ec": assist_ec, "zone_share_ec": zone_ec,
-        "ts_pir_lba": ws.fig_ts_pir(xbox, "LBA", out, team=team),
-        "ts_pir_ec": ws.fig_ts_pir(xbox, "EC", out, team=team) if ((xbox.competition == "EC") & (xbox.team == team)).any() else None,
+        "ts_pir_lba": ws.fig_ts_pir(xbox, LBA, out, team=team),
+        "ts_pir_ec": ws.fig_ts_pir(xbox, EUROCUP_BOX, out, team=team) if ((xbox.competition == EUROCUP_BOX) & (xbox.team == team)).any() else None,
         "standings_table": table,
         "md": {"standings": standings_table, "last_results": last_results_md(before)},
     }
@@ -166,7 +187,8 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
+    """Command-line entry point."""
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--game", required=True, help="date of the game, YYYY-MM-DD")
     ap.add_argument("--team", default=TEAM)
     ap.add_argument("--data", default=str(ROOT / "data"))

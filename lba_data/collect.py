@@ -32,9 +32,14 @@ ROSTER_FIELDS = ["year", "team_id", "team", "player_id", "name", "surname", "num
 
 DEFAULT_CHAMP = 602   # Regular Season 2026/27
 DEFAULT_YEAR = 2026
+CALENDAR_PAUSE_S = 0.3   # seconds between calendar / roster calls (be polite to the site)
+DEFAULT_GAME_PAUSE_S = 1.0   # seconds between games
+# Game fields that the calendar leaves empty and the match header fills in.
+HEADER_ONLY_FIELDS = ("spectators", "home_coach", "away_coach", "phase_id")
 
 
 def _write_csv(path: Path, fields: list[str], rows: list[dict], append: bool = False) -> None:
+    """Write ``rows`` to a CSV with header ``fields`` (header only when the file is new or rewritten)."""
     path.parent.mkdir(parents=True, exist_ok=True)
     new = not path.exists() or not append
     with path.open("a" if append else "w", newline="", encoding="utf-8") as fh:
@@ -45,6 +50,7 @@ def _write_csv(path: Path, fields: list[str], rows: list[dict], append: bool = F
 
 
 def _existing_game_ids(path: Path) -> set[int]:
+    """Return the game ids already present in a CSV (empty set if the file does not exist)."""
     if not path.exists():
         return set()
     with path.open(newline="", encoding="utf-8") as fh:
@@ -52,6 +58,7 @@ def _existing_game_ids(path: Path) -> set[int]:
 
 
 def roster_rows(team_id: int, team: str, payload: dict, year: int) -> list[dict]:
+    """Flatten the roster endpoint payload of one team into rows keyed by ``ROSTER_FIELDS``."""
     return [{"year": year, "team_id": team_id, "team": team, "player_id": p["id"], "name": p.get("name"),
              "surname": p.get("surname"), "number": p.get("player_number"), "role": p.get("player_role"),
              "birth_date": p.get("birth_date"), "place_of_birth": p.get("place_of_birth"), "country": p.get("country"),
@@ -60,9 +67,16 @@ def roster_rows(team_id: int, team: str, payload: dict, year: int) -> list[dict]
 
 
 def collect_rosters(teams: list[dict], year: int) -> None:
-    """The "giocatori" table of every team page -> data/team_rosters.csv (rewritten each run: rosters change in-season).
-    A team whose call fails keeps its rows from the previous file."""
-    prev = []
+    """Write the "giocatori" table of every team page to data/team_rosters.csv.
+
+    The file is rewritten each run because rosters change in-season. A team whose call fails
+    keeps its rows from the previous file.
+
+    Args:
+        teams: Team objects from ``api.teams``.
+        year: Season start year.
+    """
+    prev: list[dict] = []
     if ROSTERS_CSV.exists():
         with ROSTERS_CSV.open(newline="", encoding="utf-8") as fh:
             prev = [r for r in csv.DictReader(fh) if r["year"] == str(year)]
@@ -75,24 +89,26 @@ def collect_rosters(teams: list[dict], year: int) -> None:
             print(f"roster {name}: FAILED {exc}", file=sys.stderr)
             got = [r for r in prev if r["team_id"] == str(t["id"])]
         rows += got
-        time.sleep(0.3)
+        time.sleep(CALENDAR_PAUSE_S)
     if rows:
         _write_csv(ROSTERS_CSV, ROSTER_FIELDS, rows)
         print(f"rosters: {len(rows)} players, {len(teams)} teams", file=sys.stderr)
 
 
 def fetch_calendar(champ: int) -> list[dict]:
+    """Return every match of a championship, de-duplicated and sorted by game id."""
     first = api.calendar(champ)
     days = [d["event_serial"] for d in first["filters"]["days"]]
     matches: dict[int, dict] = {}
     for d in days:
         for m in api.calendar(champ, d)["matches"]:
             matches[m["id"]] = m
-        time.sleep(0.3)
+        time.sleep(CALENDAR_PAUSE_S)
     return [matches[k] for k in sorted(matches)]
 
 
 def collect_game(game_id: int) -> tuple[dict, list[dict], list[dict]]:
+    """Download one game, keep its raw JSON under data/raw/ and return (header, box rows, pbp rows)."""
     header = api.match(game_id)
     box = api.box_score(game_id)
     pbp = api.play_by_play(game_id)
@@ -104,12 +120,13 @@ def collect_game(game_id: int) -> tuple[dict, list[dict], list[dict]]:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Run the incremental collection (see the module docstring); return the process exit code."""
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--champ", type=int, default=DEFAULT_CHAMP, help="championship id (602 = RS 2026/27)")
     ap.add_argument("--year", type=int, default=DEFAULT_YEAR)
     ap.add_argument("--limit", type=int, default=None, help="collect at most N new games (for testing)")
     ap.add_argument("--refresh-games", action="store_true", help="only rewrite games.csv from the calendar")
-    ap.add_argument("--sleep", type=float, default=1.0, help="seconds between games (be polite)")
+    ap.add_argument("--sleep", type=float, default=DEFAULT_GAME_PAUSE_S, help="seconds between games (be polite)")
     args = ap.parse_args(argv)
 
     teams = api.teams(args.year)
@@ -152,7 +169,7 @@ def main(argv: list[str] | None = None) -> int:
         time.sleep(args.sleep)
 
     # games.csv: calendar rows, enriched with header details (spectators, coaches) where we have them
-    prev = {}
+    prev: dict[int, dict] = {}
     if GAMES_CSV.exists():
         with GAMES_CSV.open(newline="", encoding="utf-8") as fh:
             prev = {int(r["game_id"]): r for r in csv.DictReader(fh)}
@@ -160,7 +177,7 @@ def main(argv: list[str] | None = None) -> int:
     for g in games:
         gid = g["game_id"]
         detail = game_details.get(gid) or prev.get(gid) or {}
-        for k in ("spectators", "home_coach", "away_coach", "phase_id"):
+        for k in HEADER_ONLY_FIELDS:
             if not g.get(k) and detail.get(k):
                 g[k] = detail[k]
         merged.append(g)

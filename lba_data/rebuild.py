@@ -12,6 +12,7 @@ from .transform import BOX_FIELDS, PBP_FIELDS, box_rows, pbp_rows
 
 
 def main() -> int:
+    """Rewrite box_scores.csv and pbp.csv from data/raw/; return the exit code."""
     box_all: list[dict] = []
     pbp_all: list[dict] = []
     dirs = sorted((d for d in RAW.iterdir() if d.is_dir()), key=lambda d: int(d.name))

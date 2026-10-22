@@ -1,7 +1,11 @@
-"""Flatten legabasket.it JSON payloads into tidy row dicts."""
+"""Flatten legabasket.it JSON payloads into tidy row dicts (pure functions, no I/O)."""
 from __future__ import annotations
 
-from typing import Iterable
+from collections.abc import Iterable
+
+STARTER_FLAG = "1"   # value of the API's `sf` field for a starter
+SCORE_SEPARATOR = "-"         # separator in the pbp running score, e.g. "12-10"
+SECONDS_PER_MINUTE = 60
 
 GAME_FIELDS = [
     "game_id", "championship_id", "competition", "year", "round", "round_name", "phase_id",
@@ -41,7 +45,14 @@ PBP_FIELDS = [
 
 
 def game_row(m: dict) -> dict:
-    """From a match header (calendar entry or matches-by-id `match`)."""
+    """Return one flat games.csv row from a match header.
+
+    Args:
+        m: Calendar entry or the ``match`` object of matches-by-id.
+
+    Returns:
+        Dict keyed by ``GAME_FIELDS``; fields missing from ``m`` are None.
+    """
     return {
         "game_id": m.get("id"),
         "championship_id": m.get("championship_id"),
@@ -73,11 +84,19 @@ def game_row(m: dict) -> dict:
 
 
 def _stats(src: dict) -> dict:
+    """Return the box-score stat columns of a player/team/total object under their English names."""
     return {STAT_RENAME[f]: src.get(f) for f in BOX_STAT_FIELDS}
 
 
 def box_rows(payload: dict) -> Iterable[dict]:
-    """One row per player, plus a `team` row (team rebounds etc.) and a `total` row per side."""
+    """Yield one box-score row per player, plus a ``team`` row (team rebounds etc.) and a ``total`` row per side.
+
+    Args:
+        payload: Response of the box-score endpoint.
+
+    Yields:
+        Dicts keyed by ``BOX_FIELDS``.
+    """
     m = payload["match"]
     sides = [
         ("ht", m.get("h_team_id"), m.get("h_team_name"), m.get("v_team_id"), m.get("v_team_name"), 1),
@@ -95,7 +114,7 @@ def box_rows(payload: dict) -> Iterable[dict]:
                 "player_id": p.get("player_id"), "player_code": p.get("player_code"),
                 "player_num": p.get("player_num"), "player_name": p.get("player_name"),
                 "player_surname": p.get("player_surname"),
-                "starter": 1 if str(p.get("sf")) == "1" else 0,
+                "starter": 1 if str(p.get("sf")) == STARTER_FLAG else 0,
                 **_stats(p),
             }
         for row_type, src in (("team", side.get("team")), ("total", side.get("totals"))):
@@ -108,9 +127,10 @@ def box_rows(payload: dict) -> Iterable[dict]:
 
 
 def _split_score(s: str | None) -> tuple[int | None, int | None]:
-    if not s or "-" not in s:
+    """Split a running score such as ``"12-10"`` into (home, away); (None, None) if unparsable."""
+    if not s or SCORE_SEPARATOR not in s:
         return None, None
-    a, b = s.split("-", 1)
+    a, b = s.split(SCORE_SEPARATOR, 1)
     try:
         return int(a), int(b)
     except ValueError:
@@ -118,6 +138,15 @@ def _split_score(s: str | None) -> tuple[int | None, int | None]:
 
 
 def pbp_rows(game_id: int, payload: dict) -> Iterable[dict]:
+    """Yield one row per play-by-play event of a game.
+
+    Args:
+        game_id: Id stored in every row.
+        payload: Response of the play-by-play endpoint.
+
+    Yields:
+        Dicts keyed by ``PBP_FIELDS``; ``x``/``y`` are 0-100 percent of the court.
+    """
     actions = (payload.get("pbp") or {}).get("actions") or []
     for a in actions:
         sh, sa = _split_score(a.get("score"))
@@ -126,7 +155,7 @@ def pbp_rows(game_id: int, payload: dict) -> Iterable[dict]:
             "seq": a.get("action_id"),
             "period": a.get("period"),
             "clock": a.get("print_time"),
-            "elapsed_sec": (a.get("minute") or 0) * 60 + (a.get("seconds") or 0),
+            "elapsed_sec": (a.get("minute") or 0) * SECONDS_PER_MINUTE + (a.get("seconds") or 0),
             "score_home": sh, "score_away": sa,
             "team_id": a.get("team_id"), "team": a.get("team_name"), "home_club": a.get("home_club"),
             "player_id": a.get("player_id"), "player_num": a.get("player_number"),

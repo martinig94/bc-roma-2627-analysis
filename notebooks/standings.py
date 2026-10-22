@@ -4,7 +4,7 @@
         --out reports/matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17
 
 Writes into --out:
-  00_standings.png   standings bar chart (points, W-L, point difference), BC Roma in gold, the
+  00_standings.png   standings bar chart (points, W-L, point difference), our team in gold, the
                      other --team in its colour, everyone else in grey
   standings.md       markdown section "LBA so far: results and standings" (results by round +
                      standings table) to paste under the intro of the page README
@@ -19,13 +19,27 @@ points tie is provisional and newspapers sometimes list it differently.
 from __future__ import annotations
 
 import argparse
+from datetime import date
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from lba_style import GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, style_axes, team_color
+import lba_style
+from lba_style import GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, save_fig, style_axes, team_color
+from weekly_config import ROOT
+from weekly_config import load as load_config
+
+LEAGUE_LABEL = "LBA"                 # short league name used in headings and the chart title
+FINISHED_STATUS = "2"                # games.csv game_status of a finished game
+POINTS_PER_WIN = 2                   # LBA table: 2 points per win, none for a loss
+STANDINGS_PNG = "00_standings.png"
+STANDINGS_MD = "standings.md"
+FIGSIZE = (10, 6.4)                  # inches
+BAR_HEIGHT = 0.68
+RESULTS_X0 = 1.9                     # gap (in points) between the longest bar and the first result letter
+RESULT_STEP = 0.32                   # x distance between two result letters
 
 SHORT = {
     "Acqua S.Bernardo Cantù": "Cantù", "APU Old Wild West Udine": "Udine", "Armani Olimpia Milano": "Milano",
@@ -41,11 +55,13 @@ SHORT = {
 
 
 def short(team: str) -> str:
+    """Return the short display name of a team (the full name if it has no short form)."""
     return SHORT.get(team, team)
 
 
 def finished(games: pd.DataFrame, before: str | None = None) -> pd.DataFrame:
-    g = games[games.game_status.astype(str) == "2"].copy()
+    """Return finished games (optionally only those before an ISO date), ordered by round and kick-off."""
+    g = games[games.game_status.astype(str) == FINISHED_STATUS].copy()
     g["date"] = g.match_datetime.str[:10]
     if before:
         g = g[g.date < before]
@@ -77,12 +93,13 @@ def _order(teams: list[str], lg: pd.DataFrame, overall: pd.DataFrame) -> list[st
 
 
 def standings(games: pd.DataFrame, before: str | None = None) -> pd.DataFrame:
+    """Return the league table (pos, gp, w, l, pf, pa, pts, diff, form, tied) indexed by team, in ranking order."""
     g = finished(games, before)
     lg = _long(g)
     all_teams = sorted(set(games.home_team) | set(games.away_team))
     t = lg.groupby("team").agg(gp=("w", "size"), w=("w", "sum"), pf=("pf", "sum"), pa=("pa", "sum")).reindex(all_teams).fillna(0).astype(int)
     t["l"] = t.gp - t.w
-    t["pts"] = 2 * t.w
+    t["pts"] = POINTS_PER_WIN * t.w
     t["diff"] = t.pf - t.pa
     last = lg.sort_values("date").groupby("team").w.apply(lambda s: "".join("W" if x else "L" for x in s)).reindex(all_teams).fillna("")
     t["form"] = last
@@ -95,6 +112,7 @@ def standings(games: pd.DataFrame, before: str | None = None) -> pd.DataFrame:
 
 
 def results_by_round(games: pd.DataFrame, before: str | None = None) -> pd.DataFrame:
+    """Return the finished games with round, date, teams and scores."""
     g = finished(games, before)
     return g[["round", "date", "home_team", "home_score", "away_score", "away_team"]]
 
@@ -104,7 +122,8 @@ def _bold(team: str, highlight: list[str], text: str | None = None) -> str:
     return f"**{text}**" if team in highlight else text
 
 
-def standings_md(games: pd.DataFrame, before: str | None, highlight: list[str], league: str = "LBA") -> str:
+def standings_md(games: pd.DataFrame, before: str | None, highlight: list[str], league: str = LEAGUE_LABEL) -> str:
+    """Return the markdown section with results by round and the standings table; `highlight` teams are bold."""
     t = standings(games, before)
     res = results_by_round(games, before)
     rounds = sorted(res["round"].unique())
@@ -120,68 +139,82 @@ def standings_md(games: pd.DataFrame, before: str | None, highlight: list[str], 
             txt = f"{short(x.home_team)} {score} {short(x.away_team)}"
             cells.append(f"**{txt}**" if (x.home_team in highlight or x.away_team in highlight) else txt)
         lines.append(f"- **Round {r}**: " + " · ".join(cells))
-    lines += ["", "![standings](00_standings.png)", "", f"**Standings after round {rounds[-1]}**", "",
+    lines += ["", f"![standings]({STANDINGS_PNG})", "", f"**Standings after round {rounds[-1]}**", "",
               "| # | Team | Pts | W-L | Points for-against | Diff | Results |", "|---:|---|---:|:---:|:---:|---:|:---:|"]
     for tm, x in t.iterrows():
         lines.append(f"| {x.pos} | {_bold(tm, highlight)} | {x.pts} | {x.w}-{x.l} | {x.pf}-{x.pa} | {x['diff']:+d} | {x.form} |")
-    lines += ["", "Two points per win. Teams level on points are ordered by the games between them, then by point "
+    lines += ["", f"{POINTS_PER_WIN} points per win. Teams level on points are ordered by the games between them, then by point "
               "difference; with so few games played most of them have not met yet, so the order inside a group "
               "on the same points is provisional (newspapers sometimes list it differently).", ""]
     return "\n".join(lines)
 
 
-def fig_standings(games: pd.DataFrame, before: str | None, highlight: list[str], out: Path, title_label: str = "LBA 2026/27") -> None:
+def fig_standings(games: pd.DataFrame, before: str | None, highlight: list[str], out: Path,
+                  title_label: str | None = None, team: str | None = None) -> None:
+    """Save the standings bar chart into `out`.
+
+    Args:
+        games: games.csv rows.
+        before: ISO date; only games before it count.
+        highlight: Teams drawn in colour and bold.
+        out: Folder that receives the PNG.
+        title_label: Chart title prefix; defaults to the league and the configured season.
+        team: Our team, which keeps the first colour; defaults to the configured team.
+    """
+    cfg = load_config()
+    title_label = title_label or f"{LEAGUE_LABEL} {cfg['season']}"
+    team = team or cfg["team"]
     t = standings(games, before)
     rounds = results_by_round(games, before)["round"]
     rounds_done = int(rounds.max()) if len(rounds) else 0
     n = int(t.gp.max())      # games of the team that played most: sizes the results column
-    fig, ax = plt.subplots(figsize=(10, 6.4))
+    fig, ax = plt.subplots(figsize=FIGSIZE)
     y = np.arange(len(t))[::-1]
-    others = [h for h in highlight if h != "BC Roma"]
+    others = [h for h in highlight if h != team]
     for yi, (tm, x) in zip(y, t.iterrows()):
         if tm in highlight:
             fill, edge = team_color(tm, others.index(tm) if tm in others else 0)
         else:
             fill, edge = LEAGUE, LEAGUE
-        ax.barh(yi, x.pts, 0.68, color=fill, edgecolor=edge, linewidth=0.6, alpha=1 if tm in highlight else 0.55)
+        ax.barh(yi, x.pts, BAR_HEIGHT, color=fill, edgecolor=edge, linewidth=0.6, alpha=1 if tm in highlight else 0.55)
         label = f"{x.w}-{x.l}   {x['diff']:+d}"
         ax.text(x.pts + 0.08, yi, label, va="center", fontsize=9, color=TEXT if tm in highlight else TEXT2,
                 fontweight="bold" if tm in highlight else "normal")
         for k, ch in enumerate(x.form):
-            ax.text(2 * n + 1.9 + 0.32 * k, yi, ch, va="center", ha="center", fontsize=8.5, fontweight="bold",
+            ax.text(2 * n + RESULTS_X0 + RESULT_STEP * k, yi, ch, va="center", ha="center", fontsize=8.5, fontweight="bold",
                     color=GREEN if ch == "W" else RED)
     ax.set_yticks(y)
     ax.set_yticklabels([f"{p}. {short(tm)}" for tm, p in zip(t.index, t.pos)], fontsize=10)
     for lbl, tm in zip(ax.get_yticklabels(), t.index):
         if tm in highlight:
             lbl.set_fontweight("bold"); lbl.set_color(TEXT)
-    ax.set_xlim(0, 2 * n + 1.9 + 0.32 * n + 0.2)
+    ax.set_xlim(0, 2 * n + RESULTS_X0 + RESULT_STEP * n + 0.2)
     ax.set_xticks(range(0, 2 * n + 1, 2))
     ax.set_xlabel("league points (2 per win)")
-    ax.text(2 * n + 1.9 + 0.32 * (n - 1) / 2, len(t) - 0.35, "results\nin order", ha="center", va="bottom", fontsize=8, color=TEXT2)
+    ax.text(2 * n + RESULTS_X0 + RESULT_STEP * (n - 1) / 2, len(t) - 0.35, "results\nin order", ha="center", va="bottom", fontsize=8, color=TEXT2)
     style_axes(ax, "x")
     ax.set_title("bar label: wins-losses and point difference; teams on the same points ordered by head-to-head, then difference",
                  fontsize=9, color=TEXT2, loc="left")
     fig.suptitle(f"{title_label} standings after round {rounds_done}", **SUP_KW)
-    save_fig(fig, out / "00_standings.png"); plt.close(fig)
+    save_fig(fig, out / STANDINGS_PNG); plt.close(fig)
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=str(Path(__file__).resolve().parent.parent / "data"))
+    """Command-line entry point: write the standings chart and markdown section into --out."""
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--data", default=str(ROOT / "data"))
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: only games played before this date")
     ap.add_argument("--team", action="append", default=[], help="team(s) to highlight (repeatable)")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
-    out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
+    out = Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
     games = pd.read_csv(Path(a.data) / "games.csv")
     if a.before:
-        import lba_style
-        from datetime import date as _d
-        lba_style.STAMP_NOTE = f"games before {_d.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
+        lba_style.STAMP_NOTE = f"games before {date.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
     fig_standings(games, a.before, a.team, out)
     md = standings_md(games, a.before, a.team)
-    (out / "standings.md").write_text(md, encoding="utf-8")
+    (out / STANDINGS_MD).write_text(md, encoding="utf-8")
     print(md)
     print(standings(games, a.before).to_string())
 
