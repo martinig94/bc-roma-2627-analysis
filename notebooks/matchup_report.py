@@ -10,6 +10,7 @@ Figures (all season-to-date, both LBA and EuroCup games when the EuroCup file is
   04_scoring_sources      points ≤4.5 m from the rim, mid-range, threes, free throws; 3PA per game
   05_shooting             2P% / 3P% / FT% / eFG% / TS% vs league, per team
   06_hot_spots            nine-zone FG% heatmaps side by side (LBA shots only — they carry coordinates)
+  06b_shot_charts_<team>_<n>  shot chart of each player (made = filled, missed = ring), three players per image, both teams, most FGA first
   07_key_players          PIR vs TS% scatter with minutes, league in grey; top-5 table per team
   08_shot_distribution    share of team FGA per player, twos vs threes
   09_basic_stats          assists, rebounds, steals, blocks, turnovers, fouls per game and per 100 possessions (LBA only)
@@ -343,6 +344,30 @@ def plot_zone_heatmap(ax, s, title, ref=None):
     return mesh
 
 
+def fig_player_shot_charts(pbp, A, B, out, per_image=3, max_players=9, min_fga=5):
+    """One chart per player with at least `min_fga` shots (LBA/EuroCup play-by-play coordinates), `per_image` players per image."""
+    s = shots_cm(pbp)
+    for i, team in enumerate((A, B)):
+        st = s[s.team == team]
+        top = st.groupby("player_surname").size().loc[lambda n: n >= min_fga].sort_values(ascending=False).head(max_players).index
+        fill, edge = team_color(team, i)
+        slug = team.replace(" ", "_")
+        for k in range(0, len(top), per_image):
+            group = top[k:k + per_image]
+            fig, axes = plt.subplots(1, len(group), figsize=(6.2 * len(group), 6.6), squeeze=False)
+            for ax, sn in zip(axes[0], group):
+                ps = st[st.player_surname == sn]
+                draw_half_court(ax)
+                miss, make = ps[~ps.made], ps[ps.made]
+                ax.scatter(miss.cx, miss.cy, s=60, facecolors="none", edgecolors=RED, linewidths=1.3, zorder=3)
+                ax.scatter(make.cx, make.cy, s=60, c=fill, edgecolors=edge, linewidths=0.8, zorder=4)
+                two, three = ps[ps.pts == 2], ps[ps.pts == 3]
+                ax.set_title(f"{sn.title()}  ({ps.game_id.nunique()} games)\nFG {len(make)}/{len(ps)} · 2pt {int(two.made.sum())}/{len(two)} · "
+                             f"3pt {int(three.made.sum())}/{len(three)}", **TITLE_KW)
+            fig.suptitle(f"{team} — shot charts, {COMP_NAME} games (filled = made, ring = missed)", **SUP_KW)
+            save_fig(fig, out / f"06b_shot_charts_{slug}_{k // per_image + 1}.png"); plt.close(fig)
+
+
 def fig_hot_spots(pbp, A, B, out):
     s = shots_cm(pbp)
     ref = zone_stats(s[~s.team.isin([A, B])])
@@ -571,6 +596,7 @@ def main():
     srcA, srcB, lg_src = fig_scoring_sources(box, pbp, ec_zones, A, B, out)
     lines = fig_shooting(box, A, B, out)
     share = fig_hot_spots(pbp, A, B, out)
+    fig_player_shot_charts(pbp, A, B, out)
     pts = fig_key_players(box, A, B, out)
     fig_shot_distribution(box, A, B, out)
     basic = fig_basic_stats(box, A, B, out)
