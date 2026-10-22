@@ -34,6 +34,8 @@ games; the others with league games only. The tables say which competitions were
 - **TOV%** = turnovers per 100 possessions. **OREB%** = offensive rebounds / (offensive rebounds + opponent defensive rebounds);
   **DREB%** is the mirror. **FT rate** = FTA / FGA.
 - **PIR** (valutazione) is the efficiency rating published by the league in the box score, not recomputed.
+- **FD** (fouls drawn) and **FM** (fouls made) are the average personal fouls a player draws and commits per game, from the box score
+  (LBA `falli_sf` and `falli_c`; EuroCup fouls received and committed).
 - **Per-game averages** of a player count the games in which he played at least a second.
 - **Opponent eFG% and forced TOV%** are what the team allows its opponents.
 
