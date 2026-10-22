@@ -152,7 +152,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
             "number": num, "age": age_on(bio.get("birth_date"), asof),
             "country": bio.get("country") if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
             "birth_date": bio.get("birth_date") if isinstance(bio.get("birth_date"), str) else "",
-            "min": round(g.sec.sum() / 60 / n, 1), "pts": round(g.pts.sum() / n, 1), "reb": round((g.oreb + g.dreb).sum() / n, 1),
+            "min": round(g.sec.sum() / 60 / n, 1), "pts": round(g.pts.sum() / n, 1), "reb": round((g.oreb + g.dreb).sum() / n, 1), "oreb": round(g.oreb.sum() / n, 1),
             "ast": round(g.ast.sum() / n, 1), "pir": round(g.val.sum() / n, 1),
             "fg2": f"{pct(g.fg2m.sum(), g.fg2a.sum())} ({g.fg2a.sum() / n:.1f})",
             "fg3": f"{pct(g.fg3m.sum(), g.fg3a.sum())} ({g.fg3a.sum() / n:.1f})",
@@ -172,7 +172,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
             "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
             "country": bio["country"] if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
             "birth_date": bio["birth_date"] if isinstance(bio.get("birth_date"), str) else "",
-            "min": "–", "pts": "–", "reb": "–", "ast": "–", "pir": "–", "fg2": "–", "fg3": "–", "ft": "–",
+            "min": "–", "pts": "–", "reb": "–", "oreb": "–", "ast": "–", "pir": "–", "fg2": "–", "fg3": "–", "ft": "–",
             "ppg_lba": None, "ppg_ec": None, "sec_total": 0})
     rows.sort(key=lambda r: (POS_ORDER.get(r["pos"], 9), -r["sec_total"]))
     return rows
@@ -405,15 +405,15 @@ def team_profile(box: pd.DataFrame, team: str, comps: tuple[str, ...] = ("LBA",)
         "Pace (possessions per 40')": r(40 * ((pm + po) / 2).sum() / minutes),
         "eFG%": r(100 * (mine.fg2m + 1.5 * mine.fg3m).sum() / fga.sum()),
         "TOV% (per 100 poss.)": r(100 * mine.tov.sum() / pm.sum()),
-        "OREB%": r(100 * mine.oreb.sum() / (mine.oreb + opp.dreb).sum()),
         "FT rate (FTA/FGA)": r(100 * mine.fta.sum() / fga.sum()),
         "3PA per game": r(mine.fg3a.mean()), "3P%": r(100 * mine.fg3m.sum() / mine.fg3a.sum()),
         "2P%": r(100 * mine.fg2m.sum() / mine.fg2a.sum()), "FT%": r(100 * mine.ftm.sum() / mine.fta.sum()),
         "Assists per game": r(mine.ast.mean()),
         "Offensive rebounds per game": r(mine.oreb.mean()), "Defensive rebounds per game": r(mine.dreb.mean()),
+        "OREB%": r(100 * mine.oreb.sum() / (mine.oreb + opp.dreb).sum()),
+        "DREB%": r(100 * mine.dreb.sum() / (mine.dreb + opp.oreb).sum()),
         "Opp. eFG%": r(100 * (opp.fg2m + 1.5 * opp.fg3m).sum() / ofga.sum()),
         "Opp. TOV% (forced)": r(100 * opp.tov.sum() / po.sum()),
-        "DREB%": r(100 * mine.dreb.sum() / (mine.dreb + opp.oreb).sum()),
     }
 
 
