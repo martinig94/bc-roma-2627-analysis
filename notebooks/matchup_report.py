@@ -24,62 +24,131 @@ they carry per-zone shot counts, not coordinates, so they feed every chart excep
 from __future__ import annotations
 
 import argparse
+import textwrap
+from datetime import date
 from pathlib import Path
+from typing import Any
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.axes import Axes
+from matplotlib.cm import ScalarMappable
+from matplotlib.figure import Figure
 
 import lba_style
-from player_names import ec_surname
 import standings as lba_standings
-from lba_style import (save_fig, draw_zone_fill, BLUE, DPI, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS, ZONE_LABELS,
-                       assign_zone_arr, draw_half_court, mins, shots_cm, style_axes, team_color)
+import weekly_config
+from lba_style import (GOLD, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS,
+                       draw_half_court, draw_zone_fill, save_fig, shots_cm, style_axes, team_color)
+from player_names import ec_surname
 
-PAINT_CM = 450
-COMP, COMP_NAME = "LBA", "LBA"       # the competition the reference figures (league averages, key players, basic stats) are drawn from; "EC" for a EuroCup-only report
+ROOT = Path(__file__).resolve().parent.parent
+CFG = weekly_config.load()
+
+COMP_LBA, COMP_EC = "LBA", "EC"            # values of the box-score `competition` column
+COMP_LABELS = {COMP_LBA: "LBA", COMP_EC: "EuroCup"}   # display names
+COMP, COMP_NAME = COMP_LBA, "LBA"       # the competition the reference figures (league averages, key players, basic stats) are drawn from; "EC" for a EuroCup-only report
 SHARED_NAME = "LBA"     # the competition(s) the two teams have in common ("LBA", "EuroCup" or "LBA + EuroCup"), set in main()
 SOCIAL = False          # --social: portrait 4:5 versions (1080x1350) of selected figures for Instagram
-SOCIAL_SIZE = (6.0, 7.5)   # inches; the saved PNG is padded to exactly 1080x1350 px
+SOCIAL_SIZE = (6.0, 7.5)   # inches; the saved PNG is padded to exactly SOCIAL_PX
+SOCIAL_PX = (1080, 1350)   # width, height of the Instagram 4:5 canvas
+SOCIAL_PAD_PX = 60         # total white margin (both sides) left around the figure on the canvas
+SOCIAL_TITLE_WIDTH = 46    # characters per line of the wrapped social suptitle
+
+# Paths and files
+DEFAULT_EC_FILE = "data/eurocup_2026_raw.txt"   # used when weekly/config.json names no EuroCup file
+EC_SOURCE_NOTE = "EuroLeague live API"          # chart stamp for EuroCup-only reports
+DEFAULT_OUT = ROOT / "reports"
+
+# Basketball constants
+PAINT_CM = 450            # "points in the paint" = made field goals within 4.5 m of the rim (zones A/B/C)
+PAINT_ZONES = ("A", "B", "C")
+FTA_POSSESSION_WEIGHT = 0.44   # share of free-throw attempts that end a possession (standard estimate)
+TEAM_GAME_SECS = 2400     # a 40-minute game, in seconds (EuroCup team-total rows carry no minutes)
+PER_MINUTES = 40          # per-minutes rate used in the shot distribution labels
+MIN_FGA_SHOT_CHART = 5    # shots needed for a player to get a shot chart
+MIN_MPG_KEY_PLAYERS = 10  # minutes per game to appear in the key-players scatter
+
+# Chart colours not in lba_style (derived from the team palette)
+COURT_LINE = "#3a3d52"      # half-court lines on the zone heatmaps
+EMPTY_ZONE_TEXT = "#8a8d9c"  # label of a zone with no attempts
+GOLD_SHADES = ("#e8d77a", "#f3e7b3")   # 2nd / 3rd bar segment when the team colour is gold
+GREY_SHADES = ("#6b6b7a", "#a8a8b4")   # 2nd / 3rd bar segment for the other teams
+REST_BAR = "#dcdde3"        # "rest of the roster" segment
+
+# Chart layout
+MINUTES_XLIM = 44           # minutes-per-game axis limit
+ROTATION_REF_MIN = 20       # dashed reference line on the minutes chart
+TOP_ROTATION = 7            # players counted in the "top N play x% of minutes" title
+PERCENT_TICKS = [0, 25, 50, 75, 100]   # colorbar / axis ticks for percentages
+HEAT_COLOR_SWITCH = (25, 75)   # FG% between these values gets black zone labels, outside white
+BUBBLE_REF_MPG, BUBBLE_SCALE, BUBBLE_MIN = 36, 420, 40   # key-players dot area = mpg / ref * scale + min
+SHORT_NAME_STOPWORDS = ("basket", "basketball", "pallacanestro")   # dropped from club names for axis labels
 
 
-def grid(ncols_wide: int = 2, figsize=(14, 5), **kw):
-    """1 x N panels for the report, N x 1 (stacked) for the social version."""
+def grid(ncols_wide: int = 2, figsize: tuple[float, float] = (14, 5), **kw: Any) -> tuple[Figure, Any]:
+    """Create 1 x N panels for the report, N x 1 (stacked) for the social version.
+
+    Args:
+        ncols_wide: Number of panels.
+        figsize: Figure size in inches for the report layout.
+        **kw: Extra ``plt.subplots`` arguments (share axes and width ratios are adapted for social).
+
+    Returns:
+        The figure and its axes array.
+    """
     if SOCIAL:
-        kw.pop("sharey", None); kw.pop("sharex", None)
+        kw.pop("sharey", None)
+        kw.pop("sharex", None)
         if "gridspec_kw" in kw and "width_ratios" in kw["gridspec_kw"]:
             kw["gridspec_kw"] = {"height_ratios": kw["gridspec_kw"]["width_ratios"]}
         return plt.subplots(ncols_wide, 1, figsize=SOCIAL_SIZE, **kw)
     return plt.subplots(1, ncols_wide, figsize=figsize, **kw)
 
 
-def sup(fig, text: str, social_text: str | None = None):
-    import textwrap
-    fig.suptitle(textwrap.fill(social_text or text, 46) if SOCIAL else text, **SUP_KW)
+def sup(fig: Figure, text: str, social_text: str | None = None) -> None:
+    """Set the figure suptitle, wrapped and optionally shortened for the social version."""
+    fig.suptitle(textwrap.fill(social_text or text, SOCIAL_TITLE_WIDTH) if SOCIAL else text, **SUP_KW)
 
 
-def save(fig, path):
+def save(fig: Figure, path: Path) -> None:
+    """Save the figure with the stamp; for the social version pad it to a white SOCIAL_PX canvas."""
     save_fig(fig, path)
-    if SOCIAL:   # pad to a 4:5 white canvas, 1080x1350
-        from PIL import Image
-        im = Image.open(path).convert("RGB"); W, H = 1080, 1350
-        r = min((W - 60) / im.width, (H - 60) / im.height)
+    if SOCIAL:
+        from PIL import Image    # only needed for --social
+
+        im = Image.open(path).convert("RGB")
+        width, height = SOCIAL_PX
+        r = min((width - SOCIAL_PAD_PX) / im.width, (height - SOCIAL_PAD_PX) / im.height)
         im = im.resize((int(im.width * r), int(im.height * r)), Image.LANCZOS)
-        canvas = Image.new("RGB", (W, H), "white"); canvas.paste(im, ((W - im.width) // 2, (H - im.height) // 2)); canvas.save(path)
+        canvas = Image.new("RGB", SOCIAL_PX, "white")
+        canvas.paste(im, ((width - im.width) // 2, (height - im.height) // 2))
+        canvas.save(path)
 
 
 def short(name: str) -> str:
-    toks = [t for t in str(name).split() if t.lower() not in ("basket", "basketball", "pallacanestro")]
-    return toks[-1] if toks else str(name)  # "points in the paint" = made field goals within 4.5 m of the rim (zones A/B/C)
+    """Return the last word of a club name, ignoring generic words such as "Basket"."""
+    toks = [t for t in str(name).split() if t.lower() not in SHORT_NAME_STOPWORDS]
+    return toks[-1] if toks else str(name)
+
 
 # ── EuroCup file ────────────────────────────────────────────────────────────────
+# Raw-file club names / codes -> the names used in the LBA tables (data mappings, not config).
 EC_TEAM_MAP = {"ROMA BASKETBALL": "BC Roma", "MAXIMA ROMA": "Maxima Roma"}
 EC_CODE_MAP = {"BCR": "BC Roma", "MRO": "Maxima Roma"}
 EC_DATES = {6: "2026-09-30", 16: "2026-09-30", 24: "2026-10-06", 29: "2026-10-07"}   # gamecode -> date
 
 
 def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Returns (player/total rows, zone rows) in the same shape as the LBA tables."""
+    """Parse the raw EuroCup file into tables shaped like the LBA ones.
+
+    Args:
+        path: The pipe-separated raw file (BOX / ZONES sections).
+
+    Returns:
+        (player and team-total rows, zone rows).
+    """
     txt = path.read_text(encoding="utf-8").splitlines()
     box_lines, zone_lines, section = [], [], None
     for ln in txt:
@@ -96,8 +165,8 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
         team = EC_TEAM_MAP.get(f[1], f[1].title())
         if f[2] == "TOTAL":
             games.setdefault(gc, []).append((team, int(f[5])))
-            rows.append(dict(game_id=f"EC{gc}", competition="EC", team=team, row_type="total", player_surname=None,
-                             starter=None, sec=2400, pts=int(f[5]), fg2m=int(f[6]), fg2a=int(f[7]), fg3m=int(f[8]),
+            rows.append(dict(game_id=f"EC{gc}", competition=COMP_EC, team=team, row_type="total", player_surname=None,
+                             starter=None, sec=TEAM_GAME_SECS, pts=int(f[5]), fg2m=int(f[6]), fg2a=int(f[7]), fg3m=int(f[8]),
                              fg3a=int(f[9]), ftm=int(f[10]), fta=int(f[11]), oreb=int(f[12]), dreb=int(f[13]),
                              ast=int(f[14]), stl=int(f[15]), tov=int(f[16]), blk=int(f[17]), pf=int(f[18]),
                              pf_drawn=int(f[19]), plus_minus=0, val=int(f[21])))
@@ -105,7 +174,7 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
             m = f[4]
             sec = 0 if m in ("DNP", "") else int(m.split(":")[0]) * 60 + int(m.split(":")[1])
             surname = ec_surname(f[2])
-            rows.append(dict(game_id=f"EC{gc}", competition="EC", team=team, row_type="player", player_surname=surname,
+            rows.append(dict(game_id=f"EC{gc}", competition=COMP_EC, team=team, row_type="player", player_surname=surname,
                              starter=int(f[3]), sec=sec, pts=int(f[5]), fg2m=int(f[6]), fg2a=int(f[7]), fg3m=int(f[8]),
                              fg3a=int(f[9]), ftm=int(f[10]), fta=int(f[11]), oreb=int(f[12]), dreb=int(f[13]),
                              ast=int(f[14]), stl=int(f[15]), tov=int(f[16]), blk=int(f[17]), pf=int(f[18]),
@@ -133,7 +202,16 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 # ── LBA tables ──────────────────────────────────────────────────────────────────
 def apply_starter_overrides(box: pd.DataFrame, data: Path) -> pd.DataFrame:
-    """Starter flags of data/starter_overrides.csv (game_id, player_surname, starter): box scores checked against the play-by-play."""
+    """Apply data/starter_overrides.csv (game_id, player_surname, starter): box scores checked against the play-by-play.
+
+    Args:
+        box: Box-score rows (not modified).
+        data: Data directory holding the overrides file.
+
+    Returns:
+        A copy of ``box`` with the corrected starter flags.
+    """
+    box = box.copy()
     fix = data / "starter_overrides.csv"
     if fix.exists():
         for r in pd.read_csv(fix).itertuples():
@@ -141,9 +219,11 @@ def apply_starter_overrides(box: pd.DataFrame, data: Path) -> pd.DataFrame:
     return box
 
 
-def load_lba(data: Path):
+def load_lba(data: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Load the LBA games, box scores (with opponent points and date) and play-by-play from ``data``."""
     games = pd.read_csv(data / "games.csv")
-    box = pd.read_csv(data / "box_scores.csv"); box["competition"] = "LBA"
+    box = pd.read_csv(data / "box_scores.csv")
+    box["competition"] = COMP_LBA
     box = apply_starter_overrides(box, data)
     pbp = pd.read_csv(data / "pbp.csv")
     tot = box[box.row_type == "total"][["game_id", "team", "pts"]]
@@ -154,64 +234,75 @@ def load_lba(data: Path):
 
 
 def game_list(box: pd.DataFrame, team: str) -> pd.DataFrame:
+    """Return the team-total rows of one team, one per game, with a short competition label."""
     t = box[(box.team == team) & (box.row_type == "total")].copy()
     t["date_key"] = t.game_id.astype(str)
-    t["label"] = np.where(t.competition == "LBA", "LBA", "EC")
+    t["label"] = np.where(t.competition == COMP_LBA, COMP_LBA, COMP_EC)
     return t
 
 
 # ── per-game derived metrics ────────────────────────────────────────────────────
-def scoring_sources(box, pbp, ec_zones, team) -> pd.DataFrame:
-    """Per game: points ≤4.5 m, mid-range 2s, threes, free throws, 3PA, FGA."""
+def scoring_sources(box: pd.DataFrame, pbp: pd.DataFrame, ec_zones: pd.DataFrame, team: str) -> pd.DataFrame:
+    """Return per game: points ≤4.5 m, mid-range 2s, threes, free throws, 3PA, FGA.
+
+    LBA games use play-by-play shot distances; EuroCup games use the per-zone counts.
+    """
     out = []
     tots = box[(box.team == team) & (box.row_type == "total")].sort_values("date")
     s_all = shots_cm(pbp)
     for _, t in tots.iterrows():
-        if t.competition == "LBA":
+        if t.competition == COMP_LBA:
             s = s_all[(s_all.game_id == t.game_id) & (s_all.team == team)]
             paint = int(2 * s[(s.pts == 2) & s.made & (s.dist <= PAINT_CM)].shape[0])
         else:
             z = ec_zones[(ec_zones.game_id == t.game_id) & (ec_zones.team == team)]
-            paint = int(2 * z[(z.action == "2FGM") & z.zone.isin(["A", "B", "C"])].n.sum())
+            paint = int(2 * z[(z.action == "2FGM") & z.zone.isin(PAINT_ZONES)].n.sum())
         out.append(dict(date=t.date, game_id=t.game_id, competition=t.competition, team=team, opponent=t.opponent, pts=t.pts,
                         opp_pts=t.opp_pts, paint=paint, mid=int(2 * t.fg2m - paint), three=int(3 * t.fg3m),
                         ft=int(t.ftm), fg3a=int(t.fg3a), fga=int(t.fg2a + t.fg3a), ftm=int(t.ftm), fta=int(t.fta)))
     return pd.DataFrame(out)
 
 
-def starters_bench(box, team) -> pd.DataFrame:
+def starters_bench(box: pd.DataFrame, team: str) -> pd.DataFrame:
+    """Return points from starters and bench per game for one team, by date."""
     p = box[(box.team == team) & (box.row_type == "player")]
     g = p.groupby(["date", "game_id", "competition", "starter"]).pts.sum().unstack("starter").fillna(0)
     g.columns = ["bench" if c == 0 else "starters" for c in g.columns]
     return g.reset_index().sort_values("date")
 
 
-def shooting_line(box, team=None) -> dict:
+def shooting_line(box: pd.DataFrame, team: str | None = None) -> dict[str, float]:
+    """Return shooting percentages and per-game rates from team-total rows (all teams when ``team`` is None)."""
     t = box[box.row_type == "total"] if team is None else box[(box.team == team) & (box.row_type == "total")]
-    fga = (t.fg2a + t.fg3a).sum(); fgm = (t.fg2m + t.fg3m).sum()
+    fga = (t.fg2a + t.fg3a).sum()
+    fgm = (t.fg2m + t.fg3m).sum()
     return {"2P%": 100 * t.fg2m.sum() / t.fg2a.sum(), "3P%": 100 * t.fg3m.sum() / t.fg3a.sum(),
             "FT%": 100 * t.ftm.sum() / t.fta.sum(), "eFG%": 100 * (fgm + 0.5 * t.fg3m.sum()) / fga,
-            "TS%": 100 * t.pts.sum() / (2 * (fga + 0.44 * t.fta.sum())), "3PA/g": t.fg3a.sum() / len(t),
+            "TS%": 100 * t.pts.sum() / (2 * (fga + FTA_POSSESSION_WEIGHT * t.fta.sum())), "3PA/g": t.fg3a.sum() / len(t),
             "FTA/g": t.fta.sum() / len(t), "TOV/g": t.tov.sum() / len(t), "OREB/g": t.oreb.sum() / len(t)}
 
 
-def player_table(box, team) -> pd.DataFrame:
+def player_table(box: pd.DataFrame, team: str) -> pd.DataFrame:
+    """Return per-player totals and per-game rates (MPG, PPG, PIR, TS%...) for one team, most minutes first."""
     p = box[(box.team == team) & (box.row_type == "player")]
     g = p.groupby("player_surname").agg(GP=("game_id", "nunique"), GS=("starter", "sum"), sec=("sec", "sum"), pts=("pts", "sum"),
                                         reb=("reb", "sum"), ast=("ast", "sum"), tov=("tov", "sum"), val=("val", "sum"),
                                         fg2m=("fg2m", "sum"), fg2a=("fg2a", "sum"), fg3m=("fg3m", "sum"), fg3a=("fg3a", "sum"),
                                         ftm=("ftm", "sum"), fta=("fta", "sum"), pm=("plus_minus", "sum")).reset_index()
     g = g[g.sec > 0].copy()
-    g["Player"] = g.player_surname.str.title(); g["MIN"] = g.sec / 60; g["MPG"] = g.MIN / g.GP
+    g["Player"] = g.player_surname.str.title()
+    g["MIN"] = g.sec / 60
+    g["MPG"] = g.MIN / g.GP
     g["PPG"], g["RPG"], g["APG"], g["PIR"] = g.pts / g.GP, g.reb / g.GP, g.ast / g.GP, g.val / g.GP
     fga = g.fg2a + g.fg3a
-    g["TS%"] = 100 * g.pts / (2 * (fga + 0.44 * g.fta)).replace(0, np.nan)
+    g["TS%"] = 100 * g.pts / (2 * (fga + FTA_POSSESSION_WEIGHT * g.fta)).replace(0, np.nan)
     g["3P"] = g.fg3m.astype(int).astype(str) + "/" + g.fg3a.astype(int).astype(str)
     return g.sort_values("MIN", ascending=False)
 
 
 # ── figures ─────────────────────────────────────────────────────────────────────
-def fig_timeline(box, A, B, out):
+def fig_timeline(box: pd.DataFrame, A: str, B: str, out: Path) -> None:
+    """Save 01_results_timeline: game-by-game points for and against, one panel per team."""
     fig, axes = grid(2, figsize=(14, 4.6), sharey=True)
     for ax, team, i in ((axes[0], A, 0), (axes[1], B, 1)):
         g = game_list(box, team).sort_values("date")
@@ -227,11 +318,12 @@ def fig_timeline(box, A, B, out):
         ax.legend(fontsize=8, loc="upper center", ncol=2, bbox_to_anchor=(0.5, 1.0) if SOCIAL else (0.5, 1.0)); style_axes(ax, "y")
         ax.set_ylim(0, max(115, g[["pts", "opp_pts"]].max().max() + 12) + (14 if SOCIAL else 0))
     comps = {c for t in (A, B) for c in game_list(box, t).competition}
-    sup(fig, "Results so far — " + " and ".join(n for c, n in (("LBA", "LBA"), ("EC", "EuroCup")) if c in comps))
+    sup(fig, "Results so far — " + " and ".join(n for c, n in COMP_LABELS.items() if c in comps))
     save(fig, out / "01_results_timeline.png"); plt.close(fig)
 
 
-def fig_starters_bench(box, A, B, out):
+def fig_starters_bench(box: pd.DataFrame, A: str, B: str, out: Path) -> None:
+    """Save 02_starters_bench: points from the starting five vs the bench, with league averages."""
     p = box[(box.row_type == "player") & (box.competition == COMP)]
     lg_tot = p.groupby(["game_id", "team", "starter"]).pts.sum().unstack("starter").fillna(0)
     lg_st, lg_bn = lg_tot[1].mean(), lg_tot[0].mean()
@@ -243,7 +335,7 @@ def fig_starters_bench(box, A, B, out):
         ax.bar(x, sb.starters, 0.6, color=fill, edgecolor=edge, linewidth=0.6, label="starting five")
         ax.bar(x, sb.bench, 0.6, bottom=sb.starters, color=LEAGUE, label="bench")
         for xi, (s, b) in enumerate(zip(sb.starters, sb.bench)):
-            ax.text(xi, s / 2, f"{int(s)}", ha="center", va="center", color="white" if fill != "#F2C300" else TEXT, fontsize=9, fontweight="bold")
+            ax.text(xi, s / 2, f"{int(s)}", ha="center", va="center", color="white" if fill != GOLD else TEXT, fontsize=9, fontweight="bold")
             ax.text(xi, s + b / 2, f"{int(b)}", ha="center", va="center", color="white", fontsize=9, fontweight="bold")
         ax.axhline(lg_st, color=TEXT2, lw=1, ls="--"); ax.text(len(sb) - 0.5, lg_st + 1, f"league starters {lg_st:.0f}", ha="right", fontsize=8, color=TEXT2)
         ax.axhline(lg_st + lg_bn, color=TEXT2, lw=1, ls=":"); ax.text(len(sb) - 0.5, lg_st + lg_bn + 1, f"league total {lg_st + lg_bn:.0f} (bench {lg_bn:.0f})", ha="right", fontsize=8, color=TEXT2)
@@ -257,7 +349,8 @@ def fig_starters_bench(box, A, B, out):
     save_fig(fig, out / "02_starters_bench.png"); plt.close(fig)
 
 
-def fig_minutes(box, A, B, out):
+def fig_minutes(box: pd.DataFrame, A: str, B: str, out: Path) -> None:
+    """Save 03_minutes: minutes per game by player, both rosters."""
     fig, axes = plt.subplots(1, 2, figsize=(14, 6.2))
     for ax, team, i in ((axes[0], A, 0), (axes[1], B, 1)):
         pt = player_table(box, team)
@@ -266,16 +359,18 @@ def fig_minutes(box, A, B, out):
         ax.barh(y, pt.MPG, color=fill, edgecolor=edge, linewidth=0.6, height=0.65)
         for yi, (m, gp, gs, ppg) in enumerate(zip(pt.MPG, pt.GP, pt.GS, pt.PPG)):
             ax.text(m + 0.4, yi, f"{m:.1f}'  ({int(gs)}/{int(gp)} starts, {ppg:.1f} ppg)", va="center", fontsize=8, color=TEXT2)
-        ax.set_yticks(y); ax.set_yticklabels(pt.Player, fontsize=9); ax.invert_yaxis(); ax.set_xlim(0, 44)
-        ax.axvline(20, color=TEXT2, lw=0.7, ls="--")
-        top7 = pt.MIN.head(7).sum() / pt.MIN.sum() * 100
-        ax.set_title(f"{team}\nminutes per game — {len(pt)} players used, top 7 play {top7:.0f}% of minutes", **TITLE_KW)
+        ax.set_yticks(y); ax.set_yticklabels(pt.Player, fontsize=9); ax.invert_yaxis(); ax.set_xlim(0, MINUTES_XLIM)
+        ax.axvline(ROTATION_REF_MIN, color=TEXT2, lw=0.7, ls="--")
+        top_share = pt.MIN.head(TOP_ROTATION).sum() / pt.MIN.sum() * 100
+        ax.set_title(f"{team}\nminutes per game — {len(pt)} players used, top {TOP_ROTATION} play {top_share:.0f}% of minutes", **TITLE_KW)
         style_axes(ax, "x")
     fig.suptitle(f"Minutes distribution, {SHARED_NAME} games", **SUP_KW)
     save_fig(fig, out / "03_minutes.png"); plt.close(fig)
 
 
-def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
+def fig_scoring_sources(box: pd.DataFrame, pbp: pd.DataFrame, ec_zones: pd.DataFrame, A: str, B: str,
+                        out: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Series]:
+    """Save 04_scoring_sources and return both teams' per-game sources and the league mean."""
     lg_src = []
     for tm in box[box.competition == COMP].team.unique():
         if tm in (A, B):
@@ -311,7 +406,8 @@ def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
     return srcA, srcB, lg_mean
 
 
-def fig_shooting(box, A, B, out):
+def fig_shooting(box: pd.DataFrame, A: str, B: str, out: Path) -> dict[str, dict[str, float]]:
+    """Save 05_shooting (2P/3P/FT/eFG/TS vs league) and return the shooting lines."""
     keys = ["2P%", "3P%", "FT%", "eFG%", "TS%"]
     lines = {A: shooting_line(box, A), B: shooting_line(box, B),
              "league": shooting_line(box[(box.competition == COMP) & ~box.team.isin([A, B])])}
@@ -330,23 +426,34 @@ def fig_shooting(box, A, B, out):
     return lines
 
 
-def zone_stats(s):
+def zone_stats(s: pd.DataFrame) -> dict[str, tuple[int, int, float]]:
+    """Return {zone: (made, attempted, FG%)} for the shots in ``s``."""
     agg = s.groupby("zone").agg(att=("made", "size"), mk=("made", "sum"))
     return {z: (int(r.mk), int(r.att), 100 * r.mk / r.att) for z, r in agg.iterrows()}
 
 
-def plot_zone_heatmap(ax, s, title, ref=None):
+def plot_zone_heatmap(ax: Axes, s: pd.DataFrame, title: str,
+                      ref: dict[str, tuple[int, int, float]] | None = None) -> ScalarMappable:
+    """Draw a nine-zone FG% heatmap on ``ax`` and return the colour mappable for a colorbar.
+
+    Args:
+        ax: Target axes.
+        s: Shots (see ``lba_style.shots_cm``).
+        title: Axes title.
+        ref: League ``zone_stats`` printed as a third label line when given.
+    """
     st = zone_stats(s)
     cmap = plt.cm.RdYlGn.copy()
     draw_zone_fill(ax, {z: p for z, (_, _, p) in st.items()}, cmap)
-    mesh = plt.cm.ScalarMappable(cmap=cmap, norm=plt.Normalize(0, 100)); mesh.set_array([])
-    draw_half_court(ax, color="#3a3d52", lw=1.6)
+    mesh = ScalarMappable(cmap=cmap, norm=plt.Normalize(0, 100))
+    mesh.set_array([])
+    draw_half_court(ax, color=COURT_LINE, lw=1.6)
     for z, (cx, cy) in ZONE_LABEL_POS.items():
         mk, att, p = st.get(z, (0, 0, 0.0))
         if att == 0:
-            lab, col = "0/0\n—", "#8a8d9c"
+            lab, col = "0/0\n—", EMPTY_ZONE_TEXT
         else:
-            lab, col = f"{mk}/{att}\n{p:.0f}%", "black" if 25 < p < 75 else "white"
+            lab, col = f"{mk}/{att}\n{p:.0f}%", "black" if HEAT_COLOR_SWITCH[0] < p < HEAT_COLOR_SWITCH[1] else "white"
             if ref and z in ref and ref[z][1] > 0 and not SOCIAL:
                 lab += f"\nleague {ref[z][2]:.0f}%"
         ax.text(cx, cy, lab, ha="center", va="center", color=col, fontsize=7.5 if SOCIAL else 8.5, fontweight="bold", zorder=5)
@@ -354,9 +461,13 @@ def plot_zone_heatmap(ax, s, title, ref=None):
     return mesh
 
 
-def fig_player_shot_charts(pbp, A, B, out, per_image=3, max_players=9, min_fga=5):
-    """One zone heatmap per player (same style as the hot spots: made/attempts, FG% and the league FG% in each zone) for the players with
-    at least `min_fga` shots (play-by-play coordinates), `per_image` players per image."""
+def fig_player_shot_charts(pbp: pd.DataFrame, A: str, B: str, out: Path, per_image: int = 3,
+                           max_players: int = 9, min_fga: int = MIN_FGA_SHOT_CHART) -> None:
+    """Save 06b_shot_charts_*: one zone heatmap per player, ``per_image`` players per image.
+
+    Same style as the hot spots (made/attempts, FG% and the league FG% in each zone), for the
+    players with at least ``min_fga`` shots (play-by-play coordinates), most attempts first.
+    """
     s = shots_cm(pbp)
     ref = zone_stats(s[~s.team.isin([A, B])])
     for team in (A, B):
@@ -369,12 +480,14 @@ def fig_player_shot_charts(pbp, A, B, out, per_image=3, max_players=9, min_fga=5
             for ax, sn in zip(axes[0], group):
                 ps = st[st.player_surname == sn]
                 mesh = plot_zone_heatmap(ax, ps, f"{sn.title()} — {int(ps.made.sum())}/{len(ps)} FG in {ps.game_id.nunique()} games", ref=ref)
-            cb = fig.colorbar(mesh, ax=axes.ravel().tolist(), fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
+            cb = fig.colorbar(mesh, ax=axes.ravel().tolist(), fraction=0.02, pad=0.02); cb.set_ticks(PERCENT_TICKS)
+            cb.set_label("FG%", fontsize=8)
             fig.suptitle(f"{team} — shot charts by zone, {COMP_NAME} games (third line = FG% of all other {COMP_NAME} teams in that zone)", **SUP_KW)
             save_fig(fig, out / f"06b_shot_charts_{slug}_{k // per_image + 1}.png"); plt.close(fig)
 
 
-def fig_hot_spots(pbp, A, B, out):
+def fig_hot_spots(pbp: pd.DataFrame, A: str, B: str, out: Path) -> dict[str, dict[str, float]]:
+    """Save 06_hot_spots and return each team's (and the league's) share of attempts per zone."""
     s = shots_cm(pbp)
     ref = zone_stats(s[~s.team.isin([A, B])])
     fig, axes = grid(2, figsize=(15, 8))
@@ -382,7 +495,8 @@ def fig_hot_spots(pbp, A, B, out):
         st = s[s.team == team]
         mesh = plot_zone_heatmap(ax, st, f"{team} — {int(st.made.sum())}/{len(st)} FG in {st.game_id.nunique()} {COMP_NAME} games", ref=ref)
     if not SOCIAL:
-        cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
+        cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02); cb.set_ticks(PERCENT_TICKS)
+        cb.set_label("FG%", fontsize=8)
     sup(fig, f"Hot spots — FG% by zone, {COMP_NAME} games (third line = FG% of all other {COMP_NAME} teams in that zone)",
         f"Hot spots — FG% by zone, {COMP_NAME} games (red = cold, green = hot)")
     save(fig, out / "06_hot_spots.png"); plt.close(fig)
@@ -392,16 +506,22 @@ def fig_hot_spots(pbp, A, B, out):
     return share
 
 
-def fig_key_players(box, A, B, out, min_mpg=10):
+def fig_key_players(box: pd.DataFrame, A: str, B: str, out: Path,
+                    min_mpg: float = MIN_MPG_KEY_PLAYERS) -> dict[str, pd.DataFrame]:
+    """Save 07_key_players (PIR vs TS%, dot size = minutes) and return each team's player table."""
     pts = {tm: player_table(box[box.competition == COMP], tm) for tm in (A, B)}   # LBA only, same basis as the league dots
     lgp = box[(box.competition == COMP) & (box.row_type == "player") & ~box.team.isin([A, B])]
     lg = lgp.groupby(["team", "player_surname"]).agg(GP=("game_id", "nunique"), sec=("sec", "sum"), pts=("pts", "sum"), val=("val", "sum"),
                                                      fg2a=("fg2a", "sum"), fg3a=("fg3a", "sum"), fta=("fta", "sum")).reset_index()
     lg["MPG"] = lg.sec / 60 / lg.GP; lg["PIR"] = lg.val / lg.GP
-    lg["TS%"] = 100 * lg.pts / (2 * (lg.fg2a + lg.fg3a + 0.44 * lg.fta)).replace(0, np.nan)
+    lg["TS%"] = 100 * lg.pts / (2 * (lg.fg2a + lg.fg3a + FTA_POSSESSION_WEIGHT * lg.fta)).replace(0, np.nan)
     lg = lg[lg.MPG >= min_mpg]
     fig, ax = plt.subplots(figsize=(13, 8.5))
-    size = lambda mpg: mpg / 36 * 420 + 40
+
+    def size(mpg: pd.Series | float) -> pd.Series | float:
+        """Return the scatter dot area for the given minutes per game."""
+        return mpg / BUBBLE_REF_MPG * BUBBLE_SCALE + BUBBLE_MIN
+
     ax.scatter(lg.PIR, lg["TS%"], s=size(lg.MPG), c=LEAGUE, alpha=0.4, edgecolors="none", label=f"other {COMP_NAME} players", zorder=2)
     both = pd.concat([pts[tm][pts[tm].MPG >= min_mpg].assign(team=tm) for tm in (A, B)])
     cands = pd.concat([both[["Player", "team", "PIR", "TS%", "MPG"]],
@@ -423,7 +543,7 @@ def fig_key_players(box, A, B, out, min_mpg=10):
     ax.axvline(lg.PIR.median(), color=TEXT2, lw=0.7, ls="--"); ax.axhline(lg["TS%"].median(), color=TEXT2, lw=0.7, ls="--")
     ax.text(lg.PIR.median() + 0.2, ax.get_ylim()[0] + 1.5, "league median PIR", color=TEXT2, fontsize=8)
     ax.text(ax.get_xlim()[0] + 0.3, lg["TS%"].median() + 0.8, "league median TS%", color=TEXT2, fontsize=8)
-    ax.set_xlabel("PIR per game (LBA valutazione)" if COMP == "LBA" else "PIR per game"); ax.set_ylabel("TS%")
+    ax.set_xlabel("PIR per game (LBA valutazione)" if COMP == COMP_LBA else "PIR per game"); ax.set_ylabel("TS%")
     ax.set_title(f"Key players — PIR vs true shooting, dot size = minutes per game (min {min_mpg}')\n"
                  f"{COMP_NAME} games only, all players on the same basis", **TITLE_KW)
     ax.legend(fontsize=9, loc="lower right"); style_axes(ax)
@@ -431,7 +551,7 @@ def fig_key_players(box, A, B, out, min_mpg=10):
     return pts
 
 
-def fig_shot_distribution(box, A, B, out):
+def fig_shot_distribution(box: pd.DataFrame, A: str, B: str, out: Path) -> None:
     """Share of the team's field-goal attempts per player, split into twos and threes (all the games in `box`: LBA+EC, or EC only)."""
     fig, axes = plt.subplots(1, 2, figsize=(14, 6.5))
     for ax, team, i in ((axes[0], A, 0), (axes[1], B, 1)):
@@ -447,7 +567,7 @@ def fig_shot_distribution(box, A, B, out):
         ax.barh(y, 100 * g.fg2a / tot, color=fill, edgecolor=edge, linewidth=0.6, height=0.65, label="two-point attempts")
         ax.barh(y, 100 * g.fg3a / tot, left=100 * g.fg2a / tot, color=LEAGUE, edgecolor=edge, linewidth=0.6, height=0.65, label="three-point attempts")
         for yi, r in zip(y, g.itertuples()):
-            ax.text(r.share + 0.4, yi, f"{r.share:.0f}%  ({int(r.fga)} FGA, {r.fga / r.GP:.1f}/g, {40 * r.fga / (r.sec / 60):.1f} per 40')",
+            ax.text(r.share + 0.4, yi, f"{r.share:.0f}%  ({int(r.fga)} FGA, {r.fga / r.GP:.1f}/g, {PER_MINUTES * r.fga / (r.sec / 60):.1f} per {PER_MINUTES}')",
                     va="center", fontsize=8.5, color=TEXT2)
         ax.set_yticks(y); ax.set_yticklabels(g.player_surname.str.title(), fontsize=9); ax.invert_yaxis()
         ax.set_xlim(0, g.share.max() * 1.9); ax.set_xlabel("% of the team's field-goal attempts")
@@ -458,6 +578,7 @@ def fig_shot_distribution(box, A, B, out):
     save_fig(fig, out / "08_shot_distribution.png"); plt.close(fig)
 
 
+# (box-score column, label)
 BASIC_STATS = [("ast", "assists"), ("dreb", "def. rebounds"), ("oreb", "off. rebounds"), ("stl", "steals"), ("blk", "blocks"),
                ("tov", "turnovers"), ("pf", "fouls"), ("pf_drawn", "fouls drawn")]
 
@@ -465,7 +586,7 @@ BASIC_STATS = [("ast", "assists"), ("dreb", "def. rebounds"), ("oreb", "off. reb
 def basic_line(box_tot: pd.DataFrame) -> pd.Series:
     """Per-game and per-100-possession totals from a set of team 'total' rows (one row per team-game)."""
     t = box_tot.copy()
-    t["poss"] = t.fg2a + t.fg3a - t.oreb + t.tov + 0.44 * t.fta
+    t["poss"] = t.fg2a + t.fg3a - t.oreb + t.tov + FTA_POSSESSION_WEIGHT * t.fta
     out = {"games": len(t), "poss": t.poss.mean(), "pts": t.pts.mean()}
     for k, _ in BASIC_STATS:
         out[f"{k}_pg"] = t[k].mean()
@@ -474,7 +595,7 @@ def basic_line(box_tot: pd.DataFrame) -> pd.Series:
     return pd.Series(out)
 
 
-def fig_basic_stats(box, A, B, out):
+def fig_basic_stats(box: pd.DataFrame, A: str, B: str, out: Path) -> pd.DataFrame:
     """Assists, rebounds, steals, blocks, turnovers, fouls: per game and per 100 possessions (LBA only)."""
     tot = box[(box.competition == COMP) & (box.row_type == "total")]
     lines = {A: basic_line(tot[tot.team == A]), B: basic_line(tot[tot.team == B]), "league": basic_line(tot[~tot.team.isin([A, B])])}
@@ -501,19 +622,25 @@ def fig_basic_stats(box, A, B, out):
     return pd.DataFrame(lines)
 
 
+# (box-score column, label)
 FACTOR_STATS = [("pts", "points"), ("ast", "assists"), ("dreb", "def. rebounds"), ("oreb", "off. rebounds"), ("stl", "steals"),
                 ("blk", "blocks"), ("fg3m", "threes made"), ("pf_drawn", "fouls drawn"), ("tov", "turnovers")]
 
 
-def fig_major_factors(box, A, B, out, close=0.8, max_players=3):
-    """For each category, which player carries the team: share of the team total for the leader, plus the 2nd and
-    3rd when they are within `close` (80%) of the leader's share. LBA only. Grey = rest of the roster."""
+def fig_major_factors(box: pd.DataFrame, A: str, B: str, out: Path, close: float = 0.8,
+                      max_players: int = 3) -> None:
+    """Save 10_major_factors: which players carry each category.
+
+    Shows the leader's share of the team total, plus the 2nd and 3rd when they are within
+    ``close`` (80%) of the leader's share. Reference competition only; grey = rest of the roster.
+    """
     fig, axes = plt.subplots(1, 2, figsize=(16, 7.2), sharey=True)
     for ax, team, ti in ((axes[0], A, 0), (axes[1], B, 1)):
         p = box[(box.competition == COMP) & (box.row_type == "player") & (box.team == team)]
         totals = p.groupby("player_surname")[[k for k, _ in FACTOR_STATS]].sum()
         fill, edge = team_color(team, ti)
-        shades = [fill, "#e8d77a" if fill == "#F2C300" else "#6b6b7a", "#f3e7b3" if fill == "#F2C300" else "#a8a8b4"]
+        is_gold = fill == GOLD
+        shades = [fill, *(GOLD_SHADES if is_gold else GREY_SHADES)]
         y = np.arange(len(FACTOR_STATS))
         for yi, (k, lab) in enumerate(FACTOR_STATS):
             col = totals[k]; tot = col.sum()
@@ -526,12 +653,13 @@ def fig_major_factors(box, A, B, out, close=0.8, max_players=3):
             for j, (name, sh) in enumerate(chosen.items()):
                 ax.barh(yi, 100 * sh, left=left, color=shades[j], edgecolor=edge, linewidth=0.6, height=0.7)
                 ax.text(left + 50 * sh, yi, f"{name.title()}\n{100 * sh:.0f}%", ha="center", va="center", fontsize=7.5 if len(chosen) > 1 else 8,
-                        color=TEXT if (fill == "#F2C300" or j > 0) else "white", fontweight="bold" if j == 0 else "normal")
+                        color=TEXT if (is_gold or j > 0) else "white", fontweight="bold" if j == 0 else "normal")
                 left += 100 * sh
-            ax.barh(yi, 100 - left, left=left, color="#dcdde3", height=0.7)
+            ax.barh(yi, 100 - left, left=left, color=REST_BAR, height=0.7)
             ax.text(101, yi, f"rest {100 - left:.0f}%  (team {int(tot)})", va="center", fontsize=8, color=TEXT2)
         ax.set_yticks(y); ax.set_yticklabels([lab for _, lab in FACTOR_STATS], fontsize=9.5)
-        ax.set_xlim(0, 135); ax.set_xticks([0, 25, 50, 75, 100]); ax.set_xlabel("% of the team total")
+        ax.set_xlim(0, 135); ax.set_xticks(PERCENT_TICKS)
+        ax.set_xlabel("% of the team total")
         ax.set_title(f"{team}", **TITLE_KW); style_axes(ax, "x")
     axes[0].invert_yaxis()   # shared y: invert once
     fig.suptitle(f"Who carries each category — share of the team total, {COMP_NAME} games only\n"
@@ -539,59 +667,61 @@ def fig_major_factors(box, A, B, out, close=0.8, max_players=3):
     save_fig(fig, out / "10_major_factors.png"); plt.close(fig)
 
 
-def main():
+def main() -> None:
+    """Parse the command line, build the figures and print the matchup tables."""
     ap = argparse.ArgumentParser()
-    ap.add_argument("--home", required=True); ap.add_argument("--away", required=True)
-    ap.add_argument("--data", default=str(Path(__file__).resolve().parent.parent / "data"))
-    ap.add_argument("--eurocup", default=None, help="path to the EuroCup raw file (default data/eurocup_2026_raw.txt)")
+    ap.add_argument("--home", required=True)
+    ap.add_argument("--away", required=True)
+    ap.add_argument("--data", default=str(ROOT / "data"))
+    ec_default = CFG["eurocup_file"] or DEFAULT_EC_FILE
+    ap.add_argument("--eurocup", default=None, help=f"path to the EuroCup raw file (default {ec_default})")
     ap.add_argument("--no-eurocup", action="store_true")
-    ap.add_argument("--competition", choices=["LBA", "EC"], default="LBA",
+    ap.add_argument("--competition", choices=[COMP_LBA, COMP_EC], default=COMP_LBA,
                     help="EC: a EuroCup game: EuroCup box scores and play-by-play only, the EuroCup group table, the other EuroCup teams as the league")
-    ap.add_argument("--out", default="reports")
+    ap.add_argument("--out", default=str(DEFAULT_OUT))
     ap.add_argument("--social", action="store_true", help="also write portrait 4:5 (1080x1350) versions of figures 01, 04, 06, 09 into <out>/social/")
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: use only games played before this date (frozen pre-match "
                                                      "snapshot; output folder gets a _before_<date> suffix and charts say so)")
     a = ap.parse_args()
     data = Path(a.data)
     suffix = f"_before_{a.before}" if a.before else ""
-    out = Path(a.out) / f"matchup_{a.home.replace(' ', '_')}_vs_{a.away.replace(' ', '_')}{suffix}"; out.mkdir(parents=True, exist_ok=True)
+    out = Path(a.out) / f"matchup_{a.home.replace(' ', '_')}_vs_{a.away.replace(' ', '_')}{suffix}"
+    out.mkdir(parents=True, exist_ok=True)
     games, box, pbp = load_lba(data)
-    if a.competition == "EC":
+    if a.competition == COMP_EC:
         global COMP, COMP_NAME, SHARED_NAME
-        COMP, COMP_NAME, SHARED_NAME = "EC", "EuroCup", "EuroCup"
+        COMP, COMP_NAME, SHARED_NAME = COMP_EC, COMP_LABELS[COMP_EC], COMP_LABELS[COMP_EC]
         box, pbp = box.iloc[0:0], pbp.iloc[0:0]          # replaced below by the EuroCup box scores and play-by-play
-    import lba_style
     if a.before:
-        from datetime import date as _d
-        lba_style.STAMP_NOTE = f"games before {_d.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
+        lba_style.STAMP_NOTE = f"games before {date.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
         box = box[box.date < a.before]; pbp = pbp[pbp.game_id.isin(box.game_id.unique())]
         games = games[games.match_datetime.str[:10] < a.before]
-    ec_path = Path(a.eurocup) if a.eurocup else data / "eurocup_2026_raw.txt"
+    ec_path = Path(a.eurocup) if a.eurocup else data / Path(ec_default).name
     ec_zones = pd.DataFrame(columns=["game_id", "team", "zone", "action", "n"])
     if not a.no_eurocup and ec_path.exists():
         ec_box, ec_zones = parse_eurocup(ec_path)
-        if a.competition != "EC":
+        if a.competition != COMP_EC:
             ec_box = ec_box[ec_box.team.isin([a.home, a.away])]
         if a.before:
             ec_box = ec_box[ec_box.date < a.before]; ec_zones = ec_zones[ec_zones.game_id.isin(ec_box.game_id.unique())]
         box = pd.concat([box, ec_box], ignore_index=True)
-        if a.competition != "EC":                         # compare only in the competitions both teams play (Varese has no EuroCup games)
+        if a.competition != COMP_EC:                      # compare only in the competitions both teams play (Varese has no EuroCup games)
             shared = set.intersection(*({*box[box.team == t].competition} for t in (a.home, a.away)))
-            if "LBA" not in shared:
+            if COMP_LBA not in shared:
                 raise SystemExit(f"{a.home} and {a.away} share no LBA games: use --competition EC for a EuroCup-only comparison")
             box = box[box.competition.isin(shared)]
             ec_zones = ec_zones[ec_zones.game_id.isin(box.game_id.unique())]
-            SHARED_NAME = " + ".join(n for c, n in (("LBA", "LBA"), ("EC", "EuroCup")) if c in shared)
-        if a.competition == "EC":
+            SHARED_NAME = " + ".join(n for c, n in COMP_LABELS.items() if c in shared)
+        if a.competition == COMP_EC:
             pbp = pd.read_csv(data / "eurocup" / "pbp.csv")
             pbp = pbp[pbp.game_id.isin(ec_box.game_id.unique())]
     A, B = a.home, a.away
-    if a.competition == "EC":
+    if a.competition == COMP_EC:
         import eurocup
         frame = eurocup.games_frame(eurocup.load_results(data), A)       # the group of the first team
-        lba_style.SOURCE_NOTE = "EuroLeague live API"
-        lba_standings.fig_standings(frame, a.before, [A, B], out, title_label="EuroCup 2026/27")
-        (out / "standings.md").write_text(lba_standings.standings_md(frame, a.before, [A, B], "EuroCup"), encoding="utf-8")
+        lba_style.SOURCE_NOTE = EC_SOURCE_NOTE
+        lba_standings.fig_standings(frame, a.before, [A, B], out, title_label=f"{COMP_LABELS[COMP_EC]} {CFG['season']}")
+        (out / "standings.md").write_text(lba_standings.standings_md(frame, a.before, [A, B], COMP_LABELS[COMP_EC]), encoding="utf-8")
     else:
         all_games = pd.read_csv(data / "games.csv")   # standings use every finished LBA game before the cut-off
         lba_standings.fig_standings(all_games, a.before, [A, B], out)
