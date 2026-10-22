@@ -54,9 +54,11 @@ gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
 53,4,2026-10-21,FRA,Skyliners Frankfurt,94,TNF,La Laguna Tenerife,104,True
 54,4,2026-10-21,CLU,U-Bt Cluj-Napoca,72,LLI,London Lions,89,True
 55,4,2026-10-20,TTK,Turk Telekom Ankara,84,SIA,Siauliai Basketball,94,True
+56,4,2026-10-21,MRO,Maxima Roma,90,VNC,Umana Reyer Venice,79,True
 57,4,2026-10-21,NIN,Niners Chemnitz,95,WRO,Slask Wroclaw,67,True
 58,4,2026-10-21,BOU,Cosea Jl Bourg-En-Bresse,90,TRN,Dolomiti Energia Trento,79,True
 59,4,2026-10-20,BUD,Buducnost Voli Podgorica,104,KLA,Neptunas Klaipeda,89,True
+60,4,2026-10-21,NAP,Napoli Basketball,105,BUR,Tofas Bursa,101,True
 61,4,2026-10-20,BLK,Balkan Botevgrad,57,LKB,Lietkabelis Panevezys,64,True
 62,4,2026-10-20,MAN,Kids&Us Manresa,108,BCR,BC Roma,88,True
 63,4,2026-10-21,BOS,Bosna Bh Telecom Sarajevo,86,BAH,Bahcesehir College Istanbul,77,True
