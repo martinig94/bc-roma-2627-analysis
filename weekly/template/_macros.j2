@@ -1,8 +1,8 @@
 {% macro roster_table(roster) -%}
 {% set ec = roster|selectattr('ppg_ec', 'ne', none)|list|length > 0 -%}
 {% set lba = roster|selectattr('ppg_lba', 'ne', none)|list|length > 0 or not ec -%}
-| | # | Player | Pos | Age | Nat | Ht | Wt | GP | MIN | PTS | REB | AST | PIR | 2P% (2PA) | 3P% (3PA) | FT% (FTA) |{% if lba %} PPG LBA |{% endif %}{% if ec %} PPG EC |{% endif %}
-|---|---:|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|{% if lba %}---:|{% endif %}{% if ec %}---:|{% endif %}
-{% for r in roster %}| {% if r.photo %}<img src="photo_{{ r.player_id }}.jpg" alt="{{ r.name }}" width="44">{% endif %} | {{ r.number or '–' }} | **{{ r.name }}** | {{ r.pos or '–' }} | {{ r.age if r.age is not none else '–' }} | {{ r.country or '–' }} | {{ r.height or '–' }} | {{ r.weight or '–' }} | {{ r.gp }} | {{ r.min }} | {{ r.pts }} | {{ r.reb }} | {{ r.ast }} | {{ r.pir }} | {{ r.fg2 }} | {{ r.fg3 }} | {{ r.ft }} |{% if lba %} {{ r.ppg_lba if r.ppg_lba is not none else '–' }} |{% endif %}{% if ec %} {{ r.ppg_ec if r.ppg_ec is not none else '–' }} |{% endif %}
+| | # | Player | Pos | Age | Nat | Ht | Wt | GP | MIN | PTS | REB | OREB | AST | PIR | 2P% (2PA) | 3P% (3PA) | FT% (FTA) |{% if lba %} PPG LBA |{% endif %}{% if ec %} PPG EC |{% endif %}
+|---|---:|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|{% if lba %}---:|{% endif %}{% if ec %}---:|{% endif %}
+{% for r in roster %}| {% if r.photo %}<img src="photo_{{ r.player_id }}.jpg" alt="{{ r.name }}" width="44">{% endif %} | {{ r.number or '–' }} | **{{ r.name }}** | {{ r.pos or '–' }} | {{ r.age if r.age is not none else '–' }} | {{ r.country or '–' }} | {{ r.height or '–' }} | {{ r.weight or '–' }} | {{ r.gp }} | {{ r.min }} | {{ r.pts }} | {{ r.reb }} | {{ r.oreb }} | {{ r.ast }} | {{ r.pir }} | {{ r.fg2 }} | {{ r.fg3 }} | {{ r.ft }} |{% if lba %} {{ r.ppg_lba if r.ppg_lba is not none else '–' }} |{% endif %}{% if ec %} {{ r.ppg_ec if r.ppg_ec is not none else '–' }} |{% endif %}
 {% endfor %}
 {%- endmacro %}
