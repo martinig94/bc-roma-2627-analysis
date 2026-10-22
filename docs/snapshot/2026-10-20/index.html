@@ -67,11 +67,16 @@
   .edit a { font-weight:600; }
   .hl { background:var(--hl, #ffe27a) !important; box-shadow:inset 0 0 0 1px rgba(0,0,0,.35); }
   .hl-colors { display:none; gap:6px; align-items:center; background:var(--paper); border:1px solid var(--gold); border-radius:999px; padding:4px 8px; box-shadow:0 1px 4px rgba(0,0,0,.15); }
-  body.hl-mode .hl-colors { display:flex; }
+  body.hl-mode .hl-colors, body.dw-mode .hl-colors { display:flex; }
   .hl-colors button { width:22px; height:22px; padding:0; border-radius:50%; border:2px solid transparent; box-shadow:0 0 0 1px rgba(0,0,0,.35); cursor:pointer; }
   .hl-colors button[aria-pressed="true"] { border-color:var(--ink); }
   body.hl-mode main table td { cursor:cell; }
-  .hl-tools { position:fixed; right:16px; bottom:16px; display:flex; gap:8px; z-index:5; }
+  .hl-t { background:var(--hl, #ffe27a); border-radius:2px; }
+  body.hl-mode .hl-t { cursor:pointer; }
+  .dw { position:relative; display:inline-block; max-width:100%; line-height:0; }
+  .dw-cv { position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none; touch-action:auto; }
+  body.dw-mode .dw-cv { pointer-events:auto; touch-action:none; cursor:crosshair; }
+  .hl-tools { position:fixed; flex-wrap:wrap; justify-content:flex-end; max-width:calc(100vw - 32px); right:16px; bottom:16px; display:flex; gap:8px; z-index:5; }
   .hl-tools button { font:inherit; font-size:.85rem; padding:6px 12px; border:1px solid var(--gold); border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,.15); }
   .hl-tools button[aria-pressed="true"] { background:var(--gold); }
   .hl-tools button:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
@@ -639,7 +644,10 @@ The analysis of the opponent is <a href="../../opponent/matchup_Kids_Us_Manresa_
 <div class="hl-tools" id="hl-tools" hidden>
   <span class="hl-colors" id="hl-colors" role="group" aria-label="Highlighter colour"></span>
   <button type="button" id="hl-clear" hidden>Clear highlights</button>
-  <button type="button" id="hl-toggle" aria-pressed="false" title="Click table cells to highlight them (shift-click: the whole row). Kept in this browser only.">&#9998; Highlighter</button>
+  <button type="button" id="dw-undo" hidden>Undo</button>
+  <button type="button" id="dw-clear" hidden>Clear drawings</button>
+  <button type="button" id="dw-toggle" aria-pressed="false" hidden title="Draw over the images with the mouse or a finger. Kept in this browser only.">&#9999; Pen</button>
+  <button type="button" id="hl-toggle" aria-pressed="false" title="Select text or click table cells to highlight them (shift-click: the whole row); click a highlight to remove it. Kept in this browser only.">&#9998; Highlighter</button>
 </div>
 <script>
 // Collapse all / Expand all above the first section of a page
@@ -656,43 +664,150 @@ The analysis of the opponent is <a href="../../opponent/matchup_Kids_Us_Manresa_
 })();
 </script>
 <script>
-// Live highlighter: with it on, a click on a table cell highlights it in the chosen colour (shift-click: the row);
-// click again with the same colour to remove it, with another colour to recolour it. Saved in this browser only.
+// Live highlighter and pen. Highlighter on: a click on a table cell highlights it in the chosen colour (shift-click: the row),
+// selecting text highlights the text; a click on a highlight removes it. Pen on: draw over the images with the mouse or a finger.
+// Everything is saved in this browser only (localStorage), per page.
 (function () {
+  var main = document.querySelector("main");
+  var COLORS = [["#ffe27a", "yellow", "#f2b600"], ["#a8e6a1", "green", "#1a9e3f"], ["#9fd3f5", "blue", "#1d6fd1"], ["#f7b3d0", "pink", "#e0368a"], ["#ffb980", "orange", "#f26a00"]];
+  var P = location.pathname, KEY = "bcroma-highlights:" + P, TKEY = "bcroma-text-highlights:" + P, DKEY = "bcroma-drawings:" + P, cur = 0;
+  var load = function (k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+  var put = function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+  var body = document.body, tools = document.getElementById("hl-tools"), box = document.getElementById("hl-colors");
+  var $ = function (i) { return document.getElementById(i); };
+
+  // ---- table cells
   var tables = [].slice.call(document.querySelectorAll("main table"));
-  if (!tables.length) return;
-  var COLORS = [["#ffe27a", "yellow"], ["#a8e6a1", "green"], ["#9fd3f5", "blue"], ["#f7b3d0", "pink"], ["#ffb980", "orange"]];
-  var KEY = "bcroma-highlights:" + location.pathname, saved = {}, cur = 0;
-  try {
-    var raw = JSON.parse(localStorage.getItem(KEY) || "{}");
-    if (Array.isArray(raw)) raw.forEach(function (k) { saved[k] = COLORS[0][0]; }); else saved = raw;   // older versions: a list of cells, all yellow
-  } catch (e) {}
+  var saved = load(KEY, {});
+  if (Array.isArray(saved)) { var old = saved; saved = {}; old.forEach(function (k) { saved[k] = COLORS[0][0]; }); }   // older versions: a list of cells, all yellow
   var cells = [].slice.call(document.querySelectorAll("main table td"));
   var id = function (td) { return tables.indexOf(td.closest("table")) + ":" + td.parentNode.rowIndex + ":" + td.cellIndex; };
-  var store = function () { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} };
   var paint = function (td, c) { if (c) { td.classList.add("hl"); td.style.setProperty("--hl", c); } else { td.classList.remove("hl"); td.style.removeProperty("--hl"); } };
   cells.forEach(function (td) { paint(td, saved[id(td)]); });
-  var tools = document.getElementById("hl-tools"), toggle = document.getElementById("hl-toggle"), clear = document.getElementById("hl-clear"), box = document.getElementById("hl-colors");
+
+  // ---- text: stored as character offsets in the text of <main> (+ the text itself, to skip it if the page changed)
+  var texts = load(TKEY, []);
+  var textNodes = function () {
+    var w = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, { acceptNode: function (n) {
+      return n.parentNode.closest("script,style,.sec-tools,.comments") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; } }), out = [], n;
+    while ((n = w.nextNode())) out.push(n);
+    return out;
+  };
+  var applyText = function (h) {
+    var nodes = textNodes(), all = nodes.map(function (n) { return n.data; }).join("");
+    if (all.slice(h.s, h.e) !== h.t) return;
+    var pos = 0, jobs = [];
+    nodes.forEach(function (n) {
+      var a = Math.max(h.s, pos) - pos, b = Math.min(h.e, pos + n.length) - pos;
+      if (a < b) jobs.push([n, a, b]);
+      pos += n.length;
+    });
+    jobs.forEach(function (j) {
+      var r = document.createRange(); r.setStart(j[0], j[1]); r.setEnd(j[0], j[2]);
+      var sp = document.createElement("span"); sp.className = "hl-t"; sp.dataset.id = h.id; sp.style.setProperty("--hl", h.c);
+      r.surroundContents(sp);
+    });
+  };
+  var unwrap = function (hid) {
+    [].slice.call(main.querySelectorAll('span.hl-t[data-id="' + hid + '"]')).forEach(function (sp) {
+      var p = sp.parentNode; while (sp.firstChild) p.insertBefore(sp.firstChild, sp); p.removeChild(sp); p.normalize();
+    });
+  };
+  texts.forEach(applyText);
+  var onSelect = function () {
+    if (!body.classList.contains("hl-mode")) return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return;
+    var rng = sel.getRangeAt(0);
+    if (!main.contains(rng.commonAncestorContainer)) return;
+    var nodes = textNodes(), pos = 0, s = -1, e = -1, all = "";
+    nodes.forEach(function (n) {
+      if (rng.intersectsNode(n)) {
+        var a = n === rng.startContainer ? rng.startOffset : 0, b = n === rng.endContainer ? rng.endOffset : n.length;
+        if (a < b) { if (s < 0) s = pos + a; e = pos + b; }
+      }
+      pos += n.length; all += n.data;
+    });
+    sel.removeAllRanges();
+    if (s < 0 || !all.slice(s, e).trim()) return;
+    var h = { id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), s: s, e: e, t: all.slice(s, e), c: COLORS[cur][0] };
+    applyText(h); texts.push(h); put(TKEY, texts);
+  };
+  ["mouseup", "touchend"].forEach(function (t) { document.addEventListener(t, function () { setTimeout(onSelect, 0); }); });
+
+  // ---- drawing over images: strokes stored as points relative to the image size, per image (by its src)
+  var drawings = load(DKEY, {}), history = [];
+  var imgs = [].slice.call(main.querySelectorAll("img")).filter(function (im) { return !im.closest("table,.sec-tools"); });
+  var redraws = {};
+  imgs.forEach(function (im) {
+    var key = im.getAttribute("src"), wrap = document.createElement("span"), cv = document.createElement("canvas"), ctx = cv.getContext("2d");
+    wrap.className = "dw"; im.parentNode.insertBefore(wrap, im); wrap.appendChild(im); cv.className = "dw-cv"; wrap.appendChild(cv);
+    var redraw = function () {
+      ctx.clearRect(0, 0, cv.width, cv.height); ctx.lineCap = ctx.lineJoin = "round"; ctx.lineWidth = Math.max(2, cv.width / 200);
+      (drawings[key] || []).forEach(function (st) {
+        ctx.strokeStyle = st.c; ctx.beginPath();
+        st.p.forEach(function (q, i) { var x = q[0] * cv.width, y = q[1] * cv.height; if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y); });
+        if (st.p.length === 1) ctx.lineTo(st.p[0][0] * cv.width + .01, st.p[0][1] * cv.height);
+        ctx.stroke();
+      });
+    };
+    var size = function () { cv.width = im.naturalWidth || 800; cv.height = im.naturalHeight || 600; redraw(); };
+    if (im.complete) size(); else im.addEventListener("load", size);
+    redraws[key] = redraw;
+    var cur_st = null, pt = function (ev) { var r = cv.getBoundingClientRect(); return [(ev.clientX - r.left) / r.width, (ev.clientY - r.top) / r.height]; };
+    cv.addEventListener("pointerdown", function (ev) {
+      if (!body.classList.contains("dw-mode")) return;
+      ev.preventDefault(); cv.setPointerCapture(ev.pointerId);
+      cur_st = { c: COLORS[cur][2], p: [pt(ev)] }; (drawings[key] = drawings[key] || []).push(cur_st); history.push(key); redraw();
+    });
+    cv.addEventListener("pointermove", function (ev) { if (cur_st) { cur_st.p.push(pt(ev)); redraw(); } });
+    ["pointerup", "pointercancel"].forEach(function (t) { cv.addEventListener(t, function () { if (cur_st) { cur_st = null; put(DKEY, drawings); } }); });
+    cv.addEventListener("click", function (ev) { if (body.classList.contains("dw-mode")) ev.preventDefault(); });   // do not follow a link around the image
+  });
+
+  // ---- toolbar
+  var toggle = $("hl-toggle"), pen = $("dw-toggle"), clear = $("hl-clear"), undo = $("dw-undo"), clearDw = $("dw-clear");
   COLORS.forEach(function (c, i) {
     var b = document.createElement("button"); b.type = "button"; b.style.background = c[0]; b.title = c[1]; b.setAttribute("aria-label", c[1]); b.setAttribute("aria-pressed", i === 0);
     b.addEventListener("click", function () { cur = i; [].forEach.call(box.children, function (x, j) { x.setAttribute("aria-pressed", j === i); }); });
     box.appendChild(b);
   });
-  tools.hidden = false;
-  toggle.addEventListener("click", function () {
-    var on = toggle.getAttribute("aria-pressed") !== "true";
-    toggle.setAttribute("aria-pressed", on); document.body.classList.toggle("hl-mode", on); clear.hidden = !on;
+  tools.hidden = false; pen.hidden = !imgs.length;
+  var mode = function (name) {   // "hl", "dw" or "" (off); one at a time
+    var on = function (n) { return name === n; };
+    body.classList.toggle("hl-mode", on("hl")); body.classList.toggle("dw-mode", on("dw"));
+    toggle.setAttribute("aria-pressed", on("hl")); pen.setAttribute("aria-pressed", on("dw"));
+    clear.hidden = !on("hl"); undo.hidden = clearDw.hidden = !on("dw");
+  };
+  toggle.addEventListener("click", function () { mode(body.classList.contains("hl-mode") ? "" : "hl"); });
+  pen.addEventListener("click", function () { mode(body.classList.contains("dw-mode") ? "" : "dw"); });
+  clear.addEventListener("click", function () {
+    cells.forEach(function (td) { paint(td, null); }); saved = {}; put(KEY, saved);
+    texts.forEach(function (h) { unwrap(h.id); }); texts = []; put(TKEY, texts);
   });
-  clear.addEventListener("click", function () { cells.forEach(function (td) { paint(td, null); }); saved = {}; store(); });
+  undo.addEventListener("click", function () {
+    var key = history.pop();
+    if (key === undefined) Object.keys(drawings).forEach(function (k) { if (drawings[k].length) key = k; });
+    if (key === undefined || !drawings[key] || !drawings[key].length) return;
+    drawings[key].pop(); put(DKEY, drawings); redraws[key]();
+  });
+  clearDw.addEventListener("click", function () { drawings = {}; history = []; put(DKEY, drawings); Object.keys(redraws).forEach(function (k) { redraws[k](); }); });
+
   document.addEventListener("click", function (ev) {
-    if (!document.body.classList.contains("hl-mode")) return;
+    if (!body.classList.contains("hl-mode")) return;
+    var sel = window.getSelection(); if (sel && !sel.isCollapsed) return;   // a text selection is being highlighted (see onSelect)
+    var sp = ev.target.closest && ev.target.closest("span.hl-t");
+    if (sp) {
+      ev.preventDefault(); var hid = sp.dataset.id; unwrap(hid);
+      texts = texts.filter(function (h) { return h.id !== hid; }); put(TKEY, texts); return;
+    }
     var td = ev.target.closest && ev.target.closest("main table td");
     if (!td) return;
     ev.preventDefault();
     var targets = ev.shiftKey ? [].slice.call(td.parentNode.cells).filter(function (c) { return c.tagName === "TD"; }) : [td];
     var color = COLORS[cur][0], remove = saved[id(td)] === color;
     targets.forEach(function (c) { if (remove) { delete saved[id(c)]; paint(c, null); } else { saved[id(c)] = color; paint(c, color); } });
-    store();
+    put(KEY, saved);
   });
 })();
 </script>
