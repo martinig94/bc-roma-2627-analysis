@@ -37,6 +37,7 @@ from lba_style import (save_fig, draw_zone_fill, BLUE, DPI, GREEN, LEAGUE, RED, 
 
 PAINT_CM = 450
 COMP, COMP_NAME = "LBA", "LBA"       # the competition the reference figures (league averages, key players, basic stats) are drawn from; "EC" for a EuroCup-only report
+SHARED_NAME = "LBA"     # the competition(s) the two teams have in common ("LBA", "EuroCup" or "LBA + EuroCup"), set in main()
 SOCIAL = False          # --social: portrait 4:5 versions (1080x1350) of selected figures for Instagram
 SOCIAL_SIZE = (6.0, 7.5)   # inches; the saved PNG is padded to exactly 1080x1350 px
 
@@ -259,7 +260,7 @@ def fig_minutes(box, A, B, out):
         top7 = pt.MIN.head(7).sum() / pt.MIN.sum() * 100
         ax.set_title(f"{team}\nminutes per game — {len(pt)} players used, top 7 play {top7:.0f}% of minutes", **TITLE_KW)
         style_axes(ax, "x")
-    fig.suptitle("Minutes distribution, all competitions", **SUP_KW)
+    fig.suptitle(f"Minutes distribution, {SHARED_NAME} games", **SUP_KW)
     save_fig(fig, out / "03_minutes.png"); plt.close(fig)
 
 
@@ -293,8 +294,8 @@ def fig_scoring_sources(box, pbp, ec_zones, A, B, out):
         axes[1].text(xi, v + 0.5, f"{v:.1f}\n({100 * s:.0f}% of FGA)", ha="center", fontsize=8.5, color=TEXT2)
     axes[1].set_xticks([0, 1, 2]); axes[1].set_xticklabels([A, B, "league"], fontsize=9); axes[1].set_ylim(0, max(vals) * 1.3)
     axes[1].set_title("Three-point attempts per game", **TITLE_KW); style_axes(axes[1], "y")
-    sup(fig, f"Scoring sources and three-point volume, all competitions (league = other {COMP_NAME} teams)",
-        f"Where the points come from — all competitions (league = other {COMP_NAME} teams)")
+    sup(fig, f"Scoring sources and three-point volume, {SHARED_NAME} games (league = other {COMP_NAME} teams)",
+        f"Where the points come from — {SHARED_NAME} games (league = other {COMP_NAME} teams)")
     save(fig, out / "04_scoring_sources.png"); plt.close(fig)
     return srcA, srcB, lg_mean
 
@@ -312,7 +313,7 @@ def fig_shooting(box, A, B, out):
         for xi, v in zip(x, vals):
             ax.text(xi + (i - 1) * w, v + 0.8, f"{v:.0f}", ha="center", fontsize=8.5, color=TEXT2)
     ax.set_xticks(x); ax.set_xticklabels(keys); ax.set_ylim(0, 100); ax.set_ylabel("%")
-    ax.set_title(f"Shooting percentages, season to date (all competitions; league = other {COMP_NAME} teams)", **TITLE_KW)
+    ax.set_title(f"Shooting percentages, season to date ({SHARED_NAME} games; league = other {COMP_NAME} teams)", **TITLE_KW)
     ax.legend(fontsize=9); style_axes(ax, "y")
     save_fig(fig, out / "05_shooting.png"); plt.close(fig)
     return lines
@@ -422,7 +423,7 @@ def fig_shot_distribution(box, A, B, out):
         top3 = g.share.head(3).sum()
         ax.set_title(f"{team} — {int(tot)} FGA in {p.game_id.nunique()} games\ntop 3 take {top3:.0f}%, top 5 take {g.share.head(5).sum():.0f}%", **TITLE_KW)
         ax.legend(fontsize=8, loc="lower right"); style_axes(ax, "x")
-    fig.suptitle(f"Who takes the shots — share of team FGA per player ({'EuroCup' if COMP == 'EC' else 'LBA+EC'})", **SUP_KW)
+    fig.suptitle(f"Who takes the shots — share of team FGA per player ({SHARED_NAME})", **SUP_KW)
     save_fig(fig, out / "08_shot_distribution.png"); plt.close(fig)
 
 
@@ -525,8 +526,8 @@ def main():
     out = Path(a.out) / f"matchup_{a.home.replace(' ', '_')}_vs_{a.away.replace(' ', '_')}{suffix}"; out.mkdir(parents=True, exist_ok=True)
     games, box, pbp = load_lba(data)
     if a.competition == "EC":
-        global COMP, COMP_NAME
-        COMP, COMP_NAME = "EC", "EuroCup"
+        global COMP, COMP_NAME, SHARED_NAME
+        COMP, COMP_NAME, SHARED_NAME = "EC", "EuroCup", "EuroCup"
         box, pbp = box.iloc[0:0], pbp.iloc[0:0]          # replaced below by the EuroCup box scores and play-by-play
     import lba_style
     if a.before:
@@ -543,6 +544,11 @@ def main():
         if a.before:
             ec_box = ec_box[ec_box.date < a.before]; ec_zones = ec_zones[ec_zones.game_id.isin(ec_box.game_id.unique())]
         box = pd.concat([box, ec_box], ignore_index=True)
+        if a.competition != "EC":                         # compare only in the competitions both teams play (Varese has no EuroCup games)
+            shared = set.intersection(*({*box[box.team == t].competition} for t in (a.home, a.away)))
+            box = box[box.competition.isin(shared)]
+            ec_zones = ec_zones[ec_zones.game_id.isin(box.game_id.unique())]
+            SHARED_NAME = " + ".join(n for c, n in (("LBA", "LBA"), ("EC", "EuroCup")) if c in shared)
         if a.competition == "EC":
             pbp = pd.read_csv(data / "eurocup" / "pbp.csv")
             pbp = pbp[pbp.game_id.isin(ec_box.game_id.unique())]
