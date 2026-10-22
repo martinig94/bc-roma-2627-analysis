@@ -193,8 +193,17 @@ Clips to look up (game clock from the LBA play-by-play; the three groups are the
 
 **Hale pull-up threes** (15/38 in LBA, 9 unassisted): at Trento Q4 6:51 (74-74), Q4 4:25 (77-77), Q4 0:08 (85-85), Q3 8:38 step-back; vs Trieste Q4 9:32 and Q4 8:08; at Scafati Q1 0:45 step-back.
 
+**Duke** — the paint finishes and the fouls he draws: at Trento Q1 8:14 offensive rebound and score; vs Trieste Q1 9:03 steal and score (8"); at Trento Q4 7:17 steal and score; his 9 free-throw trips at Trento (Q4). The turnovers: 7 bad passes, e.g. at Trento Q1 7:21, Q2 1:12, Q4 5:04 and vs Virtus Q2 4:35, Q3 8:29, Q4 7:12.
+
+**Roby** — the spot-up threes, made and missed: made at Trento Q2 4:38 and Q2 3:07 (back to back), vs Trieste Q3 7:48; the 1/7 open misses, e.g. vs Trieste Q2 3:54, 3:15, 1:14 (three in one quarter) and at Trento Q1 2:00 and 1:42. The inside game: vs Trieste Q1 3:09 offensive rebound and put-back (after Renfro's), alley-oop and dunk in the same game.
+
 **Steals turned into points within 12 seconds** (15 in four games): at Scafati Q1 7:38 Alviti steal → Hale three (5"); at Trento Q4 4:36 Roby steal → Hale three (11"); at Trento Q4 7:17 Duke steals and scores; vs Virtus Q4 9:01 Hale steal and score; at Scafati Q1 6:58 Kamagate steal → Nikolic.
 
 **Put-backs within 6 seconds of an offensive rebound** (14 in four games): at Scafati Q1 8:56 Librizzi then Kamagate rebound → Kamagate; vs Trieste Q1 3:09 Renfro then Roby rebound → Roby; vs Trieste Q4 5:34 two Nikolic rebounds and score; at Scafati Q3 7:50 Renfro; at Trento Q2 7:38 Roby.
 
 **Lineup stretch**: Alviti, Nikolic, Renfro, Hale, Librizzi at Scafati from Q3 1:05 to Q4 6:27 (4.6', the best defensive lineup by PPP allowed).
+
+
+## Other possible checks
+- Percentage of shots in the first 8", second 8", third 8" of a possession. Check if there are significant differences between lineups.
+- Shot takers and shot type after SLOB and BLOB
