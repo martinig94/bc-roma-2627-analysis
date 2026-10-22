@@ -132,9 +132,19 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 
 # ── LBA tables ──────────────────────────────────────────────────────────────────
+def apply_starter_overrides(box: pd.DataFrame, data: Path) -> pd.DataFrame:
+    """Starter flags of data/starter_overrides.csv (game_id, player_surname, starter): box scores checked against the play-by-play."""
+    fix = data / "starter_overrides.csv"
+    if fix.exists():
+        for r in pd.read_csv(fix).itertuples():
+            box.loc[(box.game_id == r.game_id) & (box.player_surname == r.player_surname) & (box.row_type == "player"), "starter"] = r.starter
+    return box
+
+
 def load_lba(data: Path):
     games = pd.read_csv(data / "games.csv")
     box = pd.read_csv(data / "box_scores.csv"); box["competition"] = "LBA"
+    box = apply_starter_overrides(box, data)
     pbp = pd.read_csv(data / "pbp.csv")
     tot = box[box.row_type == "total"][["game_id", "team", "pts"]]
     opp = tot.rename(columns={"team": "opponent", "pts": "opp_pts"})
