@@ -155,7 +155,7 @@ Ratings are points per 100 possessions. Games before this one{% if a.competition
 
 {# ─── both ─── #}
 {% macro roster(a, files, author, kind) -%}
-Per-game averages before this game, {{ 'LBA + EuroCup' if kind == 'snapshot' else 'league and EuroCup games' }}. Shooting: 2P%, 3P% and FT%, each followed by the attempts **per game** in brackets (2PA, 3PA, FTA).
+Per-game averages before this game, {{ 'LBA + EuroCup' if kind == 'snapshot' else 'league and EuroCup games' }}. Shooting: 2P%, 3P% and FT%, each followed by the attempts **per game** in brackets (2PA, 3PA, FTA). FD = fouls drawn per game, FM = fouls made per game.
 
 {{ roster_table(a.roster) }}
 {%- endmacro %}

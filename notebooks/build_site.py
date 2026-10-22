@@ -212,7 +212,7 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
             if (folder / "roster.json").exists():
                 roster = json.loads((folder / "roster.json").read_text(encoding="utf-8"))
                 block = TPL.from_string("{% from '_macros.j2' import roster_table %}## Roster\n\nPer-game averages before this game, "
-                                        "league and EuroCup games. Shooting: 2P%, 3P% and FT%, each followed by the attempts **per game** in brackets (2PA, 3PA, FTA).\n\n"
+                                        "league and EuroCup games. Shooting: 2P%, 3P% and FT%, each followed by the attempts **per game** in brackets (2PA, 3PA, FTA). FD = fouls drawn per game, FM = fouls made per game.\n\n"
                                         "{{ roster_table(r) }}\n\n").render(r=roster)
                 k = page_md.find("\n## Sources")
                 page_md = page_md[:k] + "\n" + block + page_md[k:] if k >= 0 else page_md + "\n\n" + block
@@ -346,7 +346,7 @@ COMPARE_JS = r"""
     var names = [], seen = {};
     b.roster.concat(a.roster).forEach(function (r) { if (!seen[r.name]) { seen[r.name] = 1; names.push(r.name); } });
     var get = function (s, n) { return s.roster.filter(function (r) { return r.name === n; })[0]; };
-    var cols = [["gp", "GP"], ["min", "MIN"], ["pts", "PTS"], ["reb", "REB"], ["oreb", "OREB"], ["ast", "AST"], ["pir", "PIR"], ["fd", "FD"], ["pf", "PF"]];
+    var cols = [["gp", "GP"], ["min", "MIN"], ["pts", "PTS"], ["reb", "REB"], ["oreb", "OREB"], ["ast", "AST"], ["pir", "PIR"], ["fd", "FD"], ["pf", "FM"]];
     h += '<h2>Roster, per-game averages</h2><p><label>Chart: <select id="cmpStat">' + cols.filter(function (c) { return c[0] !== "gp"; }).map(function (c) {
       return '<option value="' + c[0] + '"' + (c[0] === rosterStat ? " selected" : "") + ">" + c[1] + "</option>"; }).join("") + "</select></label></p>";
     var both = names.filter(function (n) { var x = get(a, n), y = get(b, n); return x && y && num(x[rosterStat]) && num(y[rosterStat]); });
