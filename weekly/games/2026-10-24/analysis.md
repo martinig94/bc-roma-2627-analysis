@@ -86,6 +86,11 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 - Varese shots below or at league average in each zone.    
 - Varese has a higher number of shots in the close mid-range compared to BC Roma.
 
+### Shot charts by player
+
+{{ shot_charts }}
+
+
 ![Varese play types](02_opponent_playtypes.png)
 ![Varese play types and PPP ](03_playtype_ppp_ref_vs_opp.png)
 
