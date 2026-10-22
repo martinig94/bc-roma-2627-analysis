@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
-import shutil
+from collections.abc import Iterable, Sequence
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -24,34 +24,52 @@ import lba_style
 import standings as st
 import weekly_sections as ws
 import weekly_config
-from lba_style import GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, style_axes, team_color
+from lba_style import BLUE, LEAGUE, TEXT, TEXT2, TITLE_KW, save_fig, style_axes, team_color
 
 ROOT = Path(__file__).resolve().parent.parent
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-FOES = "#4a7fc1"
+
+FINISHED_STATUS = "2"                  # games.csv game_status of a finished, collected game
+PERIOD_COLS = [("q1_home", "q1_away"), ("q2_home", "q2_away"), ("q3_home", "q3_away"),
+               ("q4_home", "q4_away"), ("ot_home", "ot_away")]   # games.csv score columns per period
+REGULATION_PERIODS = 4                 # periods before overtime
+QUARTER_MIN, OVERTIME_MIN = 10, 5      # minutes per regulation period / per overtime
+FIRST_OT_START_MIN = REGULATION_PERIODS * QUARTER_MIN   # minute at which the first overtime starts
+MIN_PLAYER_SEC = 300                   # players under 5 minutes are left out of the PIR chart
+FTA_POSSESSION_WEIGHT = 0.44           # standard estimate: free-throw attempts that end a possession
+REPORTS_REVIEW = ROOT / "reports" / "review"
+WEEKLY_REVIEW = ROOT / "weekly" / "review"
+TEMPLATES = ROOT / "weekly" / "template"
+DATE_LEN = 10                          # match_datetime is "YYYY-MM-DD HH:MM:SS": date = first 10 chars,
+TIME_SLICE = slice(DATE_LEN + 1, DATE_LEN + 6)   # and "HH:MM" follows the separator
 
 
 def short(t: str) -> str:
+    """Return the short display name of a team (see ``standings.short``)."""
     return st.short(t)
 
 
 # ── data ────────────────────────────────────────────────────────────────────────
 def find_game(games: pd.DataFrame, team: str, rnd: int) -> pd.Series:
+    """Return the games.csv row of ``team`` in round ``rnd``.
+
+    Raises:
+        SystemExit: If the team has no game that round or the game is not finished and collected yet.
+    """
     g = games[(games["round"] == rnd) & ((games.home_team == team) | (games.away_team == team))]
     if g.empty:
         raise SystemExit(f"{team} has no game in round {rnd}")
     g = g.iloc[0]
-    if str(g.game_status) != "2":
+    if str(g.game_status) != FINISHED_STATUS:
         raise SystemExit(f"{team}'s round {rnd} game is not finished/collected yet (run `python -m lba_data.collect`)")
     return g
 
 
 def quarter_scores(g: pd.Series, pbp: pd.DataFrame) -> list[tuple[int, int]]:
-    """(home, away) points per period; from games.csv when present, else rebuilt from the play-by-play."""
-    cols = [("q1_home", "q1_away"), ("q2_home", "q2_away"), ("q3_home", "q3_away"), ("q4_home", "q4_away"), ("ot_home", "ot_away")]
-    out = [(int(g[h]), int(g[a])) for h, a in cols if pd.notna(g[h]) and pd.notna(g[a])]
-    if len(out) >= 4:
+    """Return (home, away) points per period; from games.csv when present, else rebuilt from the play-by-play."""
+    out = [(int(g[h]), int(g[a])) for h, a in PERIOD_COLS if pd.notna(g[h]) and pd.notna(g[a])]
+    if len(out) >= REGULATION_PERIODS:
         return out
     p = pbp[pbp.game_id == g.game_id].dropna(subset=["score_home", "score_away"]).sort_values("seq")
     out, prev = [], (0, 0)
@@ -62,12 +80,14 @@ def quarter_scores(g: pd.Series, pbp: pd.DataFrame) -> list[tuple[int, int]]:
 
 
 def team_totals(box: pd.DataFrame, gid: int, team: str) -> pd.Series:
+    """Return the team's ``total`` box-score row for one game."""
     return box[(box.game_id == gid) & (box.team == team) & (box.row_type == "total")].iloc[0]
 
 
-def four_factors(t: pd.Series, o: pd.Series) -> dict:
+def four_factors(t: pd.Series, o: pd.Series) -> dict[str, int | float | str]:
+    """Return the game summary of team totals ``t`` against opponent totals ``o`` (display label -> value)."""
     fga = t.fg2a + t.fg3a
-    poss = fga - t.oreb + t.tov + 0.44 * t.fta
+    poss = fga - t.oreb + t.tov + FTA_POSSESSION_WEIGHT * t.fta
     return {
         "Points": int(t.pts), "Possessions": round(poss, 1), "Off. rating": round(100 * t.pts / poss, 1),
         "eFG%": round(100 * (t.fg2m + 1.5 * t.fg3m) / fga, 1),
@@ -80,20 +100,22 @@ def four_factors(t: pd.Series, o: pd.Series) -> dict:
 
 
 # ── figures ─────────────────────────────────────────────────────────────────────
-def fig_margin(g, pbp, team, out: Path) -> dict:
+def fig_margin(g: pd.Series, pbp: pd.DataFrame, team: str, out: Path) -> dict[str, int]:
+    """Save margin.png (score margin over the game, team's view) and return the biggest lead and deficit."""
     p = pbp[pbp.game_id == g.game_id].dropna(subset=["score_home", "score_away"]).sort_values("seq")
     GOLD, GOLD_EDGE = team_color(team)
     home = g.home_team == team
     m = (p.score_home - p.score_away) * (1 if home else -1)
     # elapsed_sec restarts every period: 10' quarters, 5' overtimes
-    start = p.period.map(lambda k: 10 * (k - 1) if k <= 4 else 40 + 5 * (k - 5))
+    start = p.period.map(lambda k: QUARTER_MIN * (k - 1) if k <= REGULATION_PERIODS
+                         else FIRST_OT_START_MIN + OVERTIME_MIN * (k - REGULATION_PERIODS - 1))
     t = (start + p.elapsed_sec / 60).values
     fig, ax = plt.subplots(figsize=(10, 4.2))
     ax.fill_between(t, 0, m, where=m >= 0, color=GOLD, alpha=0.85, step="post", linewidth=0)
     ax.fill_between(t, 0, m, where=m < 0, color=LEAGUE, alpha=0.7, step="post", linewidth=0)
     ax.step(t, m, where="post", color=GOLD_EDGE, linewidth=1)
     ax.axhline(0, color=TEXT2, linewidth=0.8)
-    for q in range(10, int(t.max()) + 1, 10):
+    for q in range(QUARTER_MIN, int(t.max()) + 1, QUARTER_MIN):
         ax.axvline(q, color=lba_style.GRID, linewidth=0.8, zorder=0)
     ax.set_xlabel("minute"); ax.set_ylabel(f"{short(team)} lead (points)")
     style_axes(ax, "y")
@@ -102,13 +124,14 @@ def fig_margin(g, pbp, team, out: Path) -> dict:
     return {"max_lead": int(m.max()), "max_deficit": int(m.min())}
 
 
-def fig_players(box, g, team, out: Path) -> pd.DataFrame:
+def fig_players(box: pd.DataFrame, g: pd.Series, team: str, out: Path) -> pd.DataFrame:
+    """Save players.png (PIR in the game vs the season average before it) and return the plotted rows."""
     b = box[(box.row_type == "player") & (box.team == team) & (box.sec > 0)].copy()
     cur = b[b.game_id == g.game_id].set_index("player_surname")
     prev = b[(b.game_id != g.game_id) & (b["round"] < g["round"])].groupby("player_surname").val.mean()
     d = cur[["sec", "val", "pts"]].join(prev.rename("avg_before"))
     GOLD, GOLD_EDGE = team_color(team)
-    d = d[d.sec >= 300].sort_values("val")
+    d = d[d.sec >= MIN_PLAYER_SEC].sort_values("val")
     d.index = d.index.str.title()
     fig, ax = plt.subplots(figsize=(10, 0.45 * len(d) + 1.8))
     y = np.arange(len(d))
@@ -119,15 +142,15 @@ def fig_players(box, g, team, out: Path) -> pd.DataFrame:
     ax.set_yticks(y); ax.set_yticklabels(d.index)
     ax.set_xlabel("PIR (LBA efficiency)"); ax.legend(loc="lower right", fontsize=8)
     style_axes(ax, "x")
-    ax.set_title("Players with 5+ minutes: PIR in the game vs their average before", loc="left", **TITLE_KW)
+    ax.set_title(f"Players with {MIN_PLAYER_SEC // 60}+ minutes: PIR in the game vs their average before", loc="left", **TITLE_KW)
     save_fig(fig, out / "players.png"); plt.close(fig)
     return d
 
 
-def fig_season(games, team, upto: int, out: Path) -> None:
-    gg = st.finished(games); gg = gg[gg["round"] <= upto]
-    lg = st._long(gg.assign(date=gg.date))
-    gg = gg.assign(r=gg["round"])
+def fig_season(games: pd.DataFrame, team: str, upto: int, out: Path) -> None:
+    """Save season.png: points scored and conceded by round up to round ``upto``, against the league average."""
+    gg = st.finished(games)
+    gg = gg[gg["round"] <= upto].assign(r=lambda df: df["round"])
     rows = []
     for _, x in gg.iterrows():
         rows.append((x.r, x.home_team, x.home_score, x.away_score)); rows.append((x.r, x.away_team, x.away_score, x.home_score))
@@ -138,10 +161,10 @@ def fig_season(games, team, upto: int, out: Path) -> None:
     fig, ax = plt.subplots(figsize=(10, 4.2))
     ax.plot(lgavg.index, lgavg.pf, color=LEAGUE, linewidth=2, linestyle="--", label="league average scored")
     ax.plot(me.index, me.pf, color=GOLD_EDGE, marker="o", linewidth=2.4, markerfacecolor=GOLD, markersize=9, label=f"{short(team)} scored")
-    ax.plot(me.index, me.pa, color=FOES, marker="o", linewidth=2.4, markersize=7, label=f"{short(team)} conceded")
+    ax.plot(me.index, me.pa, color=BLUE, marker="o", linewidth=2.4, markersize=7, label=f"{short(team)} conceded")
     for r, x in me.iterrows():
         ax.text(r, x.pf + 2.2, int(x.pf), ha="center", fontsize=9, color=TEXT)
-        ax.text(r, x.pa - 4.5, int(x.pa), ha="center", fontsize=9, color=FOES)
+        ax.text(r, x.pa - 4.5, int(x.pa), ha="center", fontsize=9, color=BLUE)
     ax.set_xticks(me.index); ax.set_xlabel("round"); ax.set_ylabel("points per game")
     ax.legend(loc="upper left", ncol=3, fontsize=8)
     style_axes(ax, "y")
@@ -150,14 +173,16 @@ def fig_season(games, team, upto: int, out: Path) -> None:
 
 
 # ── markdown snippets ───────────────────────────────────────────────────────────
-def md_table(headers, rows, align=None) -> str:
+def md_table(headers: Sequence[str], rows: Iterable[Sequence], align: Sequence[str] | None = None) -> str:
+    """Return a markdown table; ``align`` holds one separator cell per column (default ``---``)."""
     align = align or ["---"] * len(headers)
     lines = ["| " + " | ".join(headers) + " |", "| " + " | ".join(align) + " |"]
     lines += ["| " + " | ".join(str(c) for c in r) + " |" for r in rows]
     return "\n".join(lines)
 
 
-def box_md(box, g, team) -> str:
+def box_md(box: pd.DataFrame, g: pd.Series, team: str) -> str:
+    """Return the team's box score of one game as a markdown table (starters in bold)."""
     b = box[(box.game_id == g.game_id) & (box.team == team) & (box.row_type == "player") & (box.sec > 0)].sort_values("sec", ascending=False)
     rows = []
     for _, x in b.iterrows():
@@ -168,7 +193,8 @@ def box_md(box, g, team) -> str:
                     ["---"] + ["---:"] * 11) + "\n\nBold = starter."
 
 
-def results_md(games, rnd, highlight) -> str:
+def results_md(games: pd.DataFrame, rnd: int, highlight: str) -> str:
+    """Return the results of round ``rnd`` as a markdown list, with ``highlight``'s game in bold."""
     res = st.results_by_round(games); res = res[res["round"] == rnd]
     items = []
     for _, x in res.iterrows():
@@ -177,31 +203,42 @@ def results_md(games, rnd, highlight) -> str:
     return "\n".join(items)
 
 
-def standings_table_md(games, rnd, highlight) -> str:
-    t = st.standings(games.assign(), None)
+def standings_table_md(games: pd.DataFrame, rnd: int, highlight: str) -> str:
+    """Return the standings after round ``rnd`` as a markdown table, with ``highlight`` in bold."""
     g = games[games["round"] <= rnd]
     t = st.standings(g, None)
     rows = [[x.pos, f"**{short(tm)}**" if tm == highlight else short(tm), x.pts, f"{x.w}-{x.l}", f"{x['diff']:+d}", x.form] for tm, x in t.iterrows()]
     return md_table(["#", "Team", "Pts", "W-L", "Diff", "Results"], rows, ["---:", "---", "---:", ":---:", "---:", ":---:"])
 
 
-def next_game(games, team, rnd) -> dict | None:
+def next_game(games: pd.DataFrame, team: str, rnd: int) -> dict | None:
+    """Return the team's first game after round ``rnd`` (opponent, date, time, venue), or None if there is none."""
     n = games[(games["round"] > rnd) & ((games.home_team == team) | (games.away_team == team))].sort_values("round")
     if n.empty:
         return None
     x = n.iloc[0]; home = x.home_team == team
     return {"round": int(x["round"]), "opponent": short(x.away_team if home else x.home_team), "home": bool(home),
-            "date": x.match_datetime[:10], "time": x.match_datetime[11:16], "venue": None if pd.isna(x.venue) else x.venue}
+            "date": x.match_datetime[:DATE_LEN], "time": x.match_datetime[TIME_SLICE], "venue": None if pd.isna(x.venue) else x.venue}
 
 
 # ── main ────────────────────────────────────────────────────────────────────────
 def finished_rounds(games: pd.DataFrame, team: str) -> list[int]:
-    g = games[((games.home_team == team) | (games.away_team == team)) & (games.game_status.astype(str) == "2")]
+    """Return the sorted rounds in which ``team`` has a finished, collected game."""
+    g = games[((games.home_team == team) | (games.away_team == team)) & (games.game_status.astype(str) == FINISHED_STATUS)]
     return sorted(int(r) for r in g["round"].unique())
 
 
 def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
-    """Post-game review: write reports/review/round-NN/ (figures + auto.json) and, once, weekly/review/round-NN/notes.md. Returns the output folder."""
+    """Write the post-game review of round ``rnd``: figures + auto.json and, once, the notes.md stub.
+
+    Args:
+        rnd: Round to report.
+        team: Team the review is about.
+        data: Folder with games.csv, box_scores.csv and pbp.csv.
+
+    Returns:
+        The output folder, ``reports/review/round-NN``.
+    """
     lba_style.AUTHOR = CFG["author"] or lba_style.AUTHOR
     games = pd.read_csv(data / "games.csv")
     box = pd.read_csv(data / "box_scores.csv")
@@ -211,7 +248,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     opp = g.away_team if home else g.home_team
     pf, pa = (g.home_score, g.away_score) if home else (g.away_score, g.home_score)
 
-    out = ROOT / "reports" / "review" / f"round-{rnd:02d}"
+    out = REPORTS_REVIEW / f"round-{rnd:02d}"
     out.mkdir(parents=True, exist_ok=True)
     lba_style.STAMP_NOTE = f"through round {rnd}"
 
@@ -222,7 +259,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     fig_players(box, g, team, out)
     fig_season(games, team, rnd, out)
 
-    date = g.match_datetime[:10]
+    date = g.match_datetime[:DATE_LEN]
     xbox = ws.load_box(data, rnd, date, CFG["eurocup_file"])
     extra = {"playing_time": ws.playing_time_flags(xbox, str(g.game_id), date)}
 
@@ -236,7 +273,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     auto = {
         "round": rnd, "game_id": int(g.game_id), "team": team, "opponent": short(opp), "opponent_full": opp,
         "home": bool(home), "win": bool(pf > pa), "score_for": int(pf), "score_against": int(pa),
-        "date": g.match_datetime[:10], "time": g.match_datetime[11:16],
+        "date": date, "time": g.match_datetime[TIME_SLICE],
         "venue": None if pd.isna(g.venue) else g.venue, "town": None if pd.isna(g.town) else g.town,
         "spectators": None if pd.isna(g.spectators) else int(g.spectators),
         "coach": g.home_coach if home else g.away_coach, "coach_opp": g.away_coach if home else g.home_coach,
@@ -250,10 +287,10 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     }
     (out / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    notes_dir = ROOT / "weekly" / "review" / f"round-{rnd:02d}"
+    notes_dir = WEEKLY_REVIEW / f"round-{rnd:02d}"
     if not (notes_dir / "notes.md").exists():
         notes_dir.mkdir(parents=True, exist_ok=True)
-        text = (ROOT / "weekly" / "template" / "notes_review.md").read_text(encoding="utf-8").replace("{{round}}", str(rnd))
+        text = (TEMPLATES / "notes_review.md").read_text(encoding="utf-8").replace("{{round}}", str(rnd))
         (notes_dir / "notes.md").write_text(text, encoding="utf-8")
         print(f"created {notes_dir / 'notes.md'} - write your text there")
     print(f"round {rnd}: {short(team)} {pf}-{pa} {short(opp)}  ->  {out}")
@@ -261,12 +298,13 @@ def generate(rnd: int, team: str = TEAM, data: Path = ROOT / "data") -> Path:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--round", type=int, required=True)
-    ap.add_argument("--team", default=TEAM)
-    ap.add_argument("--data", default=str(ROOT / "data"))
+    """Parse the command line and generate the review of one round."""
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--round", type=int, required=True, help="round to report")
+    ap.add_argument("--team", default=TEAM, help="team the review is about (default: weekly/config.json)")
+    ap.add_argument("--data", type=Path, default=ROOT / "data", help="folder with the collected CSV files")
     a = ap.parse_args()
-    generate(a.round, a.team, Path(a.data))
+    generate(a.round, a.team, a.data)
 
 
 if __name__ == "__main__":
