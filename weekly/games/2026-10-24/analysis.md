@@ -61,7 +61,7 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## Starting five and bench
 
-- Four fixed starters in all 4 LBA games: Hale, Duke, Nikolic, Alviti. The fifth spot alternates between Renfro (Virtus, Trieste) and Kamagate (Scafati, Trento); whoever does not start still plays 14' to 23'. ==Note: the box score lists Renfro as starter against Trieste, but the play-by-play has Kamagate in for Renfro and Della Valle in for Duke at 10:00 of Q1.==
+- Four fixed starters in all 4 LBA games: Hale, Duke, Nikolic, Alviti. The fifth spot goes to Kamagate in three games (Scafati, Trieste, Trento) and to Renfro only against Virtus; whoever does not start still plays 14' to 23'.
 - Short bench: 24 points a game, 30% of the total, against a league average of 33 and BC Roma's 40 (40%); the starters score 56 (league 54). Bench scoring moves from game to game: Renfro 14 at Scafati, Roby 12 at Trento, Della Valle 11 vs Trieste and Librizzi 10 at Scafati are the only double-figure bench games.
 - The first substitution comes between 6:49 and 6:18 of Q1 in three games out of four, and it is always the same pair: Librizzi and Roby in for Duke and Nikolic (Virtus, Trento), Librizzi and Renfro in for Duke and Kamagate (Scafati). The Renfro/Kamagate swap happens within the first four minutes.
 - 13 players used, the top 7 play 79% of the minutes; in practice a 10-man rotation: Della Valle out in 3 games of 4 (and expected out again), Ladurner out in the last two, Villa missed Trieste; Ladurner and Kangur under 1' a game.
