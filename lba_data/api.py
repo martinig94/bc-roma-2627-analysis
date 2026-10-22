@@ -43,20 +43,42 @@ HEADERS = {
     "Cache-Control": "no-cache",
 }
 
+REQUEST_TIMEOUT_S = 30   # seconds before one HTTP call is abandoned
+DEFAULT_RETRIES = 3      # attempts per call before giving up
+DEFAULT_PAUSE_S = 1.0    # base back-off in seconds; multiplied by the attempt number
+SERIE_A_CS_ID = 1        # `cs_id` of Serie A in the championships endpoint
+MAX_ITEMS_CHAMPIONSHIPS = 1000   # page size large enough to return every competition of a season
+MAX_ITEMS_TEAMS = 50             # page size large enough to return every team of a season
+
 # game_status values seen on the calendar
 STATUS_SCHEDULED = "0"
 STATUS_LIVE = "1"
 STATUS_FINISHED = "2"
 
 
-def get(path: str, params: dict[str, Any] | None = None, retries: int = 3, pause: float = 1.0) -> dict:
+def get(path: str, params: dict[str, Any] | None = None, retries: int = DEFAULT_RETRIES,
+        pause: float = DEFAULT_PAUSE_S) -> dict:
+    """Return the decoded JSON of ``GET {BASE}/{path}``, retrying with a growing pause.
+
+    Args:
+        path: Endpoint path relative to ``BASE``.
+        params: Query-string parameters.
+        retries: Number of attempts before giving up.
+        pause: Base sleep in seconds between attempts (times the attempt number).
+
+    Returns:
+        The parsed JSON payload.
+
+    Raises:
+        RuntimeError: If every attempt failed; the last error is chained.
+    """
     url = f"{BASE}/{path}"
     if params:
         url += "?" + urlencode(params)
     last: Exception | None = None
     for attempt in range(retries):
         try:
-            with urlopen(Request(url, headers=HEADERS), timeout=30) as resp:
+            with urlopen(Request(url, headers=HEADERS), timeout=REQUEST_TIMEOUT_S) as resp:
                 return json.load(resp)
         except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as exc:  # pragma: no cover - network
             last = exc
@@ -65,14 +87,18 @@ def get(path: str, params: dict[str, Any] | None = None, retries: int = 3, pause
 
 
 def championships(year: int) -> list[dict]:
-    return get("championships/get-championships", {"s": year, "cs_id": 1, "items": 1000})["competitions"]
+    """Return the Serie A competitions (regular season, play-offs...) of a season."""
+    params = {"s": year, "cs_id": SERIE_A_CS_ID, "items": MAX_ITEMS_CHAMPIONSHIPS}
+    return get("championships/get-championships", params)["competitions"]
 
 
 def teams(year: int) -> list[dict]:
-    return get("teams/get-teams", {"year": year, "items": 50})["teams"]
+    """Return the teams of a season."""
+    return get("teams/get-teams", {"year": year, "items": MAX_ITEMS_TEAMS})["teams"]
 
 
 def calendar(championship_id: int, day: int | None = None) -> dict:
+    """Return the calendar of a championship: all rounds' index, or the matches of round ``day``."""
     params: dict[str, Any] = {"id": championship_id}
     if day is not None:
         params["d"] = day
@@ -80,14 +106,17 @@ def calendar(championship_id: int, day: int | None = None) -> dict:
 
 
 def match(game_id: int) -> dict:
+    """Return the match header (teams, venue, quarter scores, coaches, referees)."""
     return get("championships/get-championships-matches-by-id", {"id": game_id})
 
 
 def box_score(game_id: int) -> dict:
+    """Return the full box score (players, team and total rows of both sides)."""
     return get("championships/get-championships-matches-scores-by-id", {"id": game_id, "info": "true"})
 
 
 def play_by_play(game_id: int) -> dict:
+    """Return every play-by-play event of a game in chronological order."""
     return get(
         "championships/get-championships-matches-play-by-play",
         {"id": game_id, "info": "true", "sort": "asc"},
@@ -95,4 +124,5 @@ def play_by_play(game_id: int) -> dict:
 
 
 def team_roster(team_id: int, year: int) -> dict:
+    """Return the roster table ("giocatori") of a team for a season."""
     return get("teams/get-team-roster", {"id": team_id, "year": year})

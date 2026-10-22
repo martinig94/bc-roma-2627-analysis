@@ -1,4 +1,6 @@
 """Unit tests against a real (trimmed) Round 1 payload: Treviso 109-94 BC Roma, 26 Sep 2026."""
+from __future__ import annotations
+
 import json
 from pathlib import Path
 
@@ -7,7 +9,8 @@ from lba_data.transform import BOX_FIELDS, GAME_FIELDS, PBP_FIELDS, box_rows, ga
 FIX = json.loads((Path(__file__).parent / "fixtures" / "game_25602.json").read_text(encoding="utf-8"))
 
 
-def test_game_row_from_calendar_and_header():
+def test_game_row_from_calendar_and_header() -> None:
+    """Check game row from calendar and header."""
     cal = game_row(FIX["cal"]["matches"][0])
     hdr = game_row(FIX["scores"]["match"])
     assert set(cal) == set(GAME_FIELDS) == set(hdr)
@@ -18,7 +21,8 @@ def test_game_row_from_calendar_and_header():
     assert hdr["q1_home"] == 29 and hdr["q4_away"] == 27
 
 
-def test_box_rows():
+def test_box_rows() -> None:
+    """Check box rows."""
     rows = list(box_rows(FIX["scores"]))
     assert all(set(r) == set(BOX_FIELDS) for r in rows)
     players = [r for r in rows if r["row_type"] == "player"]
@@ -34,7 +38,8 @@ def test_box_rows():
     assert team_rows[0]["reb"] == 7  # team rebounds, Treviso
 
 
-def test_pbp_rows():
+def test_pbp_rows() -> None:
+    """Check pbp rows."""
     rows = list(pbp_rows(25602, FIX["pbp"]))
     assert all(set(r) == set(PBP_FIELDS) for r in rows)
     assert len(rows) == 6
