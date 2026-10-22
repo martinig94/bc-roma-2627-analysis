@@ -7,22 +7,43 @@ One PNG per player (<surname>.png) with four panels — shot chart, shot types /
 stat lines — plus `connections.png` (assist matrix: who passes to whom) and `habits_summary.png`
 (one row per key player: assisted share, drives, threes, fast breaks, fouls drawn, turnover types).
 
+``--team`` defaults to the team in weekly/config.json.
+
 Shot maps and habits come from the Legabasket play-by-play (LBA games only — they carry coordinates,
 shot types and assist links). Stat lines use all competitions when the EuroCup file is present.
 """
 from __future__ import annotations
 
 import argparse
+from datetime import date
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from game_report import game_clock, stints
-from lba_style import (save_fig, BLUE, DPI, GOLD, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS,
+import lba_style
+import weekly_config
+from game_report import PERIOD_LEN, REGULATION_PERIODS, game_clock, stints
+from lba_style import (save_fig, GOLD, GREEN, LEAGUE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW, ZONE_LABEL_POS,
                        assign_zone_arr, draw_half_court, shots_cm, style_axes, team_color)
 from matchup_report import parse_eurocup, player_table
+
+ROOT = weekly_config.ROOT
+EUROCUP_RAW = "eurocup_2026_raw.txt"   # default EuroCup file name inside the data folder
+# legabasket.it play-by-play event names and qualifiers (Italian, as they appear in pbp.csv)
+EV_MAKES = ["2 punti segnato", "3 punti segnato"]
+EV_ASSIST, EV_FOUL_DRAWN, EV_FOUL = "Assist", "Fallo Subito", "Fallo commesso"
+EV_TURNOVER, EV_STEAL, EV_BLOCK = "Palla persa", "Palla recuperata", "Stoppata"
+EV_OREB, EV_DREB = "Rimbalzo offensivo", "Rimbalzo difensivo"
+QUAL_SHOOTING_FOUL, QUAL_FASTBREAK = "tiro", "contropiede"
+DRIVE_TYPES = ["Da penetrazione", "Appoggio a canestro", "Schiacciata", "Alley-oop"]
+JUMPER_TYPES = ["Tiro in sospensione", "Arresto e tiro", "Tiro in Step Back", "Tiro in fadeaway"]
+SIDE_CM = 100              # |x| beyond this (cm from the basket line) counts as left/right of the key
+KEY_PLAYER_MIN_MPG = 15    # default key players: at least this many minutes per game
+MIN_PER_GAME = 40          # regulation minutes (per-40 stat lines)
+QUARTER_YMAX = 11.5        # y limit of the minutes-per-quarter chart (a quarter is 10 minutes)
+CONNECTION_TEXT_SHARE = 0.6   # matrix cells above this share of the maximum get white text
 
 SHOT_TYPES = ["Tiro in sospensione", "Arresto e tiro", "Tiro in Step Back", "Tiro in fadeaway", "Da penetrazione",
               "Appoggio a canestro", "Schiacciata", "Alley-oop", "Gancio", "Giro e Tiro", "Tiro in corsa"]
@@ -36,20 +57,29 @@ TOV_EN = {"Passaggio sbagliato": "bad pass", "Palleggio": "lost dribble", "Doppi
 
 # ── per-player event tables ─────────────────────────────────────────────────────
 def player_events(pbp: pd.DataFrame, team: str, surname: str) -> dict:
-    """All the habit numbers for one player from the LBA play-by-play."""
+    """Return all the habit numbers for one player from the LBA play-by-play.
+
+    Args:
+        pbp: LBA play-by-play of every collected game.
+        team: Team name as it appears in ``pbp["team"]``.
+        surname: Player surname (any case).
+
+    Returns:
+        Dict with the shots table, counts (games, assisted makes, fouls, steals, ...) and value counts
+        of passers, receivers and turnover types.
+    """
     tp = pbp[pbp.team == team]
     me = tp[tp.player_surname.str.upper() == surname.upper()]
     shots = shots_cm(me)
-    makes = me[me.event.isin(["2 punti segnato", "3 punti segnato"])]
-    assists_on_me = tp[(tp.event == "Assist") & tp.linked_seq.isin(makes.seq)]
-    my_assists = tp[(tp.event == "Assist") & (tp.player_surname.str.upper() == surname.upper())]
+    makes = me[me.event.isin(EV_MAKES)]
+    assists_on_me = tp[(tp.event == EV_ASSIST) & tp.linked_seq.isin(makes.seq)]
+    my_assists = tp[(tp.event == EV_ASSIST) & (tp.player_surname.str.upper() == surname.upper())]
     scored = tp[tp.seq.isin(my_assists.linked_seq)]
-    fouls_drawn = me[me.event == "Fallo Subito"]
-    fouls_drawn_shooting = tp[(tp.event == "Fallo commesso") & (tp.qualifier_1 == "tiro")]  # by opponents, see below
+    fouls_drawn = me[me.event == EV_FOUL_DRAWN]
     opp = pbp[(pbp.game_id.isin(tp.game_id.unique())) & (pbp.team != team)]
-    shooting_fouls_on_me = opp[(opp.event == "Fallo commesso") & (opp.qualifier_1 == "tiro")]
-    shooting_fouls_on_me = me[(me.event == "Fallo Subito") & me.linked_seq.isin(shooting_fouls_on_me.seq)]
-    tov = me[me.event == "Palla persa"]
+    shooting_fouls_on_me = opp[(opp.event == EV_FOUL) & (opp.qualifier_1 == QUAL_SHOOTING_FOUL)]
+    shooting_fouls_on_me = me[(me.event == EV_FOUL_DRAWN) & me.linked_seq.isin(shooting_fouls_on_me.seq)]
+    tov = me[me.event == EV_TURNOVER]
     return dict(
         shots=shots, n_games=me.game_id.nunique(),
         assisted=len(assists_on_me), makes=len(makes),
@@ -57,17 +87,17 @@ def player_events(pbp: pd.DataFrame, team: str, surname: str) -> dict:
         assists_to=scored.player_surname.str.title().value_counts(),
         fouls_drawn=len(fouls_drawn), shooting_fouls_drawn=len(shooting_fouls_on_me),
         tov_types=tov.qualifier_1.map(lambda q: TOV_EN.get(q, q)).value_counts(),
-        fastbreak=int((shots.qualifier_2 == "contropiede").sum()),
-        fastbreak_made=int(((shots.qualifier_2 == "contropiede") & shots.made).sum()),
+        fastbreak=int((shots.qualifier_2 == QUAL_FASTBREAK).sum()),
+        fastbreak_made=int(((shots.qualifier_2 == QUAL_FASTBREAK) & shots.made).sum()),
         by_period=shots.groupby("period").agg(att=("made", "size"), made=("made", "sum")),
-        steals=int((me.event == "Palla recuperata").sum()), blocks=int((me.event == "Stoppata").sum()),
-        oreb=int((me.event == "Rimbalzo offensivo").sum()), dreb=int((me.event == "Rimbalzo difensivo").sum()),
+        steals=int((me.event == EV_STEAL).sum()), blocks=int((me.event == EV_BLOCK).sum()),
+        oreb=int((me.event == EV_OREB).sum()), dreb=int((me.event == EV_DREB).sum()),
     )
 
 
-def minutes_by_quarter(pbp, box, team, surname) -> tuple[np.ndarray, np.ndarray]:
+def minutes_by_quarter(pbp: pd.DataFrame, box: pd.DataFrame, team: str, surname: str) -> tuple[np.ndarray, np.ndarray]:
     """Seconds on court in each quarter (summed over games) and the team's +/- while on court per quarter."""
-    secs, pm = np.zeros(4), np.zeros(4)
+    secs, pm = np.zeros(REGULATION_PERIODS), np.zeros(REGULATION_PERIODS)
     for gid in box[(box.team == team) & (box.row_type == "total")].game_id.unique():
         gp = pbp[pbp.game_id == gid].sort_values("seq")
         gb = box[box.game_id == gid]
@@ -79,8 +109,8 @@ def minutes_by_quarter(pbp, box, team, surname) -> tuple[np.ndarray, np.ndarray]
         home = bool(gb[gb.team == team].home.iloc[0])
         gp2["margin"] = ((gp2.score_home - gp2.score_away) * (1 if home else -1)).ffill().fillna(0)
         for _, s in mine.iterrows():
-            for q in range(4):
-                a, b = max(s.start, q * 600), min(s.end, (q + 1) * 600)
+            for q in range(REGULATION_PERIODS):
+                a, b = max(s.start, q * PERIOD_LEN), min(s.end, (q + 1) * PERIOD_LEN)
                 if b > a:
                     secs[q] += b - a
                     m0 = gp2.loc[gp2.t <= a, "margin"].iloc[-1] if (gp2.t <= a).any() else 0
@@ -90,7 +120,9 @@ def minutes_by_quarter(pbp, box, team, surname) -> tuple[np.ndarray, np.ndarray]
 
 
 # ── figures ─────────────────────────────────────────────────────────────────────
-def player_card(pbp, box, team, surname, pt_row, ev, out, color):
+def player_card(pbp: pd.DataFrame, box: pd.DataFrame, team: str, surname: str, pt_row: pd.Series, ev: dict,
+                out: Path, color: tuple[str, str]) -> None:
+    """Save ``<surname>.png``: shot chart, shot types, minutes by quarter and stat lines of one player."""
     fill, edge = color
     fig = plt.figure(figsize=(16, 9.5))
     gs = fig.add_gridspec(2, 3, width_ratios=[1.3, 1, 1], height_ratios=[1.3, 1])
@@ -128,18 +160,19 @@ def player_card(pbp, box, team, surname, pt_row, ev, out, color):
     # 3. minutes by quarter + plus/minus
     secs, pm = minutes_by_quarter(pbp, box, team, surname)
     mpq = secs / 60 / max(ev["n_games"], 1)
-    x = np.arange(4)
+    x = np.arange(REGULATION_PERIODS)
     ax_q.bar(x, mpq, 0.6, color=fill, edgecolor=edge, linewidth=0.6)
     for xi, (m, p) in enumerate(zip(mpq, pm)):
         ax_q.text(xi, m + 0.2, f"{m:.1f}'\n{p:+.0f}", ha="center", fontsize=8.5, color=GREEN if p > 0 else RED if p < 0 else TEXT2, fontweight="bold")
-    bp = ev["by_period"].reindex([1, 2, 3, 4]).fillna(0)
-    ax_q.set_xticks(x); ax_q.set_xticklabels([f"Q{i}\n{int(a)} FGA" for i, a in zip(range(1, 5), bp.att)])
-    ax_q.set_ylim(0, 11.5); ax_q.set_ylabel("minutes per game")
+    periods = range(1, REGULATION_PERIODS + 1)
+    bp = ev["by_period"].reindex(list(periods)).fillna(0)
+    ax_q.set_xticks(x); ax_q.set_xticklabels([f"Q{i}\n{int(a)} FGA" for i, a in zip(periods, bp.att)])
+    ax_q.set_ylim(0, QUARTER_YMAX); ax_q.set_ylabel("minutes per game")
     ax_q.set_title(f"When he plays (LBA only, {ev['n_games']} games)\nminutes per quarter · team +/- while on court", **TITLE_KW); style_axes(ax_q, "y")
 
     # 4. stat lines
     r = pt_row
-    per40 = 40 / r.MPG if r.MPG else 0
+    per40 = MIN_PER_GAME / r.MPG if r.MPG else 0
     lines = [
         f"LBA+EC ({int(r.GP)} games, {int(r.GS)} starts): {r.MPG:.1f} min · {r.PPG:.1f} pts · {r.RPG:.1f} reb · {r.APG:.1f} ast · PIR {r.PIR:.1f} · TS {r['TS%']:.0f}% · 3P {r['3P']} · +/- {r.pm:+.0f}",
         f"Per 40 min (LBA+EC): {r.PPG * per40:.1f} pts · {r.RPG * per40:.1f} reb · {r.APG * per40:.1f} ast · {r.tov / r.GP * per40:.1f} tov",
@@ -153,10 +186,11 @@ def player_card(pbp, box, team, surname, pt_row, ev, out, color):
     save_fig(fig, out / f"{surname.lower()}.png"); plt.close(fig)
 
 
-def fig_connections(pbp, team, players, out, color):
+def fig_connections(pbp: pd.DataFrame, team: str, players: list[str], out: Path, color: tuple[str, str]) -> pd.DataFrame:
+    """Save connections.png (assist matrix, passer by scorer) and return the matrix."""
     tp = pbp[pbp.team == team]
-    makes = tp[tp.event.isin(["2 punti segnato", "3 punti segnato"])][["seq", "player_surname"]].rename(columns={"player_surname": "scorer"})
-    ast = tp[tp.event == "Assist"][["linked_seq", "player_surname"]].rename(columns={"player_surname": "passer"})
+    makes = tp[tp.event.isin(EV_MAKES)][["seq", "player_surname"]].rename(columns={"player_surname": "scorer"})
+    ast = tp[tp.event == EV_ASSIST][["linked_seq", "player_surname"]].rename(columns={"player_surname": "passer"})
     pairs = ast.merge(makes, left_on="linked_seq", right_on="seq")
     pairs["passer"] = pairs.passer.str.title(); pairs["scorer"] = pairs.scorer.str.title()
     names = [p.title() for p in players]
@@ -171,7 +205,7 @@ def fig_connections(pbp, team, players, out, color):
         for j in range(len(order)):
             v = mat.values[i, j]
             if v:
-                ax.text(j, i, int(v), ha="center", va="center", fontsize=9, color="white" if v >= mat.values.max() * 0.6 else TEXT)
+                ax.text(j, i, int(v), ha="center", va="center", fontsize=9, color="white" if v >= mat.values.max() * CONNECTION_TEXT_SHARE else TEXT)
     ax.set_xlabel("scorer"); ax.set_ylabel("passer")
     tot_ast = int(mat.values.sum()); tot_mk = len(makes)
     ax.set_title(f"{team} — who feeds whom (LBA only): {tot_ast} assists on {tot_mk} field goals ({100 * tot_ast / tot_mk:.0f}% assisted)", **TITLE_KW)
@@ -180,17 +214,19 @@ def fig_connections(pbp, team, players, out, color):
     return mat
 
 
-def fig_habits_summary(evs: dict, pts: pd.DataFrame, team, out, color):
+def fig_habits_summary(evs: dict[str, dict], pts: pd.DataFrame, team: str, out: Path,
+                       color: tuple[str, str]) -> pd.DataFrame:
+    """Save habits_summary.png (one row per key player) and return the table behind it."""
     fill, edge = color
     rows = []
     for name, ev in evs.items():
         s = ev["shots"]; n = len(s)
         rows.append(dict(player=name.title(),
                          assisted=100 * ev["assisted"] / ev["makes"] if ev["makes"] else 0,
-                         drives=100 * s.qualifier_1.isin(["Da penetrazione", "Appoggio a canestro", "Schiacciata", "Alley-oop"]).sum() / n if n else 0,
-                         jumpers=100 * s.qualifier_1.isin(["Tiro in sospensione", "Arresto e tiro", "Tiro in Step Back", "Tiro in fadeaway"]).sum() / n if n else 0,
+                         drives=100 * s.qualifier_1.isin(DRIVE_TYPES).sum() / n if n else 0,
+                         jumpers=100 * s.qualifier_1.isin(JUMPER_TYPES).sum() / n if n else 0,
                          threes=100 * (s.pts == 3).sum() / n if n else 0,
-                         left=100 * (s.cx < -100).sum() / n if n else 0, right=100 * (s.cx > 100).sum() / n if n else 0,
+                         left=100 * (s.cx < -SIDE_CM).sum() / n if n else 0, right=100 * (s.cx > SIDE_CM).sum() / n if n else 0,
                          fouls=ev["fouls_drawn"] / max(ev["n_games"], 1), fga=n / max(ev["n_games"], 1)))
     d = pd.DataFrame(rows)
     cols = [("assisted", "% of makes assisted"), ("drives", "% of FGA at the rim\n(drive/layup/dunk)"), ("jumpers", "% of FGA jump shots"),
@@ -208,12 +244,13 @@ def fig_habits_summary(evs: dict, pts: pd.DataFrame, team, out, color):
     return d
 
 
-def main():
+def main() -> None:
+    """Parse the command line and write one card per key player plus the connections and habits charts."""
     ap = argparse.ArgumentParser()
-    ap.add_argument("--team", required=True)
-    ap.add_argument("--players", nargs="*", help="surnames; default: top --n by PIR with >= 15 min per game")
+    ap.add_argument("--team", default=weekly_config.load()["team"])
+    ap.add_argument("--players", nargs="*", help=f"surnames; default: top --n by PIR with >= {KEY_PLAYER_MIN_MPG} min per game")
     ap.add_argument("--n", type=int, default=5)
-    ap.add_argument("--data", default=str(Path(__file__).resolve().parent.parent / "data"))
+    ap.add_argument("--data", default=str(ROOT / "data"))
     ap.add_argument("--eurocup", default=None); ap.add_argument("--no-eurocup", action="store_true")
     ap.add_argument("--out", default="reports")
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: only games before this date (frozen pre-match snapshot)")
@@ -226,11 +263,9 @@ def main():
     box["date"] = box.match_datetime.str[:10]
     pbp = pd.read_csv(data / "pbp.csv")
     if a.before:
-        import lba_style
-        from datetime import date as _d
-        lba_style.STAMP_NOTE = f"games before {_d.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
+        lba_style.STAMP_NOTE = f"games before {date.fromisoformat(a.before):%d %b %Y} (pre-match snapshot)"
         box = box[box.date < a.before]; pbp = pbp[pbp.game_id.isin(box.game_id.unique())]
-    ec_path = Path(a.eurocup) if a.eurocup else data / "eurocup_2026_raw.txt"
+    ec_path = Path(a.eurocup) if a.eurocup else data / EUROCUP_RAW
     box_all = box
     if not a.no_eurocup and ec_path.exists():
         ec_box, _ = parse_eurocup(ec_path)
@@ -242,7 +277,7 @@ def main():
     if a.players:
         players = [p.upper() for p in a.players]
     else:
-        players = pt[pt.MPG >= 15].sort_values("PIR", ascending=False).head(a.n).index.tolist()
+        players = pt[pt.MPG >= KEY_PLAYER_MIN_MPG].sort_values("PIR", ascending=False).head(a.n).index.tolist()
     color = team_color(a.team)
     evs = {}
     for sn in players:

@@ -2,6 +2,8 @@
 
     python notebooks/team_report.py --team "BC Roma" --out reports/
 
+``--team`` defaults to the team in weekly/config.json. Writes the PNGs into ``<out>/season_<team>/``.
+
 Every figure compares the team with the rest of the league from the same collected games.
 Player charts print minutes played next to each name. Works from round 1 onwards and
 just gets more meaningful as data/ grows.
@@ -14,14 +16,34 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.axes import Axes
+from matplotlib.cm import ScalarMappable
 
-from lba_style import (save_fig, draw_zone_fill, BLUE, DPI, GOLD, GOLD_EDGE, GREEN, LEAGUE, ORANGE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW,
+import weekly_config
+from lba_style import (save_fig, draw_zone_fill, BLUE, GOLD, GOLD_EDGE, GREEN, LEAGUE, ORANGE, RED, SUP_KW, TEXT, TEXT2, TITLE_KW,
                        ZONE_LABEL_POS as _ZONE_LABEL_POS, ZONE_LABELS, assign_zone_arr, draw_half_court, mins,
                        shots_cm, style_axes, team_bar_kw)
 
+ROOT = weekly_config.ROOT
+CFG = weekly_config.load()
+SEASON_TAG = f"LBA {CFG['season'].replace('/', '-')}"   # e.g. "LBA 2026-27", used in chart titles
+FINISHED_STATUS = 2        # games.game_status value of a finished game
+FT_POSS_FACTOR = 0.44      # share of free-throw attempts that end a possession (standard estimate)
+MIN_PER_GAME = 40          # regulation minutes (turnovers are scaled to this)
+LEAGUE_TO_MINUTES = 36     # league turnover rate is shown per player-36 minutes ...
+PLAYERS_ON_COURT = 5       # ... over the five players of a team on court
+ZONE_COURT = "#3a3d52"     # court lines drawn over the zone heatmaps
+EMPTY_ZONE_TEXT = "#8a8d9c"   # label colour of zones without attempts
+MID_PCT_LOW, MID_PCT_HIGH = 25, 75   # zone FG% band where black label text stays readable on RdYlGn
+COLORBAR_TICKS = [0, 25, 50, 75, 100]   # FG% ticks of the heatmap colour bars
+TO_HIGH, TO_MID = 3.5, 2.5   # turnovers per 40: red above TO_HIGH, orange above TO_MID
+BAR_WIDTH = 0.25           # bar width of the three-series shooting efficiency chart
+NUM_ZONES = len(ZONE_LABELS)
+
 
 # ── data ────────────────────────────────────────────────────────────────────────
-def load(data: Path):
+def load(data: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Return ``(games, box_scores, pbp)`` read from the data folder."""
     games = pd.read_csv(data / "games.csv")
     box = pd.read_csv(data / "box_scores.csv")
     pbp = pd.read_csv(data / "pbp.csv")
@@ -29,6 +51,7 @@ def load(data: Path):
 
 
 def player_table(box: pd.DataFrame) -> pd.DataFrame:
+    """Aggregate player box rows to one season line per (team, player) with per-game and efficiency columns."""
     p = box[(box.row_type == "player")].copy()
     g = p.groupby(["team", "player_surname"], as_index=False).agg(
         GP=("game_id", "nunique"), sec=("sec", "sum"), pts=("pts", "sum"), ast=("ast", "sum"), reb=("reb", "sum"),
@@ -41,62 +64,69 @@ def player_table(box: pd.DataFrame) -> pd.DataFrame:
     g["fga"], g["fgm"] = g.fg2a + g.fg3a, g.fg2m + g.fg3m
     g["eFG%"] = 100 * (g.fgm + 0.5 * g.fg3m) / g.fga.replace(0, np.nan)
     g["FT%"] = 100 * g.ftm / g.fta.replace(0, np.nan)
-    g["TS%"] = 100 * g.pts / (2 * (g.fga + 0.44 * g.fta)).replace(0, np.nan)
-    g["TO_per40"] = 40 * g.tov / g.MIN.replace(0, np.nan)
+    g["TS%"] = 100 * g.pts / (2 * (g.fga + FT_POSS_FACTOR * g.fta)).replace(0, np.nan)
+    g["TO_per40"] = MIN_PER_GAME * g.tov / g.MIN.replace(0, np.nan)
     return g
 
 
-def league_line(box: pd.DataFrame) -> dict:
+def league_line(box: pd.DataFrame) -> dict[str, float]:
+    """Return league-wide eFG%, FT%, TS% and turnovers per 36 from team total rows."""
     t = box[box.row_type == "total"]
     fga, fgm, f3m, ftm, fta, pts = (t.fg2a + t.fg3a).sum(), (t.fg2m + t.fg3m).sum(), t.fg3m.sum(), t.ftm.sum(), t.fta.sum(), t.pts.sum()
-    return {"eFG%": 100 * (fgm + 0.5 * f3m) / fga, "FT%": 100 * ftm / fta, "TS%": 100 * pts / (2 * (fga + 0.44 * fta)),
-            "TO_per40": 36 * t.tov.sum() / (t.sec.sum() / 60) * 5}   # per player-36 min: team TOV over 5 players
+    return {"eFG%": 100 * (fgm + 0.5 * f3m) / fga, "FT%": 100 * ftm / fta, "TS%": 100 * pts / (2 * (fga + FT_POSS_FACTOR * fta)),
+            "TO_per40": LEAGUE_TO_MINUTES * t.tov.sum() / (t.sec.sum() / 60) * PLAYERS_ON_COURT}   # per player-36 min: team TOV over 5 players
 
 
 # ── figures ─────────────────────────────────────────────────────────────────────
 def zone_stats(s: pd.DataFrame) -> dict[str, tuple[int, int, float]]:
+    """Return ``{zone: (made, attempts, FG%)}`` for the shots in ``s``."""
     agg = s.groupby("zone").agg(att=("made", "size"), mk=("made", "sum"))
     return {z: (int(r.mk), int(r.att), 100 * r.mk / r.att) for z, r in agg.iterrows()}
 
 
-def plot_zone_heatmap(ax, s, title, ref: dict | None = None, colorbar=True, fontsize=8.5):
+def plot_zone_heatmap(ax: Axes, s: pd.DataFrame, title: str, ref: dict | None = None, colorbar: bool = True,
+                      fontsize: float = 8.5) -> ScalarMappable:
+    """Draw the nine-zone FG% heatmap of ``s`` on ``ax`` (``ref`` adds the league FG% per zone) and return the colour mappable."""
     st = zone_stats(s)
     cmap = plt.cm.RdYlGn.copy()
     draw_zone_fill(ax, {z: p for z, (_, _, p) in st.items()}, cmap)
     mesh = plt.cm.ScalarMappable(cmap=cmap, norm=plt.Normalize(0, 100)); mesh.set_array([])
-    draw_half_court(ax, color="#3a3d52", lw=1.6)
+    draw_half_court(ax, color=ZONE_COURT, lw=1.6)
     for z, (cx, cy) in _ZONE_LABEL_POS.items():
         mk, att, p = st.get(z, (0, 0, 0.0))
         if att == 0:
-            lab, col = "0/0\n—", "#8a8d9c"
+            lab, col = "0/0\n—", EMPTY_ZONE_TEXT
         else:
-            lab, col = f"{mk}/{att}\n{p:.0f}%", "black" if 25 < p < 75 else "white"
+            lab, col = f"{mk}/{att}\n{p:.0f}%", "black" if MID_PCT_LOW < p < MID_PCT_HIGH else "white"
             if ref and z in ref and ref[z][1] > 0:
                 lab += f"\nleague {ref[z][2]:.0f}%"
         ax.text(cx, cy, lab, ha="center", va="center", color=col, fontsize=fontsize, fontweight="bold", zorder=5)
     if colorbar:
         cb = plt.colorbar(mesh, ax=ax, fraction=0.025, pad=0.02)
-        cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", color=TEXT, fontsize=8)
+        cb.set_ticks(COLORBAR_TICKS); cb.set_label("FG%", color=TEXT, fontsize=8)
         cb.ax.yaxis.set_tick_params(color=TEXT)
     ax.set_title(title, **TITLE_KW)
     return mesh
 
 
-def fig_zone_heatmaps(s_team, s_league, team, label, out):
+def fig_zone_heatmaps(s_team: pd.DataFrame, s_league: pd.DataFrame, team: str, label: str, out: Path) -> None:
+    """Save zone_heatmap_team.png: team vs league FG% by zone."""
     fig, axes = plt.subplots(1, 2, figsize=(15, 8))
     ref = zone_stats(s_league)
     plot_zone_heatmap(axes[0], s_team, f"{team} — Shot Zone Heatmap", ref=ref, colorbar=False)
     mesh = plot_zone_heatmap(axes[1], s_league, "League (all other teams) — Shot Zone Heatmap", colorbar=False)
     cb = fig.colorbar(mesh, ax=axes, fraction=0.02, pad=0.02)
-    cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", color=TEXT, fontsize=8)
+    cb.set_ticks(COLORBAR_TICKS); cb.set_label("FG%", color=TEXT, fontsize=8)
     cb.ax.yaxis.set_tick_params(color=TEXT)
-    fig.suptitle(f"{team} — LBA 2026-27 {label}  |  FG% by zone vs league", **SUP_KW)
+    fig.suptitle(f"{team} — {SEASON_TAG} {label}  |  FG% by zone vs league", **SUP_KW)
     fig.text(0.01, 0.01, "Third line in each zone = FG% of all other LBA teams in that zone, from the collected games.",
              color=TEXT2, fontsize=8)
     save_fig(fig, out / "zone_heatmap_team.png"); plt.close(fig)
 
 
-def fig_zone_heatmap_players(s_team, pt, team, label, out, n=8):
+def fig_zone_heatmap_players(s_team: pd.DataFrame, pt: pd.DataFrame, team: str, label: str, out: Path,
+                             n: int = 8) -> None:
+    """Save zone_heatmap_players.png: zone heatmaps of the ``n`` players with most minutes."""
     top = pt.sort_values("MIN", ascending=False).head(n)
     cols = 4; rows = int(np.ceil(len(top) / cols))
     fig, axes = plt.subplots(rows, cols, figsize=(5.0 * cols, 5.4 * rows))
@@ -105,11 +135,12 @@ def fig_zone_heatmap_players(s_team, pt, team, label, out, n=8):
         plot_zone_heatmap(ax, sp, f"{r.Player}  ({mins(r.MIN)}, {int(sp.made.sum())}/{len(sp)} FG)", colorbar=False, fontsize=7.5)
     for ax in axes.ravel()[len(top):]:
         ax.axis("off")
-    fig.suptitle(f"{team} — LBA 2026-27 {label}  |  Player Shot Zones (top {len(top)} by minutes)", **SUP_KW)
+    fig.suptitle(f"{team} — {SEASON_TAG} {label}  |  Player Shot Zones (top {len(top)} by minutes)", **SUP_KW)
     save_fig(fig, out / "zone_heatmap_players.png"); plt.close(fig)
 
 
-def fig_shot_chart(s_team, team, label, out):
+def fig_shot_chart(s_team: pd.DataFrame, team: str, label: str, out: Path) -> None:
+    """Save shot_chart.png: every field-goal attempt of the team."""
     fig, ax = plt.subplots(figsize=(8, 8))
     draw_half_court(ax)
     miss, make = s_team[~s_team.made], s_team[s_team.made]
@@ -117,11 +148,12 @@ def fig_shot_chart(s_team, team, label, out):
     ax.scatter(make.cx, make.cy, s=55, c=GOLD, edgecolors=GOLD_EDGE, linewidths=0.7, label=f"Make ({len(make)})", zorder=4)
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.01), ncol=2, fontsize=9)
     ax.set_title(f"Shot Chart — all {team} field goal attempts", **TITLE_KW)
-    fig.suptitle(f"{team} — LBA 2026-27 {label}", **SUP_KW)
+    fig.suptitle(f"{team} — {SEASON_TAG} {label}", **SUP_KW)
     save_fig(fig, out / "shot_chart.png"); plt.close(fig)
 
 
-def fig_player_offense(pt_team, lg, team, label, out):
+def fig_player_offense(pt_team: pd.DataFrame, lg: dict[str, float], team: str, label: str, out: Path) -> None:
+    """Save player_PIR.png: PPG + APG stacked by player, and eFG%/FT%/TS% against the league."""
     d = pt_team[pt_team.MIN > 0].sort_values("PIR")
     fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(19, 7.5), gridspec_kw={"wspace": 0.35})
     y = np.arange(len(d))
@@ -134,7 +166,7 @@ def fig_player_offense(pt_team, lg, team, label, out):
     ax0.legend(fontsize=9, loc="lower right"); style_axes(ax0)
 
     e = d[d.fga > 0].sort_values("TS%", ascending=False)
-    x = np.arange(len(e)); w = 0.25
+    x = np.arange(len(e)); w = BAR_WIDTH
     ax1.bar(x - w, e["eFG%"], w, label="eFG%", **team_bar_kw())
     ax1.bar(x, e["FT%"].fillna(0), w, color=BLUE, label="FT%", alpha=0.9)
     ax1.bar(x + w, e["TS%"], w, color=GREEN, label="TS%", alpha=0.9)
@@ -147,11 +179,12 @@ def fig_player_offense(pt_team, lg, team, label, out):
     ax1.set_ylim(0, 105); ax1.set_ylabel("Percentage", fontsize=9)
     ax1.set_title("Shooting Efficiency: eFG% / FT% / TS%\n(dashed = league average, same colour)", **TITLE_KW)
     ax1.legend(fontsize=9, loc="upper right"); style_axes(ax1, "y")
-    fig.suptitle(f"{team} — LBA 2026-27 {label}  |  Player Offensive Overview", **SUP_KW)
+    fig.suptitle(f"{team} — {SEASON_TAG} {label}  |  Player Offensive Overview", **SUP_KW)
     save_fig(fig, out / "player_PIR.png"); plt.close(fig)
 
 
-def fig_pir_ts(pt, team, label, out, min_minutes=10):
+def fig_pir_ts(pt: pd.DataFrame, team: str, label: str, out: Path, min_minutes: int = 10) -> None:
+    """Save player_pir_ts.png: PIR vs TS% scatter, team in gold, league in grey."""
     d = pt[(pt.MIN >= min_minutes) & (pt.fga > 0)].copy()
     tm, lg = d[d.team == team], d[d.team != team]
     fig, ax = plt.subplots(figsize=(13, 9))
@@ -168,36 +201,38 @@ def fig_pir_ts(pt, team, label, out, min_minutes=10):
     ax.set_xlabel("PIR per game (LBA valutazione)", fontsize=9); ax.set_ylabel("TS% (True Shooting %)", fontsize=9)
     ax.set_title(f"PIR vs True Shooting%  —  dot size = MPG, min {min_minutes} minutes", **TITLE_KW)
     ax.legend(fontsize=9, loc="lower right"); style_axes(ax)
-    fig.suptitle(f"{team} — LBA 2026-27 {label}  |  PIR vs True Shooting%", **SUP_KW)
+    fig.suptitle(f"{team} — {SEASON_TAG} {label}  |  PIR vs True Shooting%", **SUP_KW)
     save_fig(fig, out / "player_pir_ts.png"); plt.close(fig)
 
 
-def fig_turnovers(pt_team, pt_league, team, label, out, min_minutes=5):
+def fig_turnovers(pt_team: pd.DataFrame, pt_league: pd.DataFrame, team: str, label: str, out: Path,
+                  min_minutes: int = 5) -> None:
+    """Save player_turnovers.png: turnovers per 40 minutes by player vs the league median."""
     d = pt_team[pt_team.MIN >= min_minutes].sort_values("TO_per40", ascending=False)
     lg_med = pt_league[pt_league.MIN >= min_minutes].TO_per40.median()
     fig, ax = plt.subplots(figsize=(9, 6))
-    cols = [RED if v > 3.5 else ORANGE if v > 2.5 else GOLD for v in d.TO_per40]
+    cols = [RED if v > TO_HIGH else ORANGE if v > TO_MID else GOLD for v in d.TO_per40]
     ax.barh([f"{p}  ({mins(m)})" for p, m in zip(d.Player, d.MIN)], d.TO_per40, color=cols, edgecolor=GOLD_EDGE, linewidth=0.5)
     for i, (v, t) in enumerate(zip(d.TO_per40, d.tov)):
         ax.text(v + 0.08, i, f"{v:.2f}  ({int(t)} TO)", va="center", color=TEXT, fontsize=9)
-    ax.axvline(3.5, color=RED, lw=0.8, ls="--", alpha=0.6)
+    ax.axvline(TO_HIGH, color=RED, lw=0.8, ls="--", alpha=0.6)
     ax.axvline(lg_med, color=LEAGUE, lw=1.2, ls="--"); ax.text(lg_med, len(d) - 0.4, f" league median {lg_med:.1f}", color=LEAGUE, fontsize=8)
-    ax.set_title(f"Turnovers per 40 min  (red > 3.5, min {min_minutes} minutes)", **TITLE_KW)
+    ax.set_title(f"Turnovers per 40 min  (red > {TO_HIGH}, min {min_minutes} minutes)", **TITLE_KW)
     style_axes(ax)
-    fig.suptitle(f"{team} — LBA 2026-27 {label}", **SUP_KW)
+    fig.suptitle(f"{team} — {SEASON_TAG} {label}", **SUP_KW)
     save_fig(fig, out / "player_turnovers.png"); plt.close(fig)
 
 
-def fig_zone_shares(s_team, s_league, team, label, out):
+def fig_zone_shares(s_team: pd.DataFrame, s_league: pd.DataFrame, team: str, label: str, out: Path) -> None:
     """Where the shots come from and what they are worth, team vs league, by the 9 zones."""
-    def tab(s):
-        g = s.groupby("zone").agg(att=("made", "size"), pts=("pts", lambda p: 0))
+    def tab(s: pd.DataFrame) -> pd.DataFrame:
+        g = s.groupby("zone").agg(att=("made", "size"))
         g["pts"] = s.assign(p=s.made * s.pts).groupby("zone").p.sum()
         g["share"] = 100 * g.att / g.att.sum(); g["ppa"] = g.pts / g.att
         return g.reindex(list(ZONE_LABELS)).fillna(0)
     t, l = tab(s_team), tab(s_league)
     fig, axes = plt.subplots(1, 2, figsize=(16, 5.5), gridspec_kw={"wspace": 0.25})
-    x = np.arange(9); w = 0.38
+    x = np.arange(NUM_ZONES); w = 0.38
     axes[0].bar(x - w / 2, t.share, w, label=team, **team_bar_kw()); axes[0].bar(x + w / 2, l.share, w, color=LEAGUE, label="league")
     for xi, (a, sh) in enumerate(zip(t.att, t.share)):
         axes[0].text(xi - w / 2, sh + 0.6, f"{int(a)}", ha="center", fontsize=8, color=TEXT2)
@@ -208,14 +243,15 @@ def fig_zone_shares(s_team, s_league, team, label, out):
     for ax in axes:
         ax.set_xticks(x); ax.set_xticklabels([f"{z}\n" + ZONE_LABELS[z].replace(" ", "\n") for z in ZONE_LABELS], fontsize=8)
         ax.legend(fontsize=9); style_axes(ax, "y")
-    fig.suptitle(f"{team} — LBA 2026-27 {label}  |  Shot profile vs league", **SUP_KW)
+    fig.suptitle(f"{team} — {SEASON_TAG} {label}  |  Shot profile vs league", **SUP_KW)
     save_fig(fig, out / "zone_profile_vs_league.png"); plt.close(fig)
 
 
-def main():
+def main() -> None:
+    """Parse the command line and write the season-to-date team figures."""
     ap = argparse.ArgumentParser()
-    ap.add_argument("--team", default="BC Roma")
-    ap.add_argument("--data", default=str(Path(__file__).resolve().parent.parent / "data"))
+    ap.add_argument("--team", default=CFG["team"])
+    ap.add_argument("--data", default=str(ROOT / "data"))
     ap.add_argument("--out", default="reports")
     a = ap.parse_args()
     games, box, pbp = load(Path(a.data))
@@ -223,7 +259,7 @@ def main():
 
     played = box[box.row_type == "total"].game_id.nunique()
     team_games = box[(box.team == a.team) & (box.row_type == "total")].game_id.nunique()
-    label = f"(after round {int(games[games.game_status == 2]['round'].max())}, {team_games} game{'s' if team_games != 1 else ''})"
+    label = f"(after round {int(games[games.game_status == FINISHED_STATUS]['round'].max())}, {team_games} game{'s' if team_games != 1 else ''})"
 
     s = shots_cm(pbp)
     s_team, s_league = s[s.team == a.team], s[s.team != a.team]
