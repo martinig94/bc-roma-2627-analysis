@@ -546,6 +546,8 @@ def main():
         box = pd.concat([box, ec_box], ignore_index=True)
         if a.competition != "EC":                         # compare only in the competitions both teams play (Varese has no EuroCup games)
             shared = set.intersection(*({*box[box.team == t].competition} for t in (a.home, a.away)))
+            if "LBA" not in shared:
+                raise SystemExit(f"{a.home} and {a.away} share no LBA games: use --competition EC for a EuroCup-only comparison")
             box = box[box.competition.isin(shared)]
             ec_zones = ec_zones[ec_zones.game_id.isin(box.game_id.unique())]
             SHARED_NAME = " + ".join(n for c, n in (("LBA", "LBA"), ("EC", "EuroCup")) if c in shared)
