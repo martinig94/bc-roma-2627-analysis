@@ -10,6 +10,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: collect
@@ -52,7 +54,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data reports weekly docs
+          git add data reports weekly
           if git diff --cached --quiet; then
             echo "no new games"
           else
@@ -64,3 +66,14 @@ jobs:
       - name: Fail the run if the collector, the EuroCup fetch or the report reported errors
         if: steps.collect.outcome == 'failure' || steps.eurocup.outcome == 'failure' || steps.weekly.outcome == 'failure'
         run: exit 1
+
+  # The site is built from the committed files and published by site.yml (docs/ is not committed any more).
+  # Runs even if a collection step failed, so whatever was collected is published.
+  deploy:
+    needs: collect
+    if: always()
+    uses: ./.github/workflows/site.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

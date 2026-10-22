@@ -46,6 +46,9 @@ def save_fig(fig, path, **kw) -> None:
     fig.text(0.995, -0.035, f"{AUTHOR} · {date.today():%d %b %Y} · data: {SOURCE_NOTE}{note}",
              ha="right", va="bottom", fontsize=7.5, color=TEXT2, alpha=0.9)
     fig.savefig(path, dpi=kw.pop("dpi", DPI), bbox_inches="tight", **kw)
+    if str(path).lower().endswith(".png"):
+        from imgopt import shrink_png      # 256-colour PNG: ~4x smaller, same look
+        shrink_png(path)
 
 
 def team_bar_kw() -> dict:

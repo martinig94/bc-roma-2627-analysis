@@ -1,23 +1,36 @@
-name: Rebuild site after a text edit
+name: Build and deploy the site
 
-# When someone edits a markdown file under weekly/ (for instance with the "Edit the text of this page" link on a page),
-# the site is rebuilt from the files already in the repository: no collection of games, no calls to the leagues' APIs.
+# The site (docs/) is no longer committed: it is built here from the files in the repository and published with GitHub Pages
+# ("Source: GitHub Actions"). It is rebuilt
+#   * when you push a change to weekly/ (pages, config), reports/, data/ or the build scripts, for instance a page edited with
+#     the "Edit the text of this page" link;
+#   * after every daily data collection (collect.yml calls this workflow, because a push made with the workflow's own token
+#     does not start other workflows);
+#   * by hand from the Actions tab.
+# No collection of games, no calls to the leagues' APIs: only the files already in the repository are used.
 
 on:
   push:
     branches: [master]
-    paths: ["weekly/**"]
+    paths: ["weekly/**", "reports/**", "data/**", "notebooks/**", "requirements.txt", ".github/workflows/site.yml"]
+  workflow_call:
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: collect          # same group as the daily run: never two commits to docs/ at once
+  group: pages
   cancel-in-progress: false
 
 jobs:
-  rebuild:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,16 +43,16 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build the site
-        run: python notebooks/build_site.py
-
-      - name: Commit the rebuilt site
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs
-          if git diff --cached --quiet; then
-            echo "site already up to date"
-          else
-            git commit -m "site: rebuild after a text edit"
-            git push
-          fi
+          python notebooks/build_site.py
+          touch docs/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
