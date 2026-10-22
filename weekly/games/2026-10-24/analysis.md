@@ -123,19 +123,19 @@ Varese has:
 {{ figure: 10_major_factors }}
 
 
-## Ball movement
-### Assists
+## Assists
 
 <!-- Assists: ball movement and the main passer-scorer pairs. -->
 
 {{ assists }}
 
-### Turnovers
+## Turnovers
 
 <!-- Turnovers: who loses the ball and when. -->
 
 {{ turnovers }}
 
+{{ pending }}
 ## Lineups
 
 ![lineups1](07_lineups_usage_vs_ppp.png)
@@ -167,17 +167,22 @@ Playing tendencies differ greatly between lineups:
 
 From the numbers only (4 LBA games each, so tendencies, not predictions):
 
-- **Turnovers.** The biggest gap between the two teams: Varese forces TOV% 21.8 and makes 8.2 steals a game, BC Roma has lost the ball 12.5 times a game (TOV% 16.0) against teams that force far less. On the other side Varese loses it 16 times a game (TOV% 21.7, Duke 12 and Hale 10 in four games) and BC Roma forces only 11.6 TOV%. → *Watch: BC Roma turnovers and the points Varese scores within 12 seconds of a steal (15 such possessions in four games so far).*
-- **Hale's possessions.** 23% of Varese's possessions end with the P&R ball handler at 0.86 PPP, and Hale ends 22 possessions a game: 38 three-point attempts in four games, 15 made, 16 of the attempts pull-ups and 3 step-backs, 9 of the 15 made unassisted. He also plays the most minutes (28.8', 33' in the last game). → *Watch: Hale's possessions, eFG% (47.2% so far) and whether BC Roma's 53.9 opponent eFG% moves.*
-- **Three-point volume.** BC Roma takes 31.2 threes a game at 40.8% and its spot-ups produce 1.15 PPP; spot-ups are 25% of what Varese defends, at 1.05 PPP allowed (opponents 19/57 from three on them). Varese takes 27.8 threes at 30.6%. → *Watch: BC Roma 3PA and 3P%, Varese opponent 3P% (33.3% so far).*
-- **Second chances.** Varese OREB% 36.6, 14 offensive rebounds a game and 1.35 PPP on put-backs, from Renfro, Kamagate, Roby and Nikolic; BC Roma DREB% 69.7, 27 defensive rebounds a game. → *Watch: Varese offensive rebounds and second-chance points.*
-- **Free throws.** Varese commits 28 fouls a game (2nd in LBA) and has FT rate 36.2 at 68.1%; BC Roma's FT rate is 29.0 at 75.9%. → *Watch: free-throw attempts for both.*
+- **Turnovers.** The biggest gap between the two teams: Varese forces TOV% 21.8 and makes 8.2 steals a game, BC Roma has lost the ball 12.5 times a game (TOV% 16.0) against teams that force far less. On the other side Varese loses it 16 times a game (TOV% 21.7, Duke 12 and Hale 10 in four games) and BC Roma forces only 11.6 TOV%. 
+- **Hale's possessions.** 23% of Varese's possessions end with the P&R ball handler at 0.86 PPP, and Hale ends 22 possessions a game: 38 three-point attempts in four games, 15 made, 16 of the attempts pull-ups and 3 step-backs, 9 of the 15 made unassisted. He also plays the most minutes (28.8', 33' in the last game). 
+- **Three-point volume.** BC Roma takes 31.2 threes a game at 40.8% and its spot-ups produce 1.15 PPP; spot-ups are 25% of what Varese defends, at 1.05 PPP allowed (opponents 19/57 from three on them). Varese takes 27.8 threes at 30.6%. 
+- **Second chances.** Varese OREB% 36.6, 14 offensive rebounds a game and 1.35 PPP on put-backs, from Renfro, Kamagate, Roby and Nikolic; BC Roma DREB% 69.7, 27 defensive rebounds a game. 
+- **Free throws.** Varese commits 28 fouls a game (2nd in LBA) and has FT rate 36.2 at 68.1%; BC Roma's FT rate is 29.0 at 75.9%. 
 - **Pace.** Both at 77.5-77.8 possessions: the scoring difference (98.8 vs 81.0 PPG) is efficiency, eFG% 61.6 vs 50.0, so the game should be decided by the shot quality numbers above, not by tempo.
-- **Rotation.** Della Valle out; Varese plays 10 and the top 7 cover 79% of minutes, with Hale and Duke over 30' in the last game. BC Roma's bench scores 40 a game, Varese's 24. → *Watch: bench points and minutes of Hale and Duke in Q4.*
+- **Rotation.** Della Valle out; Varese plays 10 and the top 7 cover 79% of minutes, with Hale and Duke over 30' in the last game. BC Roma's bench scores 40 a game, Varese's 24.
 
 Not covered here: BC Roma's defense by play type (the Synergy pull has Varese's defense but only BC Roma's offense), so the matchup between Varese's P&R and BC Roma's defense is read from the LBA numbers only.
+### Metrics to check during/after the game
+- BC Roma turnovers and the points Varese scores within 12 seconds of a steal (15 such possessions in four games so far).*
+- Bench points for Varese
+- Free-throw attempts for both
+- Hale's possessions, eFG% (47.2% so far)
 
-## Highlights
+## Clips suggested
 
 Clips to look up (game clock from the LBA play-by-play; the three groups are the tendencies of the sections above):
 
