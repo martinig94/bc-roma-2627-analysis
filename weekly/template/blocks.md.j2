@@ -52,6 +52,11 @@ Author: {{ author }}
 Ratings are points per 100 possessions. eFG% = (2P + 1.5 × 3P) / FGA · TOV% = turnovers per 100 possessions · OREB% = share of available offensive rebounds · FT rate = free throw attempts per field goal attempt.
 {%- endmacro %}
 
+{% macro shot_charts(a, files, author, kind) -%}
+{% set pre = '06b_shot_charts_' ~ a.opponent_full|replace(' ', '_') ~ '_' %}{% for f in files|sort if f.startswith(pre) %}![shot charts of the players of {{ a.opponent }}]({{ f }})
+{% endfor %}
+{%- endmacro %}
+
 {% macro assists(a, files, author, kind) -%}
 {% if a.assist_top %}![assist matrix](assists.png)
 
