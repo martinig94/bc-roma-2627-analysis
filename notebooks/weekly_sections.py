@@ -154,6 +154,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
             "birth_date": bio.get("birth_date") if isinstance(bio.get("birth_date"), str) else "",
             "min": round(g.sec.sum() / 60 / n, 1), "pts": round(g.pts.sum() / n, 1), "reb": round((g.oreb + g.dreb).sum() / n, 1), "oreb": round(g.oreb.sum() / n, 1),
             "ast": round(g.ast.sum() / n, 1), "pir": round(g.val.sum() / n, 1),
+            "fd": round(g.pf_drawn.sum() / n, 1), "pf": round(g.pf.sum() / n, 1),
             "fg2": f"{pct(g.fg2m.sum(), g.fg2a.sum())} ({g.fg2a.sum() / n:.1f})",
             "fg3": f"{pct(g.fg3m.sum(), g.fg3a.sum())} ({g.fg3a.sum() / n:.1f})",
             "ft": f"{pct(g.ftm.sum(), g.fta.sum())} ({g.fta.sum() / n:.1f})",
@@ -172,7 +173,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
             "number": _num(bio.get("number")), "age": age_on(bio.get("birth_date"), asof),
             "country": bio["country"] if isinstance(bio.get("country"), str) else "", "weight": _num(bio.get("weight_kg")),
             "birth_date": bio["birth_date"] if isinstance(bio.get("birth_date"), str) else "",
-            "min": "–", "pts": "–", "reb": "–", "oreb": "–", "ast": "–", "pir": "–", "fg2": "–", "fg3": "–", "ft": "–",
+            "min": "–", "pts": "–", "reb": "–", "oreb": "–", "ast": "–", "pir": "–", "fd": "–", "pf": "–", "fg2": "–", "fg3": "–", "ft": "–",
             "ppg_lba": None, "ppg_ec": None, "sec_total": 0})
     rows.sort(key=lambda r: (POS_ORDER.get(r["pos"], 9), -r["sec_total"]))
     return rows
