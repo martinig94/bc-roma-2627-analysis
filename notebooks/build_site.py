@@ -30,6 +30,7 @@ import pandas as pd
 
 import pages
 import weekly_config
+from imgopt import shrink_png
 from player_names import photo_name
 from team_games import next_games as next_games_df, team_games
 
@@ -144,6 +145,8 @@ def copy_images(src: Path, *more: Path, dest: Path) -> list[str]:
         for f in sorted(folder.glob("*")):
             if f.suffix.lower() in IMAGES:
                 shutil.copy(f, dest / f.name); names.append(f.name)
+                if f.suffix.lower() == ".png":
+                    shrink_png(dest / f.name)      # your own plots too: keeps docs/ light
     return names
 
 

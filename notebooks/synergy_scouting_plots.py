@@ -100,6 +100,8 @@ class Ctx:
 
     def save(self, fig, name, dpi=160):
         fig.savefig(self.plots / name, dpi=dpi)
+        from imgopt import shrink_png
+        shrink_png(self.plots / name)
         plt.close(fig)
 
 
