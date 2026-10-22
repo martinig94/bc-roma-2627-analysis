@@ -16,7 +16,7 @@ import pandas as pd
 import lba_style
 import weekly_config
 from lba_style import GREEN, LEAGUE, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, shots_cm, style_axes, team_color
-from matchup_report import parse_eurocup, plot_zone_heatmap, zone_stats
+from matchup_report import apply_starter_overrides, parse_eurocup, plot_zone_heatmap, zone_stats
 
 ROOT = Path(__file__).resolve().parent.parent
 TEAM = weekly_config.load()["team"]
@@ -31,7 +31,7 @@ MIN_PLAYED, ABS_UP, REL_UP = 8 * 60, 7 * 60, 0.30
 # ── data ────────────────────────────────────────────────────────────────────────
 def load_box(data: Path, upto_round: int, upto_date: str, eurocup_file: str = "") -> pd.DataFrame:
     """LBA player/total rows (all teams, rounds <= upto_round) + EuroCup rows (all teams in the file, date <= upto_date)."""
-    lba = pd.read_csv(data / "box_scores.csv")
+    lba = apply_starter_overrides(pd.read_csv(data / "box_scores.csv"), data)
     lba = lba[lba["round"] <= upto_round].copy()
     lba["competition"] = "LBA"; lba["date"] = lba.match_datetime.str[:10]; lba["game_id"] = lba.game_id.astype(str)
     ec_path = ROOT / eurocup_file if eurocup_file else None
