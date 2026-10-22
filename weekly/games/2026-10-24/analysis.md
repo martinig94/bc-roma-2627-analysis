@@ -168,6 +168,12 @@ Playing tendencies differ greatly between lineups:
 
 {{ lineups }}
 
+## Defensive attitude
+- Varese takes opponents high and defends them man to man full court.
+- They tend to switch on P&Rs also if Librizzi is on the ball handler.
+
+{{ pending }}
+
 ## What to expect
 
 From the numbers only (4 LBA games each, so tendencies, not predictions):
