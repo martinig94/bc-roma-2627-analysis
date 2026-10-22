@@ -165,10 +165,33 @@ def md_html(text: str) -> str:
     return sections(markdown.markdown(mark_highlights(text), extensions=MARKDOWN_EXTENSIONS))
 
 
+PHOTO_DIRS = [DATA / "photos", DATA / "eurocup" / "photos", DATA / "manresa" / "photos"]   # the one copy of every player photo
+
+
+def copy_photos(src: Path, dest: Path) -> list[str]:
+    """Copy into ``dest`` the photos a report folder refers to (roster in auto.json / roster.json, or photo_<key>.jpg in its README)."""
+    keys = set()
+    for name in ("auto.json", "roster.json"):
+        if (src / name).exists():
+            data = json.loads((src / name).read_text(encoding="utf-8"))
+            rows = data.get("roster", []) if isinstance(data, dict) else data
+            keys |= {str(r["player_id"]) for r in rows if r.get("photo")}
+    if (src / "README.md").exists():
+        keys |= set(re.findall(r"photo_(\w+)\.jpg", (src / "README.md").read_text(encoding="utf-8")))
+    names = []
+    for key in sorted(keys):
+        stem = key.removeprefix("ec_")
+        found = next((d / f"{stem}.jpg" for d in PHOTO_DIRS if (d / f"{stem}.jpg").exists()), None)
+        if found:
+            shutil.copy(found, dest / f"photo_{key}.jpg")
+            names.append(f"photo_{key}.jpg")
+    return names
+
+
 def copy_images(src: Path, *more: Path, dest: Path) -> list[str]:
     """Copy the images of ``src`` and ``more`` into ``dest`` (PNGs shrunk) and return their file names."""
     dest.mkdir(parents=True, exist_ok=True)
-    names = []
+    names = copy_photos(src, dest)
     for folder in (src, *more):
         for f in sorted(folder.glob("*")):
             if f.suffix.lower() in IMAGES:

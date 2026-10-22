@@ -13,7 +13,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -88,13 +87,9 @@ def comparison(box: pd.DataFrame, games: pd.DataFrame, date: str, team: str, opp
 
 
 def write_roster(folder: Path, opp: str, date: str, data: Path) -> list[dict]:
-    """The opponent's roster before `date` (league + EuroCup, with photos) as roster.json + photo_<id>.jpg in the folder."""
+    """The opponent's roster before `date` (league + EuroCup, with photos) as roster.json in the folder (the photos stay in data/photos/ and data/eurocup/photos/)."""
     player_photos.main_quiet(opp)
     roster = ws.roster_table(ws.load_box_before(data, date, CFG["eurocup_file"]), data, opp, asof=date)
-    for r in roster:
-        if r["photo"]:
-            src = data / "eurocup" / "photos" / f"{str(r['player_id']).removeprefix('ec_')}.jpg" if str(r["player_id"]).startswith("ec_") else data / "photos" / f"{r['player_id']}.jpg"
-            shutil.copy(src, folder / f"photo_{r['player_id']}.jpg")
     (folder / "roster.json").write_text(json.dumps(roster, indent=2, ensure_ascii=False), encoding="utf-8")
     return roster
 

@@ -113,8 +113,8 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
     want it (drag and drop it with GitHub's "Add file / Upload files", or copy it locally). Ask Claude to draw a plot and it goes there.
   Text in `<!-- comments -->` is not published (the prompts of a new page are comments); sections that stay empty are left out.
   Pages written by hand (`reports/matchup_*/README.md`, `weekly/opponent/<folder>/document.md`) are shown as they are. **No automatic
-  post-game review is generated or published** unless `"reviews": true` in `weekly/config.json` (the files already in `reports/review` and
-  `weekly/review` are kept but not shown); if switched on, reviews still use `weekly/review/round-NN/notes.md` (`## key` sections: `key_points`, `story`, `tactics`, `players`, `next`).
+  post-game review is generated or published** unless `"reviews": true` in `weekly/config.json` (the `reports/review` and
+  `weekly/review` folders were removed, as unused; `weekly_report.py` recreates them); if switched on, reviews use `weekly/review/round-NN/notes.md` (`## key` sections: `key_points`, `story`, `tactics`, `players`, `next`).
 * **Old-format analyses**: an analysis that is a hand-written page (`reports/matchup_*/README.md`, `weekly/opponent/<folder>/document.md`) and not
   a game page file is flagged: a banner *Old format* at the top of the page, " · old format" in the Opponents dropdown, a note on its card of the
   landing page, and a list in the output of `weekly.py`. Its tables and figures do not refresh with new data. It stops being flagged when
@@ -162,7 +162,7 @@ in the data yet. The single steps are `snapshot_report.py --game DATE`, `opponen
   `results.csv` (a group = the teams connected through the schedule; ranking by wins, head-to-head, point difference), never the LBA table.
   Without `results.csv` the page says the standings are not available yet. EuroCup box scores come from the file
   (`data/eurocup_2026_raw.txt`: box scores and shot zones of every EuroCup game played, appended by `eurocup_fetch.py`, so the daily run keeps it current).
-* **Roster positions and heights**: `data/roster.csv` (new players are appended blank). Photos: `data/photos/` (fetched automatically).
+* **Roster positions and heights**: `data/roster.csv` (new players are appended blank). Photos: `data/photos/` (fetched automatically; the only copy, `build_site.py` puts the ones a page needs into `docs/`, so report folders hold no photos).
 * **Look**: light and sober, in the BC Roma palette. The logo is `weekly/assets/logo.png` (copied to `docs/assets/`, also the favicon); the
   colours are the variables at the top of `weekly/template/site.html.j2` (logo gold for borders and rules only, a deeper gold for links, warm
   near-black text; every text colour has a contrast of at least 5:1 on white).

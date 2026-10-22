@@ -9,7 +9,6 @@ notebooks/build_site.py to publish it. Samples are tiny early in the season: rea
 from __future__ import annotations
 
 import argparse
-import shutil
 from datetime import date
 from pathlib import Path
 
@@ -537,8 +536,7 @@ def write_readme(out: Path, title_date: str, games: pd.DataFrame, table: pd.Data
     for r in table.itertuples():
         img = ""
         src = next((d / f"{photo_name(r.player)}.jpg" for d in photo_dirs if (d / f"{photo_name(r.player)}.jpg").exists()), None)
-        if src:                                                    # copied next to the README, picked up by build_site.py
-            shutil.copy(src, out / f"photo_{photo_name(r.player)}.jpg")
+        if src:                                                    # the file itself stays in the photo folder; build_site.py copies it into the site
             img = f'<img src="photo_{photo_name(r.player)}.jpg" alt="{r.player}" width="44" align="left"> '
         ht = f"{r.height:.0f} cm" if pd.notna(r.height) else "height n/a"
         three = f"{r.fg3_pct:.0f}%" if r.fg3a else "-"

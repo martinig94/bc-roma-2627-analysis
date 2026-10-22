@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import shutil
 from pathlib import Path
 from typing import Any
 
@@ -134,10 +133,7 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
     ws.fig_form(before, out, team)
     box_lba = pd.read_csv(data / "box_scores.csv")
     box_ast = int(box_lba[(box_lba.game_id.isin(lba_games)) & (box_lba.team == team) & (box_lba.row_type == "total")].ast.sum())
-    roster = ws.roster_table(xbox, data, team, asof=date)
-    for r in roster:
-        if r["photo"]:
-            shutil.copy(data / "photos" / f"{r['player_id']}.jpg", out / f"photo_{r['player_id']}.jpg")
+    roster = ws.roster_table(xbox, data, team, asof=date)      # photos stay in data/photos/; build_site.py copies them into the site
 
     ec_ids = [str(x) for x in ec_before.game_id]
     ec_pbp_path = data / "eurocup" / "pbp.csv"
