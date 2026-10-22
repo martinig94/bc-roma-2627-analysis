@@ -12,8 +12,9 @@ the opponent (the team being scouted) is drawn in navy, the reference team (the 
   02   opponent play types run / faced
   03   offensive PPP by play type, reference team vs opponent
   04   opponent players, possessions used vs eFG% (number in bubble = points per game)
-  05   one figure per player: FG made/attempted by shot location and by play type, plus the shot type for play
-       types with more than 10 attempts (05_player_<name>_shot_profile.png)
+  05   one figure per player: FG made/attempted by shot location and by play type (05_player_<name>_shot_profile.png)
+  05c  one figure per player: shot types within each play type that passes the minimum attempts / minimum share
+       of the player's attempts thresholds (05c_player_<name>_shot_types.png)
   05b  player radars, percentile rank within the opponent's roster
   06   possessions used by play type, per player
   07   lineups: usage vs points per possession
@@ -68,7 +69,8 @@ MIN_PLAYTYPE_POSS = 10      # play types with fewer possessions are left off fig
 MIN_PLAYER_POSS = 20        # players shown in the volume-vs-efficiency scatter (04)
 MIN_RADAR_POSS = 25         # players with a roster-percentile radar (05b)
 MIN_MIX_POSS = 25           # players in the play-type mix bars (06)
-MIN_SHOT_TYPE_FGA = 10      # a play type needs more attempts than this for its shot-type panel (05)
+MIN_SHOT_TYPE_FGA = 10      # a play type needs at least this many attempts for its shot-type panel (05c) ...
+MIN_SHOT_TYPE_SHARE = 0.0   # ... and at least this share of the player's attempts (0-1); raise both as the sample grows
 DEFAULT_LINEUP_MIN_POSS = 5   # default for config 'lineup_min_poss'
 MIN_STYLE_POSS = 10         # lineups shown in the style profile (09)
 LABEL_LINEUP_POSS = 12      # lineups with at least this many offensive possessions get a label (07)
@@ -398,7 +400,7 @@ def radar(ax: Axes, labels: Sequence[str], made_att: Sequence[tuple[int, int]], 
 
 
 def plot05(c: Ctx, b: pd.DataFrame) -> None:
-    """Figure 05: one shot-profile figure per player (by location, by play type, shot types)."""
+    """Figures 05 and 05c: per player, radars by location / play type, and bars of shot types in a separate figure."""
     # REVIEW: needs Synergy-extracted CSVs (see module docstring); check the data before using the figure.
     zp = c.read('opp_players_fg_by_zone_and_playtype.csv')
     st = c.read('opp_players_shottype_within_playtype.csv')
@@ -413,37 +415,57 @@ def plot05(c: Ctx, b: pd.DataFrame) -> None:
 
     players = sorted(zp.player.unique(), key=lambda p: -meta.loc[p, 'POSS'] if p in meta.index else 0)
     for p in players:
-        ex = [k for k in shot if k[0] == p]; n = 2 + len(ex)
-        w = max(5.3 * n, 12.5)
-        fig = plt.figure(figsize=(w, 6.8))
-        gs = GridSpec(1, n, figure=fig, wspace=.6, left=.05, right=.95 if n == 2 else .985, top=.78, bottom=.19)
+        pt = zp[(zp.player == p) & (zp.dimension == 'play_type')]
+        fga = int(pt.fga.sum())
+        keep = pt[(pt.fga >= MIN_SHOT_TYPE_FGA) & (pt.fga >= MIN_SHOT_TYPE_SHARE * max(fga, 1))].sort_values('fga', ascending=False)
+        ex = [(p, k) for k in keep.category if (p, k) in shot]
+        missing = [k for k in keep.category if (p, k) not in shot]
+        head = f'{fga} FGA'
+        if p in meta.index:
+            head += f', {int(meta.loc[p, "FG MADE"])} made, {int(meta.loc[p, "POSS"])} possessions used'
+        sub = f"{head} · {c.comp}, {c.opp['name']} {c.opp['games']} games"
+        fname = p.lower().replace(' ', '_')
+
+        fig = plt.figure(figsize=(12.5, 6.8))
+        gs = GridSpec(1, 2, figure=fig, wspace=.6, left=.05, right=.95, top=.78, bottom=.19)
         radar(fig.add_subplot(gs[0, 0], projection='polar'), ZONES, grp(p, 'shot_location', ZONES), 'Shot location (made/attempted)')
         radar(fig.add_subplot(gs[0, 1], projection='polar'), PT_LAB, grp(p, 'play_type', PT_ORDER), 'Play type (made/attempted)')
-        for j, k in enumerate(ex):
-            ax = fig.add_subplot(gs[0, 2 + j]); d = sorted(shot[k], key=lambda x: -x[1]); y = np.arange(len(d))[::-1]
-            ax.barh(y, [x[1] for x in d], color=NAVY, alpha=.25, height=.62); ax.barh(y, [x[2] for x in d], color=YELLOW, height=.62)
-            for yy, x in zip(y, d):
-                ax.text(x[1] + .2, yy, f'{x[2]}/{x[1]}', va='center', fontsize=8, fontweight='bold')
-            ax.set_yticks(y); ax.set_yticklabels([x[0] for x in d], fontsize=8)
-            ax.set_xlim(0, max(x[1] for x in d) * 1.25); ax.set_xlabel('Field goal attempts', fontsize=8)
-            ax.set_title(f"Shot type within {PT_SHORT.get(k[1], k[1].lower())}\n({sum(x[1] for x in d)} attempts; made/attempted)",
-                         fontsize=8.5, pad=14, color=INK_3)
-            ax.spines['left'].set_visible(False); ax.tick_params(axis='y', length=0)
-        fga = sum(a for _, a in grp(p, 'shot_location', ZONES))
         fig.text(.02, .955, f'{p}: field goals attempted vs made', fontsize=14, fontweight='bold', ha='left')
-        info = f'{fga} FGA'
-        if p in meta.index:
-            info += f', {int(meta.loc[p, "FG MADE"])} made, {int(meta.loc[p, "POSS"])} possessions used'
-        fig.text(.02, .905, f"{info} · {c.comp}, {c.opp['name']} {c.opp['games']} games", fontsize=9, color=INK_3)
+        fig.text(.02, .905, sub, fontsize=9, color=INK_3)
         fig.legend(handles=[Patch(fc=NAVY, alpha=.3, label='Attempted'), Patch(fc=YELLOW, alpha=.8, label='Made')],
                    loc='lower left', ncol=2, frameon=False, bbox_to_anchor=(.02, .085))
         note = ('*Other = handoffs, post-ups, miscellaneous plays. Zones: Synergy 11-zone chart grouped as Paint (incl. rim), Mid-range '
                 '(other two-point zones), Corner 3, Wing 3, Top 3. Outer ring label = max attempts. Free throws excluded.')
-        note += (f' Shot-type panels shown only for play types with more than {MIN_SHOT_TYPE_FGA} attempts.' if ex
-                 else f' No play type has more than {MIN_SHOT_TYPE_FGA} attempts, so no shot-type panel.')
-        fig.text(.02, .075, textwrap.fill(note, width=int(w * 13.5)), fontsize=6.8, color=INK_4, va='top')
+        fig.text(.02, .075, textwrap.fill(note, width=170), fontsize=6.8, color=INK_4, va='top')
         c.foot(fig, f'{c.comp} only')
-        c.save(fig, f'05_player_{p.lower().replace(" ", "_")}_shot_profile.png', dpi=150)
+        c.save(fig, f'05_player_{fname}_shot_profile.png', dpi=150)
+
+        if not ex:
+            continue
+        n = len(ex)
+        fig, axs = plt.subplots(1, n, figsize=(max(6.5 * n, 8.5), 5.6), squeeze=False)
+        fig.subplots_adjust(left=.3 / n, right=.97, top=.7, bottom=.27, wspace=1.0)
+        for ax, k in zip(axs[0], ex):
+            d = sorted(shot[k], key=lambda x: -x[1]); y = np.arange(len(d))[::-1]
+            ax.barh(y, [x[1] for x in d], color=NAVY, alpha=.25, height=.62); ax.barh(y, [x[2] for x in d], color=YELLOW, height=.62)
+            for yy, x in zip(y, d):
+                ax.text(x[1] + .2, yy, f'{x[2]}/{x[1]}', va='center', fontsize=9, fontweight='bold')
+            ax.set_yticks(y); ax.set_yticklabels([textwrap.fill(x[0], 20) for x in d], fontsize=9)
+            ax.set_xlim(0, max(x[1] for x in d) * 1.25); ax.set_xlabel('Field goal attempts', fontsize=9)
+            ax.set_title(f"{PT_SHORT.get(k[1], k[1].lower())[0].upper() + PT_SHORT.get(k[1], k[1].lower())[1:]}\n({sum(x[1] for x in d)} attempts; made/attempted)",
+                         fontsize=10, pad=10, color=INK_3)
+            ax.spines['left'].set_visible(False); ax.tick_params(axis='y', length=0)
+        fig.text(.02, .955, f'{p}: shot types within play types', fontsize=14, fontweight='bold', ha='left')
+        fig.text(.02, .895, sub, fontsize=9, color=INK_3)
+        fig.legend(handles=[Patch(fc=NAVY, alpha=.3, label='Attempted'), Patch(fc=YELLOW, alpha=.8, label='Made')],
+                   loc='lower left', ncol=2, frameon=False, bbox_to_anchor=(.02, .04))
+        rule = f'Play types with at least {MIN_SHOT_TYPE_FGA} attempts'
+        if MIN_SHOT_TYPE_SHARE: rule += f' and at least {MIN_SHOT_TYPE_SHARE:.0%} of the player\'s attempts'
+        rule += '.'
+        if missing:
+            rule += ' Shot types not extracted for: ' + ', '.join(missing) + '.'
+        fig.text(.02, .025, textwrap.fill(rule, width=int(max(6.5 * n, 8.5) * 13.5)), fontsize=7, color=INK_4, va='top')
+        c.save(fig, f'05c_player_{fname}_shot_types.png', dpi=150)
 
 
 # --------------------------------------------------------------------------------------------- lineups
