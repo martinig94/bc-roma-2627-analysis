@@ -14,7 +14,7 @@ lineups, what to expect, highlights. A section that is still empty shows a grey 
 reviewed"* (the line `{{ pending }}`): replace that line with your text and plots. The Synergy plots of the opponent go in the same
 folder (`python notebooks/synergy_scouting_plots.py data/synergy/<folder> --out ...`, then copy the PNGs next to `analysis.md`).
 
-Never edit `docs/` or `reports/`: they are generated and get overwritten. Your file is never overwritten.
+Never edit `docs/` or `reports/`: they are generated and get overwritten (`docs/` is not even committed). Your file is never overwritten.
 
 ## Steps
 
@@ -26,7 +26,7 @@ Never edit `docs/` or `reports/`: they are generated and get overwritten. Your f
 3. Your own image: copy it into the same folder and write `![caption](my_plot.png)` where you want it.
 4. Preview: `python notebooks/weekly.py --no-build` then `python notebooks/build_site.py`, and open `docs/index.html`.
 5. When finished set `reviewed: yes` at the top (and `title:` for the name in the Opponents dropdown).
-6. Commit and push. The site rebuilds by itself.
+6. Commit and push. GitHub Actions rebuilds and republishes the site by itself.
 
 Tip: `python notebooks/weekly.py --page <date>` prints the paths of the page files of a game.
 Text only? Use the "Edit the text of this page" link on the published page.
