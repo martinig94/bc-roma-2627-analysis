@@ -29,6 +29,7 @@
   h2 { border-bottom:1px solid var(--line); padding-bottom:4px; margin-top:2.2rem; }
   h3 { margin-top:1.6rem; }
   td img { max-width:none; width:44px; height:54px; object-fit:cover; object-position:top; border-radius:6px; display:block; }
+  table.dumbtab td { padding:3px 8px; vertical-align:middle; } svg.dumb { display:block; }
   td img.face { display:inline-block; width:34px; height:42px; vertical-align:middle; margin-right:8px; }
   table { border-collapse:collapse; display:block; overflow-x:auto; }
   th { background:var(--tint); color:var(--ink); border-bottom:2px solid var(--gold); }
@@ -123,6 +124,22 @@
   var fmt = function (x) { return x === null || x === undefined || x === "" ? "–" : x; };
   var pair = function (a, b) { return fmt(a) + " → " + fmt(b) + delta(a, b); };
   var esc = function (t) { return String(t).replace(/[&<>]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;"}[c]; }); };
+  var LOWER = ["Points allowed per game", "Defensive rating", "TOV% (per 100 poss.)", "Opp. eFG%"];   // where a lower figure is the better one
+  var W = 260, H = 22, PAD = 10;
+  // one dumbbell: grey dot = A, dark dot = B, the line is green when B is better than A, red when worse (neutral grey when it does not say)
+  function dumbbell(x, y, lo, hi, better) {
+    if (!num(x) || !num(y)) return "";
+    var sx = function (v) { return PAD + (hi > lo ? (v - lo) / (hi - lo) : 0.5) * (W - 2 * PAD); };
+    var col = x === y || better === 0 ? "#9aa0b4" : (y - x) * better > 0 ? "#1e7b45" : "#b3302f";
+    return '<svg class="dumb" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="A ' + x + ", B " + y + '">' +
+      '<line x1="' + PAD + '" x2="' + (W - PAD) + '" y1="' + H / 2 + '" y2="' + H / 2 + '" stroke="#e7e1d3"/>' +
+      '<line x1="' + sx(x) + '" x2="' + sx(y) + '" y1="' + H / 2 + '" y2="' + H / 2 + '" stroke="' + col + '" stroke-width="3"/>' +
+      '<circle cx="' + sx(x) + '" cy="' + H / 2 + '" r="5" fill="#fff" stroke="#9aa0b4" stroke-width="2.5"/>' +
+      '<circle cx="' + sx(y) + '" cy="' + H / 2 + '" r="5" fill="#1f1b14"/></svg>';
+  }
+  var legend = '<p class="muted"><svg width="12" height="12"><circle cx="6" cy="6" r="4.5" fill="#fff" stroke="#9aa0b4" stroke-width="2.5"/></svg> A · ' +
+    '<svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#1f1b14"/></svg> B · line green = B better, red = B worse.</p>';
+  var rosterStat = "pir";
   function render() {
     var a = by[A.value], b = by[B.value];
     history.replaceState(null, "", "?a=" + a.key + "&b=" + b.key);
@@ -135,7 +152,17 @@
     // team numbers
     var comps = [["LBA", "LBA"], ["EuroCup", "EuroCup"]].filter(function (c) { return (a.profile[c[0]] && Object.keys(a.profile[c[0]]).length) || (b.profile[c[0]] && Object.keys(b.profile[c[0]]).length); });
     var keys = []; comps.forEach(function (c) { [a, b].forEach(function (s) { Object.keys(s.profile[c[0]] || {}).forEach(function (k) { if (keys.indexOf(k) < 0) keys.push(k); }); }); });
-    h += '<h2>Team numbers</h2><table><thead><tr><th></th>' + comps.map(function (c) { return "<th>" + c[1] + ": A → B</th>"; }).join("") + "</tr></thead><tbody>";
+    h += '<h2>Team numbers</h2>';
+    comps.forEach(function (c) {
+      var ks = keys.filter(function (k) { return num((a.profile[c[0]] || {})[k]) && num((b.profile[c[0]] || {})[k]) && k !== "Games"; });
+      if (!ks.length) return;
+      h += "<h3>" + c[1] + "</h3><table class=\"dumbtab\"><tbody>" + ks.map(function (k) {
+        var x = a.profile[c[0]][k], y = b.profile[c[0]][k], pad = Math.max(Math.abs(y - x), Math.abs(Math.max(x, y)) * 0.05, 0.5);
+        return "<tr><td>" + esc(k) + "</td><td>" + dumbbell(x, y, Math.min(x, y) - pad, Math.max(x, y) + pad, LOWER.indexOf(k) >= 0 ? -1 : 1) + "</td><td>" + pair(x, y) + "</td></tr>";
+      }).join("") + "</tbody></table>";
+    });
+    h += legend + '<p class="muted">Each row has its own scale, so only the direction and relative size of a change can be compared across rows.</p>';
+    h += '<h3>All figures</h3><table><thead><tr><th></th>' + comps.map(function (c) { return "<th>" + c[1] + ": A → B</th>"; }).join("") + "</tr></thead><tbody>";
     keys.forEach(function (k) { h += "<tr><td>" + esc(k) + "</td>" + comps.map(function (c) {
       var x = (a.profile[c[0]] || {})[k], y = (b.profile[c[0]] || {})[k]; return "<td>" + pair(x, y) + "</td>"; }).join("") + "</tr>"; });
     h += '</tbody></table><p class="muted">Ratings are points per 100 possessions. The change in brackets is B minus A.</p>';
@@ -144,7 +171,15 @@
     b.roster.concat(a.roster).forEach(function (r) { if (!seen[r.name]) { seen[r.name] = 1; names.push(r.name); } });
     var get = function (s, n) { return s.roster.filter(function (r) { return r.name === n; })[0]; };
     var cols = [["gp", "GP"], ["min", "MIN"], ["pts", "PTS"], ["reb", "REB"], ["ast", "AST"], ["pir", "PIR"]];
-    h += '<h2>Roster, per-game averages</h2><table><thead><tr><th></th><th>Player</th>' + cols.map(function (c) { return "<th>" + c[1] + "</th>"; }).join("") + "</tr></thead><tbody>";
+    h += '<h2>Roster, per-game averages</h2><p><label>Chart: <select id="cmpStat">' + cols.filter(function (c) { return c[0] !== "gp"; }).map(function (c) {
+      return '<option value="' + c[0] + '"' + (c[0] === rosterStat ? " selected" : "") + ">" + c[1] + "</option>"; }).join("") + "</select></label></p>";
+    var both = names.filter(function (n) { var x = get(a, n), y = get(b, n); return x && y && num(x[rosterStat]) && num(y[rosterStat]); });
+    var top = Math.max.apply(null, both.map(function (n) { return Math.max(get(a, n)[rosterStat], get(b, n)[rosterStat]); }).concat([1])) * 1.1;
+    h += both.length ? '<table class="dumbtab"><tbody>' + both.map(function (n) {
+      var x = get(a, n)[rosterStat], y = get(b, n)[rosterStat];
+      return "<tr><td><strong>" + esc(n) + "</strong></td><td>" + dumbbell(x, y, 0, top, 1) + "</td><td>" + pair(x, y) + "</td></tr>";
+    }).join("") + "</tbody></table>" + legend + '<p class="muted">Players present in both snapshots; one common scale from 0.</p>' : '<p class="muted">No player has a figure in both snapshots.</p>';
+    h += '<h3>All figures</h3><table><thead><tr><th></th><th>Player</th>' + cols.map(function (c) { return "<th>" + c[1] + "</th>"; }).join("") + "</tr></thead><tbody>";
     names.forEach(function (n) {
       var x = get(a, n), y = get(b, n), p = y && y.photo ? [b.key, y.player_id] : x && x.photo ? [a.key, x.player_id] : null;
       h += "<tr><td>" + (p ? '<img class="face" src="../snapshot/' + p[0] + "/photo_" + p[1] + '.jpg" alt="">' : "") + "</td><td><strong>" + esc(n) + "</strong></td>" +
@@ -152,6 +187,7 @@
     });
     h += "</tbody></table>";
     out.innerHTML = h;
+    document.getElementById("cmpStat").addEventListener("change", function (e) { rosterStat = e.target.value; render(); });
   }
   function row(l, x, y) { return "<tr><td>" + l + "</td><td>" + x + "</td><td>" + y + "</td></tr>"; }
   A.addEventListener("change", render); B.addEventListener("change", render);
