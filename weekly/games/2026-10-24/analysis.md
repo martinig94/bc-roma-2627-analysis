@@ -1,5 +1,5 @@
 title: 
-reviewed: no
+reviewed: yes
 generated: deb1cf3795
 
 <!--
@@ -116,11 +116,14 @@ Varese has:
 {{ figure: 08_shot_distribution }}
 
 ![Hale radar plot](05_player_hale_shot_profile.png)
+![Hale shots_deep_dive](05c_player_hale_shot_types.png)
 ![Duke radar plot](05_player_duke_shot_profile.png)
+![Duke shots_deep_dive](05c_player_duke_shot_types.png)
+![Roby radar plot](05_player_roby_shot_profile.png)
+![Roby shots_deep_dive](05c_player_roby_shot_types.png)
 ![Renfro radar plot](05_player_renfro_shot_profile.png)
 ![Alviti radar plot](05_player_alviti_shot_profile.png)
 ![Libbrizi radar plot](05_player_librizzi_shot_profile.png)
-![Roby radar plot](05_player_roby_shot_profile.png)
 ![Kamagate radar plot](05_player_kamagate_shot_profile.png)
 ### Other stats
 
