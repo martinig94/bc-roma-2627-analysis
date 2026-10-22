@@ -27,7 +27,7 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## Key points
 
-- Varese's offense runs through Hale: 22 possessions and 20.8 points a game, 15/38 from three (9 of the 15 made are unassisted pull-ups); the next four scorers share about 7 possessions each. The bench adds 24 points a game (30%), BC Roma's 40.
+- Varese's offense runs through Hale: 22 possessions and 20.8 points a game, 15/38 from three (9 of the 15 made are unassisted pull-ups). Duke is second with 14 possessions and 11.2 points (0.79 PPP, 2/11 from three). After them the possessions are spread evenly, 7-8 a game each: Alviti (9.8 PPG, 1.26 PPP), Renfro (8.2, 1.07), Nikolic (6.8), Kamagate (6.2), Librizzi (5.8) and Roby (5.2, 0.62 PPP). The bench adds 24 points a game (30%), BC Roma's 40.
 - Turnovers are the swing stat: Varese forces a 21.8 TOV% with 8.2 steals a game (2nd in LBA), BC Roma forces 11.6 TOV% with 4.5 steals (14th). Varese, though, loses the ball 16 times a game itself (TOV% 21.7, BC Roma 16.0).
 - Second chances: Varese OREB% 36.6 (14 a game, 1.35 PPP on put-backs, Renfro, Kamagate, Roby and Nikolic) against BC Roma's DREB% 69.7.
 - BC Roma's best play type, the spot-up (1.15 PPP, 31 3PA a game at 40.8%), is the play type Varese defends most often (25% of its defensive possessions) at 1.05 PPP allowed.
@@ -204,6 +204,7 @@ Clips to look up (game clock from the LBA play-by-play; the three groups are the
 **Lineup stretch**: Alviti, Nikolic, Renfro, Hale, Librizzi at Scafati from Q3 1:05 to Q4 6:27 (4.6', the best defensive lineup by PPP allowed).
 
 
-## Other possible checks
-- Percentage of shots in the first 8", second 8", third 8" of a possession. Check if there are significant differences between lineups.
+## Other suggested checks
+- Player's shooting hand and drive dominant hand at least for Hale and Duke.   
+- Percentage of shots in the first 8", second 8", third 8" of a possession. Check if there are significant differences between lineups.  
 - Shot takers and shot type after SLOB and BLOB
