@@ -10,7 +10,7 @@ Figures (all season-to-date, both LBA and EuroCup games when the EuroCup file is
   04_scoring_sources      points ≤4.5 m from the rim, mid-range, threes, free throws; 3PA per game
   05_shooting             2P% / 3P% / FT% / eFG% / TS% vs league, per team
   06_hot_spots            nine-zone FG% heatmaps side by side (LBA shots only — they carry coordinates)
-  06b_shot_charts_<team>_<n>  shot chart of each player (made = filled, missed = ring), three players per image, both teams, most FGA first
+  06b_shot_charts_<team>_<n>  zone shot chart (FG% per zone, as in the hot spots) of each player, three players per image, both teams, most FGA first
   07_key_players          PIR vs TS% scatter with minutes, league in grey; top-5 table per team
   08_shot_distribution    share of team FGA per player, twos vs threes
   09_basic_stats          assists, rebounds, steals, blocks, turnovers, fouls per game and per 100 possessions (LBA only)
@@ -345,26 +345,22 @@ def plot_zone_heatmap(ax, s, title, ref=None):
 
 
 def fig_player_shot_charts(pbp, A, B, out, per_image=3, max_players=9, min_fga=5):
-    """One chart per player with at least `min_fga` shots (LBA/EuroCup play-by-play coordinates), `per_image` players per image."""
+    """One zone heatmap per player (same style as the hot spots: made/attempts, FG% and the league FG% in each zone) for the players with
+    at least `min_fga` shots (play-by-play coordinates), `per_image` players per image."""
     s = shots_cm(pbp)
-    for i, team in enumerate((A, B)):
+    ref = zone_stats(s[~s.team.isin([A, B])])
+    for team in (A, B):
         st = s[s.team == team]
         top = st.groupby("player_surname").size().loc[lambda n: n >= min_fga].sort_values(ascending=False).head(max_players).index
-        fill, edge = team_color(team, i)
         slug = team.replace(" ", "_")
         for k in range(0, len(top), per_image):
             group = top[k:k + per_image]
             fig, axes = plt.subplots(1, len(group), figsize=(6.2 * len(group), 6.6), squeeze=False)
             for ax, sn in zip(axes[0], group):
                 ps = st[st.player_surname == sn]
-                draw_half_court(ax)
-                miss, make = ps[~ps.made], ps[ps.made]
-                ax.scatter(miss.cx, miss.cy, s=60, facecolors="none", edgecolors=RED, linewidths=1.3, zorder=3)
-                ax.scatter(make.cx, make.cy, s=60, c=fill, edgecolors=edge, linewidths=0.8, zorder=4)
-                two, three = ps[ps.pts == 2], ps[ps.pts == 3]
-                ax.set_title(f"{sn.title()}  ({ps.game_id.nunique()} games)\nFG {len(make)}/{len(ps)} · 2pt {int(two.made.sum())}/{len(two)} · "
-                             f"3pt {int(three.made.sum())}/{len(three)}", **TITLE_KW)
-            fig.suptitle(f"{team} — shot charts, {COMP_NAME} games (filled = made, ring = missed)", **SUP_KW)
+                mesh = plot_zone_heatmap(ax, ps, f"{sn.title()} — {int(ps.made.sum())}/{len(ps)} FG in {ps.game_id.nunique()} games", ref=ref)
+            cb = fig.colorbar(mesh, ax=axes.ravel().tolist(), fraction=0.02, pad=0.02); cb.set_ticks([0, 25, 50, 75, 100]); cb.set_label("FG%", fontsize=8)
+            fig.suptitle(f"{team} — shot charts by zone, {COMP_NAME} games (third line = FG% of all other {COMP_NAME} teams in that zone)", **SUP_KW)
             save_fig(fig, out / f"06b_shot_charts_{slug}_{k // per_image + 1}.png"); plt.close(fig)
 
 
