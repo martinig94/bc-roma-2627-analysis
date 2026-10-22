@@ -278,7 +278,7 @@ def compare_data(a: dict) -> dict:
     """What the compare page needs from one snapshot (numbers only, small)."""
     where = "at" if a["home"] is False else "vs"
     comp = a["competition"] + (f" round {a['round']}" if a["round"] else "")
-    keep = ("player_id", "photo", "name", "pos", "height", "gp", "min", "pts", "reb", "ast", "pir", "fg2", "fg3", "ft")
+    keep = ("player_id", "photo", "name", "pos", "height", "gp", "min", "pts", "reb", "oreb", "ast", "pir", "fg2", "fg3", "ft")
     return {"key": a["date"], "label": f"{a['date']} · {where} {a['opponent']} · {comp}", "date": a["date"], "game": f"{where} {a['opponent']} ({comp})",
             "record": a["record"], "position": a["position"], "points": a["points"], "record_ec": a.get("record_ec"), "form": a["form"],
             "profile": a.get("profile") or {}, "roster": [{k: r.get(k) for k in keep} for r in a["roster"]]}
@@ -346,7 +346,7 @@ COMPARE_JS = r"""
     var names = [], seen = {};
     b.roster.concat(a.roster).forEach(function (r) { if (!seen[r.name]) { seen[r.name] = 1; names.push(r.name); } });
     var get = function (s, n) { return s.roster.filter(function (r) { return r.name === n; })[0]; };
-    var cols = [["gp", "GP"], ["min", "MIN"], ["pts", "PTS"], ["reb", "REB"], ["ast", "AST"], ["pir", "PIR"]];
+    var cols = [["gp", "GP"], ["min", "MIN"], ["pts", "PTS"], ["reb", "REB"], ["oreb", "OREB"], ["ast", "AST"], ["pir", "PIR"]];
     h += '<h2>Roster, per-game averages</h2><p><label>Chart: <select id="cmpStat">' + cols.filter(function (c) { return c[0] !== "gp"; }).map(function (c) {
       return '<option value="' + c[0] + '"' + (c[0] === rosterStat ? " selected" : "") + ">" + c[1] + "</option>"; }).join("") + "</select></label></p>";
     var both = names.filter(function (n) { var x = get(a, n), y = get(b, n); return x && y && num(x[rosterStat]) && num(y[rosterStat]); });
