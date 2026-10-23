@@ -1,14 +1,12 @@
-"""Triangle plots of where a team (and each of its players) takes and makes its shots, game by game.
+"""Triangle plots of where a team (and each of its players) makes its shots, game by game.
 
     python notebooks/tendency_triangles.py --team "Openjobmetis Varese" --before 2026-10-24 --competition LBA --out reports/<folder>
     python notebooks/tendency_triangles.py --team "BC Roma" --before 2026-10-27 --competition EC --out reports/<folder>
 
 Writes into --out (<prefix> is 12_triangles_ unless --prefix says otherwise):
-  <prefix>team_attempts.png            the team: share of the field-goal attempts that are 3PA / paint / mid-range, one dot per game
-  <prefix>team_made.png                the same for the made shots
-  <prefix>players_high_attempts.png    the players who take HIGH_VOLUME_FGA or more attempts per game they play, one triangle each
-  <prefix>players_low_attempts.png     the other players (with enough games)
-  <prefix>players_high_made.png, <prefix>players_low_made.png   the same for the made shots (the volume groups are by attempts)
+  <prefix>team_made.png            the team: share of the made field goals that are 3PT / paint / mid-range, one dot per game
+  <prefix>players_high_made.png    the players who take HIGH_VOLUME_FGA or more attempts per game they play, one triangle each
+  <prefix>players_low_made.png     the other players (with enough games); the volume groups are by attempts
 
 The corners are the 3-point attempts (top), the paint attempts (bottom left) and the mid-range attempts (bottom right); paint + mid-range
 are the 2-point attempts. Paint = inside the lane (the key: 4.9 m wide, baseline to free-throw line); mid-range = every other 2-point
@@ -38,7 +36,7 @@ HIGH_VOLUME_FGA = 6.0                                          # attempts per ga
 COLS = 4
 SHADE_INNER, SHADE_OUTER = 0.5, 0.8                            # share of the games inside the dark and the light shade
 CORNERS = {"3PT": (0.5, math.sqrt(3) / 2), "Paint": (0.0, 0.0), "Mid-range": (1.0, 0.0)}   # top, bottom left, bottom right
-KINDS = {"attempts": "Attempts", "made": "Made shots"}
+KINDS = {"made": "Made shots"}                                 # the figures written (the attempts version exists in the code but is not used)
 BLACK = "#111118"
 WIN_COLOR, LOSS_COLOR = GREEN, RED
 COMPETITIONS = {"LBA": "LBA", "EC": "EuroCup", "ALL": "LBA + EuroCup"}
