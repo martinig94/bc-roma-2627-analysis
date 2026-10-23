@@ -1,8 +1,9 @@
 """Synergy defensive leaderboard: from a Synergy export to the Leaderboard page of the site.
 
-    python notebooks/synergy_leaderboard.py ingest EXPORT.xls --competition eurocup [--date 2026-10-22]
+    python notebooks/synergy_leaderboard.py ingest SOURCE --competition eurocup [--date 2026-10-22]
 
-reads a Synergy export (one tab per play type: PPP, TRANSITION, ISO, ...; header on row 2, one team per row) and writes
+SOURCE is a folder of CSVs extracted from the Synergy web app in the browser (one per play type, see
+.claude/skills/synergy-leaderboard/SKILL.md) or an .xls export (one tab per play type: PPP, TRANSITION, ISO, ...). It writes
 data/synergy/leaderboard/<competition>/<play type>.csv + meta.json (the date shown on the page). Run it again with the next
 export after each EuroCup / LBA game, or write the same CSVs from a fetcher. ``build_site.py`` calls ``page_markdown()``.
 Defensive tables: PPP allowed, rank 1 = lowest.
@@ -32,19 +33,72 @@ SHOWN = [("Rank", "Rk", "{:.0f}"), ("Team", "Team", None), ("GP", "GP", "{:.0f}"
          ("Score%", "Score%", "pct"), ("2 FG%", "2P%", "pct"), ("3 FG%", "3P%", "pct")]
 
 
-def ingest(xls: Path, competition: str, day: str | None) -> None:
-    """Export (.xls) -> data/synergy/leaderboard/<competition>/*.csv."""
+# Synergy web-app column names (snake case, as in data/synergy/<scouting folder>/*.csv) -> names of the export tables
+ALIASES = {"rank": "Rank", "team": "Team", "gp": "GP", "poss": "Poss", "pct_time": "%Time", "time": "%Time", "pts": "Pts", "ppp": "PPP",
+           "fga": "FG Att", "fgm": "FG Made", "fg_pct": "FG%", "efg_pct": "eFG%", "to_pct": "TO%", "ft_pct": "%FT", "score_pct": "Score%",
+           "fg2_pct": "2 FG%", "fg3_pct": "3 FG%", "fg3a_per_fga": "3PA/FGA"}
+REQUIRED = ["Team", "GP", "Poss", "PPP"]
+
+
+def _canon(col: str) -> str:
+    key = re.sub(r"[^a-z0-9%]+", "_", col.strip().lower()).strip("_")
+    return ALIASES.get(key, col.strip())
+
+
+def _number(v):
+    """'44.7%' -> 0.447, '+0.10' -> 0.1, '1,234' -> 1234.0; anything else unchanged."""
+    if isinstance(v, str):
+        t = v.strip().replace(",", "")
+        try:
+            return float(t[:-1]) / 100 if t.endswith("%") else float(t)
+        except ValueError:
+            return v.strip()
+    return v
+
+
+def _clean(df: pd.DataFrame, name: str) -> pd.DataFrame:
+    """Canonical columns, numbers as numbers, ranked by PPP when the table has no Rank column."""
+    df = df.rename(columns=_canon).dropna(how="all").dropna(axis=1, how="all")
+    missing = [c for c in REQUIRED if c not in df.columns]
+    if missing:
+        raise SystemExit(f"{name}: missing columns {missing} (found {list(df.columns)})")
+    df = df[df["Team"].notna()].apply(lambda c: c.map(_number))
+    if "Rank" not in df.columns:
+        df = df.sort_values("PPP")
+        df.insert(0, "Rank", df["PPP"].rank(method="min"))
+    return df
+
+
+def _read(source: Path, tab: str, name: str) -> pd.DataFrame | None:
+    """One play-type table from an .xls export (tab 'ISO - Tabella 1') or from a folder of CSVs (iso.csv, ISO.csv or 'ISO - Tabella 1.csv')."""
+    if source.is_dir():
+        for stem in (name, tab, f"{tab} - Tabella 1"):
+            f = next((x for x in source.glob("*.csv") if x.stem.lower() == stem.lower()), None)
+            if f:
+                return pd.read_csv(f)
+        return None
+    return pd.read_excel(source, sheet_name=f"{tab} - Tabella 1", header=1)
+
+
+def ingest(source: Path, competition: str, day: str | None) -> None:
+    """A Synergy pull (folder of CSVs written from the browser, or an .xls export) -> data/synergy/leaderboard/<competition>/*.csv + meta.json."""
     out = DIR / competition
     out.mkdir(parents=True, exist_ok=True)
-    for tab, name, _ in PLAY_TYPES:
-        df = pd.read_excel(xls, sheet_name=f"{tab} - Tabella 1", header=1)
-        df = df[df["Team"].notna()].dropna(axis=1, how="all")
-        df.to_csv(out / f"{name}.csv", index=False)
+    done = []
+    for tab, name, title in PLAY_TYPES:
+        df = _read(source, tab, name)
+        if df is None:
+            print(f"  no table for {title}: left as it was")
+            continue
+        _clean(df, title).to_csv(out / f"{name}.csv", index=False)
+        done.append(name)
+    if "ppp" not in done:
+        raise SystemExit("the overall (PPP) table is required")
     if day is None:       # ..._DDMMYY.xls
-        m = re.search(r"(\d{2})(\d{2})(\d{2})(?=\D*$)", xls.stem)
+        m = re.search(r"(\d{2})(\d{2})(\d{2})(?=\D*$)", source.stem)
         day = date(2000 + int(m[3]), int(m[2]), int(m[1])).isoformat() if m else date.today().isoformat()
-    (out / "meta.json").write_text(json.dumps({"date": day, "source": xls.name}, indent=2) + "\n", encoding="utf-8")
-    print(f"{competition}: {len(PLAY_TYPES)} tables, data of {day}")
+    (out / "meta.json").write_text(json.dumps({"date": day, "source": source.name}, indent=2) + "\n", encoding="utf-8")
+    print(f"{competition}: {len(done)} tables, data of {day}")
 
 
 def _cell(v, fmt: str | None) -> str:
@@ -88,8 +142,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("ingest")
-    p.add_argument("xls", type=Path)
+    p.add_argument("source", type=Path, help="folder of CSVs or an .xls export")
     p.add_argument("--competition", choices=COMPETITIONS, required=True)
     p.add_argument("--date", help="ISO date of the data (default: from the file name, DDMMYY)")
     a = ap.parse_args()
-    ingest(a.xls, a.competition, a.date)
+    ingest(a.source, a.competition, a.date)
