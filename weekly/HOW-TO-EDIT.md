@@ -14,6 +14,17 @@ lineups, what to expect, highlights. A section that is still empty shows a grey 
 reviewed"* (the line `{{ pending }}`): replace that line with your text and plots. The Synergy plots of the opponent go in the same
 folder (`python notebooks/synergy_scouting_plots.py data/synergy/<folder> --out ...`, then copy the PNGs next to `analysis.md`).
 
+For some opponents you can add up to three optional subpages in the same folder; each one that exists is linked from the opponent
+analysis (section "More analysis") and is not shown if the file is missing:
+
+| subpage | file |
+|---|---|
+| individual tendencies | `weekly/games/<date>/individual_tendencies.md` |
+| defense tendencies | `weekly/games/<date>/defense_tendencies.md` |
+| offense tendencies | `weekly/games/<date>/offense_tendencies.md` |
+
+They are plain markdown: start with `# Title`, add text, `{{ figure: name }}` blocks and your own images (same folder, `![caption](file.png)`).
+
 Never edit `docs/` or `reports/`: they are generated and get overwritten (`docs/` is not even committed). Your file is never overwritten.
 
 ## Steps
