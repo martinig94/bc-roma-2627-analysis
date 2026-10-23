@@ -190,8 +190,7 @@ def fig_players(s: pd.DataFrame, team: str, comp_name: str, out: Path, prefix: s
         if len(sh) < MIN_GAMES:
             continue
         vol = len(allp) / allp.game_id.nunique()
-        mine = shots[shots.player_surname == player]
-        groups["high" if vol >= HIGH_VOLUME_FGA else "low"].append((vol, player.title(), sh, kind_split(mine), f" · {vol:.1f} FGA/g"))
+        groups["high" if vol >= HIGH_VOLUME_FGA else "low"].append((vol, player.title(), sh, kind_split(allp), f" · {vol:.1f} FGA/g"))
     paths = []
     for grp, label in (("high", f"high volume ({HIGH_VOLUME_FGA:g}+ attempts per game)"), ("low", f"lower volume (under {HIGH_VOLUME_FGA:g} attempts per game)")):
         panels = sorted(groups[grp], key=lambda p: -p[0])
