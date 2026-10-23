@@ -1,0 +1,12 @@
+{
+  "opponent":  {"name": "Bosna",   "abbr": "BOS", "games": 4, "games_all": 7},
+  "reference": {"name": "BC Roma", "abbr": "BCR", "games": 4, "games_all": 8},
+  "league": "EuroCup",
+  "competition": "EuroCup",
+  "league_games_each": 4,
+  "season": "2026-27",
+  "date": "23 Oct 2026",
+  "author": "Giulia Martini",
+  "lineup_min_poss": 5,
+  "exclude_players": []
+}
