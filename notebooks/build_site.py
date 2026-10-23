@@ -92,7 +92,8 @@ def page_state(notes: dict[str, str]) -> str:
 
 def day_label(iso: str) -> str:
     """Return an ISO date as e.g. "5 Oct"."""
-    return date.fromisoformat(iso).strftime("%-d %b")
+    d = date.fromisoformat(iso)
+    return f"{d.day} {d.strftime('%b')}"       # "%-d" is not supported by strftime on Windows
 
 
 def game_text(r: pd.Series) -> str:
