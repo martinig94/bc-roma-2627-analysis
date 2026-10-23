@@ -508,6 +508,7 @@ LEADERBOARD_JS = r"""
 .doc table.sortable th .arrow { font-size:.7em; margin-left:3px; opacity:.8; }
 .lb-tabs { display:flex; flex-wrap:wrap; gap:6px; margin:1.2rem 0 .2rem; position:sticky; top:0; z-index:5; background:var(--paper); padding:8px 0; border-bottom:1px solid var(--line); }
 .lb-tabs button { font:inherit; font-size:.88rem; padding:3px 12px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; }
+.lb-legend { font-size:.82rem; color:var(--muted); margin:.4rem 0 0; }
 .lb-tabs button[aria-selected="true"] { background:var(--gold); border-color:var(--gold); font-weight:600; }
 </style>
 <script>
@@ -537,17 +538,41 @@ LEADERBOARD_JS = r"""
 <script>
 // Sortable leaderboard tables: click a header to sort by it (again to reverse); the Rk column is renumbered by the chosen column
 // (ties share a rank). Teams the app does not rank (Rk "–", fewer than 10 possessions) stay at the bottom. Click Rk to restore the app's ranking.
+// The first click puts the best value first (defence: lowest PPP allowed, highest TO%; offence: the opposite) and cells are shaded green (better) to red (worse).
 (function () {
   var num = function (td) { var v = parseFloat(td.textContent.replace("%", "")); return isNaN(v) ? null : v; };
+  var LOWER_BETTER_ON_DEFENCE = {"PPP": 1, "FG%": 1, "eFG%": 1, "Score%": 1, "2P%": 1, "3P%": 1};     // TO% is the reverse
+  var rgba = function (g) { return g >= .5 ? "rgba(30,123,69," + ((g - .5) * .7).toFixed(2) + ")" : "rgba(179,48,47," + ((.5 - g) * .7).toFixed(2) + ")"; };
+  var legend = document.createElement("p"); legend.className = "lb-legend";
+  legend.innerHTML = 'Shading compares the teams of each table: <span style="background:rgba(30,123,69,.35)">&nbsp;green = better&nbsp;</span> <span style="background:rgba(179,48,47,.35)">&nbsp;red = worse&nbsp;</span> '
+    + 'for the team. On defence a low PPP, FG%, eFG%, Score%, 2P% or 3P% allowed is good and a high TO% (turnovers forced) is good; on offence the opposite. Poss, %Time and GP are not shaded.';
+  var bar = document.querySelector(".lb-tabs"); if (bar) bar.parentNode.insertBefore(legend, bar.nextSibling);
   [].forEach.call(document.querySelectorAll(".doc table"), function (tb) {
+    var sec = tb.closest("details"), defence = !!sec && /Defence/.test(sec.querySelector("h2").textContent);
     var heads = [].slice.call(tb.tHead.rows[0].cells), body = tb.tBodies[0], rows = [].slice.call(body.rows);
     rows.forEach(function (r, i) { r._i = i; r._rk = r.cells[0].textContent; r._ranked = r._rk.trim() !== "–"; });
+    var ranked0 = rows.filter(function (r) { return r._ranked; });
+    // +1 = a low value is better, -1 = a high value is better, 0 = not a quality measure
+    var better = heads.map(function (h) {
+      var t = h.textContent.trim(), low = t === "TO%" ? !defence : LOWER_BETTER_ON_DEFENCE[t] ? defence : null;
+      return low === null ? 0 : low ? 1 : -1;
+    });
+    heads.forEach(function (h, c) {
+      if (!better[c]) return;
+      var vals = ranked0.map(function (r) { return num(r.cells[c]); }).filter(function (v) { return v !== null; });
+      ranked0.forEach(function (r) {
+        var v = num(r.cells[c]); if (v === null || vals.length < 2) return;
+        var worse = 0, same = 0; vals.forEach(function (w) { if (better[c] > 0 ? w > v : w < v) worse++; else if (w === v) same++; });
+        r.cells[c].style.background = rgba((worse + (same - 1) / 2) / (vals.length - 1));
+      });
+    });
     tb.classList.add("sortable");
     var state = {col: 0, dir: 1};
     heads.forEach(function (th, c) {
       th.title = "Sort by " + th.textContent + " (click again to reverse)";
       th.addEventListener("click", function () {
-        state = {col: c, dir: state.col === c && c !== 0 ? -state.dir : (c === 1 || c === 0 ? 1 : -1)};
+        var first = c === 1 || c === 0 ? 1 : better[c] > 0 ? 1 : -1;       // best first: low values first when low is better
+        state = {col: c, dir: state.col === c && c !== 0 ? -state.dir : first};
         var ranked = rows.filter(function (r) { return r._ranked; }), rest = rows.filter(function (r) { return !r._ranked; });
         var key = function (r) { return c === 1 ? r.cells[1].textContent.toLowerCase() : c === 0 ? r._i : num(r.cells[c]); };
         ranked.sort(function (a, b) { var x = key(a), y = key(b); if (x === y) return a._i - b._i; if (x === null) return 1; if (y === null) return -1; return (x < y ? -1 : 1) * state.dir; });
@@ -558,7 +583,7 @@ LEADERBOARD_JS = r"""
           r.cells[0].textContent = c === 1 ? i + 1 : r._pos;
         });
         ranked.concat(rest).forEach(function (r) { body.appendChild(r); });
-        heads.forEach(function (h, j) { var a = h.querySelector(".arrow"); if (a) a.remove(); });
+        heads.forEach(function (h) { var a = h.querySelector(".arrow"); if (a) a.remove(); });
         if (c !== 0) { var s = document.createElement("span"); s.className = "arrow"; s.textContent = state.dir > 0 ? "▲" : "▼"; th.appendChild(s); }
       });
     });
