@@ -30,6 +30,7 @@ import pandas as pd
 
 import lba_style
 import pages
+import synergy_leaderboard
 import weekly_config
 from imgopt import shrink_png
 from player_names import photo_name
@@ -500,6 +501,16 @@ def build_info_pages() -> list[dict]:
     return entries
 
 
+def build_leaderboard() -> dict | None:
+    """docs/leaderboard/index.html from data/synergy/leaderboard (Synergy defensive tables); None while there is no data."""
+    shutil.rmtree(DOCS / "leaderboard", ignore_errors=True)
+    text = synergy_leaderboard.page_markdown()
+    if text is None:
+        return None
+    return {"slug": "leaderboard", "title": "Defensive leaderboard", "html": f'<div class="doc">{md_html(text)}</div>', "url": "leaderboard/",
+            "edit": None, "label": "Leaderboard"}
+
+
 def build_nav(snaps: list[dict], opps: list[dict]) -> dict:
     """The Opponents dropdown, newest first: the games that have an opponent analysis (snapshots are reached from the landing page)."""
     by_slug = {e["opponent_slug"]: e for e in snaps if e["opponent_slug"]}
@@ -643,6 +654,11 @@ def main() -> None:
     nav = {**build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"], "right": i == 0} for i, p in enumerate(info_pages)]}
     if len(snaps) > 1:
         nav["pages"].insert(0, {"url": "compare/", "label": "Compare"})     # then Goal, Methodology, Work plan, pushed to the right
+    board = build_leaderboard()
+    if board:
+        nav["pages"].insert(0, {"url": board["url"], "label": board["label"]})
+        (DOCS / "leaderboard").mkdir(parents=True, exist_ok=True)
+        (DOCS / "leaderboard" / "index.html").write_text(shell(f"{board['title']} · {CFG['site_title']}", board["html"], "../", nav), encoding="utf-8")
     build_compare(snaps, nav)
     for p in info_pages:
         (DOCS / p["slug"]).mkdir(parents=True, exist_ok=True)
