@@ -162,6 +162,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = DATA_DIR, force: bool = Fa
     }
     (folder / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")
     page, created = pages.ensure("analysis", date, auto, sorted(f.name for f in folder.iterdir()))
+    pages.ensure_subpages(date, auto, sorted(f.name for f in folder.iterdir()))
     if created:
         print(f"created {page.relative_to(ROOT)} - the page you edit")
     print(f"opponent analysis round {rnd}: {wr.short(team)} vs {wr.short(opp)}  ->  {folder}")
@@ -244,6 +245,7 @@ def generate_eurocup(date: str, team: str = TEAM, data: Path = DATA_DIR, force: 
     }
     (folder / "auto.json").write_text(json.dumps(auto, indent=2, ensure_ascii=False), encoding="utf-8")
     page, created = pages.ensure("analysis", date, auto, sorted(f.name for f in folder.iterdir()))
+    pages.ensure_subpages(date, auto, sorted(f.name for f in folder.iterdir()))
     if created:
         print(f"created {page.relative_to(ROOT)} - the page you edit")
     print(f"opponent analysis EuroCup {date}: {wr.short(team)} vs {wr.short(opp)}  ->  {folder}")
