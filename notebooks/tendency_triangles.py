@@ -83,29 +83,25 @@ def to_xy(shares: np.ndarray) -> np.ndarray:
     return shares[:, [0]] * top + shares[:, [1]] * left + shares[:, [2]] * right
 
 
-def convex_hull(points: np.ndarray) -> np.ndarray:
-    """Corners of the convex hull of 2-D points (Andrew's monotone chain), counter-clockwise; fewer than 3 corners = no area."""
-    pts = sorted({(round(float(x), 9), round(float(y), 9)) for x, y in points})
-    if len(pts) < 3:
-        return np.array(pts)
-
-    def half(seq):
-        h = []
-        for p in seq:
-            while len(h) >= 2 and (h[-1][0] - h[-2][0]) * (p[1] - h[-2][1]) - (h[-1][1] - h[-2][1]) * (p[0] - h[-2][0]) <= 0:
-                h.pop()
-            h.append(p)
-        return h[:-1]
-    return np.array(half(pts) + half(pts[::-1]))
+GRID_N = 220                                                   # resolution of the density grid
+MIN_BANDWIDTH = 0.06                                           # smoothing never narrower than this (triangle side = 1)
+TRIANGLE = np.array(list(CORNERS.values()))
 
 
-def central_hull(xy: np.ndarray, frac: float) -> np.ndarray | None:
-    """Corners of the convex hull of the ceil(frac * n) games closest to the median game, or None if they do not span an area."""
-    centre = np.median(xy, axis=0)
-    k = math.ceil(frac * len(xy))
-    near = xy[np.argsort(np.hypot(*(xy - centre).T), kind="stable")[:k]]
-    hull = convex_hull(near)
-    return hull if len(hull) >= 3 else None
+def density_levels(xy: np.ndarray, fracs: tuple[float, ...]) -> tuple[np.ndarray, np.ndarray, np.ndarray, list[float]]:
+    """Gaussian kernel density of the games inside the triangle and, for each share in `fracs`, the density level whose area holds that
+    share of the games (highest-density regions). Returns (grid x, grid y, density with NaN outside the triangle, levels)."""
+    gx, gy = np.meshgrid(np.linspace(-0.02, 1.02, GRID_N), np.linspace(-0.02, 0.89, GRID_N))
+    top, left, right = TRIANGLE
+    inside = (gy >= -1e-9) & (gy <= top[1] * (1 - np.abs(gx - 0.5) * 2) + 1e-9)
+    h = max(MIN_BANDWIDTH, float(np.sqrt(xy.var(axis=0).mean())) * len(xy) ** (-1 / 6))        # Scott's rule, with a floor
+    dens = np.zeros_like(gx)
+    for x, y in xy:
+        dens += np.exp(-((gx - x) ** 2 + (gy - y) ** 2) / (2 * h * h))
+    dens = np.where(inside, dens, np.nan)
+    vals = np.sort(dens[inside])[::-1]
+    mass = np.cumsum(vals) / vals.sum()
+    return gx, gy, dens, [float(vals[min(np.searchsorted(mass, f), len(vals) - 1)]) for f in fracs]
 
 
 def draw_triangle(ax, sh: pd.DataFrame, avg: np.ndarray, title: str, small: bool = False) -> None:
@@ -121,10 +117,11 @@ def draw_triangle(ax, sh: pd.DataFrame, avg: np.ndarray, title: str, small: bool
     ax.text(left[0] - 0.02, left[1] - 0.03, "Paint", ha="center", va="top", fontsize=fs, fontweight="bold", color=TEXT)
     ax.text(right[0] + 0.02, right[1] - 0.03, "Mid-range", ha="center", va="top", fontsize=fs, fontweight="bold", color=TEXT)
     xy = to_xy(sh[list(CORNERS)].to_numpy())
-    for frac, alpha in ((SHADE_OUTER, 0.22), (SHADE_INNER, 0.42)):
-        hull = central_hull(xy, frac)
-        if hull is not None:
-            ax.add_patch(Polygon(hull, closed=True, facecolor=GOLD, edgecolor=GOLD_EDGE, alpha=alpha, lw=0.8, zorder=3))
+    if len(xy) >= 3:
+        gx, gy, dens, (lo, hi) = density_levels(xy, (SHADE_OUTER, SHADE_INNER))
+        for level, upper, alpha in ((lo, hi, 0.28), (hi, np.inf, 0.5)):               # light: inside the 80% area, dark: inside the 50% area
+            cs = ax.contourf(gx, gy, dens, levels=[level, upper if np.isfinite(upper) else np.nanmax(dens) * 1.01], colors=[GOLD], alpha=alpha, zorder=3)
+            ax.contour(gx, gy, dens, levels=[level], colors=[GOLD_EDGE], linewidths=0.9, alpha=0.8, zorder=3)
     ax.scatter(xy[:, 0], xy[:, 1], s=34 if small else 50, color=BLUE, edgecolor="white", linewidth=0.8, zorder=5)
     ax.scatter(*to_xy(avg[None, :])[0], marker="D", s=46 if small else 64, color=RED, edgecolor="white", linewidth=0.8, zorder=6)
     ax.set_title(title, fontsize=9 if small else 11, fontweight="bold", color=TEXT, pad=14 if small else 18)
@@ -161,7 +158,7 @@ def fig_triangles(s: pd.DataFrame, team: str, what: str, comp_name: str, out: Pa
     what_txt = "made field goals" if what == "made" else "field-goal attempts"
     fig.suptitle(f"{team} — {what_txt} by type, one dot per game ({comp_name} games)", **SUP_KW)
     note = (f"Corners: 3-point, paint (inside the lane) and mid-range (other 2-point shots) {what_txt}; paint + mid-range = 2-point. "
-            f"Dark shade: the {SHADE_INNER:.0%} of the games closest to the typical game; light shade: {SHADE_OUTER:.0%}; diamond: all shots together. "
+            f"Smoothed areas (kernel density): dark = densest area covering {SHADE_INNER:.0%} of the games, light = {SHADE_OUTER:.0%}; diamond: all shots together. "
             f"Players: at least {MIN_GAMES} games with {MIN_SHOTS[what]}+ {'made shots' if what == 'made' else 'attempts'}; shades need 3+ games.")
     fig.text(0.01, 0.0, note, fontsize=7.5, color=TEXT2, ha="left", va="top", wrap=True)
     path = out / f"{prefix}{what}.png"
