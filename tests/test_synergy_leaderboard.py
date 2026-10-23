@@ -23,7 +23,7 @@ def row(play, rank, abbr, name, ppp, poss_total=40) -> dict:
 
 
 def write(folder: Path, comp="eurocup", side="defense") -> None:
-    rows = [row("All", 2, "BCR", "Basket Club Roma SPQR (ex Vanoli Cremona)", 0.955), row("All", 1, "ARI", "Aris Thessaloniki", 0.797),
+    rows = [row("All", 3, "MRO", "Maxima Roma (ex Germani Brescia)", 0.97), row("All", 2, "BCR", "Basket Club Roma SPQR (ex Vanoli Cremona)", 0.955), row("All", 1, "ARI", "Aris Thessaloniki", 0.797),
             row("Isolation", 1, "ARI", "Aris Thessaloniki", 0.5), row("Isolation", None, "BCR", "Basket Club Roma SPQR (ex Vanoli Cremona)", 0.4, poss_total=6)]
     folder.mkdir(parents=True)
     pd.DataFrame(rows, columns=COLS).to_csv(folder / f"leaderboard_{comp}_{side}.csv", index=False)
@@ -50,5 +50,6 @@ def test_ranks_roma_highlight_and_unranked_last(tmp_path, monkeypatch):
     overall = md.split("### Overall")[1].split("###")[0]
     assert overall.index("Aris Thessaloniki") < overall.index("Basket Club Roma SPQR")      # rank order, not file order
     assert "==Basket Club Roma SPQR==" in overall and "(ex" not in overall                  # highlighted, suffix dropped
+    assert "Maxima Roma" in overall and "==Maxima Roma==" not in overall                    # the other Roma team is not
     iso = md.split("### Isolation")[1]
     assert iso.index("Aris") < iso.index("Roma") and "==–==" in iso                       # unranked team last, rank shown as a dash
