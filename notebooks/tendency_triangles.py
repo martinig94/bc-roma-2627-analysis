@@ -1,15 +1,14 @@
-"""Triangle plots of where a team (and each of its players) takes and makes its shots, game by game.
+"""Triangle plots of where a team (and each of its players) takes its shots, game by game.
 
     python notebooks/tendency_triangles.py --team "Openjobmetis Varese" --before 2026-10-24 --competition LBA --out reports/<folder>
     python notebooks/tendency_triangles.py --team "BC Roma" --before 2026-10-27 --competition EC --out reports/<folder>
 
-Writes into --out (<prefix> is 12_triangles_ unless --prefix says otherwise; <shots> is "made" or "attempts", chosen with --shots):
-  <prefix>team_<shots>.png            the team: share of the made field goals (or of the attempts) that are 3PT / paint / mid-range, one dot per game
-  <prefix>players_high_<shots>.png    the players who take HIGH_VOLUME_FGA or more attempts per game they play, one triangle each
-  <prefix>players_low_<shots>.png     the other players (with enough games); the volume groups are by attempts
---shots made (the default), attempts or both; for only the attempts plots: --shots attempts.
+Writes into --out (<prefix> is 12_triangles_ unless --prefix says otherwise):
+  <prefix>team_attempts.png            the team: share of the field-goal attempts that are 3PT / paint / mid-range, one dot per game
+  <prefix>players_high_attempts.png    the players who take HIGH_VOLUME_FGA or more attempts per game they play, one triangle each
+  <prefix>players_low_attempts.png     the other players (with enough games)
 
-The corners are the 3-point shots (top), the paint shots (bottom left) and the mid-range shots (bottom right), attempted or made; paint + mid-range
+The corners are the 3-point shots (top), the paint shots (bottom left) and the mid-range shots (bottom right); paint + mid-range
 are the 2-point attempts. Paint = inside the lane (the key: 4.9 m wide, baseline to free-throw line); mid-range = every other 2-point
 attempt. A dot close to a corner is a game made mostly of that kind of shot; green = a win of the team, red = a loss. The smoothed areas
 (kernel density) hold the densest 50% (dark) and 80% (light) of the games; the black square is the average over all the shots.
@@ -32,13 +31,11 @@ from lba_style import GOLD, GOLD_EDGE, GREEN, GRID, RED, SUP_KW, TEXT, TEXT2, sa
 ROOT = Path(__file__).resolve().parent.parent
 LANE_HALF_WIDTH, LANE_LENGTH = 245, lba_style.FREE_THROW_Y     # cm: the key is 4.9 m wide, from the baseline to the free-throw line
 MIN_GAMES = 3                                                  # a player needs this many games with enough shots to get a triangle
-MIN_SHOTS = {"attempts": 3, "made": 2}                         # shots of a game for it to count as a dot of a player (fewer = too noisy)
+MIN_ATTEMPTS = 3                                               # attempts of a game for it to count as a dot of a player (fewer = too noisy)
 HIGH_VOLUME_FGA = 6.0                                          # attempts per game played: from here a player is "high volume"
 COLS = 4
 SHADE_INNER, SHADE_OUTER = 0.5, 0.8                            # share of the games inside the dark and the light shade
 CORNERS = {"3PT": (0.5, math.sqrt(3) / 2), "Paint": (0.0, 0.0), "Mid-range": (1.0, 0.0)}   # top, bottom left, bottom right
-KINDS = {"attempts": "Attempts", "made": "Made shots"}
-SHOTS_CHOICES = {"attempts": ["attempts"], "made": ["made"], "both": ["attempts", "made"]}
 BLACK = "#111118"
 WIN_COLOR, LOSS_COLOR = GREEN, RED
 COMPETITIONS = {"LBA": "LBA", "EC": "EuroCup", "ALL": "LBA + EuroCup"}
@@ -85,11 +82,9 @@ def load_shots(data: Path, team: str, before: str, competition: str) -> pd.DataF
     return s.assign(win=s.game_id.map(results(data, team, competition)))
 
 
-def game_shares(s: pd.DataFrame, what: str, min_shots: int = 1) -> pd.DataFrame:
-    """One row per game with the share (0-1) of 3PT, Paint and Mid-range among the attempts (or the made shots), their number and ``win``."""
+def game_shares(s: pd.DataFrame, min_shots: int = 1) -> pd.DataFrame:
+    """One row per game with the share (0-1) of 3PT, Paint and Mid-range among the attempts, their number and ``win``."""
     wins = s.groupby("game_id").win.first()
-    if what == "made":
-        s = s[s.made]
     n = s.groupby(["game_id", "kind"]).size().unstack(fill_value=0).reindex(columns=list(CORNERS), fill_value=0)
     n = n[n.sum(axis=1) >= min_shots]
     return n.div(n.sum(axis=1), axis=0).assign(n=n.sum(axis=1), win=wins.reindex(n.index).astype(bool))
@@ -159,41 +154,39 @@ def kind_split(shots: pd.DataFrame) -> np.ndarray:
     return n / n.sum()
 
 
-def footer(fig, what: str, players: bool) -> None:
+def footer(fig, players: bool) -> None:
     """Legend (win / loss / average / areas) and the explanation under the figure."""
     from matplotlib.lines import Line2D
-    what_txt = "made field goals" if what == "made" else "field-goal attempts"
     items = [Line2D([], [], marker="o", ls="", color=WIN_COLOR, label="game won"), Line2D([], [], marker="o", ls="", color=LOSS_COLOR, label="game lost"),
              Line2D([], [], marker="s", ls="", color=BLACK, label="average of all shots"),
              Line2D([], [], marker="s", ls="", color=GOLD, alpha=0.5, markersize=10, label=f"densest {SHADE_INNER:.0%} of the games"),
              Line2D([], [], marker="s", ls="", color=GOLD, alpha=0.28, markersize=10, label=f"densest {SHADE_OUTER:.0%}")]
     fig.legend(handles=items, loc="lower center", ncol=5, fontsize=8.5, bbox_to_anchor=(0.5, -0.01))
-    note = (f"Corners: 3-point, paint (inside the lane) and mid-range (other 2-point shots) {what_txt}; paint + mid-range = 2-point. Areas: kernel density, drawn with 3+ games."
-            + (f" Players: at least {MIN_GAMES} games with {MIN_SHOTS[what]}+ {'made shots' if what == 'made' else 'attempts'}; high volume = {HIGH_VOLUME_FGA:g}+ attempts per game played." if players else ""))
+    note = (f"Corners: 3-point, paint (inside the lane) and mid-range (other 2-point shots) field-goal attempts; paint + mid-range = 2-point. Areas: kernel density, drawn with 3+ games."
+            + (f" Players: at least {MIN_GAMES} games with {MIN_ATTEMPTS}+ attempts; high volume = {HIGH_VOLUME_FGA:g}+ attempts per game played." if players else ""))
     fig.text(0.01, -0.045, note, fontsize=7.5, color=TEXT2, ha="left", va="top")
 
 
-def fig_team(s: pd.DataFrame, team: str, what: str, comp_name: str, out: Path, prefix: str) -> Path | None:
-    """Save <prefix>team_<what>.png: the triangle of the team."""
-    shots = s[s.made] if what == "made" else s
+def fig_team(s: pd.DataFrame, team: str, comp_name: str, out: Path, prefix: str) -> Path | None:
+    """Save <prefix>team_attempts.png: the triangle of the team."""
+    shots = s
     if shots.empty:
         return None
-    sh = game_shares(s, what)
+    sh = game_shares(s)
     fig, ax = plt.subplots(figsize=(7.2, 7.6))
     draw_triangle(ax, sh, kind_split(shots), panel_title(team, sh, kind_split(shots)))
-    fig.suptitle(f"{team} — {'made field goals' if what == 'made' else 'field-goal attempts'} by type, one dot per game ({comp_name} games)", **SUP_KW)
-    footer(fig, what, players=False)
-    path = out / f"{prefix}team_{what}.png"
+    fig.suptitle(f"{team} — field-goal attempts by type, one dot per game ({comp_name} games)", **SUP_KW)
+    footer(fig, players=False)
+    path = out / f"{prefix}team_attempts.png"
     save_fig(fig, path); plt.close(fig)
     return path
 
 
-def fig_players(s: pd.DataFrame, team: str, what: str, comp_name: str, out: Path, prefix: str) -> list[Path]:
-    """Save <prefix>players_high_<what>.png and <prefix>players_low_<what>.png: one triangle per player, split by attempts per game."""
-    shots = s[s.made] if what == "made" else s
+def fig_players(s: pd.DataFrame, team: str, comp_name: str, out: Path, prefix: str) -> list[Path]:
+    """Save <prefix>players_high_attempts.png and <prefix>players_low_attempts.png: one triangle per player, split by attempts per game."""
     groups: dict[str, list] = {"high": [], "low": []}
     for player, allp in s.groupby("player_surname"):
-        sh = game_shares(allp, what, MIN_SHOTS[what])
+        sh = game_shares(allp, MIN_ATTEMPTS)
         if len(sh) < MIN_GAMES:
             continue
         vol = len(allp) / allp.game_id.nunique()
@@ -210,9 +203,9 @@ def fig_players(s: pd.DataFrame, team: str, what: str, comp_name: str, out: Path
             ax.axis("off")
         for ax, (_, name, sh, avg, extra) in zip(axes.ravel(), panels):
             draw_triangle(ax, sh, avg, panel_title(name, sh, avg, extra), small=True)
-        fig.suptitle(f"{team} — players, {label}: {'made field goals' if what == 'made' else 'field-goal attempts'} by type ({comp_name} games)", **SUP_KW)
-        footer(fig, what, players=True)
-        path = out / f"{prefix}players_{grp}_{what}.png"
+        fig.suptitle(f"{team} — players, {label}: field-goal attempts by type ({comp_name} games)", **SUP_KW)
+        footer(fig, players=True)
+        path = out / f"{prefix}players_{grp}_attempts.png"
         save_fig(fig, path); plt.close(fig)
         paths.append(path)
     return paths
@@ -225,7 +218,6 @@ def main() -> None:
     ap.add_argument("--before", required=True, help="YYYY-MM-DD: only games before this date count")
     ap.add_argument("--competition", choices=sorted(COMPETITIONS), default="LBA")
     ap.add_argument("--out", required=True)
-    ap.add_argument("--shots", choices=sorted(SHOTS_CHOICES), default="made", help="which plots: made shots (default), attempts, or both")
     ap.add_argument("--prefix", default="12_triangles_", help="file name start of the figures, see the top of this file")
     ap.add_argument("--data", default=str(ROOT / "data"))
     a = ap.parse_args()
@@ -235,9 +227,8 @@ def main() -> None:
         raise SystemExit(f"no shots of {a.team} before {a.before} in {COMPETITIONS[a.competition]}")
     lba_style.SOURCE_NOTE = {"EC": "EuroCup play-by-play (EuroLeague API)", "ALL": "legabasket.it and EuroLeague API play-by-play"}.get(a.competition, lba_style.SOURCE_NOTE)
     lba_style.STAMP_NOTE = f"games before {pd.Timestamp(a.before):%d %b %Y} (pre-match snapshot)"
-    for what in SHOTS_CHOICES[a.shots]:
-        for p in [fig_team(s, a.team, what, COMPETITIONS[a.competition], out, a.prefix), *fig_players(s, a.team, what, COMPETITIONS[a.competition], out, a.prefix)]:
-            print(f"wrote {p}")
+    for p in [fig_team(s, a.team, COMPETITIONS[a.competition], out, a.prefix), *fig_players(s, a.team, COMPETITIONS[a.competition], out, a.prefix)]:
+        print(f"wrote {p}")
 
 
 if __name__ == "__main__":
