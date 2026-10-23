@@ -506,7 +506,34 @@ LEADERBOARD_JS = r"""
 <style>
 .doc table.sortable th { cursor:pointer; user-select:none; white-space:nowrap; }
 .doc table.sortable th .arrow { font-size:.7em; margin-left:3px; opacity:.8; }
+.lb-tabs { display:flex; flex-wrap:wrap; gap:6px; margin:1.2rem 0 .2rem; position:sticky; top:0; z-index:5; background:var(--paper); padding:8px 0; border-bottom:1px solid var(--line); }
+.lb-tabs button { font:inherit; font-size:.88rem; padding:3px 12px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; }
+.lb-tabs button[aria-selected="true"] { background:var(--gold); border-color:var(--gold); font-weight:600; }
 </style>
+<script>
+// Play-type tabs: one bar above the sections; the chosen play type is shown in every section (competition x offence/defence) and kept in the address (#spot-up).
+(function () {
+  var heads = [].slice.call(document.querySelectorAll(".doc h3")); if (!heads.length) return;
+  var names = [], slug = function (t) { return t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); };
+  heads.forEach(function (h) {
+    var t = h.nextElementSibling; while (t && t.tagName !== "TABLE") t = t.nextElementSibling;
+    h._table = t; h.dataset.play = t.dataset.play = h.textContent;
+    if (names.indexOf(h.textContent) < 0) names.push(h.textContent);
+  });
+  var bar = document.createElement("div"); bar.className = "lb-tabs"; bar.setAttribute("role", "tablist");
+  var first = document.querySelector(".doc details.sec"); first.parentNode.insertBefore(bar, first);
+  var show = function (name) {
+    heads.forEach(function (h) { var on = h.dataset.play === name; h.style.display = "none"; h._table.style.display = on ? "" : "none"; });
+    [].forEach.call(bar.children, function (b) { b.setAttribute("aria-selected", b.dataset.play === name ? "true" : "false"); });
+    history.replaceState(null, "", "#" + slug(name));
+  };
+  names.forEach(function (n) {
+    var b = document.createElement("button"); b.type = "button"; b.textContent = n; b.dataset.play = n; b.setAttribute("role", "tab");
+    b.addEventListener("click", function () { show(n); }); bar.appendChild(b);
+  });
+  show(names.filter(function (n) { return "#" + slug(n) === location.hash; })[0] || names[0]);
+})();
+</script>
 <script>
 // Sortable leaderboard tables: click a header to sort by it (again to reverse); the Rk column is renumbered by the chosen column
 // (ties share a rank). Teams the app does not rank (Rk "–", fewer than 10 possessions) stay at the bottom. Click Rk to restore the app's ranking.
