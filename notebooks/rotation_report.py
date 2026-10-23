@@ -41,7 +41,9 @@ CMAP = LinearSegmentedColormap.from_list("yellow_green", ["#f7dc3c", "#9bcf53", 
 DARK_TEXT_BELOW = 0.55                 # share under which cells are light enough for dark text
 CELL_EDGE = "#ffffff"
 LANE_HEIGHT = 0.82
-PANEL_HEIGHT = 2.05                    # inches per quarter panel
+PANEL_INCHES_PER_UNIT = 0.41           # inches per lane-height unit of a quarter panel
+OPTIONS = 3                            # default number of next-most-frequent players shown under each minute
+OPTION_GAP, OPTION_STEP, OPTION_HEIGHT = 0.3, 0.62, 0.52   # lane-height units: gap under the lanes, row pitch, cell height
 FIG_WIDTH = 13
 LIST_COLUMNS = 3                       # columns of the player list under the chart
 
@@ -95,12 +97,22 @@ def assign_lanes(share: pd.DataFrame) -> list[list[tuple[str, float]]]:
     return out
 
 
+def next_options(share: pd.DataFrame, lanes: list[list[tuple[str, float]]], n: int) -> list[list[tuple[str, float]]]:
+    """For each minute, the `n` most frequent players after the five shown (share above 0), best first."""
+    tie_break = share.sum(axis=1)
+    out = []
+    for m, minute in zip(share.columns, lanes):
+        rest = share[m].drop([p for p, _ in minute]).to_frame("s").assign(t=tie_break).sort_values(["s", "t"], ascending=False)
+        out.append([(p, float(r.s)) for p, r in rest[rest.s > 0].head(n).iterrows()])
+    return out
+
+
 def text_color(value: float) -> str:
     """Dark text on light (yellow) cells, white on dark green."""
     return TEXT if value < DARK_TEXT_BELOW else "#ffffff"
 
 
-def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str, league: str, stamp: str, out: Path) -> Path:
+def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str, league: str, stamp: str, out: Path, options: int = OPTIONS) -> Path:
     """Save the rotation chart of `team` into `out` and return its path.
 
     Args:
@@ -111,17 +123,21 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
         league: League label for the title.
         stamp: Period description for the title, e.g. "season to date".
         out: Folder that receives the PNG.
+        options: Next-most-frequent players listed under each minute (0 = none).
     """
     lanes = assign_lanes(share)
-    shown = sorted({p for minute in lanes for p, _ in minute})
-    minutes_shown = {p: sum(p == q for minute in lanes for q, _ in minute) for p in shown}
+    nxt = next_options(share, lanes, options)
+    shown = sorted(share.index)
+    minutes_shown = {p: sum(p == q for minute in lanes for q, _ in minute) for p in shown}   # minutes among the top five
     names = avg.loc[shown].sort_values("avg_min", ascending=False)
     rows = int(np.ceil(len(names) / LIST_COLUMNS))
     list_height = 0.32 * rows + 0.5
     norm = Normalize(SHARE_LOW, SHARE_HIGH)
+    bottom = LANES + (OPTION_GAP + options * OPTION_STEP if options else 0)
+    panel_height = PANEL_INCHES_PER_UNIT * bottom
 
-    fig = plt.figure(figsize=(FIG_WIDTH, QUARTERS * PANEL_HEIGHT + list_height + 1.3), layout="none")
-    grid = fig.add_gridspec(QUARTERS + 1, 1, height_ratios=[PANEL_HEIGHT] * QUARTERS + [list_height], hspace=0.28,
+    fig = plt.figure(figsize=(FIG_WIDTH, QUARTERS * panel_height + list_height + 1.3), layout="none")
+    grid = fig.add_gridspec(QUARTERS + 1, 1, height_ratios=[panel_height] * QUARTERS + [list_height], hspace=0.28,
                           top=0.885, bottom=0.03, left=0.07, right=0.985)
     for q in range(QUARTERS):
         ax = fig.add_subplot(grid[q])
@@ -130,7 +146,13 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
                 ax.barh(lane, 1, left=k, height=LANE_HEIGHT, color=CMAP(norm(value)), edgecolor=CELL_EDGE, linewidth=1.4)
                 ax.text(k + 0.5, lane - 0.12, player, ha="center", va="center", fontsize=8.5, fontweight="bold", color=text_color(value))
                 ax.text(k + 0.5, lane + 0.22, f"{value:.0%}", ha="center", va="center", fontsize=7, color=text_color(value))
-        ax.set_xlim(0, MINUTES_PER_QUARTER); ax.set_ylim(LANES - 0.45, -0.55)
+            for i, (player, value) in enumerate(nxt[q * MINUTES_PER_QUARTER + k]):
+                y = LANES + OPTION_GAP + i * OPTION_STEP - 0.05
+                ax.barh(y, 1, left=k, height=OPTION_HEIGHT, color=CMAP(norm(value)), edgecolor=CELL_EDGE, linewidth=1.4)
+                ax.text(k + 0.5, y, f"{player} {value:.0%}", ha="center", va="center", fontsize=7, color=text_color(value))
+        if options:
+            ax.text(-0.08, LANES + OPTION_GAP + (options - 1) * OPTION_STEP / 2 - 0.05, "next\noptions", ha="right", va="center", fontsize=7.5, color=TEXT2)
+        ax.set_xlim(0, MINUTES_PER_QUARTER); ax.set_ylim(bottom - 0.2, -0.55)
         ax.set_xticks(range(MINUTES_PER_QUARTER + 1)); ax.set_xticklabels([str(i) for i in range(MINUTES_PER_QUARTER + 1)], fontsize=8)
         ax.set_yticks([]); ax.set_ylabel(f"Q{q + 1}", rotation=0, fontsize=12, fontweight="bold", labelpad=22, va="center")
         ax.set_facecolor("white")
@@ -147,17 +169,17 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
     fig.text(0.755, 0.919, "share of games on court", fontsize=8, color=TEXT2, ha="right", va="center")
 
     lax = fig.add_subplot(grid[QUARTERS]); lax.axis("off")
-    lax.text(0, 1, "Players shown (average minutes per game in regulation, games played, minutes of the chart where he is among the top five)",
+    lax.text(0, 1, "Players (average minutes per game in regulation, games played, minutes of the chart where he is among the five shown)",
              fontsize=9, fontweight="bold", color=TEXT, va="top", transform=lax.transAxes)
     for i, (player, r) in enumerate(names.iterrows()):
         col, row = divmod(i, rows)
         lax.text(col / LIST_COLUMNS, 0.82 - row * (0.82 / max(rows, 1)),
-                 f"{player}: {r.avg_min:.1f} min, {int(r.games)}/{n_games} g, {minutes_shown[player]} of {QUARTERS * MINUTES_PER_QUARTER} min",
+                 f"{player}: {r.avg_min:.1f} min, {int(r.games)}/{n_games} g, {minutes_shown.get(player, 0)} of {QUARTERS * MINUTES_PER_QUARTER} min",
                  fontsize=8.5, color=TEXT2, va="top", transform=lax.transAxes)
 
     fig.suptitle(f"{team}: rotation by minute, {league} {stamp}  |  {n_games} games", x=0.01, ha="left", y=0.985, **SUP_KW)
     fig.text(0.01, 0.955, "Name = player most often on the court at that minute across the games; colour = share of games on court "
-             "(yellow low, dark green high); a new name in a bar = substitution.", fontsize=8.5, color=TEXT2, va="center")
+             "(yellow low, dark green high); a new name in a bar = substitution; small rows below a quarter = next most frequent players at that minute.", fontsize=8.5, color=TEXT2, va="center")
     path = out / f"rotation_{team.replace(' ', '_')}_{league.replace(' ', '')}.png"
     save_fig(fig, path); plt.close(fig)
     return path
@@ -170,6 +192,7 @@ def main() -> None:
     ap.add_argument("--data", default=str(DATA))
     ap.add_argument("--out", default="reports")
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: only games before this date")
+    ap.add_argument("--options", type=int, default=OPTIONS, help="next-most-frequent players listed under each minute (0 = none)")
     ap.add_argument("--competition", choices=[LBA, EUROCUP_CODE], default=LBA, help="EC: EuroCup games (data/eurocup_2026_raw.txt and data/eurocup/pbp.csv)")
     a = ap.parse_args()
     league = LBA if a.competition == LBA else EUROCUP_LABEL
@@ -193,12 +216,15 @@ def main() -> None:
         share, avg, n_games = minute_presence(box, pbp, team)
         print(f"\n=== {team}: {n_games} {league} games ===")
         lanes = assign_lanes(share)
+        nxt = next_options(share, lanes, a.options)
         for q in range(QUARTERS):
             minute = lanes[q * MINUTES_PER_QUARTER:(q + 1) * MINUTES_PER_QUARTER]
             print(f"Q{q + 1}")
             for lane in range(LANES):
                 print("  " + " | ".join(f"{m[lane][0]:>10} {m[lane][1]:>4.0%}" for m in minute))
-        print(fig_rotation(share, avg, n_games, team, league, stamp, out))
+            for i in range(a.options):
+                print("  next " + " | ".join(f"{(o[i][0] + ' ' + format(o[i][1], '.0%')) if len(o) > i else '':>10}" for o in nxt[q * MINUTES_PER_QUARTER:(q + 1) * MINUTES_PER_QUARTER]))
+        print(fig_rotation(share, avg, n_games, team, league, stamp, out, a.options))
 
 
 if __name__ == "__main__":
