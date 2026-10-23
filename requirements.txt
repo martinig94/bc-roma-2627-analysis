@@ -1,6 +1,5 @@
 pytest>=8
 pandas>=2.2
-xlrd>=2.0.1
 shapely>=2
 pillow>=10
 matplotlib>=3.8

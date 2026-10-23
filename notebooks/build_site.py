@@ -507,7 +507,7 @@ def build_leaderboard() -> dict | None:
     text = synergy_leaderboard.page_markdown()
     if text is None:
         return None
-    return {"slug": "leaderboard", "title": "Defensive leaderboard", "html": f'<div class="doc">{md_html(text)}</div>', "url": "leaderboard/",
+    return {"slug": "leaderboard", "title": "Leaderboard", "html": f'<div class="doc">{md_html(text)}</div>', "url": "leaderboard/",
             "edit": None, "label": "Leaderboard"}
 
 

@@ -1,32 +1,28 @@
 ---
 name: synergy-leaderboard
-description: Update the Leaderboard tab of the site with the Synergy defensive team tables (all teams, by play type) after a EuroCup or LBA game. Use when asked to refresh/update the Synergy leaderboard, or after a game. Needs a browser logged in to Synergy (Claude in Chrome).
+description: Update the Leaderboard tab of the site with the Synergy team leaderboards (offense and defense, overall and by play type, EuroCup and LBA Serie A) after a game. Use when asked to refresh/update the Synergy leaderboard, or after a EuroCup or LBA game. Needs a browser logged in to Synergy (Claude in Chrome).
 ---
 
-# Update the Synergy defensive leaderboard
+# Update the Synergy leaderboards
 
-Goal: the site tab **Leaderboard** shows, for every team of a competition, the defence overall and by play type. Its data is
-`data/synergy/leaderboard/<eurocup|lba>/*.csv` + `meta.json`. This skill refreshes it from Synergy (apps.synergysports.com/basketball),
-read in the browser by the user's logged-in Chrome. Never ask for, type or store Synergy credentials; if the browser is not logged in, ask the user to log in.
+The site tab **Leaderboard** (`notebooks/synergy_leaderboard.py`, built by `build_site.py`) shows the newest folder
+`data/synergy/leaderboards_<YYYY-MM-DD>/` with four CSVs (`leaderboard_<eurocup|seriea>_<offense|defense>.csv`, columns in that folder's README).
+They are written by `synergy/leaderboards_pull.js`, which calls Synergy's own API from the logged-in browser. Never ask for, type or store Synergy credentials; if the browser is not logged in, ask the user to log in.
 
-## 1. Extract (browser)
-For each competition to update (EuroCup, LBA Serie A 2026-27), in Synergy's team **leaderboard / team stats**:
-- Season: current; **all games of that competition** (no opponent, venue or date filters); side: **defence** (points allowed by the team's defence).
-- For each play type below, open the team table of that play type and copy **every team row** (all teams of the competition, not only Roma).
-  Play types: Overall (all plays, "PPP"), Transition, Isolation, Post-up, P&R ball handler, P&R roll man, Spot up, Off screen, Hand off, Cut, Off reb (putbacks).
-- Save one CSV per play type into a new folder `<scratch>/synergy_pull/`, named `ppp.csv, transition.csv, iso.csv, post_up.csv,
-  pnr_ball_handler.csv, pnr_roll_man.csv, spot_up.csv, off_screen.csv, hand_off.csv, cut.csv, off_reb.csv`.
-  Columns as shown by Synergy: `Rank, Team, GP, Poss, %Time, Pts, PPP, FG%, eFG%, TO%, %FT, Score%, 2 FG%, 3 FG%` (more columns are fine; header names as on screen).
-  Percentages may stay as text (`44.7%`). Copy the numbers exactly as shown; do not compute or fill missing values. A team that has no possessions of a play type is simply absent from that file.
-- Check that the overall table has all teams of the competition (EuroCup 32, LBA 16), the same GP as the league tables, and note the date of the latest game included.
+## 1. Pull (browser)
+1. Open any page of https://apps.synergysports.com/basketball (logged in).
+2. Run the whole of `synergy/leaderboards_pull.js` in the page (console / browser pane). It fills `window.__lb` with one CSV string per file and logs the row counts
+   (EuroCup: 32 teams x 12 play types, Serie A: 16 x 12).
+3. Save the four strings as `leaderboard_eurocup_offense.csv`, `leaderboard_eurocup_defense.csv`, `leaderboard_seriea_offense.csv`, `leaderboard_seriea_defense.csv`
+   into a new folder `data/synergy/leaderboards_<today>/` (copy the README of the previous folder and update the date and games per team).
+   Check the row counts and that every team has the same `gp` as the league tables. If a season or competition id changed, fix `CONFIG` at the top of the script.
 
-## 2. Load into the repo
+## 2. Publish
 ```bash
-python notebooks/synergy_leaderboard.py ingest <scratch>/synergy_pull --competition eurocup --date YYYY-MM-DD   # or --competition lba
-python notebooks/build_site.py        # optional: preview docs/leaderboard/index.html
-git add data/synergy/leaderboard && git commit -m "Synergy leaderboard: <competition> after <game>" && git push
+python notebooks/build_site.py          # optional preview: docs/leaderboard/index.html
+git add data/synergy/leaderboards_<today> && git commit -m "Synergy leaderboards <today>" && git push
 ```
-`--date` is the date of the latest game in the data. The ingest stops with a message if a required column (Team, GP, Poss, PPP) is missing. Pushing rebuilds the site.
+The site rebuilds on push. The page always uses the newest `leaderboards_*` folder; older folders stay as history.
 
 ## 3. Report
-Say which competition and date were loaded, how many teams, any table that could not be extracted, and the two Roma teams' overall rank.
+Say which date was loaded, the row counts, and the two Roma teams' overall offense and defense ranks in both competitions.
