@@ -11,7 +11,7 @@ The corners are the 3-point attempts (top), the paint attempts (bottom left) and
 are the 2-point attempts. Paint = inside the lane (the key: 4.9 m wide, baseline to free-throw line); mid-range = every other 2-point
 attempt. A dot close to a corner is a game made mostly of that kind of shot. The dark shade holds the 50% of the games closest to the
 typical game (the median of the games), the light shade the 80%; the diamond is the average over all the shots of the team.
-Only games before --before count; --competition LBA uses the league play-by-play, EC the EuroCup one. The team is the first panel,
+Only games before --before count; --competition LBA uses the league play-by-play, EC the EuroCup one, ALL both. The team is the first panel,
 then the players with enough games (see MIN_GAMES).
 """
 from __future__ import annotations
@@ -37,7 +37,7 @@ COLS = 4
 SHADE_INNER, SHADE_OUTER = 0.5, 0.8                            # share of the games inside the dark and the light shade
 CORNERS = {"3PT": (0.5, math.sqrt(3) / 2), "Paint": (0.0, 0.0), "Mid-range": (1.0, 0.0)}   # top, bottom left, bottom right
 KINDS = {"attempts": "Attempts", "made": "Made shots"}
-COMPETITIONS = {"LBA": "LBA", "EC": "EuroCup"}
+COMPETITIONS = {"LBA": "LBA", "EC": "EuroCup", "ALL": "LBA + EuroCup"}
 
 
 def classify(s: pd.DataFrame) -> pd.DataFrame:
@@ -48,6 +48,10 @@ def classify(s: pd.DataFrame) -> pd.DataFrame:
 
 def load_shots(data: Path, team: str, before: str, competition: str) -> pd.DataFrame:
     """The classified field-goal attempts of `team` in the games of `competition` played before `before` (with coordinates)."""
+    if competition == "ALL":
+        both = [load_shots(data, team, before, c) for c in ("LBA", "EC")]
+        both = [b.assign(game_id=b.game_id.astype(str)) for b in both if not b.empty]
+        return pd.concat(both, ignore_index=True) if both else pd.DataFrame()
     if competition == "EC":
         res = pd.read_csv(data / "eurocup" / "results.csv")
         ids = {f"EC{int(g)}" for g in res[(res.date < before) & res.played & ((res.home == team) | (res.away == team))].gamecode}
@@ -132,7 +136,7 @@ def panel_title(name: str, sh: pd.DataFrame, avg: np.ndarray) -> str:
     return f"{name}\n{len(sh)} games · avg {avg[0] * 100:.0f}% 3PT · {avg[1] * 100:.0f}% paint · {avg[2] * 100:.0f}% mid"
 
 
-def fig_triangles(s: pd.DataFrame, team: str, what: str, comp_name: str, out: Path) -> Path | None:
+def fig_triangles(s: pd.DataFrame, team: str, what: str, comp_name: str, out: Path, prefix: str = "12_triangles_") -> Path | None:
     """Save 12_triangles_<what>.png: the team and each player with enough games. Returns the file, or None without shots."""
     shots = s[s.made] if what == "made" else s
     if shots.empty:
@@ -160,7 +164,7 @@ def fig_triangles(s: pd.DataFrame, team: str, what: str, comp_name: str, out: Pa
             f"Dark shade: the {SHADE_INNER:.0%} of the games closest to the typical game; light shade: {SHADE_OUTER:.0%}; diamond: all shots together. "
             f"Players: at least {MIN_GAMES} games with {MIN_SHOTS[what]}+ {'made shots' if what == 'made' else 'attempts'}; shades need 3+ games.")
     fig.text(0.01, 0.0, note, fontsize=7.5, color=TEXT2, ha="left", va="top", wrap=True)
-    path = out / f"12_triangles_{what}.png"
+    path = out / f"{prefix}{what}.png"
     save_fig(fig, path); plt.close(fig)
     return path
 
@@ -172,6 +176,7 @@ def main() -> None:
     ap.add_argument("--before", required=True, help="YYYY-MM-DD: only games before this date count")
     ap.add_argument("--competition", choices=sorted(COMPETITIONS), default="LBA")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--prefix", default="12_triangles_", help="file name start; the file is <prefix>attempts.png / <prefix>made.png")
     ap.add_argument("--data", default=str(ROOT / "data"))
     a = ap.parse_args()
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
@@ -180,9 +185,11 @@ def main() -> None:
         raise SystemExit(f"no shots of {a.team} before {a.before} in {COMPETITIONS[a.competition]}")
     if a.competition == "EC":
         lba_style.SOURCE_NOTE = "EuroCup play-by-play (EuroLeague API)"
+    elif a.competition == "ALL":
+        lba_style.SOURCE_NOTE = "legabasket.it and EuroLeague API play-by-play"
     lba_style.STAMP_NOTE = f"games before {pd.Timestamp(a.before):%d %b %Y} (pre-match snapshot)"
     for what in KINDS:
-        p = fig_triangles(s, a.team, what, COMPETITIONS[a.competition], out)
+        p = fig_triangles(s, a.team, what, COMPETITIONS[a.competition], out, a.prefix)
         print(f"wrote {p}")
 
 
