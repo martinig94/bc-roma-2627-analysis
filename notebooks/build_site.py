@@ -502,13 +502,52 @@ def build_info_pages() -> list[dict]:
     return entries
 
 
+LEADERBOARD_JS = r"""
+<style>
+.doc table.sortable th { cursor:pointer; user-select:none; white-space:nowrap; }
+.doc table.sortable th .arrow { font-size:.7em; margin-left:3px; opacity:.8; }
+</style>
+<script>
+// Sortable leaderboard tables: click a header to sort by it (again to reverse); the Rk column is renumbered by the chosen column
+// (ties share a rank). Teams the app does not rank (Rk "–", fewer than 10 possessions) stay at the bottom. Click Rk to restore the app's ranking.
+(function () {
+  var num = function (td) { var v = parseFloat(td.textContent.replace("%", "")); return isNaN(v) ? null : v; };
+  [].forEach.call(document.querySelectorAll(".doc table"), function (tb) {
+    var heads = [].slice.call(tb.tHead.rows[0].cells), body = tb.tBodies[0], rows = [].slice.call(body.rows);
+    rows.forEach(function (r, i) { r._i = i; r._rk = r.cells[0].textContent; r._ranked = r._rk.trim() !== "–"; });
+    tb.classList.add("sortable");
+    var state = {col: 0, dir: 1};
+    heads.forEach(function (th, c) {
+      th.title = "Sort by " + th.textContent + " (click again to reverse)";
+      th.addEventListener("click", function () {
+        state = {col: c, dir: state.col === c && c !== 0 ? -state.dir : (c === 1 || c === 0 ? 1 : -1)};
+        var ranked = rows.filter(function (r) { return r._ranked; }), rest = rows.filter(function (r) { return !r._ranked; });
+        var key = function (r) { return c === 1 ? r.cells[1].textContent.toLowerCase() : c === 0 ? r._i : num(r.cells[c]); };
+        ranked.sort(function (a, b) { var x = key(a), y = key(b); if (x === y) return a._i - b._i; if (x === null) return 1; if (y === null) return -1; return (x < y ? -1 : 1) * state.dir; });
+        ranked.forEach(function (r, i) {
+          if (c === 0) { r.cells[0].textContent = r._rk; return; }
+          var prev = ranked[i - 1];
+          r._pos = (prev && key(prev) === key(r)) ? prev._pos : i + 1;
+          r.cells[0].textContent = c === 1 ? i + 1 : r._pos;
+        });
+        ranked.concat(rest).forEach(function (r) { body.appendChild(r); });
+        heads.forEach(function (h, j) { var a = h.querySelector(".arrow"); if (a) a.remove(); });
+        if (c !== 0) { var s = document.createElement("span"); s.className = "arrow"; s.textContent = state.dir > 0 ? "▲" : "▼"; th.appendChild(s); }
+      });
+    });
+  });
+})();
+</script>
+"""
+
+
 def build_leaderboard() -> dict | None:
     """docs/leaderboard/index.html from data/synergy/leaderboard (Synergy defensive tables); None while there is no data."""
     shutil.rmtree(DOCS / "leaderboard", ignore_errors=True)
     text = synergy_leaderboard.page_markdown()
     if text is None:
         return None
-    return {"slug": "leaderboard", "title": "Leaderboard", "html": f'<div class="doc">{md_html(text)}</div>', "url": "leaderboard/",
+    return {"slug": "leaderboard", "title": "Leaderboard", "html": f'<div class="doc">{md_html(text)}</div>{LEADERBOARD_JS}', "url": "leaderboard/",
             "edit": None, "label": "Leaderboard"}
 
 
