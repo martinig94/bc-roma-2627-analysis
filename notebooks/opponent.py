@@ -138,7 +138,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = DATA_DIR, force: bool = Fa
     run("matchup_report.py", *args, *([] if ec_teams else ["--no-eurocup"]))
     run("lineups_report.py", "--team", team, "--team", opp, "--before", date, "--out", str(folder))
     run("standings.py", "--team", team, "--team", opp, "--before", date, "--out", str(folder))
-    run("tendency_triangles.py", "--team", opp, "--before", date, "--competition", "LBA", "--out", str(folder))
+    run("tendency_triangles.py", "--team", opp, "--before", date, "--competition", "ALL" if ec_teams else "LBA", "--out", str(folder))
 
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
