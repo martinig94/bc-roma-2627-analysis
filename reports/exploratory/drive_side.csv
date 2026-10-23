@@ -1,0 +1,33 @@
+player_id,player_name,player_surname,team,n_drive_finishes,share_left,share_left_80ci,drive_side_estimate
+969.0,Alessandro,Cappelletti,Nutribullet Treviso Basket,15,0.5333333333333333,0.38-0.68,balanced/undetermined
+4879.0,DeWayne,Russell,Nutribullet Treviso Basket,13,0.6153846153846154,0.44-0.76,balanced/undetermined
+9334.0,Hunter,Hale,Openjobmetis Varese,12,0.3333333333333333,0.20-0.52,balanced/undetermined
+9328.0,Quincy,Olivari,Dolomiti Energia Trentino,12,0.8333333333333334,0.64-0.91,left
+9368.0,Marcus,Carr,Virtus Costa Bologna,12,0.8333333333333334,0.64-0.91,left
+6604.0,Colbey,Ross,Pallacanestro Trieste,11,0.7272727272727273,0.53-0.85,left
+9358.0,Zan,Sisko,APU Old Wild West Udine,10,0.6,0.40-0.76,balanced/undetermined
+9380.0,Gerald,Ayayi,BC Roma,10,0.4,0.24-0.60,balanced/undetermined
+9390.0,Lajae,Jones,Pallacanestro Trieste,9,0.1111111111111111,0.05-0.33,right
+9032.0,Jahmi'us,Ramsey,Napoli Basketball,9,0.6666666666666666,0.45-0.81,balanced/undetermined
+9356.0,Jeff,Dowtin,Napoli Basketball,9,0.6666666666666666,0.45-0.81,balanced/undetermined
+6616.0,C.J.,Massinburg,Tezenis Verona,8,0.25,0.13-0.49,right
+4890.0,Michele,Ruzzier,Pallacanestro Trieste,8,0.625,0.40-0.79,balanced/undetermined
+9302.0,Raequan,Battle,APU Old Wild West Udine,8,0.5,0.30-0.70,balanced/undetermined
+7412.0,Federico,Zampini,Tezenis Verona,8,0.625,0.40-0.79,balanced/undetermined
+1205.0,Semaj,Christon,Acqua S.Bernardo Cantù,7,0.2857142857142857,0.15-0.54,balanced/undetermined
+6138.0,Niccolò,Mannion,BC Roma,7,0.7142857142857143,0.47-0.85,balanced/undetermined
+9374.0,Aaron,Holiday,Maxima Roma,7,0.7142857142857143,0.46-0.85,balanced/undetermined
+6142.0,John,Petrucelli,Napoli Basketball,7,0.7142857142857143,0.46-0.85,balanced/undetermined
+9012.0,Savion,Flagg,Acqua S.Bernardo Cantù,7,0.2857142857142857,0.15-0.54,balanced/undetermined
+9342.0,Hassani,Gravett,Acqua S.Bernardo Cantù,7,0.5714285714285714,0.34-0.76,balanced/undetermined
+6258.0,Corey,Davis,BC Roma,7,0.42857142857142855,0.24-0.65,balanced/undetermined
+9329.0,Charles,Brown,Dolomiti Energia Trentino,6,0.16666666666666666,0.08-0.45,right
+7391.0,Denzel,Valentine,APU Old Wild West Udine,6,0.6666666666666666,0.40-0.83,balanced/undetermined
+7048.0,Prentiss,Hubb,Bertram Derthona Tortona,6,0.16666666666666666,0.08-0.46,right
+5369.0,Arturs,Strautins,BC Roma,6,0.5,0.28-0.72,balanced/undetermined
+6156.0,Devon,Hall,Armani Olimpia Milano,6,0.6666666666666666,0.40-0.83,balanced/undetermined
+6993.0,Langston,Galloway,Pallacanestro Trieste,6,0.6666666666666666,0.40-0.83,balanced/undetermined
+6186.0,Guglielmo,Caruso,Napoli Basketball,6,0.6666666666666666,0.41-0.83,balanced/undetermined
+9357.0,Jack,White,Napoli Basketball,6,0.5,0.28-0.72,balanced/undetermined
+9338.0,Jermaine,Samuels,Tezenis Verona,6,0.3333333333333333,0.17-0.60,balanced/undetermined
+9337.0,David,Duke,Openjobmetis Varese,6,0.5,0.28-0.72,balanced/undetermined

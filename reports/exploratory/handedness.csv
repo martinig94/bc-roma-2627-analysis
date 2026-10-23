@@ -1,0 +1,55 @@
+player_id,player_name,player_surname,team,n_left,fg_left,n_right,fg_right,p_right_handed,shooting_hand_estimate,n_total
+536.0,Miro,Bilan,Maxima Roma,20,0.5,2,0.5,0.3819,undetermined,22
+6191.0,JP,Macura,Nutribullet Treviso Basket,17,0.7058823529411765,8,0.875,0.38185,undetermined,25
+7079.0,Kyle,Wiltjer,Umana Reyer Venezia,13,0.7692307692307693,10,0.5,0.8206,right,23
+9328.0,Quincy,Olivari,Dolomiti Energia Trentino,12,0.3333333333333333,4,0.5,0.25905,undetermined,16
+969.0,Alessandro,Cappelletti,Nutribullet Treviso Basket,11,0.6363636363636364,7,0.5714285714285714,0.56955,undetermined,18
+1775.0,Ousmane,Diop,Armani Olimpia Milano,11,0.7272727272727273,4,0.75,0.56595,undetermined,15
+4879.0,DeWayne,Russell,Nutribullet Treviso Basket,10,0.7,7,0.8571428571428571,0.3722,undetermined,17
+9378.0,Moses,Wright,Armani Olimpia Milano,10,0.5,2,1.0,0.27725,undetermined,12
+9368.0,Marcus,Carr,Virtus Costa Bologna,10,0.8,2,0.0,0.8457,right,12
+6604.0,Colbey,Ross,Pallacanestro Trieste,10,0.7,7,0.5714285714285714,0.6361,undetermined,17
+9021.0,Nick,McGlynn,APU Old Wild West Udine,10,0.5,8,0.375,0.6094,undetermined,18
+7431.0,Justin,Gorham,Bertram Derthona Tortona,9,0.8888888888888888,5,0.8,0.66705,undetermined,14
+5481.0,Amedeo,Tessitori,Umana Reyer Venezia,9,0.8888888888888888,6,0.5,0.83845,right,15
+9349.0,Mike,Tobey,Tezenis Verona,9,1.0,1,1.0,0.80625,right,10
+9382.0,Marko,Simonovic,BC Roma,9,0.6666666666666666,3,0.6666666666666666,0.53945,undetermined,12
+9337.0,David,Duke,Openjobmetis Varese,8,0.75,6,0.16666666666666666,0.88475,right,14
+9032.0,Jahmi'us,Ramsey,Napoli Basketball,8,0.75,3,0.3333333333333333,0.738,undetermined,11
+9358.0,Zan,Sisko,APU Old Wild West Udine,8,0.625,6,0.8333333333333334,0.3421,undetermined,14
+6186.0,Guglielmo,Caruso,Napoli Basketball,7,0.8571428571428571,4,0.5,0.7561,undetermined,11
+1592.0,Lodovico,Deangeli,Pallacanestro Trieste,7,0.5714285714285714,3,0.6666666666666666,0.45125,undetermined,10
+3526.0,Bruno,Mascolo,Longobardi Scafati Basket,7,0.5714285714285714,1,0.0,0.5693,undetermined,8
+9038.0,Dominik,Olejniczak,Bertram Derthona Tortona,6,0.8333333333333334,6,0.6666666666666666,0.6309,undetermined,12
+9333.0,Valentine,Chery,Nutribullet Treviso Basket,6,0.3333333333333333,8,0.75,0.1958,left,14
+9356.0,Jeff,Dowtin,Napoli Basketball,6,1.0,4,1.0,0.5811,undetermined,10
+9334.0,Hunter,Hale,Openjobmetis Varese,6,0.16666666666666666,12,0.3333333333333333,0.4784,undetermined,18
+6142.0,John,Petrucelli,Napoli Basketball,6,0.5,5,0.6,0.426,undetermined,11
+7391.0,Denzel,Valentine,APU Old Wild West Udine,6,0.5,2,0.0,0.60945,undetermined,8
+4890.0,Michele,Ruzzier,Pallacanestro Trieste,6,0.16666666666666666,3,0.6666666666666666,0.198,left,9
+6993.0,Langston,Galloway,Pallacanestro Trieste,6,0.5,7,0.42857142857142855,0.56625,undetermined,13
+3185.0,Brynton,Lemar,Maxima Roma,5,0.2,3,0.6666666666666666,0.2414,undetermined,8
+6156.0,Devon,Hall,Armani Olimpia Milano,5,0.2,3,0.6666666666666666,0.2385,undetermined,8
+7007.0,Sean,McDermott,Pallacanestro Trieste,5,0.6,4,0.25,0.6818,undetermined,9
+7428.0,Nate,Renfro,Openjobmetis Varese,5,0.8,6,0.6666666666666666,0.5815,undetermined,11
+2494.0,Andrejs,Grazulis,Acqua S.Bernardo Cantù,5,0.8,3,0.3333333333333333,0.7263,undetermined,8
+9302.0,Raequan,Battle,APU Old Wild West Udine,5,0.8,7,0.5714285714285714,0.6553,undetermined,12
+9006.0,Karim,Jallow,Bertram Derthona Tortona,5,0.4,4,1.0,0.18525,left,9
+9348.0,Ze'Rik,Onyema,Longobardi Scafati Basket,5,0.8,4,0.75,0.55375,undetermined,9
+9380.0,Gerald,Ayayi,BC Roma,5,0.6,9,0.6666666666666666,0.4297,undetermined,14
+9374.0,Aaron,Holiday,Maxima Roma,5,0.4,3,0.0,0.61715,undetermined,8
+9357.0,Jack,White,Napoli Basketball,5,0.6,3,0.3333333333333333,0.6137,undetermined,8
+7412.0,Federico,Zampini,Tezenis Verona,5,0.8,3,0.6666666666666666,0.59665,undetermined,8
+6258.0,Corey,Davis,BC Roma,5,0.6,4,0.75,0.41795,undetermined,9
+9330.0,Darius,Brown,Dolomiti Energia Trentino,4,0.5,4,0.75,0.36455,undetermined,8
+9390.0,Lajae,Jones,Pallacanestro Trieste,4,0.5,13,0.46153846153846156,0.61325,undetermined,17
+9012.0,Savion,Flagg,Acqua S.Bernardo Cantù,4,0.75,6,0.3333333333333333,0.7657,undetermined,10
+9342.0,Hassani,Gravett,Acqua S.Bernardo Cantù,4,0.5,4,0.75,0.36525,undetermined,8
+9329.0,Charles,Brown,Dolomiti Energia Trentino,4,0.0,6,0.3333333333333333,0.37785,undetermined,10
+949.0,Francesco,Candussi,Pallacanestro Trieste,4,1.0,7,0.42857142857142855,0.8246,right,11
+9338.0,Jermaine,Samuels,Tezenis Verona,3,0.3333333333333333,8,0.625,0.36055,undetermined,11
+9343.0,Chad,Brown,Acqua S.Bernardo Cantù,3,0.3333333333333333,5,0.4,0.50975,undetermined,8
+5499.0,Darius,Thompson,Armani Olimpia Milano,3,0.6666666666666666,5,0.6,0.5269,undetermined,8
+1205.0,Semaj,Christon,Acqua S.Bernardo Cantù,2,0.0,7,0.5714285714285714,0.35295,undetermined,9
+6616.0,C.J.,Massinburg,Tezenis Verona,2,0.5,6,0.16666666666666666,0.75945,undetermined,8
+4034.0,Stefan,Nikolic,Openjobmetis Varese,2,0.5,9,0.6666666666666666,0.40255,undetermined,11
