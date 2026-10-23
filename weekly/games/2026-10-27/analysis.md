@@ -1,6 +1,6 @@
 title: 
 reviewed: no
-generated: e1da0e69c8
+generated: 1bb9281f06
 
 <!--
 HOW TO EDIT THIS PAGE (this comment is not shown on the site)
@@ -18,6 +18,7 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
 Blocks of this page: {{ header }} {{ standings }} {{ comparison }} {{ roster }} {{ assists }} {{ turnovers }} {{ lineups }} {{ pending }} and
 {{ figure: name }} for any generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting,
 06_hot_spots, {{ shot_charts }} (06b: one chart per player), 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors, 11_starting_fives).
+The three pages that go deeper (individual_tendencies.md, defense_tendencies.md, offense_tendencies.md, same folder) are linked at the end of this page when they exist.
 THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, same order); only the content changes.
 -->
 
@@ -55,11 +56,11 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ pending }}
 
-{{ figure: 11_starting_fives }}
-
 {{ figure: 02_starters_bench }}
 
 {{ figure: 03_minutes }}
+
+{{ figure: 11_starting_fives }}
 
 ## Scoring sources, tendencies and shooting maps
 
@@ -89,13 +90,11 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ figure: 10_major_factors }}
 
-## Ball movement
-
-### Assists
+## Assists
 
 {{ assists }}
 
-### Turnovers
+## Turnovers
 
 {{ turnovers }}
 
@@ -105,10 +104,22 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ lineups }}
 
+## Defensive attitude
+
+{{ pending }}
+
 ## What to expect
 
 {{ pending }}
 
-## Highlights
+### Metrics to check during/after the game
+
+{{ pending }}
+
+## Clips suggested
+
+{{ pending }}
+
+## Other suggested checks
 
 {{ pending }}

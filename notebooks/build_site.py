@@ -49,6 +49,8 @@ COMP_LBA = "LBA"                                  # competition name in the gene
 SNAPSHOT_GLOB = "20*"                             # snapshot folders are named by ISO date
 GITHUB = "https://github.com"
 REVIEWED_VALUES = {"yes", "y", "true", "1", "reviewed"}   # accepted values of `reviewed:` in a notes file
+SUBPAGES = {"individual_tendencies": "Individual tendencies", "defense_tendencies": "Defense tendencies",
+            "offense_tendencies": "Offense tendencies"}   # optional pages next to analysis.md: weekly/games/<date>/<name>.md
 LEGACY_REPORT_SCRIPT = "manresa_report.py"        # script named in the hand-written opponent pages' auto section
 STALE_DOCS = ("prematch.html", "analyses", "analyses.json", "weekly", "weekly.json")   # replaced by the current structure
 MARKDOWN_EXTENSIONS = ["tables", "md_in_html", "sane_lists"]
@@ -250,7 +252,7 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
         document = notes_dir / "document.md"
         state, game_day = "reviewed", day          # a page with your own text (README / document) counts as reviewed
         link = f"../../snapshot/{snap_of[slug]}/" if slug in snap_of else None
-        edit_file, legacy = None, False
+        edit_file, legacy, subpages = None, False, []
         if readme.exists():
             legacy = True                          # page with a README (hand-written, or written by a report script)
             text = readme.read_text(encoding="utf-8")
@@ -285,6 +287,9 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
             meta, body = pages.load("analysis", a["date"], a, files)       # weekly/games/<date>/analysis.md (or the default)
             state, game_day = pages.state(meta, body), a["date"]
             page_md = pages.expand(body, "analysis", a, files, AUTHOR)
+            subpages = build_subpages(a, files)
+            if subpages:
+                page_md += "\n\n## More analysis\n\n" + "\n".join(f"* [{sp['title']}]({sp['name']}.html)" for sp in subpages) + "\n"
             title, rnd = meta.get("title") or f"{a['home_team']} vs {a['away_team']}", a["round"]
             link, edit_file = a["team_link"], pages.edit_path("analysis", a["date"])
         else:
@@ -297,10 +302,31 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
                          f"blocks: its tables and figures do not refresh with new data. Its text is in `{edit}`.")
         page_md = add_flags(page_md, flags, extra)
         entries.append({"slug": slug, "title": title, "date": day, "game_date": game_day, "round": rnd, "state": state, "html": md_html(page_md),
-                        "edit": edit, "legacy": legacy,
+                        "edit": edit, "legacy": legacy, "subpages": subpages,
                         "archive": (not legacy) and game_day < f"{today:%Y-%m-%d}" and state == "draft"})
     entries.sort(key=lambda e: e["date"], reverse=True)
     return entries
+
+
+def build_subpages(a: dict, files: list[str]) -> list[dict]:
+    """The optional pages of an analysis (weekly/games/<date>/<name>.md, see SUBPAGES) that exist, in the order of SUBPAGES.
+    Each is plain markdown (automatic blocks and your own images work as in analysis.md); its first `# ` heading is its title."""
+    out = []
+    for name, default in SUBPAGES.items():
+        f = pages.GAMES / a["date"] / f"{name}.md"
+        if not f.exists():
+            continue
+        meta, body = pages.split_front(f.read_text(encoding="utf-8"))
+        md = pages.expand(body, "analysis", a, files, AUTHOR)
+        m = re.search(r"^# (.+)$", md, re.M)
+        title = meta.get("title") or (m.group(1) if m else default)
+        if not m:
+            md = f"# {title}\n\n{md}"
+        back = f"[← Back to the opponent analysis: {a['home_team']} vs {a['away_team']}](./)"
+        head, _, rest = md.partition("\n")
+        out.append({"name": name, "title": title, "html": md_html(f"{head}\n\n{back}\n{rest}"),
+                    "edit": f"{pages.GAMES_REL}/{a['date']}/{name}.md"})
+    return out
 
 
 def build_snapshots(opponents: list[dict], tg: pd.DataFrame, today: date) -> list[dict]:
@@ -515,6 +541,9 @@ def write_pages(kind: str, entries: list[dict], nav: dict) -> None:
     for e in entries:
         page = DOCS / kind / e["slug"] / "index.html"
         page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav, comments=True, edit=e.get("edit")), encoding="utf-8")
+        for sp in e.get("subpages", []):         # next to index.html, so the images of the game folder resolve
+            (page.parent / f"{sp['name']}.html").write_text(shell(f"{sp['title']} · {e['title']} · {CFG['site_title']}", sp["html"], "../../", nav,
+                                                                  comments=True, edit=sp["edit"]), encoding="utf-8")
 
 
 def next_games(snaps: list[dict], opps: list[dict], today: date) -> list[dict]:

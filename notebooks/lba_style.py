@@ -50,13 +50,14 @@ plt.rcParams.update({
 AUTHOR: str = weekly_config.load()["author"]   # chart stamp; report scripts may override it
 STAMP_FONT_SIZE = 7.5
 STAMP_ALPHA = 0.9
-STAMP_X, STAMP_Y = 0.995, -0.035   # figure fractions: bottom-right, just below the axes
+STAMP_X = 0.995                    # figure fraction: right edge of the stamp
+STAMP_GAP = 0.006                  # figure fraction between the lowest text of the figure and the stamp
 SOURCE_NOTE = "legabasket.it play-by-play"   # data source shown in the chart stamp
 STAMP_NOTE = ""   # set by the report scripts, e.g. "data as of 10 Oct 2026 (pre-match snapshot)"
 
 
 def save_fig(fig: Figure, path: str | Path, **kw: Any) -> None:
-    """Save a figure with an author/date stamp in the bottom-right corner (every published chart carries it).
+    """Save a figure with an author/date stamp in the bottom-right corner, below any other text (every published chart carries it).
 
     Args:
         fig: Figure to save.
@@ -64,8 +65,12 @@ def save_fig(fig: Figure, path: str | Path, **kw: Any) -> None:
         **kw: Passed to ``Figure.savefig``; ``dpi`` defaults to ``DPI``.
     """
     note = f" · {STAMP_NOTE}" if STAMP_NOTE else ""
-    fig.text(STAMP_X, STAMP_Y, f"{AUTHOR} · {date.today():%d %b %Y} · data: {SOURCE_NOTE}{note}",
-             ha="right", va="bottom", fontsize=STAMP_FONT_SIZE, color=TEXT2, alpha=STAMP_ALPHA)
+    fig.canvas.draw()                                       # the stamp is the last line of the figure: below every legend and note
+    renderer = fig.canvas.get_renderer()
+    boxes = [fig.get_tightbbox(renderer), *(a.get_window_extent(renderer) for a in (*fig.texts, *fig.legends) if a.get_visible())]
+    low = min(b.transformed(fig.transFigure.inverted()).y0 for b in boxes)
+    fig.text(STAMP_X, low - STAMP_GAP, f"{AUTHOR} · {date.today():%d %b %Y} · data: {SOURCE_NOTE}{note}",
+             ha="right", va="top", fontsize=STAMP_FONT_SIZE, color=TEXT2, alpha=STAMP_ALPHA)
     fig.savefig(path, dpi=kw.pop("dpi", DPI), bbox_inches="tight", **kw)
     if str(path).lower().endswith(".png"):
         from imgopt import shrink_png      # 256-colour PNG: ~4x smaller, same look

@@ -26,6 +26,7 @@ GAMES_REL = "weekly/games"                                     # GAMES relative 
 TPL = jinja2.Environment(loader=jinja2.FileSystemLoader(ROOT / "weekly" / "template"), autoescape=False, keep_trailing_newline=True,
                          undefined=jinja2.ChainableUndefined)
 KINDS = {"snapshot": "snapshot.md", "analysis": "analysis.md"}
+SUBPAGES = ("individual_tendencies", "defense_tendencies", "offense_tendencies")   # pages that go deeper, next to analysis.md; linked from it
 BLOCKS_TEMPLATE = "blocks.md.j2"                               # macros that render the {{ block }} lines
 PAGE_TEMPLATE = "page_{kind}.md.j2"                            # default text of a page, one per kind
 REPORTS = ROOT / "reports"
@@ -107,6 +108,20 @@ def ensure(kind: str, day: str, a: dict[str, Any], files: list[str], notes: dict
     return path, True
 
 
+def ensure_subpages(day: str, a: dict[str, Any], files: list[str]) -> list[tuple[str, Path, bool]]:
+    """Create the files of the SUBPAGES of the analysis of `day` that do not exist yet (they are yours: an existing one is never touched).
+    Returns [(name, path, created)]."""
+    out = []
+    for name in SUBPAGES:
+        path = GAMES / day / f"{name}.md"
+        created = not path.exists()
+        if created:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(default_text(name, a, files), encoding="utf-8")
+        out.append((name, path, created))
+    return out
+
+
 def load(kind: str, day: str, a: dict[str, Any], files: list[str]) -> tuple[dict[str, str], str]:
     """(header, body) of the page: the file, or the default page built in memory when the file is not there yet."""
     path = page_path(kind, day)
@@ -175,6 +190,7 @@ def ensure_for(day: str, notes: dict | None = None) -> list[tuple[str, Path | No
         auto = json.loads((folder / SNAPSHOT_AUTO).read_text(encoding="utf-8"))
         path, created = ensure("analysis", day, auto, sorted(f.name for f in folder.iterdir()), (notes or {}).get("analysis"))
         out.append(("analysis", path, created))
+        ensure_subpages(day, auto, sorted(f.name for f in folder.iterdir()))
     else:
         out.append(("analysis", None, False))
     return out
