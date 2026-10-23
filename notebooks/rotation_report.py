@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import unicodedata
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -24,6 +25,7 @@ from matplotlib.colors import LinearSegmentedColormap, Normalize
 import lba_style
 from game_report import PERIOD_LEN, stints
 from lba_style import SUP_KW, TEXT, TEXT2, save_fig
+from weekly_sections import ec_people
 from weekly_config import ROOT
 
 DATA = ROOT / "data"
@@ -42,9 +44,17 @@ DARK_TEXT_BELOW = 0.55                 # share under which cells are light enoug
 CELL_EDGE = "#ffffff"
 LANE_HEIGHT = 0.82
 PANEL_INCHES_PER_UNIT = 0.41           # inches per lane-height unit of a quarter panel
+OPTION_LONG_LABEL = 22                 # option labels at least this long get a smaller font
 OPTIONS = 3                            # default number of next-most-frequent players shown under each minute
 OPTION_GAP, OPTION_STEP, OPTION_HEIGHT = 0.3, 0.62, 0.52   # lane-height units: gap under the lanes, row pitch, cell height
 FIG_WIDTH = 13
+POSITIONS = ["PG", "SG", "SF", "PF", "C"]   # order of the bars at the start of every quarter
+# The data only has coarse roles (LBA: Playmaker, Guardia, Ala, Centro and mixes; EuroCup: Guard, Forward, Center),
+# so the five positions are an approximation: an "Ala"/Forward is a PF from this height, a EuroCup Guard a PG below the other one.
+LBA_ROLE = {"Playmaker": "PG", "Play/Guardia": "PG/SG", "Guardia": "SG", "Guardia/Ala": "SG/SF", "Ala/Centro": "PF/C", "Centro": "C"}
+EC_ROLE = {"Center": "C"}
+FORWARD_PF_FROM_CM = 203               # "Ala" / "Forward" at least this tall is a PF, shorter a SF
+GUARD_PG_BELOW_CM = 190                # EuroCup "Guard" shorter than this is a PG, taller a SG
 LIST_COLUMNS = 3                       # columns of the player list under the chart
 
 
@@ -78,17 +88,65 @@ def minute_presence(box: pd.DataFrame, pbp: pd.DataFrame, team: str) -> tuple[pd
     return share, avg, n
 
 
-def assign_lanes(share: pd.DataFrame) -> list[list[tuple[str, float]]]:
+def position_rank(label: str | None) -> int:
+    """Sort key of a position label ("PG/SG" sorts as PG); players without a position go last."""
+    return POSITIONS.index(label.split("/")[0]) if label else len(POSITIONS)
+
+
+def load_positions(data: Path, team: str, competition: str, players: list[str]) -> dict[str, str]:
+    """Position label (PG, SG, SF, PF, C or a mix such as "PG/SG") of each player, from the roster files.
+
+    Args:
+        data: Folder holding team_rosters.csv and eurocup/people.csv.
+        team: Team name as in the data.
+        competition: `LBA` or `EUROCUP_CODE`.
+        players: Surnames as the chart shows them (title case).
+
+    Returns:
+        Surname -> label; players the roster files do not cover are left out.
+    """
+    out: dict[str, str] = {}
+    if competition == LBA:
+        r = pd.read_csv(data / "team_rosters.csv")
+        r = r[r.team == team].assign(key=lambda d: d.surname.str.title()).drop_duplicates("key").set_index("key")
+        for p in players:
+            if p in r.index:
+                role, ht = r.loc[p, "role"], r.loc[p, "height_cm"]
+                if role == "Ala":
+                    out[p] = "PF" if pd.notna(ht) and ht >= FORWARD_PF_FROM_CM else "SF"
+                elif role in LBA_ROLE:
+                    out[p] = LBA_ROLE[role]
+    else:
+        ec = ec_people(data, team)
+        for p in players:
+            norm = unicodedata.normalize("NFKD", p).encode("ascii", "ignore").decode().lower()
+            info = ec.get(norm)
+            if not info:
+                continue
+            ht = float(info["height"]) if info["height"] else None
+            if info["pos"] == "Guard":
+                out[p] = "PG" if ht and ht < GUARD_PG_BELOW_CM else "SG"
+            elif info["pos"] == "Forward":
+                out[p] = "PF" if ht and ht >= FORWARD_PF_FROM_CM else "SF"
+            elif info["pos"] in EC_ROLE:
+                out[p] = EC_ROLE[info["pos"]]
+    return out
+
+
+def assign_lanes(share: pd.DataFrame, positions: dict[str, str] | None = None) -> list[list[tuple[str, float]]]:
     """For each minute, five (player, share) pairs in lane order.
 
     The five players with the highest share are picked; anyone who was in the top five the minute before
     keeps his lane, newcomers take the free lanes (highest share first), so a name change in a lane is a switch.
+    At the first minute of every quarter the five are instead ordered by position (PG, SG, SF, PF, C) when `positions` is given.
     """
     tie_break = share.sum(axis=1)   # equal shares: the player with more minutes overall goes first
     prev: list[str | None] = [None] * LANES
     out = []
-    for m in share.columns:
+    for i, m in enumerate(share.columns):
         top = share[m].to_frame("s").assign(t=tie_break).sort_values(["s", "t"], ascending=False).head(LANES).index.tolist()
+        if positions is not None and i % MINUTES_PER_QUARTER == 0:
+            prev = sorted(top, key=lambda p: (position_rank(positions.get(p)), top.index(p)))
         lanes: list[str | None] = [p if p in top else None for p in prev]
         for p in (p for p in top if p not in lanes):
             lanes[lanes.index(None)] = p
@@ -112,7 +170,8 @@ def text_color(value: float) -> str:
     return TEXT if value < DARK_TEXT_BELOW else "#ffffff"
 
 
-def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str, league: str, stamp: str, out: Path, options: int = OPTIONS) -> Path:
+def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str, league: str, stamp: str, out: Path, options: int = OPTIONS,
+                 positions: dict[str, str] | None = None) -> Path:
     """Save the rotation chart of `team` into `out` and return its path.
 
     Args:
@@ -124,8 +183,10 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
         stamp: Period description for the title, e.g. "season to date".
         out: Folder that receives the PNG.
         options: Next-most-frequent players listed under each minute (0 = none).
+        positions: Surname -> position label from `load_positions`; shown next to the names and used to order the bars at each quarter start.
     """
-    lanes = assign_lanes(share)
+    positions = positions or {}
+    lanes = assign_lanes(share, positions)
     nxt = next_options(share, lanes, options)
     shown = sorted(share.index)
     minutes_shown = {p: sum(p == q for minute in lanes for q, _ in minute) for p in shown}   # minutes among the top five
@@ -145,11 +206,12 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
             for lane, (player, value) in enumerate(lanes[q * MINUTES_PER_QUARTER + k]):
                 ax.barh(lane, 1, left=k, height=LANE_HEIGHT, color=CMAP(norm(value)), edgecolor=CELL_EDGE, linewidth=1.4)
                 ax.text(k + 0.5, lane - 0.12, player, ha="center", va="center", fontsize=8.5, fontweight="bold", color=text_color(value))
-                ax.text(k + 0.5, lane + 0.22, f"{value:.0%}", ha="center", va="center", fontsize=7, color=text_color(value))
+                ax.text(k + 0.5, lane + 0.22, f"{value:.0%}" + (f" · {positions[player]}" if player in positions else ""), ha="center", va="center", fontsize=7, color=text_color(value))
             for i, (player, value) in enumerate(nxt[q * MINUTES_PER_QUARTER + k]):
                 y = LANES + OPTION_GAP + i * OPTION_STEP - 0.05
                 ax.barh(y, 1, left=k, height=OPTION_HEIGHT, color=CMAP(norm(value)), edgecolor=CELL_EDGE, linewidth=1.4)
-                ax.text(k + 0.5, y, f"{player} {value:.0%}", ha="center", va="center", fontsize=7, color=text_color(value))
+                label = f"{player} {positions[player] + ' ' if player in positions else ''}{value:.0%}"
+                ax.text(k + 0.5, y, label, ha="center", va="center", fontsize=7 if len(label) < OPTION_LONG_LABEL else 6, color=text_color(value))
         if options:
             ax.text(-0.08, LANES + OPTION_GAP + (options - 1) * OPTION_STEP / 2 - 0.05, "next\noptions", ha="right", va="center", fontsize=7.5, color=TEXT2)
         ax.set_xlim(0, MINUTES_PER_QUARTER); ax.set_ylim(bottom - 0.2, -0.55)
@@ -174,12 +236,14 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
     for i, (player, r) in enumerate(names.iterrows()):
         col, row = divmod(i, rows)
         lax.text(col / LIST_COLUMNS, 0.82 - row * (0.82 / max(rows, 1)),
-                 f"{player}: {r.avg_min:.1f} min, {int(r.games)}/{n_games} g, {minutes_shown.get(player, 0)} of {QUARTERS * MINUTES_PER_QUARTER} min",
+                 f"{player}{' (' + positions[player] + ')' if player in positions else ''}: {r.avg_min:.1f} min, {int(r.games)}/{n_games} g, {minutes_shown.get(player, 0)} of {QUARTERS * MINUTES_PER_QUARTER} min",
                  fontsize=8.5, color=TEXT2, va="top", transform=lax.transAxes)
 
     fig.suptitle(f"{team}: rotation by minute, {league} {stamp}  |  {n_games} games", x=0.01, ha="left", y=0.985, **SUP_KW)
-    fig.text(0.01, 0.955, "Name = player most often on the court at that minute across the games; colour = share of games on court "
-             "(yellow low, dark green high); a new name in a bar = substitution; small rows below a quarter = next most frequent players at that minute.", fontsize=8.5, color=TEXT2, va="center")
+    fig.text(0.01, 0.945, "Name = player most often on the court at that minute across the games; colour = share of games on court "
+             "(yellow low, dark green high); a new name in a bar = substitution;\n"
+             "positions (PG, SG, SF, PF, C) come from the roster role, so they are approximate, and order the bars at each quarter start;\n"
+             "small rows below a quarter = next most frequent players at that minute.", fontsize=8.5, color=TEXT2, va="center")
     path = out / f"rotation_{team.replace(' ', '_')}_{league.replace(' ', '')}.png"
     save_fig(fig, path); plt.close(fig)
     return path
@@ -215,7 +279,8 @@ def main() -> None:
     for team in a.team:
         share, avg, n_games = minute_presence(box, pbp, team)
         print(f"\n=== {team}: {n_games} {league} games ===")
-        lanes = assign_lanes(share)
+        positions = load_positions(Path(a.data), team, a.competition, list(share.index))
+        lanes = assign_lanes(share, positions)
         nxt = next_options(share, lanes, a.options)
         for q in range(QUARTERS):
             minute = lanes[q * MINUTES_PER_QUARTER:(q + 1) * MINUTES_PER_QUARTER]
@@ -224,7 +289,7 @@ def main() -> None:
                 print("  " + " | ".join(f"{m[lane][0]:>10} {m[lane][1]:>4.0%}" for m in minute))
             for i in range(a.options):
                 print("  next " + " | ".join(f"{(o[i][0] + ' ' + format(o[i][1], '.0%')) if len(o) > i else '':>10}" for o in nxt[q * MINUTES_PER_QUARTER:(q + 1) * MINUTES_PER_QUARTER]))
-        print(fig_rotation(share, avg, n_games, team, league, stamp, out, a.options))
+        print(fig_rotation(share, avg, n_games, team, league, stamp, out, a.options, positions))
 
 
 if __name__ == "__main__":
