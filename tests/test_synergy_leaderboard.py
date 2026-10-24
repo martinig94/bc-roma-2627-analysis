@@ -64,3 +64,15 @@ def test_league_standing_columns_from_the_name_table(tmp_path, monkeypatch):
     overall = lb.page_markdown().split("### Overall")[1].split("###")[0]
     assert "| 1 | 4-0 |" in overall                    # mapped through team_names.csv
     assert "**3=** | **2-2**" in overall               # BC Roma, in bold
+
+
+def test_positions_share_a_number_and_the_next_one_is_not_skipped(tmp_path, monkeypatch):
+    """A leads; B and C are level (2=, 2=); D comes next with position 3."""
+    (tmp_path / "data").mkdir()
+    games = [(1, "A", "B", 90, 80), (2, "A", "C", 90, 80), (3, "A", "D", 90, 80), (4, "B", "D", 90, 80), (5, "C", "D", 90, 80)]
+    pd.DataFrame([{"game_id": i, "round": i, "match_datetime": f"2026-10-{i:02d}T20:00:00", "game_status": 2, "home_team": h, "away_team": a,
+                   "home_score": hs, "away_score": a_s} for i, h, a, hs, a_s in games]).to_csv(tmp_path / "data" / "games.csv", index=False)
+    monkeypatch.setattr(lb, "ROOT", tmp_path)
+    got = lb.standings_lookup("seriea")
+    assert got["A"]["pos"] == "1" and got["D"]["pos"] == "3"
+    assert got["B"]["pos"] == got["C"]["pos"] == "2="

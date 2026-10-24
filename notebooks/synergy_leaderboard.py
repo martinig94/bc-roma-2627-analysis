@@ -33,8 +33,8 @@ def _plain(name: str) -> str:
 
 
 def standings_lookup(comp: str) -> dict[str, dict]:
-    """Position in the league table (LBA) or in the group table (EuroCup), as of the last finished game, by the name used in the results:
-    {name: {"pos": "2" or "2=" (level on points), "wl": "3-1"}}. Empty when the results are not there."""
+    """Position in the league table (LBA) or group table (EuroCup), as of the last finished game, by the name used in the results:
+    {name: {"pos": "2" or "2=" (same wins and games as another team), "wl": "3-1"}}. Empty when the results are not there."""
     import eurocup
     import standings
     try:
@@ -49,7 +49,14 @@ def standings_lookup(comp: str) -> dict[str, dict]:
                     tables.append(standings.standings(eurocup.games_frame(res, team)))
     except (FileNotFoundError, AttributeError, KeyError):
         return {}
-    return {t: {"pos": f"{r.pos}{'=' if r.tied else ''}", "wl": f"{r.w}-{r.l}"} for tb in tables for t, r in tb.iterrows()}
+    out = {}
+    for tb in tables:
+        keys = sorted({(-r.w, r.gp) for _, r in tb.iterrows()})            # same wins and same games played share a position
+        for t, r in tb.iterrows():
+            key = (-r.w, r.gp)
+            shared = sum((-x.w, x.gp) == key for _, x in tb.iterrows()) > 1
+            out[t] = {"pos": f"{keys.index(key) + 1}{'=' if shared else ''}", "wl": f"{r.w}-{r.l}"}     # 1, 2=, 2=, 3: the next position is not skipped
+    return out
 
 
 def with_standings(df: pd.DataFrame, comp: str) -> pd.DataFrame:
@@ -116,7 +123,7 @@ def page_markdown() -> str | None:
             df = with_standings(pd.read_csv(f), comp)
             order = "lowest PPP allowed" if side == "defense" else "highest PPP"
             parts.append(f"## {comp_label} · {side_label}\n\n*Synergy data up to {day.strftime('%d %B %Y')}, competition games only. Rank 1 = {order}; teams with "
-                         f"fewer than 10 possessions of a play type are not ranked (– at the end). Counts per game. Pos = position in the league table (LBA) or in the group table (EuroCup) and W-L = record, as of the last game; = level on points (order inside the tie is provisional). Small samples: check Poss. BC Roma is in bold.*\n")
+                         f"fewer than 10 possessions of a play type are not ranked (– at the end). Counts per game. Pos = position in the league table (LBA) or in the group table (EuroCup) and W-L = record, as of the last game; = same wins and games played as another team (the next position is not skipped). Small samples: check Poss. BC Roma is in bold.*\n")
             for play, title in PLAY_TYPES:
                 t = df[df["play_type"] == play]
                 if len(t):
