@@ -27,6 +27,7 @@ import team_games as tgm
 import weekly_config
 import weekly_report as wr
 import weekly_sections as ws
+from player_rotation_report import opponent_figures
 
 ROOT = weekly_config.ROOT
 NB = ROOT / "notebooks"
@@ -144,6 +145,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = DATA_DIR, force: bool = Fa
     roster = write_roster(folder, opp, date, data)
     lba_style.STAMP_NOTE = f"games before {pd.Timestamp(date):%d %b %Y} (pre-match snapshot)"
     ws.fig_starting_fives(xbox, opp, folder)
+    opponent_figures(data, opp, date, LBA, folder)
     fin = st.finished(games, date)
     lba_ids = [int(x) for x in fin[(fin.home_team == opp) | (fin.away_team == opp)].game_id]
     pbp = pd.read_csv(data / "pbp.csv")
@@ -225,6 +227,7 @@ def generate_eurocup(date: str, team: str = TEAM, data: Path = DATA_DIR, force: 
     lba_source_note = lba_style.SOURCE_NOTE
     lba_style.STAMP_NOTE, lba_style.SOURCE_NOTE = f"games before {pd.Timestamp(date):%d %b %Y} (pre-match snapshot)", EC_SOURCE_NOTE
     ws.fig_starting_fives(xbox, opp, folder)
+    opponent_figures(data, opp, date, EC, folder)
     ec_box = xbox[xbox.competition == EC]
     ec_ids = sorted(ec_box[(ec_box.team == opp) & (ec_box.row_type == "total")].game_id.unique())
     pairs = ws.assist_pairs(pd.read_csv(data / "eurocup" / "pbp.csv"), ec_ids, opp)

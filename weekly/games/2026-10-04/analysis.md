@@ -1,6 +1,6 @@
 title: 
 reviewed: no
-generated: 6b148276fe
+generated: 7c51327cac
 
 <!--
 HOW TO EDIT THIS PAGE (this comment is not shown on the site)
@@ -17,7 +17,7 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
 - Highlight with ==text==. When you are done, set "reviewed: yes" at the top of the file.
 Blocks of this page: {{ header }} {{ standings }} {{ comparison }} {{ roster }} {{ assists }} {{ turnovers }} {{ lineups }} {{ pending }} and
 {{ figure: name }} for any generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting,
-06_hot_spots, {{ shot_charts }} (06b: one chart per player), 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors, 11_starting_fives).
+06_hot_spots, {{ shot_charts }} (06b: one chart per player), 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors, 11_starting_fives, 13_rotation_by_minute: who is on the court at each minute, with the next options).
 The three pages that go deeper (individual_tendencies.md, defense_tendencies.md, offense_tendencies.md, same folder) are linked at the end of this page when they exist.
 THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, same order); only the content changes.
 -->
@@ -61,6 +61,8 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 {{ figure: 03_minutes }}
 
 {{ figure: 11_starting_fives }}
+
+{{ figure: 13_rotation_by_minute }}
 
 ## Scoring sources, tendencies and shooting maps
 

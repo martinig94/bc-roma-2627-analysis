@@ -171,7 +171,7 @@ def text_color(value: float) -> str:
 
 
 def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str, league: str, stamp: str, out: Path, options: int = OPTIONS,
-                 positions: dict[str, str] | None = None) -> Path:
+                 positions: dict[str, str] | None = None, filename: str | None = None) -> Path:
     """Save the rotation chart of `team` into `out` and return its path.
 
     Args:
@@ -183,6 +183,7 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
         stamp: Period description for the title, e.g. "season to date".
         out: Folder that receives the PNG.
         options: Next-most-frequent players listed under each minute (0 = none).
+        filename: PNG name; default `rotation_<team>_<league>.png`.
         positions: Surname -> position label from `load_positions`; shown next to the names and used to order the bars at each quarter start.
     """
     positions = positions or {}
@@ -244,9 +245,39 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
              "(yellow low, dark green high); a new name in a bar = substitution;\n"
              "positions (PG, SG, SF, PF, C) come from the roster role, so they are approximate, and order the bars at each quarter start;\n"
              "small rows below a quarter = next most frequent players at that minute.", fontsize=8.5, color=TEXT2, va="center")
-    path = out / f"rotation_{team.replace(' ', '_')}_{league.replace(' ', '')}.png"
+    path = out / (filename or f"rotation_{team.replace(' ', '_')}_{league.replace(' ', '')}.png")
     save_fig(fig, path); plt.close(fig)
     return path
+
+
+def load_competition(data: Path, competition: str, before: str | None = None) -> tuple[pd.DataFrame, pd.DataFrame, str, str]:
+    """Box scores and play-by-play of one competition, optionally only the games before a date (it also sets the chart stamp notes).
+
+    Args:
+        data: Data folder.
+        competition: `LBA` or `EUROCUP_CODE`.
+        before: ``YYYY-MM-DD``: keep only games before this date.
+
+    Returns:
+        ``(box, pbp, league label, period description for the titles)``.
+    """
+    league = LBA if competition == LBA else EUROCUP_LABEL
+    if competition == EUROCUP_CODE:
+        from matchup_report import parse_eurocup
+        box = parse_eurocup(data / EUROCUP_RAW)[0]
+        pbp = pd.read_csv(data / "eurocup" / "pbp.csv")
+        lba_style.SOURCE_NOTE = EL_SOURCE_NOTE
+    else:
+        box = pd.read_csv(data / "box_scores.csv")
+        pbp = pd.read_csv(data / "pbp.csv")
+        box["date"] = box.match_datetime.str[:10]
+    stamp = "season to date"
+    if before:
+        box = box[box.date < before]
+        pbp = pbp[pbp.game_id.isin(box.game_id.unique())]
+        lba_style.STAMP_NOTE = f"games before {pd.Timestamp(before):%d %b %Y} (pre-match snapshot)"
+        stamp = f"games before {pd.Timestamp(before):%d %b %Y}"
+    return box, pbp, league, stamp
 
 
 def main() -> None:
@@ -259,22 +290,7 @@ def main() -> None:
     ap.add_argument("--options", type=int, default=OPTIONS, help="next-most-frequent players listed under each minute (0 = none)")
     ap.add_argument("--competition", choices=[LBA, EUROCUP_CODE], default=LBA, help="EC: EuroCup games (data/eurocup_2026_raw.txt and data/eurocup/pbp.csv)")
     a = ap.parse_args()
-    league = LBA if a.competition == LBA else EUROCUP_LABEL
-    if a.competition == EUROCUP_CODE:
-        from matchup_report import parse_eurocup
-        box = parse_eurocup(Path(a.data) / EUROCUP_RAW)[0]
-        pbp = pd.read_csv(Path(a.data) / "eurocup" / "pbp.csv")
-        lba_style.SOURCE_NOTE = EL_SOURCE_NOTE
-    else:
-        box = pd.read_csv(Path(a.data) / "box_scores.csv")
-        pbp = pd.read_csv(Path(a.data) / "pbp.csv")
-        box["date"] = box.match_datetime.str[:10]
-    stamp = "season to date"
-    if a.before:
-        box = box[box.date < a.before]
-        pbp = pbp[pbp.game_id.isin(box.game_id.unique())]
-        lba_style.STAMP_NOTE = f"games before {pd.Timestamp(a.before):%d %b %Y} (pre-match snapshot)"
-        stamp = f"games before {pd.Timestamp(a.before):%d %b %Y}"
+    box, pbp, league, stamp = load_competition(Path(a.data), a.competition, a.before)
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     for team in a.team:
         share, avg, n_games = minute_presence(box, pbp, team)

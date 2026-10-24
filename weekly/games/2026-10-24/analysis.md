@@ -73,6 +73,8 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 {{ figure: 03_minutes }}
 
 {{ figure: 11_starting_fives }}
+
+{{ figure: 13_rotation_by_minute }}
 ## Scoring sources, tendencies and shooting maps
 
 <!-- Scoring sources, shooting and hot spots. -->

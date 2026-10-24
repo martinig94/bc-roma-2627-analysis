@@ -22,14 +22,10 @@ from matplotlib.colors import LinearSegmentedColormap, Normalize
 import lba_style
 from game_report import PERIOD_LEN, stints
 from lba_style import SUP_KW, TEXT, TEXT2, save_fig
+from rotation_report import EUROCUP_CODE, LBA, OPTIONS, fig_rotation, load_competition, load_positions, minute_presence
 from weekly_config import ROOT
 
 DATA = ROOT / "data"
-LBA = "LBA"                            # --competition value and league label for the LBA
-EUROCUP_CODE = "EC"                    # --competition value for the EuroCup
-EUROCUP_LABEL = "EuroCup"              # league label for the EuroCup
-EL_SOURCE_NOTE = "EuroLeague live API"  # chart stamp for EuroCup figures
-EUROCUP_RAW = "eurocup_2026_raw.txt"   # EuroCup box scores, inside the data folder
 QUARTER_ROW_INCHES = 0.42              # inches per player bar in the one-chart-per-quarter version
 QUARTERS = 4                           # overtimes are left out
 SECS = QUARTERS * PERIOD_LEN
@@ -56,7 +52,7 @@ def team_on_court(box: pd.DataFrame, pbp: pd.DataFrame, team: str, games: list) 
     return out
 
 
-def fig_player(share: np.ndarray, n_games: int, player: str, team: str, league: str, dates: list[str], out: Path) -> Path:
+def fig_player(share: np.ndarray, n_games: int, player: str, team: str, league: str, dates: list[str], out: Path, filename: str | None = None) -> Path:
     """Save the chart of one player into `out` and return its path.
 
     Args:
@@ -67,6 +63,7 @@ def fig_player(share: np.ndarray, n_games: int, player: str, team: str, league: 
         league: League label for the title.
         dates: Dates of the games used, oldest first.
         out: Folder that receives the PNG.
+        filename: PNG name; default `player_rotation_<team>_<player>_<league>.png`.
     """
     fig, axes = plt.subplots(QUARTERS, 1, figsize=(FIG_WIDTH, ROW_INCHES * QUARTERS + 1.9), sharex=True,
                              gridspec_kw={"hspace": 0.35}, layout="none")
@@ -89,7 +86,7 @@ def fig_player(share: np.ndarray, n_games: int, player: str, team: str, league: 
     fig.suptitle(f"{player}: on the court by quarter, {team} {league}, last {n_games} games", x=0.01, ha="left", y=0.965, **SUP_KW)
     fig.text(0.01, 0.885, f"Games: {', '.join(dates)}. Overtimes not shown. Dark green = on the court in every game at that moment, white = in none.",
              fontsize=8.5, color=TEXT2, va="center")
-    path = out / f"player_rotation_{team.replace(' ', '_')}_{player.replace(' ', '_')}_{league.replace(' ', '')}.png"
+    path = out / (filename or f"player_rotation_{team.replace(' ', '_')}_{player.replace(' ', '_')}_{league.replace(' ', '')}.png")
     save_fig(fig, path); plt.close(fig)
     return path
 
@@ -134,6 +131,46 @@ def fig_quarter(shares: dict[str, np.ndarray], q: int, team: str, league: str, d
     return path
 
 
+ROTATION_MINUTES_PNG = "13_rotation_by_minute.png"   # opponent page: who is on the court at each minute, with the next options
+PLAYER_ROTATION_PREFIX = "14_player_rotation_"       # opponent individual page: one chart per player
+TOP_PLAYERS = 10                                     # players with a chart: the ones with the most minutes in the games used
+
+
+def opponent_figures(data: Path, team: str, date: str, competition: str, out: Path) -> list[Path]:
+    """Save the rotation charts of an opponent into its analysis folder, from the games of `competition` before `date`.
+
+    Writes `13_rotation_by_minute.png` (all those games) and `14_player_rotation_<Surname>.png` for the `TOP_PLAYERS`
+    players with the most minutes in the last `LAST_GAMES` games. Nothing is written when the team has no game yet.
+
+    Args:
+        data: Data folder.
+        team: Opponent name as in the data.
+        date: ``YYYY-MM-DD`` of the game being prepared.
+        competition: `LBA` or `EUROCUP_CODE`.
+        out: Analysis folder.
+
+    Returns:
+        The paths written.
+    """
+    notes = (lba_style.SOURCE_NOTE, lba_style.STAMP_NOTE)
+    try:
+        box, pbp, league, stamp = load_competition(data, competition, date)
+        if box[box.team == team].empty:
+            return []
+        share, avg, n_games = minute_presence(box, pbp, team)
+        positions = load_positions(data, team, competition, list(share.index))
+        paths = [fig_rotation(share, avg, n_games, team, league, stamp, out, OPTIONS, positions, ROTATION_MINUTES_PNG)]
+        games = last_games(box, team, LAST_GAMES)
+        on = team_on_court(box, pbp[pbp.game_id.isin(games)], team, games)
+        dates = [str(box[box.game_id == g].date.iloc[0]) for g in games]
+        for player in sorted(on, key=lambda p: -on[p].sum())[:TOP_PLAYERS]:
+            paths.append(fig_player(on[player].mean(axis=0), len(games), player, team, league, dates, out,
+                                    f"{PLAYER_ROTATION_PREFIX}{player.replace(' ', '_')}.png"))
+        return paths
+    finally:
+        lba_style.SOURCE_NOTE, lba_style.STAMP_NOTE = notes
+
+
 def main() -> None:
     """Command-line entry point: save one chart per requested player."""
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
@@ -146,19 +183,7 @@ def main() -> None:
     ap.add_argument("--before", default=None, help="YYYY-MM-DD: only games before this date")
     ap.add_argument("--competition", choices=[LBA, EUROCUP_CODE], default=LBA, help="EC: EuroCup games (data/eurocup_2026_raw.txt and data/eurocup/pbp.csv)")
     a = ap.parse_args()
-    league = LBA if a.competition == LBA else EUROCUP_LABEL
-    if a.competition == EUROCUP_CODE:
-        from matchup_report import parse_eurocup
-        box = parse_eurocup(Path(a.data) / EUROCUP_RAW)[0]
-        pbp = pd.read_csv(Path(a.data) / "eurocup" / "pbp.csv")
-        lba_style.SOURCE_NOTE = EL_SOURCE_NOTE
-    else:
-        box = pd.read_csv(Path(a.data) / "box_scores.csv")
-        pbp = pd.read_csv(Path(a.data) / "pbp.csv")
-        box["date"] = box.match_datetime.str[:10]
-    if a.before:
-        box = box[box.date < a.before]
-        lba_style.STAMP_NOTE = f"games before {pd.Timestamp(a.before):%d %b %Y} (pre-match snapshot)"
+    box, pbp, league, _ = load_competition(Path(a.data), a.competition, a.before)
     games = last_games(box, a.team, a.games)
     pbp = pbp[pbp.game_id.isin(games)]
     dates = [str(box[box.game_id == g].date.iloc[0]) for g in games]
