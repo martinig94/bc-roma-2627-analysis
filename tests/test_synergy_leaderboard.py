@@ -1,4 +1,4 @@
-"""Leaderboard page from the Synergy leaderboards pull: latest folder, rank order, Roma highlight, unranked teams. Synthetic data, no network."""
+"""Leaderboard page from the Synergy leaderboards pull: latest folder, rank order, Roma in bold, unranked teams. Synthetic data, no network."""
 from __future__ import annotations
 
 import sys
@@ -49,7 +49,7 @@ def test_ranks_roma_highlight_and_unranked_last(tmp_path, monkeypatch):
     md = lb.page_markdown()
     overall = md.split("### Overall")[1].split("###")[0]
     assert overall.index("Aris Thessaloniki") < overall.index("Basket Club Roma SPQR")      # rank order, not file order
-    assert "==Basket Club Roma SPQR==" in overall and "(ex" not in overall                  # highlighted, suffix dropped
-    assert "Maxima Roma" in overall and "==Maxima Roma==" not in overall                    # the other Roma team is not
+    assert "**Basket Club Roma SPQR**" in overall and "(ex" not in overall                  # bold, suffix dropped
+    assert "Maxima Roma" in overall and "**Maxima Roma**" not in overall                    # the other Roma team is not
     iso = md.split("### Isolation")[1]
-    assert iso.index("Aris") < iso.index("Roma") and "==–==" in iso                       # unranked team last, rank shown as a dash
+    assert iso.index("Aris") < iso.index("Roma") and "**–**" in iso                       # unranked team last, rank shown as a dash

@@ -46,9 +46,9 @@ def _table(df: pd.DataFrame) -> str:
     df = pd.concat([df[df["rank"].notna()].sort_values("rank", kind="stable"), df[df["rank"].isna()].sort_values("poss_total", ascending=False)])
     lines = ["| " + " | ".join(h for _, h, _ in SHOWN) + " |", "|" + "|".join("---" if c == "name" else "---:" for c, _, _ in SHOWN) + "|"]
     for _, r in df.iterrows():
-        roma = r["team"] == TEAM            # only BC Roma is highlighted
+        roma = r["team"] == TEAM            # only BC Roma is in bold
         cells = [_cell(r[c], f) for c, _, f in SHOWN]
-        lines.append("| " + " | ".join(f"=={c}==" if roma and c else c for c in cells) + " |")
+        lines.append("| " + " | ".join(f"**{c}**" if roma and c else c for c in cells) + " |")
     return "\n".join(lines)
 
 
@@ -67,7 +67,7 @@ def page_markdown() -> str | None:
             df = pd.read_csv(f)
             order = "lowest PPP allowed" if side == "defense" else "highest PPP"
             parts.append(f"## {comp_label} · {side_label}\n\n*Synergy data up to {day.strftime('%d %B %Y')}, competition games only. Rank 1 = {order}; teams with "
-                         f"fewer than 10 possessions of a play type are not ranked (– at the end). Counts per game. Small samples: check Poss. BC Roma is highlighted.*\n")
+                         f"fewer than 10 possessions of a play type are not ranked (– at the end). Counts per game. Small samples: check Poss. BC Roma is in bold.*\n")
             for play, title in PLAY_TYPES:
                 t = df[df["play_type"] == play]
                 if len(t):
