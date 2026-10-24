@@ -508,6 +508,18 @@ LEADERBOARD_JS = r"""
 .doc table.sortable th .arrow { font-size:.7em; margin-left:3px; opacity:.8; }
 .lb-tabs { display:flex; flex-wrap:wrap; gap:6px; margin:1.2rem 0 .2rem; position:sticky; top:0; z-index:5; background:var(--paper); padding:8px 0; border-bottom:1px solid var(--line); }
 .lb-tabs button { font:inherit; font-size:.88rem; padding:3px 12px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; }
+.lb-tabs .lb-pdf { margin-left:auto; }
+.lb-printhead { display:none; }
+@media print {
+  @page { margin:12mm; }
+  header, .author, .lb-tabs, .sec-tools, #hl-toggle, #hl-panel, button { display:none !important; }
+  .lb-printhead { display:block; font-weight:600; margin:0 0 6px; }
+  main { max-width:none; padding:0; } body { font-size:11px; line-height:1.3; }
+  .doc table { font-size:10px; } .doc td, .doc th { padding:2px 5px !important; }
+  .doc h1 { margin:0 0 4px; font-size:1.2rem; } .doc h1::after { display:none; } .doc h2 { margin-top:10px; }
+  details.sec { break-inside:avoid-page; margin-top:10px; } .doc tr { break-inside:avoid; }
+  * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
 .lb-legend { font-size:.82rem; color:var(--muted); margin:.4rem 0 0; }
 .lb-tabs button[aria-selected="true"] { background:var(--gold); border-color:var(--gold); font-weight:600; }
 </style>
@@ -523,7 +535,17 @@ LEADERBOARD_JS = r"""
   });
   var bar = document.createElement("div"); bar.className = "lb-tabs"; bar.setAttribute("role", "tablist");
   var first = document.querySelector(".doc details.sec"); first.parentNode.insertBefore(bar, first);
+  var head = document.createElement("div"); head.className = "lb-printhead"; bar.parentNode.insertBefore(head, bar);
+  var asof = ((document.querySelector(".doc details.sec p em") || {}).textContent || "").match(/Synergy data up to [^,]+/);
+  var pdf = document.createElement("button"); pdf.type = "button"; pdf.className = "lb-pdf"; pdf.textContent = "⬇ PDF of this tab";
+  pdf.title = "Opens the print dialog: choose Save as PDF as the destination. Keeps the sorting you have set.";
+  pdf.addEventListener("click", function () {
+    var old = document.title, cur = bar.querySelector('[aria-selected="true"]').dataset.play;
+    document.title = "Leaderboard " + cur + (asof ? " " + asof[0].replace("Synergy data up to ", "") : "");
+    window.print(); document.title = old;
+  });
   var show = function (name) {
+    head.textContent = "Leaderboard · " + name + (asof ? " · " + asof[0] : "");
     heads.forEach(function (h) { var on = h.dataset.play === name; h.style.display = "none"; h._table.style.display = on ? "" : "none"; });
     [].forEach.call(bar.children, function (b) { b.setAttribute("aria-selected", b.dataset.play === name ? "true" : "false"); });
     history.replaceState(null, "", "#" + slug(name));
@@ -532,6 +554,7 @@ LEADERBOARD_JS = r"""
     var b = document.createElement("button"); b.type = "button"; b.textContent = n; b.dataset.play = n; b.setAttribute("role", "tab");
     b.addEventListener("click", function () { show(n); }); bar.appendChild(b);
   });
+  bar.appendChild(pdf);
   show(names.filter(function (n) { return "#" + slug(n) === location.hash; })[0] || names[0]);
 })();
 </script>

@@ -14,8 +14,8 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 SYNERGY = ROOT / "data" / "synergy"
-COMPETITIONS = {"eurocup": "EuroCup", "seriea": "LBA Serie A"}
-SIDES = {"defense": "Defence", "offense": "Offence"}
+COMPETITIONS = {"seriea": "LBA Serie A", "eurocup": "EuroCup"}      # order of the sections: LBA first, offence before defence
+SIDES = {"offense": "Offence", "defense": "Defence"}
 TEAM = "BCR"                                       # Synergy abbreviation of the team the site is about (BC Roma)
 PLAY_TYPES = [("All", "Overall"), ("Transition", "Transition"), ("Isolation", "Isolation"), ("Post-Up", "Post-up"),
               ("P&R Ball Handler", "P&R ball handler"), ("P&R Roll Man", "P&R roll man"), ("Spot Up", "Spot up"),
