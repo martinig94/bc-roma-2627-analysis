@@ -53,3 +53,14 @@ def test_ranks_roma_highlight_and_unranked_last(tmp_path, monkeypatch):
     assert "Maxima Roma" in overall and "**Maxima Roma**" not in overall                    # the other Roma team is not
     iso = md.split("### Isolation")[1]
     assert iso.index("Aris") < iso.index("Roma") and "**–**" in iso                       # unranked team last, rank shown as a dash
+
+
+def test_league_standing_columns_from_the_name_table(tmp_path, monkeypatch):
+    monkeypatch.setattr(lb, "SYNERGY", tmp_path)
+    monkeypatch.setattr(lb, "NAMES", tmp_path / "team_names.csv")
+    (tmp_path / "team_names.csv").write_text("competition,synergy_name,standings_name\neurocup,Aris Thessaloniki,Aris Thessaloniki FC\neurocup,Basket Club Roma SPQR,BC Roma\n", encoding="utf-8")
+    monkeypatch.setattr(lb, "standings_lookup", lambda comp: {"Aris Thessaloniki FC": {"pos": "1", "wl": "4-0"}, "BC Roma": {"pos": "3=", "wl": "2-2"}})
+    write(tmp_path / "leaderboards_2026-10-23")
+    overall = lb.page_markdown().split("### Overall")[1].split("###")[0]
+    assert "| 1 | 4-0 |" in overall                    # mapped through team_names.csv
+    assert "**3=** | **2-2**" in overall               # BC Roma, in bold

@@ -568,7 +568,7 @@ LEADERBOARD_JS = r"""
   var rgba = function (g) { return g >= .5 ? "rgba(30,123,69," + ((g - .5) * .7).toFixed(2) + ")" : "rgba(179,48,47," + ((.5 - g) * .7).toFixed(2) + ")"; };
   var legend = document.createElement("p"); legend.className = "lb-legend";
   legend.innerHTML = 'Shading compares the teams of each table: <span style="background:rgba(30,123,69,.35)">&nbsp;green = better&nbsp;</span> <span style="background:rgba(179,48,47,.35)">&nbsp;red = worse&nbsp;</span> '
-    + 'for the team. On defence a low PPP, FG%, eFG%, Score%, 2P% or 3P% allowed is good and a high TO% (turnovers forced) is good; on offence the opposite. Poss, %Time and GP are not shaded.';
+    + 'for the team. On defence a low PPP, FG%, eFG%, Score%, 2P% or 3P% allowed is good and a high TO% (turnovers forced) is good; on offence the opposite. Pos, W-L, Poss and %Time are not shaded.';
   var bar = document.querySelector(".lb-tabs"); if (bar) bar.parentNode.insertBefore(legend, bar.nextSibling);
   [].forEach.call(document.querySelectorAll(".doc table"), function (tb) {
     var sec = tb.closest("details"), defence = !!sec && /Defence/.test(sec.querySelector("h2").textContent);
@@ -594,7 +594,7 @@ LEADERBOARD_JS = r"""
     heads.forEach(function (th, c) {
       th.title = "Sort by " + th.textContent + " (click again to reverse)";
       th.addEventListener("click", function () {
-        var first = c === 1 || c === 0 ? 1 : better[c] > 0 ? 1 : -1;       // best first: low values first when low is better
+        var first = c === 1 || c === 0 || th.textContent.trim() === "Pos" ? 1 : better[c] > 0 ? 1 : -1;       // best first: low values first when low is better
         state = {col: c, dir: state.col === c && c !== 0 ? -state.dir : first};
         var ranked = rows.filter(function (r) { return r._ranked; }), rest = rows.filter(function (r) { return !r._ranked; });
         var key = function (r) { return c === 1 ? r.cells[1].textContent.toLowerCase() : c === 0 ? r._i : num(r.cells[c]); };
