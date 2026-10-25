@@ -55,6 +55,8 @@ Both teams get most of their scoring from the starters (BC Roma 62 starters and 
 
 ![minutes](03_minutes.png)
 
+![rotation by minute](13_rotation_by_minute.png)
+
 ## Scoring sources
 
 BC Roma is paint-first: 33% of its shots come from under the basket and 2P% is 65%, with 45 points per game within 4.5 m of the rim. It still takes 30.7 threes per game (37% made). Venezia is more balanced: 29% of its shots at the rim, 59% on twos, 27 threes per game at 37%. Both are well above the league on shooting efficiency, so the game is likely to be decided by who gets more possessions and free throws rather than who shoots better.
