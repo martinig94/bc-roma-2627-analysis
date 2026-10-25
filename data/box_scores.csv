@@ -886,3 +886,58 @@ game_id,match_datetime,round,team_id,team,opponent_id,opponent,home,row_type,pla
 25391,2026-10-18T12:00:00.000+02:00,4,1751,Armani Olimpia Milano,1772,Napoli Basketball,0,player,45,AKE-NIC-95,45,Nicola,AKELE,0,4,240,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,3,0,0,0,0,-2,0,2
 25391,2026-10-18T12:00:00.000+02:00,4,1751,Armani Olimpia Milano,1772,Napoli Basketball,0,team,,,,,,,,,0,,,,,,,1,3,4,,0,1,,,0,0,0,0,,3,,
 25391,2026-10-18T12:00:00.000+02:00,4,1751,Armani Olimpia Milano,1772,Napoli Basketball,0,total,,,,,,,200,12000,98,17,28,12,25,28,34,6,22,28,18,5,11,4,2,26,29,0,1,0,113,1.11644773,
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,3200,LEV-ALE,4,Alessandro,LEVER,0,14,840,8,2,5,1,2,1,2,0,0,0,2,0,0,1,0,3,4,0,0,0,7,1,-1
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,9429,TOR-LOR-09,6,Lorenzo,TORO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,2770,IAN-ANT-91,7,Antonio,IANNUZZI,0,5,300,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,2,1,0,0,0,0,0,4
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,7030,MOO-CHA-98,8,Charlie Edward,MOORE,1,34,2040,28,4,10,6,7,2,4,0,2,2,8,2,3,0,1,2,6,0,0,0,31,1.2727273,9
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,6436,SPI-FRA-05,9,Francesco,SPINELLI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,1142,CER-MAR-92,11,Marco,CERON,0,2,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,-1,0,-3
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,2293,GAR-NEV-92,12,Garrett,NEVELS,0,24,1440,10,1,4,2,3,2,2,0,1,1,0,1,1,0,0,2,1,0,0,0,6,1.1111111,0
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,9347,OFF-MEZ-00,13,Mezie,OFFURUM,1,27,1620,20,5,7,1,3,7,9,1,4,5,2,1,1,0,0,4,5,0,0,2,22,1.2903226,5
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,7319,MCG-ROD-91,17,Rodney,MCGRUDER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,9348,ONY-ZER-01,21,Ze'Rik,ONYEMA,1,35,2100,5,2,8,0,0,1,4,4,9,13,0,3,1,0,1,2,4,0,0,1,12,0.4545455,3
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,3526,MAS-BRU-96,33,Bruno,MASCOLO,1,28,1680,10,2,8,1,2,3,6,1,4,5,4,0,2,0,1,2,4,0,0,0,8,0.6666667,3
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,player,9346,JOH-BRA-02,88,Brandon,JOHNSON,1,31,1860,6,0,0,2,6,0,0,0,9,9,2,2,2,0,1,2,1,0,0,0,11,0.75,10
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,team,,,,,,,,,0,,,,,,,1,1,2,,0,2,,,0,0,0,0,,0,,
+25397,2026-10-24T20:30:00.000+02:00,5,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,1,total,,,,,,,200,12000,87,16,42,13,23,16,27,8,31,39,18,9,12,1,4,20,26,0,0,3,97,0.9350533142857144,
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,9330,BRO-DAR-99,0,Darius,BROWN,1,24,1440,4,1,3,0,4,2,2,0,2,2,3,1,4,0,1,4,2,0,0,0,-3,0.3333333,4
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,9329,BRO-CHA-97,4,Charles,BROWN,1,27,1620,16,2,4,4,6,0,0,0,4,4,3,0,4,0,0,2,1,0,0,0,14,1.1428571,-19
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,439,BER-ALE-02,5,Alessandro,BERTINI,0,11,660,7,1,1,1,1,2,3,0,0,0,1,0,0,0,0,2,2,0,0,0,7,2,8
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,7279,NIA-CHE-08,7,Cheickh,NIANG,0,17,1020,6,3,6,0,1,0,1,1,0,1,2,0,0,1,0,3,2,1,0,0,4,0.8,-10
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,9328,OLI-QUI-01,8,Quincy,OLIVARI,1,23,1380,18,3,4,3,7,3,3,0,2,2,2,0,1,0,0,2,3,0,0,0,17,1.3333333,-8
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,2148,FOR-TOT-86,10,Toto,FORRAY,0,12,720,0,0,3,0,1,0,0,1,3,4,1,0,0,0,0,1,1,0,0,0,1,0,-3
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,7119,CAT-FED-08,11,Federico,CATTAPAN,0,1,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,7599,BAR-ANT-08,12,Antonio,BARRA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,7449,MAW-SEL-98,21,Selom,MAWUGBE,1,19,1140,2,0,1,0,0,2,4,0,3,3,0,0,0,2,0,3,2,0,0,0,3,0.6666667,0
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,9327,BIG-ISA-00,24,Isaiah,BIGELOW,0,24,1440,14,7,12,0,3,0,2,1,5,6,1,2,0,1,0,5,2,0,0,0,11,0.875,-15
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,378,BAY-JOR-99,26,Jordan,BAYEHE,0,25,1500,12,1,4,2,2,4,4,2,7,9,0,1,3,0,0,3,4,0,0,0,17,1.0909091,-4
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,player,9170,MED-JOS-07,30,Josè Alfred,MEDINA BOUZA,1,17,1020,2,0,1,0,1,2,2,0,3,3,1,0,0,0,0,2,1,0,0,0,3,0.6666667,17
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,team,,,,,,,,,0,,,,,,,1,0,1,,0,1,,,0,0,0,0,,0,,
+25397,2026-10-24T20:30:00.000+02:00,5,1763,Dolomiti Energia Trentino,1768,Longobardi Scafati Basket,0,total,,,,,,,200,12000,81,18,39,10,26,15,21,6,29,35,14,4,13,4,1,27,20,1,0,0,74,0.9898629111111111,
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,97,ALV-DAV-96,2,Davide,ALVITI,1,32,1920,12,0,1,3,6,3,3,1,2,3,2,4,4,0,0,4,4,0,0,0,13,0.96,4
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,9337,DUK-DAV-99,3,David,DUKE,1,32,1920,11,2,5,1,7,4,6,0,1,1,7,0,2,1,2,4,6,0,0,2,7,0.6470588,12
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,6556,VIL-MAU-04,5,Mauro,VILLA,0,3,180,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,-2,0,-4
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,4034,NIK-STE-97,11,Stefan,NIKOLIC,1,34,2040,28,7,7,4,4,2,3,2,4,6,1,2,2,0,0,1,2,0,0,3,35,1.9310345,11
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,9334,HAL-HUN-97,12,Hunter,HALE,1,37,2220,22,1,1,5,13,5,6,0,2,2,7,0,4,0,0,3,6,0,0,0,21,1.047619,14
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,3207,LIB-MAT-02,13,Matteo,LIBRIZZI,0,18,1080,12,1,5,2,5,4,5,2,3,5,4,0,2,0,1,4,3,0,0,0,9,0.8275862,-8
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,7428,REN-NAT-96,15,Nate,RENFRO,0,24,1440,10,3,3,0,0,4,4,1,2,3,2,0,2,3,0,3,2,0,0,1,15,1.4285714,15
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,7014,KAM-ISM-01,17,Ismael,KAMAGATE,1,16,960,3,1,2,0,0,1,4,3,3,6,1,0,2,0,0,2,2,0,0,0,4,0.5,-9
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,9335,ROB-ISA-98,22,Isaiah,ROBY,0,15,900,2,1,1,0,1,0,0,0,0,0,2,0,0,0,0,4,1,0,0,0,0,1,0
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,3155,LAU-MAX,34,Maximilian,LADURNER,0,1,60,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,-2
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,player,2790,IKA-IRI-94,35,Iris,IKANGI,0,13,780,10,1,1,2,5,2,2,1,2,3,0,3,1,0,0,4,1,0,0,0,9,1.25,3
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,team,,,,,,,,,0,,,,,,,2,4,6,,0,1,,,0,0,0,0,,5,,
+25399,2026-10-24T20:00:00.000+02:00,5,1766,Openjobmetis Varese,1761,BC Roma,1,total,,,,,,,225,13500,110,17,26,17,41,25,33,12,24,36,26,9,21,4,3,30,27,0,0,6,117,1.0657633222222223,
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,6138,MAN-NIC-01,1,Niccolò,MANNION,1,28,1680,7,2,4,1,6,0,1,1,1,2,3,0,5,1,1,5,4,0,0,0,-2,0.4516129,-17
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,9385,WAT-PAU-94,3,Paul,WATSON,1,26,1560,6,2,3,0,4,2,4,1,0,1,3,1,1,0,1,2,2,0,0,1,2,0.6,8
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,6258,DAV-COR-97,5,Corey,DAVIS,0,33,1980,5,0,2,1,5,2,2,2,0,2,7,0,1,0,0,2,4,0,0,0,9,0.5555556,-6
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,9379,EME-GIO-02,7,Giovanni,EMEJURU,0,6,360,5,2,2,0,0,1,2,1,0,1,0,0,0,0,0,2,1,0,0,2,4,1.6666667,-12
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,6188,TAV-RIC-91,8,Riccardo,TAVERNELLI,0,1,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,9381,FLO-TRE-05,9,Trentyn,FLOWERS,0,4,240,2,0,1,0,1,2,2,0,1,1,0,0,0,0,0,0,1,0,0,0,2,0.6666667,-7
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,9384,STE-ERI-99,10,Erik,STEVENSON,1,27,1620,16,6,9,1,7,1,1,2,8,10,2,3,0,1,1,4,1,0,0,1,19,0.969697,5
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,9380,AYA-GER-01,11,Gerald,AYAYI,0,27,1620,15,5,7,1,1,2,2,1,1,2,1,0,1,0,0,5,1,0,0,1,11,1.5,1
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,5369,STR-ART,12,Arturs,STRAUTINS,1,31,1860,9,2,3,1,3,2,2,0,0,0,2,1,4,0,0,3,5,0,0,0,7,0.8181818,-6
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,9386,ODZ-GIA-08,13,Giannis,ODZEBE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,9436,OLY-KEL-91,22,Kelly,OLYNYK,1,39,2340,38,11,12,3,5,7,7,4,8,12,4,2,5,1,1,4,9,0,0,2,53,1.4901961,5
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,player,3710,MEZ-AND-98,24,Andrea,MEZZANOTTE,0,3,180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,team,,,,,,,,,0,,,,,,,2,4,6,,0,0,,,1,0,0,0,,5,,
+25399,2026-10-24T20:00:00.000+02:00,5,1761,BC Roma,1766,Openjobmetis Varese,0,total,,,,,,,225,13500,103,30,43,8,32,19,23,14,23,37,22,7,17,3,4,28,28,0,0,7,110,0.9687307555555554,

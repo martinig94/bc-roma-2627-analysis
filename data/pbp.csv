@@ -18284,3 +18284,1298 @@ game_id,seq,period,clock,elapsed_sec,score_home,score_away,team_id,team,home_clu
 25391,698,4,00:11,589,82,98,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,3 punti segnato,1,Tiro in sospensione,,,92,98,1,A,1,False,0,
 25391,699,4,00:11,589,82,98,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Assist,,,,,92,98,1,A,1,False,0,698
 25391,705,4,00:00,600,82,98,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25397,103,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25397,104,1,10:00,0,0,0,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Palla contesa,,,,,,,1,,,False,0,
+25397,105,1,10:00,0,0,0,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo commesso,103,tiro,,,,,0,,,False,0,
+25397,106,1,10:00,0,0,0,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Fallo Subito,,,,,,,1,,,False,0,105
+25397,385,1,09:38,22,0,0,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Tiro libero sbagliato,,,,,,,1,A,7,False,0,
+25397,386,1,09:38,22,0,0,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Tiro libero sbagliato,,,,,,,1,A,7,False,0,385
+25397,387,1,09:38,22,0,0,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,,,1,,,False,0,385
+25397,107,1,09:38,22,2,0,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,2 punti segnato,1,Tiro in sospensione,,,5,59,0,A,3,True,0,
+25397,108,1,09:38,22,2,0,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Assist,,,,,5,59,0,A,3,False,0,107
+25397,109,1,09:38,22,2,0,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Palla persa,50,Passaggio sbagliato,,,93,57,1,A,3,False,0,
+25397,110,1,09:38,22,2,0,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Palla recuperata,,,,,93,57,0,D,3,False,0,109
+25397,111,1,09:38,22,2,0,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti sbagliato,1,Tiro in sospensione,,,16,73,0,A,4,False,0,
+25397,112,1,09:38,22,2,0,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Rimbalzo difensivo,,,,,16,73,0,A,4,False,0,111
+25397,113,1,09:38,22,2,0,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,2 punti sbagliato,1,Tiro in sospensione,,,93,65,1,A,2,False,0,
+25397,114,1,09:38,22,2,0,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,93,65,1,A,2,False,0,113
+25397,115,1,09:38,22,2,0,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,2 punti sbagliato,9,Schiacciata,1007,nessun rimbalzo,4,47,0,A,3,False,0,
+25397,116,1,09:28,32,2,0,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Palla persa,50,Passaggio sbagliato,,,92,45,1,A,3,False,0,
+25397,117,1,09:28,32,2,0,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Palla recuperata,,,,,92,45,0,D,3,False,0,116
+25397,118,1,09:17,43,2,0,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Fallo commesso,100,personale,,,34,18,1,D,8,False,0,
+25397,119,1,09:17,43,2,0,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Fallo Subito,,,,,34,18,1,D,8,False,0,118
+25397,120,1,08:55,65,2,0,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti sbagliato,1,Tiro in sospensione,,,10,19,0,A,2,False,0,
+25397,121,1,08:55,65,2,0,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Rimbalzo difensivo,,,,,10,19,1,D,2,False,0,120
+25397,122,1,08:45,75,2,2,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,2 punti segnato,8,Da penetrazione,,,92,47,1,A,3,True,0,
+25397,123,1,08:22,98,2,2,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,2 punti sbagliato,1,Tiro in sospensione,,,8,77,0,A,4,False,0,
+25397,124,1,08:22,98,2,2,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,8,77,0,A,4,False,0,123
+25397,125,1,08:13,107,2,5,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,3 punti segnato,5,Tiro in Step Back,,,71,29,1,A,9,False,0,
+25397,126,1,07:53,127,2,5,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Fallo commesso,100,personale,,,5,50,1,D,3,False,0,
+25397,127,1,07:53,127,2,5,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Fallo Subito,,,,,5,50,1,D,3,False,0,126
+25397,128,1,07:53,127,2,5,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Uscita,,,,,,,,,,False,0,
+25397,129,1,07:53,127,2,5,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Ingresso,,,,,,,,,,False,0,128
+25397,130,1,07:48,132,5,5,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,3 punti segnato,1,Tiro in sospensione,,,17,95,0,A,10,False,0,
+25397,131,1,07:48,132,5,5,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Assist,,,,,17,95,0,A,10,False,0,130
+25397,132,1,07:35,145,5,5,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Palla persa,50,Passaggio sbagliato,,,87,48,1,A,6,False,0,
+25397,133,1,07:35,145,5,5,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Palla recuperata,,,,,87,48,1,A,6,False,0,132
+25397,134,1,07:22,158,5,5,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Fallo commesso,103,tiro,,,3,54,1,D,3,False,0,
+25397,135,1,07:22,158,5,5,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Fallo Subito,,,,,3,54,1,D,3,False,0,134
+25397,136,1,06:55,185,6,5,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25397,137,1,06:55,185,6,5,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Tiro libero sbagliato,500,contropiede,,,,,,A,7,False,0,136
+25397,138,1,06:55,185,6,5,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Rimbalzo difensivo,,,,,,,,,,False,0,136
+25397,139,1,06:55,185,6,7,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,2 punti segnato,7,Appoggio a canestro,,,94,58,1,A,3,True,0,
+25397,140,1,06:49,191,6,7,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,2 punti sbagliato,1,Tiro in sospensione,,,6,26,0,A,2,False,0,
+25397,141,1,06:49,191,6,7,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Rimbalzo difensivo,,,,,6,26,0,A,2,False,0,140
+25397,142,1,06:42,198,6,9,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,2 punti segnato,10,Alley-oop,,,96,51,1,A,3,True,0,
+25397,143,1,06:42,198,6,9,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Assist,,,,,96,51,1,A,3,False,0,142
+25397,144,1,06:19,221,6,9,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Fallo commesso,103,tiro,,,6,53,1,D,3,False,0,
+25397,145,1,06:19,221,6,9,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo Subito,,,,,6,53,1,D,3,False,0,144
+25397,146,1,06:12,228,7,9,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,147,1,06:12,228,8,9,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero segnato,,,,,,,,A,7,False,0,146
+25397,148,1,05:55,245,8,9,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Palla persa,53,Passi,,,92,79,1,A,2,False,0,
+25397,149,1,05:36,264,8,9,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Fallo commesso,100,personale,,,37,47,1,D,9,False,0,
+25397,150,1,05:36,264,8,9,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Fallo Subito,,,,,37,47,1,D,9,False,0,149
+25397,151,1,05:36,264,8,9,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,
+25397,152,1,05:36,264,8,9,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Uscita,,,,,,,,,,False,0,151
+25397,153,1,05:36,264,9,9,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,154,1,05:36,264,9,9,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Tiro libero sbagliato,,,,,,,,A,7,False,0,153
+25397,155,1,05:36,264,9,9,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,,,,,,False,0,153
+25397,156,1,05:17,283,9,12,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,3 punti segnato,6,Arresto e tiro,,,82,7,1,A,10,False,0,
+25397,157,1,05:17,283,9,12,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Assist,,,,,82,7,1,A,10,False,0,156
+25397,158,1,05:05,295,12,12,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,3 punti segnato,6,Arresto e tiro,,,5,97,0,A,5,False,0,
+25397,159,1,05:05,295,12,12,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Assist,,,,,5,97,0,A,5,False,0,158
+25397,160,1,04:53,307,12,15,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,3 punti segnato,3,Tiro in fadeaway,,,72,78,1,A,8,False,0,
+25397,161,1,04:40,320,14,15,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti segnato,7,Appoggio a canestro,,,5,56,0,A,3,True,0,
+25397,162,1,04:19,341,14,15,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,2 punti sbagliato,1,Tiro in sospensione,,,87,43,1,A,6,False,0,
+25397,163,1,04:19,341,14,15,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Rimbalzo difensivo,,,,,87,43,1,A,6,False,0,162
+25397,164,1,04:11,349,14,15,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,2 punti sbagliato,7,Appoggio a canestro,,,4,50,0,A,3,False,0,
+25397,165,1,04:11,349,14,15,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Stoppata,,,,,4,50,1,D,3,False,0,164
+25397,166,1,04:11,349,14,15,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Stoppata subita,,,,,4,50,0,A,3,False,0,164
+25397,167,1,04:11,349,14,15,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Rimbalzo difensivo,,,,,4,50,1,D,3,False,0,164
+25397,168,1,04:01,359,14,17,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,2 punti segnato,7,Appoggio a canestro,,,94,53,1,A,3,True,0,
+25397,169,1,04:01,359,14,17,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Assist,,,,,94,53,1,A,3,False,0,168
+25397,170,1,04:01,359,14,17,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Fallo commesso,103,tiro,,,94,53,0,D,3,False,0,
+25397,171,1,04:01,359,14,17,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Fallo Subito,,,,,94,53,0,D,3,False,0,170
+25397,172,1,03:59,361,14,17,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Uscita,,,,,,,,,,False,0,
+25397,173,1,03:59,361,14,17,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Ingresso,,,,,,,,,,False,0,172
+25397,174,1,03:59,361,14,17,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Ingresso,,,,,,,,,,False,0,172
+25397,175,1,03:59,361,14,17,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Uscita,,,,,,,,,,False,0,172
+25397,176,1,03:59,361,14,17,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25397,177,1,03:59,361,14,17,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Rimbalzo difensivo,,,,,,,0,,,False,0,176
+25397,178,1,03:47,373,14,17,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,2 punti sbagliato,4,Giro e Tiro,,,9,48,0,A,3,False,0,
+25397,179,1,03:47,373,14,17,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Rimbalzo offensivo,,,,,9,48,0,A,3,False,0,178
+25397,180,1,03:41,379,14,17,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Fallo commesso,100,personale,,,6,42,1,D,3,False,0,
+25397,181,1,03:41,379,14,17,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo Subito,,,,,6,42,1,D,3,False,0,180
+25397,182,1,03:26,394,14,17,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25397,183,1,03:26,394,15,17,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero segnato,,,,,,,,A,7,False,0,182
+25397,184,1,03:11,409,15,19,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti segnato,5,Tiro in Step Back,,,91,15,1,A,4,False,0,
+25397,185,1,02:51,429,18,19,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,3 punti segnato,6,Arresto e tiro,,,27,25,0,A,8,False,0,
+25397,186,1,02:33,447,18,19,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Palla persa,53,Passi,,,96,47,1,A,3,False,0,
+25397,187,1,02:33,447,18,19,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Ingresso,,,,,,,,,,False,0,
+25397,188,1,02:33,447,18,19,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Ingresso,,,,,,,,,,False,0,187
+25397,189,1,02:33,447,18,19,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Uscita,,,,,,,,,,False,0,187
+25397,190,1,02:33,447,18,19,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Uscita,,,,,,,,,,False,0,187
+25397,191,1,02:33,447,18,19,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Ingresso,,,,,,,,,,False,0,187
+25397,192,1,02:33,447,18,19,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Uscita,,,,,,,,,,False,0,187
+25397,193,1,02:18,462,18,19,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,6,49,0,A,3,False,0,
+25397,194,1,02:18,462,18,19,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Stoppata,,,,,6,49,0,A,3,False,0,193
+25397,195,1,02:18,462,18,19,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Stoppata subita,,,,,6,49,0,A,3,False,0,193
+25397,196,1,02:18,462,18,19,1768,Longobardi Scafati Basket,1,,,,,Rimbalzi offensivi di squadra,,,,,6,49,0,A,3,False,0,193
+25397,197,1,02:16,464,18,19,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,2 punti sbagliato,6,Arresto e tiro,,,11,27,0,A,2,False,0,
+25397,198,1,02:16,464,18,19,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,11,27,0,A,2,False,0,197
+25397,199,1,02:04,476,18,19,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Fallo commesso,100,personale,,,77,92,0,D,8,False,0,
+25397,200,1,02:04,476,18,19,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Fallo Subito,,,,,77,92,0,D,8,False,0,199
+25397,201,1,02:04,476,18,19,1768,Longobardi Scafati Basket,1,1142,11,Marco,Ceron,Ingresso,,,,,,,,,,False,0,
+25397,202,1,02:04,476,18,19,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Uscita,,,,,,,,,,False,0,201
+25397,203,1,01:53,487,18,19,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Palla persa,50,Passaggio sbagliato,,,67,38,1,A,9,False,0,
+25397,204,1,01:53,487,18,19,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Palla recuperata,,,,,67,38,1,A,9,False,0,203
+25397,205,1,01:37,503,18,19,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Palla persa,53,Passi,,,16,5,0,A,8,False,0,
+25397,206,1,01:19,521,18,19,1768,Longobardi Scafati Basket,1,1142,11,Marco,Ceron,Fallo commesso,100,personale,,,90,57,0,D,6,False,0,
+25397,207,1,01:19,521,18,19,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Fallo Subito,,,,,90,57,0,D,6,False,0,206
+25397,208,1,01:19,521,18,19,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,2 punti sbagliato,1,Tiro in sospensione,,,95,16,1,A,4,False,0,
+25397,209,1,01:19,521,18,19,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,95,16,1,A,4,False,0,208
+25397,210,1,01:04,536,20,19,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,2 punti segnato,7,Appoggio a canestro,,,3,41,0,A,3,True,0,
+25397,211,1,01:04,536,20,19,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Fallo commesso,103,tiro,,,3,41,1,D,3,False,0,
+25397,212,1,01:04,536,20,19,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Fallo Subito,,,,,3,41,1,D,3,False,0,211
+25397,213,1,01:04,536,20,19,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Tiro libero sbagliato,,,,,,,0,A,7,False,0,
+25397,670,1,01:04,536,20,19,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Assist,0,,0,,,,0,,,False,0,0
+25397,214,1,00:44,556,20,19,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,,,,,,False,0,213
+25397,215,1,00:37,563,20,22,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,3 punti segnato,6,Arresto e tiro,,,69,65,1,A,9,False,0,
+25397,216,1,00:37,563,20,22,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Assist,,,,,69,65,1,A,9,False,0,215
+25397,217,1,00:37,563,22,22,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti segnato,7,Appoggio a canestro,,,6,53,0,A,3,True,0,
+25397,218,1,00:37,563,22,22,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Fallo commesso,100,personale,,,92,60,0,D,3,False,0,
+25397,219,1,00:37,563,22,22,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Fallo Subito,,,,,92,60,1,A,3,False,0,218
+25397,220,1,00:37,563,22,22,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Uscita,,,,,,,,,,False,0,
+25397,221,1,00:37,563,22,22,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Ingresso,,,,,,,,,,False,0,220
+25397,222,1,00:37,563,22,22,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25397,223,1,00:37,563,22,23,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Tiro libero segnato,,,,,,,,A,7,False,0,222
+25397,671,1,00:14,586,22,23,1763,Dolomiti Energia Trentino,0,,,,,Rimbalzi difensivi di squadra,,,,,,,0,,,False,0,0
+25397,224,1,00:14,586,22,23,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,2 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,20,32,0,A,2,False,0,
+25397,225,1,00:13,587,22,23,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Ingresso,,,,,,,,,,False,0,
+25397,226,1,00:13,587,22,23,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Uscita,,,,,,,,,,False,0,225
+25397,227,1,00:01,599,22,26,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,3 punti segnato,6,Arresto e tiro,,,75,15,1,A,10,False,0,
+25397,228,1,00:01,599,22,26,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Assist,,,,,75,15,1,A,10,False,0,227
+25397,229,1,00:00,600,22,26,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25397,230,2,10:00,0,22,26,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25397,231,2,09:50,10,22,26,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Uscita,,,,,,,,,,False,0,
+25397,232,2,09:50,10,22,26,1768,Longobardi Scafati Basket,1,1142,11,Marco,Ceron,Uscita,,,,,,,,,,False,0,231
+25397,233,2,09:50,10,22,26,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Ingresso,,,,,,,,,,False,0,231
+25397,234,2,09:50,10,22,26,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Ingresso,,,,,,,,,,False,0,231
+25397,235,2,09:47,13,22,26,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Palla persa,50,Passaggio sbagliato,,,2,61,0,A,3,False,0,
+25397,236,2,09:40,20,22,26,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti sbagliato,1,Tiro in sospensione,,,95,42,1,A,3,False,0,
+25397,237,2,09:40,20,22,26,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,95,42,1,A,3,False,0,236
+25397,238,2,09:17,43,25,26,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,3 punti segnato,6,Arresto e tiro,,,27,75,0,A,10,False,0,
+25397,239,2,09:17,43,25,26,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Assist,,,,,27,75,0,A,10,False,0,238
+25397,240,2,08:59,61,25,28,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,2 punti segnato,1,Tiro in sospensione,,,79,56,1,A,7,False,0,
+25397,241,2,08:59,61,25,28,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Fallo commesso,103,tiro,,,79,56,0,D,7,False,0,
+25397,242,2,08:59,61,25,28,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Fallo Subito,,,,,79,56,0,D,7,False,0,241
+25397,243,2,08:59,61,25,29,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,244,2,08:59,61,25,29,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Uscita,,,,,,,,,,False,0,
+25397,245,2,08:59,61,25,29,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,244
+25397,246,2,08:36,84,25,29,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,2 punti sbagliato,7,Appoggio a canestro,,,5,57,0,A,3,False,0,
+25397,247,2,08:36,84,25,29,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,5,57,1,D,3,False,0,246
+25397,248,2,08:13,107,25,29,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Palla persa,50,Passaggio sbagliato,,,4,45,1,D,3,False,0,
+25397,249,2,08:13,107,25,29,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Palla recuperata,,,,,4,45,1,D,3,False,0,248
+25397,250,2,08:00,120,25,29,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,3 punti sbagliato,7,Appoggio a canestro,,,5,43,0,A,9,False,0,
+25397,672,2,08:00,120,25,29,1768,Longobardi Scafati Basket,1,,,,,Rimbalzi difensivi di squadra,,,,,,,0,,,False,0,0
+25397,251,2,07:49,131,25,29,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Palla persa,50,Passaggio sbagliato,,,6,49,0,A,3,False,0,
+25397,252,2,07:49,131,25,29,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Palla recuperata,,,,,6,49,0,A,3,False,0,251
+25397,253,2,07:35,145,25,29,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,2 punti sbagliato,1,Tiro in sospensione,,,95,58,1,A,3,False,0,
+25397,254,2,07:35,145,25,29,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,95,58,1,A,3,False,0,253
+25397,255,2,07:31,149,25,29,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,2 punti sbagliato,1,Tiro in sospensione,,,6,50,0,A,3,False,0,
+25397,256,2,07:31,149,25,29,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Rimbalzo difensivo,,,,,6,50,0,A,3,False,0,255
+25397,257,2,07:26,154,25,29,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Ingresso,,,,,,,,,,False,0,
+25397,258,2,07:26,154,25,29,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Uscita,,,,,,,,,,False,0,257
+25397,259,2,07:26,154,25,29,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Fallo commesso,103,tiro,,,97,43,0,D,3,False,0,
+25397,260,2,07:26,154,25,29,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Fallo Subito,,,,,97,43,0,D,3,False,0,259
+25397,261,2,07:26,154,25,29,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Uscita,,,,,,,,,,False,0,
+25397,262,2,07:26,154,25,29,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Ingresso,,,,,,,,,,False,0,261
+25397,263,2,07:26,154,25,30,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,264,2,07:26,154,25,31,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Tiro libero segnato,,,,,,,,A,7,False,0,263
+25397,265,2,07:04,176,25,31,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,2 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,8,47,0,A,3,False,0,
+25397,673,2,07:04,176,25,31,1768,Longobardi Scafati Basket,1,,,,,Rimbalzi difensivi di squadra,,,,,,,0,,,False,0,0
+25397,266,2,07:04,176,25,31,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Fallo commesso,100,personale,,,8,53,1,D,3,False,0,
+25397,267,2,07:04,176,25,31,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Fallo Subito,,,,,8,53,1,D,3,False,0,266
+25397,268,2,06:57,183,25,31,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,2 punti sbagliato,6,Arresto e tiro,,,6,3,0,A,2,False,0,
+25397,269,2,06:57,183,25,31,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,6,3,0,A,1,False,0,268
+25397,270,2,06:40,200,25,31,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,3 punti sbagliato,1,Tiro in sospensione,,,84,97,1,A,8,False,0,
+25397,271,2,06:40,200,25,31,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,84,97,1,A,8,False,0,270
+25397,272,2,06:32,208,25,31,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,3 punti sbagliato,1,Tiro in sospensione,,,20,93,0,A,10,False,0,
+25397,273,2,06:32,208,25,31,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,20,93,0,A,10,False,0,272
+25397,274,2,06:15,225,25,33,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti segnato,5,Tiro in Step Back,,,92,82,1,A,2,False,0,
+25397,275,2,05:51,249,25,33,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Palla persa,50,Passaggio sbagliato,,,7,18,0,A,2,False,0,
+25397,276,2,05:51,249,25,33,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Palla recuperata,,,,,7,18,0,A,2,False,0,275
+25397,277,2,05:41,259,25,33,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Palla persa,53,Passi,,,90,21,1,A,4,False,0,
+25397,278,2,05:41,259,25,33,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Ingresso,,,,,,,,,,False,0,
+25397,279,2,05:41,259,25,33,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Uscita,,,,,,,,,,False,0,278
+25397,280,2,05:41,259,25,33,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Uscita,,,,,,,,,,False,0,278
+25397,281,2,05:41,259,25,33,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Ingresso,,,,,,,,,,False,0,278
+25397,282,2,05:41,259,25,33,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Fallo commesso,100,personale,,,11,36,1,D,2,False,0,
+25397,283,2,05:41,259,25,33,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Fallo Subito,,,,,11,36,1,D,2,False,0,282
+25397,284,2,05:25,275,25,33,1768,Longobardi Scafati Basket,1,,,,,Palle perse di squadra,602,24 Secondi,,,10,4,0,A,8,False,0,
+25397,285,2,05:14,286,25,33,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,2 punti sbagliato,1,Tiro in sospensione,,,90,36,1,A,4,False,0,
+25397,286,2,05:14,286,25,33,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,90,36,1,A,4,False,0,285
+25397,287,2,05:07,293,25,33,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Fallo commesso,100,personale,,,13,79,1,D,4,False,0,
+25397,288,2,05:07,293,25,33,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Fallo Subito,,,,,13,79,1,D,4,False,0,287
+25397,289,2,04:49,311,25,33,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Fallo commesso,106,offensivo,,,33,96,0,A,10,False,0,
+25397,290,2,04:49,311,25,33,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Palla persa,,,,,33,96,0,A,10,False,0,289
+25397,291,2,04:49,311,25,33,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Fallo Subito,,,,,33,96,0,A,10,False,0,289
+25397,292,2,04:49,311,25,33,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Ingresso,,,,,,,,,,False,0,
+25397,293,2,04:49,311,25,33,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Uscita,,,,,,,,,,False,0,292
+25397,294,2,04:46,314,25,35,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti segnato,7,Appoggio a canestro,,,92,54,1,A,3,True,0,
+25397,295,2,04:46,314,25,35,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Assist,,,,,92,54,1,A,3,False,0,294
+25397,296,2,04:40,320,25,35,1768,Longobardi Scafati Basket,1,,,,,Time Out,,,,,,,0,,,False,0,
+25397,299,2,04:40,320,25,35,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Palla persa,50,Passaggio sbagliato,,,7,83,0,A,4,False,0,
+25397,300,2,04:17,343,25,35,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Ingresso,,,,,,,,,,False,0,
+25397,301,2,04:17,343,25,35,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Uscita,,,,,,,,,,False,0,300
+25397,302,2,04:17,343,25,35,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,87,79,1,A,8,False,0,
+25397,303,2,04:17,343,25,35,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Rimbalzo offensivo,,,,,87,79,1,A,2,False,0,302
+25397,304,2,04:17,343,25,37,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,2 punti segnato,7,Appoggio a canestro,,,87,79,1,A,2,False,0,
+25397,305,2,04:17,343,25,37,1768,Longobardi Scafati Basket,1,2770,7,Antonio,Iannuzzi,Ingresso,,,,,,,,,,False,0,
+25397,306,2,04:17,343,25,37,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Uscita,,,,,,,,,,False,0,305
+25397,307,2,04:17,343,25,37,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Uscita,,,,,,,,,,False,0,
+25397,308,2,04:17,343,25,37,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Ingresso,,,,,,,,,,False,0,307
+25397,309,2,04:17,343,28,37,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,3 punti segnato,1,Tiro in sospensione,,,27,24,0,A,8,False,0,
+25397,310,2,04:17,343,28,37,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Assist,,,,,27,24,0,A,8,False,0,309
+25397,311,2,04:17,343,28,37,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti sbagliato,1,Tiro in sospensione,,,89,24,1,A,4,False,0,
+25397,312,2,04:17,343,28,37,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Rimbalzo difensivo,,,,,89,24,1,A,4,False,0,311
+25397,314,2,04:17,343,28,37,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Ingresso,,,,,,,,,,False,0,
+25397,315,2,04:17,343,28,37,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Uscita,,,,,,,,,,False,0,314
+25397,674,2,04:17,343,31,37,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Assist,,,,,,,0,,,False,0,0
+25397,316,2,04:17,343,31,37,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,3 punti segnato,1,Tiro in sospensione,,,31,68,0,A,9,False,0,
+25397,317,2,04:17,343,31,37,1763,Dolomiti Energia Trentino,0,,,,,Time Out,,,,,,,1,,,False,0,
+25397,318,2,04:17,343,31,37,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Uscita,,,,,,,,,,False,0,
+25397,319,2,04:17,343,31,37,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Ingresso,,,,,,,,,,False,0,318
+25397,320,2,04:17,343,31,37,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Ingresso,,,,,,,,,,False,0,318
+25397,321,2,04:17,343,31,37,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Uscita,,,,,,,,,,False,0,318
+25397,322,2,02:51,429,31,37,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,3 punti sbagliato,1,Tiro in sospensione,,,75,87,1,A,8,False,0,
+25397,323,2,02:51,429,31,37,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Rimbalzo offensivo,,,,,75,87,1,A,8,False,0,322
+25397,324,2,02:44,436,31,37,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Fallo commesso,100,personale,,,90,58,0,D,6,False,0,
+25397,325,2,02:44,436,31,37,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Fallo Subito,,,,,90,58,0,D,6,False,0,324
+25397,326,2,02:43,437,31,37,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo commesso,100,personale,,,92,63,0,D,2,False,0,
+25397,327,2,02:43,437,31,37,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Fallo Subito,,,,,92,63,0,D,2,False,0,326
+25397,328,2,02:43,437,31,37,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Ingresso,,,,,,,,,,False,0,
+25397,329,2,02:43,437,31,37,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Uscita,,,,,,,,,,False,0,328
+25397,330,2,02:43,437,31,37,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25397,331,2,02:43,437,31,37,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Tiro libero sbagliato,,,,,,,,A,7,False,0,330
+25397,332,2,02:43,437,31,37,1768,Longobardi Scafati Basket,1,,,,,Rimbalzi difensivi di squadra,,,,,,,,,,False,0,330
+25397,333,2,02:40,440,31,37,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,2 punti sbagliato,1,Tiro in sospensione,,,13,23,0,A,2,False,0,
+25397,334,2,02:40,440,31,37,1768,Longobardi Scafati Basket,1,2770,7,Antonio,Iannuzzi,Rimbalzo offensivo,,,,,13,23,0,A,2,False,0,333
+25397,335,2,02:35,445,31,37,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,24,85,0,A,10,False,0,
+25397,336,2,02:35,445,31,37,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Rimbalzo offensivo,,,,,24,85,0,A,10,False,0,335
+25397,337,2,02:35,445,33,37,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,2 punti segnato,7,Appoggio a canestro,,,24,85,0,A,4,False,0,
+25397,338,2,02:25,455,33,39,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,2 punti segnato,7,Appoggio a canestro,,,95,51,1,A,3,True,0,
+25397,343,2,01:57,483,33,39,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Fallo commesso,100,personale,,,7,38,1,D,2,False,0,
+25397,344,2,01:57,483,33,39,1768,Longobardi Scafati Basket,1,2770,7,Antonio,Iannuzzi,Fallo Subito,,,,,7,38,1,D,2,False,0,343
+25397,345,2,01:51,489,33,39,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Ingresso,,,,,,,,,,False,0,
+25397,346,2,01:51,489,33,39,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Uscita,,,,,,,,,,False,0,345
+25397,347,2,01:51,489,33,39,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Uscita,,,,,,,,,,False,0,345
+25397,348,2,01:51,489,33,39,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Ingresso,,,,,,,,,,False,0,345
+25397,349,2,01:46,494,33,39,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,2 punti sbagliato,1,Tiro in sospensione,,,7,41,0,A,3,False,0,
+25397,350,2,01:46,494,33,39,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Rimbalzo difensivo,,,,,7,41,0,A,3,False,0,349
+25397,351,2,01:37,503,33,39,1768,Longobardi Scafati Basket,1,2770,7,Antonio,Iannuzzi,Fallo commesso,100,personale,,,87,72,0,D,2,False,0,
+25397,352,2,01:37,503,33,39,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Fallo Subito,,,,,87,72,0,D,2,False,0,351
+25397,353,2,01:37,503,33,40,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,354,2,01:37,503,33,41,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Tiro libero segnato,,,,,,,,A,7,False,0,353
+25397,355,2,01:37,503,33,41,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,
+25397,356,2,01:37,503,33,41,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Uscita,,,,,,,,,,False,0,355
+25397,357,2,01:29,511,33,41,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Fallo commesso,100,personale,,,16,95,1,D,10,False,0,
+25397,358,2,01:29,511,33,41,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Fallo Subito,,,,,16,95,1,D,10,False,0,357
+25397,359,2,01:27,513,34,41,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,360,2,01:27,513,35,41,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Tiro libero segnato,,,,,,,,A,7,False,0,359
+25397,362,2,01:13,527,35,43,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,2 punti segnato,7,Appoggio a canestro,,,93,63,1,A,2,True,0,
+25397,366,2,00:51,549,36,43,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Tiro libero segnato,,,,,,,0,A,7,False,0,
+25397,363,2,00:51,549,38,43,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,2 punti segnato,7,Appoggio a canestro,,,6,55,0,A,3,True,0,
+25397,364,2,00:51,549,38,43,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Fallo commesso,103,tiro,,,6,53,1,D,3,False,0,
+25397,365,2,00:51,549,38,43,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Fallo Subito,,,,,6,53,0,A,3,False,0,364
+25397,367,2,00:45,555,38,43,1768,Longobardi Scafati Basket,1,2770,7,Antonio,Iannuzzi,Fallo commesso,100,personale,,,96,40,0,D,3,False,0,
+25397,368,2,00:45,555,38,43,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Fallo Subito,,,,,96,40,0,D,3,False,0,367
+25397,375,2,00:15,585,38,43,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,2 punti sbagliato,4,Giro e Tiro,,,9,40,0,A,3,False,0,
+25397,376,2,00:15,585,38,43,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,9,40,0,A,3,False,0,375
+25397,369,2,00:12,588,38,44,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,370,2,00:12,588,38,45,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Tiro libero segnato,,,,,,,,A,7,False,0,369
+25397,378,2,00:07,593,38,45,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Uscita,,,,,,,,,,False,0,
+25397,379,2,00:07,593,38,45,1763,Dolomiti Energia Trentino,0,7119,11,Federico,Cattapan,Ingresso,,,,,,,,,,False,0,378
+25397,380,2,00:07,593,38,45,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Uscita,,,,,,,,,,False,0,378
+25397,381,2,00:07,593,38,45,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Ingresso,,,,,,,,,,False,0,378
+25397,678,2,00:07,593,38,45,1763,Dolomiti Energia Trentino,0,,,,,Rimbalzi offensivi di squadra,,,,,,,0,,,False,0,0
+25397,377,2,00:07,593,38,45,1763,Dolomiti Energia Trentino,0,,,,,Time Out,,,,,,,1,,,False,0,
+25397,675,2,00:07,593,38,45,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,2 punti sbagliato,,,,,,,0,,,False,0,0
+25397,676,2,00:07,593,38,45,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Stoppata subita,,,,,,,0,,,False,0,0
+25397,677,2,00:07,593,38,45,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Stoppata,,,,,,,0,,,False,0,0
+25397,382,2,00:03,597,38,45,1768,Longobardi Scafati Basket,1,2770,7,Antonio,Iannuzzi,Uscita,,,,,,,,,,False,0,
+25397,383,2,00:03,597,38,45,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Ingresso,,,,,,,,,,False,0,382
+25397,679,2,00:01,599,38,45,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Palla persa,,,,,,,0,,,False,0,0
+25397,680,2,00:01,599,38,45,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Palla recuperata,,,,,,,0,,,False,0,0
+25397,384,2,00:00,600,38,45,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25397,388,3,10:00,0,38,45,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Uscita,,,,,,,,,,False,0,
+25397,389,3,10:00,0,38,45,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Ingresso,,,,,,,,,,False,0,388
+25397,390,3,10:00,0,38,45,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Uscita,,,,,,,,,,False,0,388
+25397,391,3,10:00,0,38,45,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Ingresso,,,,,,,,,,False,0,388
+25397,392,3,10:00,0,38,45,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Ingresso,,,,,,,,,,False,0,388
+25397,393,3,10:00,0,38,45,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Uscita,,,,,,,,,,False,0,388
+25397,394,3,10:00,0,38,45,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Ingresso,,,,,,,,,,False,0,388
+25397,395,3,10:00,0,38,45,1763,Dolomiti Energia Trentino,0,7119,11,Federico,Cattapan,Uscita,,,,,,,,,,False,0,388
+25397,396,3,10:00,0,38,45,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Uscita,,,,,,,,,,False,0,388
+25397,397,3,10:00,0,38,45,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Ingresso,,,,,,,,,,False,0,388
+25397,398,3,10:00,0,38,45,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25397,399,3,09:38,22,38,45,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Palla persa,50,Passaggio sbagliato,,,9,85,0,A,4,False,0,
+25397,400,3,09:38,22,38,45,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Palla recuperata,,,,,9,85,0,A,4,False,0,399
+25397,401,3,09:31,29,38,45,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Fallo commesso,103,tiro,,,95,63,0,D,2,False,0,
+25397,402,3,09:31,29,38,45,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo Subito,,,,,95,63,0,D,2,False,0,401
+25397,403,3,09:31,29,39,45,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,404,3,09:31,29,40,45,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero segnato,,,,,,,,A,7,False,0,403
+25397,681,3,09:31,29,40,45,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Assist,,,,,,,0,,,False,0,0
+25397,405,3,09:15,45,40,45,1763,Dolomiti Energia Trentino,0,,,,,Palle perse di squadra,602,24 Secondi,,,3,72,0,A,4,False,0,
+25397,682,3,09:15,45,40,45,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,3 punti sbagliato,,,,,,,0,,,False,0,0
+25397,406,3,09:03,57,40,45,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,2 punti sbagliato,4,Giro e Tiro,,,95,55,1,A,3,False,0,
+25397,407,3,09:03,57,40,45,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Rimbalzo difensivo,,,,,95,55,1,A,3,False,0,406
+25397,408,3,08:55,65,40,48,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,3 punti segnato,6,Arresto e tiro,,,19,92,0,A,10,False,0,
+25397,409,3,08:55,65,40,48,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Fallo commesso,103,tiro,,,19,92,1,D,10,False,0,
+25397,410,3,08:55,65,40,48,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Fallo Subito,,,,,19,92,1,D,10,False,0,409
+25397,411,3,08:55,65,40,49,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,683,3,08:55,65,40,49,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Assist,,,,,,,0,,,False,0,0
+25397,412,3,08:37,83,42,49,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,2 punti segnato,3,Tiro in fadeaway,,,83,53,1,A,6,True,0,
+25397,413,3,08:37,83,42,49,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Assist,,,,,83,53,1,A,6,False,0,412
+25397,414,3,08:13,107,42,49,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,3 punti sbagliato,1,Tiro in sospensione,,,5,96,0,A,5,False,0,
+25397,415,3,08:13,107,42,49,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Rimbalzo difensivo,,,,,5,96,0,A,5,False,0,414
+25397,416,3,07:57,123,42,49,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti sbagliato,7,Appoggio a canestro,1004,tip-in appoggio canestro miss,96,52,1,A,3,False,0,
+25397,417,3,07:57,123,42,49,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo offensivo,,,,,96,52,1,A,3,False,0,416
+25397,418,3,07:57,123,42,49,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,2 punti sbagliato,7,Appoggio a canestro,,,96,52,1,A,3,False,0,
+25397,419,3,07:57,123,42,49,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,96,52,0,D,3,False,0,418
+25397,421,3,07:40,140,42,49,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Fallo commesso,103,tiro,,,5,55,1,D,3,False,0,
+25397,422,3,07:40,140,42,49,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Fallo Subito,,,,,5,55,1,D,3,False,0,421
+25397,423,3,07:40,140,42,50,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,424,3,07:40,140,42,51,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Tiro libero segnato,,,,,,,,A,7,False,0,423
+25397,425,3,07:26,154,42,51,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,3 punti sbagliato,1,Tiro in sospensione,,,69,52,1,A,9,False,0,
+25397,426,3,07:26,154,42,51,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Rimbalzo difensivo,,,,,69,52,1,A,9,False,0,425
+25397,429,3,07:07,173,42,52,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Tiro libero segnato,,,,,,,0,A,7,False,0,
+25397,430,3,07:07,173,42,53,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Tiro libero segnato,,,,,,,0,A,7,False,0,429
+25397,427,3,07:07,173,42,53,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Fallo commesso,103,tiro,,,27,49,1,D,7,False,0,
+25397,428,3,07:07,173,42,53,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Fallo Subito,,,,,27,49,0,A,7,False,0,427
+25397,431,3,07:01,179,42,53,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,3 punti sbagliato,1,Tiro in sospensione,,,93,39,1,A,9,False,0,
+25397,432,3,07:01,179,42,53,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Rimbalzo difensivo,,,,,93,39,1,A,3,False,0,431
+25397,433,3,06:54,186,42,56,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,3 punti segnato,1,Tiro in sospensione,,,32,50,0,A,9,False,0,
+25397,434,3,06:54,186,42,56,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Assist,,,,,32,50,0,A,9,False,0,433
+25397,435,3,06:48,192,42,56,1768,Longobardi Scafati Basket,1,,,,,Time Out,,,,,,,1,,,False,0,
+25397,436,3,06:48,192,42,56,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Uscita,,,,,,,,,,False,0,
+25397,437,3,06:48,192,42,56,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,436
+25397,438,3,06:48,192,42,56,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Ingresso,,,,,,,,,,False,0,436
+25397,439,3,06:48,192,42,56,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Uscita,,,,,,,,,,False,0,436
+25397,440,3,06:35,205,44,56,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,2 punti segnato,7,Appoggio a canestro,,,96,62,1,A,2,True,0,
+25397,441,3,06:35,205,44,56,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Assist,,,,,96,62,1,A,2,False,0,440
+25397,442,3,06:25,215,44,56,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Palla persa,50,Passaggio sbagliato,,,10,83,0,A,4,False,0,
+25397,443,3,06:25,215,44,56,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Palla recuperata,,,,,10,83,0,A,4,False,0,442
+25397,444,3,06:17,223,44,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti sbagliato,1,Tiro in sospensione,,,94,47,1,A,3,False,0,
+25397,445,3,06:17,223,44,56,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,94,47,1,A,3,False,0,444
+25397,446,3,06:00,240,44,56,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,3 punti sbagliato,1,Tiro in sospensione,,,27,76,0,A,10,False,0,
+25397,447,3,06:00,240,44,56,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,27,76,0,A,10,False,0,446
+25397,684,3,05:50,250,44,56,1768,Longobardi Scafati Basket,1,,,,,Rimbalzi offensivi di squadra,,,,,,,0,,,False,0,0
+25397,448,3,05:50,250,44,56,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,74,81,1,A,8,False,0,
+25397,449,3,05:41,259,44,56,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Fallo commesso,100,personale,,,94,79,0,D,2,False,0,
+25397,450,3,05:41,259,44,56,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Fallo Subito,,,,,94,79,0,D,2,False,0,449
+25397,451,3,05:27,273,46,56,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,2 punti segnato,9,Schiacciata,,,94,59,1,A,3,True,1,
+25397,452,3,05:27,273,46,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Assist,,,,,94,59,1,A,3,False,0,451
+25397,453,3,05:20,280,46,56,1763,Dolomiti Energia Trentino,0,,,,,Time Out,,,,,,,0,,,False,0,
+25397,454,3,05:20,280,46,56,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Uscita,,,,,,,,,,False,0,
+25397,455,3,05:20,280,46,56,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Ingresso,,,,,,,,,,False,0,454
+25397,456,3,04:59,301,46,56,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,3 punti sbagliato,1,Tiro in sospensione,,,30,38,0,A,9,False,0,
+25397,457,3,04:59,301,46,56,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,30,38,0,A,9,False,0,456
+25397,458,3,04:52,308,48,56,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,2 punti segnato,7,Appoggio a canestro,,,97,61,1,A,3,True,0,
+25397,459,3,04:52,308,48,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Assist,,,,,97,61,1,A,3,False,0,458
+25397,460,3,04:33,327,48,56,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,2 punti sbagliato,7,Appoggio a canestro,,,3,56,0,A,3,False,0,
+25397,461,3,04:33,327,48,56,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,3,56,0,A,3,False,0,460
+25397,462,3,04:11,349,51,56,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,3 punti segnato,6,Arresto e tiro,,,74,21,1,A,10,False,0,
+25397,463,3,04:11,349,51,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Assist,,,,,74,21,1,A,10,False,0,462
+25397,464,3,03:58,362,51,56,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,3 punti sbagliato,1,Tiro in sospensione,,,31,57,0,A,9,False,0,
+25397,465,3,03:58,362,51,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Rimbalzo difensivo,,,,,31,57,0,A,9,False,0,464
+25397,466,3,03:49,371,53,56,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,2 punti segnato,7,Appoggio a canestro,,,97,47,1,A,3,True,0,
+25397,467,3,03:49,371,53,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Assist,,,,,97,47,1,A,3,False,0,466
+25397,468,3,03:49,371,53,56,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Fallo commesso,103,tiro,,,97,47,0,D,3,False,0,
+25397,469,3,03:49,371,53,56,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo Subito,,,,,97,47,0,D,3,False,0,468
+25397,470,3,03:49,371,53,56,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Ingresso,,,,,,,,,,False,0,
+25397,471,3,03:49,371,53,56,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Uscita,,,,,,,,,,False,0,470
+25397,472,3,03:49,371,53,56,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Uscita,,,,,,,,,,False,0,
+25397,473,3,03:49,371,53,56,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Ingresso,,,,,,,,,,False,0,472
+25397,474,3,03:49,371,53,56,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25397,475,3,03:49,371,53,56,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo offensivo,,,,,,,,,,False,0,474
+25397,476,3,03:49,371,53,56,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Fallo commesso,100,personale,,,87,79,0,D,2,False,0,
+25397,477,3,03:49,371,53,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Fallo Subito,,,,,87,79,0,D,2,False,0,476
+25397,478,3,03:37,383,53,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Fallo commesso,106,offensivo,,,83,61,1,A,6,False,0,
+25397,479,3,03:37,383,53,56,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Palla persa,,,,,83,61,1,A,6,False,0,478
+25397,480,3,03:37,383,53,56,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Fallo Subito,,,,,83,61,1,A,6,False,0,478
+25397,481,3,03:25,395,53,58,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti segnato,3,Tiro in fadeaway,,,22,50,0,A,7,False,0,
+25397,482,3,03:25,395,53,58,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Assist,,,,,22,50,0,A,7,False,0,481
+25397,483,3,03:01,419,53,58,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,3 punti sbagliato,1,Tiro in sospensione,,,68,46,1,A,9,False,0,
+25397,484,3,03:01,419,53,58,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Rimbalzo difensivo,,,,,68,46,1,A,9,False,0,483
+25397,485,3,02:51,429,53,58,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,2 punti sbagliato,11,Gancio,,,6,47,0,A,3,False,0,
+25397,486,3,02:51,429,53,58,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Rimbalzo difensivo,,,,,6,47,0,A,3,False,0,485
+25397,487,3,02:46,434,55,58,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti segnato,1,Tiro in sospensione,,,94,57,1,A,3,True,0,
+25397,489,3,02:46,434,55,58,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Fallo commesso,103,tiro,,,94,57,0,D,3,False,0,
+25397,490,3,02:46,434,55,58,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Fallo Subito,,,,,94,57,0,D,3,False,0,489
+25397,491,3,02:46,434,55,58,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Ingresso,,,,,,,,,,False,0,
+25397,492,3,02:46,434,55,58,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Uscita,,,,,,,,,,False,0,491
+25397,493,3,02:46,434,56,58,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,494,3,02:32,448,56,58,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti sbagliato,1,Tiro in sospensione,,,12,59,0,A,6,False,0,
+25397,495,3,02:32,448,56,58,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,12,59,0,A,6,False,0,494
+25397,496,3,02:18,462,58,58,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,2 punti segnato,9,Schiacciata,,,91,52,1,A,3,True,1,
+25397,497,3,02:09,471,58,60,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti segnato,7,Appoggio a canestro,,,6,56,0,A,3,True,0,
+25397,687,3,02:00,480,58,60,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Stoppata,,,,,,,0,,,False,0,0
+25397,686,3,02:00,480,58,60,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Stoppata subita,,,,,,,0,,,False,0,0
+25397,685,3,02:00,480,58,60,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,3 punti sbagliato,,,,,,,0,,,False,0,0
+25397,688,3,02:00,480,58,60,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo offensivo,,,,,,,0,,,False,0,0
+25397,498,3,01:52,488,58,60,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,2 punti sbagliato,9,Schiacciata,1005,stoppata,96,44,1,A,3,False,0,
+25397,499,3,01:52,488,58,60,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Stoppata,,,,,96,44,1,A,3,False,0,498
+25397,500,3,01:52,488,58,60,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Stoppata subita,,,,,96,44,1,A,3,False,0,498
+25397,501,3,01:52,488,58,60,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Rimbalzo difensivo,,,,,96,44,1,A,3,False,0,498
+25397,502,3,01:45,495,58,62,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,2 punti segnato,7,Appoggio a canestro,,,4,49,0,A,3,True,0,
+25397,503,3,01:45,495,58,62,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Assist,,,,,4,49,0,A,3,False,0,502
+25397,504,3,01:29,511,61,62,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,3 punti segnato,6,Arresto e tiro,,,77,14,1,A,10,False,0,
+25397,505,3,01:08,532,61,62,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti sbagliato,1,Tiro in sospensione,,,20,13,0,A,2,False,0,
+25397,506,3,01:08,532,61,62,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,20,13,0,A,2,False,0,505
+25397,507,3,00:47,553,61,62,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo commesso,106,offensivo,,,93,62,1,A,2,False,0,
+25397,508,3,00:47,553,61,62,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Palla persa,,,,,93,62,1,A,2,False,0,507
+25397,509,3,00:47,553,61,62,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Fallo Subito,,,,,93,62,1,A,2,False,0,507
+25397,510,3,00:47,553,61,62,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Ingresso,,,,,,,,,,False,0,
+25397,511,3,00:47,553,61,62,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Uscita,,,,,,,,,,False,0,510
+25397,512,3,00:32,568,61,62,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,3 punti sbagliato,1,Tiro in sospensione,1004,tip-in appoggio canestro miss,29,30,0,A,9,False,0,
+25397,513,3,00:32,568,61,62,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Rimbalzo offensivo,,,,,29,30,0,A,9,False,0,512
+25397,689,3,00:32,568,61,62,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,,,0,,,False,0,0
+25397,515,3,00:32,568,61,62,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,2 punti sbagliato,,,1007,nessun rimbalzo,29,30,0,A,7,False,0,
+25397,523,3,00:18,582,61,62,1768,Longobardi Scafati Basket,1,2770,7,Antonio,Iannuzzi,Ingresso,,,,,,,,,,False,0,
+25397,524,3,00:18,582,61,62,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Uscita,,,,,,,,,,False,0,523
+25397,525,3,00:18,582,61,62,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Uscita,,,,,,,,,,False,0,523
+25397,526,3,00:18,582,61,62,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Ingresso,,,,,,,,,,False,0,523
+25397,527,3,00:15,585,61,64,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti segnato,11,Gancio,,,4,41,0,A,3,True,0,
+25397,528,3,00:15,585,61,64,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Assist,,,,,4,41,0,A,3,False,0,527
+25397,521,3,00:10,590,61,64,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Tiro libero sbagliato,,,,,,,1,A,7,False,0,
+25397,522,3,00:10,590,62,64,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Tiro libero segnato,,,,,,,1,A,7,False,0,521
+25397,518,3,00:10,590,62,64,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Fallo commesso,100,personale,,,6,51,0,A,3,False,0,
+25397,519,3,00:10,590,62,64,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Fallo Subito,,,,,6,51,1,D,3,False,0,518
+25397,529,3,00:00,600,62,64,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25397,530,4,10:00,0,62,64,1768,Longobardi Scafati Basket,1,2770,7,Antonio,Iannuzzi,Uscita,,,,,,,,,,False,0,
+25397,531,4,10:00,0,62,64,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Ingresso,,,,,,,,,,False,0,530
+25397,532,4,10:00,0,62,64,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Ingresso,,,,,,,,,,False,0,530
+25397,533,4,10:00,0,62,64,1763,Dolomiti Energia Trentino,0,2148,10,Toto,Forray,Uscita,,,,,,,,,,False,0,530
+25397,534,4,10:00,0,62,64,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25397,535,4,09:38,22,62,64,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,2 punti sbagliato,5,Tiro in Step Back,,,94,86,1,A,2,False,0,
+25397,536,4,09:38,22,62,64,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo offensivo,,,,,94,86,1,A,2,False,0,535
+25397,537,4,09:32,28,62,64,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,2 punti sbagliato,5,Tiro in Step Back,,,84,71,1,A,2,False,0,
+25397,538,4,09:32,28,62,64,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,84,71,1,A,2,False,0,537
+25397,539,4,09:21,39,62,64,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,2 punti sbagliato,1,Tiro in sospensione,,,13,45,0,A,6,False,0,
+25397,540,4,09:21,39,62,64,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,13,45,0,A,6,False,0,539
+25397,541,4,09:07,53,64,64,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,2 punti segnato,7,Appoggio a canestro,,,95,52,1,A,3,True,0,
+25397,542,4,08:51,69,64,64,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Ingresso,,,,,,,,,,False,0,
+25397,543,4,08:51,69,64,64,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Uscita,,,,,,,,,,False,0,542
+25397,544,4,08:39,81,64,64,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti sbagliato,5,Tiro in Step Back,,,13,84,0,A,4,False,0,
+25397,545,4,08:39,81,64,64,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Rimbalzo difensivo,,,,,13,84,0,A,4,False,0,544
+25397,547,4,08:18,102,67,64,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,3 punti segnato,5,Tiro in Step Back,,,79,91,1,A,8,False,0,
+25397,548,4,08:03,117,67,64,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,3 punti sbagliato,1,Tiro in sospensione,,,24,85,0,A,10,False,0,
+25397,549,4,08:03,117,67,64,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,24,85,0,A,10,False,0,548
+25397,550,4,07:48,132,67,64,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Palla persa,50,Passaggio sbagliato,,,97,63,1,A,2,False,0,
+25397,551,4,07:48,132,67,64,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Palla recuperata,,,,,97,63,1,A,2,False,0,550
+25397,552,4,07:37,143,67,66,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,2 punti segnato,7,Appoggio a canestro,,,4,57,0,A,3,True,0,
+25397,553,4,07:37,143,67,66,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Assist,,,,,4,57,0,A,3,False,0,552
+25397,554,4,07:18,162,67,66,1763,Dolomiti Energia Trentino,0,439,5,Alessandro,Bertini,Uscita,,,,,,,,,,False,0,
+25397,555,4,07:18,162,67,66,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Ingresso,,,,,,,,,,False,0,554
+25397,556,4,07:18,162,67,66,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Uscita,,,,,,,,,,False,0,554
+25397,557,4,07:18,162,67,66,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Uscita,,,,,,,,,,False,0,554
+25397,558,4,07:18,162,67,66,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Ingresso,,,,,,,,,,False,0,554
+25397,559,4,07:18,162,67,66,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Ingresso,,,,,,,,,,False,0,554
+25397,560,4,07:12,168,70,66,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,3 punti segnato,2,Tiro in corsa,,,73,19,1,A,10,False,0,
+25397,562,4,06:47,193,70,66,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,2 punti sbagliato,1,Tiro in sospensione,,,6,50,0,A,3,False,0,
+25397,563,4,06:47,193,70,66,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo offensivo,,,,,6,50,0,A,3,False,0,562
+25397,690,4,06:39,201,70,69,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Assist,,,,,,,0,,,False,0,0
+25397,564,4,06:39,201,70,69,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,3 punti segnato,6,Arresto e tiro,,,30,39,0,A,9,False,0,
+25397,565,4,06:23,217,73,69,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,3 punti segnato,6,Arresto e tiro,,,93,97,1,A,1,False,0,
+25397,566,4,06:23,217,73,69,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Assist,,,,,93,97,1,A,1,False,0,565
+25397,567,4,06:11,229,73,69,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,2 punti sbagliato,1,Tiro in sospensione,,,4,47,0,A,3,False,0,
+25397,568,4,06:11,229,73,69,1763,Dolomiti Energia Trentino,0,,,,,Rimbalzi offensivi di squadra,,,,,4,47,0,A,3,False,0,567
+25397,569,4,05:33,267,73,69,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,,,27,74,0,A,9,False,0,
+25397,570,4,05:33,267,73,69,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo offensivo,,,,,27,74,0,A,9,False,0,569
+25397,571,4,05:27,273,73,69,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,2 punti sbagliato,1,Tiro in sospensione,,,17,66,0,A,4,False,0,
+25397,572,4,05:27,273,73,69,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Rimbalzo difensivo,,,,,17,66,0,A,4,False,0,571
+25397,573,4,05:16,284,73,69,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Fallo commesso,100,personale,,,96,65,0,D,2,False,0,
+25397,574,4,05:16,284,73,69,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Fallo Subito,,,,,96,65,1,A,2,False,0,573
+25397,575,4,05:16,284,73,69,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Ingresso,,,,,,,,,,False,0,
+25397,576,4,05:16,284,73,69,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Uscita,,,,,,,,,,False,0,575
+25397,577,4,05:16,284,73,69,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Ingresso,,,,,,,,,,False,0,575
+25397,578,4,05:16,284,73,69,1763,Dolomiti Energia Trentino,0,9170,30,Josè Alfred,Medina Bouza,Uscita,,,,,,,,,,False,0,575
+25397,579,4,05:16,284,73,69,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,3 punti sbagliato,1,Tiro in sospensione,,,87,97,1,A,8,False,0,
+25397,580,4,05:16,284,73,69,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,87,97,1,A,8,False,0,579
+25397,581,4,05:01,299,73,71,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,2 punti segnato,11,Gancio,,,10,58,0,A,6,True,0,
+25397,583,4,04:50,310,73,71,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,2 punti sbagliato,7,Appoggio a canestro,,,96,59,1,A,3,False,0,
+25397,584,4,04:50,310,73,71,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,96,59,1,A,3,False,0,583
+25397,585,4,04:46,314,73,71,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Fallo commesso,100,personale,,,6,86,1,D,4,False,0,
+25397,586,4,04:46,314,73,71,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Fallo Subito,,,,,6,86,1,D,4,False,0,585
+25397,587,4,04:46,314,73,71,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Uscita,,,,,,,,,,False,0,
+25397,588,4,04:46,314,73,71,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Ingresso,,,,,,,,,,False,0,587
+25397,589,4,04:40,320,73,71,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Palla persa,50,Passaggio sbagliato,,,3,78,0,A,4,False,0,
+25397,590,4,04:40,320,73,71,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Palla recuperata,,,,,3,78,0,A,4,False,0,589
+25397,591,4,04:20,340,76,71,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,3 punti segnato,1,Tiro in sospensione,,,68,45,1,A,9,False,0,
+25397,592,4,04:20,340,76,71,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Assist,,,,,68,45,1,A,9,False,0,591
+25397,593,4,04:11,349,76,74,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,3 punti segnato,2,Tiro in corsa,,,29,23,0,A,8,False,0,
+25397,594,4,04:11,349,76,74,1768,Longobardi Scafati Basket,1,,,,,Time Out,,,,,,,1,,,False,0,
+25397,595,4,04:09,351,76,74,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Uscita,,,,,,,,,,False,0,
+25397,596,4,04:09,351,76,74,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Ingresso,,,,,,,,,,False,0,595
+25397,597,4,04:09,351,76,74,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Uscita,,,,,,,,,,False,0,595
+25397,598,4,04:09,351,76,74,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Ingresso,,,,,,,,,,False,0,595
+25397,599,4,04:09,351,76,74,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Fallo commesso,100,personale,,,94,73,0,D,2,False,0,
+25397,691,4,04:09,351,76,74,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti sbagliato,,,,,,,0,,,False,0,0
+25397,692,4,04:09,351,76,74,1768,Longobardi Scafati Basket,1,,,,,Rimbalzi offensivi di squadra,,,,,,,0,,,False,0,0
+25397,600,4,04:09,351,76,74,1768,Longobardi Scafati Basket,1,3200,4,Alessandro,Lever,Fallo Subito,,,,,94,73,0,D,2,False,0,599
+25397,601,4,03:57,363,76,74,1768,Longobardi Scafati Basket,1,,,,,Palle perse di squadra,602,24 Secondi,,,98,38,1,A,3,False,0,
+25397,602,4,03:36,384,76,74,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,3 punti sbagliato,1,Tiro in sospensione,,,30,62,0,A,9,False,0,
+25397,603,4,03:36,384,76,74,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,30,62,0,A,9,False,0,602
+25397,604,4,03:18,402,78,74,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,2 punti segnato,5,Tiro in Step Back,,,87,58,1,A,6,True,0,
+25397,605,4,03:08,412,78,74,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,2 punti sbagliato,1,Tiro in sospensione,,,12,37,0,A,2,False,0,
+25397,606,4,03:08,412,78,74,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Rimbalzo difensivo,,,,,12,37,0,A,2,False,0,605
+25397,607,4,02:49,431,78,74,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Fallo commesso,100,personale,,,93,66,0,D,2,False,0,
+25397,608,4,02:49,431,78,74,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Fallo Subito,,,,,93,66,0,D,2,False,0,607
+25397,609,4,02:49,431,78,74,1763,Dolomiti Energia Trentino,0,7449,21,Selom,Mawugbe,Uscita,,,,,,,,,,False,0,
+25397,610,4,02:49,431,78,74,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Ingresso,,,,,,,,,,False,0,609
+25397,611,4,02:33,447,80,74,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,2 punti segnato,9,Schiacciata,,,96,47,1,A,3,True,1,
+25397,612,4,02:33,447,80,74,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Assist,,,,,96,47,1,A,3,False,0,611
+25397,613,4,02:33,447,80,74,1763,Dolomiti Energia Trentino,0,,,,,Time Out,,,,,,,0,,,False,0,
+25397,614,4,02:33,447,80,74,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,16,96,0,A,10,False,0,
+25397,693,4,02:33,447,80,74,1763,Dolomiti Energia Trentino,0,,,,,Rimbalzi offensivi di squadra,,,,,,,0,,,False,0,0
+25397,615,4,02:33,447,80,74,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Uscita,,,,,,,,,,False,0,
+25397,616,4,02:33,447,80,74,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,615
+25397,694,4,02:18,462,80,74,1763,Dolomiti Energia Trentino,0,,,,,Rimbalzi offensivi di squadra,,,,,,,0,,,False,0,0
+25397,617,4,02:18,462,80,74,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,2 punti sbagliato,4,Giro e Tiro,1007,nessun rimbalzo,6,37,0,A,2,False,0,
+25397,618,4,02:10,470,80,74,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo commesso,100,personale,,,8,43,1,D,3,False,0,
+25397,619,4,02:10,470,80,74,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Fallo Subito,,,,,8,43,1,D,3,False,0,618
+25397,620,4,01:59,481,80,74,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,3 punti sbagliato,6,Arresto e tiro,,,3,4,0,A,1,False,0,
+25397,621,4,01:59,481,80,74,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Rimbalzo difensivo,,,,,3,4,0,A,1,False,0,620
+25397,622,4,01:43,497,83,74,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,3 punti segnato,1,Tiro in sospensione,,,80,10,1,A,10,False,0,
+25397,623,4,01:43,497,83,74,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Assist,,,,,80,10,1,A,10,False,0,622
+25397,624,4,01:29,511,83,74,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,2 punti sbagliato,1,Tiro in sospensione,,,12,53,0,A,6,False,0,
+25397,625,4,01:29,511,83,74,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Rimbalzo difensivo,,,,,12,53,0,A,6,False,0,624
+25397,626,4,01:12,528,83,74,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,3 punti sbagliato,1,Tiro in sospensione,,,74,83,1,A,8,False,0,
+25397,627,4,01:12,528,83,74,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,74,83,1,A,8,False,0,626
+25397,628,4,01:03,537,83,74,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,3 punti sbagliato,6,Arresto e tiro,,,21,14,0,A,9,False,0,
+25397,629,4,01:03,537,83,74,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Rimbalzo difensivo,,,,,21,14,0,A,7,False,0,628
+25397,632,4,00:50,550,83,74,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Tiro libero sbagliato,,,,,,,1,A,7,False,0,
+25397,633,4,00:50,550,83,74,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Tiro libero sbagliato,,,,,,,1,A,7,False,0,632
+25397,630,4,00:50,550,83,74,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Fallo commesso,103,tiro,,,92,52,0,D,3,False,0,
+25397,695,4,00:50,550,83,74,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,,,0,,,False,0,0
+25397,631,4,00:50,550,83,74,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Fallo Subito,,,,,92,52,1,A,3,False,0,630
+25397,634,4,00:50,550,83,74,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Fallo commesso,103,tiro,,,5,62,1,D,3,False,0,
+25397,635,4,00:50,550,83,74,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Fallo Subito,,,,,5,62,1,D,3,False,0,634
+25397,636,4,00:50,550,83,75,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,637,4,00:50,550,83,76,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Tiro libero segnato,,,,,,,,A,7,False,0,636
+25397,638,4,00:45,555,83,76,1768,Longobardi Scafati Basket,1,9346,88,Brandon,Johnson,Palla persa,50,Passaggio sbagliato,,,89,30,1,A,4,False,0,
+25397,639,4,00:45,555,83,76,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Palla recuperata,,,,,89,30,1,A,4,False,0,638
+25397,640,4,00:37,563,83,79,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,3 punti segnato,2,Tiro in corsa,,,17,9,0,A,8,False,0,
+25397,641,4,00:37,563,83,79,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Assist,,,,,17,9,0,A,2,False,0,640
+25397,642,4,00:37,563,83,79,1768,Longobardi Scafati Basket,1,,,,,Time Out,,,,,,,1,,,False,0,
+25397,643,4,00:37,563,83,79,1768,Longobardi Scafati Basket,1,2293,12,Garrett,Nevels,Ingresso,,,,,,,,,,False,0,
+25397,644,4,00:37,563,83,79,1768,Longobardi Scafati Basket,1,9348,21,Ze'Rik,Onyema,Uscita,,,,,,,,,,False,0,643
+25397,645,4,00:31,569,83,79,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Fallo commesso,100,personale,,,64,15,0,D,10,False,0,
+25397,646,4,00:31,569,83,79,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Fallo Subito,,,,,64,15,0,D,10,False,0,645
+25397,647,4,00:31,569,84,79,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,648,4,00:31,569,85,79,1768,Longobardi Scafati Basket,1,9347,13,Mezie,Offurum,Tiro libero segnato,,,,,,,,A,7,False,0,647
+25397,649,4,00:31,569,85,79,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Ingresso,,,,,,,,,,False,0,
+25397,650,4,00:31,569,85,79,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Uscita,,,,,,,,,,False,0,649
+25397,651,4,00:26,574,85,79,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,3 punti sbagliato,1,Tiro in sospensione,,,20,92,0,A,10,False,0,
+25397,652,4,00:26,574,85,79,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Rimbalzo difensivo,,,,,20,92,0,A,10,False,0,651
+25397,653,4,00:17,583,85,79,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Fallo commesso,100,personale,,,68,7,0,D,10,False,0,
+25397,654,4,00:17,583,85,79,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Fallo Subito,,,,,68,7,0,D,10,False,0,653
+25397,655,4,00:17,583,86,79,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,656,4,00:17,583,86,79,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Tiro libero sbagliato,,,,,,,,A,7,False,0,655
+25397,657,4,00:17,583,86,79,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,Rimbalzo difensivo,,,,,,,,,,False,0,655
+25397,658,4,00:17,583,86,79,1763,Dolomiti Energia Trentino,0,9327,24,Isaiah,Bigelow,Uscita,,,,,,,,,,False,0,
+25397,659,4,00:17,583,86,79,1763,Dolomiti Energia Trentino,0,378,26,Jordan,Bayehe,Ingresso,,,,,,,,,,False,0,658
+25397,660,4,00:12,588,86,81,1763,Dolomiti Energia Trentino,0,9328,8,Quincy,Olivari,2 punti segnato,1,Tiro in sospensione,,,14,53,0,A,6,True,0,
+25397,661,4,00:07,593,86,81,1763,Dolomiti Energia Trentino,0,7279,7,Cheickh,Niang,Fallo commesso,121,tecnico categoria 1,,,4,79,0,A,4,False,0,
+25397,662,4,00:07,593,86,81,1768,Longobardi Scafati Basket,1,7030,8,Charlie Edward,Moore,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25397,663,4,00:06,594,86,81,1763,Dolomiti Energia Trentino,0,9330,0,Darius,Brown,Fallo commesso,100,personale,,,2,80,0,A,4,False,0,
+25397,664,4,00:06,594,86,81,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Fallo Subito,,,,,2,80,0,A,4,False,0,663
+25397,665,4,00:06,594,87,81,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Tiro libero segnato,,,,,,,,A,7,False,0,
+25397,666,4,00:06,594,87,81,1768,Longobardi Scafati Basket,1,3526,33,Bruno,Mascolo,Tiro libero sbagliato,,,,,,,,A,7,False,0,665
+25397,667,4,00:06,594,87,81,1763,Dolomiti Energia Trentino,0,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,,,,,,False,0,665
+25397,669,4,00:00,600,87,81,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25399,103,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25399,104,1,10:00,0,0,0,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Palla contesa,,,,,,,1,,,False,0,
+25399,105,1,09:43,17,0,0,1766,Openjobmetis Varese,1,,,,,Palle perse di squadra,600,5 Secondi,,,97,80,1,A,2,False,0,
+25399,106,1,09:27,33,0,2,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,7,Appoggio a canestro,,,7,51,0,A,3,True,0,
+25399,107,1,09:27,33,0,2,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,7,51,0,A,3,False,0,106
+25399,108,1,09:06,54,0,2,1766,Openjobmetis Varese,1,9337,3,David,Duke,3 punti sbagliato,1,Tiro in sospensione,,,68,67,1,A,9,False,0,
+25399,109,1,09:06,54,0,2,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,68,67,1,A,9,False,0,108
+25399,110,1,08:56,64,0,2,1761,BC Roma,0,5369,12,Arturs,Strautins,Palla persa,54,Fuori dal campo,,,15,89,0,A,4,False,0,
+25399,111,1,08:38,82,3,2,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti segnato,6,Arresto e tiro,,,75,13,1,A,10,False,0,
+25399,112,1,08:21,99,3,2,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,6,Arresto e tiro,,,31,71,0,A,9,False,0,
+25399,113,1,08:21,99,3,2,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Rimbalzo difensivo,,,,,31,71,0,A,9,False,0,112
+25399,114,1,08:07,113,3,2,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,3 punti sbagliato,1,Tiro in sospensione,,,87,4,1,A,10,False,0,
+25399,115,1,08:07,113,3,2,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Rimbalzo offensivo,,,,,87,4,1,A,10,False,0,114
+25399,116,1,08:02,118,3,2,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Palla persa,50,Passaggio sbagliato,,,91,42,1,A,3,False,0,
+25399,117,1,08:02,118,3,2,1761,BC Roma,0,9385,3,Paul,Watson,Palla recuperata,,,,,91,42,1,A,3,False,0,116
+25399,118,1,07:57,123,3,4,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,7,Appoggio a canestro,500,contropiede,7,47,0,A,3,True,0,
+25399,119,1,07:57,123,3,4,1761,BC Roma,0,9385,3,Paul,Watson,Assist,,,500,contropiede,7,47,0,A,3,False,0,118
+25399,120,1,07:40,140,3,4,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Palla persa,50,Passaggio sbagliato,,,92,43,1,A,3,False,0,
+25399,121,1,07:40,140,3,4,1761,BC Roma,0,9384,10,Erik,Stevenson,Palla recuperata,,,,,92,43,1,A,3,False,0,120
+25399,122,1,07:35,145,3,6,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti segnato,7,Appoggio a canestro,500,contropiede,7,53,0,A,3,True,0,
+25399,123,1,07:35,145,3,6,1761,BC Roma,0,9384,10,Erik,Stevenson,Assist,,,500,contropiede,7,53,0,A,3,False,0,122
+25399,124,1,07:20,160,3,6,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo commesso,103,tiro,,,91,2,0,D,5,False,0,
+25399,125,1,07:20,160,3,6,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Fallo Subito,,,,,91,2,0,D,5,False,0,124
+25399,126,1,07:20,160,4,6,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,127,1,07:20,160,5,6,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Tiro libero segnato,,,,,,,,A,7,False,0,126
+25399,128,1,07:20,160,6,6,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Tiro libero segnato,,,,,,,,A,7,False,0,126
+25399,129,1,07:20,160,6,6,1766,Openjobmetis Varese,1,9337,3,David,Duke,Assist,,,,,,,,,,False,0,126
+25399,130,1,06:57,183,6,8,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti segnato,7,Appoggio a canestro,,,7,42,0,A,3,True,0,
+25399,131,1,06:57,183,6,8,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,7,42,0,A,3,False,0,130
+25399,132,1,06:42,198,6,8,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Palla persa,50,Passaggio sbagliato,,,84,19,1,A,4,False,0,
+25399,133,1,06:42,198,6,8,1761,BC Roma,0,9384,10,Erik,Stevenson,Palla recuperata,,,,,84,19,1,A,4,False,0,132
+25399,134,1,06:37,203,6,10,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,9,Schiacciata,500,contropiede,4,47,0,A,3,True,1,
+25399,135,1,06:37,203,6,10,1761,BC Roma,0,9436,22,Kelly,Olynyk,Assist,,,500,contropiede,4,47,0,A,3,False,0,134
+25399,136,1,06:25,215,6,10,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo commesso,100,personale,,,68,35,0,D,9,False,0,
+25399,137,1,06:25,215,6,10,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Fallo Subito,,,,,68,35,0,D,9,False,0,136
+25399,138,1,06:15,225,9,10,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,3 punti segnato,1,Tiro in sospensione,,,67,49,1,A,9,False,0,
+25399,139,1,06:15,225,9,10,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Assist,,,,,67,49,1,A,9,False,0,138
+25399,140,1,06:00,240,9,12,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,2,Tiro in corsa,,,8,62,0,A,3,True,0,
+25399,141,1,05:41,259,12,12,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,3 punti segnato,1,Tiro in sospensione,,,88,97,1,A,8,False,0,
+25399,142,1,05:41,259,12,12,1766,Openjobmetis Varese,1,9337,3,David,Duke,Assist,,,,,88,97,1,A,8,False,0,141
+25399,143,1,05:28,272,12,12,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo commesso,100,personale,,,31,33,1,D,9,False,0,
+25399,144,1,05:28,272,12,12,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,31,33,1,D,9,False,0,143
+25399,145,1,05:28,272,12,12,1766,Openjobmetis Varese,1,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25399,146,1,05:28,272,12,12,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Uscita,,,,,,,,,,False,0,145
+25399,147,1,05:28,272,12,12,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,145
+25399,148,1,05:28,272,12,12,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,145
+25399,149,1,05:28,272,12,12,1766,Openjobmetis Varese,1,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,
+25399,150,1,05:28,272,12,12,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,149
+25399,151,1,05:20,280,12,14,1761,BC Roma,0,9385,3,Paul,Watson,2 punti segnato,9,Schiacciata,,,7,49,0,A,3,True,1,
+25399,152,1,05:19,281,12,14,1766,Openjobmetis Varese,1,,,,,Time Out,,,,,,,1,,,False,0,
+25399,153,1,05:09,291,12,14,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Palla persa,50,Passaggio sbagliato,,,90,15,1,A,4,False,0,
+25399,154,1,05:06,294,12,14,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Fallo commesso,100,personale,,,12,30,1,D,2,False,0,
+25399,155,1,05:06,294,12,14,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo Subito,,,,,12,30,1,D,2,False,0,154
+25399,156,1,05:06,294,12,14,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo commesso,100,personale,,,37,34,1,D,9,False,0,
+25399,157,1,05:06,294,12,14,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,37,34,1,D,9,False,0,156
+25399,158,1,05:06,294,12,14,1766,Openjobmetis Varese,1,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25399,159,1,05:06,294,12,14,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,158
+25399,160,1,05:06,294,12,14,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Ingresso,,,,,,,,,,False,0,158
+25399,161,1,05:06,294,12,14,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Uscita,,,,,,,,,,False,0,158
+25399,162,1,04:57,303,12,14,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,6,Arresto e tiro,,,32,66,0,A,9,False,0,
+25399,163,1,04:57,303,12,14,1766,Openjobmetis Varese,1,,,,,Rimbalzi difensivi di squadra,,,,,32,66,0,A,9,False,0,162
+25399,164,1,04:54,306,12,14,1761,BC Roma,0,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,
+25399,165,1,04:54,306,12,14,1761,BC Roma,0,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,164
+25399,166,1,04:40,320,12,14,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti sbagliato,6,Arresto e tiro,,,73,82,1,A,8,False,0,
+25399,167,1,04:40,320,12,14,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,73,82,1,A,8,False,0,166
+25399,168,1,04:26,334,12,14,1761,BC Roma,0,9385,3,Paul,Watson,3 punti sbagliato,1,Tiro in sospensione,,,25,86,0,A,10,False,0,
+25399,169,1,04:26,334,12,14,1766,Openjobmetis Varese,1,,,,,Rimbalzi difensivi di squadra,,,,,25,86,0,A,10,False,0,168
+25399,170,1,04:23,337,12,14,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo commesso,100,personale,,,11,43,0,A,6,False,0,
+25399,171,1,04:23,337,12,14,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Fallo Subito,,,,,11,43,0,A,6,False,0,170
+25399,172,1,04:23,337,12,14,1761,BC Roma,0,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,
+25399,173,1,04:23,337,12,14,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,172
+25399,174,1,04:12,348,15,14,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,3 punti segnato,6,Arresto e tiro,,,71,21,1,A,10,False,0,
+25399,175,1,04:00,360,15,17,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti segnato,1,Tiro in sospensione,,,18,94,0,A,10,False,0,
+25399,176,1,04:00,360,15,17,1761,BC Roma,0,6258,5,Corey,Davis,Assist,,,,,18,94,0,A,10,False,0,175
+25399,177,1,03:46,374,17,17,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,2 punti segnato,7,Appoggio a canestro,,,93,40,1,A,3,True,0,
+25399,178,1,03:46,374,17,17,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Assist,,,,,93,40,1,A,3,False,0,177
+25399,179,1,03:29,391,17,19,1761,BC Roma,0,9385,3,Paul,Watson,2 punti segnato,1,Tiro in sospensione,,,13,12,0,A,2,False,0,
+25399,180,1,03:29,391,17,19,1761,BC Roma,0,6258,5,Corey,Davis,Assist,,,,,13,12,0,A,2,False,0,179
+25399,181,1,03:20,400,17,19,1761,BC Roma,0,6258,5,Corey,Davis,Fallo commesso,103,tiro,,,73,76,0,D,8,False,0,
+25399,182,1,03:20,400,17,19,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Fallo Subito,,,,,73,76,0,D,8,False,0,181
+25399,183,1,03:20,400,17,19,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25399,184,1,03:20,400,17,19,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,183
+25399,185,1,03:20,400,17,19,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Ingresso,,,,,,,,,,False,0,183
+25399,186,1,03:20,400,17,19,1761,BC Roma,0,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,183
+25399,187,1,03:20,400,17,19,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25399,188,1,03:20,400,18,19,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Tiro libero segnato,,,,,,,,A,7,False,0,187
+25399,189,1,03:20,400,19,19,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Tiro libero segnato,,,,,,,,A,7,False,0,187
+25399,190,1,03:00,420,19,19,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Fallo commesso,100,personale,,,12,33,1,D,2,False,0,
+25399,191,1,03:00,420,19,19,1761,BC Roma,0,6258,5,Corey,Davis,Fallo Subito,,,,,12,33,0,A,2,False,0,190
+25399,192,1,02:50,430,19,19,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti sbagliato,7,Appoggio a canestro,,,10,54,0,A,6,False,0,
+25399,193,1,02:50,430,19,19,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Rimbalzo offensivo,,,,,10,54,0,A,6,False,0,192
+25399,194,1,02:50,430,19,19,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Fallo commesso,103,tiro,,,6,56,1,D,3,False,0,
+25399,195,1,02:50,430,19,19,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Fallo Subito,,,,,6,56,1,D,3,False,0,194
+25399,196,1,02:50,430,19,19,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Ingresso,,,,,,,,,,False,0,
+25399,197,1,02:50,430,19,19,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,196
+25399,198,1,02:50,430,19,19,1761,BC Roma,0,9381,9,Trentyn,Flowers,Ingresso,,,,,,,,,,False,0,196
+25399,199,1,02:50,430,19,19,1761,BC Roma,0,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,196
+25399,200,1,02:50,430,19,20,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,201,1,02:50,430,19,20,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Tiro libero sbagliato,,,,,,,,A,7,False,0,200
+25399,202,1,02:50,430,19,20,1766,Openjobmetis Varese,1,,,,,Rimbalzi difensivi di squadra,,,,,,,,,,False,0,200
+25399,203,1,02:39,441,19,20,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Fallo commesso,100,personale,,,84,12,0,D,4,False,0,
+25399,204,1,02:39,441,19,20,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Fallo Subito,,,,,84,12,0,D,4,False,0,203
+25399,205,1,02:39,441,20,20,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,206,1,02:39,441,21,20,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Tiro libero segnato,,,,,,,,A,7,False,0,205
+25399,207,1,02:29,451,21,20,1761,BC Roma,0,9385,3,Paul,Watson,3 punti sbagliato,1,Tiro in sospensione,,,24,9,0,A,8,False,0,
+25399,208,1,02:29,451,21,20,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Rimbalzo difensivo,,,,,24,9,0,A,8,False,0,207
+25399,209,1,02:20,460,24,20,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,3 punti segnato,1,Tiro in sospensione,,,80,94,1,A,8,False,0,
+25399,210,1,02:20,460,24,20,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Assist,,,,,80,94,1,A,8,False,0,209
+25399,211,1,02:07,473,24,20,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo commesso,100,personale,,,31,57,1,D,9,False,0,
+25399,212,1,02:07,473,24,20,1761,BC Roma,0,9381,9,Trentyn,Flowers,Fallo Subito,,,,,31,57,1,D,9,False,0,211
+25399,213,1,02:07,473,24,21,1761,BC Roma,0,9381,9,Trentyn,Flowers,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,214,1,02:07,473,24,22,1761,BC Roma,0,9381,9,Trentyn,Flowers,Tiro libero segnato,,,,,,,,A,7,False,0,213
+25399,215,1,01:48,492,24,22,1761,BC Roma,0,9385,3,Paul,Watson,Fallo commesso,100,personale,,,83,44,0,D,6,False,0,
+25399,216,1,01:48,492,24,22,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Fallo Subito,,,,,83,44,0,D,6,False,0,215
+25399,217,1,01:48,492,24,22,1761,BC Roma,0,9385,3,Paul,Watson,Uscita,,,,,,,,,,False,0,
+25399,218,1,01:48,492,24,22,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Ingresso,,,,,,,,,,False,0,217
+25399,219,1,01:48,492,25,22,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,220,1,01:48,492,26,22,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Tiro libero segnato,,,,,,,,A,7,False,0,219
+25399,221,1,01:39,501,26,24,1761,BC Roma,0,9379,7,Giovanni,Emejuru,2 punti segnato,9,Schiacciata,,,7,55,0,A,3,True,1,
+25399,222,1,01:39,501,26,24,1761,BC Roma,0,6258,5,Corey,Davis,Assist,,,,,7,55,0,A,3,False,0,221
+25399,223,1,01:14,526,26,24,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Palla persa,54,Fuori dal campo,,,84,9,1,A,4,False,0,
+25399,224,1,01:01,539,26,26,1761,BC Roma,0,9379,7,Giovanni,Emejuru,2 punti segnato,9,Schiacciata,,,6,53,0,A,3,True,1,
+25399,225,1,01:01,539,26,26,1761,BC Roma,0,6258,5,Corey,Davis,Assist,,,,,6,53,0,A,3,False,0,224
+25399,226,1,00:43,557,26,26,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,2 punti sbagliato,7,Appoggio a canestro,,,93,54,1,A,3,False,0,
+25399,227,1,00:43,557,26,26,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Rimbalzo offensivo,,,,,93,54,1,A,3,False,0,226
+25399,228,1,00:39,561,28,26,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,2 punti segnato,9,Schiacciata,,,92,51,1,A,3,True,1,
+25399,229,1,00:39,561,28,26,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Assist,,,,,92,51,1,A,3,False,0,228
+25399,230,1,00:30,570,28,26,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Fallo commesso,100,personale,,,32,42,1,D,9,False,0,
+25399,231,1,00:30,570,28,26,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo Subito,,,,,32,42,1,D,9,False,0,230
+25399,232,1,00:30,570,28,26,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25399,233,1,00:30,570,28,26,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Uscita,,,,,,,,,,False,0,232
+25399,234,1,00:30,570,28,26,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Ingresso,,,,,,,,,,False,0,232
+25399,235,1,00:30,570,28,26,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,232
+25399,236,1,00:30,570,28,27,1761,BC Roma,0,9380,11,Gerald,Ayayi,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,237,1,00:30,570,28,28,1761,BC Roma,0,9380,11,Gerald,Ayayi,Tiro libero segnato,,,,,,,,A,7,False,0,236
+25399,238,1,00:30,570,28,28,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Ingresso,,,,,,,,,,False,0,
+25399,239,1,00:30,570,28,28,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Uscita,,,,,,,,,,False,0,238
+25399,240,1,00:10,590,31,28,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti segnato,6,Arresto e tiro,,,76,88,1,A,8,False,0,
+25399,241,1,00:10,590,31,28,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo commesso,103,tiro,,,76,88,0,D,8,False,0,
+25399,242,1,00:10,590,31,28,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo Subito,,,,,76,88,0,D,8,False,0,241
+25399,243,1,00:10,590,31,28,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25399,244,1,00:10,590,31,28,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,243
+25399,245,1,00:10,590,31,28,1761,BC Roma,0,9385,3,Paul,Watson,Ingresso,,,,,,,,,,False,0,243
+25399,246,1,00:10,590,31,28,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Uscita,,,,,,,,,,False,0,243
+25399,247,1,00:10,590,31,28,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,243
+25399,248,1,00:10,590,31,28,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,243
+25399,249,1,00:10,590,32,28,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,250,1,00:10,590,32,28,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Ingresso,,,,,,,,,,False,0,
+25399,251,1,00:10,590,32,28,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,250
+25399,252,1,00:00,600,32,28,1761,BC Roma,0,6258,5,Corey,Davis,2 punti sbagliato,5,Tiro in Step Back,1007,nessun rimbalzo,29,49,0,A,7,False,0,
+25399,253,1,00:00,600,32,28,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25399,254,2,10:00,0,32,28,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25399,255,2,10:00,0,32,28,1766,Openjobmetis Varese,1,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,254
+25399,256,2,10:00,0,32,28,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Uscita,,,,,,,,,,False,0,254
+25399,257,2,10:00,0,32,28,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,254
+25399,258,2,10:00,0,32,28,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,254
+25399,259,2,10:00,0,32,28,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,254
+25399,260,2,10:00,0,32,28,1761,BC Roma,0,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,254
+25399,261,2,10:00,0,32,28,1761,BC Roma,0,9385,3,Paul,Watson,Uscita,,,,,,,,,,False,0,254
+25399,262,2,10:00,0,32,28,1761,BC Roma,0,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,254
+25399,263,2,10:00,0,32,28,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Ingresso,,,,,,,,,,False,0,254
+25399,264,2,10:00,0,32,28,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25399,265,2,09:44,16,32,28,1761,BC Roma,0,9381,9,Trentyn,Flowers,2 punti sbagliato,2,Tiro in corsa,,,12,68,0,A,4,False,0,
+25399,266,2,09:44,16,32,28,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Rimbalzo difensivo,,,,,12,68,0,A,4,False,0,265
+25399,267,2,09:37,23,35,28,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,3 punti segnato,1,Tiro in sospensione,500,contropiede,81,9,1,A,10,False,0,
+25399,268,2,09:37,23,35,28,1766,Openjobmetis Varese,1,9337,3,David,Duke,Assist,,,500,contropiede,81,9,1,A,10,False,0,267
+25399,269,2,09:21,39,35,28,1761,BC Roma,0,9381,9,Trentyn,Flowers,3 punti sbagliato,1,Tiro in sospensione,,,6,3,0,A,1,False,0,
+25399,270,2,09:21,39,35,28,1766,Openjobmetis Varese,1,9337,3,David,Duke,Rimbalzo difensivo,,,,,6,3,0,A,1,False,0,269
+25399,271,2,09:01,59,35,28,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Fallo commesso,103,tiro,,,92,49,0,D,3,False,0,
+25399,272,2,09:01,59,35,28,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Fallo Subito,,,,,92,49,0,D,3,False,0,271
+25399,273,2,09:01,59,35,28,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Uscita,,,,,,,,,,False,0,
+25399,274,2,09:01,59,35,28,1761,BC Roma,0,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,273
+25399,275,2,09:01,59,35,28,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25399,276,2,09:01,59,35,28,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Tiro libero sbagliato,,,,,,,,A,7,False,0,275
+25399,277,2,09:01,59,35,28,1761,BC Roma,0,9381,9,Trentyn,Flowers,Rimbalzo difensivo,,,,,,,,,,False,0,275
+25399,278,2,08:50,70,35,28,1761,BC Roma,0,6258,5,Corey,Davis,3 punti sbagliato,1,Tiro in sospensione,,,32,33,0,A,9,False,0,
+25399,279,2,08:50,70,35,28,1766,Openjobmetis Varese,1,,,,,Rimbalzi difensivi di squadra,,,,,32,33,0,A,9,False,0,278
+25399,280,2,08:47,73,35,28,1761,BC Roma,0,9381,9,Trentyn,Flowers,Uscita,,,,,,,,,,False,0,
+25399,281,2,08:47,73,35,28,1761,BC Roma,0,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,280
+25399,282,2,08:40,80,35,28,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo commesso,100,personale,,,66,85,0,D,8,False,0,
+25399,283,2,08:40,80,35,28,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo Subito,,,,,66,85,0,D,8,False,0,282
+25399,284,2,08:29,91,37,28,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,2 punti segnato,7,Appoggio a canestro,,,91,49,1,A,3,True,0,
+25399,285,2,08:27,93,37,28,1761,BC Roma,0,,,,,Time Out,,,,,,,0,,,False,0,
+25399,286,2,08:27,93,37,28,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,
+25399,287,2,08:27,93,37,28,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Uscita,,,,,,,,,,False,0,286
+25399,288,2,08:09,111,37,28,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,50,Passaggio sbagliato,,,34,43,0,A,9,False,0,
+25399,289,2,08:09,111,37,28,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Palla recuperata,,,,,34,43,0,A,9,False,0,288
+25399,290,2,08:03,117,39,28,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,2 punti segnato,9,Schiacciata,500,contropiede,93,45,1,A,3,True,1,
+25399,291,2,08:03,117,39,28,1766,Openjobmetis Varese,1,9337,3,David,Duke,Assist,,,500,contropiede,93,45,1,A,3,False,0,290
+25399,292,2,07:47,133,39,28,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla persa,53,Passi,,,11,47,0,A,6,False,0,
+25399,293,2,07:33,147,41,28,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,2 punti segnato,7,Appoggio a canestro,,,91,46,1,A,3,True,0,
+25399,294,2,07:33,147,41,28,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Assist,,,,,91,46,1,A,3,False,0,293
+25399,295,2,07:19,161,41,28,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,32,53,0,A,9,False,0,
+25399,296,2,07:19,161,41,28,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo offensivo,,,,,32,53,0,A,9,False,0,295
+25399,297,2,07:12,168,41,28,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti sbagliato,7,Appoggio a canestro,,,7,51,0,A,3,False,0,
+25399,298,2,07:12,168,41,28,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Rimbalzo difensivo,,,,,7,51,0,A,3,False,0,297
+25399,299,2,06:59,181,41,28,1766,Openjobmetis Varese,1,9337,3,David,Duke,Palla persa,53,Passi,,,83,9,1,A,4,False,0,
+25399,300,2,06:59,181,41,28,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Uscita,,,,,,,,,,False,0,
+25399,301,2,06:59,181,41,28,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,300
+25399,302,2,06:45,195,41,30,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti segnato,6,Arresto e tiro,,,20,64,0,A,4,True,0,
+25399,303,2,06:28,212,41,30,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Palla persa,50,Passaggio sbagliato,,,74,77,1,A,8,False,0,
+25399,304,2,06:28,212,41,30,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla recuperata,,,,,74,77,1,A,8,False,0,303
+25399,305,2,06:22,218,41,30,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti sbagliato,7,Appoggio a canestro,500,contropiede,6,51,0,A,3,False,0,
+25399,306,2,06:22,218,41,30,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Rimbalzo difensivo,,,,,6,51,0,A,3,False,0,305
+25399,307,2,05:59,241,41,30,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti sbagliato,6,Arresto e tiro,,,68,62,1,A,9,False,0,
+25399,308,2,05:59,241,41,30,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,68,62,1,A,9,False,0,307
+25399,309,2,05:45,255,41,32,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,4,Giro e Tiro,,,8,37,0,A,2,True,0,
+25399,310,2,05:44,256,41,32,1766,Openjobmetis Varese,1,,,,,Time Out,,,,,,,1,,,False,0,
+25399,311,2,05:44,256,41,32,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Ingresso,,,,,,,,,,False,0,
+25399,312,2,05:44,256,41,32,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Uscita,,,,,,,,,,False,0,311
+25399,313,2,05:44,256,41,32,1766,Openjobmetis Varese,1,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25399,314,2,05:44,256,41,32,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,313
+25399,315,2,05:44,256,41,32,1761,BC Roma,0,9385,3,Paul,Watson,Ingresso,,,,,,,,,,False,0,313
+25399,316,2,05:44,256,41,32,1761,BC Roma,0,6258,5,Corey,Davis,Uscita,,,,,,,,,,False,0,313
+25399,317,2,05:27,273,41,32,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Palla persa,50,Passaggio sbagliato,,,71,46,1,A,7,False,0,
+25399,318,2,05:27,273,41,32,1761,BC Roma,0,5369,12,Arturs,Strautins,Palla recuperata,,,,,71,46,1,A,7,False,0,317
+25399,319,2,05:19,281,41,32,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla persa,50,Passaggio sbagliato,,,47,61,0,A,9,False,0,
+25399,320,2,05:19,281,41,32,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Palla recuperata,,,,,47,61,0,A,9,False,0,319
+25399,321,2,05:15,285,41,32,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,2 punti sbagliato,9,Schiacciata,,,91,52,1,A,3,False,0,
+25399,322,2,05:15,285,41,32,1761,BC Roma,0,6138,1,Niccolò,Mannion,Rimbalzo difensivo,,,,,91,52,1,A,3,False,0,321
+25399,323,2,05:10,290,41,32,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,11,1,0,A,8,False,0,
+25399,324,2,05:10,290,41,32,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Rimbalzo difensivo,,,,,11,1,0,A,8,False,0,323
+25399,325,2,04:59,301,41,32,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo commesso,100,personale,,,80,61,0,D,6,False,0,
+25399,326,2,04:59,301,41,32,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Fallo Subito,,,,,80,61,0,D,6,False,0,325
+25399,327,2,04:59,301,41,32,1761,BC Roma,0,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,
+25399,328,2,04:59,301,41,32,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,327
+25399,329,2,04:58,302,41,32,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Fallo commesso,106,offensivo,,,86,25,1,A,4,False,0,
+25399,330,2,04:58,302,41,32,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Palla persa,,,,,86,25,1,A,4,False,0,329
+25399,331,2,04:58,302,41,32,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo Subito,,,,,86,25,1,A,4,False,0,329
+25399,332,2,04:52,308,41,34,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,8,Da penetrazione,,,6,44,0,A,3,True,0,
+25399,333,2,04:37,323,41,34,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,3 punti sbagliato,6,Arresto e tiro,1005,stoppata,74,21,1,A,10,False,0,
+25399,334,2,04:37,323,41,34,1761,BC Roma,0,6138,1,Niccolò,Mannion,Stoppata,,,,,74,21,1,A,10,False,0,333
+25399,335,2,04:37,323,41,34,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Stoppata subita,,,,,74,21,1,A,10,False,0,333
+25399,336,2,04:37,323,41,34,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Rimbalzo offensivo,,,,,74,21,1,A,10,False,0,333
+25399,337,2,04:17,343,41,34,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Fallo commesso,106,offensivo,,,65,75,1,A,8,False,0,
+25399,338,2,04:17,343,41,34,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Palla persa,,,,,65,75,1,A,8,False,0,337
+25399,339,2,04:17,343,41,34,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo Subito,,,,,65,75,1,A,8,False,0,337
+25399,340,2,04:17,343,41,34,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Uscita,,,,,,,,,,False,0,
+25399,341,2,04:17,343,41,34,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Ingresso,,,,,,,,,,False,0,340
+25399,342,2,04:06,354,41,36,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,9,Schiacciata,,,6,50,0,A,3,True,1,
+25399,343,2,04:06,354,41,36,1761,BC Roma,0,5369,12,Arturs,Strautins,Assist,,,,,6,50,0,A,3,False,0,342
+25399,344,2,03:37,383,44,36,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti segnato,6,Arresto e tiro,,,67,49,1,A,9,False,0,
+25399,345,2,03:26,394,44,38,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,7,Appoggio a canestro,,,5,49,0,A,3,True,0,
+25399,346,2,03:26,394,44,38,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,5,49,0,A,3,False,0,345
+25399,347,2,03:05,415,46,38,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,2 punti segnato,8,Da penetrazione,,,93,55,1,A,3,True,0,
+25399,349,2,02:55,425,46,38,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo commesso,100,personale,,,45,51,1,D,9,False,0,
+25399,350,2,02:55,425,46,38,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,45,51,1,D,9,False,0,349
+25399,351,2,02:55,425,46,38,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25399,352,2,02:55,425,46,38,1766,Openjobmetis Varese,1,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,351
+25399,353,2,02:55,425,46,38,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,351
+25399,354,2,02:55,425,46,38,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,351
+25399,355,2,02:50,430,46,38,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Fallo commesso,100,personale,,,24,79,1,D,7,False,0,
+25399,356,2,02:50,430,46,38,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,24,79,1,D,7,False,0,355
+25399,357,2,02:42,438,46,38,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti sbagliato,1,Tiro in sospensione,,,13,94,0,A,10,False,0,
+25399,358,2,02:42,438,46,38,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Rimbalzo difensivo,,,,,13,94,0,A,4,False,0,357
+25399,359,2,02:27,453,46,38,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,3 punti sbagliato,6,Arresto e tiro,,,68,43,1,A,9,False,0,
+25399,360,2,02:27,453,46,38,1761,BC Roma,0,9380,11,Gerald,Ayayi,Rimbalzo difensivo,,,,,68,43,1,A,9,False,0,359
+25399,361,2,02:19,461,46,38,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Fallo commesso,100,personale,,,20,69,1,D,4,False,0,
+25399,362,2,02:19,461,46,38,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo Subito,,,,,20,69,1,D,4,False,0,361
+25399,363,2,02:19,461,46,39,1761,BC Roma,0,5369,12,Arturs,Strautins,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,364,2,02:19,461,46,40,1761,BC Roma,0,5369,12,Arturs,Strautins,Tiro libero segnato,,,,,,,,A,7,False,0,363
+25399,365,2,02:19,461,46,40,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Ingresso,,,,,,,,,,False,0,
+25399,366,2,02:19,461,46,40,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,365
+25399,367,2,02:19,461,46,40,1761,BC Roma,0,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,
+25399,368,2,02:19,461,46,40,1761,BC Roma,0,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,367
+25399,369,2,02:03,477,49,40,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,3 punti segnato,1,Tiro in sospensione,,,83,95,1,A,8,False,0,
+25399,370,2,02:03,477,49,40,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Assist,,,,,83,95,1,A,8,False,0,369
+25399,371,2,01:50,490,49,40,1761,BC Roma,0,9385,3,Paul,Watson,2 punti sbagliato,8,Da penetrazione,1005,stoppata,7,59,0,A,3,False,0,
+25399,372,2,01:50,490,49,40,1766,Openjobmetis Varese,1,9337,3,David,Duke,Stoppata,,,,,7,59,0,A,3,False,0,371
+25399,373,2,01:50,490,49,40,1761,BC Roma,0,9385,3,Paul,Watson,Stoppata subita,,,,,7,59,0,A,3,False,0,371
+25399,374,2,01:50,490,49,40,1761,BC Roma,0,6258,5,Corey,Davis,Rimbalzo offensivo,,,,,7,59,0,A,3,False,0,371
+25399,375,2,01:42,498,49,43,1761,BC Roma,0,9380,11,Gerald,Ayayi,3 punti segnato,1,Tiro in sospensione,,,25,16,0,A,8,False,0,
+25399,376,2,01:42,498,49,43,1761,BC Roma,0,6258,5,Corey,Davis,Assist,,,,,25,16,0,A,8,False,0,375
+25399,377,2,01:35,505,49,43,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,2 punti sbagliato,8,Da penetrazione,,,92,55,1,A,3,False,0,
+25399,378,2,01:35,505,49,43,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Rimbalzo offensivo,,,,,92,55,1,A,3,False,0,377
+25399,379,2,01:22,518,49,43,1766,Openjobmetis Varese,1,9337,3,David,Duke,3 punti sbagliato,1,Tiro in sospensione,,,70,29,1,A,9,False,0,
+25399,380,2,01:22,518,49,43,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Rimbalzo offensivo,,,,,70,29,1,A,9,False,0,379
+25399,381,2,01:16,524,49,43,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,3 punti sbagliato,6,Arresto e tiro,,,78,13,1,A,10,False,0,
+25399,382,2,01:16,524,49,43,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Rimbalzo offensivo,,,,,78,13,1,A,10,False,0,381
+25399,383,2,01:02,538,49,43,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Fallo commesso,106,offensivo,,,85,49,1,A,6,False,0,
+25399,384,2,01:02,538,49,43,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Palla persa,,,,,85,49,1,A,6,False,0,383
+25399,385,2,01:02,538,49,43,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,85,49,1,A,6,False,0,383
+25399,386,2,01:02,538,49,43,1761,BC Roma,0,,,,,Time Out,,,,,,,0,,,False,0,
+25399,387,2,01:02,538,49,43,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,
+25399,388,2,01:02,538,49,43,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,387
+25399,389,2,01:02,538,49,43,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Uscita,,,,,,,,,,False,0,387
+25399,390,2,01:02,538,49,43,1766,Openjobmetis Varese,1,3155,34,Maximilian,Ladurner,Ingresso,,,,,,,,,,False,0,387
+25399,391,2,00:46,554,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,7,Appoggio a canestro,,,8,45,0,A,3,True,0,
+25399,392,2,00:36,564,49,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti sbagliato,6,Arresto e tiro,,,65,55,1,A,9,False,0,
+25399,393,2,00:36,564,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,65,55,1,A,9,False,0,392
+25399,394,2,00:18,582,49,45,1761,BC Roma,0,5369,12,Arturs,Strautins,Palla persa,51,Palleggio,,,16,10,0,A,2,False,0,
+25399,395,2,00:18,582,49,45,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25399,396,2,00:18,582,49,45,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Uscita,,,,,,,,,,False,0,395
+25399,397,2,00:18,582,49,45,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,395
+25399,398,2,00:18,582,49,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,395
+25399,399,2,00:18,582,49,45,1761,BC Roma,0,9381,9,Trentyn,Flowers,Ingresso,,,,,,,,,,False,0,395
+25399,400,2,00:18,582,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,395
+25399,401,2,00:18,582,49,45,1761,BC Roma,0,6258,5,Corey,Davis,Uscita,,,,,,,,,,False,0,
+25399,402,2,00:18,582,49,45,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Ingresso,,,,,,,,,,False,0,401
+25399,403,2,00:16,584,49,45,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Palla persa,50,Passaggio sbagliato,,,29,9,1,D,8,False,0,
+25399,404,2,00:16,584,49,45,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25399,405,2,00:16,584,49,45,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Ingresso,,,,,,,,,,False,0,404
+25399,406,2,00:16,584,49,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,404
+25399,407,2,00:16,584,49,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,404
+25399,408,2,00:16,584,49,45,1761,BC Roma,0,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,404
+25399,409,2,00:16,584,49,45,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Uscita,,,,,,,,,,False,0,404
+25399,410,2,00:16,584,49,45,1761,BC Roma,0,9381,9,Trentyn,Flowers,Uscita,,,,,,,,,,False,0,404
+25399,411,2,00:16,584,49,45,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,404
+25399,412,2,00:16,584,49,45,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,404
+25399,413,2,00:16,584,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,404
+25399,414,2,00:05,595,49,45,1761,BC Roma,0,9385,3,Paul,Watson,3 punti sbagliato,1,Tiro in sospensione,,,18,95,0,A,10,False,0,
+25399,415,2,00:05,595,49,45,1766,Openjobmetis Varese,1,3155,34,Maximilian,Ladurner,Rimbalzo difensivo,,,,,18,95,0,A,10,False,0,414
+25399,416,2,00:00,600,49,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,3 punti sbagliato,2,Tiro in corsa,1007,nessun rimbalzo,41,65,1,D,9,False,0,
+25399,417,2,00:00,600,49,45,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25399,418,3,10:00,0,49,45,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Uscita,,,,,,,,,,False,0,
+25399,419,3,10:00,0,49,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,418
+25399,420,3,10:00,0,49,45,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,418
+25399,421,3,10:00,0,49,45,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Ingresso,,,,,,,,,,False,0,418
+25399,422,3,10:00,0,49,45,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,418
+25399,423,3,10:00,0,49,45,1766,Openjobmetis Varese,1,3155,34,Maximilian,Ladurner,Uscita,,,,,,,,,,False,0,418
+25399,424,3,10:00,0,49,45,1761,BC Roma,0,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,418
+25399,425,3,10:00,0,49,45,1761,BC Roma,0,6258,5,Corey,Davis,Uscita,,,,,,,,,,False,0,418
+25399,426,3,10:00,0,49,45,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25399,427,3,09:36,24,49,45,1766,Openjobmetis Varese,1,9337,3,David,Duke,3 punti sbagliato,1,Tiro in sospensione,,,19,6,0,A,8,False,0,
+25399,428,3,09:36,24,49,45,1766,Openjobmetis Varese,1,,,,,Rimbalzi offensivi di squadra,,,,,19,6,0,A,8,False,0,427
+25399,429,3,09:28,32,49,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti sbagliato,1,Tiro in sospensione,,,18,93,0,A,10,False,0,
+25399,430,3,09:28,32,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,18,93,0,A,10,False,0,429
+25399,431,3,09:26,34,49,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Fallo commesso,100,personale,,,16,48,0,A,6,False,0,
+25399,432,3,09:26,34,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,16,48,0,A,6,False,0,431
+25399,433,3,08:57,63,49,45,1761,BC Roma,0,9385,3,Paul,Watson,3 punti sbagliato,1,Tiro in sospensione,,,81,94,1,A,8,False,0,
+25399,434,3,08:57,63,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo offensivo,,,,,81,94,1,A,8,False,0,433
+25399,435,3,08:53,67,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla persa,53,Passi,,,90,41,1,A,6,False,0,
+25399,436,3,08:39,81,49,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo commesso,103,tiro,,,5,42,1,D,3,False,0,
+25399,437,3,08:39,81,49,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo Subito,,,,,5,42,1,D,3,False,0,436
+25399,438,3,08:39,81,49,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25399,439,3,08:39,81,50,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Tiro libero segnato,,,,,,,,A,7,False,0,438
+25399,440,3,08:30,90,50,45,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti sbagliato,8,Da penetrazione,1005,stoppata,91,55,1,A,3,False,0,
+25399,441,3,08:30,90,50,45,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Stoppata,,,,,91,55,1,A,3,False,0,440
+25399,442,3,08:30,90,50,45,1761,BC Roma,0,6138,1,Niccolò,Mannion,Stoppata subita,,,,,91,55,1,A,3,False,0,440
+25399,443,3,08:30,90,50,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Rimbalzo difensivo,,,,,91,55,1,A,3,False,0,440
+25399,444,3,08:24,96,50,45,1766,Openjobmetis Varese,1,9337,3,David,Duke,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,4,47,0,A,3,False,0,
+25399,445,3,08:24,96,50,45,1761,BC Roma,0,9384,10,Erik,Stevenson,Stoppata,,,,,4,47,0,A,3,False,0,444
+25399,446,3,08:24,96,50,45,1766,Openjobmetis Varese,1,9337,3,David,Duke,Stoppata subita,,,,,4,47,0,A,3,False,0,444
+25399,447,3,08:24,96,50,45,1766,Openjobmetis Varese,1,,,,,Rimbalzi offensivi di squadra,,,,,4,47,0,A,3,False,0,444
+25399,448,3,08:06,114,50,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,3 punti sbagliato,1,Tiro in sospensione,,,20,91,0,A,10,False,0,
+25399,449,3,08:06,114,50,45,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,20,91,0,A,10,False,0,448
+25399,450,3,07:57,123,50,45,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,69,51,1,A,9,False,0,
+25399,451,3,07:57,123,50,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Rimbalzo difensivo,,,,,69,51,1,A,9,False,0,450
+25399,452,3,07:46,134,53,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti segnato,6,Arresto e tiro,,,31,65,0,A,9,False,0,
+25399,453,3,07:32,148,53,45,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla persa,51,Palleggio,,,85,53,1,A,6,False,0,
+25399,454,3,07:32,148,53,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Palla recuperata,,,,,85,53,1,A,6,False,0,453
+25399,455,3,07:25,155,53,45,1766,Openjobmetis Varese,1,9337,3,David,Duke,3 punti sbagliato,1,Tiro in sospensione,500,contropiede,28,20,0,A,8,False,0,
+25399,456,3,07:25,155,53,45,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,28,20,0,A,8,False,0,455
+25399,457,3,07:18,162,53,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo commesso,103,tiro,,,92,45,0,D,3,False,0,
+25399,458,3,07:18,162,53,45,1761,BC Roma,0,9385,3,Paul,Watson,Fallo Subito,,,,,92,45,0,D,3,False,0,457
+25399,459,3,07:18,162,53,45,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25399,460,3,07:18,162,53,45,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,459
+25399,461,3,07:18,162,53,45,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,459
+25399,462,3,07:18,162,53,45,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,459
+25399,463,3,07:18,162,53,46,1761,BC Roma,0,9385,3,Paul,Watson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,464,3,07:18,162,53,46,1761,BC Roma,0,9385,3,Paul,Watson,Tiro libero sbagliato,,,,,,,,A,7,False,0,463
+25399,465,3,07:18,162,53,46,1761,BC Roma,0,9384,10,Erik,Stevenson,Assist,,,,,,,,,,False,0,463
+25399,466,3,07:18,162,53,46,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Rimbalzo difensivo,,,,,,,,,,False,0,463
+25399,467,3,07:02,178,56,46,1766,Openjobmetis Varese,1,9337,3,David,Duke,3 punti segnato,1,Tiro in sospensione,,,32,59,0,A,9,False,0,
+25399,468,3,07:02,178,56,46,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Assist,,,,,32,59,0,A,9,False,0,467
+25399,469,3,06:49,191,56,46,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,6,Arresto e tiro,,,67,24,1,A,10,False,0,
+25399,470,3,06:49,191,56,46,1761,BC Roma,0,,,,,Rimbalzi offensivi di squadra,,,,,67,24,1,A,10,False,0,469
+25399,471,3,06:46,194,56,46,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo commesso,100,personale,,,91,55,0,D,3,False,0,
+25399,472,3,06:46,194,56,46,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo Subito,,,,,91,55,0,D,3,False,0,471
+25399,473,3,06:46,194,56,46,1766,Openjobmetis Varese,1,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25399,474,3,06:46,194,56,46,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Ingresso,,,,,,,,,,False,0,473
+25399,475,3,06:41,199,56,46,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti sbagliato,2,Tiro in corsa,,,84,49,1,A,6,False,0,
+25399,476,3,06:41,199,56,46,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Rimbalzo difensivo,,,,,84,49,1,A,6,False,0,475
+25399,477,3,06:28,212,56,46,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo commesso,100,personale,,,33,51,1,D,9,False,0,
+25399,478,3,06:28,212,56,46,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Fallo Subito,,,,,33,51,1,D,9,False,0,477
+25399,479,3,06:28,212,56,46,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Uscita,,,,,,,,,,False,0,
+25399,480,3,06:28,212,56,46,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Ingresso,,,,,,,,,,False,0,479
+25399,481,3,06:28,212,56,46,1761,BC Roma,0,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,479
+25399,482,3,06:28,212,56,46,1761,BC Roma,0,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,479
+25399,483,3,06:22,218,56,46,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,2 punti sbagliato,7,Appoggio a canestro,,,18,39,0,A,6,False,0,
+25399,484,3,06:22,218,56,46,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Rimbalzo offensivo,,,,,18,39,0,A,6,False,0,483
+25399,485,3,06:18,222,56,46,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo commesso,100,personale,,,11,53,1,D,6,False,0,
+25399,486,3,06:18,222,56,46,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Fallo Subito,,,,,11,53,1,D,6,False,0,485
+25399,487,3,06:18,222,56,46,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Palla persa,50,Passaggio sbagliato,,,30,63,0,A,9,False,0,
+25399,488,3,06:18,222,56,46,1761,BC Roma,0,9384,10,Erik,Stevenson,Palla recuperata,,,,,30,63,0,A,9,False,0,487
+25399,489,3,06:18,222,56,46,1761,BC Roma,0,9436,22,Kelly,Olynyk,3 punti sbagliato,5,Tiro in Step Back,,,69,44,1,A,9,False,0,
+25399,490,3,06:18,222,56,46,1761,BC Roma,0,9385,3,Paul,Watson,Rimbalzo offensivo,,,,,69,44,1,A,9,False,0,489
+25399,491,3,06:18,222,56,49,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti segnato,1,Tiro in sospensione,,,70,64,1,A,9,False,0,
+25399,492,3,06:18,222,56,49,1761,BC Roma,0,9385,3,Paul,Watson,Assist,,,,,70,64,1,A,9,False,0,491
+25399,493,3,06:18,222,56,49,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,3 punti sbagliato,1,Tiro in sospensione,,,31,32,0,A,9,False,0,
+25399,494,3,06:18,222,56,49,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,31,32,0,A,9,False,0,493
+25399,495,3,06:18,222,56,49,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti sbagliato,1,Tiro in sospensione,,,87,98,1,A,8,False,0,
+25399,496,3,06:18,222,56,49,1761,BC Roma,0,,,,,Rimbalzi offensivi di squadra,,,,,87,98,1,A,8,False,0,495
+25399,497,3,06:14,226,56,49,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Ingresso,,,,,,,,,,False,0,
+25399,498,3,06:14,226,56,49,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,497
+25399,499,3,06:04,236,56,49,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Fallo commesso,100,personale,,,54,16,0,D,10,False,0,
+25399,500,3,06:04,236,56,49,1761,BC Roma,0,6258,5,Corey,Davis,Fallo Subito,,,,,54,16,0,D,10,False,0,499
+25399,501,3,05:33,267,56,52,1761,BC Roma,0,9436,22,Kelly,Olynyk,3 punti segnato,5,Tiro in Step Back,,,78,9,1,A,10,False,0,
+25399,502,3,05:09,291,56,52,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Fallo commesso,106,offensivo,,,8,25,0,A,2,False,0,
+25399,503,3,05:09,291,56,52,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Palla persa,,,,,8,25,0,A,2,False,0,502
+25399,504,3,05:09,291,56,52,1761,BC Roma,0,6258,5,Corey,Davis,Fallo Subito,,,,,8,25,0,A,2,False,0,502
+25399,505,3,05:09,291,56,52,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Uscita,,,,,,,,,,False,0,
+25399,506,3,05:09,291,56,52,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,505
+25399,507,3,05:09,291,56,52,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,505
+25399,508,3,05:09,291,56,52,1761,BC Roma,0,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,505
+25399,509,3,04:58,302,56,52,1761,BC Roma,0,6258,5,Corey,Davis,3 punti sbagliato,1,Tiro in sospensione,,,73,18,1,A,10,False,0,
+25399,510,3,04:58,302,56,52,1761,BC Roma,0,9380,11,Gerald,Ayayi,Rimbalzo offensivo,,,,,73,18,1,A,10,False,0,509
+25399,511,3,04:54,306,56,55,1761,BC Roma,0,9436,22,Kelly,Olynyk,3 punti segnato,1,Tiro in sospensione,,,75,83,1,A,8,False,0,
+25399,512,3,04:54,306,56,55,1761,BC Roma,0,9380,11,Gerald,Ayayi,Assist,,,,,75,83,1,A,8,False,0,511
+25399,513,3,04:54,306,56,55,1766,Openjobmetis Varese,1,,,,,Time Out,,,,,,,0,,,False,0,
+25399,514,3,04:54,306,56,55,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo commesso,100,personale,,,90,28,1,A,4,False,0,
+25399,515,3,04:54,306,56,55,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo Subito,,,,,90,28,1,A,4,False,0,514
+25399,516,3,04:39,321,56,55,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,3 punti sbagliato,1,Tiro in sospensione,,,30,31,0,A,9,False,0,
+25399,517,3,04:39,321,56,55,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Rimbalzo offensivo,,,,,30,31,0,A,9,False,0,516
+25399,518,3,04:35,325,56,55,1761,BC Roma,0,9385,3,Paul,Watson,Fallo commesso,103,tiro,,,6,49,1,D,3,False,0,
+25399,519,3,04:35,325,56,55,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Fallo Subito,,,,,6,49,1,D,3,False,0,518
+25399,520,3,04:34,326,57,55,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,521,3,04:34,326,57,55,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Tiro libero sbagliato,,,,,,,,A,7,False,0,520
+25399,522,3,04:34,326,57,55,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Rimbalzo offensivo,,,,,,,,,,False,0,520
+25399,523,3,04:34,326,57,55,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,2 punti sbagliato,7,Appoggio a canestro,,,5,49,0,A,3,False,0,
+25399,524,3,04:34,326,57,55,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,5,49,0,A,3,False,0,523
+25399,525,3,04:26,334,57,55,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Fallo commesso,103,tiro,,,91,56,0,D,3,False,0,
+25399,526,3,04:26,334,57,55,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,91,56,0,D,3,False,0,525
+25399,527,3,04:26,334,57,56,1761,BC Roma,0,9436,22,Kelly,Olynyk,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,528,3,04:26,334,57,57,1761,BC Roma,0,9436,22,Kelly,Olynyk,Tiro libero segnato,,,,,,,,A,7,False,0,527
+25399,529,3,04:04,356,57,57,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti sbagliato,6,Arresto e tiro,,,33,53,0,A,9,False,0,
+25399,530,3,04:04,356,57,57,1761,BC Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,33,53,0,A,9,False,0,529
+25399,531,3,03:53,367,57,60,1761,BC Roma,0,9436,22,Kelly,Olynyk,3 punti segnato,1,Tiro in sospensione,,,67,40,1,A,9,False,0,
+25399,532,3,03:53,367,57,60,1761,BC Roma,0,6258,5,Corey,Davis,Assist,,,,,67,40,1,A,9,False,0,531
+25399,533,3,03:26,394,57,60,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,2 punti sbagliato,2,Tiro in corsa,,,4,37,0,A,2,False,0,
+25399,534,3,03:26,394,57,60,1761,BC Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,4,37,0,A,2,False,0,533
+25399,535,3,03:08,412,57,60,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Fallo commesso,100,personale,,,9,42,0,A,3,False,0,
+25399,536,3,03:08,412,57,60,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,9,42,0,A,3,False,0,535
+25399,537,3,03:08,412,57,60,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Ingresso,,,,,,,,,,False,0,
+25399,538,3,03:08,412,57,60,1766,Openjobmetis Varese,1,7014,17,Ismael,Kamagate,Uscita,,,,,,,,,,False,0,537
+25399,539,3,03:08,412,57,60,1766,Openjobmetis Varese,1,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,
+25399,540,3,03:08,412,57,60,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,539
+25399,541,3,03:08,412,57,61,1761,BC Roma,0,9436,22,Kelly,Olynyk,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,542,3,03:08,412,57,62,1761,BC Roma,0,9436,22,Kelly,Olynyk,Tiro libero segnato,,,,,,,,A,7,False,0,541
+25399,543,3,02:57,423,57,62,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo commesso,100,personale,,,36,66,1,D,9,False,0,
+25399,544,3,02:57,423,57,62,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo Subito,,,,,36,66,1,D,9,False,0,543
+25399,545,3,02:57,423,57,62,1761,BC Roma,0,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,
+25399,546,3,02:57,423,57,62,1761,BC Roma,0,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,545
+25399,547,3,02:57,423,58,62,1766,Openjobmetis Varese,1,9337,3,David,Duke,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,548,3,02:57,423,58,62,1766,Openjobmetis Varese,1,9337,3,David,Duke,Tiro libero sbagliato,,,,,,,,A,7,False,0,547
+25399,549,3,02:57,423,58,62,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,,,,,,False,0,547
+25399,550,3,02:53,427,58,64,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,7,Appoggio a canestro,500,contropiede,91,49,1,A,3,True,0,
+25399,551,3,02:53,427,58,64,1761,BC Roma,0,9436,22,Kelly,Olynyk,Assist,,,500,contropiede,91,49,1,A,3,False,0,550
+25399,552,3,02:31,449,60,64,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,2 punti segnato,7,Appoggio a canestro,,,5,52,0,A,3,True,0,
+25399,553,3,02:31,449,60,64,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Assist,,,,,5,52,0,A,3,False,0,552
+25399,554,3,02:11,469,60,64,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Fallo commesso,100,personale,,,74,32,0,D,7,False,0,
+25399,555,3,02:11,469,60,64,1761,BC Roma,0,9385,3,Paul,Watson,Fallo Subito,,,,,74,32,0,D,7,False,0,554
+25399,556,3,02:11,469,60,64,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Ingresso,,,,,,,,,,False,0,
+25399,557,3,02:11,469,60,64,1761,BC Roma,0,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,556
+25399,558,3,02:11,469,60,64,1761,BC Roma,0,9385,3,Paul,Watson,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25399,559,3,02:11,469,60,65,1761,BC Roma,0,9385,3,Paul,Watson,Tiro libero segnato,,,,,,,,A,7,False,0,558
+25399,560,3,02:11,469,60,65,1761,BC Roma,0,9385,3,Paul,Watson,Uscita,,,,,,,,,,False,0,
+25399,561,3,02:11,469,60,65,1761,BC Roma,0,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,560
+25399,562,3,01:58,482,60,65,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Fallo commesso,106,offensivo,,,45,44,0,A,9,False,0,
+25399,563,3,01:58,482,60,65,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Palla persa,,,,,45,44,0,A,9,False,0,562
+25399,564,3,01:58,482,60,65,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,45,44,0,A,9,False,0,562
+25399,565,3,01:58,482,60,65,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Fallo commesso,122,tecnico categoria 2,,,14,46,0,A,6,False,0,
+25399,566,3,01:58,482,60,65,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25399,567,3,01:37,503,60,65,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti sbagliato,2,Tiro in corsa,,,84,48,1,A,6,False,0,
+25399,568,3,01:37,503,60,65,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Rimbalzo difensivo,,,,,84,48,1,A,6,False,0,567
+25399,569,3,01:29,511,60,65,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo commesso,100,personale,,,38,41,1,D,9,False,0,
+25399,570,3,01:29,511,60,65,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo Subito,,,,,38,41,1,D,9,False,0,569
+25399,571,3,01:29,511,61,65,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,572,3,01:29,511,62,65,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Tiro libero segnato,,,,,,,,A,7,False,0,571
+25399,573,3,01:13,527,62,65,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,50,Passaggio sbagliato,,,93,47,1,A,3,False,0,
+25399,574,3,01:13,527,62,65,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Palla recuperata,,,,,93,47,1,A,3,False,0,573
+25399,575,3,01:07,533,64,65,1766,Openjobmetis Varese,1,9337,3,David,Duke,2 punti segnato,9,Schiacciata,,,6,46,0,A,3,True,1,
+25399,576,3,01:07,533,64,65,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Assist,,,,,6,46,0,A,3,False,0,575
+25399,577,3,00:48,552,64,65,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,5,Tiro in Step Back,,,71,28,1,A,9,False,0,
+25399,578,3,00:48,552,64,65,1761,BC Roma,0,6138,1,Niccolò,Mannion,Rimbalzo offensivo,,,,,71,28,1,A,9,False,0,577
+25399,579,3,00:44,556,64,67,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti segnato,2,Tiro in corsa,,,93,52,1,A,3,True,0,
+25399,580,3,00:23,577,64,67,1761,BC Roma,0,6258,5,Corey,Davis,Fallo commesso,100,personale,,,21,57,1,D,7,False,0,
+25399,581,3,00:23,577,64,67,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Fallo Subito,,,,,21,57,1,D,7,False,0,580
+25399,582,3,00:23,577,64,67,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25399,583,3,00:23,577,64,67,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Ingresso,,,,,,,,,,False,0,582
+25399,584,3,00:23,577,64,67,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,582
+25399,585,3,00:23,577,64,67,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,582
+25399,586,3,00:23,577,64,67,1766,Openjobmetis Varese,1,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25399,587,3,00:23,577,64,67,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,586
+25399,588,3,00:23,577,64,67,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,
+25399,589,3,00:23,577,64,67,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,588
+25399,590,3,00:23,577,65,67,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,591,3,00:23,577,66,67,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Tiro libero segnato,,,,,,,,A,7,False,0,590
+25399,592,3,00:23,577,66,67,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,
+25399,593,3,00:23,577,66,67,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,592
+25399,594,3,00:23,577,66,67,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Uscita,,,,,,,,,,False,0,592
+25399,595,3,00:23,577,66,67,1761,BC Roma,0,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,592
+25399,596,3,00:04,596,66,67,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,50,Passaggio sbagliato,,,88,40,1,A,6,False,0,
+25399,597,3,00:04,596,66,67,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Palla recuperata,,,,,88,40,1,A,6,False,0,596
+25399,598,3,00:00,600,66,67,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,3 punti sbagliato,1,Tiro in sospensione,,,60,46,0,D,9,False,0,
+25399,599,3,00:00,600,66,67,1761,BC Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,60,46,0,D,9,False,0,598
+25399,600,3,00:00,600,66,67,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25399,601,4,10:00,0,66,67,1766,Openjobmetis Varese,1,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,
+25399,602,4,10:00,0,66,67,1766,Openjobmetis Varese,1,6556,5,Mauro,Villa,Uscita,,,,,,,,,,False,0,601
+25399,603,4,10:00,0,66,67,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,601
+25399,604,4,10:00,0,66,67,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,601
+25399,605,4,10:00,0,66,67,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25399,606,4,09:48,12,66,67,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla persa,53,Passi,,,85,56,1,A,6,False,0,
+25399,607,4,09:34,26,66,67,1766,Openjobmetis Varese,1,9337,3,David,Duke,Palla persa,53,Passi,,,18,13,0,A,2,False,0,
+25399,608,4,09:12,48,66,69,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,7,Appoggio a canestro,,,91,54,1,A,3,True,0,
+25399,609,4,09:12,48,66,69,1761,BC Roma,0,9436,22,Kelly,Olynyk,Assist,,,,,91,54,1,A,3,False,0,608
+25399,610,4,08:56,64,68,69,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,2 punti segnato,7,Appoggio a canestro,,,7,57,0,A,3,True,0,
+25399,611,4,08:56,64,68,69,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Assist,,,,,7,57,0,A,3,False,0,610
+25399,612,4,08:33,87,68,69,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,6,Arresto e tiro,,,76,92,1,A,8,False,0,
+25399,613,4,08:33,87,68,69,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Rimbalzo difensivo,,,,,76,92,1,A,8,False,0,612
+25399,614,4,08:27,93,68,69,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Palla persa,51,Palleggio,,,10,49,0,A,6,False,0,
+25399,615,4,08:11,109,68,69,1761,BC Roma,0,5369,12,Arturs,Strautins,Palla persa,51,Palleggio,,,68,31,1,A,9,False,0,
+25399,616,4,08:11,109,68,69,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Palla recuperata,,,,,68,31,1,A,9,False,0,615
+25399,617,4,08:06,114,70,69,1766,Openjobmetis Varese,1,9337,3,David,Duke,2 punti segnato,9,Schiacciata,500,contropiede,7,51,0,A,3,True,1,
+25399,618,4,08:06,114,70,69,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Assist,,,500,contropiede,7,51,0,A,3,False,0,617
+25399,619,4,08:06,114,70,69,1761,BC Roma,0,,,,,Time Out,,,,,,,1,,,False,0,
+25399,620,4,07:50,130,70,71,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,4,Giro e Tiro,,,94,52,1,A,3,True,0,
+25399,622,4,07:31,149,72,71,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,2 punti segnato,10,Alley-oop,,,9,56,0,A,3,True,0,
+25399,623,4,07:31,149,72,71,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Assist,,,,,9,56,0,A,3,False,0,622
+25399,624,4,07:10,170,72,71,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti sbagliato,8,Da penetrazione,1001,tip-in schiacciata made,88,59,1,A,6,False,0,
+25399,625,4,07:10,170,72,71,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo offensivo,,,,,88,59,1,A,6,False,0,624
+25399,626,4,07:10,170,72,73,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,9,Schiacciata,,,88,59,1,A,6,True,1,
+25399,627,4,06:55,185,72,73,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti sbagliato,6,Arresto e tiro,,,33,50,0,A,9,False,0,
+25399,628,4,06:55,185,72,73,1761,BC Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,33,50,0,A,9,False,0,627
+25399,629,4,06:54,186,72,73,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25399,630,4,06:54,186,72,73,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,629
+25399,631,4,06:39,201,72,75,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,6,Arresto e tiro,,,89,79,1,A,2,False,0,
+25399,632,4,06:39,201,72,75,1761,BC Roma,0,5369,12,Arturs,Strautins,Assist,,,,,89,79,1,A,2,False,0,631
+25399,633,4,06:27,213,75,75,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,3 punti segnato,1,Tiro in sospensione,,,30,75,0,A,10,False,0,
+25399,634,4,06:27,213,75,75,1766,Openjobmetis Varese,1,9337,3,David,Duke,Assist,,,,,30,75,0,A,10,False,0,633
+25399,635,4,06:21,219,75,75,1761,BC Roma,0,9380,11,Gerald,Ayayi,Palla persa,50,Passaggio sbagliato,,,55,15,1,A,10,False,0,
+25399,636,4,06:21,219,75,75,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Palla recuperata,,,,,55,15,1,A,10,False,0,635
+25399,637,4,06:09,231,75,75,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Palla persa,50,Passaggio sbagliato,,,33,78,0,A,10,False,0,
+25399,638,4,06:09,231,75,75,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla recuperata,,,,,33,78,0,A,10,False,0,637
+25399,639,4,06:05,235,75,77,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,9,Schiacciata,500,contropiede,91,49,1,A,3,True,1,
+25399,640,4,06:05,235,75,77,1761,BC Roma,0,6258,5,Corey,Davis,Assist,,,500,contropiede,91,49,1,A,3,False,0,639
+25399,641,4,05:46,254,77,77,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,2 punti segnato,9,Schiacciata,,,6,49,0,A,3,True,1,
+25399,642,4,05:46,254,77,77,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Assist,,,,,6,49,0,A,3,False,0,641
+25399,643,4,05:36,264,77,77,1761,BC Roma,0,6258,5,Corey,Davis,2 punti sbagliato,8,Da penetrazione,,,89,52,1,A,6,False,0,
+25399,644,4,05:36,264,77,77,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Rimbalzo difensivo,,,,,89,52,1,A,6,False,0,643
+25399,645,4,05:27,273,79,77,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,2 punti segnato,7,Appoggio a canestro,500,contropiede,8,48,0,A,3,True,0,
+25399,646,4,05:27,273,79,77,1766,Openjobmetis Varese,1,9337,3,David,Duke,Assist,,,500,contropiede,8,48,0,A,3,False,0,645
+25399,647,4,05:27,273,79,77,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo commesso,103,tiro,500,contropiede,8,48,1,D,3,False,0,
+25399,648,4,05:27,273,79,77,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Fallo Subito,,,500,contropiede,8,48,1,D,3,False,0,647
+25399,649,4,05:27,273,79,77,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,
+25399,650,4,05:27,273,79,77,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,649
+25399,651,4,05:27,273,79,77,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Uscita,,,,,,,,,,False,0,649
+25399,652,4,05:27,273,79,77,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,649
+25399,653,4,05:27,273,79,77,1761,BC Roma,0,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,649
+25399,654,4,05:27,273,79,77,1761,BC Roma,0,9385,3,Paul,Watson,Ingresso,,,,,,,,,,False,0,649
+25399,655,4,05:27,273,79,77,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,649
+25399,656,4,05:27,273,79,77,1761,BC Roma,0,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,649
+25399,657,4,05:27,273,79,77,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25399,658,4,05:27,273,79,77,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,,,,,,False,0,657
+25399,659,4,05:15,285,79,79,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,7,Appoggio a canestro,,,92,53,1,A,3,True,0,
+25399,660,4,05:15,285,79,79,1761,BC Roma,0,9385,3,Paul,Watson,Assist,,,,,92,53,1,A,3,False,0,659
+25399,661,4,05:15,285,79,79,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Fallo commesso,103,tiro,,,92,53,0,D,3,False,0,
+25399,662,4,05:15,285,79,79,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,92,53,0,D,3,False,0,661
+25399,663,4,05:15,285,79,80,1761,BC Roma,0,9436,22,Kelly,Olynyk,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,664,4,05:11,289,79,80,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo commesso,100,personale,,,38,35,1,D,9,False,0,
+25399,665,4,05:11,289,79,80,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo Subito,,,,,38,35,1,D,9,False,0,664
+25399,666,4,04:57,303,82,80,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,3 punti segnato,1,Tiro in sospensione,,,30,75,0,A,10,False,0,
+25399,667,4,04:57,303,82,80,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Assist,,,,,30,75,0,A,10,False,0,666
+25399,668,4,04:41,319,82,82,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,7,Appoggio a canestro,,,91,53,1,A,3,True,0,
+25399,669,4,04:28,332,82,82,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo commesso,100,personale,,,24,20,1,D,7,False,0,
+25399,670,4,04:28,332,82,82,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo Subito,,,,,24,20,1,D,7,False,0,669
+25399,671,4,04:18,342,84,82,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,2 punti segnato,7,Appoggio a canestro,,,8,50,0,A,3,True,0,
+25399,672,4,04:18,342,84,82,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Assist,,,,,8,50,0,A,3,False,0,671
+25399,673,4,04:04,356,84,82,1761,BC Roma,0,9385,3,Paul,Watson,Palla persa,53,Passi,,,74,76,1,A,7,False,0,
+25399,674,4,03:50,370,84,82,1766,Openjobmetis Varese,1,9337,3,David,Duke,3 punti sbagliato,1,Tiro in sospensione,,,28,81,0,A,10,False,0,
+25399,675,4,03:50,370,84,82,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,28,81,0,A,10,False,0,674
+25399,676,4,03:43,377,84,85,1761,BC Roma,0,6258,5,Corey,Davis,3 punti segnato,6,Arresto e tiro,500,contropiede,71,75,1,A,8,False,0,
+25399,677,4,03:29,391,87,85,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,3 punti segnato,6,Arresto e tiro,,,33,55,0,A,9,False,0,
+25399,678,4,03:08,412,87,87,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,8,Da penetrazione,,,95,57,1,A,3,True,0,
+25399,679,4,02:49,431,90,87,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,3 punti segnato,1,Tiro in sospensione,,,13,2,0,A,8,False,0,
+25399,680,4,02:49,431,90,87,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Assist,,,,,13,2,0,A,8,False,0,679
+25399,681,4,02:41,439,90,87,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Fallo commesso,100,personale,,,63,58,0,D,9,False,0,
+25399,682,4,02:41,439,90,87,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,63,58,0,D,9,False,0,681
+25399,683,4,02:41,439,90,87,1766,Openjobmetis Varese,1,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25399,684,4,02:41,439,90,87,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,683
+25399,685,4,02:41,439,90,87,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Ingresso,,,,,,,,,,False,0,683
+25399,686,4,02:41,439,90,87,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,683
+25399,687,4,02:41,439,90,87,1761,BC Roma,0,9385,3,Paul,Watson,Uscita,,,,,,,,,,False,0,683
+25399,688,4,02:41,439,90,87,1761,BC Roma,0,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,683
+25399,689,4,02:41,439,90,87,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Uscita,,,,,,,,,,False,0,
+25399,690,4,02:41,439,90,87,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,689
+25399,691,4,02:41,439,90,87,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Fallo commesso,122,tecnico categoria 2,,,38,58,0,A,9,False,0,
+25399,692,4,02:41,439,90,88,1761,BC Roma,0,9384,10,Erik,Stevenson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,693,4,02:34,446,90,88,1761,BC Roma,0,6258,5,Corey,Davis,Palla persa,50,Passaggio sbagliato,,,79,45,1,A,7,False,0,
+25399,694,4,02:34,446,90,88,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Palla recuperata,,,,,79,45,1,A,7,False,0,693
+25399,695,4,02:28,452,90,88,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Palla persa,50,Passaggio sbagliato,,,15,75,0,A,4,False,0,
+25399,696,4,02:28,452,90,88,1761,BC Roma,0,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,
+25399,697,4,02:28,452,90,88,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,696
+25399,698,4,02:17,463,90,88,1761,BC Roma,0,5369,12,Arturs,Strautins,Palla persa,50,Passaggio sbagliato,,,86,43,1,A,6,False,0,
+25399,699,4,02:17,463,90,88,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Palla recuperata,,,,,86,43,1,A,6,False,0,698
+25399,700,4,01:55,485,90,88,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo commesso,100,personale,,,10,69,1,D,4,False,0,
+25399,701,4,01:55,485,90,88,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Fallo Subito,,,,,10,69,1,D,4,False,0,700
+25399,702,4,01:53,487,92,88,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,2 punti segnato,7,Appoggio a canestro,,,4,48,0,A,3,True,0,
+25399,703,4,01:53,487,92,88,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Assist,,,,,4,48,0,A,3,False,0,702
+25399,704,4,01:51,489,92,88,1761,BC Roma,0,,,,,Time Out,,,,,,,0,,,False,0,
+25399,705,4,01:51,489,92,88,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25399,706,4,01:51,489,92,88,1766,Openjobmetis Varese,1,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,705
+25399,707,4,01:51,489,92,88,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,705
+25399,708,4,01:51,489,92,88,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Ingresso,,,,,,,,,,False,0,705
+25399,709,4,01:51,489,92,88,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,705
+25399,710,4,01:51,489,92,88,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,705
+25399,711,4,01:51,489,92,88,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,705
+25399,712,4,01:51,489,92,88,1761,BC Roma,0,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,705
+25399,713,4,01:36,504,92,88,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Fallo commesso,100,personale,,,86,68,0,D,2,False,0,
+25399,714,4,01:36,504,92,88,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,86,68,0,D,2,False,0,713
+25399,715,4,01:30,510,92,91,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti segnato,6,Arresto e tiro,,,73,79,1,A,8,False,0,
+25399,716,4,01:30,510,92,91,1761,BC Roma,0,9436,22,Kelly,Olynyk,Assist,,,,,73,79,1,A,8,False,0,715
+25399,717,4,01:29,511,92,91,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25399,718,4,01:29,511,92,91,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,717
+25399,719,4,01:06,534,92,91,1766,Openjobmetis Varese,1,9337,3,David,Duke,2 punti sbagliato,6,Arresto e tiro,,,21,54,0,A,7,False,0,
+25399,720,4,01:06,534,92,91,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,21,54,0,A,7,False,0,719
+25399,721,4,00:51,549,92,91,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo commesso,100,personale,,,82,75,0,D,2,False,0,
+25399,722,4,00:51,549,92,91,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,82,75,0,D,2,False,0,721
+25399,723,4,00:51,549,92,92,1761,BC Roma,0,9436,22,Kelly,Olynyk,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,724,4,00:51,549,92,93,1761,BC Roma,0,9436,22,Kelly,Olynyk,Tiro libero segnato,,,,,,,,A,7,False,0,723
+25399,725,4,00:39,561,92,93,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti sbagliato,6,Arresto e tiro,,,32,47,0,A,9,False,0,
+25399,726,4,00:39,561,92,93,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Rimbalzo offensivo,,,,,32,47,0,A,9,False,0,725
+25399,727,4,00:28,572,94,93,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,2 punti segnato,7,Appoggio a canestro,,,5,42,0,A,3,True,0,
+25399,728,4,00:16,584,94,93,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,50,Passaggio sbagliato,,,71,24,1,A,10,False,0,
+25399,729,4,00:16,584,94,93,1766,Openjobmetis Varese,1,,,,,Time Out,,,,,,,0,,,False,0,
+25399,730,4,00:16,584,94,93,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,
+25399,731,4,00:16,584,94,93,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Uscita,,,,,,,,,,False,0,730
+25399,732,4,00:16,584,94,93,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Ingresso,,,,,,,,,,False,0,730
+25399,733,4,00:16,584,94,93,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,730
+25399,734,4,00:12,588,94,93,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo commesso,100,personale,,,40,84,1,D,10,False,0,
+25399,735,4,00:12,588,94,93,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo Subito,,,,,40,84,1,D,10,False,0,734
+25399,736,4,00:12,588,94,93,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25399,737,4,00:12,588,94,93,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,736
+25399,738,4,00:12,588,94,93,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Ingresso,,,,,,,,,,False,0,736
+25399,739,4,00:12,588,94,93,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,736
+25399,740,4,00:12,588,94,93,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Uscita,,,,,,,,,,False,0,736
+25399,741,4,00:12,588,94,93,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,736
+25399,742,4,00:12,588,94,93,1766,Openjobmetis Varese,1,9337,3,David,Duke,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25399,743,4,00:12,588,95,93,1766,Openjobmetis Varese,1,9337,3,David,Duke,Tiro libero segnato,,,,,,,,A,7,False,0,742
+25399,744,4,00:12,588,95,93,1761,BC Roma,0,,,,,Time Out,,,,,,,1,,,False,0,
+25399,745,4,00:05,595,95,93,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti sbagliato,4,Giro e Tiro,,,84,44,1,A,6,False,0,
+25399,750,4,00:05,595,95,93,1761,BC Roma,0,6258,5,Corey,Davis,Rimbalzo offensivo,,,,,84,44,1,A,6,False,0,745
+25399,746,4,00:05,595,95,93,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Stoppata,,,,,84,44,0,D,6,False,0,745
+25399,749,4,00:05,595,95,93,1761,BC Roma,0,9436,22,Kelly,Olynyk,Stoppata subita,,,,,84,44,1,A,6,False,0,745
+25399,751,4,00:05,595,95,93,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Fallo commesso,100,personale,,,91,46,0,D,3,False,0,
+25399,752,4,00:05,595,95,93,1761,BC Roma,0,6258,5,Corey,Davis,Fallo Subito,,,,,91,46,0,D,3,False,0,751
+25399,753,4,00:05,595,95,94,1761,BC Roma,0,6258,5,Corey,Davis,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,754,4,00:05,595,95,95,1761,BC Roma,0,6258,5,Corey,Davis,Tiro libero segnato,,,,,,,,A,7,False,0,753
+25399,755,4,00:05,595,95,95,1766,Openjobmetis Varese,1,,,,,Time Out,,,,,,,0,,,False,0,
+25399,756,4,00:05,595,95,95,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25399,757,4,00:05,595,95,95,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,756
+25399,758,4,00:05,595,95,95,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Uscita,,,,,,,,,,False,0,756
+25399,759,4,00:05,595,95,95,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,756
+25399,760,4,00:02,598,95,95,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,30,22,0,A,8,False,0,
+25399,761,4,00:00,600,95,95,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25399,762,5,05:00,0,95,95,1766,Openjobmetis Varese,1,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,
+25399,763,5,05:00,0,95,95,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Ingresso,,,,,,,,,,False,0,762
+25399,764,5,05:00,0,95,95,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25399,765,5,04:42,18,98,95,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,3 punti segnato,1,Tiro in sospensione,,,25,86,0,A,10,False,0,
+25399,766,5,04:42,18,98,95,1766,Openjobmetis Varese,1,9337,3,David,Duke,Assist,,,,,25,86,0,A,10,False,0,765
+25399,767,5,04:25,35,98,95,1761,BC Roma,0,6258,5,Corey,Davis,3 punti sbagliato,1,Tiro in sospensione,,,84,95,1,A,8,False,0,
+25399,768,5,04:25,35,98,95,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Rimbalzo difensivo,,,,,84,95,1,A,8,False,0,767
+25399,769,5,04:19,41,98,95,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo commesso,100,personale,,,63,51,1,A,9,False,0,
+25399,770,5,04:19,41,98,95,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Fallo Subito,,,,,63,51,1,A,9,False,0,769
+25399,771,5,04:19,41,99,95,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,772,5,04:19,41,100,95,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Tiro libero segnato,,,,,,,,A,7,False,0,771
+25399,773,5,04:02,58,100,95,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti sbagliato,8,Da penetrazione,1005,stoppata,85,57,1,A,6,False,0,
+25399,774,5,04:02,58,100,95,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Stoppata,,,,,85,57,1,A,6,False,0,773
+25399,775,5,04:02,58,100,95,1761,BC Roma,0,9384,10,Erik,Stevenson,Stoppata subita,,,,,85,57,1,A,6,False,0,773
+25399,776,5,04:02,58,100,95,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Rimbalzo difensivo,,,,,85,57,1,A,6,False,0,773
+25399,777,5,03:44,76,100,95,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,3 punti sbagliato,6,Arresto e tiro,,,33,51,0,A,9,False,0,
+25399,778,5,03:44,76,100,95,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,33,51,0,A,9,False,0,777
+25399,779,5,03:38,82,100,97,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,7,Appoggio a canestro,500,contropiede,96,44,1,A,3,True,0,
+25399,780,5,03:20,100,103,97,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,3 punti segnato,1,Tiro in sospensione,,,17,96,0,A,10,False,0,
+25399,781,5,03:20,100,103,97,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Assist,,,,,17,96,0,A,10,False,0,780
+25399,782,5,03:04,116,103,97,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,74,85,1,A,8,False,0,
+25399,783,5,03:04,116,103,97,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo offensivo,,,,,74,85,1,A,8,False,0,782
+25399,784,5,02:57,123,103,97,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo commesso,106,offensivo,,,84,87,1,A,2,False,0,
+25399,785,5,02:57,123,103,97,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,,,,,84,87,1,A,2,False,0,784
+25399,786,5,02:57,123,103,97,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo Subito,,,,,84,87,1,A,2,False,0,784
+25399,787,5,02:57,123,103,97,1761,BC Roma,0,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,
+25399,788,5,02:57,123,103,97,1761,BC Roma,0,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,787
+25399,789,5,02:57,123,103,97,1761,BC Roma,0,,,,,Falli di squadra,301,tecnico squadra,,,71,22,1,A,10,False,0,
+25399,790,5,02:57,123,104,97,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,791,5,02:54,126,104,97,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo commesso,100,personale,,,37,85,1,D,10,False,0,
+25399,792,5,02:54,126,104,97,1766,Openjobmetis Varese,1,9337,3,David,Duke,Fallo Subito,,,,,37,85,1,D,10,False,0,791
+25399,793,5,02:54,126,105,97,1766,Openjobmetis Varese,1,9337,3,David,Duke,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,794,5,02:54,126,106,97,1766,Openjobmetis Varese,1,9337,3,David,Duke,Tiro libero segnato,,,,,,,,A,7,False,0,793
+25399,795,5,02:46,134,106,97,1761,BC Roma,0,6258,5,Corey,Davis,3 punti sbagliato,6,Arresto e tiro,1003,tip-in appoggio canestro made,68,59,1,A,9,False,0,
+25399,796,5,02:46,134,106,97,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo offensivo,,,,,68,59,1,A,9,False,0,795
+25399,797,5,02:46,134,106,99,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,7,Appoggio a canestro,,,68,59,1,A,7,False,0,
+25399,798,5,02:28,152,106,99,1766,Openjobmetis Varese,1,9337,3,David,Duke,2 punti sbagliato,8,Da penetrazione,1005,stoppata,5,50,0,A,3,False,0,
+25399,799,5,02:28,152,106,99,1761,BC Roma,0,9436,22,Kelly,Olynyk,Stoppata,,,,,5,50,0,A,3,False,0,798
+25399,800,5,02:28,152,106,99,1766,Openjobmetis Varese,1,9337,3,David,Duke,Stoppata subita,,,,,5,50,0,A,3,False,0,798
+25399,801,5,02:28,152,106,99,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,5,50,0,A,3,False,0,798
+25399,802,5,02:14,166,106,101,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,3,Tiro in fadeaway,,,92,75,1,A,2,False,0,
+25399,803,5,01:58,182,106,101,1766,Openjobmetis Varese,1,9337,3,David,Duke,3 punti sbagliato,1,Tiro in sospensione,,,13,3,0,A,8,False,0,
+25399,804,5,01:58,182,106,101,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,13,3,0,A,8,False,0,803
+25399,805,5,01:41,199,106,101,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,75,84,1,A,8,False,0,
+25399,806,5,01:41,199,106,101,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Rimbalzo difensivo,,,,,75,84,1,A,8,False,0,805
+25399,807,5,01:22,218,106,101,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo commesso,100,personale,,,32,41,1,D,9,False,0,
+25399,808,5,01:22,218,106,101,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Fallo Subito,,,,,32,41,1,D,9,False,0,807
+25399,809,5,01:22,218,106,101,1761,BC Roma,0,9385,3,Paul,Watson,Ingresso,,,,,,,,,,False,0,
+25399,810,5,01:22,218,106,101,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,809
+25399,811,5,01:22,218,106,101,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25399,812,5,01:22,218,106,101,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,811
+25399,813,5,01:22,218,107,101,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Tiro libero segnato,,,,,,,,A,7,False,0,
+25399,814,5,01:22,218,108,101,1766,Openjobmetis Varese,1,7428,15,Nate,Renfro,Tiro libero segnato,,,,,,,,A,7,False,0,813
+25399,815,5,01:06,234,108,101,1761,BC Roma,0,9436,22,Kelly,Olynyk,3 punti sbagliato,1,Tiro in sospensione,,,65,48,1,A,9,False,0,
+25399,816,5,01:06,234,108,101,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Rimbalzo difensivo,,,,,65,48,1,A,9,False,0,815
+25399,817,5,00:48,252,108,101,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Fallo commesso,106,offensivo,,,36,63,0,A,9,False,0,
+25399,818,5,00:48,252,108,101,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Palla persa,,,,,36,63,0,A,9,False,0,817
+25399,819,5,00:48,252,108,101,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo Subito,,,,,36,63,0,A,9,False,0,817
+25399,820,5,00:39,261,108,103,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,8,Da penetrazione,,,90,53,1,A,6,True,0,
+25399,821,5,00:39,261,108,103,1766,Openjobmetis Varese,1,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25399,822,5,00:39,261,108,103,1766,Openjobmetis Varese,1,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,821
+25399,823,5,00:17,283,110,103,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,2 punti segnato,9,Schiacciata,,,7,49,0,A,3,True,1,
+25399,824,5,00:17,283,110,103,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Assist,,,,,7,49,0,A,3,False,0,823
+25399,825,5,00:08,292,110,103,1761,BC Roma,0,,,,,Time Out,,,,,,,1,,,False,0,
+25399,826,5,00:05,295,110,103,1766,Openjobmetis Varese,1,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,
+25399,827,5,00:05,295,110,103,1766,Openjobmetis Varese,1,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,826
+25399,828,5,00:01,299,110,103,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,70,85,1,A,8,False,0,
+25399,829,5,00:01,299,110,103,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo offensivo,,,,,70,85,1,A,8,False,0,828
+25399,830,5,00:00,300,110,103,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
