@@ -30,6 +30,7 @@ import pandas as pd
 
 import lba_style
 import pages
+import synergy_leaderboard
 import weekly_config
 from imgopt import shrink_png
 from player_names import photo_name
@@ -91,7 +92,8 @@ def page_state(notes: dict[str, str]) -> str:
 
 def day_label(iso: str) -> str:
     """Return an ISO date as e.g. "5 Oct"."""
-    return date.fromisoformat(iso).strftime("%-d %b")
+    d = date.fromisoformat(iso)
+    return f"{d.day} {d.strftime('%b')}"       # "%-d" is not supported by strftime on Windows
 
 
 def game_text(r: pd.Series) -> str:
@@ -500,6 +502,130 @@ def build_info_pages() -> list[dict]:
     return entries
 
 
+LEADERBOARD_JS = r"""
+<style>
+.doc table.sortable th { cursor:pointer; user-select:none; white-space:nowrap; }
+.doc table.sortable th .arrow { font-size:.7em; margin-left:3px; opacity:.8; }
+.lb-tabs { display:flex; flex-wrap:wrap; gap:6px; margin:1.2rem 0 .2rem; position:sticky; top:0; z-index:5; background:var(--paper); padding:8px 0; border-bottom:1px solid var(--line); }
+.lb-tabs button { font:inherit; font-size:.88rem; padding:3px 12px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; }
+.lb-tabs .lb-pdf { margin-left:auto; }
+.lb-printhead { display:none; }
+@media print {
+  @page { margin:12mm; }
+  header, .author, .lb-tabs, .sec-tools, #hl-toggle, #hl-panel, button { display:none !important; }
+  .lb-printhead { display:block; font-weight:600; margin:0 0 6px; }
+  main { max-width:none; padding:0; } body { font-size:11px; line-height:1.3; }
+  .doc table { font-size:10px; } .doc td, .doc th { padding:2px 5px !important; }
+  .doc h1 { margin:0 0 4px; font-size:1.2rem; } .doc h1::after { display:none; } .doc h2 { margin-top:10px; }
+  details.sec { break-inside:avoid-page; margin-top:10px; } .doc tr { break-inside:avoid; }
+  * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+.lb-legend { font-size:.82rem; color:var(--muted); margin:.4rem 0 0; }
+.lb-tabs button[aria-selected="true"] { background:var(--gold); border-color:var(--gold); font-weight:600; }
+</style>
+<script>
+// Play-type tabs: one bar above the sections; the chosen play type is shown in every section (competition x offence/defence) and kept in the address (#spot-up).
+(function () {
+  var heads = [].slice.call(document.querySelectorAll(".doc h3")); if (!heads.length) return;
+  var names = [], slug = function (t) { return t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); };
+  heads.forEach(function (h) {
+    var t = h.nextElementSibling; while (t && t.tagName !== "TABLE") t = t.nextElementSibling;
+    h._table = t; h.dataset.play = t.dataset.play = h.textContent;
+    if (names.indexOf(h.textContent) < 0) names.push(h.textContent);
+  });
+  var bar = document.createElement("div"); bar.className = "lb-tabs"; bar.setAttribute("role", "tablist");
+  var first = document.querySelector(".doc details.sec"); first.parentNode.insertBefore(bar, first);
+  var head = document.createElement("div"); head.className = "lb-printhead"; bar.parentNode.insertBefore(head, bar);
+  var asof = ((document.querySelector(".doc details.sec p em") || {}).textContent || "").match(/Synergy data up to [^,]+/);
+  var pdf = document.createElement("button"); pdf.type = "button"; pdf.className = "lb-pdf"; pdf.textContent = "⬇ PDF of this tab";
+  pdf.title = "Opens the print dialog: choose Save as PDF as the destination. Keeps the sorting you have set.";
+  pdf.addEventListener("click", function () {
+    var old = document.title, cur = bar.querySelector('[aria-selected="true"]').dataset.play;
+    document.title = "Leaderboard " + cur + (asof ? " " + asof[0].replace("Synergy data up to ", "") : "");
+    window.print(); document.title = old;
+  });
+  var show = function (name) {
+    head.textContent = "Leaderboard · " + name + (asof ? " · " + asof[0] : "");
+    heads.forEach(function (h) { var on = h.dataset.play === name; h.style.display = "none"; h._table.style.display = on ? "" : "none"; });
+    [].forEach.call(bar.children, function (b) { b.setAttribute("aria-selected", b.dataset.play === name ? "true" : "false"); });
+    history.replaceState(null, "", "#" + slug(name));
+  };
+  names.forEach(function (n) {
+    var b = document.createElement("button"); b.type = "button"; b.textContent = n; b.dataset.play = n; b.setAttribute("role", "tab");
+    b.addEventListener("click", function () { show(n); }); bar.appendChild(b);
+  });
+  bar.appendChild(pdf);
+  show(names.filter(function (n) { return "#" + slug(n) === location.hash; })[0] || names[0]);
+})();
+</script>
+<script>
+// Sortable leaderboard tables: click a header to sort by it (again to reverse); the Rk column is renumbered by the chosen column
+// (ties share a rank). Teams the app does not rank (Rk "–", fewer than 10 possessions) stay at the bottom. Click Rk to restore the app's ranking.
+// The first click puts the best value first (defence: lowest PPP allowed, highest TO%; offence: the opposite) and cells are shaded green (better) to red (worse).
+(function () {
+  var num = function (td) { var v = parseFloat(td.textContent.replace("%", "")); return isNaN(v) ? null : v; };
+  var LOWER_BETTER_ON_DEFENCE = {"PPP": 1, "FG%": 1, "eFG%": 1, "Score%": 1, "2P%": 1, "3P%": 1};     // TO% is the reverse
+  var rgba = function (g) { return g >= .5 ? "rgba(30,123,69," + ((g - .5) * .7).toFixed(2) + ")" : "rgba(179,48,47," + ((.5 - g) * .7).toFixed(2) + ")"; };
+  var legend = document.createElement("p"); legend.className = "lb-legend";
+  legend.innerHTML = 'Shading compares the teams of each table: <span style="background:rgba(30,123,69,.35)">&nbsp;green = better&nbsp;</span> <span style="background:rgba(179,48,47,.35)">&nbsp;red = worse&nbsp;</span> '
+    + 'for the team. On defence a low PPP, FG%, eFG%, Score%, 2P% or 3P% allowed is good and a high TO% (turnovers forced) is good; on offence the opposite. Pos, W-L, Poss and %Time are not shaded.';
+  var bar = document.querySelector(".lb-tabs"); if (bar) bar.parentNode.insertBefore(legend, bar.nextSibling);
+  [].forEach.call(document.querySelectorAll(".doc table"), function (tb) {
+    var sec = tb.closest("details"), defence = !!sec && /Defence/.test(sec.querySelector("h2").textContent);
+    var heads = [].slice.call(tb.tHead.rows[0].cells), body = tb.tBodies[0], rows = [].slice.call(body.rows);
+    rows.forEach(function (r, i) { r._i = i; r._rk = r.cells[0].textContent; r._ranked = r._rk.trim() !== "–"; });
+    var ranked0 = rows.filter(function (r) { return r._ranked; });
+    // +1 = a low value is better, -1 = a high value is better, 0 = not a quality measure
+    var better = heads.map(function (h) {
+      var t = h.textContent.trim(), low = t === "TO%" ? !defence : LOWER_BETTER_ON_DEFENCE[t] ? defence : null;
+      return low === null ? 0 : low ? 1 : -1;
+    });
+    heads.forEach(function (h, c) {
+      if (!better[c]) return;
+      var vals = ranked0.map(function (r) { return num(r.cells[c]); }).filter(function (v) { return v !== null; });
+      ranked0.forEach(function (r) {
+        var v = num(r.cells[c]); if (v === null || vals.length < 2) return;
+        var worse = 0, same = 0; vals.forEach(function (w) { if (better[c] > 0 ? w > v : w < v) worse++; else if (w === v) same++; });
+        r.cells[c].style.background = rgba((worse + (same - 1) / 2) / (vals.length - 1));
+      });
+    });
+    tb.classList.add("sortable");
+    var state = {col: 0, dir: 1};
+    heads.forEach(function (th, c) {
+      th.title = "Sort by " + th.textContent + " (click again to reverse)";
+      th.addEventListener("click", function () {
+        var first = c === 1 || c === 0 || th.textContent.trim() === "Pos" ? 1 : better[c] > 0 ? 1 : -1;       // best first: low values first when low is better
+        state = {col: c, dir: state.col === c && c !== 0 ? -state.dir : first};
+        var ranked = rows.filter(function (r) { return r._ranked; }), rest = rows.filter(function (r) { return !r._ranked; });
+        var key = function (r) { return c === 1 ? r.cells[1].textContent.toLowerCase() : c === 0 ? r._i : num(r.cells[c]); };
+        ranked.sort(function (a, b) { var x = key(a), y = key(b); if (x === y) return a._i - b._i; if (x === null) return 1; if (y === null) return -1; return (x < y ? -1 : 1) * state.dir; });
+        ranked.forEach(function (r, i) {
+          if (c === 0) { r.cells[0].textContent = r._rk; return; }
+          var prev = ranked[i - 1];
+          r._pos = (prev && key(prev) === key(r)) ? prev._pos : i + 1;
+          r.cells[0].textContent = c === 1 ? i + 1 : r._pos;
+        });
+        ranked.concat(rest).forEach(function (r) { body.appendChild(r); });
+        heads.forEach(function (h) { var a = h.querySelector(".arrow"); if (a) a.remove(); });
+        if (c !== 0) { var s = document.createElement("span"); s.className = "arrow"; s.textContent = state.dir > 0 ? "▲" : "▼"; th.appendChild(s); }
+      });
+    });
+  });
+})();
+</script>
+"""
+
+
+def build_leaderboard() -> dict | None:
+    """docs/leaderboard/index.html from data/synergy/leaderboard (Synergy defensive tables); None while there is no data."""
+    shutil.rmtree(DOCS / "leaderboard", ignore_errors=True)
+    text = synergy_leaderboard.page_markdown()
+    if text is None:
+        return None
+    return {"slug": "leaderboard", "title": "Leaderboard", "html": f'<div class="doc">{md_html(text)}</div>{LEADERBOARD_JS}', "url": "leaderboard/",
+            "edit": None, "label": "Leaderboard"}
+
+
 def build_nav(snaps: list[dict], opps: list[dict]) -> dict:
     """The Opponents dropdown, newest first: the games that have an opponent analysis (snapshots are reached from the landing page)."""
     by_slug = {e["opponent_slug"]: e for e in snaps if e["opponent_slug"]}
@@ -643,6 +769,11 @@ def main() -> None:
     nav = {**build_nav(snaps, opps), "pages": [{"url": p["url"], "label": p["label"], "right": i == 0} for i, p in enumerate(info_pages)]}
     if len(snaps) > 1:
         nav["pages"].insert(0, {"url": "compare/", "label": "Compare"})     # then Goal, Methodology, Work plan, pushed to the right
+    board = build_leaderboard()
+    if board:
+        nav["pages"].insert(0, {"url": board["url"], "label": board["label"]})
+        (DOCS / "leaderboard").mkdir(parents=True, exist_ok=True)
+        (DOCS / "leaderboard" / "index.html").write_text(shell(f"{board['title']} · {CFG['site_title']}", board["html"], "../", nav), encoding="utf-8")
     build_compare(snaps, nav)
     for p in info_pages:
         (DOCS / p["slug"]).mkdir(parents=True, exist_ok=True)
