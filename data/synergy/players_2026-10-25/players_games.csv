@@ -1,0 +1,129 @@
+player,season,pid,game_id,date,home,away,comp,poss,fga,pts
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec15d0f43ff6bfa735a63c,2024-12-21,Breogan,Basquet Girona,Spanish ACB League,3,1,4
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec14aa0743187751fe94af,2024-12-15,Real Madrid,Breogan,Spanish ACB League,7,6,2
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec1958b162c0117572f989,2025-01-02,Breogan,Manresa,Spanish ACB League,9,5,12
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ebf9b2243a545a19b7b9af,2024-09-29,Bilbao,Breogan,Spanish ACB League,5,4,2
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec1829c86fdd6e90c4a858,2024-12-28,Unicaja,Breogan,Spanish ACB League,6,4,3
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec00b67d0c57b55b93e564,2024-10-13,Breogan,Valencia,Spanish ACB League,1,1,0
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec0c77ed418afc760b71f1,2024-11-10,Breogan,Barcelona,Spanish ACB League,6,5,2
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec0ec89628d10a17584680,2024-11-16,Murcia,Breogan,Spanish ACB League,9,6,4
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f51debf65b193c4342015a,2025-01-25,Breogan,Bilbao,Spanish ACB League,12,7,13
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec04432c5e14673623860e,2024-10-19,Joventut,Breogan,Spanish ACB League,5,5,4
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f51deef65b193c43420168,2025-02-02,Lenovo Tenerife,Breogan,Spanish ACB League,9,8,15
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f524f7e4124d827b9fdc40,2025-04-12,Basquet Girona,Breogan,Spanish ACB League,1,0,2
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f52ad05f668472666e175b,2025-04-20,Breogan,Zaragoza,Spanish ACB League,6,5,7
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec205f9a3e73b4d87c8a3d,2025-01-19,Baskonia,Breogan,Spanish ACB League,11,9,12
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f52e58f4385393ced937c4,2025-05-11,Breogan,Real Madrid,Spanish ACB League,10,8,6
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f52e58f4385393ced937c5,2025-05-17,Granada,Breogan,Spanish ACB League,1,0,0
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec1bade35e233fd27a8498,2025-01-04,Andorra,Breogan,Spanish ACB League,7,7,9
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec1379691ab6c2ca32501a,2024-12-08,Gran Canaria,Breogan,Spanish ACB League,10,6,11
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f51deef65b193c4342016c,2025-02-08,Breogan,Unicaja,Spanish ACB League,8,6,5
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ebfe60cd7542a18b1915a6,2024-11-07,Breogan,Lenovo Tenerife,Spanish ACB League,6,6,7
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec08ebea2ae3d34182786e,2024-11-02,Zaragoza,Breogan,Spanish ACB League,6,4,3
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f52ad15f668472666e175f,2025-04-26,Breogan,Joventut,Spanish ACB League,6,5,6
+Atic,2024-25,66f973b32ad906d28ce17d8e,66f52ad25f668472666e1769,2025-05-03,Manresa,Breogan,Spanish ACB League,5,4,3
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec06965906f8ee5263d3ee,2024-10-27,Breogan,Lleida,Spanish ACB League,6,3,5
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec111ffc0c0d8ebfb15606,2024-11-30,Breogan,Granada,Spanish ACB League,9,8,11
+Atic,2024-25,66f973b32ad906d28ce17d8e,66ec1e07ff1526e1c8f28f35,2025-01-12,Breogan,BasquetCoruna,Spanish ACB League,11,7,9
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ea2ee5ca3f5fd2cc84cd6a,2025-10-15,Lublin,Bosna,FIBA Europe Cup,12,9,12
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad797ebf7824c59c833686,2026-01-12,Crvena Zvezda,Bosna,Adriatic League (ABA),13,7,2
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68c82f61d83214701ede0baa,2025-09-15,Dubai,Bosna,Exhibitions,13,9,17
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad7bd65864bf9d789f32a6,2026-02-07,Bosna,Ilirija,Adriatic League (ABA),11,9,12
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,672352d7c43d10568bcee123,2026-02-04,Cedevita JR,Bosna,FIBA Europe Cup,15,11,15
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad67ecad2fd4708ebae030,2025-10-17,Bosna,Buducnost,Adriatic League (ABA),11,7,7
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,6989a8ae0a2bb398d4dbd53a,2026-03-14,Igokea,Bosna,Adriatic League (ABA),6,3,6
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,69398f35690295582318fb87,2025-12-10,Oradea,Bosna,FIBA Europe Cup,15,11,24
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68bbf1c9f5581e62634f9bbd,2025-09-24,Bosna,Kangoeoers,FIBA Europe Cup,14,11,7
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,69eb0ea9a50fa2d4534951e2,2026-04-28,Bosna,Igokea,Adriatic League (ABA),14,10,17
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ea2ee6ca3f5fd2cc84cd79,2025-10-21,Bosna,Murcia,FIBA Europe Cup,15,12,19
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad797dbf7824c59c833678,2026-01-02,Bosna,Zadar,Adriatic League (ABA),16,15,14
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,672352d9c43d10568bcee131,2026-01-14,Reggio Emilia,Bosna,FIBA Europe Cup,8,7,3
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,69f83ed60567067211297861,2026-05-06,Partizan,Bosna,Adriatic League (ABA),12,7,5
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,6989bc9aa041b8d1431ebfaa,2026-04-21,Bosna,Dubai,Adriatic League (ABA),7,5,5
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad70212807bb1f13986861,2025-11-22,Ilirija,Bosna,Adriatic League (ABA),9,8,9
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68c478fd0c212797e4b01036,2025-09-13,CSKA,Bosna,Exhibitions,8,4,2
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad7bd65864bf9d789f329d,2026-01-29,Vienna Basket,Bosna,Adriatic League (ABA),14,11,13
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ea313da52a93998b1efa31,2025-10-29,Rilski,Bosna,FIBA Europe Cup,16,12,11
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad701f2807bb1f1398684c,2025-11-01,Bosna,Vienna Basket,Adriatic League (ABA),7,6,6
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,6989ab08f1780f0b0525b3ac,2026-04-05,ClujNapoca,Bosna,Adriatic League (ABA),7,4,2
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,686f4be8e917a1f62570c2b4,2025-12-17,Bosna,Cedevita JR,FIBA Europe Cup,15,10,17
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ea3f4e113e4632ae8a4a44,2025-11-11,Murcia,Bosna,FIBA Europe Cup,9,7,4
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad67edad2fd4708ebae03b,2025-10-25,Bosna,Cedevita Olimpija,Adriatic League (ABA),17,14,17
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad70202807bb1f1398685c,2025-11-15,Bosna,Spartak,Adriatic League (ABA),14,9,9
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68bbf1caf5581e62634f9bc4,2025-10-01,Kangoeoers,Bosna,FIBA Europe Cup,9,7,13
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ea3f4e113e4632ae8a4a3e,2025-11-05,Bosna,Lublin,FIBA Europe Cup,10,8,7
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ea41a63152296e0dbc2f83,2025-11-19,Bosna,Rilski,FIBA Europe Cup,12,9,9
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad797ebf7824c59c83368e,2026-01-18,Bosna,Mega,Adriatic League (ABA),14,7,6
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad7bd55864bf9d789f3297,2026-01-24,Buducnost,Bosna,Adriatic League (ABA),8,5,8
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,672352d6c43d10568bcee11b,2026-02-11,Bosna,Reggio Emilia,FIBA Europe Cup,16,11,12
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,6989ab09f1780f0b0525b3b2,2026-04-11,Bosna,Igokea,Adriatic League (ABA),8,5,8
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad75f980680d9e69ee1685,2025-12-08,Bosna,Crvena Zvezda,Adriatic League (ABA),13,8,7
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,6989a8ad0a2bb398d4dbd52f,2026-02-16,Dubai,Bosna,Adriatic League (ABA),14,9,11
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,69f8632a7357eeab3c7a0279,2026-05-10,Bosna,Partizan,Adriatic League (ABA),7,5,8
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad75fa80680d9e69ee1690,2025-12-21,Spartak,Bosna,Adriatic League (ABA),7,5,11
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,6989a8ad0a2bb398d4dbd538,2026-03-08,Bosna,Partizan,Adriatic League (ABA),12,6,9
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,672352d8c43d10568bcee12b,2026-01-21,Bosna,Oradea,FIBA Europe Cup,12,9,8
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad75f980680d9e69ee1686,2025-12-13,Cedevita Olimpija,Bosna,Adriatic League (ABA),11,8,6
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,6994719d6a60222c74b02821,2026-03-11,Falco,Bosna,FIBA Europe Cup,14,12,10
+Atic,2025-26,68ba28c2ac6156e28b1ab0fa,68ad67ecad2fd4708ebae02d,2025-10-12,Mega,Bosna,Adriatic League (ABA),15,10,20
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6a9fc144ad579b9661155977,2026-10-03,Spartak,Bosna,Adriatic League (ABA),10,8,7
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6a8d5a54fb6ac19b7b7dd8d3,2026-10-06,Bosna,PAOK,EuroCup,9,8,11
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6aa59c18363993e8eda379c8,2026-09-12,Bosna,Turk Telekom,Exhibitions,4,3,2
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6a8d5cacf11eb428689e80bc,2026-10-21,Bosna,Bahcesehir,EuroCup,9,6,6
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6a8d534bc9316494789b6244,2026-09-30,Lietkabelis,Bosna,EuroCup,7,3,3
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6a9fc4c84457146fce5f8e33,2026-10-24,Bosna,Dubai,Adriatic League (ABA),10,8,10
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6a9fc145ad579b9661155983,2026-10-10,SC Derby,Bosna,Adriatic League (ABA),4,3,2
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6aa59c18363993e8eda379c9,2026-09-13,SC Derby,Bosna,Exhibitions,6,3,0
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6a8d5b7ff420f6d4458bc3fc,2026-10-14,Ulm,Bosna,EuroCup,8,5,4
+Atic,2026-27,68ba28c2ac6156e28b1ab0fa,6a9fc4c84457146fce5f8e2b,2026-10-18,Bosna,Partizan,Adriatic League (ABA),7,5,2
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8c5c73337eec91ada994,2025-04-04,SYNTAINICS MBC,Frankfurt,German League,10,7,6
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8c5d73337eec91ada9a7,2025-04-20,ALBA Berlin,Frankfurt,German League,6,3,0
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8d85705ba77da73c667d,2025-04-26,Frankfurt,Vechta,German League,7,6,9
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8c5d73337eec91ada9a4,2025-04-17,Frankfurt,Rostock,German League,15,13,18
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf87aabe0bfe711265831e,2025-03-01,Frankfurt,Hamburg,German League,13,11,12
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8a03545b2ec245670f9d,2025-03-22,Ulm,Frankfurt,German League,14,7,13
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8d88705ba77da73c6693,2025-04-09,Frankfurt,Oldenburg,German League,12,9,5
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8c5d73337eec91ada99e,2025-04-12,Frankfurt,Bonn,German League,10,6,7
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8c5b73337eec91ada991,2025-03-30,Frankfurt,Chemnitz,German League,14,9,12
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8d86705ba77da73c6682,2025-05-01,Frankfurt,s.Oliver,German League,8,5,4
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8a03545b2ec245670f98,2025-03-16,Frankfurt,Ludwigsburg,German League,19,9,16
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8d87705ba77da73c668a,2025-05-04,Braunschweig,Frankfurt,German League,10,7,2
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,6758138931723af72e2d8d38,2025-02-15,Frankfurt,Brose,German Cup,9,6,7
+Domask,2024-25,67b0f707f9aa36ac0a55e58f,66cf8a01545b2ec245670f8c,2025-03-08,Brose,Frankfurt,German League,5,5,3
+Domask,2025-26,699b2d75936c653408a33054,68bacf2dbf64fc0e3080da5d,2026-03-29,Den Helder,Oostende,BNXT League,8,6,8
+Domask,2025-26,699b2d75936c653408a33054,68bad183c53d65c06570032c,2026-04-19,Kangoeoers,Oostende,BNXT League,6,4,5
+Domask,2025-26,699b2d75936c653408a33054,6a26799b43180f3cd905fd5d,2026-06-11,Oostende,Antwerp,BNXT League,11,5,7
+Domask,2025-26,699b2d75936c653408a33054,68bad3d9fc4c358238a56f0b,2026-04-25,Oostende,Mons-Hainaut,BNXT League,11,9,11
+Domask,2025-26,699b2d75936c653408a33054,6a0ac8ee5d15be1e7ea872e2,2026-05-24,Aalstar,Oostende,BNXT League,14,11,10
+Domask,2025-26,699b2d75936c653408a33054,6a02da11390eecf3cedbeb09,2026-05-15,Oostende,Circus Brussels,BNXT League,15,14,23
+Domask,2025-26,699b2d75936c653408a33054,68bacf2cbf64fc0e3080da54,2026-03-15,Oostende,Antwerp,BNXT League,7,5,4
+Domask,2025-26,699b2d75936c653408a33054,6a13f7b8605ac2ebe0f75809,2026-05-29,Aalstar,Oostende,BNXT League,15,11,20
+Domask,2025-26,699b2d75936c653408a33054,6a2d1248c0799c332beaba1f,2026-06-13,Antwerp,Oostende,BNXT League,14,10,19
+Domask,2025-26,699b2d75936c653408a33054,68bacf2ebf64fc0e3080da6e,2026-04-04,Oostende,Spirou,BNXT League,9,8,6
+Domask,2025-26,699b2d75936c653408a33054,68bad3dafc4c358238a56f1d,2026-05-06,Kortrijk Spurs,Oostende,BNXT League,12,9,11
+Domask,2025-26,699b2d75936c653408a33054,68bad3dafc4c358238a56f16,2026-05-03,DonarGroningen,Oostende,BNXT League,10,8,4
+Domask,2025-26,699b2d75936c653408a33054,6a0ac8ee5d15be1e7ea872e1,2026-05-22,Oostende,Aalstar,BNXT League,10,8,7
+Domask,2025-26,699b2d75936c653408a33054,6a1d2fe14c10ed98b038af65,2026-06-04,Antwerp,Oostende,BNXT League,8,2,4
+Domask,2025-26,699b2d75936c653408a33054,6a1d2fe14c10ed98b038af67,2026-06-08,Antwerp,Oostende,BNXT League,14,9,20
+Domask,2025-26,699b2d75936c653408a33054,68baccd2d32727fb4979738f,2026-02-22,Den Bosch,Oostende,BNXT League,10,7,8
+Domask,2025-26,699b2d75936c653408a33054,6a0ac8ee5d15be1e7ea872e3,2026-05-26,Oostende,Aalstar,BNXT League,15,12,18
+Domask,2025-26,699b2d75936c653408a33054,68bad5044b529c2db77483ad,2026-05-09,Oostende,Circus Brussels,BNXT League,13,8,16
+Domask,2025-26,699b2d75936c653408a33054,68baaf873003cc7ea713589f,2026-03-21,Aalstar,Oostende,BNXT League,10,8,12
+Domask,2025-26,699b2d75936c653408a33054,68bad183c53d65c065700326,2026-04-17,Oostende,Kangoeoers,BNXT League,8,6,4
+Domask,2025-26,699b2d75936c653408a33054,68bad182c53d65c065700318,2026-04-11,PrismaWorx BAL,Oostende,BNXT League,15,10,17
+Domask,2025-26,699b2d75936c653408a33054,68baccd3d32727fb49797399,2026-03-10,Antwerp,Oostende,BNXT League,6,4,6
+Domask,2025-26,699b2d75936c653408a33054,6a02da12390eecf3cedbeb0a,2026-05-17,Circus Brussels,Oostende,BNXT League,14,10,22
+Domask,2025-26,699b2d75936c653408a33054,6a1d2fe14c10ed98b038af66,2026-06-06,Oostende,Antwerp,BNXT League,7,5,2
+Domask,2025-26,69754c308215bf27d5bbd6a0,68bf3eb5a6010b840c58267e,2026-01-24,Fellbach,Frankfurt 2,German League Division 3,21,14,21
+Domask,2025-26,69754c308215bf27d5bbd6a0,68becd082024515157443356,2026-01-31,Frankfurt 2,OrangeAcademy,German League Division 3,22,16,19
+Domask,2026-27,6aa3c17c03779c2fc9219466,6aa59c18363993e8eda379c8,2026-09-12,Bosna,Turk Telekom,Exhibitions,3,2,4
+Domask,2026-27,6aa3c17c03779c2fc9219466,6a8d5b7ff420f6d4458bc3fc,2026-10-14,Ulm,Bosna,EuroCup,16,11,24
+Domask,2026-27,6aa3c17c03779c2fc9219466,6a8d5cacf11eb428689e80bc,2026-10-21,Bosna,Bahcesehir,EuroCup,6,4,4
+Domask,2026-27,6aa3c17c03779c2fc9219466,6a9fc144ad579b9661155977,2026-10-03,Spartak,Bosna,Adriatic League (ABA),4,4,6
+Domask,2026-27,6aa3c17c03779c2fc9219466,6a8d5a54fb6ac19b7b7dd8d3,2026-10-06,Bosna,PAOK,EuroCup,1,1,0
+Domask,2026-27,6aa3c17c03779c2fc9219466,6a9fc4c84457146fce5f8e2b,2026-10-18,Bosna,Partizan,Adriatic League (ABA),4,3,6
+Domask,2026-27,6aa3c17c03779c2fc9219466,6aa59c18363993e8eda379c9,2026-09-13,SC Derby,Bosna,Exhibitions,8,7,2
+Domask,2026-27,6aa3c17c03779c2fc9219466,6aa141a3f63c1e053b2ed2f9,2026-09-07,Szolnoki,Bosna,Exhibitions,8,7,10
+Domask,2026-27,6aa3c17c03779c2fc9219466,6a9fc4c84457146fce5f8e33,2026-10-24,Bosna,Dubai,Adriatic League (ABA),2,2,2
+Domask,2026-27,6aa3c17c03779c2fc9219466,6a8d534bc9316494789b6244,2026-09-30,Lietkabelis,Bosna,EuroCup,8,6,7
+Domask,2026-27,6aa3c17c03779c2fc9219466,6a9fc145ad579b9661155983,2026-10-10,SC Derby,Bosna,Adriatic League (ABA),3,3,5
