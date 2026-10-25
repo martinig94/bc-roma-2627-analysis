@@ -30,6 +30,8 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## Key points
 
+- Last ABA Game (24-10): Popovich out. Stating 5: Gholston, Atic, Talic, Hawkins, Banks (9').
+
 - Bosna is 1-3 but every game was close: 72-75 at Lietkabelis, 72-75 vs PAOK, 93-102 at Ulm, 86-77 vs Bahcesehir (the group leader) last week. Point difference -6 in four games, BC Roma -23.  
 - Two scorers at 14.2 points a game: ==Perry== (64 possessions used in 4 games, 8.0 rebounds of which 3.5 offensive, 5 fouls drawn a game, 0.89 PPP) and ==Pipes== (48 possessions, 1.19 PPP, 19/20 from the line, 3 turnovers in 94 minutes). Gholston adds 10.0 (1.00 PPP, 5/6 at the rim in transition), Domask 8.8 in 16 minutes off the bench (1.13 PPP, eFG% 61).  
 - Turnovers on both sides: Bosna loses the ball on 20.1% of its possessions, second-highest of the 32 EuroCup teams (17 a game; Browne 11 in 46 minutes), BC Roma 19.0% (third-highest). Neither forces many: 14.5% and 15.5% forced.  
