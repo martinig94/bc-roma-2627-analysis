@@ -24,6 +24,8 @@ The two rosters are built very differently. BC Roma's starters produce 65 points
 
 ![minutes](03_minutes.png)
 
+![rotation by minute](13_rotation_by_minute.png)
+
 ## Scoring sources
 
 This is the clearest contrast in the matchup. BC Roma scores 38 points per game within 4.5 m of the rim (exactly the league average) and is converting 67% of its two-point attempts, with 37/45 (82%) in the restricted area in the LBA. In the play-by-play BC Roma has 23 drives to the basket ("da penetrazione") at 18/23 and six dunks; Maxima has 11 drives at 6/11 and one dunk. Maxima's inside scoring is 25 points per game, 13 below the league, with 11/21 in the restricted area (52% against a league 65%) and 4/13 from the left short-range zone. What keeps Maxima's offence afloat is the free-throw line: 26 attempts per game at 82.5%, including 30/30 against Napoli and 27/34 at Bologna. Take away those two numbers and the offence is 75 jump shots at 31%.
