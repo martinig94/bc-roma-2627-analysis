@@ -19,7 +19,7 @@ EuroCup opponent (EuroCup box scores + play-by-play, drives/transition from a Sy
      fast break = Synergy transition shots; those two components are scaled on the LBA distribution and the
      percentiles are read off the LBA players, so the chart stays comparable with the LBA ones)
 
-Output: reports/exploratory/energy_indices_<team>.png and energy_index_<league>.csv (all players).
+Output: reports/exploratory/energy_indices_<team>.png (--out/--name redirect the EuroCup opponent figure, e.g. into the matchup folder as 15_energy_indices.png) and energy_index_<league>.csv (all players).
 """
 import argparse, datetime, sys, time
 from pathlib import Path
@@ -142,7 +142,7 @@ def eurocup_table(team, synergy_dir, lba_ref):
     return opp
 
 
-def energy_figure(team, pl, slug, n_games, source, note=""):
+def energy_figure(team, pl, slug, n_games, source, note="", out=None, filename=None):
     pl = pl.sort_values("minutes", ascending=False).head(10)
     fig, ax = plt.subplots(figsize=(9, 0.5 * len(pl) + 2.2))
     fig.patch.set_facecolor("#fcfcfb"); ax.set_facecolor("#fcfcfb")
@@ -169,9 +169,11 @@ def energy_figure(team, pl, slug, n_games, source, note=""):
         fig.text(0.01, 0.895, note, fontsize=7.5, color="#6b7280", va="top")
     fig.text(0.99, 0.01, f"{AUTHOR} · {datetime.date.today().isoformat()} · source: {source}", ha="right", fontsize=7, color="#6b7280")
     fig.tight_layout(rect=(0, 0.03, 1, 0.88 if note else 0.9))
-    OUT.mkdir(parents=True, exist_ok=True)
-    save_fig(fig, OUT / f"energy_indices_{slug}.png"); plt.close(fig)
-    print(f"wrote {OUT / f'energy_indices_{slug}.png'}")
+    folder = Path(out) if out else OUT
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / (filename or f"energy_indices_{slug}.png")
+    save_fig(fig, path); plt.close(fig)
+    print(f"wrote {path}")
 
 
 def main():
@@ -180,6 +182,8 @@ def main():
     ap.add_argument("--through", help="use only LBA games played up to this date (YYYY-MM-DD)")
     ap.add_argument("--eurocup", help="EuroCup team name as in data/eurocup_2026_raw.txt (needs --synergy)")
     ap.add_argument("--synergy", help="Synergy pull folder with a shots.csv for the EuroCup team")
+    ap.add_argument("--out", help="folder for the EuroCup opponent figure (default reports/exploratory), e.g. the matchup folder of the game")
+    ap.add_argument("--name", help="file name of the EuroCup opponent figure (default energy_indices_<team>.png), e.g. 15_energy_indices.png")
     a = ap.parse_args()
 
     lba = lba_table(a.through)
@@ -206,7 +210,8 @@ def main():
         energy_figure(f"{a.eurocup} (EuroCup)", opp, a.eurocup.split()[0].lower(), opp.games.max(),
                       "EuroCup box scores & play-by-play, Synergy (drives, transition)",
                       note="EuroCup: no dunks available; drives = Synergy 'to basket' shots off P&R, isolation, spot-up, transition; fast break = Synergy transition shots "
-                           "(LBA counts shots + assists).\nBox components scaled on EuroCup players, drives/transition on LBA players; percentiles read off the LBA distribution.")
+                           "(LBA counts shots + assists).\nBox components scaled on EuroCup players, drives/transition on LBA players; percentiles read off the LBA distribution.",
+                      out=a.out, filename=a.name)
 
 
 if __name__ == "__main__":
