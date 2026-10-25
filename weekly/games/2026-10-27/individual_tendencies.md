@@ -29,6 +29,19 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 
 {{ figure: 12_triangles_players_low_attempts }}
 
+## Energy: rim activity and pace
+
+Two scores per player, built from box score and play-by-play only, shown as league percentiles (0.5 = league median; shrunk towards it for players with few minutes). ==Rim activity==: offensive rebounds, blocks and fouls drawn per 40 minutes (no dunks in the EuroCup feed). ==High pace==: drive finishes, fast-break shots, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. EuroCup, 4 games, players sorted by minutes played; the percentiles are read off the LBA players.
+
+{{ figure: 15_energy_indices }}
+
+- **Both high: Perry** (0.96 rim activity, 0.98 pace), the most active player on the team on both counts.
+- **Pace without rim work: Pipes, Gholston, Talic, Browne.** High pace (0.98, 0.98, 0.87, 0.95) with rim activity at or below the median (0.47, 0.24, 0.11, 0.47): they drive, steal and run, they do not crash the offensive boards.
+- **Rim without pace: Popovic** (0.75 rim, 0.28 pace), Atic is the balanced one (0.72, 0.58).
+- **Low on both: Hawkins** (0.06, 0.09); Domask and Vrabac sit in the middle (0.36/0.49 and 0.35/0.71).
+
+{{ pending }}
+
 ## Atic and Domask: three seasons of shots
 ### Atic
 
