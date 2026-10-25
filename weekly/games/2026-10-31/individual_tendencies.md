@@ -25,6 +25,30 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 
 {{ figure: 12_triangles_players_high_attempts }}
 
+## Rotation by player
+
+When each player is on the court in each quarter, in the last 5 games of the competition: one bar per quarter, the clock runs from 10:00 down to 0:00, dark green = on the court in every game at that moment, white = in none.
+
+{{ figure: 14_player_rotation_Iannuzzi }}
+
+{{ figure: 14_player_rotation_Johnson }}
+
+{{ figure: 14_player_rotation_Lever }}
+
+{{ figure: 14_player_rotation_Mascolo }}
+
+{{ figure: 14_player_rotation_Mcgruder }}
+
+{{ figure: 14_player_rotation_Moore }}
+
+{{ figure: 14_player_rotation_Nevels }}
+
+{{ figure: 14_player_rotation_Offurum }}
+
+{{ figure: 14_player_rotation_Onyema }}
+
+{{ figure: 14_player_rotation_Spinelli }}
+
 ## Players to watch
 
 {{ pending }}

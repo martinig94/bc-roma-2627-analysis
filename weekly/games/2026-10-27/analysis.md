@@ -76,6 +76,8 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ figure: 11_starting_fives }}
 
+{{ figure: 13_rotation_by_minute }}
+
 {{ figure: 02_starters_bench }}
 
 {{ figure: 03_minutes }}
