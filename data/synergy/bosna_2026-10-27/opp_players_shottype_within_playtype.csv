@@ -1,0 +1,31 @@
+player,play_type,shot_type,fga,fgm
+Browne,P&R Ball Handler,To basket,4,1
+Browne,P&R Ball Handler,"Dribble jumper, short (<17 ft)",2,0
+Browne,P&R Ball Handler,"Guarded, 3PT",1,1
+Browne,P&R Ball Handler,"Dribble jumper, mid-range",1,1
+Domask,Spot Up,"Open, 3PT",4,2
+Domask,Spot Up,"Guarded, 3PT",3,1
+Domask,Spot Up,"Dribble jumper, short (<17 ft)",1,1
+Domask,Spot Up,To basket,1,1
+Gholston,P&R Ball Handler,To basket,4,0
+Gholston,P&R Ball Handler,"Dribble jumper, 3PT",3,1
+Gholston,P&R Ball Handler,"Dribble jumper, mid-range",1,1
+Gholston,Transition,To basket,6,5
+Gholston,Transition,"Dribble jumper, 3PT",1,0
+Gholston,Transition,"Dribble jumper, short (<17 ft)",1,1
+Hawkins,Spot Up,"Guarded, 3PT",7,2
+Hawkins,Spot Up,"Open, 3PT",2,1
+Perry,P&R Roll Man,To basket,9,6
+Perry,P&R Roll Man,"Guarded, 3PT",2,0
+Perry,P&R Roll Man,"Open, 3PT",2,0
+Pipes,P&R Ball Handler,To basket,5,2
+Pipes,P&R Ball Handler,"Dribble jumper, 3PT",2,1
+Pipes,P&R Ball Handler,"Dribble jumper, mid-range",2,2
+Pipes,P&R Ball Handler,"Guarded, 3PT",1,0
+Pipes,P&R Ball Handler,"Dribble jumper, short (<17 ft)",1,0
+Pipes,Transition,To basket,7,4
+Pipes,Transition,"Dribble jumper, 3PT",1,0
+Pipes,Transition,"Open, 3PT",1,0
+Talic,P&R Ball Handler,To basket,5,4
+Talic,P&R Ball Handler,"Dribble jumper, mid-range",2,0
+Talic,P&R Ball Handler,"Dribble jumper, 3PT",2,1

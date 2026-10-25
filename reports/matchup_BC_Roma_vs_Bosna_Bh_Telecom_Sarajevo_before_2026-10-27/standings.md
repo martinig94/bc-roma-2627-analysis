@@ -22,4 +22,4 @@ All 16 EuroCup games played before this match (rounds 1 to 4); home team first.
 | 7 | **Bosna** | 2 | 1-3 | 323-329 | -6 | LLLW |
 | 8 | Botevgrad | 0 | 0-4 | 274-339 | -65 | LLLL |
 
-Two points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).
+2 points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).

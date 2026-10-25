@@ -1,0 +1,49 @@
+team,side,metric,value,league_mean,league_sd,z_better_is_higher,basis
+BC Roma,offense,PPP,1.014,0.949,0.063,1.027,all_games
+BC Roma,offense,eFG%,57.2,52.447,4.272,1.113,all_games
+BC Roma,offense,TO%,16.8,15.631,2.226,-0.525,all_games
+BC Roma,offense,%FT,12.6,12.769,1.945,-0.087,all_games
+BC Roma,offense,Score%,45.9,43.253,2.992,0.885,all_games
+BC Roma,offense,FG%,49.2,45.716,3.607,0.966,all_games
+Bosna,offense,PPP,1.015,0.949,0.063,1.043,all_games
+Bosna,offense,eFG%,56.8,52.447,4.272,1.019,all_games
+Bosna,offense,TO%,16.9,15.631,2.226,-0.57,all_games
+Bosna,offense,%FT,14.5,12.769,1.945,0.89,all_games
+Bosna,offense,Score%,46.8,43.253,2.992,1.185,all_games
+Bosna,offense,FG%,50.5,45.716,3.607,1.327,all_games
+BC Roma,defense,PPP,1.005,0.949,0.052,-1.07,all_games
+BC Roma,defense,eFG%,54.0,52.475,3.276,-0.466,all_games
+BC Roma,defense,TO%,12.7,15.659,2.394,-1.236,all_games
+BC Roma,defense,%FT,13.4,12.772,1.722,-0.365,all_games
+BC Roma,defense,Score%,46.2,43.241,2.457,-1.204,all_games
+BC Roma,defense,FG%,46.9,45.709,3.004,-0.396,all_games
+Bosna,defense,PPP,0.959,0.949,0.052,-0.185,all_games
+Bosna,defense,eFG%,52.3,52.475,3.276,0.053,all_games
+Bosna,defense,TO%,14.6,15.659,2.394,-0.443,all_games
+Bosna,defense,%FT,13.5,12.772,1.722,-0.423,all_games
+Bosna,defense,Score%,44.6,43.241,2.457,-0.553,all_games
+Bosna,defense,FG%,46.1,45.709,3.004,-0.13,all_games
+BC Roma,offense,PPP,0.927,0.949,0.063,-0.351,competition_only
+BC Roma,offense,eFG%,52.0,52.447,4.272,-0.105,competition_only
+BC Roma,offense,TO%,19.0,15.631,2.226,-1.513,competition_only
+BC Roma,offense,%FT,13.7,12.769,1.945,0.479,competition_only
+BC Roma,offense,Score%,42.5,43.253,2.992,-0.252,competition_only
+BC Roma,offense,FG%,45.6,45.716,3.607,-0.032,competition_only
+Bosna,offense,PPP,0.939,0.949,0.063,-0.161,competition_only
+Bosna,offense,eFG%,53.6,52.447,4.272,0.27,competition_only
+Bosna,offense,TO%,20.1,15.631,2.226,-2.007,competition_only
+Bosna,offense,%FT,13.4,12.769,1.945,0.324,competition_only
+Bosna,offense,Score%,43.3,43.253,2.992,0.016,competition_only
+Bosna,offense,FG%,48.1,45.716,3.607,0.661,competition_only
+BC Roma,defense,PPP,0.955,0.949,0.052,-0.108,competition_only
+BC Roma,defense,eFG%,54.1,52.475,3.276,-0.496,competition_only
+BC Roma,defense,TO%,15.5,15.659,2.394,-0.067,competition_only
+BC Roma,defense,%FT,10.4,12.772,1.722,1.378,competition_only
+BC Roma,defense,Score%,43.6,43.241,2.457,-0.146,competition_only
+BC Roma,defense,FG%,46.8,45.709,3.004,-0.363,competition_only
+Bosna,defense,PPP,0.948,0.949,0.052,0.026,competition_only
+Bosna,defense,eFG%,51.0,52.475,3.276,0.45,competition_only
+Bosna,defense,TO%,14.5,15.659,2.394,-0.484,competition_only
+Bosna,defense,%FT,11.8,12.772,1.722,0.564,competition_only
+Bosna,defense,Score%,43.6,43.241,2.457,-0.146,competition_only
+Bosna,defense,FG%,45.0,45.709,3.004,0.236,competition_only

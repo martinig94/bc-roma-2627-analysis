@@ -127,7 +127,6 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1772,Napoli Basketball,6186,Guglielmo,Caruso,30,Centro,1999-07-03,Napoli,ITA,208,105,2026-07-01,2027-06-30,mirLbPBGkp2WWPBAr6bqpyjk
 2026,1772,Napoli Basketball,5594,Leonardo,Totè,35,Ala/Centro,1997-07-08,Negrar,ITA,212,107,2026-07-01,2027-06-30,yjDRkCeMpyeEq4xcKET2PYke
 2026,1772,Napoli Basketball,9032,Jahmi'us,Ramsey,37,Guardia,2001-06-09,Arlington,USA,191,87,2026-07-01,2027-06-30,ZWUmdvk31gF24enM9Aocem4o
-2026,1772,Napoli Basketball,6153,Scott,Ulaneo,,Centro,1998-06-27,Roma,ITA,208,102,2026-07-01,2027-06-30,
 2026,1764,Nutribullet Treviso Basket,969,Alessandro,Cappelletti,0,Playmaker,1995-10-22,Assisi,ITA,186,82,2026-07-01,2027-06-30,gBKiHTMzKiQajAAfFGjxAssf
 2026,1764,Nutribullet Treviso Basket,9331,Chico,Carter,2,Guardia,2000-11-03,Columbia,USA,191,87,2026-07-01,2027-06-30,mpQjC9hV7L5inFXjehStGVCL
 2026,1764,Nutribullet Treviso Basket,9041,Brekkott,Chapman,3,Ala,1996-04-07,Roy,USA,206,97,2026-07-01,2027-06-30,S1uWwNcEGSshYtUYapiymE7M
@@ -140,6 +139,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1764,Nutribullet Treviso Basket,9332,Gregorio,Allinei,19,Guardia/Ala,2004-04-21,Firenze,ITA,194,90,2026-07-01,2027-06-30,vcEjLiSLXW6H3CKuNg66TVYJ
 2026,1764,Nutribullet Treviso Basket,7607,Antonio,Iaquinta,24,-,2008-06-27,Merano,ITA,,,2026-07-01,2027-06-30,
 2026,1764,Nutribullet Treviso Basket,1189,Matteo,Chillo,26,Ala,1993-06-15,Bologna,ITA,203,104,2026-07-01,2027-06-30,c8iKZf1v4Sf3hmtApxDZk6op
+2026,1764,Nutribullet Treviso Basket,6867,Jeremy,Senglin,30,Playmaker,1995-03-24,Kansas City,USA,188,86,2026-07-01,2027-06-30,3HMSAZavd9fLZRA9PbAdaErR
 2026,1764,Nutribullet Treviso Basket,6191,JP,Macura,55,Guardia/Ala,1995-06-05,Lakeville,USA,196,93,2026-07-01,2027-06-30,5nKdg3haXGqcT2YHseWm58rK
 2026,1764,Nutribullet Treviso Basket,9333,Valentine,Chery,97,Centro,1997-09-24,Saint-Priest-en-Jarez,FRA,201,95,2026-07-01,2027-06-30,qqa5d8y7Vwz71EqHDvKEY6CK
 2026,1766,Openjobmetis Varese,97,Davide,Alviti,2,Ala,1996-11-05,Alatri,ITA,200,92,2026-07-01,2027-06-30,CchJHtkhZVSmQAXmhEwFBn4L
@@ -182,6 +182,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1769,Tezenis Verona,9339,Izaiah,Brockington,21,Ala,1999-07-12,Towson,USA,195,90,2026-07-01,2027-06-30,4rq2T1y6Cn5UFG3Vw45KMTEa
 2026,1769,Tezenis Verona,9408,Filippo,Pantano,21,-,2008-01-15,San Bonifacio,ITA,,,2026-07-01,2027-06-30,
 2026,1769,Tezenis Verona,9340,RJ,Melendez,22,Ala,2002-12-03,Arecibo,,210,95,2026-07-01,2027-06-30,5BkBfVhvxxYKBrcN4iNMeXKW
+2026,1769,Tezenis Verona,9444,Milan,Barbitch,50,Guardia,2001-10-12,Cagnes-sur-Me,FRA,198,85,2026-10-22,2027-06-30,S1rQivdbHf6cq3RbuZfKWncQ
 2026,1769,Tezenis Verona,9338,Jermaine,Samuels,00,Ala,1998-11-13,Franklin,USA,198,104,2026-07-01,2027-06-30,HuXFu5Jv39JJYCwcc3pugzCh
 2026,1753,Umana Reyer Venezia,6499,Octavio,Maretto,1,Guardia,2004-04-07,Buenos Aires,ITA,186,84,2026-07-01,2027-06-30,jLrPKZrpHtAUnFFrvkkWwDkT
 2026,1753,Umana Reyer Venezia,1670,Giovanni,De Nicolao,5,Playmaker,1996-06-10,,ITA,185,85,2026-07-01,2027-06-30,XkqWPEKJ9vQ4uvqPNdzeDfBn

@@ -86,9 +86,10 @@ def test_new_analysis_has_the_standard_sections_in_order() -> None:
     text = pages.new_page("analysis", {**A, "home_team": "BC Roma", "away_team": "Bosna", "opponent": "Bosna"}, [])
     heads = [line for line in text.splitlines() if line.startswith("## ")]
     assert heads == ["## Key points", "## LBA so far: results and standings", "## BC Roma and Bosna compared", "## Bosna roster",
-                     "## Starting five and bench", "## Scoring sources, tendencies and shooting maps", "## Key players", "## Ball movement",
-                     "## Lineups", "## What to expect", "## Highlights"]
-    assert "### Shooting" in text and "### Assists" in text and "### Turnovers" in text
+                     "## Starting five and bench", "## Scoring sources, tendencies and shooting maps", "## Key players", "## Assists",
+                     "## Turnovers", "## Lineups", "## Defensive attitude", "## What to expect", "## Clips suggested",
+                     "## Other suggested checks"]
+    assert "### Shooting" in text
 
 
 def test_pending_box_is_grey_and_keeps_the_section() -> None:

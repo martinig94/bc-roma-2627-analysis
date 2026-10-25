@@ -1,0 +1,29 @@
+team,side,metric,value,gp
+Bosna,offense,PPP,1.015,7
+Bosna,offense,Possessions/game,84.6,7
+Bosna,offense,eFG%,56.8,7
+Bosna,offense,TO%,16.9,7
+Bosna,offense,%FT,14.5,7
+Bosna,offense,Score%,46.8,7
+Bosna,offense,FG%,50.5,7
+Bosna,defense,PPP,0.959,7
+Bosna,defense,Possessions/game,86.9,7
+Bosna,defense,eFG%,52.3,7
+Bosna,defense,TO%,14.6,7
+Bosna,defense,%FT,13.5,7
+Bosna,defense,Score%,44.6,7
+Bosna,defense,FG%,46.1,7
+BC Roma,offense,PPP,1.014,8
+BC Roma,offense,Possessions/game,89.5,8
+BC Roma,offense,eFG%,57.2,8
+BC Roma,offense,TO%,16.8,8
+BC Roma,offense,%FT,12.6,8
+BC Roma,offense,Score%,45.9,8
+BC Roma,offense,FG%,49.2,8
+BC Roma,defense,PPP,1.005,8
+BC Roma,defense,Possessions/game,91.8,8
+BC Roma,defense,eFG%,54,8
+BC Roma,defense,TO%,12.7,8
+BC Roma,defense,%FT,13.4,8
+BC Roma,defense,Score%,46.2,8
+BC Roma,defense,FG%,46.9,8

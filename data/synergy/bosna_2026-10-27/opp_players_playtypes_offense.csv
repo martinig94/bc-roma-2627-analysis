@@ -1,0 +1,72 @@
+player,play_type,poss,pts,ppp,full
+Atic,P&R Ball Handler,12,11,0.917,Edin Atic
+Atic,Spot Up,5,0,0,Edin Atic
+Atic,Isolation,4,4,1,Edin Atic
+Atic,Miscellaneous Plays,4,5,1.25,Edin Atic
+Atic,Handoffs,3,0,0,Edin Atic
+Atic,Transition,2,0,0,Edin Atic
+Atic,Offensive Rebounds (Put Backs),2,2,1,Edin Atic
+Atic,Cut,1,2,2,Edin Atic
+Banks,Miscellaneous Plays,4,4,1,James Banks
+Banks,Transition,1,0,0,James Banks
+Banks,Offensive Rebounds (Put Backs),1,2,2,James Banks
+Browne,P&R Ball Handler,12,7,0.583,Gary Browne
+Browne,Spot Up,6,9,1.5,Gary Browne
+Browne,Miscellaneous Plays,5,0,0,Gary Browne
+Browne,Transition,2,4,2,Gary Browne
+Domask,Spot Up,10,14,1.4,Marcus Domask
+Domask,Cut,6,5,0.833,Marcus Domask
+Domask,P&R Ball Handler,5,4,0.8,Marcus Domask
+Domask,Transition,3,4,1.333,Marcus Domask
+Domask,Offensive Rebounds (Put Backs),3,6,2,Marcus Domask
+Domask,Post-Up,2,0,0,Marcus Domask
+Domask,Isolation,1,2,2,Marcus Domask
+Domask,Miscellaneous Plays,1,0,0,Marcus Domask
+Gholston,P&R Ball Handler,15,11,0.733,DeAndre Gholston
+Gholston,Spot Up,10,8,0.8,DeAndre Gholston
+Gholston,Transition,9,13,1.444,DeAndre Gholston
+Gholston,Cut,3,5,1.667,DeAndre Gholston
+Gholston,Isolation,2,3,1.5,DeAndre Gholston
+Gholston,Offensive Rebounds (Put Backs),1,0,0,DeAndre Gholston
+Hawkins,Spot Up,9,9,1,Ryan Hawkins
+Hawkins,Cut,3,4,1.333,Ryan Hawkins
+Hawkins,Offensive Rebounds (Put Backs),3,2,0.667,Ryan Hawkins
+Hawkins,Miscellaneous Plays,3,2,0.667,Ryan Hawkins
+Hawkins,Transition,2,0,0,Ryan Hawkins
+Hawkins,Post-Up,1,2,2,Ryan Hawkins
+Islamovic,P&R Roll Man,4,4,1,Alija Islamovic
+Islamovic,Cut,1,2,2,Alija Islamovic
+Perry,P&R Roll Man,16,15,0.938,Reginald Perry
+Perry,Offensive Rebounds (Put Backs),10,11,1.1,Reginald Perry
+Perry,Transition,9,7,0.778,Reginald Perry
+Perry,Post-Up,9,4,0.444,Reginald Perry
+Perry,Spot Up,7,9,1.286,Reginald Perry
+Perry,Miscellaneous Plays,5,2,0.4,Reginald Perry
+Perry,Cut,4,4,1,Reginald Perry
+Perry,Isolation,4,5,1.25,Reginald Perry
+Pipes,P&R Ball Handler,15,19,1.267,Shawn Pipes
+Pipes,Transition,12,12,1,Shawn Pipes
+Pipes,Spot Up,8,8,1,Shawn Pipes
+Pipes,Off Screen,4,6,1.5,Shawn Pipes
+Pipes,Isolation,3,2,0.667,Shawn Pipes
+Pipes,Handoffs,3,6,2,Shawn Pipes
+Pipes,Offensive Rebounds (Put Backs),2,4,2,Shawn Pipes
+Pipes,Miscellaneous Plays,1,0,0,Shawn Pipes
+Popovic,P&R Roll Man,7,8,1.143,Nikola Popovic
+Popovic,Post-Up,5,2,0.4,Nikola Popovic
+Popovic,Cut,3,2,0.667,Nikola Popovic
+Popovic,Offensive Rebounds (Put Backs),3,2,0.667,Nikola Popovic
+Popovic,Spot Up,2,2,1,Nikola Popovic
+Talic,P&R Ball Handler,16,14,0.875,Darko Talic
+Talic,Spot Up,7,7,1,Darko Talic
+Talic,Transition,5,4,0.8,Darko Talic
+Talic,Miscellaneous Plays,3,4,1.333,Darko Talic
+Talic,Offensive Rebounds (Put Backs),1,0,0,Darko Talic
+Talic,Handoffs,1,0,0,Darko Talic
+Vrabac,Spot Up,5,3,0.6,Adin Vrabac
+Vrabac,Transition,4,4,1,Adin Vrabac
+Vrabac,P&R Roll Man,2,2,1,Adin Vrabac
+Vrabac,Cut,2,2,1,Adin Vrabac
+Vrabac,Post-Up,2,1,0.5,Adin Vrabac
+Vrabac,Miscellaneous Plays,2,0,0,Adin Vrabac
+Vrabac,P&R Ball Handler,1,2,2,Adin Vrabac
