@@ -12,10 +12,10 @@
   "venue": "Palazzetto dello Sport",
   "played": false,
   "version": 7,
-  "n_before": 43,
+  "n_before": 49,
   "opponent_analysis": "matchup_BC_Roma_vs_Longobardi_Scafati_Basket_before_2026-10-31",
   "record": "1-4",
-  "position": 11,
+  "position": 13,
   "points": 2,
   "record_ec": "2-2",
   "form": "LWLLL",
@@ -600,7 +600,7 @@
   "ts_pir_lba": {
     "file": "ts_pir_lba.png",
     "players": 10,
-    "others": 151,
+    "others": 155,
     "games": 5
   },
   "ts_pir_ec": {
@@ -616,7 +616,7 @@
     "teams": null
   },
   "md": {
-    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Virtus Bologna | 8 | 4-0 | +62 | WWWW |\n| 2 | Milano | 6 | 3-1 | +46 | WLWW |\n| 3 | Verona | 6 | 3-1 | +15 | LWWW |\n| 4 | Treviso | 6 | 3-1 | +5 | WWLW |\n| 5 | Trento | 6 | 3-2 | +6 | WLWWL |\n| 6 | Venezia | 6 | 3-1 | +16 | WWLW |\n| 7 | Napoli | 6 | 3-1 | +28 | WWWL |\n| 8 | Varese | 6 | 3-2 | -7 | LWWLW |\n| 9 | Udine | 4 | 2-2 | +1 | WWLL |\n| 10 | Maxima Roma | 4 | 2-2 | -13 | LLWW |\n| 11 | **BC Roma** | 2 | 1-4 | +9 | LWLLL |\n| 12 | Reggio Emilia | 2 | 1-3 | -17 | LLWL |\n| 13 | Trieste | 2 | 1-3 | +10 | LLLW |\n| 14 | **Scafati** | 2 | 1-4 | -58 | LLLLW |\n| 15 | Tortona | 2 | 1-3 | -51 | WLLL |\n| 16 | Cantù | 0 | 0-4 | -52 | LLLL |",
+    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Virtus Bologna | 10 | 5-0 | +66 | WWWWW |\n| 2 | Napoli | 8 | 4-1 | +30 | WWWLW |\n| 3 | Treviso | 8 | 4-1 | +13 | WWLWW |\n| 4 | Verona | 6 | 3-2 | +6 | LWWWL |\n| 5 | Trento | 6 | 3-2 | +6 | WLWWL |\n| 6 | Venezia | 6 | 3-2 | +8 | WWLWL |\n| 7 | Maxima Roma | 6 | 3-2 | -7 | LLWWW |\n| 8 | Milano | 6 | 3-2 | +42 | WLWWL |\n| 9 | Varese | 6 | 3-2 | -7 | LWWLW |\n| 10 | Trieste | 4 | 2-3 | +19 | LLLWW |\n| 11 | Reggio Emilia | 4 | 2-3 | +4 | LLWLW |\n| 12 | Udine | 4 | 2-3 | -5 | WWLLL |\n| 13 | **BC Roma** | 2 | 1-4 | +9 | LWLLL |\n| 14 | **Scafati** | 2 | 1-4 | -58 | LLLLW |\n| 15 | Tortona | 2 | 1-4 | -53 | WLLLL |\n| 16 | Cantù | 0 | 0-5 | -73 | LLLLL |",
     "last_results": "- 10-11 · round 3: **L** 95-96 at Maxima Roma\n- 10-13 · EuroCup: **W** 77-72 vs Balkan Botevgrad\n- 10-17 · round 4: **L** 98-104 vs Venezia\n- 10-20 · EuroCup: **L** 88-108 at Kids&Us Manresa\n- 10-24 · round 5: **L** 103-110 at Varese"
   }
 }
