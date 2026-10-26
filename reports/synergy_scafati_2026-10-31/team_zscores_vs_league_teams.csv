@@ -1,0 +1,49 @@
+team,side,metric,value,league_mean,league_sd,z_better_is_higher,basis
+BC Roma,offense,PPP,1.012,0.982,0.077,0.388,all_games
+BC Roma,offense,eFG%,57.0,53.3,4.039,0.916,all_games
+BC Roma,offense,TO%,16.7,14.525,2.167,-1.004,all_games
+BC Roma,offense,%FT,12.3,13.975,2.443,-0.686,all_games
+BC Roma,offense,Score%,46.1,44.938,3.369,0.345,all_games
+BC Roma,offense,FG%,49.4,45.869,3.634,0.972,all_games
+Scafati,offense,PPP,0.907,0.982,0.077,-0.977,all_games
+Scafati,offense,eFG%,51.3,53.3,4.039,-0.495,all_games
+Scafati,offense,TO%,15.3,14.525,2.167,-0.358,all_games
+Scafati,offense,%FT,12.7,13.975,2.443,-0.522,all_games
+Scafati,offense,Score%,41.9,44.938,3.369,-0.902,all_games
+Scafati,offense,FG%,44.2,45.869,3.634,-0.459,all_games
+BC Roma,defense,PPP,1.014,0.983,0.065,-0.478,all_games
+BC Roma,defense,eFG%,55.1,53.312,3.692,-0.484,all_games
+BC Roma,defense,TO%,13.5,14.513,2.031,-0.499,all_games
+BC Roma,defense,%FT,13.7,13.981,2.628,0.107,all_games
+BC Roma,defense,Score%,46.2,44.981,2.523,-0.483,all_games
+BC Roma,defense,FG%,47.4,45.881,3.289,-0.462,all_games
+Scafati,defense,PPP,1.061,0.983,0.065,-1.198,all_games
+Scafati,defense,eFG%,60.7,53.312,3.692,-2.001,all_games
+Scafati,defense,TO%,16.1,14.513,2.031,0.782,all_games
+Scafati,defense,%FT,11.1,13.981,2.628,1.096,all_games
+Scafati,defense,Score%,46.6,44.981,2.523,-0.642,all_games
+Scafati,defense,FG%,52.0,45.881,3.289,-1.861,all_games
+BC Roma,offense,PPP,1.078,0.982,0.077,1.246,competition_only
+BC Roma,offense,eFG%,60.7,53.3,4.039,1.832,competition_only
+BC Roma,offense,TO%,15.0,14.525,2.167,-0.219,competition_only
+BC Roma,offense,%FT,11.3,13.975,2.443,-1.095,competition_only
+BC Roma,offense,Score%,48.9,44.938,3.369,1.176,competition_only
+BC Roma,offense,FG%,52.2,45.869,3.634,1.742,competition_only
+Scafati,offense,PPP,0.907,0.982,0.077,-0.977,competition_only
+Scafati,offense,eFG%,51.3,53.3,4.039,-0.495,competition_only
+Scafati,offense,TO%,15.3,14.525,2.167,-0.358,competition_only
+Scafati,offense,%FT,12.7,13.975,2.443,-0.522,competition_only
+Scafati,offense,Score%,41.9,44.938,3.369,-0.902,competition_only
+Scafati,offense,FG%,44.2,45.869,3.634,-0.459,competition_only
+BC Roma,defense,PPP,1.063,0.983,0.065,-1.229,competition_only
+BC Roma,defense,eFG%,55.9,53.312,3.692,-0.701,competition_only
+BC Roma,defense,TO%,11.9,14.513,2.031,-1.286,competition_only
+BC Roma,defense,%FT,16.3,13.981,2.628,-0.882,competition_only
+BC Roma,defense,Score%,48.4,44.981,2.523,-1.355,competition_only
+BC Roma,defense,FG%,47.8,45.881,3.289,-0.583,competition_only
+Scafati,defense,PPP,1.061,0.983,0.065,-1.198,competition_only
+Scafati,defense,eFG%,60.7,53.312,3.692,-2.001,competition_only
+Scafati,defense,TO%,16.1,14.513,2.031,0.782,competition_only
+Scafati,defense,%FT,11.1,13.981,2.628,1.096,competition_only
+Scafati,defense,Score%,46.6,44.981,2.523,-0.642,competition_only
+Scafati,defense,FG%,52.0,45.881,3.289,-1.861,competition_only

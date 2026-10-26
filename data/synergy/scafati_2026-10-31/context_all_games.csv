@@ -1,0 +1,29 @@
+team,side,metric,value,gp
+Scafati,offense,PPP,0.907,5
+Scafati,offense,Possessions/game,86.4,5
+Scafati,offense,eFG%,51.3,5
+Scafati,offense,TO%,15.3,5
+Scafati,offense,%FT,12.7,5
+Scafati,offense,Score%,41.9,5
+Scafati,offense,FG%,44.2,5
+Scafati,defense,PPP,1.061,5
+Scafati,defense,Possessions/game,84.6,5
+Scafati,defense,eFG%,60.7,5
+Scafati,defense,TO%,16.1,5
+Scafati,defense,%FT,11.1,5
+Scafati,defense,Score%,46.6,5
+Scafati,defense,FG%,52,5
+BC Roma,offense,PPP,1.012,9
+BC Roma,offense,Possessions/game,90.9,9
+BC Roma,offense,eFG%,57,9
+BC Roma,offense,TO%,16.7,9
+BC Roma,offense,%FT,12.3,9
+BC Roma,offense,Score%,46.1,9
+BC Roma,offense,FG%,49.4,9
+BC Roma,defense,PPP,1.014,9
+BC Roma,defense,Possessions/game,92.8,9
+BC Roma,defense,eFG%,55.1,9
+BC Roma,defense,TO%,13.5,9
+BC Roma,defense,%FT,13.7,9
+BC Roma,defense,Score%,46.2,9
+BC Roma,defense,FG%,47.4,9

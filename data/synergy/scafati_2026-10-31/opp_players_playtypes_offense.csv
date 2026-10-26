@@ -1,0 +1,74 @@
+player,play_type,poss,pts,ppp,full
+Ceron,Spot Up,2,0,0,Marco Ceron
+Iannuzzi,Post-Up,3,0,0,Antonio Iannuzzi
+Iannuzzi,Offensive Rebounds (Put Backs),2,0,0,Antonio Iannuzzi
+Iannuzzi,P&R Roll Man,1,2,2,Antonio Iannuzzi
+Johnson,Spot Up,14,21,1.5,Brandon Johnson
+Johnson,Miscellaneous Plays,4,3,0.75,Brandon Johnson
+Johnson,Transition,2,0,0,Brandon Johnson
+Johnson,Offensive Rebounds (Put Backs),2,4,2,Brandon Johnson
+Johnson,Cut,1,0,0,Brandon Johnson
+Johnson,Post-Up,1,0,0,Brandon Johnson
+Lever,Spot Up,13,12,0.923,Alessandro Lever
+Lever,P&R Roll Man,9,4,0.444,Alessandro Lever
+Lever,Post-Up,8,3,0.375,Alessandro Lever
+Lever,Cut,6,4,0.667,Alessandro Lever
+Lever,Transition,4,7,1.75,Alessandro Lever
+Lever,Miscellaneous Plays,2,3,1.5,Alessandro Lever
+Lever,Offensive Rebounds (Put Backs),1,0,0,Alessandro Lever
+Mascolo,P&R Ball Handler,32,17,0.531,Bruno Mascolo
+Mascolo,Isolation,10,9,0.9,Bruno Mascolo
+Mascolo,Miscellaneous Plays,10,9,0.9,Bruno Mascolo
+Mascolo,Spot Up,7,7,1,Bruno Mascolo
+Mascolo,Offensive Rebounds (Put Backs),3,4,1.333,Bruno Mascolo
+Mascolo,Handoffs,3,5,1.667,Bruno Mascolo
+Mascolo,Transition,2,0,0,Bruno Mascolo
+Mascolo,Post-Up,2,2,1,Bruno Mascolo
+Mascolo,Cut,1,0,0,Bruno Mascolo
+McGruder,Spot Up,12,14,1.167,Rodney McGruder
+McGruder,P&R Ball Handler,4,2,0.5,Rodney McGruder
+McGruder,Offensive Rebounds (Put Backs),3,2,0.667,Rodney McGruder
+McGruder,Off Screen,2,0,0,Rodney McGruder
+McGruder,Transition,1,0,0,Rodney McGruder
+McGruder,Cut,1,0,0,Rodney McGruder
+McGruder,Post-Up,1,0,0,Rodney McGruder
+McGruder,Miscellaneous Plays,1,2,2,Rodney McGruder
+Moore,P&R Ball Handler,34,29,0.853,Charles Moore
+Moore,Transition,11,13,1.182,Charles Moore
+Moore,Spot Up,8,2,0.25,Charles Moore
+Moore,Handoffs,5,10,2,Charles Moore
+Moore,Miscellaneous Plays,4,2,0.5,Charles Moore
+Moore,Isolation,3,0,0,Charles Moore
+Moore,Off Screen,3,6,2,Charles Moore
+Moore,Offensive Rebounds (Put Backs),1,2,2,Charles Moore
+Nevels,Spot Up,23,27,1.174,Garrett Nevels
+Nevels,P&R Ball Handler,18,10,0.556,Garrett Nevels
+Nevels,Isolation,6,5,0.833,Garrett Nevels
+Nevels,Off Screen,6,2,0.333,Garrett Nevels
+Nevels,Transition,5,6,1.2,Garrett Nevels
+Nevels,Cut,3,2,0.667,Garrett Nevels
+Nevels,Handoffs,3,2,0.667,Garrett Nevels
+Nevels,Offensive Rebounds (Put Backs),1,2,2,Garrett Nevels
+Nevels,Miscellaneous Plays,1,1,1,Garrett Nevels
+Offurum,Spot Up,17,17,1,Mezie Offurum
+Offurum,Transition,17,20,1.176,Mezie Offurum
+Offurum,Post-Up,9,5,0.556,Mezie Offurum
+Offurum,Miscellaneous Plays,6,5,0.833,Mezie Offurum
+Offurum,Cut,5,6,1.2,Mezie Offurum
+Offurum,Offensive Rebounds (Put Backs),3,5,1.667,Mezie Offurum
+Offurum,Isolation,3,2,0.667,Mezie Offurum
+Offurum,P&R Roll Man,2,2,1,Mezie Offurum
+Offurum,Off Screen,2,0,0,Mezie Offurum
+Offurum,P&R Ball Handler,1,2,2,Mezie Offurum
+Offurum,Handoffs,1,3,3,Mezie Offurum
+Onyema,Cut,16,16,1,ZeRik Onyema
+Onyema,P&R Roll Man,12,15,1.25,ZeRik Onyema
+Onyema,Post-Up,7,9,1.286,ZeRik Onyema
+Onyema,Offensive Rebounds (Put Backs),6,6,1,ZeRik Onyema
+Onyema,Transition,5,10,2,ZeRik Onyema
+Onyema,Miscellaneous Plays,5,1,0.2,ZeRik Onyema
+Onyema,Spot Up,3,2,0.667,ZeRik Onyema
+Onyema,Isolation,1,2,2,ZeRik Onyema
+Spinelli,Spot Up,2,3,1.5,Francesco Spinelli
+Spinelli,Transition,2,4,2,Francesco Spinelli
+Spinelli,Miscellaneous Plays,2,0,0,Francesco Spinelli

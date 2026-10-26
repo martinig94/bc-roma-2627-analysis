@@ -1,0 +1,12 @@
+{
+  "opponent":  {"name": "Scafati", "abbr": "LS",  "games": 5, "games_all": 5},
+  "reference": {"name": "BC Roma", "abbr": "BCR", "games": 5, "games_all": 9},
+  "league": "LBA",
+  "competition": "Italian Serie A",
+  "league_games_each": 5,
+  "season": "2026-27",
+  "date": "26 Oct 2026",
+  "author": "Giulia Martini",
+  "lineup_min_poss": 5,
+  "exclude_players": []
+}

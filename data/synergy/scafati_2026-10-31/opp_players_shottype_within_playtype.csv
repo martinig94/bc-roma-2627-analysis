@@ -1,0 +1,52 @@
+player,play_type,shot_type,fga,fgm
+Johnson,Spot Up,"Open, 3PT",8,5
+Johnson,Spot Up,"Guarded, 3PT",4,2
+Johnson,Spot Up,"Dribble jumper, 3PT",1,0
+Johnson,Spot Up,To basket,1,0
+Lever,P&R Roll Man,"Open, 3PT",4,0
+Lever,P&R Roll Man,"Guarded, 3PT",2,0
+Lever,P&R Roll Man,To basket,2,2
+Lever,Spot Up,"Guarded, 3PT",6,3
+Lever,Spot Up,"Open, 3PT",5,1
+Lever,Spot Up,"Dribble jumper, short (<17 ft)",1,0
+Mascolo,Isolation,"Dribble jumper, 3PT",4,2
+Mascolo,Isolation,To basket,3,1
+Mascolo,Isolation,"Dribble jumper, short (<17 ft)",1,0
+Mascolo,P&R Ball Handler,"Dribble jumper, short (<17 ft)",7,1
+Mascolo,P&R Ball Handler,To basket,7,2
+Mascolo,P&R Ball Handler,"Dribble jumper, 3PT",4,1
+Mascolo,P&R Ball Handler,"Dribble jumper, mid-range",2,0
+McGruder,Spot Up,"Guarded, 3PT",6,2
+McGruder,Spot Up,To basket,3,1
+McGruder,Spot Up,"Open, 3PT",3,2
+Moore,P&R Ball Handler,"Dribble jumper, 3PT",10,5
+Moore,P&R Ball Handler,To basket,8,3
+Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",2,2
+Moore,P&R Ball Handler,"Dribble jumper, mid-range",2,0
+Moore,Transition,To basket,6,4
+Moore,Transition,"Open, 3PT",2,0
+Moore,Transition,"Dribble jumper, mid-range",1,1
+Moore,Transition,"Guarded, 3PT",1,0
+Nevels,P&R Ball Handler,"Dribble jumper, 3PT",4,0
+Nevels,P&R Ball Handler,"Dribble jumper, short (<17 ft)",3,2
+Nevels,P&R Ball Handler,To basket,3,1
+Nevels,P&R Ball Handler,"Dribble jumper, mid-range",2,1
+Nevels,Spot Up,"Open, 3PT",7,2
+Nevels,Spot Up,"Guarded, 3PT",5,3
+Nevels,Spot Up,To basket,4,1
+Nevels,Spot Up,"Dribble jumper, 3PT",3,2
+Nevels,Spot Up,"Dribble jumper, mid-range",2,2
+Nevels,Spot Up,"Guarded, mid-range",1,0
+Offurum,Other,To basket,6,2
+Offurum,Other,"Open, 3PT",1,1
+Offurum,Other,Other,1,0
+Offurum,Spot Up,To basket,5,2
+Offurum,Spot Up,"Open, 3PT",4,3
+Offurum,Spot Up,"Guarded, 3PT",3,0
+Offurum,Spot Up,"Dribble jumper, short (<17 ft)",1,0
+Offurum,Spot Up,"Dribble jumper, mid-range",1,0
+Offurum,Transition,To basket,11,9
+Offurum,Transition,"Open, 3PT",2,0
+Onyema,Cut,To basket,10,5
+Onyema,Cut,Other,4,3
+Onyema,P&R Roll Man,To basket,9,6
