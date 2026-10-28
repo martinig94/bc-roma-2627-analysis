@@ -124,6 +124,12 @@ def eurocup_table(team, synergy_dir, lba_ref):
     t = t.merge(early_share(pbp, ["team", "player_surname"]).reset_index(), on=["team", "player_surname"], how="left")
     syn = pd.read_csv(Path(synergy_dir) / "shots.csv")
     syn["player_surname"] = syn.player.str.upper()
+    # some pulls carry full names ("Breein Tyree", "Naz Mitrou-Long"): map them to the box-score surname of the team
+    team_surnames = sorted(t.loc[t.team == team, "player_surname"].unique(), key=len, reverse=True)
+    def to_surname(name):
+        flat = name.replace("-", " ")
+        return next((sn for sn in team_surnames if flat == sn or flat.endswith(" " + sn)), name)
+    syn["player_surname"] = syn.player_surname.map(to_surname)
     drives = syn[(syn.shot_type == "To basket") & ~syn.play_type.isin(["Cut", "Offensive Rebounds (Put Backs)", "P&R Roll Man", "Off Screen"])]
     t = (t.merge(drives.groupby("player_surname").size().rename("drive_finishes"), on="player_surname", how="left")
           .merge(syn[syn.play_type == "Transition"].groupby("player_surname").size().rename("fastbreak_shots"), on="player_surname", how="left"))
