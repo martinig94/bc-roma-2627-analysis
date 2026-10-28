@@ -31,13 +31,13 @@ game_id,championship_id,competition,year,round,round_name,phase_id,match_datetim
 25397,602,,2026,5,5° Giornata,1,2026-10-24T20:30:00.000+02:00,2,1768,Longobardi Scafati Basket,1763,Dolomiti Energia Trentino,87,81,,,,,,,,,,,Beta Ricambi Arena PalaMangano,Scafati,,Bucchi Piero,Rossi Alessandro,2026-10-25T06:49:28.664+01:00
 25398,602,,2026,5,5° Giornata,1,2026-10-25T18:30:00.000+01:00,2,1760,UNA Hotels Reggio Emilia,1765,Acqua S.Bernardo Cantù,81,60,,,,,,,,,,,PalaBigi,Reggio nell'Emilia,3556,Priftis Dimitris,Vitucci Francesco,2026-10-25T20:31:24.031+01:00
 25399,602,,2026,5,5° Giornata,1,2026-10-24T20:00:00.000+02:00,2,1766,Openjobmetis Varese,1761,BC Roma,110,103,,,,,,,,,,,Itelyum Arena,Varese,4763,Kastritis Ioannis,Magro Alessandro,2026-10-25T06:56:43.530+01:00
-25400,602,,2026,6,6° Giornata,,2026-11-02T20:00:00.000+01:00,0,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,0,0,,,,,,,,,,,PalaDozza,Bologna,,,,2026-10-08T14:24:12.959+02:00
-25401,602,,2026,6,6° Giornata,,2026-10-31T20:00:00.000+01:00,0,1761,BC Roma,1768,Longobardi Scafati Basket,0,0,,,,,,,,,,,Palazzetto dello Sport,Roma,,,,2026-10-08T14:34:48.811+02:00
-25402,602,,2026,6,6° Giornata,,2026-10-31T20:00:00.000+01:00,0,1769,Tezenis Verona,1766,Openjobmetis Varese,0,0,,,,,,,,,,,Pala MAGIS,Verona,,,,2026-10-08T14:35:09.699+02:00
-25403,602,,2026,6,6° Giornata,,2026-11-01T16:00:00.000+01:00,0,1763,Dolomiti Energia Trentino,1762,Maxima Roma,0,0,,,,,,,,,,,BTS Arena,Trento,,,,2026-10-08T14:24:49.597+02:00
-25404,602,,2026,6,6° Giornata,,2026-10-31T20:30:00.000+01:00,0,1764,Nutribullet Treviso Basket,1760,UNA Hotels Reggio Emilia,0,0,,,,,,,,,,,Palaverde,Villorba,,,,2026-10-08T14:25:30.598+02:00
-25405,602,,2026,6,6° Giornata,,2026-11-01T12:00:00.000+01:00,0,1772,Napoli Basketball,1753,Umana Reyer Venezia,0,0,,,,,,,,,,,Alcott Arena,Napoli,,,,2026-10-08T14:25:11.011+02:00
-25406,602,,2026,6,6° Giornata,,2026-11-02T20:30:00.000+01:00,0,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,0,0,,,,,,,,,,,PalaDesio,Desio,,,,2026-10-08T14:23:56.967+02:00
+25400,602,,2026,6,6° Giornata,,2026-11-02T20:00:00.000+01:00,0,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,0,0,,,,,,,,,,,PalaDozza,Bologna,,,,2026-10-27T15:55:25.377+01:00
+25401,602,,2026,6,6° Giornata,,2026-10-31T20:00:00.000+01:00,0,1761,BC Roma,1768,Longobardi Scafati Basket,0,0,,,,,,,,,,,Palazzetto dello Sport,Roma,,,,2026-10-27T15:53:36.622+01:00
+25402,602,,2026,6,6° Giornata,,2026-10-31T20:00:00.000+01:00,0,1769,Tezenis Verona,1766,Openjobmetis Varese,0,0,,,,,,,,,,,Pala MAGIS,Verona,,,,2026-10-27T15:53:12.457+01:00
+25403,602,,2026,6,6° Giornata,,2026-11-01T16:00:00.000+01:00,0,1763,Dolomiti Energia Trentino,1762,Maxima Roma,0,0,,,,,,,,,,,BTS Arena,Trento,,,,2026-10-27T15:54:37.065+01:00
+25404,602,,2026,6,6° Giornata,,2026-10-31T20:30:00.000+01:00,0,1764,Nutribullet Treviso Basket,1760,UNA Hotels Reggio Emilia,0,0,,,,,,,,,,,Palaverde,Villorba,,,,2026-10-27T15:53:54.764+01:00
+25405,602,,2026,6,6° Giornata,,2026-11-01T12:00:00.000+01:00,0,1772,Napoli Basketball,1753,Umana Reyer Venezia,0,0,,,,,,,,,,,Alcott Arena,Napoli,,,,2026-10-27T15:54:12.907+01:00
+25406,602,,2026,6,6° Giornata,,2026-11-02T20:30:00.000+01:00,0,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,0,0,,,,,,,,,,,PalaDesio,Desio,,,,2026-10-27T15:46:17.707+01:00
 25407,602,,2026,6,6° Giornata,,2026-11-01T17:00:00.000+01:00,0,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,0,0,,,,,,,,,,,PalaCarnera Credifriuli,Udine,,,,2026-10-08T14:24:31.450+02:00
 25408,602,,2026,7,7° Giornata,,2026-11-09T20:00:00.000+01:00,0,1750,Virtus Costa Bologna,1769,Tezenis Verona,0,0,,,,,,,,,,,PalaDozza,Bologna,,,,2026-10-08T14:35:41.054+02:00
 25409,602,,2026,7,7° Giornata,,2026-11-08T17:00:00.000+01:00,0,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,0,0,,,,,,,,,,,Unipol Forum,Assago,,,,2026-10-08T14:36:38.972+02:00
@@ -57,7 +57,7 @@ game_id,championship_id,competition,year,round,round_name,phase_id,match_datetim
 25423,602,,2026,8,8° Giornata,,2026-11-15T18:15:00.000+01:00,0,1771,APU Old Wild West Udine,1751,Armani Olimpia Milano,0,0,,,,,,,,,,,PalaCarnera Credifriuli,Udine,,,,2026-10-08T14:39:39.592+02:00
 25424,602,,2026,9,9° Giornata,,2026-11-22T18:00:00.000+01:00,0,1750,Virtus Costa Bologna,1761,BC Roma,0,0,,,,,,,,,,,PalaDozza,Bologna,,,,2026-10-14T12:55:04.791+02:00
 25425,602,,2026,9,9° Giornata,,2026-11-22T18:15:00.000+01:00,0,1769,Tezenis Verona,1771,APU Old Wild West Udine,0,0,,,,,,,,,,,Pala MAGIS,Verona,,,,2026-10-14T12:54:36.496+02:00
-25426,602,,2026,9,9° Giornata,,2026-11-22T17:00:00.000+01:00,0,1763,Dolomiti Energia Trentino,1772,Napoli Basketball,0,0,,,,,,,,,,,BTS Arena,Trento,,,,2026-10-14T12:56:50.388+02:00
+25426,602,,2026,9,9° Giornata,,2026-11-22T19:00:00.000+01:00,0,1763,Dolomiti Energia Trentino,1772,Napoli Basketball,0,0,,,,,,,,,,,BTS Arena,Trento,,,,2026-10-28T11:15:36.611+01:00
 25427,602,,2026,9,9° Giornata,,2026-11-22T16:00:00.000+01:00,0,1752,Bertram Derthona Tortona,1751,Armani Olimpia Milano,0,0,,,,,,,,,,,Nova Arena,Tortona,,,,2026-10-14T12:57:03.653+02:00
 25428,602,,2026,9,9° Giornata,,2026-11-21T20:00:00.000+01:00,0,1767,Pallacanestro Trieste,1760,UNA Hotels Reggio Emilia,0,0,,,,,,,,,,,PalaTrieste,Trieste,,,,2026-10-14T12:57:14.587+02:00
 25429,602,,2026,9,9° Giornata,,2026-11-22T18:00:00.000+01:00,0,1762,Maxima Roma,1764,Nutribullet Treviso Basket,0,0,,,,,,,,,,,PalaEur,Roma,,,,2026-10-14T12:54:48.123+02:00

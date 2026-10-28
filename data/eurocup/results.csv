@@ -63,3 +63,9 @@ gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
 62,4,2026-10-20,MAN,Kids&Us Manresa,108,BCR,BC Roma,88,True
 63,4,2026-10-21,BOS,Bosna Bh Telecom Sarajevo,86,BAH,Bahcesehir College Istanbul,77,True
 64,4,2026-10-21,PAO,Paok Thessaloniki,87,ULM,Ratiopharm Ulm,78,True
+72,5,2026-10-27,FRA,Skyliners Frankfurt,113,CLU,U-Bt Cluj-Napoca,97,True
+75,5,2026-10-27,TRN,Dolomiti Energia Trento,94,BUD,Buducnost Voli Podgorica,92,True
+77,5,2026-10-27,LKB,Lietkabelis Panevezys,68,ULM,Ratiopharm Ulm,86,True
+78,5,2026-10-27,BAH,Bahcesehir College Istanbul,84,PAO,Paok Thessaloniki,81,True
+79,5,2026-10-27,BCR,BC Roma,80,BOS,Bosna Bh Telecom Sarajevo,85,True
+80,5,2026-10-27,BLK,Balkan Botevgrad,65,MAN,Kids&Us Manresa,76,True
