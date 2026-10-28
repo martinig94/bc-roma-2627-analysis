@@ -312,7 +312,7 @@ def load_box(c: Ctx) -> pd.DataFrame:
     b = b[b.PLAYER != 'TEAM TOTAL'].copy()
     for col in ['EFG%', 'TO%', 'TS%', '%FT']:
         b[col] = pct(b[col])
-    b['AST/TO'] = pd.to_numeric(b['AST/TO'], errors='coerce'); b['SSM'] = pd.to_numeric(b['SSM'])
+    b['AST/TO'] = pd.to_numeric(b['AST/TO'], errors='coerce'); b['SSM'] = pd.to_numeric(b['SSM'], errors='coerce')   # '-' for players without attempts
     b['ppg'] = b.PTS / b.GP
     b['surname'] = b.PLAYER.str.split().str[-1]
     return b

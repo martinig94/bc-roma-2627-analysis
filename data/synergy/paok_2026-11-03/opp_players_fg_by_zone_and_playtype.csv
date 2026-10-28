@@ -1,0 +1,109 @@
+player,dimension,category,fgm,fga
+Alexander,play_type,P&R Roll Man,7,7
+Alexander,play_type,Offensive Rebounds (Put Backs),5,7
+Alexander,play_type,Cut,5,6
+Alexander,shot_location,Paint,16,19
+Alexander,shot_location,Mid-range,1,1
+Bazinas,play_type,Spot Up,1,3
+Bazinas,play_type,P&R Ball Handler,1,2
+Bazinas,play_type,Cut,0,1
+Bazinas,shot_location,Wing 3,1,2
+Bazinas,shot_location,Mid-range,0,1
+Bazinas,shot_location,Paint,1,3
+Calathes,play_type,Spot Up,5,13
+Calathes,play_type,P&R Ball Handler,1,7
+Calathes,play_type,Transition,2,2
+Calathes,play_type,Cut,1,2
+Calathes,play_type,Offensive Rebounds (Put Backs),2,2
+Calathes,play_type,Isolation,1,1
+Calathes,play_type,Other,1,1
+Calathes,shot_location,Paint,8,11
+Calathes,shot_location,Top 3,1,4
+Calathes,shot_location,Wing 3,1,8
+Calathes,shot_location,Corner 3,2,3
+Calathes,shot_location,Mid-range,1,2
+Chougkaz,play_type,Spot Up,0,3
+Chougkaz,play_type,Cut,0,1
+Chougkaz,shot_location,Mid-range,0,3
+Chougkaz,shot_location,Wing 3,0,1
+Foster,play_type,Spot Up,4,16
+Foster,play_type,P&R Ball Handler,6,12
+Foster,play_type,Transition,8,10
+Foster,play_type,Other,4,6
+Foster,play_type,Isolation,2,4
+Foster,play_type,Off Screen,2,2
+Foster,play_type,Offensive Rebounds (Put Backs),1,3
+Foster,play_type,Cut,0,2
+Foster,shot_location,Wing 3,2,9
+Foster,shot_location,Paint,22,32
+Foster,shot_location,Top 3,2,10
+Foster,shot_location,Corner 3,1,3
+Foster,shot_location,Mid-range,0,1
+Gray,play_type,Spot Up,3,7
+Gray,play_type,Other,0,5
+Gray,play_type,P&R Roll Man,0,1
+Gray,play_type,Cut,2,3
+Gray,play_type,Transition,1,2
+Gray,shot_location,Mid-range,0,4
+Gray,shot_location,Paint,5,9
+Gray,shot_location,Wing 3,0,2
+Gray,shot_location,Corner 3,1,2
+Gray,shot_location,Top 3,0,1
+Hudgins,play_type,P&R Ball Handler,4,7
+Hudgins,play_type,Transition,2,5
+Hudgins,play_type,Isolation,1,5
+Hudgins,play_type,Spot Up,2,3
+Hudgins,play_type,Other,1,1
+Hudgins,play_type,Off Screen,0,1
+Hudgins,shot_location,Corner 3,0,2
+Hudgins,shot_location,Paint,4,5
+Hudgins,shot_location,Wing 3,3,6
+Hudgins,shot_location,Top 3,2,7
+Hudgins,shot_location,Mid-range,1,2
+Mitrou-Long,play_type,P&R Ball Handler,3,8
+Mitrou-Long,play_type,Spot Up,5,8
+Mitrou-Long,play_type,Transition,1,2
+Mitrou-Long,play_type,Isolation,0,1
+Mitrou-Long,play_type,Off Screen,0,1
+Mitrou-Long,play_type,Other,0,1
+Mitrou-Long,shot_location,Wing 3,1,5
+Mitrou-Long,shot_location,Top 3,3,4
+Mitrou-Long,shot_location,Paint,4,8
+Mitrou-Long,shot_location,Mid-range,0,2
+Mitrou-Long,shot_location,Corner 3,1,2
+Moore,play_type,Cut,2,4
+Moore,play_type,Other,1,3
+Moore,play_type,P&R Roll Man,3,3
+Moore,play_type,Spot Up,1,1
+Moore,shot_location,Mid-range,1,3
+Moore,shot_location,Paint,6,8
+Motiejunas,play_type,Other,0,2
+Motiejunas,play_type,Cut,0,1
+Motiejunas,play_type,Spot Up,1,1
+Motiejunas,shot_location,Paint,1,3
+Motiejunas,shot_location,Mid-range,0,1
+Osman,play_type,Spot Up,10,17
+Osman,play_type,P&R Ball Handler,3,14
+Osman,play_type,Transition,10,14
+Osman,play_type,Other,2,3
+Osman,play_type,Isolation,2,7
+Osman,play_type,Off Screen,1,4
+Osman,play_type,Cut,2,2
+Osman,play_type,Offensive Rebounds (Put Backs),1,1
+Osman,shot_location,Paint,22,28
+Osman,shot_location,Wing 3,5,18
+Osman,shot_location,Mid-range,2,5
+Osman,shot_location,Top 3,2,9
+Osman,shot_location,Corner 3,0,2
+Tyree,play_type,P&R Ball Handler,4,10
+Tyree,play_type,Isolation,7,14
+Tyree,play_type,Transition,5,9
+Tyree,play_type,Other,4,7
+Tyree,play_type,Spot Up,5,8
+Tyree,play_type,Off Screen,1,2
+Tyree,play_type,P&R Roll Man,0,1
+Tyree,shot_location,Wing 3,5,14
+Tyree,shot_location,Paint,11,15
+Tyree,shot_location,Mid-range,4,6
+Tyree,shot_location,Top 3,5,12
+Tyree,shot_location,Corner 3,1,4

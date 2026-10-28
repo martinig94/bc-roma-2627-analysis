@@ -30,13 +30,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import weekly_config
 from tendency_triangles import CORNERS, GRID_N, density_levels, to_xy   # noqa: E402  (same triangle as the individual-tendencies page)
 
-EXCLUDE = ['Exhibitions', 'German League Division 3']   # competitions left out of every figure
+EXCLUDE = ['Exhibitions', 'German League Division 3']   # competitions left out of every figure (substring match: also 'Exhibitions-Italian Serie A', 'Italian Serie A League Exhibitions')
+NSEASONS = {1: 'one season', 2: 'two seasons', 3: 'three seasons', 4: 'four seasons', 5: 'five seasons'}
 MIN_TRIANGLE_FGA = 3                                       # attempts of a game for it to be a dot in the triangle
 ZONES = ['Paint', 'Mid-range', 'Corner 3', 'Wing 3', 'Top 3']
-SEASON_COLORS = {'2024-25': '#B9CFEA', '2025-26': '#4F7FBF', '2026-27': '#1F3A5F'}   # light to dark: oldest to current
+SEASON_COLORS = {'2023-24': '#DDE7F3', '2024-25': '#B9CFEA', '2025-26': '#4F7FBF', '2026-27': '#1F3A5F'}   # light to dark: oldest to current
 YELLOW, GREY, GRID, TEXT, TEXT2, TEXT3 = '#F2B705', '#8A8F98', '#e3e4ea', '#222', '#444', '#666'
 COMP_COLORS = {'Spanish ACB League': '#B04A3A', 'FIBA Europe Cup': '#2E7D6B', 'Adriatic League (ABA)': '#3E6DA8', 'EuroCup': '#F2B705',
-               'German League': '#4C4C4C', 'German Cup': '#8A8F98', 'BNXT League': '#7FA6D6'}
+               'German League': '#4C4C4C', 'German Cup': '#8A8F98', 'BNXT League': '#7FA6D6',
+               'Italian Serie A League': '#2E7D6B', 'Italian Serie A Cup': '#8CC7B8', 'VTB United League': '#7A3E9D', 'Winline Cup': '#C9A7E0',
+               'Basketball Africa League': '#D9822B'}
 SITUATIONS = {   # play type (Synergy chain) -> (panel title, sub-type order (first token after the play type), action order (next token))
     'P&R Ball Handler': ('P&R ball handler', ['High P&R', 'Left P&R', 'Right P&R'], ['Dribble Off Pick', 'Go Away from Pick', 'Takes Early Jump Shot']),
     'ISO': ('Isolation', ['Top', 'Left', 'Right'], ['Early Jumper', 'Drives Left', 'Drives Right']),
@@ -70,7 +73,8 @@ def load(data: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Shots (with zone, made, play type, sub-type, action, kind) and games, without the EXCLUDE competitions."""
     s = pd.read_csv(data / 'players_shots.csv')
     g = pd.read_csv(data / 'players_games.csv')
-    s, g = s[~s.comp.isin(EXCLUDE)].copy(), g[~g.comp.isin(EXCLUDE)].copy()
+    excl = lambda c: c.fillna('').map(lambda v: any(e in v for e in EXCLUDE))
+    s, g = s[~excl(s.comp)].copy(), g[~excl(g.comp)].copy()
     chain = s.description.map(own_chain)
     s['zone'] = s.zone_raw.map(zone)
     s['made'] = (s.pts_scored > 0).astype(int)
@@ -138,7 +142,7 @@ def fig_zones(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
     a2.set_ylim(0, 112)
     a1.set_ylim(0, t.per_game.max() * 1.18)
     a1.legend(fontsize=8.5, loc='upper right')
-    fig.text(.02, .935, f'{p}: shooting volume and percentages by zone, three seasons', fontsize=14, fontweight='bold')
+    fig.text(.02, .935, f'{p}: shooting volume and percentages by zone, {NSEASONS[len(seasons)]}', fontsize=14, fontweight='bold')
     fig.text(.02, .885, season_line(p, s, g), fontsize=8.5, color=TEXT2)
     note = ('Zones: Synergy 11-zone chart grouped as Paint (incl. rim), Mid-range (other two-point zones), Corner 3, Wing 3, Top 3. '
             'Per-game values use the games the player appeared in. 2026-27 = season to date.')
@@ -180,7 +184,7 @@ def fig_situations(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
                 head += '\n' + ' · '.join(f'{int(n_se[se])}' for se in seasons) + ' FGA (' + ' · '.join(f'{100 * n_se[se] / tot[se]:.0f}%' for se in seasons) + ' of all)'
             ax.set_title(head, fontsize=8.5, color=TEXT2, pad=8, loc='left')
     fig.legend(handles=[Patch(fc=SEASON_COLORS[se], label=se) for se in seasons], loc='upper right', ncol=3, fontsize=8.5, bbox_to_anchor=(.98, .96))
-    fig.text(.02, .955, f'{p}: pick-and-roll, isolation and transition shots, three seasons', fontsize=14, fontweight='bold')
+    fig.text(.02, .955, f'{p}: pick-and-roll, isolation and transition shots, {NSEASONS[len(seasons)]}', fontsize=14, fontweight='bold')
     fig.text(.02, .88, 'Top row: where the situation happens (% of the attempts of that play type; under the title, the attempts per season and their share of all the '
              'player\'s attempts); bottom row: what the player does in it.', fontsize=8.5, color=TEXT2)
     fig.text(.02, .915, season_line(p, s, g), fontsize=8.5, color=TEXT2)
@@ -230,7 +234,7 @@ def fig_triangles(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
     items += [Line2D([], [], marker='s', ls='', color='#111118', label='average of all shots'),
               Patch(fc=YELLOW, alpha=.5, label='densest 50% of the games'), Patch(fc=YELLOW, alpha=.28, label='densest 80%')]
     fig.legend(handles=items, loc='lower center', ncol=min(len(items), 5), fontsize=8, bbox_to_anchor=(.5, .06))
-    fig.text(.02, .93, f'{p}: where the shots come from, game by game, three seasons', fontsize=14, fontweight='bold')
+    fig.text(.02, .93, f'{p}: where the shots come from, game by game, {NSEASONS[len(seasons)]}', fontsize=14, fontweight='bold')
     fig.text(.02, .875, season_line(p, s, g), fontsize=8.5, color=TEXT2)
     c.save(fig, f'10c_player_{p.lower()}_triangles.png', 'corners: 3-point, paint (Synergy rim/paint zone) and mid-range (other two-point) attempts; one dot per game')
 

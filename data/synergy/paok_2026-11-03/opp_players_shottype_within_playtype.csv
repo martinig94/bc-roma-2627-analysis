@@ -1,0 +1,44 @@
+player,play_type,shot_type,fga,fgm
+Calathes,Spot Up,"Open, 3PT",8,3
+Calathes,Spot Up,"Guarded, 3PT",4,1
+Calathes,Spot Up,To basket,1,1
+Foster,P&R Ball Handler,"Dribble jumper, 3PT",7,2
+Foster,P&R Ball Handler,To basket,5,4
+Foster,Spot Up,To basket,6,3
+Foster,Spot Up,"Guarded, 3PT",5,0
+Foster,Spot Up,"Open, 3PT",3,1
+Foster,Spot Up,"Dribble jumper, 3PT",2,0
+Foster,Transition,To basket,8,7
+Foster,Transition,"Open, 3PT",2,1
+Mitrou-Long,P&R Ball Handler,To basket,5,2
+Mitrou-Long,P&R Ball Handler,"Dribble jumper, 3PT",2,1
+Mitrou-Long,P&R Ball Handler,"Dribble jumper, short (<17 ft)",1,0
+Mitrou-Long,Spot Up,"Guarded, 3PT",4,3
+Mitrou-Long,Spot Up,"Dribble jumper, 3PT",2,1
+Mitrou-Long,Spot Up,To basket,2,1
+Osman,P&R Ball Handler,"Dribble jumper, 3PT",11,2
+Osman,P&R Ball Handler,To basket,2,1
+Osman,P&R Ball Handler,"Dribble jumper, short (<17 ft)",1,0
+Osman,Spot Up,"Open, 3PT",7,2
+Osman,Spot Up,To basket,5,5
+Osman,Spot Up,"Guarded, 3PT",3,1
+Osman,Spot Up,"Dribble jumper, short (<17 ft)",1,1
+Osman,Spot Up,"Dribble jumper, 3PT",1,1
+Osman,Transition,To basket,12,10
+Osman,Transition,"Dribble jumper, 3PT",1,0
+Osman,Transition,"Open, 3PT",1,0
+Tyree,Isolation,"Dribble jumper, 3PT",8,2
+Tyree,Isolation,To basket,4,4
+Tyree,Isolation,"Dribble jumper, mid-range",2,1
+Tyree,P&R Ball Handler,"Dribble jumper, 3PT",7,2
+Tyree,P&R Ball Handler,To basket,2,1
+Tyree,P&R Ball Handler,"Dribble jumper, mid-range",1,1
+Tyree,Spot Up,"Open, 3PT",3,2
+Tyree,Spot Up,"Guarded, 3PT",2,0
+Tyree,Spot Up,"Dribble jumper, mid-range",1,1
+Tyree,Spot Up,"Dribble jumper, short (<17 ft)",1,1
+Tyree,Spot Up,"Dribble jumper, 3PT",1,1
+Tyree,Transition,To basket,4,3
+Tyree,Transition,"Guarded, 3PT",3,1
+Tyree,Transition,"Dribble jumper, 3PT",1,0
+Tyree,Transition,"Open, 3PT",1,1
