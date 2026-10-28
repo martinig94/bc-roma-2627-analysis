@@ -1,0 +1,29 @@
+team,side,metric,value,gp
+PAOK,offense,PPP,1.002,11
+PAOK,offense,Possessions/game,83.5,11
+PAOK,offense,eFG%,54.6,11
+PAOK,offense,TO%,13.8,11
+PAOK,offense,%FT,14.4,11
+PAOK,offense,Score%,46,11
+PAOK,offense,FG%,46.9,11
+PAOK,defense,PPP,0.992,11
+PAOK,defense,Possessions/game,80.9,11
+PAOK,defense,eFG%,56,11
+PAOK,defense,TO%,15.7,11
+PAOK,defense,%FT,13.8,11
+PAOK,defense,Score%,46.6,11
+PAOK,defense,FG%,49.1,11
+BC Roma,offense,PPP,0.992,10
+BC Roma,offense,Possessions/game,91.5,10
+BC Roma,offense,eFG%,55.7,10
+BC Roma,offense,TO%,16.6,10
+BC Roma,offense,%FT,12,10
+BC Roma,offense,Score%,45.1,10
+BC Roma,offense,FG%,48.1,10
+BC Roma,defense,PPP,1.006,10
+BC Roma,defense,Possessions/game,92.6,10
+BC Roma,defense,eFG%,54.1,10
+BC Roma,defense,TO%,13.4,10
+BC Roma,defense,%FT,13.9,10
+BC Roma,defense,Score%,46,10
+BC Roma,defense,FG%,46.7,10

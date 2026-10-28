@@ -10,7 +10,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1765,Acqua S.Bernardo Cantù,2494,Andrejs,Grazulis,24,Ala,1993-07-21,Koknese,LVA,202,101,2026-07-01,2027-06-30,nmU4ZUXXcTmqGjRERRibRa5K
 2026,1765,Acqua S.Bernardo Cantù,3855,Davide,Moretti,25,Play/Guardia,1998-03-25,Bologna,ITA,191,81,2026-07-01,2027-06-30,H5Ze34vGXUM1wuhDUktKkNd4
 2026,1765,Acqua S.Bernardo Cantù,5660,Liam,Udom,27,Guardia/Ala,2000-06-27,Bagno a Ripoli,ITA,199,85,2026-07-01,2027-06-30,ZjPJx4hdsXSztHRbXXHptZYf
-2026,1765,Acqua S.Bernardo Cantù,6133,Osvaldas,Olisevicius,31,Ala,1993-01-10,,LTU,200,90,2026-07-01,2027-06-30,
+2026,1765,Acqua S.Bernardo Cantù,6133,Osvaldas,Olisevicius,31,Ala,1993-01-10,,LTU,200,90,2026-07-01,2027-06-30,fCuWPYt9sWfguwH8Xa7Vgxyr
 2026,1765,Acqua S.Bernardo Cantù,9109,Federico,Bagordo,36,-,2009-10-08,Trieste,ITA,,,2026-07-01,2027-06-30,
 2026,1765,Acqua S.Bernardo Cantù,1205,Semaj,Christon,,Playmaker,1992-11-01,Cincinnati,USA,191,86,2026-07-01,2027-06-30,4KVSZAXKqBZHLtdnYQ5aYJGi
 2026,1771,APU Old Wild West Udine,6189,Joseph,Mobio,3,Ala,1998-05-26,Tivoli,ITA,199,94,2026-07-01,2027-06-30,yECJAdc65HMQgYPcg8qnN2e8
@@ -46,7 +46,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1761,BC Roma,9385,Paul,Watson,3,Guardia,1994-12-30,Phoenix,USA,198,95,2026-07-01,2027-06-30,CqeRADxCpckPG13ooEzw2hjc
 2026,1761,BC Roma,6258,Corey,Davis,5,Playmaker,1997-06-04,Lafayette,USA,185,86,2026-07-01,2027-06-30,XwU2DCwZL39ig5cWm6sXZMnz
 2026,1761,BC Roma,9379,Giovanni,Emejuru,7,Centro,2002-12-21,San Severino Marche,ITA,208,121,2026-07-01,2027-06-30,9vxuiFQUP6xd9SS43WnhZfQE
-2026,1761,BC Roma,6188,Riccardo,Tavernelli,8,Play/Guardia,1991-03-16,Lissone,ITA,188,82,2026-07-01,2027-06-30,
+2026,1761,BC Roma,6188,Riccardo,Tavernelli,8,Play/Guardia,1991-03-16,Lissone,ITA,188,82,2026-07-01,2027-06-30,dVm1agi1gbjsiRa88uPmcarj
 2026,1761,BC Roma,9381,Trentyn,Flowers,9,Ala,2005-03-08,Baltimora,USA,206,84,2026-07-01,2027-06-30,U4uXhnCptPYSDQ7s1qe2kmkz
 2026,1761,BC Roma,9384,Erik,Stevenson,10,Play/Guardia,1999-04-28,Lacey,USA,193,93,2026-07-01,2027-06-30,Q4NUBMCcS5HZyNPfeon9dddi
 2026,1761,BC Roma,9380,Gerald,Ayayi,11,Playmaker,2001-08-24,Saint-Étienne,FRA,190,88,2026-07-01,2027-06-30,wdm9w7UexGb9zaSL8ySBKp1b
@@ -87,7 +87,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1763,Dolomiti Energia Trentino,9170,Josè Alfred,Medina Bouza,30,-,2007-05-01,,CUB,,,2026-07-01,2027-06-30,APSkZAmzaoqMhRoC3msL1YBo
 2026,1763,Dolomiti Energia Trentino,7452,Patrick,Hassan,68,Play/Guardia,2007-01-20,Roma,ITA,185,82,2026-07-01,2027-06-30,NX8oGnBKP3saSz4Uopxrpj3v
 2026,1768,Longobardi Scafati Basket,3200,Alessandro,Lever,4,Ala/Centro,1998-12-04,Bolzano,ITA,208,107,2026-07-01,2027-06-30,THJKAyepMw9Fof2zxhRikr8k
-2026,1768,Longobardi Scafati Basket,9443,Vincenzo,Brancaccio,5,-,2009-05-10,Napoli,ITA,,,2026-07-01,2027-06-30,
+2026,1768,Longobardi Scafati Basket,9443,Vincenzo,Brancaccio,5,-,2009-05-10,Napoli,ITA,,,2026-07-01,2027-06-30,9NjQohSvFQzSKcTtgwTJQ7bm
 2026,1768,Longobardi Scafati Basket,9429,Lorenzo,Toro,6,-,2009-02-18,Salerno,ITA,,,2026-07-01,2027-06-30,G8ztehvBveWFagWvQu2DyzYH
 2026,1768,Longobardi Scafati Basket,2770,Antonio,Iannuzzi,7,Centro,1991-04-21,Avellino,ITA,205,103,2026-07-01,2027-06-30,8QiGg5VfL33kiHtxUxvMz9g4
 2026,1768,Longobardi Scafati Basket,7030,Charlie Edward,Moore,8,Play/Guardia,1998-02-03,Chicago,USA,180,82,2026-07-01,2027-06-30,hf7DUt3oTewUgcyBEfFSh4s8

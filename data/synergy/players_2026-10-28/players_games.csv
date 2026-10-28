@@ -1,0 +1,161 @@
+player,season,pid,game_id,date,home,away,comp,poss,fga,pts
+Moore,2023-24,64eb41c9e50fa03532343bce,6502d8a3ecbb45b92d939e66,2023-10-08,Pistoia,Trento,Italian Serie A League,17,12,20
+Moore,2023-24,64eb41c9e50fa03532343bce,6502e330ecbb45b92d6fd075,2023-10-29,Brindisi,Pistoia,Italian Serie A League,21,16,32
+Moore,2023-24,64eb41c9e50fa03532343bce,6505a6fdecbb45b92dad2268,2024-04-28,Trento,Pistoia,Italian Serie A League,20,15,21
+Moore,2023-24,64eb41c9e50fa03532343bce,6502f4bdecbb45b92da15396,2023-12-02,Pistoia,Napoli Basket,Italian Serie A League,21,13,20
+Moore,2023-24,64eb41c9e50fa03532343bce,6502fbd4ecbb45b92d04ec7f,2024-01-14,Sassari,Pistoia,Italian Serie A League,16,12,10
+Moore,2023-24,64eb41c9e50fa03532343bce,6502eb61ecbb45b92d0a1096,2023-11-19,Pistoia,Sassari,Italian Serie A League,16,9,7
+Moore,2023-24,64eb41c9e50fa03532343bce,6502ff4eecbb45b92d44500f,2024-02-11,Venezia,Pistoia,Italian Serie A League,12,7,10
+Moore,2023-24,64eb41c9e50fa03532343bce,6502ff4decbb45b92d442ec2,2024-02-04,Pistoia,Milano,Italian Serie A League,18,14,21
+Moore,2023-24,64eb41c9e50fa03532343bce,6639eec8b25941e0e94f0317,2024-05-12,Brescia,Pistoia,Italian Serie A League,16,13,15
+Moore,2023-24,64eb41c9e50fa03532343bce,6502d771ecbb45b92d7a3e28,2023-10-04,Varese,Pistoia,Italian Serie A League,19,12,17
+Moore,2023-24,64eb41c9e50fa03532343bce,650301a2ecbb45b92d6e484e,2024-03-10,Cremona,Pistoia,Italian Serie A League,20,12,22
+Moore,2023-24,64eb41c9e50fa03532343bce,6502fbd5ecbb45b92d04f692,2024-01-20,Pistoia,Scafati,Italian Serie A League,18,15,7
+Moore,2023-24,64eb41c9e50fa03532343bce,650303faecbb45b92d98d3d6,2024-04-07,Pistoia,Reggio Emilia,Italian Serie A League,12,7,16
+Moore,2023-24,64eb41c9e50fa03532343bce,650303f9ecbb45b92d98ad76,2024-03-23,Pistoia,Treviso,Italian Serie A League,22,17,16
+Moore,2023-24,64eb41c9e50fa03532343bce,6639eec8b25941e0e94f0512,2024-05-17,Pistoia,Brescia,Italian Serie A League,17,14,18
+Moore,2023-24,64eb41c9e50fa03532343bce,6502e1fbecbb45b92d599580,2023-10-22,Pistoia,Brescia,Italian Serie A League,19,13,10
+Moore,2023-24,64eb41c9e50fa03532343bce,6502eb60ecbb45b92d0a059e,2023-11-05,Pistoia,Venezia,Italian Serie A League,22,15,18
+Moore,2023-24,64eb41c9e50fa03532343bce,6639eec8b25941e0e94f0421,2024-05-14,Brescia,Pistoia,Italian Serie A League,16,7,19
+Moore,2023-24,64eb41c9e50fa03532343bce,6502f96aecbb45b92ddf6fe6,2023-12-17,Pistoia,Pesaro,Italian Serie A League,24,14,24
+Moore,2023-24,64eb41c9e50fa03532343bce,6505a6fcecbb45b92dad1482,2024-04-21,Pistoia,Brindisi,Italian Serie A League,18,13,21
+Moore,2023-24,64eb41c9e50fa03532343bce,6505a6fdecbb45b92dad2990,2024-05-05,Pistoia,Varese,Italian Serie A League,17,16,12
+Moore,2023-24,64eb41c9e50fa03532343bce,65512a62cc94a89dd51aa215,2023-11-12,Reggio Emilia,Pistoia,Italian Serie A League,22,15,18
+Moore,2023-24,64eb41c9e50fa03532343bce,6502f4bdecbb45b92da14839,2023-11-26,Milano,Pistoia,Italian Serie A League,26,20,29
+Moore,2023-24,64eb41c9e50fa03532343bce,6502f4beecbb45b92da1714b,2023-12-09,Derthona Tortona,Pistoia,Italian Serie A League,19,15,24
+Moore,2023-24,64eb41c9e50fa03532343bce,6502fbd3ecbb45b92d04dee2,2024-01-07,Pistoia,Cremona,Italian Serie A League,19,12,20
+Moore,2023-24,64eb41c9e50fa03532343bce,650303faecbb45b92d98c7ed,2024-04-01,VirtusBologna,Pistoia,Italian Serie A League,18,13,16
+Moore,2023-24,64eb41c9e50fa03532343bce,6502f96aecbb45b92ddf7db0,2023-12-23,Pistoia,VirtusBologna,Italian Serie A League,18,14,9
+Moore,2023-24,64eb41c9e50fa03532343bce,65ca329ee60e5f53998ec630,2024-02-14,Venezia,Pistoia,Italian Serie A Cup,17,16,20
+Moore,2023-24,64eb41c9e50fa03532343bce,650301a1ecbb45b92d6e3fd6,2024-03-03,Pistoia,Derthona Tortona,Italian Serie A League,13,12,16
+Moore,2023-24,64eb41c9e50fa03532343bce,6502f96becbb45b92ddf8ae1,2023-12-30,Treviso,Pistoia,Italian Serie A League,16,13,16
+Moore,2023-24,64eb41c9e50fa03532343bce,6502dd4eecbb45b92dfaf8f5,2023-10-15,Scafati,Pistoia,Italian Serie A League,19,15,18
+Moore,2023-24,64eb41c9e50fa03532343bce,650301a2ecbb45b92d6e5247,2024-03-16,Napoli Basket,Pistoia,Italian Serie A League,26,16,23
+Moore,2023-24,64eb41c9e50fa03532343bce,64e778c894afe277eb057ff5,2023-08-26,Pistoia,Chiusi,Italian Serie A League Exhibitions,13,10,16
+Moore,2023-24,64eb41c9e50fa03532343bce,64fe1130ecbb45b92d104540,2023-09-10,Pesaro,Pistoia,Italian Serie A League Exhibitions,1,1,0
+Moore,2023-24,64eb41c9e50fa03532343bce,6505a6fbecbb45b92dacfd8b,2024-04-13,Pesaro,Pistoia,Italian Serie A League,20,13,15
+Moore,2023-24,64eb41c9e50fa03532343bce,6502ff4cecbb45b92d441151,2024-01-28,Brescia,Pistoia,Italian Serie A League,20,15,18
+Moore,2024-25,66f96dd62ad906d28cddd022,66ec00b67d0c57b55b93e564,2024-10-13,Breogan,Valencia,Spanish ACB League,16,13,12
+Moore,2024-25,66f96dd62ad906d28cddd022,66ec06965906f8ee5263d3ee,2024-10-27,Breogan,Lleida,Spanish ACB League,13,9,12
+Moore,2024-25,66f96dd62ad906d28cddd022,66ec08ebea2ae3d34182786e,2024-11-02,Zaragoza,Breogan,Spanish ACB League,18,13,11
+Moore,2024-25,66f96dd62ad906d28cddd022,66ec0c77ed418afc760b71f1,2024-11-10,Breogan,Barcelona,Spanish ACB League,19,14,22
+Moore,2024-25,66f96dd62ad906d28cddd022,66ec04432c5e14673623860e,2024-10-19,Joventut,Breogan,Spanish ACB League,14,14,10
+Moore,2024-25,66f96dd62ad906d28cddd022,66ec111ffc0c0d8ebfb15606,2024-11-30,Breogan,Granada,Spanish ACB League,12,9,9
+Moore,2024-25,66f96dd62ad906d28cddd022,66ec1379691ab6c2ca32501a,2024-12-08,Gran Canaria,Breogan,Spanish ACB League,12,9,19
+Moore,2024-25,66f96dd62ad906d28cddd022,66ebf9b2243a545a19b7b9af,2024-09-29,Bilbao,Breogan,Spanish ACB League,17,13,15
+Moore,2024-25,66f96dd62ad906d28cddd022,66ec0ec89628d10a17584680,2024-11-16,Murcia,Breogan,Spanish ACB League,20,16,16
+Moore,2024-25,66f96dd62ad906d28cddd022,66ebfe60cd7542a18b1915a6,2024-11-07,Breogan,Lenovo Tenerife,Spanish ACB League,15,13,17
+Moore,2025-26,6a11a7ee0e290048c40d3abc,6a0c23cc974a77ae0b93e7d8,2026-05-28,PetroLuanda,AlAhly Benghazi,Basketball Africa League,23,13,20
+Moore,2025-26,6a11a7ee0e290048c40d3abc,6a0c23cc974a77ae0b93e7d1,2026-05-23,Club African,AlAhly Benghazi,Basketball Africa League,23,14,22
+Moore,2025-26,6a11a7ee0e290048c40d3abc,6a0c23cc974a77ae0b93e7d9,2026-05-31,AlAhly Benghazi,Al Ahly EGYPT,Basketball Africa League,27,16,24
+Moore,2025-26,6a11a7ee0e290048c40d3abc,6a0c23cc974a77ae0b93e7d5,2026-05-25,AlAhly Benghazi,Club African,Basketball Africa League,19,15,23
+Moore,2026-27,6ab6e197eade15487e9acfa1,6a981d6812674e7445bcb3e9,2026-08-28,Scafati,Caserta,Exhibitions-Italian Serie A,14,7,13
+Moore,2026-27,6ab6e197eade15487e9acfa1,6a9925138407a9be906426fd,2026-10-24,Scafati,Trento,Italian Serie A League,22,17,28
+Moore,2026-27,6ab6e197eade15487e9acfa1,6a981d6812674e7445bcb3ea,2026-09-01,Scafati,Avellino,Exhibitions-Italian Serie A,9,7,9
+Moore,2026-27,6ab6e197eade15487e9acfa1,6a98001b370c9d0eea8d508a,2026-09-27,APU Udine,Scafati,Italian Serie A League,14,8,7
+Moore,2026-27,6ab6e197eade15487e9acfa1,6a901cf7156c71165a96cc4a,2026-09-12,Scafati,BC Roma,Exhibitions-Italian Serie A,15,11,24
+Moore,2026-27,6ab6e197eade15487e9acfa1,6a980273f3547296522fd74d,2026-10-04,Scafati,Varese,Italian Serie A League,19,11,12
+Moore,2026-27,6ab6e197eade15487e9acfa1,6a980274f3547296522fd756,2026-10-11,Scafati,Verona,Italian Serie A League,14,10,17
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e94d51671dff954e604f66,2024-10-03,Zenit,Parma,VTB United League,15,13,11
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e934b4b20fb2c6b334be7d,2024-09-22,Saratov,Parma,VTB United League,12,6,5
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95c8f940bb9ae4c76b7f8,2024-11-09,Parma,Nizhny,VTB United League,10,6,10
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95ee4332cb4b1c80bfced,2024-10-16,Enisey,Parma,VTB United League,18,14,17
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95c8e940bb9ae4c76b7ee,2024-11-14,Parma,Saratov,VTB United League,23,20,26
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e9532f536ad204c3bdedcb,2025-03-23,Enisey,Parma,VTB United League,19,16,20
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e9532f536ad204c3bdedc7,2025-03-26,CSKA,Parma,VTB United League,16,15,21
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e9545fc924094f84dc5bd0,2025-02-08,Parma,Zenit,VTB United League,18,13,14
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e950d56e6dba5e6c3f2be9,2025-04-05,Astana,Parma,VTB United League,10,9,15
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e950d36e6dba5e6c3f2bdc,2025-04-12,Parma,Nizhny,VTB United League,18,16,16
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,6802d01bf538462c90e6a0a5,2025-04-24,Zenit,Parma,VTB United League,6,4,3
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,680a3bb733265c51779787f3,2025-04-27,Parma,Zenit,VTB United League,3,2,0
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e957e209556d90863a0ee7,2025-01-18,MBAMoscow,Parma,VTB United League,22,20,21
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95909244ec20779604c46,2024-12-25,Unics,Parma,VTB United League,9,6,16
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95ee3332cb4b1c80bfcde,2024-10-27,Parma,Samara,VTB United League,24,22,18
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e9545ec924094f84dc5bc9,2025-02-12,Parma,Kuban,VTB United League,30,23,24
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e9545dc924094f84dc5bba,2025-03-05,Parma,Saratov,VTB United League,19,14,16
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,67fe201fd8288295ddd2b25f,2025-04-16,Nizhny,Parma,VTB United League,13,11,5
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95ee3332cb4b1c80bfce3,2024-10-23,Parma,Unics,VTB United League,17,17,19
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95c8f940bb9ae4c76b7ff,2024-11-03,MBAMoscow,Parma,VTB United League,19,15,19
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e934b4b20fb2c6b334be7e,2024-09-25,Nizhny,Parma,VTB United League,6,4,0
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e957e209556d90863a0eeb,2025-01-15,Parma,Enisey,VTB United League,19,14,15
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e957e109556d90863a0ed6,2025-01-29,Parma,UralEkaterinburg,VTB United League,19,15,17
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e957e309556d90863a0ef2,2025-01-11,Parma,CSKA,VTB United League,16,13,10
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e957e109556d90863a0edd,2025-01-25,Saratov,Parma,VTB United League,18,15,10
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95585934d505c8731e203,2025-02-05,Parma,Unics,VTB United League,23,18,27
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e950d46e6dba5e6c3f2be0,2025-04-09,Zenit,Parma,VTB United League,22,17,21
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95c8f940bb9ae4c76b7fc,2024-11-06,Kuban,Parma,VTB United League,16,10,11
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e93f3f837f34a72f0e8504,2024-09-29,Parma,Astana,VTB United League,16,14,16
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95b65cc614b1d3e52f909,2024-11-17,Parma,Zenit,VTB United League,23,17,23
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,6800fb5ced73dd3dedb54747,2025-04-19,Parma,MBAMoscow,VTB United League,17,17,28
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,6802d01bf538462c90e6a0a4,2025-04-22,Zenit,Parma,VTB United League,10,7,4
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e9532e536ad204c3bdedc2,2025-03-29,Parma,Samara,VTB United League,19,16,28
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95908244ec20779604c42,2025-01-04,Kuban,Parma,VTB United League,13,12,13
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95585934d505c8731e207,2025-02-01,Samara,Parma,VTB United League,24,20,30
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e5aae9677eda4a8dded05f,2024-09-14,Parma,Nizhny,Exhibitions,17,14,17
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95ee5332cb4b1c80bfcf7,2024-10-09,UralEkaterinburg,Parma,VTB United League,23,22,16
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95ee4332cb4b1c80bfce8,2024-10-20,Parma,CSKA,VTB United League,14,9,10
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95ee5332cb4b1c80bfcfb,2024-10-06,Parma,MBAMoscow,VTB United League,15,12,17
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95b65cc614b1d3e52f904,2024-11-28,CSKA,Parma,VTB United League,22,18,22
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e9545dc924094f84dc5bb4,2025-03-08,Unics,Parma,VTB United League,15,13,7
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95b65cc614b1d3e52f8fe,2024-12-01,Parma,UralEkaterinburg,VTB United League,23,19,24
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e9545ec924094f84dc5bc4,2025-02-28,Nizhny,Parma,VTB United League,22,20,20
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95331536ad204c3bdedd9,2025-03-11,Parma,Astana,VTB United League,11,10,23
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e95330536ad204c3bdedd0,2025-03-19,Parma,MBAMoscow,VTB United League,20,19,20
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66e950d56e6dba5e6c3f2beb,2025-04-02,UralEkaterinburg,Parma,VTB United League,12,10,2
+Nevels,2024-25,66d76f7bc8fcce5ed2e0c5f8,66d76e4fde3c3469c8ffa7eb,2024-08-30,Nizhny,Parma,Exhibitions,13,11,2
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6a010082a218c75334e88,2026-02-01,Parma,UralEkaterinburg,VTB United League,19,15,15
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b590326b6ce89298cd38d1,2025-10-20,Zenit,UralEkaterinburg,VTB United League,12,11,8
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6a011082a218c75334e94,2026-02-07,UralEkaterinburg,Enisey,VTB United League,15,13,15
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6851e7779409141619df7,2025-12-17,UralEkaterinburg,CSKA,VTB United League,11,10,6
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c0e2555e4f157098e7d0,2026-03-07,Saratov,UralEkaterinburg,VTB United League,9,4,8
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6a00f082a218c75334e7a,2026-01-21,CSKA,UralEkaterinburg,VTB United League,10,9,14
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c0e2555e4f157098e7cd,2026-03-04,Samara,UralEkaterinburg,VTB United League,19,13,19
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b594e3572b3f8c4af3b141,2025-10-25,Enisey,UralEkaterinburg,VTB United League,20,17,29
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68e7679041215acee7aa35b1,2025-12-13,Unics,UralEkaterinburg,Winline Cup,9,7,6
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68e7679141215acee7aa35be,2026-03-17,UralEkaterinburg,Igokea,Winline Cup,10,3,7
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c4652f37ab38a68be233,2026-03-26,UralEkaterinburg,CSKA,VTB United League,15,10,16
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c4662f37ab38a68be249,2026-04-15,Samara,UralEkaterinburg,VTB United League,12,10,12
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b590316b6ce89298cd38ca,2025-10-14,UralEkaterinburg,Saratov,VTB United League,13,13,13
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68d3e3dafd31c097c85c04c1,2025-09-22,UralEkaterinburg,Parma,Exhibitions,19,18,19
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6945b0516d7e5f870b24a,2026-01-04,MBAMoscow,UralEkaterinburg,VTB United League,14,13,10
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6945a0516d7e5f870b246,2025-12-28,UralEkaterinburg,Unics,VTB United League,6,5,0
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6a011082a218c75334e8d,2026-02-04,UralEkaterinburg,Unics,VTB United League,18,14,10
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c6bc1f5353392ad89c29,2026-04-22,UralEkaterinburg,Saratov,VTB United League,9,8,12
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,69e9fa183d57061fdf7fb3cd,2026-05-02,UralEkaterinburg,Zenit,VTB United League,12,11,11
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c0e1555e4f157098e7c6,2026-02-19,UralEkaterinburg,Zenit,VTB United League,14,7,4
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68c82f61d83214701ede0bab,2025-09-13,Zenit,UralEkaterinburg,Exhibitions,9,9,12
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6945b0516d7e5f870b24e,2026-01-07,Kuban,UralEkaterinburg,VTB United League,13,11,12
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6851d7779409141619de7,2025-11-23,UralEkaterinburg,Nizhny,VTB United League,16,11,14
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6851e7779409141619dfd,2025-12-21,UralEkaterinburg,Parma,VTB United League,16,15,19
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c0e2555e4f157098e7cb,2026-02-22,UralEkaterinburg,MBAMoscow,VTB United League,15,12,18
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c4652f37ab38a68be23e,2026-04-04,Unics,UralEkaterinburg,VTB United League,13,10,11
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6945b0516d7e5f870b24f,2026-01-10,Nizhny,UralEkaterinburg,VTB United League,18,13,21
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c4662f37ab38a68be245,2026-04-07,Zenit,UralEkaterinburg,VTB United League,14,12,14
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b590306b6ce89298cd38bd,2025-10-03,UralEkaterinburg,MBAMoscow,VTB United League,17,15,14
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b594e3572b3f8c4af3b145,2025-10-29,CSKA,UralEkaterinburg,VTB United League,14,9,17
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,69e9fa183d57061fdf7fb3c5,2026-04-26,Zenit,UralEkaterinburg,VTB United League,18,15,27
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,69f314f5d64c0547a8b1fe70,2026-05-04,UralEkaterinburg,Zenit,VTB United League,9,8,12
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6851d7779409141619dea,2025-12-07,UralEkaterinburg,Zenit,VTB United League,19,16,18
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b5902f6b6ce89298cd38b7,2025-09-28,Kuban,UralEkaterinburg,VTB United League,15,14,23
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b594e4572b3f8c4af3b14e,2025-11-07,Parma,UralEkaterinburg,VTB United League,23,19,25
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c4652f37ab38a68be23a,2026-04-01,UralEkaterinburg,Nizhny,VTB United League,8,8,7
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b594e5572b3f8c4af3b157,2025-11-15,Enisey,UralEkaterinburg,VTB United League,18,18,27
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c0e2555e4f157098e7d4,2026-03-10,Nizhny,UralEkaterinburg,VTB United League,10,7,9
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,69e9fa183d57061fdf7fb3ca,2026-04-28,Zenit,UralEkaterinburg,VTB United League,8,6,5
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6a010082a218c75334e85,2026-01-29,UralEkaterinburg,Kuban,VTB United League,19,15,22
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6945c0516d7e5f870b25c,2026-01-18,UralEkaterinburg,Samara,VTB United League,11,8,17
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b594e4572b3f8c4af3b14c,2025-11-04,UralEkaterinburg,Samara,VTB United League,18,16,14
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b594e5572b3f8c4af3b15b,2025-11-18,UralEkaterinburg,Kuban,VTB United League,20,19,19
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6945a0516d7e5f870b240,2025-12-24,Saratov,UralEkaterinburg,VTB United League,20,18,18
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68e7679041215acee7aa35b6,2026-01-14,UralEkaterinburg,Unics,Winline Cup,6,6,4
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6a010082a218c75334e7f,2026-01-24,UralEkaterinburg,Enisey,VTB United League,13,12,16
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68e7679141215acee7aa35bb,2026-02-12,Zenit,UralEkaterinburg,Winline Cup,15,10,14
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c0e3555e4f157098e7d7,2026-03-13,UralEkaterinburg,Parma,VTB United League,16,13,17
+Nevels,2025-26,64fc9f94ecbb45b92d435a9a,68b6c4642f37ab38a68be22d,2026-03-21,MBAMoscow,UralEkaterinburg,VTB United League,13,11,9
+Nevels,2026-27,6ab6e2c2eade15487e9ad794,6a9925138407a9be906426fd,2026-10-24,Scafati,Trento,Italian Serie A League,9,7,10
+Nevels,2026-27,6ab6e2c2eade15487e9ad794,6a901cf7156c71165a96cc4a,2026-09-12,Scafati,BC Roma,Exhibitions-Italian Serie A,10,9,9
+Nevels,2026-27,6ab6e2c2eade15487e9ad794,6a98001b370c9d0eea8d508a,2026-09-27,APU Udine,Scafati,Italian Serie A League,13,11,12
+Nevels,2026-27,6ab6e2c2eade15487e9ad794,6a980274f3547296522fd756,2026-10-11,Scafati,Verona,Italian Serie A League,11,7,4
+Nevels,2026-27,6ab6e2c2eade15487e9ad794,6a9bc238514e90daae4627ff,2026-09-05,Maxima Roma,Scafati,Exhibitions-Italian Serie A,12,10,5
+Nevels,2026-27,6ab6e2c2eade15487e9ad794,6a980274f3547296522fd761,2026-10-18,Virtus Bologna,Scafati,Italian Serie A League,16,13,11
+Nevels,2026-27,6ab6e2c2eade15487e9ad794,6a980273f3547296522fd74d,2026-10-04,Scafati,Varese,Italian Serie A League,17,12,21

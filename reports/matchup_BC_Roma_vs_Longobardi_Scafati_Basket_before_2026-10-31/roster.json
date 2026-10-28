@@ -298,7 +298,7 @@
   },
   {
     "player_id": 9443,
-    "photo": false,
+    "photo": true,
     "name": "Brancaccio",
     "pos": "-",
     "height": "",
