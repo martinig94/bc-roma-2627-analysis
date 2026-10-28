@@ -101,7 +101,7 @@ Johnson joined for round 3 and has started the three games since. Moore (0' at V
 ![Scafati play types and PPP](03_playtype_ppp_ref_vs_opp.png)
 
 - Spot-up (23% of possessions, 1.04 PPP) and P&R ball handler (21%, 0.67 PPP) are Scafati's two main play types; BC Roma scores 1.02 PPP on the P&R ball handler, 5th in the league, where Scafati is 15th.
-- Transition is Scafati's best play type (11% of possessions, 1.22 PPP, 65% eFG) and put-backs the second (1.14 PPP on 22 possessions, Onyema 6 and Lever... see the mix below).
+- Transition is Scafati's best play type (11% of possessions, 1.22 PPP, 65% eFG) and put-backs the second (1.14 PPP on 22 possessions, Onyema).
 - Post-ups (31 possessions, 0.61 PPP, 33% eFG) and cuts (33, 0.85) are below BC Roma's numbers (1.31 and 1.68 PPP, 1st in the league on both).
 - Compared to BC Roma, Scafati plays more post-ups (7% of possessions vs 3%) and fewer roll-man finishes (6% vs 10%).
 
@@ -165,29 +165,6 @@ Moore to Offurum (9) is the main pair; Mascolo distributes to Lever, Offurum and
 
 Moore (16 in 4 games) and the two other ball handlers, Nevels and Mascolo (11 each), account for 38 of Scafati's 61 turnovers. Synergy: TO% on P&R ball-handler possessions 22.5%, on isolations 21.7%.
 
-## Lineups
-
-![Lineups: usage vs PPP](07_lineups_usage_vs_ppp.png)
-
-In five LBA games Scafati used 29 different lineups with at least 5 offensive possessions; the top five lineups cover 141 of 432 possessions.
-
-- Most used: Moore, Johnson, Onyema, Offurum, Nevels (35 possessions): 1.06 PPP scored, 1.04 allowed (27 defensive possessions).
-- Second: Mascolo, Johnson, Onyema, Offurum, Nevels (33): 0.88 scored, 1.38 allowed, TO% 27.3. The lineup with Mascolo in Moore's place is the worst defensive lineup among the frequent ones.
-- Moore, Onyema, Offurum, Nevels, McGruder (26): 0.54 scored (26.5% eFG), 0.92 allowed.
-- Mascolo, Moore, Johnson, Onyema, Offurum (24, both ball handlers together): 1.04 scored, 0.96 allowed, TO% 8.3.
-- Lever, Moore, Onyema, Offurum, Nevels (23): 0.61 scored, 0.92 allowed, TO% 30.4.
-
-![Lineups: offense vs defense](08_lineups_offense_vs_defense.png)
-
-Smaller samples worth a look: Mascolo, Lever, Offurum, Nevels, McGruder (12 possessions, 1.33 scored, 0.50 allowed) and Lever, Moore, Johnson, Offurum, Nevels (11, 1.45 scored, 0.86 allowed) are the two lineups positive on both ends; both have Lever at the five.
-
-![Lineups: style profile](09_lineups_style_profile.png)
-
-- Three-point rate ranges from 13% of attempts (Lever, Moore, Onyema, Offurum, Nevels) to 50% (Mascolo, Lever, Onyema, Nevels, McGruder) among the lineups with 15+ possessions.
-- The most-used lineup takes 29% of its shots from three and has the lowest TO% (14.3) of the top five.
-
-{{ lineups }}
-
 ## Defensive attitude
 
 From Synergy's defensive play types (5 LBA games):
@@ -223,18 +200,13 @@ From the numbers only (5 LBA games each, so tendencies, not predictions):
 
 Game clock from the Synergy shot list (time remaining in the period):
 
-**Moore pull-up threes** (5/13 made): vs Trento Q1 2:51, Q3 1:29, Q4 8:18; vs Verona Q2 7:32; vs Varese Q3 9:28.
+**Moore pull-up threes** (5/13 made).
 
-**Offurum in transition** (9/11 at the rim): vs Trento Q3 6:35, 4:52 and 3:49 (three in one quarter); at Virtus Bologna Q3 7:36; vs Verona Q1 8:36 and Q3 5:31; at Udine Q2 6:40 and Q4 2:15.
+**Offurum in transition** (9/11 at the rim).  
 
-**Onyema as roll man** (6/9): vs Verona Q1 9:00, Q2 2:28, Q4 6:10; at Virtus Bologna Q1 8:00, Q2 7:44; vs Trento Q3 2:18.
+**Onyema as roll man** (6/9).
 
-**Johnson's spot-up threes** (7/14): at Virtus Bologna Q1 8:49, Q3 9:45 and 6:29, Q4 7:17; vs Trento Q1 5:05 and Q3 4:11; vs Verona Q3 9:32.
+**Johnson's spot-up threes** (7/14).
 
-**Mascolo's P&R possessions** (4/20): the short pull-ups vs Trento Q1 6:49, Q2 7:04, Q4 9:38 and at Udine Q4 1:12; the rim attempts at Virtus Bologna Q4 3:25 and 2:52.
+**Mascolo's P&R possessions** (4/20): the short pull-ups and the rim attempts.
 
-## Other suggested checks
-
-- Which BC Roma players attack Scafati's P&R coverage from the mid-range (Nevels and Mascolo are the mid-range shooters on the other side).
-- Scafati's lineups with Lever at the five (the two lineups positive on both ends) and how BC Roma's roll men are defended in them.
-- Minutes of the 8-man rotation in the fourth quarter.
