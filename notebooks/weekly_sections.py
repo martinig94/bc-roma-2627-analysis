@@ -28,6 +28,8 @@ POS_ORDER = {"Guard": 1, "Forward": 2, "Center": 4,          # EuroCup club page
 
 # playing-time flag: at least MIN_PLAYED seconds in the game and either +ABS_UP seconds or +REL_UP above the average before
 MIN_PLAYED, ABS_UP, REL_UP = 8 * 60, 7 * 60, 0.30
+# availability flag: the AVAIL_TOP players with most minutes per game who missed at least AVAIL_MIN_STREAK of the latest games in a row
+AVAIL_TOP, AVAIL_MIN_STREAK = 10, 2
 
 COMP_LBA, COMP_EC = "LBA", "EC"          # values of the `competition` column of load_box()
 ALL_ROUNDS, END_OF_TIME = 10**6, "9999-12-31"   # "no limit" for load_box(upto_round, upto_date)
@@ -290,6 +292,40 @@ def playing_time_flags(box: pd.DataFrame, game_id: str, game_date: str) -> list[
             out.append({"name": sur.title(), "now": round(r.sec / 60, 1), "avg": round(a / 60, 1), "gp_before": int(n),
                         "diff": round((r.sec - a) / 60, 1), "pct": round(100 * (r.sec / a - 1))})
     return sorted(out, key=lambda x: -(x["diff"] or 99))
+
+
+# ── availability ────────────────────────────────────────────────────────────────
+def availability(box: pd.DataFrame, games: list[tuple[str, str, str]], team: str = TEAM, top: int = AVAIL_TOP) -> dict:
+    """Return the top `top` players (minutes per game played, LBA + EuroCup) with the games they missed in a row up to the last game.
+
+    A game is missed when the player has no court time in it (not used, or not in the box score at all). The data does not say why
+    (injury, coach's decision, left the club), so the page only reports the absence.
+
+    Args:
+        box: Box-score rows of both competitions played before the game (load_box_before).
+        games: The team's finished games in date order, newest last, as (game_id, date, label) with label like "LBA 24 Oct".
+        team: Team the players belong to.
+        top: Number of players with most minutes per game that are checked.
+
+    Returns:
+        {"n_games": games checked, "min_streak": flag threshold, "rows": one dict per top player: name, mpg, gp, streak (games
+        missed in a row up to the last game), missed (labels of those games), last_played (label of the last game with minutes,
+        None if never)}.
+    """
+    p = players(box, team)
+    mpg = (p.groupby("player_surname").sec.mean() / 60).sort_values(ascending=False).head(top)
+    played = {sur: set(g.game_id) for sur, g in p.groupby("player_surname")}
+    rows = []
+    for sur, m in mpg.items():
+        missed, last_played = [], None
+        for gid, _, label in reversed(games):
+            if str(gid) in played[sur]:
+                last_played = label
+                break
+            missed.append(label)
+        rows.append({"name": sur.title(), "mpg": round(m, 1), "gp": len(played[sur]), "streak": len(missed),
+                     "missed": list(reversed(missed)), "last_played": last_played})
+    return {"n_games": len(games), "min_streak": AVAIL_MIN_STREAK, "rows": rows}
 
 
 # ── assists ─────────────────────────────────────────────────────────────────────

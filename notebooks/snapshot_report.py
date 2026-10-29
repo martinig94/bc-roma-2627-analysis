@@ -28,7 +28,7 @@ import weekly_sections as ws
 ROOT = weekly_config.ROOT
 CFG = weekly_config.load()
 TEAM = CFG["team"]
-VERSION = 7   # bump when the generated data changes shape: weekly.py regenerates older snapshots
+VERSION = 8   # bump when the generated data changes shape: weekly.py regenerates older snapshots
 LBA = "LBA"                                  # competition label of the LBA games in team_games
 EUROCUP = eurocup.COMPETITION                # competition label of the EuroCup games in team_games
 EUROCUP_BOX = "EC"                           # competition code of EuroCup rows in the box-score frame
@@ -63,6 +63,11 @@ def last_results_md(before: pd.DataFrame, n: int = LAST_RESULTS) -> str:
         label = f"round {int(x['round'])}" if x.competition == LBA else x.competition
         items.append(f"- {x.date[5:]} · {label}: **{'W' if x.win else 'L'}** {int(x.pf)}-{int(x.pa)} {where(x.home)} {x.opponent}")
     return "\n".join(items)
+
+
+def game_label(x: Any) -> str:
+    """Short label of a finished game for the availability table: "LBA 24 Oct", "EuroCup 27 Oct"."""
+    return f"{x.competition} {pd.Timestamp(x.date):%d %b}".replace(" 0", " ")
 
 
 def lba_style_shots(pbp: pd.DataFrame, games: list[Any], team: str) -> pd.DataFrame:
@@ -163,6 +168,7 @@ def generate(key: str, team: str = TEAM, data: Path = ROOT / "data") -> Path:
                       "opponent": last.opponent, "home": None if nn(last.home) is None else bool(last.home), "score_for": int(last.pf), "score_against": int(last.pa),
                       "win": bool(last.win), "date": last.date},
         "playing_time": ws.playing_time_flags(xbox, str(last.game_id), last.date),
+        "availability": ws.availability(xbox, [(str(x.game_id), x.date, game_label(x)) for x in before.itertuples()], team),
         "profile": {LBA: ws.team_profile(xbox, team, (LBA,)), EUROCUP: ws.team_profile(xbox, team, (EUROCUP_BOX,))},
         "roster": roster,
         "assist_top": ws.fig_assists(ws.assist_pairs(pbp, lba_games, team), box_ast, out, team),
