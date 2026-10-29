@@ -11,7 +11,7 @@
   "time": "19:00",
   "venue": null,
   "played": false,
-  "version": 7,
+  "version": 8,
   "n_before": 50,
   "opponent_analysis": "matchup_Paok_Thessaloniki_vs_BC_Roma_before_2026-11-03",
   "record": "1-4",
@@ -47,6 +47,95 @@
       "pct": 77
     }
   ],
+  "availability": {
+    "n_games": 10,
+    "min_streak": 2,
+    "rows": [
+      {
+        "name": "Strautins",
+        "mpg": 27.8,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Mannion",
+        "mpg": 27.2,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Ayayi",
+        "mpg": 25.7,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Olynyk",
+        "mpg": 25.6,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Stevenson",
+        "mpg": 24.0,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Davis",
+        "mpg": 23.4,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Simonovic",
+        "mpg": 22.5,
+        "gp": 8,
+        "streak": 2,
+        "missed": [
+          "LBA 24 Oct",
+          "EuroCup 27 Oct"
+        ],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Watson",
+        "mpg": 20.7,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Emejuru",
+        "mpg": 10.7,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Mezzanotte",
+        "mpg": 10.3,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      }
+    ]
+  },
   "profile": {
     "LBA": {
       "Games": 5,

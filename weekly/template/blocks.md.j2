@@ -44,6 +44,21 @@ Author: {{ author }}
 {% endfor %}{% else %}No player had a significant increase in playing time in that game (flag: at least 8' played and either +7' or +30% versus the average in earlier games).{% endif %}
 {%- endmacro %}
 
+{% macro snapshot_availability(a, files, author, kind) -%}
+{% set av = a.availability %}{% set out = av.rows|selectattr('streak', 'ge', av.min_streak)|list %}{% set one = av.rows|selectattr('streak', 'equalto', 1)|list -%}
+Top {{ av.rows|length }} players by minutes per game (LBA + EuroCup), games missed in a row up to the last of {{ av.n_games }} games played. The box score does not say why: it can be an injury, a coach's decision or a player who left.
+
+{% if out %}**Out for {{ av.min_streak }} games or more:**
+
+| Player | Min/game | Games missed in a row | Missed | Last played |
+|---|---:|---:|---|---|
+{% for r in out %}| {{ r.name }} | {{ r.mpg }}' | **{{ r.streak }}** | {{ r.missed|join(', ') }} | {{ r.last_played or 'never' }} |
+{% endfor %}{% else %}**No player of the top {{ av.rows|length }} has missed {{ av.min_streak }} or more games in a row.**{% endif %}
+{% if one %}
+Missed only the last game: {% for r in one %}{{ r.name }} ({{ r.missed[0] }}){{ ', ' if not loop.last }}{% endfor %}.
+{% endif %}
+{%- endmacro %}
+
 {% macro team_numbers(a, files, author, kind) -%}
 | | LBA | EuroCup |
 |---|---:|---:|
