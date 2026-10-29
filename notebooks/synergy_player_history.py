@@ -183,7 +183,7 @@ def fig_situations(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
             if row == 0:
                 head += '\n' + ' · '.join(f'{int(n_se[se])}' for se in seasons) + ' FGA (' + ' · '.join(f'{100 * n_se[se] / tot[se]:.0f}%' for se in seasons) + ' of all)'
             ax.set_title(head, fontsize=8.5, color=TEXT2, pad=8, loc='left')
-    fig.legend(handles=[Patch(fc=SEASON_COLORS[se], label=se) for se in seasons], loc='upper right', ncol=3, fontsize=8.5, bbox_to_anchor=(.98, .96))
+    fig.legend(handles=[Patch(fc=SEASON_COLORS[se], label=se) for se in seasons], loc='upper right', ncol=4, fontsize=8.5, bbox_to_anchor=(.98, .96))
     fig.text(.02, .955, f'{p}: pick-and-roll, isolation and transition shots, {NSEASONS[len(seasons)]}', fontsize=14, fontweight='bold')
     fig.text(.02, .88, 'Top row: where the situation happens (% of the attempts of that play type; under the title, the attempts per season and their share of all the '
              'player\'s attempts); bottom row: what the player does in it.', fontsize=8.5, color=TEXT2)
