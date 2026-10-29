@@ -11,7 +11,7 @@
   "time": "16:00",
   "venue": "Palazzetto dello Sport",
   "played": true,
-  "version": 7,
+  "version": 8,
   "n_before": 30,
   "opponent_analysis": "matchup_BC_Roma_vs_Umana_Reyer_Venezia_before_2026-10-17",
   "record": "1-2",
@@ -55,6 +55,92 @@
       "pct": 38
     }
   ],
+  "availability": {
+    "n_games": 6,
+    "min_streak": 2,
+    "rows": [
+      {
+        "name": "Strautins",
+        "mpg": 28.6,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Mannion",
+        "mpg": 27.7,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Ayayi",
+        "mpg": 25.6,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Simonovic",
+        "mpg": 25.2,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Stevenson",
+        "mpg": 23.0,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Davis",
+        "mpg": 22.6,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Olynyk",
+        "mpg": 21.1,
+        "gp": 1,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Watson",
+        "mpg": 18.3,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Mezzanotte",
+        "mpg": 12.5,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      },
+      {
+        "name": "Emejuru",
+        "mpg": 11.9,
+        "gp": 6,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 13 Oct"
+      }
+    ]
+  },
   "profile": {
     "LBA": {
       "Games": 3,
@@ -405,7 +491,7 @@
     },
     {
       "player_id": 9436,
-      "photo": false,
+      "photo": true,
       "name": "Olynyk",
       "pos": "Centro",
       "height": "213",
@@ -486,7 +572,7 @@
     },
     {
       "player_id": 6188,
-      "photo": false,
+      "photo": true,
       "name": "Tavernelli",
       "pos": "Play/Guardia",
       "height": "188",

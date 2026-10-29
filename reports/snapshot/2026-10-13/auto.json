@@ -11,7 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
-  "version": 7,
+  "version": 8,
   "n_before": 29,
   "opponent_analysis": null,
   "record": "1-2",
@@ -30,6 +30,92 @@
     "date": "2026-10-11"
   },
   "playing_time": [],
+  "availability": {
+    "n_games": 5,
+    "min_streak": 2,
+    "rows": [
+      {
+        "name": "Mannion",
+        "mpg": 27.6,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Strautins",
+        "mpg": 27.0,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Simonovic",
+        "mpg": 26.4,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Ayayi",
+        "mpg": 24.7,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Stevenson",
+        "mpg": 23.2,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Davis",
+        "mpg": 22.1,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Watson",
+        "mpg": 18.1,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Mezzanotte",
+        "mpg": 13.9,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Emejuru",
+        "mpg": 12.3,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      },
+      {
+        "name": "Flowers",
+        "mpg": 6.0,
+        "gp": 2,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 11 Oct"
+      }
+    ]
+  },
   "profile": {
     "LBA": {
       "Games": 3,
@@ -380,7 +466,7 @@
     },
     {
       "player_id": 9436,
-      "photo": false,
+      "photo": true,
       "name": "Olynyk",
       "pos": "Centro",
       "height": "213",
@@ -434,7 +520,7 @@
     },
     {
       "player_id": 6188,
-      "photo": false,
+      "photo": true,
       "name": "Tavernelli",
       "pos": "Play/Guardia",
       "height": "188",

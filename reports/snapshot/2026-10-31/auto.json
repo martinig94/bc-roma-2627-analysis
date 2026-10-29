@@ -11,7 +11,7 @@
   "time": "20:00",
   "venue": "Palazzetto dello Sport",
   "played": false,
-  "version": 7,
+  "version": 8,
   "n_before": 50,
   "opponent_analysis": "matchup_BC_Roma_vs_Longobardi_Scafati_Basket_before_2026-10-31",
   "record": "1-4",
@@ -47,6 +47,95 @@
       "pct": 77
     }
   ],
+  "availability": {
+    "n_games": 10,
+    "min_streak": 2,
+    "rows": [
+      {
+        "name": "Strautins",
+        "mpg": 27.8,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Mannion",
+        "mpg": 27.2,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Ayayi",
+        "mpg": 25.7,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Olynyk",
+        "mpg": 25.6,
+        "gp": 5,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Stevenson",
+        "mpg": 24.0,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Davis",
+        "mpg": 23.4,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Simonovic",
+        "mpg": 22.5,
+        "gp": 8,
+        "streak": 2,
+        "missed": [
+          "LBA 24 Oct",
+          "EuroCup 27 Oct"
+        ],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Watson",
+        "mpg": 20.7,
+        "gp": 10,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Emejuru",
+        "mpg": 10.7,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      },
+      {
+        "name": "Mezzanotte",
+        "mpg": 10.3,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 27 Oct"
+      }
+    ]
+  },
   "profile": {
     "LBA": {
       "Games": 5,
@@ -598,7 +687,7 @@
   "ts_pir_ec": {
     "file": "ts_pir_eurocup.png",
     "players": 9,
-    "others": 329,
+    "others": 335,
     "games": 5
   },
   "standings_table": {

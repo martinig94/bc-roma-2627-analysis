@@ -1,6 +1,6 @@
 title: 
 reviewed: no
-generated: d1c4a38eb6
+generated: c0744469cb
 
 <!--
 HOW TO EDIT THIS PAGE (this comment is not shown on the site)
@@ -10,7 +10,7 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
 - Your own plots and images: put the file in this folder (weekly/games/<date>/) and write ![caption](file.png).
 - Highlight with ==text==. When you are done, set "reviewed: yes" at the top of the file.
 Blocks of this page: {{ header }} {{ status_line }} {{ last_results }} {{ standings }} {{ last_game }} {{ team_numbers }}
-{{ roster }} {{ assists }} {{ zones }} {{ efficiency }} {{ season }} and {{ figure: name }} for any generated image
+{{ availability }} {{ roster }} {{ assists }} {{ zones }} {{ efficiency }} {{ season }} and {{ figure: name }} for any generated image
 (for example {{ figure: ts_pir_lba }}).
 -->
 
@@ -43,6 +43,12 @@ Blocks of this page: {{ header }} {{ status_line }} {{ last_results }} {{ standi
 ## Roster
 
 <!-- Roster: injuries, signings, rotation changes. -->
+
+### Availability: injuries and absences
+
+{{ availability }}
+
+### Players
 
 {{ roster }}
 

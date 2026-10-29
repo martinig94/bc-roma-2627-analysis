@@ -10,8 +10,8 @@
   "date": "2026-10-27",
   "time": "20:00",
   "venue": null,
-  "played": false,
-  "version": 7,
+  "played": true,
+  "version": 8,
   "n_before": 49,
   "opponent_analysis": "matchup_BC_Roma_vs_Bosna_Bh_Telecom_Sarajevo_before_2026-10-27",
   "record": "1-4",
@@ -55,6 +55,94 @@
       "pct": 36
     }
   ],
+  "availability": {
+    "n_games": 9,
+    "min_streak": 2,
+    "rows": [
+      {
+        "name": "Strautins",
+        "mpg": 28.9,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      },
+      {
+        "name": "Mannion",
+        "mpg": 27.3,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      },
+      {
+        "name": "Ayayi",
+        "mpg": 25.7,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      },
+      {
+        "name": "Olynyk",
+        "mpg": 24.7,
+        "gp": 4,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      },
+      {
+        "name": "Stevenson",
+        "mpg": 24.0,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      },
+      {
+        "name": "Davis",
+        "mpg": 23.8,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      },
+      {
+        "name": "Simonovic",
+        "mpg": 22.5,
+        "gp": 8,
+        "streak": 1,
+        "missed": [
+          "LBA 24 Oct"
+        ],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Watson",
+        "mpg": 19.8,
+        "gp": 9,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      },
+      {
+        "name": "Mezzanotte",
+        "mpg": 11.0,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      },
+      {
+        "name": "Emejuru",
+        "mpg": 10.7,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 24 Oct"
+      }
+    ]
+  },
   "profile": {
     "LBA": {
       "Games": 5,
@@ -459,7 +547,7 @@
     },
     {
       "player_id": 6188,
-      "photo": false,
+      "photo": true,
       "name": "Tavernelli",
       "pos": "Play/Guardia",
       "height": "188",

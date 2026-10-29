@@ -11,7 +11,7 @@
   "time": "",
   "venue": null,
   "played": true,
-  "version": 7,
+  "version": 8,
   "n_before": 19,
   "opponent_analysis": null,
   "record": "1-1",
@@ -47,6 +47,95 @@
       "pct": 49
     }
   ],
+  "availability": {
+    "n_games": 3,
+    "min_streak": 2,
+    "rows": [
+      {
+        "name": "Strautins",
+        "mpg": 28.5,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Ayayi",
+        "mpg": 28.2,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Mannion",
+        "mpg": 27.5,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Simonovic",
+        "mpg": 25.8,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Stevenson",
+        "mpg": 22.0,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Davis",
+        "mpg": 20.6,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Watson",
+        "mpg": 16.4,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Mezzanotte",
+        "mpg": 13.9,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Emejuru",
+        "mpg": 12.5,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "LBA 4 Oct"
+      },
+      {
+        "name": "Flowers",
+        "mpg": 5.0,
+        "gp": 1,
+        "streak": 2,
+        "missed": [
+          "EuroCup 30 Sep",
+          "LBA 4 Oct"
+        ],
+        "last_played": "LBA 26 Sep"
+      }
+    ]
+  },
   "profile": {
     "LBA": {
       "Games": 2,
@@ -397,7 +486,7 @@
     },
     {
       "player_id": 9436,
-      "photo": false,
+      "photo": true,
       "name": "Olynyk",
       "pos": "Centro",
       "height": "213",
@@ -451,7 +540,7 @@
     },
     {
       "player_id": 6188,
-      "photo": false,
+      "photo": true,
       "name": "Tavernelli",
       "pos": "Play/Guardia",
       "height": "188",

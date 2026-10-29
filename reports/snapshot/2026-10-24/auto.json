@@ -10,8 +10,8 @@
   "date": "2026-10-24",
   "time": "20:00",
   "venue": "Itelyum Arena",
-  "played": false,
-  "version": 7,
+  "played": true,
+  "version": 8,
   "n_before": 40,
   "opponent_analysis": "matchup_Openjobmetis_Varese_vs_BC_Roma_before_2026-10-24",
   "record": "1-3",
@@ -47,6 +47,94 @@
       "pct": 42
     }
   ],
+  "availability": {
+    "n_games": 8,
+    "min_streak": 2,
+    "rows": [
+      {
+        "name": "Strautins",
+        "mpg": 28.6,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Mannion",
+        "mpg": 27.2,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Ayayi",
+        "mpg": 25.5,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Stevenson",
+        "mpg": 23.6,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Davis",
+        "mpg": 22.6,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Simonovic",
+        "mpg": 22.5,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Olynyk",
+        "mpg": 20.0,
+        "gp": 3,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Watson",
+        "mpg": 19.1,
+        "gp": 8,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      },
+      {
+        "name": "Mezzanotte",
+        "mpg": 12.2,
+        "gp": 7,
+        "streak": 1,
+        "missed": [
+          "EuroCup 20 Oct"
+        ],
+        "last_played": "LBA 17 Oct"
+      },
+      {
+        "name": "Emejuru",
+        "mpg": 11.4,
+        "gp": 7,
+        "streak": 0,
+        "missed": [],
+        "last_played": "EuroCup 20 Oct"
+      }
+    ]
+  },
   "profile": {
     "LBA": {
       "Games": 4,
@@ -397,7 +485,7 @@
     },
     {
       "player_id": 9436,
-      "photo": false,
+      "photo": true,
       "name": "Olynyk",
       "pos": "Centro",
       "height": "213",
@@ -451,7 +539,7 @@
     },
     {
       "player_id": 6188,
-      "photo": false,
+      "photo": true,
       "name": "Tavernelli",
       "pos": "Play/Guardia",
       "height": "188",
