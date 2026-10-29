@@ -46,6 +46,8 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ figure: 09_basic_stats }}
 
+![Team z-scores vs the 32 EuroCup teams, EuroCup games only (Synergy)](01b_team_radar_zscore_competition_only.png)
+
 {{ pending }}
 
 ## PAOK roster
@@ -78,6 +80,11 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ shot_charts }}
 
+![PAOK play types](02_opponent_playtypes.png)
+![PAOK play types and PPP](03_playtype_ppp_ref_vs_opp.png)
+
+![PAOK play types per player](06_players_playtype_mix.png)
+
 ## Key players
 
 ### Shooting
@@ -87,6 +94,26 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 {{ figure: 07_key_players }}
 
 {{ figure: 08_shot_distribution }}
+
+![Players volume and efficiency](04_players_volume_efficiency.png)
+![Roster percentile radars](05b_player_radars_roster_percentile.png)
+
+![Osman shot profile](05_player_osman_shot_profile.png)
+![Osman shot types](05c_player_osman_shot_types.png)
+![Gray shot profile](05_player_gray_shot_profile.png)
+![Foster shot profile](05_player_foster_shot_profile.png)
+![Foster shot types](05c_player_foster_shot_types.png)
+![Tyree shot profile](05_player_tyree_shot_profile.png)
+![Tyree shot types](05c_player_tyree_shot_types.png)
+![Alexander shot profile](05_player_alexander_shot_profile.png)
+![Calathes shot profile](05_player_calathes_shot_profile.png)
+![Calathes shot types](05c_player_calathes_shot_types.png)
+![Moore shot profile](05_player_moore_shot_profile.png)
+![Mitrou-Long shot profile](05_player_mitrou-long_shot_profile.png)
+![Hudgins shot profile](05_player_hudgins_shot_profile.png)
+![Bazinas shot profile](05_player_bazinas_shot_profile.png)
+![Chougkaz shot profile](05_player_chougkaz_shot_profile.png)
+![Motiejunas shot profile](05_player_motiejunas_shot_profile.png)
 
 ### Other stats
 
