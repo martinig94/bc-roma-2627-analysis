@@ -11,13 +11,11 @@ THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the 
 
 ## Key points
 
-Based on the data only (EuroCup, 5 games; Synergy pull of 28 Oct 2026 for shots, EuroCup box scores and play-by-play for the rest).
-
 - **Osman is the engine**: 19 possessions a game, 21.6 PPG, 24.6 PIR in 30.9', 10.4 free throw attempts a game. He is high on both energy scores (0.86 rim activity, 0.99 pace).
 - **Tyree and Foster score off the bench**: 15.6 and 14.0 PPG in under 24 minutes, both with high pace scores (0.98) and 0.70 and 0.69 rim activity. Tyree is 11/30 from three, Foster 5/22; both finish in transition (1.385 and 1.615 PPP).
 - **Calathes creates**: 25 assists to 6 turnovers in four games (6.2 a game), 4/15 from three and 0.333 PPP on his P&R ball-handler possessions.
 - **Alexander is the finisher**: 17/20 from two (85%), 13 offensive rebounds and 4 blocks in 92', 1.875 PPP on the roll man (8 possessions); rim activity 0.96, little pace (0.38).
-- **Gray starts every game and scores 3.2 points a game** (0.640 PPP, 33.3% from the field, 20.0% turnovers) but adds 10 assists and 24.7 minutes.
+- **Gray starts every game and scores 3.2 points a game** (0.640 PPP, 33.3% from the field, 20.0% turnovers) but adds 2 assists per game in 24.7 minutes.
 - **Shots**: 47% of the attempts are in the paint (70.9%), 43% are threes (30.0%); only Tyree (36.7%) and Mitrou Long (5/11) are above 35% from three.
 
 ## Shot attempts: 3PT, paint and mid-range
@@ -102,4 +100,3 @@ When each player is on the court in each quarter, in the last 5 games of the com
 - **Calathes.** 25 assists in 4 games and 6 turnovers; 6 of his assists go to Osman, 4 to Alexander and 4 to Tyree. Played four of the five games.
 - **Alexander.** 24 possessions at 1.500 PPP, all two-point shots; 13 offensive rebounds in 92'.
 - **Gray.** 24.7' a game as a starter with the lowest efficiency of the regulars (0.640 PPP, 36.1% eFG).
-- Sample warning: 13 players have played; only Osman, Tyree and Foster have used more than 60 possessions in five games.
