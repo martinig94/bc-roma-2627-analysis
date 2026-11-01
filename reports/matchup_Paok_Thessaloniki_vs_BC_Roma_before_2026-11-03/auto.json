@@ -1,7 +1,7 @@
 {
   "kind": "opponent",
   "version": 10,
-  "n_before": 50,
+  "n_before": 55,
   "competition": "EuroCup",
   "round": null,
   "team": "BC Roma",
