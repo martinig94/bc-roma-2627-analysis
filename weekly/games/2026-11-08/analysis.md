@@ -18,13 +18,15 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
 Blocks of this page: {{ header }} {{ standings }} {{ comparison }} {{ roster }} {{ assists }} {{ turnovers }} {{ lineups }} {{ pending }} and
 {{ figure: name }} for any generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting,
 06_hot_spots, {{ shot_charts }} (06b: one chart per player), 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors, 11_starting_fives, 13_rotation_by_minute: who is on the court at each minute, with the next options).
-The three pages that go deeper (individual_tendencies.md, defense_tendencies.md, offense_tendencies.md, same folder) are linked at the end of this page when they exist.
+The three pages that go deeper (individual_tendencies.md, defense_tendencies.md, offense_tendencies.md, same folder) are linked at the top of this page ({{ more_analysis }}) when they exist: shot charts and lineups are on the individual page; play types, shot selection, assists and turnovers on the offense page; what the team allows on the defense page.
 THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, same order); only the content changes.
 -->
 
 # Pallacanestro Trieste vs BC Roma
 
 {{ header }}
+
+{{ more_analysis }}
 
 ## Key points
 
@@ -78,37 +80,9 @@ Based on the data only (5 LBA games for Trieste, 6 for BC Roma; Synergy pull of 
 
 {{ figure: 13_rotation_by_minute }}
 
-## Scoring sources, tendencies and shooting maps
-
-- Trieste takes 340 shots in five games, 166 of them threes (49%; BC Roma 46%), at 33.1% from three and 52.9% from two. By zone (Synergy): paint 153 attempts at 56.2%, mid-range 21 at 28.6%, corner threes 57 at 42.1%, wing threes 56 at 33.9%, top threes 53 at 22.6%.
-- The corner is the productive three (24/57); the top of the key is the weak one (12/53). Ross takes 15 of his 22 threes from the top (5 made), Galloway 14 of his 39.
-- Spot-ups are 22% of the possessions (1.02 PPP, 35.2% FG, 35.1% from three on 77 attempts). The P&R ball handler is 16% (1.183 PPP), transition 15% (0.956), roll man 10% (0.778).
-- Trieste goes to the line on 5% of spot-up possessions and 14% on P&R ball handler: its free throws come mostly from Ross (30 attempts of the team's 131, 27 made), Candussi (18) and Brajkovic (16).
-
-![Trieste play types](02_opponent_playtypes.png)
-![Trieste play types and PPP](03_playtype_ppp_ref_vs_opp.png)
-
-- BC Roma scores more per possession than Trieste on spot-ups, transition, roll man, cuts, isolations and post-ups; Trieste is ahead on the P&R ball handler (1.183 vs 1.052), put-backs, off-screen plays and handoffs; BC Roma's cuts (1.657 PPP, 1st in the LBA) are the biggest gap (Trieste 1.172).
-
-![Trieste play types per player](06_players_playtype_mix.png)
-
-- Ross (P&R ball handler 42, isolation 10, spot-up 9), Ruzzier (P&R ball handler 12) and Galloway (12) are the ball handlers. Jones and McDermott are the spot-up and transition players (23 and 19 spot-up possessions); Candussi and Brajkovic finish the roll man (18 and 10 possessions) and cut (8 and 5).
-
-{{ figure: 04_scoring_sources }}
-
-{{ figure: 05_shooting }}
-
-{{ figure: 06_hot_spots }}
-
-### Shot charts by player
-
-{{ shot_charts }}
-
 ## Key players
 
 ### Shooting
-
-![Players volume and efficiency](04_players_volume_efficiency.png)
 
 Possessions used and efficiency (Synergy, LBA games):
 
@@ -125,48 +99,13 @@ Samples are small: nobody beyond Ross, Jones and Galloway has used more than 60 
 
 {{ figure: 07_key_players }}
 
+![Players volume and efficiency](04_players_volume_efficiency.png)
+
 {{ figure: 08_shot_distribution }}
 
 ### Other stats
 
 {{ figure: 10_major_factors }}
-
-## Assists
-
-{{ assists }}
-
-## Turnovers
-
-{{ turnovers }}
-
-## Lineups
-
-![Lineups: usage vs PPP](07_lineups_usage_vs_ppp.png)
-
-Trieste's rotation is concentrated: McDermott is in all six of the most-used lineups, Galloway in five and Jones in three.
-
-- Ross, McDermott, Galloway, Jones, Brajkovic (the starters): 80 possessions, 0.80 PPP scored (47.4% eFG), 0.867 allowed in 83 defensive possessions, TO% 16.3.
-- Candussi, Ross, McDermott, Galloway, Jones (48): 0.917 scored, 0.915 allowed.
-- Candussi, DeAngeli, Ross, McDermott, Galloway (30): 1.067 scored, 0.714 allowed; the best of the frequent lineups at both ends.
-- Ruzzier, DeAngeli, McDermott, Galloway, Jones (28): 0.679 scored, 0.96 allowed. The two bench-heavy lineups with Ruzzier and Candussi (24 possessions) allow 1.231.
-
-![Lineups: offense vs defense](08_lineups_offense_vs_defense.png)
-
-The starting five scores below Trieste's average (0.80 against 0.987) and defends better than it (0.867 against 0.957).
-
-![Lineups: style profile](09_lineups_style_profile.png)
-
-{{ lineups }}
-
-## Defensive attitude
-
-From Synergy's defensive play types (5 LBA games):
-
-- Trieste allows 0.957 PPP (9th) and 52.0% eFG (9th), with 13.5% turnovers forced (league 14.6%).
-- Strongest: P&R roll man (38 possessions, 0.684 PPP, 1st in the LBA; 26.3% turnovers), isolation (17, 0.588, 2nd), spot-ups (131 possessions, 0.916 PPP, 7th; opponents shoot 31.4% from three, 27/86), transition (50, 1.08, 5th).
-- Weakest: P&R ball handler (67 possessions, 1.060 PPP, 16th, 63.8% eFG; but 23.9% turnovers and 17.9% of possessions end in free throws), post-ups (26, 1.038, 13th), cuts (39 possessions, 1.154, 63.3% FG, 19 of the 30 shots made), put-backs (25, 1.20).
-- BC Roma's P&R ball handler (96 possessions, 1.052 PPP, 2nd) and cuts (35, 1.657, 1st) meet Trieste's two most exposed play types; its roll man (57, 1.158, 5th) meets the league's best roll-man defense.
-- Spot-ups are 29% of what Trieste defends, the highest share in the LBA (level with Trento); BC Roma is 4th in spot-up PPP (1.103; 45.8% from three on 83 attempts).
 
 ## What to expect
 
@@ -190,6 +129,12 @@ From the numbers only (5 and 6 LBA games, so tendencies, not predictions):
 - BC Roma's cuts and roll-man finishes against Trieste's roll-man defense.
 - Minutes of Ross, Galloway and McDermott and Trieste's bench points.
 
+### Other checks
+
+- Data caveat: the Synergy pull is hand-extracted from the web app and the samples are small (5 games); read the figures as descriptive. Check the review notes in `data/synergy/trieste_2026-11-08/README.md`.
+- Trieste played round 6 at Virtus Bologna on 2 Nov: update the numbers (rotation, Ross's minutes, starters) when the game is in the data.
+- BC Roma's EuroCup game at PAOK (3 Nov) comes five days earlier: check minutes and availability in the snapshot before the game.
+
 ## Clips suggested
 
 Game clock from the Synergy shot list (time remaining in the period):
@@ -197,9 +142,3 @@ Game clock from the Synergy shot list (time remaining in the period):
 **Ross pull-up threes off the P&R** (5/13 made): vs Verona Q1 8:55 (made), Q3 3:31, Q4 3:59, Q4 2:39; vs Cantù Q2 3:14; at Varese Q2 2:23, Q3 2:51; vs Venezia Q3 8:11; at Milano Q1 2:19 (made), Q2 5:19 (made), Q2 4:46, Q3 0:39 (made) and one more in Q3.
 
 **Jones in transition** (9 made field goals): vs Cantù Q1 5:56 (three), Q3 7:36, Q3 9:02 (three); at Varese Q2 2:50, Q4 4:00, Q4 4:16 (three); vs Venezia Q2 5:37, Q4 1:29, Q4 1:04.
-
-## Other suggested checks
-
-- Data caveat: the Synergy pull is hand-extracted from the web app and the samples are small (5 games); read the figures as descriptive. Check the review notes in `data/synergy/trieste_2026-11-08/README.md`.
-- Trieste played round 6 at Virtus Bologna on 2 Nov: update the numbers (rotation, Ross's minutes, starters) when the game is in the data.
-- BC Roma's EuroCup game at PAOK (3 Nov) comes five days earlier: check minutes and availability in the snapshot before the game.

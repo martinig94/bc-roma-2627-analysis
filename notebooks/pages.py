@@ -29,6 +29,8 @@ KINDS = {"snapshot": "snapshot.md", "analysis": "analysis.md"}
 SUBPAGES = ("individual_tendencies", "defense_tendencies", "offense_tendencies")   # pages that go deeper, next to analysis.md; linked from it
 BLOCKS_TEMPLATE = "blocks.md.j2"                               # macros that render the {{ block }} lines
 PAGE_TEMPLATE = "page_{kind}.md.j2"                            # default text of a page, one per kind
+LAYOUT_V2_FROM = "2026-11-08"                                  # analyses of games from this day on use the restructured analysis page;
+LEGACY_ANALYSIS_TEMPLATE = "page_analysis_v1.md.j2"            # the earlier ones keep the old layout, so an untouched draft does not change
 REPORTS = ROOT / "reports"
 SNAPSHOT_AUTO = "auto.json"                                    # generated data of a snapshot or an analysis folder
 ANALYSIS_HAND_WRITTEN = "README.md"                            # an analysis written by hand has no page file
@@ -80,7 +82,10 @@ def edit_path(kind: str, day: str) -> str:
 # ── creation ────────────────────────────────────────────────────────────────────
 def default_text(kind: str, a: dict[str, Any], files: list[str], notes: dict | None = None, generated: str = "") -> str:
     """Render the default page of `kind` from the generated data `a` and the figure `files`; `notes` and `generated` fill the header."""
-    tpl = TPL.get_template(PAGE_TEMPLATE.format(kind=kind))
+    name = PAGE_TEMPLATE.format(kind=kind)
+    if kind == "analysis" and str(a.get("date", LAYOUT_V2_FROM)) < LAYOUT_V2_FROM:
+        name = LEGACY_ANALYSIS_TEMPLATE
+    tpl = TPL.get_template(name)
     text = tpl.render(a=a, files=files, notes=notes, generated=generated, has_lineups=any(f.startswith(LINEUPS_PREFIX) for f in files))
     return re.sub(r"\[\[\s*(.*?)\s*\]\]", r"{{ \1 }}", text)       # [[ block ]] in the templates -> {{ block }} in the page
 

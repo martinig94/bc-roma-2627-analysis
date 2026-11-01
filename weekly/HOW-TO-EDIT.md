@@ -8,21 +8,23 @@ Each game has two pages you can write on. Work only in `weekly/games/<date>/`:
 | BC Roma before the game | `weekly/games/<date>/snapshot.md` |
 
 Example: Varese vs BC Roma is `weekly/games/2026-10-24/analysis.md`.
-Every analysis has the same sections in the same order (the structure of the Varese page): Key points, results and standings, the
-two teams compared, roster, starting five and bench, scoring sources / tendencies / shooting maps, key players, assists, turnovers,
-lineups, defensive attitude, what to expect (with the metrics to check), clips suggested, other suggested checks. A section that is
+Every analysis has the same sections in the same order. From the Trieste game (2026-11-08) on the main page is the short one:
+Key points, results and standings, the two teams compared, roster, starting five and bench, key players (the first three plots,
+the bullets and the other stats), what to expect (with the metrics to check), clips suggested. The three links to the deeper pages
+("More analysis") are at the top, under the title. Earlier analyses keep their longer layout (scoring sources, assists, turnovers,
+lineups, defensive attitude, other suggested checks on the main page). A section that is
 still empty shows a grey box *"This section will be filled when the game is reviewed"* (the line `{{ pending }}`): replace that line with
 your text and plots. The Synergy plots of the opponent go in the same folder (`python notebooks/synergy_scouting_plots.py data/synergy/<folder> --out ...`,
-then copy the PNGs next to `analysis.md`); the page shows them, in the order of the Varese page, when they are there.
+then copy the PNGs next to `analysis.md`); the page shows them, in the order of the template, when they are there.
 
 Every analysis also has three pages that go deeper, in the same folder; they are created with the analysis (also for the earlier games)
 and linked from the end of the analysis ("More analysis"). They are yours, never overwritten:
 
 | subpage | file |
 |---|---|
-| individual tendencies (triangle plots of the shot attempts, energy indices, rotation by player) | `weekly/games/<date>/individual_tendencies.md` |
-| defense tendencies | `weekly/games/<date>/defense_tendencies.md` |
-| offense tendencies | `weekly/games/<date>/offense_tendencies.md` |
+| individual tendencies (triangle plots of the shot attempts, energy indices, shot charts by player, lineups, rotation by player) | `weekly/games/<date>/individual_tendencies.md` |
+| defense tendencies (scheme, what the team allows) | `weekly/games/<date>/defense_tendencies.md` |
+| offense tendencies (play types, shot selection, assists, turnovers) | `weekly/games/<date>/offense_tendencies.md` |
 
 They are plain markdown: text, `{{ figure: name }}` blocks and your own images (same folder, `![caption](file.png)`). A subpage you delete is not
 linked (and is created again the next time the analysis is generated).

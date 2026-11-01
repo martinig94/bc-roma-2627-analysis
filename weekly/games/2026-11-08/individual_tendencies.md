@@ -1,6 +1,6 @@
 <!--
 HOW TO EDIT THIS PAGE (this comment is not shown on the site)
-- This file is yours: it is never overwritten. It is linked at the end of the opponent analysis of the same game (analysis.md).
+- This file is yours: it is never overwritten. It is linked at the top of the opponent analysis of the same game (analysis.md).
 - {{ pending }} is a grey box saying "This section will be filled when the game is reviewed". Replace it with your text.
 - Your own plots and images: put the file in this folder (weekly/games/<date>/) and write ![caption](file.png).
 - Highlight with ==text==.
@@ -47,6 +47,48 @@ Two scores per player, built from box score and play-by-play only, shown as leag
 - **McDermott** is mostly a pace player (0.61; 18 fouls drawn in 153') with little rim activity (0.36). **Galloway** is close to the median on both (0.53, 0.41): 14 offensive rebounds but no dunk and 9 drive finishes in 155'.
 - **Ruzzier** has the lowest rim activity of the regulars (0.16, no dunk and no block in 107') and an average pace (0.49; 11 drive finishes).
 - **Candussi** is average to below (0.49, 0.38): 7 offensive rebounds, 2 drive finishes.
+
+## Shot charts by player
+
+{{ shot_charts }}
+
+Shot profile (made/attempted by location and play type) and, where a player has enough attempts, shot types within each play type.
+
+![Ross shot profile](05_player_ross_shot_profile.png)
+![Ross shot types](05c_player_ross_shot_types.png)
+![Jones shot profile](05_player_jones_shot_profile.png)
+![Jones shot types](05c_player_jones_shot_types.png)
+![Galloway shot profile](05_player_galloway_shot_profile.png)
+![Galloway shot types](05c_player_galloway_shot_types.png)
+![Mcdermott shot profile](05_player_mcdermott_shot_profile.png)
+![Mcdermott shot types](05c_player_mcdermott_shot_types.png)
+![Candussi shot profile](05_player_candussi_shot_profile.png)
+![Candussi shot types](05c_player_candussi_shot_types.png)
+![Deangeli shot profile](05_player_deangeli_shot_profile.png)
+![Deangeli shot types](05c_player_deangeli_shot_types.png)
+![Ruzzier shot profile](05_player_ruzzier_shot_profile.png)
+![Brajkovic shot profile](05_player_brajkovic_shot_profile.png)
+![Canka shot profile](05_player_canka_shot_profile.png)
+![Paiano shot profile](05_player_paiano_shot_profile.png)
+
+## Lineups
+
+![Lineups: usage vs PPP](07_lineups_usage_vs_ppp.png)
+
+Trieste's rotation is concentrated: McDermott is in all six of the most-used lineups, Galloway in five and Jones in three.
+
+- Ross, McDermott, Galloway, Jones, Brajkovic (the starters): 80 possessions, 0.80 PPP scored (47.4% eFG), 0.867 allowed in 83 defensive possessions, TO% 16.3.
+- Candussi, Ross, McDermott, Galloway, Jones (48): 0.917 scored, 0.915 allowed.
+- Candussi, DeAngeli, Ross, McDermott, Galloway (30): 1.067 scored, 0.714 allowed; the best of the frequent lineups at both ends.
+- Ruzzier, DeAngeli, McDermott, Galloway, Jones (28): 0.679 scored, 0.96 allowed. The two bench-heavy lineups with Ruzzier and Candussi (24 possessions) allow 1.231.
+
+![Lineups: offense vs defense](08_lineups_offense_vs_defense.png)
+
+The starting five scores below Trieste's average (0.80 against 0.987) and defends better than it (0.867 against 0.957).
+
+![Lineups: style profile](09_lineups_style_profile.png)
+
+{{ lineups }}
 
 ## Rotation by player
 
