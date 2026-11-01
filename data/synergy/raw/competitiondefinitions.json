@@ -1,0 +1,2433 @@
+[
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59ebb7ed44b2b8aa7e074802",
+  "name": "ASEAN Basketball League",
+  "isPublic": true,
+  "orderNo": 5,
+  "competitions": [
+   {
+    "name": "ASEAN Basketball League",
+    "id": "59ebb7ed44b2b8aa7e074802"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95600",
+  "name": "Adriatic League (ABA)",
+  "isPublic": true,
+  "orderNo": 10,
+  "competitions": [
+   {
+    "name": "Adriatic League (ABA)",
+    "id": "560100ac8dc7a24394b95600"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59af08c817120e9c9a9797ae",
+  "name": "Adriatic League Division 2 (ABA2)",
+  "isPublic": true,
+  "orderNo": 15,
+  "competitions": [
+   {
+    "name": "Adriatic League Division 2 (ABA2)",
+    "id": "59af08c817120e9c9a9797ae"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59e6126a44b2b8aa7e8966d6",
+  "name": "Adriatic League Supercup",
+  "isPublic": true,
+  "orderNo": 20,
+  "competitions": [
+   {
+    "name": "Adriatic League Supercup",
+    "id": "59e6126a44b2b8aa7e8966d6"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9567d",
+  "name": "Angolian League",
+  "isPublic": true,
+  "orderNo": 30,
+  "competitions": [
+   {
+    "name": "Angolian League",
+    "id": "560100ac8dc7a24394b9567d"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9569f",
+  "name": "Argentinian League LNB",
+  "isPublic": true,
+  "orderNo": 35,
+  "competitions": [
+   {
+    "name": "Argentinian League LNB",
+    "id": "560100ac8dc7a24394b9569f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:586e6705d95ef3f74c311c15",
+  "name": "Argentinian Super 4",
+  "isPublic": true,
+  "orderNo": 40,
+  "competitions": [
+   {
+    "name": "Argentinian Super 4",
+    "id": "586e6705d95ef3f74c311c15"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59e6126a44b2b8aa7e896714",
+  "name": "Copa Islas Malvinas ( Argentinian Torneo Super 20 )",
+  "isPublic": true,
+  "orderNo": 45,
+  "competitions": [
+   {
+    "name": "Copa Islas Malvinas ( Argentinian Torneo Super 20 )",
+    "id": "59e6126a44b2b8aa7e896714"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5b5360179559b26e7ed69b5e",
+  "name": "Asian Summer Super 8",
+  "isPublic": true,
+  "orderNo": 50,
+  "competitions": [
+   {
+    "name": "Asian Summer Super 8",
+    "id": "5b5360179559b26e7ed69b5e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b955f7",
+  "name": "Australian NBL",
+  "isPublic": true,
+  "orderNo": 55,
+  "competitions": [
+   {
+    "name": "Australian NBL",
+    "id": "560100ac8dc7a24394b955f7"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95670",
+  "name": "Austrian 2nd Bundesliga",
+  "isPublic": true,
+  "orderNo": 60,
+  "competitions": [
+   {
+    "name": "Austrian 2nd Bundesliga",
+    "id": "560100ac8dc7a24394b95670"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59af08c817120e9c9a979702",
+  "name": "Austrian Bundesliga",
+  "isPublic": true,
+  "orderNo": 65,
+  "competitions": [
+   {
+    "name": "Austrian Bundesliga",
+    "id": "59af08c817120e9c9a979702"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57d9da711c496ea6cc6c9642",
+  "name": "Japan BLeague",
+  "isPublic": true,
+  "orderNo": 70,
+  "competitions": [
+   {
+    "name": "Japan BLeague",
+    "id": "57d9da711c496ea6cc6c9642"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:614b342d9e3cfed40b2ecfcc",
+  "name": "BNXT League",
+  "isPublic": true,
+  "orderNo": 75,
+  "competitions": [
+   {
+    "name": "BNXT League",
+    "id": "614b342d9e3cfed40b2ecfcc"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:614b3440e41f1f469fc90d5c",
+  "name": "BNXT Supercup",
+  "isPublic": true,
+  "orderNo": 80,
+  "competitions": [
+   {
+    "name": "BNXT Supercup",
+    "id": "614b3440e41f1f469fc90d5c"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95605",
+  "name": "Baltic League",
+  "isPublic": true,
+  "orderNo": 85,
+  "competitions": [
+   {
+    "name": "Baltic League",
+    "id": "560100ac8dc7a24394b95605"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57e6d8fb1c496ea6cc6ee676",
+  "name": "Baltic League Cup",
+  "isPublic": true,
+  "orderNo": 90,
+  "competitions": [
+   {
+    "name": "Baltic League Cup",
+    "id": "57e6d8fb1c496ea6cc6ee676"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6089922d901370663dd59c80",
+  "name": "Basketball Africa League",
+  "isPublic": true,
+  "orderNo": 95,
+  "competitions": [
+   {
+    "name": "Basketball Africa League",
+    "id": "6089922d901370663dd59c80"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5edb4d91e0962f87ad67b181",
+  "name": "Basketball England NBL1-B",
+  "isPublic": true,
+  "orderNo": 100,
+  "competitions": [
+   {
+    "name": "Basketball England NBL1-B",
+    "id": "5edb4d91e0962f87ad67b181"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:561643381e31501db448deaf",
+  "name": "Belgium Cup",
+  "isPublic": true,
+  "orderNo": 105,
+  "competitions": [
+   {
+    "name": "Belgium Cup",
+    "id": "561643381e31501db448deaf"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9563e",
+  "name": "Belgium League",
+  "isPublic": true,
+  "orderNo": 110,
+  "competitions": [
+   {
+    "name": "Belgium League",
+    "id": "560100ac8dc7a24394b9563e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9568a",
+  "name": "Bosnian League",
+  "isPublic": true,
+  "orderNo": 115,
+  "competitions": [
+   {
+    "name": "Bosnian League",
+    "id": "560100ac8dc7a24394b9568a"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:610fc049c11f6269c311be45",
+  "name": "Brazil Campeonato Paulista de Basquete",
+  "isPublic": true,
+  "orderNo": 120,
+  "competitions": [
+   {
+    "name": "Brazil Campeonato Paulista de Basquete",
+    "id": "610fc049c11f6269c311be45"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5c1cf01785d07ba976396da0",
+  "name": "Brazil NBB Copa Super 8",
+  "isPublic": true,
+  "orderNo": 125,
+  "competitions": [
+   {
+    "name": "Brazil NBB Copa Super 8",
+    "id": "5c1cf01785d07ba976396da0"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95675",
+  "name": "Brazil NBB League",
+  "isPublic": true,
+  "orderNo": 130,
+  "competitions": [
+   {
+    "name": "Brazil NBB League",
+    "id": "560100ac8dc7a24394b95675"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56238c8e1e31501db448e9e8",
+  "name": "British SLB Cup",
+  "isPublic": true,
+  "orderNo": 135,
+  "competitions": [
+   {
+    "name": "British SLB Cup",
+    "id": "56238c8e1e31501db448e9e8"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9569e",
+  "name": "British SLB League",
+  "isPublic": true,
+  "orderNo": 140,
+  "competitions": [
+   {
+    "name": "British SLB League",
+    "id": "560100ac8dc7a24394b9569e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:58700385d95ef3f74c3a7c01",
+  "name": "British SLB Trophy",
+  "isPublic": true,
+  "orderNo": 145,
+  "competitions": [
+   {
+    "name": "British SLB Trophy",
+    "id": "58700385d95ef3f74c3a7c01"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:606462989b37daf81a791ae2",
+  "name": "Bulgarian Division A",
+  "isPublic": false,
+  "orderNo": 150,
+  "competitions": [
+   {
+    "name": "Bulgarian Division A",
+    "id": "606462989b37daf81a791ae2"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:584a9a22d95ef3f74c17d053",
+  "name": "Bulgarian NBL League",
+  "isPublic": true,
+  "orderNo": 155,
+  "competitions": [
+   {
+    "name": "Bulgarian NBL League",
+    "id": "584a9a22d95ef3f74c17d053"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9560d",
+  "name": "CBA China",
+  "isPublic": true,
+  "orderNo": 160,
+  "competitions": [
+   {
+    "name": "CBA China",
+    "id": "560100ac8dc7a24394b9560d"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5c6cc33d85d07ba976fe0dd7",
+  "name": "Canadian Elite Basketball League",
+  "isPublic": true,
+  "orderNo": 165,
+  "competitions": [
+   {
+    "name": "Canadian Elite Basketball League",
+    "id": "5c6cc33d85d07ba976fe0dd7"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:60aa5af2a74d937ed1342a95",
+  "name": "Chilean Cup",
+  "isPublic": true,
+  "orderNo": 170,
+  "competitions": [
+   {
+    "name": "Chilean Cup",
+    "id": "60aa5af2a74d937ed1342a95"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5f91be05f68e52f827d66a56",
+  "name": "Chilean League",
+  "isPublic": true,
+  "orderNo": 175,
+  "competitions": [
+   {
+    "name": "Chilean League",
+    "id": "5f91be05f68e52f827d66a56"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5f80a489f68e52f82718b4a6",
+  "name": "Colombian League",
+  "isPublic": true,
+  "orderNo": 180,
+  "competitions": [
+   {
+    "name": "Colombian League",
+    "id": "5f80a489f68e52f82718b4a6"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:563922edd269224c4b13efa6",
+  "name": "Croatian Cup",
+  "isPublic": true,
+  "orderNo": 185,
+  "competitions": [
+   {
+    "name": "Croatian Cup",
+    "id": "563922edd269224c4b13efa6"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9560e",
+  "name": "Croatian League",
+  "isPublic": true,
+  "orderNo": 190,
+  "competitions": [
+   {
+    "name": "Croatian League",
+    "id": "560100ac8dc7a24394b9560e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:58d9353435268c61b01bcc8e",
+  "name": "Cyprus Cup",
+  "isPublic": true,
+  "orderNo": 195,
+  "competitions": [
+   {
+    "name": "Cyprus Cup",
+    "id": "58d9353435268c61b01bcc8e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:584a9a22d95ef3f74c17d055",
+  "name": "Cyprus League",
+  "isPublic": true,
+  "orderNo": 200,
+  "competitions": [
+   {
+    "name": "Cyprus League",
+    "id": "584a9a22d95ef3f74c17d055"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59af08c817120e9c9a9796fd",
+  "name": "Czech League",
+  "isPublic": true,
+  "orderNo": 205,
+  "competitions": [
+   {
+    "name": "Czech League",
+    "id": "59af08c817120e9c9a9796fd"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5bb3da84aeda719939c155f4",
+  "name": "Danish League",
+  "isPublic": true,
+  "orderNo": 210,
+  "competitions": [
+   {
+    "name": "Danish League",
+    "id": "5bb3da84aeda719939c155f4"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59af08c817120e9c9a9796f7",
+  "name": "Dutch League",
+  "isPublic": true,
+  "orderNo": 215,
+  "competitions": [
+   {
+    "name": "Dutch League",
+    "id": "59af08c817120e9c9a9796f7"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57bf478b57620213988f4757",
+  "name": "Estonian League",
+  "isPublic": true,
+  "orderNo": 220,
+  "competitions": [
+   {
+    "name": "Estonian League",
+    "id": "57bf478b57620213988f4757"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9560c",
+  "name": "EuroChallenge",
+  "isPublic": true,
+  "orderNo": 225,
+  "competitions": [
+   {
+    "name": "EuroChallenge",
+    "id": "560100ac8dc7a24394b9560c"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95656",
+  "name": "EuroCup",
+  "isPublic": true,
+  "orderNo": 230,
+  "competitions": [
+   {
+    "name": "EuroCup",
+    "id": "560100ac8dc7a24394b95656"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9563d",
+  "name": "Euroleague",
+  "isPublic": true,
+  "orderNo": 235,
+  "competitions": [
+   {
+    "name": "Euroleague",
+    "id": "560100ac8dc7a24394b9563d"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b956a1",
+  "name": "Exhibitions",
+  "isPublic": true,
+  "orderNo": 240,
+  "competitions": [
+   {
+    "name": "Exhibitions",
+    "id": "560100ac8dc7a24394b956a1"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5f90a7c2f68e52f8270eea29",
+  "name": "FFBB Nationale 1",
+  "isPublic": true,
+  "orderNo": 245,
+  "competitions": [
+   {
+    "name": "FFBB Nationale 1",
+    "id": "5f90a7c2f68e52f8270eea29"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:584a9a22d95ef3f74c17d052",
+  "name": "FIBA Asia Championship Cup",
+  "isPublic": true,
+  "orderNo": 250,
+  "competitions": [
+   {
+    "name": "FIBA Asia Championship Cup",
+    "id": "584a9a22d95ef3f74c17d052"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57e0e6a21c496ea6cc6de6ba",
+  "name": "FIBA Champions League",
+  "isPublic": true,
+  "orderNo": 255,
+  "competitions": [
+   {
+    "name": "FIBA Champions League",
+    "id": "57e0e6a21c496ea6cc6de6ba"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b956a2",
+  "name": "FIBA Europe Cup",
+  "isPublic": true,
+  "orderNo": 260,
+  "competitions": [
+   {
+    "name": "FIBA Europe Cup",
+    "id": "560100ac8dc7a24394b956a2"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:601f14cda84d0d39fc21ea9c",
+  "name": "FIBA Intercontinental Cup",
+  "isPublic": true,
+  "orderNo": 265,
+  "competitions": [
+   {
+    "name": "FIBA Intercontinental Cup",
+    "id": "601f14cda84d0d39fc21ea9c"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5e1b2ba67455336e8789db05",
+  "name": "Finnish Cup",
+  "isPublic": true,
+  "orderNo": 270,
+  "competitions": [
+   {
+    "name": "Finnish Cup",
+    "id": "5e1b2ba67455336e8789db05"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95652",
+  "name": "Finnish League",
+  "isPublic": true,
+  "orderNo": 275,
+  "competitions": [
+   {
+    "name": "Finnish League",
+    "id": "560100ac8dc7a24394b95652"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56010b428dc7a25554523b20",
+  "name": "French Cup (CDF R.Busnel)",
+  "isPublic": true,
+  "orderNo": 280,
+  "competitions": [
+   {
+    "name": "French Cup (CDF R.Busnel)",
+    "id": "56010b428dc7a25554523b20"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59ebb7ec44b2b8aa7e074100",
+  "name": "French Cup (old)",
+  "isPublic": true,
+  "orderNo": 285,
+  "competitions": [
+   {
+    "name": "French Cup (old)",
+    "id": "59ebb7ec44b2b8aa7e074100"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57d9da711c496ea6cc6c9641",
+  "name": "French Leaders Cup",
+  "isPublic": true,
+  "orderNo": 290,
+  "competitions": [
+   {
+    "name": "French Leaders Cup",
+    "id": "57d9da711c496ea6cc6c9641"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6144fd581a3a274a0ec643b2",
+  "name": "French Leaders Cup ProB",
+  "isPublic": true,
+  "orderNo": 295,
+  "competitions": [
+   {
+    "name": "French Leaders Cup ProB",
+    "id": "6144fd581a3a274a0ec643b2"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56118f141e31501db448d6a0",
+  "name": "French Betclic Elite (Pro A)",
+  "isPublic": true,
+  "orderNo": 300,
+  "competitions": [
+   {
+    "name": "French Betclic Elite (Pro A)",
+    "id": "56118f141e31501db448d6a0"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560106aa8dc7a233b47b74bc",
+  "name": "French Pro A (old)",
+  "isPublic": false,
+  "orderNo": 305,
+  "competitions": [
+   {
+    "name": "French Pro A (old)",
+    "id": "560106aa8dc7a233b47b74bc"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56010b438dc7a25554523b22",
+  "name": "French Elite 2 (Pro B)",
+  "isPublic": true,
+  "orderNo": 310,
+  "competitions": [
+   {
+    "name": "French Elite 2 (Pro B)",
+    "id": "56010b438dc7a25554523b22"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59ebb7ec44b2b8aa7e0740ec",
+  "name": "French Pro B (old)",
+  "isPublic": true,
+  "orderNo": 315,
+  "competitions": [
+   {
+    "name": "French Pro B (old)",
+    "id": "59ebb7ec44b2b8aa7e0740ec"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5e3590ad7455336e878741b0",
+  "name": "Georgian First Division",
+  "isPublic": true,
+  "orderNo": 320,
+  "competitions": [
+   {
+    "name": "Georgian First Division",
+    "id": "5e3590ad7455336e878741b0"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5d9c91187455336e8708d913",
+  "name": "Georgian Superleague",
+  "isPublic": true,
+  "orderNo": 325,
+  "competitions": [
+   {
+    "name": "Georgian Superleague",
+    "id": "5d9c91187455336e8708d913"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56c43d1f50238a164757f8b3",
+  "name": "German Cup",
+  "isPublic": true,
+  "orderNo": 330,
+  "competitions": [
+   {
+    "name": "German Cup",
+    "id": "56c43d1f50238a164757f8b3"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9562f",
+  "name": "German League",
+  "isPublic": true,
+  "orderNo": 335,
+  "competitions": [
+   {
+    "name": "German League",
+    "id": "560100ac8dc7a24394b9562f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5bb3da85aeda719939c1567f",
+  "name": "German League Division 2",
+  "isPublic": true,
+  "orderNo": 340,
+  "competitions": [
+   {
+    "name": "German League Division 2",
+    "id": "5bb3da85aeda719939c1567f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5c136f4685d07ba976f53b06",
+  "name": "German League Division 3",
+  "isPublic": true,
+  "orderNo": 345,
+  "competitions": [
+   {
+    "name": "German League Division 3",
+    "id": "5c136f4685d07ba976f53b06"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95635",
+  "name": "Greek Cup",
+  "isPublic": true,
+  "orderNo": 350,
+  "competitions": [
+   {
+    "name": "Greek Cup",
+    "id": "560100ac8dc7a24394b95635"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95607",
+  "name": "Greek League",
+  "isPublic": true,
+  "orderNo": 355,
+  "competitions": [
+   {
+    "name": "Greek League",
+    "id": "560100ac8dc7a24394b95607"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5deaa23f7455336e87526548",
+  "name": "Greek League Division 2",
+  "isPublic": true,
+  "orderNo": 360,
+  "competitions": [
+   {
+    "name": "Greek League Division 2",
+    "id": "5deaa23f7455336e87526548"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:614e192e9e3cfed40b2ecfd6",
+  "name": "Greek Supercup",
+  "isPublic": true,
+  "orderNo": 365,
+  "competitions": [
+   {
+    "name": "Greek Supercup",
+    "id": "614e192e9e3cfed40b2ecfd6"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59af08c817120e9c9a9796f2",
+  "name": "Hungarian Cup",
+  "isPublic": true,
+  "orderNo": 370,
+  "competitions": [
+   {
+    "name": "Hungarian Cup",
+    "id": "59af08c817120e9c9a9796f2"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9565c",
+  "name": "Hungarian League",
+  "isPublic": true,
+  "orderNo": 375,
+  "competitions": [
+   {
+    "name": "Hungarian League",
+    "id": "560100ac8dc7a24394b9565c"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9563f",
+  "name": "Israeli Cup",
+  "isPublic": true,
+  "orderNo": 380,
+  "competitions": [
+   {
+    "name": "Israeli Cup",
+    "id": "560100ac8dc7a24394b9563f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9562e",
+  "name": "Israeli League",
+  "isPublic": true,
+  "orderNo": 385,
+  "competitions": [
+   {
+    "name": "Israeli League",
+    "id": "560100ac8dc7a24394b9562e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57e95eea1c496ea6cc6f6374",
+  "name": "Israeli League Cup (Winner)",
+  "isPublic": true,
+  "orderNo": 390,
+  "competitions": [
+   {
+    "name": "Israeli League Cup (Winner)",
+    "id": "57e95eea1c496ea6cc6f6374"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95634",
+  "name": "Italian Serie A Cup",
+  "isPublic": true,
+  "orderNo": 395,
+  "competitions": [
+   {
+    "name": "Italian Serie A Cup",
+    "id": "560100ac8dc7a24394b95634"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560106aa8dc7a233b47b74bb",
+  "name": "Italian Serie A League",
+  "isPublic": true,
+  "orderNo": 400,
+  "competitions": [
+   {
+    "name": "Italian Serie A League",
+    "id": "560106aa8dc7a233b47b74bb"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:612771963250c03c0499096e",
+  "name": "Exhibitions-Italian Serie A",
+  "isPublic": true,
+  "orderNo": 405,
+  "competitions": [
+   {
+    "name": "Exhibitions-Italian Serie A",
+    "id": "612771963250c03c0499096e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95677",
+  "name": "Italian Serie A SuperCup",
+  "isPublic": true,
+  "orderNo": 410,
+  "competitions": [
+   {
+    "name": "Italian Serie A SuperCup",
+    "id": "560100ac8dc7a24394b95677"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57e642e51c496ea6cc6eb414",
+  "name": "Italian Serie A2 Cup",
+  "isPublic": true,
+  "orderNo": 415,
+  "competitions": [
+   {
+    "name": "Italian Serie A2 Cup",
+    "id": "57e642e51c496ea6cc6eb414"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95636",
+  "name": "Italian Serie A2 League",
+  "isPublic": true,
+  "orderNo": 420,
+  "competitions": [
+   {
+    "name": "Italian Serie A2 League",
+    "id": "560100ac8dc7a24394b95636"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5d93afa67455336e8767525f",
+  "name": "Exhibitions-Italian Serie A2",
+  "isPublic": true,
+  "orderNo": 425,
+  "competitions": [
+   {
+    "name": "Exhibitions-Italian Serie A2",
+    "id": "5d93afa67455336e8767525f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57e6435d1c496ea6cc6eb41f",
+  "name": "Italian Serie A2 Supercup",
+  "isPublic": true,
+  "orderNo": 430,
+  "competitions": [
+   {
+    "name": "Italian Serie A2 Supercup",
+    "id": "57e6435d1c496ea6cc6eb41f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5bb88127aeda719939d022c1",
+  "name": "Latvian - Estonian League",
+  "isPublic": true,
+  "orderNo": 435,
+  "competitions": [
+   {
+    "name": "Latvian - Estonian League",
+    "id": "5bb88127aeda719939d022c1"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95612",
+  "name": "Latvian League",
+  "isPublic": true,
+  "orderNo": 440,
+  "competitions": [
+   {
+    "name": "Latvian League",
+    "id": "560100ac8dc7a24394b95612"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b956a3",
+  "name": "Lebanese League",
+  "isPublic": true,
+  "orderNo": 445,
+  "competitions": [
+   {
+    "name": "Lebanese League",
+    "id": "560100ac8dc7a24394b956a3"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56010b438dc7a25554523b21",
+  "name": "Lega A Italy (old)",
+  "isPublic": false,
+  "orderNo": 450,
+  "competitions": [
+   {
+    "name": "Lega A Italy (old)",
+    "id": "56010b438dc7a25554523b21"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:587528b2d95ef3f74c5add27",
+  "name": "Basketball Champions League Americas (Liga Americas)",
+  "isPublic": true,
+  "orderNo": 460,
+  "competitions": [
+   {
+    "name": "Basketball Champions League Americas (Liga Americas)",
+    "id": "587528b2d95ef3f74c5add27"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57de63841c496ea6cc6d6202",
+  "name": "Liga SudAmericana",
+  "isPublic": true,
+  "orderNo": 465,
+  "competitions": [
+   {
+    "name": "Liga SudAmericana",
+    "id": "57de63841c496ea6cc6d6202"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56c755c150238a16475ab1bd",
+  "name": "Lithuanian Cup (King Mindaugas)",
+  "isPublic": true,
+  "orderNo": 470,
+  "competitions": [
+   {
+    "name": "Lithuanian Cup (King Mindaugas)",
+    "id": "56c755c150238a16475ab1bd"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95606",
+  "name": "Lithuanian League",
+  "isPublic": true,
+  "orderNo": 475,
+  "competitions": [
+   {
+    "name": "Lithuanian League",
+    "id": "560100ac8dc7a24394b95606"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5b0702e19559b26e7e6cfe2c",
+  "name": "Lithuanian League Division 2",
+  "isPublic": true,
+  "orderNo": 480,
+  "competitions": [
+   {
+    "name": "Lithuanian League Division 2",
+    "id": "5b0702e19559b26e7e6cfe2c"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5b07040d9559b26e7e74e141",
+  "name": "Macedonian Cup",
+  "isPublic": true,
+  "orderNo": 485,
+  "competitions": [
+   {
+    "name": "Macedonian Cup",
+    "id": "5b07040d9559b26e7e74e141"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:584a9a22d95ef3f74c17d054",
+  "name": "Macedonian League",
+  "isPublic": true,
+  "orderNo": 490,
+  "competitions": [
+   {
+    "name": "Macedonian League",
+    "id": "584a9a22d95ef3f74c17d054"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6258fd01f56cebc67bb65fb8",
+  "name": "Mexican Cibacopa",
+  "isPublic": true,
+  "orderNo": 495,
+  "competitions": [
+   {
+    "name": "Mexican Cibacopa",
+    "id": "6258fd01f56cebc67bb65fb8"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5f5a7cf4e6c2413bc4983f8c",
+  "name": "Mexican LNBP",
+  "isPublic": true,
+  "orderNo": 500,
+  "competitions": [
+   {
+    "name": "Mexican LNBP",
+    "id": "5f5a7cf4e6c2413bc4983f8c"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:590cd34435268c61b05c2d52",
+  "name": "Montenegrin League",
+  "isPublic": true,
+  "orderNo": 505,
+  "competitions": [
+   {
+    "name": "Montenegrin League",
+    "id": "590cd34435268c61b05c2d52"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59e6126a44b2b8aa7e89671e",
+  "name": "NBL Canada",
+  "isPublic": true,
+  "orderNo": 510,
+  "competitions": [
+   {
+    "name": "NBL Canada",
+    "id": "59e6126a44b2b8aa7e89671e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5cee3347f52909811e563d57",
+  "name": "NBL China",
+  "isPublic": true,
+  "orderNo": 515,
+  "competitions": [
+   {
+    "name": "NBL China",
+    "id": "5cee3347f52909811e563d57"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95610",
+  "name": "Other International",
+  "isPublic": true,
+  "orderNo": 520,
+  "competitions": [
+   {
+    "name": "Other International",
+    "id": "560100ac8dc7a24394b95610"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:561643381e31501db448deb0",
+  "name": "Polish Cup",
+  "isPublic": true,
+  "orderNo": 525,
+  "competitions": [
+   {
+    "name": "Polish Cup",
+    "id": "561643381e31501db448deb0"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95630",
+  "name": "Polish League",
+  "isPublic": true,
+  "orderNo": 530,
+  "competitions": [
+   {
+    "name": "Polish League",
+    "id": "560100ac8dc7a24394b95630"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5dcbbe707455336e87dc78ab",
+  "name": "Polish Supercup",
+  "isPublic": true,
+  "orderNo": 535,
+  "competitions": [
+   {
+    "name": "Polish Supercup",
+    "id": "5dcbbe707455336e87dc78ab"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9560f",
+  "name": "Portugal Liga Betclic (Liga Portuguesa de Basquetebol)",
+  "isPublic": true,
+  "orderNo": 540,
+  "competitions": [
+   {
+    "name": "Portugal Liga Betclic (Liga Portuguesa de Basquetebol)",
+    "id": "560100ac8dc7a24394b9560f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5f91be05f68e52f827d66a53",
+  "name": "Puerto Rican League",
+  "isPublic": true,
+  "orderNo": 545,
+  "competitions": [
+   {
+    "name": "Puerto Rican League",
+    "id": "5f91be05f68e52f827d66a53"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:60449a1c3632b8a67fe22288",
+  "name": "Romanian Cup",
+  "isPublic": true,
+  "orderNo": 555,
+  "competitions": [
+   {
+    "name": "Romanian Cup",
+    "id": "60449a1c3632b8a67fe22288"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95641",
+  "name": "Romanian League",
+  "isPublic": true,
+  "orderNo": 560,
+  "competitions": [
+   {
+    "name": "Romanian League",
+    "id": "560100ac8dc7a24394b95641"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:61515dba9d58a2b6fe2ea3c7",
+  "name": "Romanian Supercup",
+  "isPublic": true,
+  "orderNo": 565,
+  "competitions": [
+   {
+    "name": "Romanian Supercup",
+    "id": "61515dba9d58a2b6fe2ea3c7"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95608",
+  "name": "Russian Superleague A",
+  "isPublic": true,
+  "orderNo": 570,
+  "competitions": [
+   {
+    "name": "Russian Superleague A",
+    "id": "560100ac8dc7a24394b95608"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56c755c150238a16475ab1bc",
+  "name": "Serbian Cup",
+  "isPublic": true,
+  "orderNo": 575,
+  "competitions": [
+   {
+    "name": "Serbian Cup",
+    "id": "56c755c150238a16475ab1bc"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9560b",
+  "name": "Serbian League",
+  "isPublic": true,
+  "orderNo": 580,
+  "competitions": [
+   {
+    "name": "Serbian League",
+    "id": "560100ac8dc7a24394b9560b"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95650",
+  "name": "Slovakian League",
+  "isPublic": true,
+  "orderNo": 585,
+  "competitions": [
+   {
+    "name": "Slovakian League",
+    "id": "560100ac8dc7a24394b95650"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:56c3989850238a164757f5b3",
+  "name": "Slovenian Cup",
+  "isPublic": true,
+  "orderNo": 590,
+  "competitions": [
+   {
+    "name": "Slovenian Cup",
+    "id": "56c3989850238a164757f5b3"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95624",
+  "name": "Slovenian League",
+  "isPublic": true,
+  "orderNo": 595,
+  "competitions": [
+   {
+    "name": "Slovenian League",
+    "id": "560100ac8dc7a24394b95624"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:614490921a3a274a0ec643af",
+  "name": "Slovenian Supercup",
+  "isPublic": true,
+  "orderNo": 600,
+  "competitions": [
+   {
+    "name": "Slovenian Supercup",
+    "id": "614490921a3a274a0ec643af"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:613c3d52ec3a2ac711ae250d",
+  "name": "South Korean KBL Cup",
+  "isPublic": true,
+  "orderNo": 605,
+  "competitions": [
+   {
+    "name": "South Korean KBL Cup",
+    "id": "613c3d52ec3a2ac711ae250d"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:57d9da711c496ea6cc6c9643",
+  "name": "South Korean League",
+  "isPublic": true,
+  "orderNo": 610,
+  "competitions": [
+   {
+    "name": "South Korean League",
+    "id": "57d9da711c496ea6cc6c9643"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95602",
+  "name": "Spanish ACB League",
+  "isPublic": true,
+  "orderNo": 615,
+  "competitions": [
+   {
+    "name": "Spanish ACB League",
+    "id": "560100ac8dc7a24394b95602"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:60170cb0c952fbab2f28a808",
+  "name": "Spanish Copa LEB Plata Unico",
+  "isPublic": false,
+  "orderNo": 620,
+  "competitions": [
+   {
+    "name": "Spanish Copa LEB Plata Unico",
+    "id": "60170cb0c952fbab2f28a808"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:600da8069578a9a0ddb9aab9",
+  "name": "Spanish Copa Princesa de Asturias",
+  "isPublic": false,
+  "orderNo": 625,
+  "competitions": [
+   {
+    "name": "Spanish Copa Princesa de Asturias",
+    "id": "600da8069578a9a0ddb9aab9"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95633",
+  "name": "Spanish cup (Copa del Rey)",
+  "isPublic": true,
+  "orderNo": 630,
+  "competitions": [
+   {
+    "name": "Spanish cup (Copa del Rey)",
+    "id": "560100ac8dc7a24394b95633"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5dead3767455336e870c4d98",
+  "name": "Spanish EBA League",
+  "isPublic": true,
+  "orderNo": 635,
+  "competitions": [
+   {
+    "name": "Spanish EBA League",
+    "id": "5dead3767455336e870c4d98"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95613",
+  "name": "Spanish FEB Primera",
+  "isPublic": true,
+  "orderNo": 640,
+  "competitions": [
+   {
+    "name": "Spanish FEB Primera",
+    "id": "560100ac8dc7a24394b95613"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5decd9727455336e87e20acc",
+  "name": "Spanish FEB Segunda",
+  "isPublic": true,
+  "orderNo": 645,
+  "competitions": [
+   {
+    "name": "Spanish FEB Segunda",
+    "id": "5decd9727455336e87e20acc"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95603",
+  "name": "Spanish Supercopa ACB",
+  "isPublic": true,
+  "orderNo": 650,
+  "competitions": [
+   {
+    "name": "Spanish Supercopa ACB",
+    "id": "560100ac8dc7a24394b95603"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:59e6126a44b2b8aa7e8966a5",
+  "name": "Swedish League",
+  "isPublic": true,
+  "orderNo": 655,
+  "competitions": [
+   {
+    "name": "Swedish League",
+    "id": "59e6126a44b2b8aa7e8966a5"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:619e71144f6da96897492764",
+  "name": "Switzerland NLB league Division 2",
+  "isPublic": true,
+  "orderNo": 660,
+  "competitions": [
+   {
+    "name": "Switzerland NLB league Division 2",
+    "id": "619e71144f6da96897492764"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:61405f702d4ad88b64d7795c",
+  "name": "Switzerland SB League",
+  "isPublic": true,
+  "orderNo": 665,
+  "competitions": [
+   {
+    "name": "Switzerland SB League",
+    "id": "61405f702d4ad88b64d7795c"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5f91be05f68e52f827d66a36",
+  "name": "The Terrific 12",
+  "isPublic": true,
+  "orderNo": 670,
+  "competitions": [
+   {
+    "name": "The Terrific 12",
+    "id": "5f91be05f68e52f827d66a36"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9566f",
+  "name": "Turkish Cup",
+  "isPublic": true,
+  "orderNo": 675,
+  "competitions": [
+   {
+    "name": "Turkish Cup",
+    "id": "560100ac8dc7a24394b9566f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:614b36209e3cfed40b2ecfcd",
+  "name": "Turkish Federation Cup",
+  "isPublic": true,
+  "orderNo": 680,
+  "competitions": [
+   {
+    "name": "Turkish Federation Cup",
+    "id": "614b36209e3cfed40b2ecfcd"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b9560a",
+  "name": "Turkish League",
+  "isPublic": true,
+  "orderNo": 685,
+  "competitions": [
+   {
+    "name": "Turkish League",
+    "id": "560100ac8dc7a24394b9560a"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5b0702e19559b26e7e6cfe46",
+  "name": "Turkish League Division 2",
+  "isPublic": true,
+  "orderNo": 690,
+  "competitions": [
+   {
+    "name": "Turkish League Division 2",
+    "id": "5b0702e19559b26e7e6cfe46"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5dcbbe707455336e87dc78f3",
+  "name": "Turkish Supercup",
+  "isPublic": true,
+  "orderNo": 695,
+  "competitions": [
+   {
+    "name": "Turkish Supercup",
+    "id": "5dcbbe707455336e87dc78f3"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:584a9a22d95ef3f74c17d056",
+  "name": "Ukrainian Cup",
+  "isPublic": true,
+  "orderNo": 700,
+  "competitions": [
+   {
+    "name": "Ukrainian Cup",
+    "id": "584a9a22d95ef3f74c17d056"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95611",
+  "name": "Ukrainian Superleague",
+  "isPublic": true,
+  "orderNo": 705,
+  "competitions": [
+   {
+    "name": "Ukrainian Superleague",
+    "id": "560100ac8dc7a24394b95611"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:5f91be05f68e52f827d66a59",
+  "name": "Uruguayan League LUB",
+  "isPublic": true,
+  "orderNo": 710,
+  "competitions": [
+   {
+    "name": "Uruguayan League LUB",
+    "id": "5f91be05f68e52f827d66a59"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:632802748e57531b0a594998",
+  "name": "VTB Super Cup",
+  "isPublic": true,
+  "orderNo": 715,
+  "competitions": [
+   {
+    "name": "VTB Super Cup",
+    "id": "632802748e57531b0a594998"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95664",
+  "name": "VTB United League",
+  "isPublic": true,
+  "orderNo": 720,
+  "competitions": [
+   {
+    "name": "VTB United League",
+    "id": "560100ac8dc7a24394b95664"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:60da33ff534fc5078886cf47",
+  "name": "Vietnam Basketball Association",
+  "isPublic": true,
+  "orderNo": 725,
+  "competitions": [
+   {
+    "name": "Vietnam Basketball Association",
+    "id": "60da33ff534fc5078886cf47"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:63467661f425ec8b8f348b23",
+  "name": "East Asia Super League (EASL)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "East Asia Super League (EASL)",
+    "id": "63467661f425ec8b8f348b23"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:637dd500c44a6c207a42f55d",
+  "name": "European North Basketball League (ENBL)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "European North Basketball League (ENBL)",
+    "id": "637dd500c44a6c207a42f55d"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:63c6af62bf43434a0301b0d7",
+  "name": "Swiss Basketball Cup (SBL)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Swiss Basketball Cup (SBL)",
+    "id": "63c6af62bf43434a0301b0d7"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:63ef8f273f4951ac6ae56ecb",
+  "name": "Czech Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Czech Cup",
+    "id": "63ef8f273f4951ac6ae56ecb"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6342937e4b580c4c0e53fb84",
+  "name": "Finnish League Division 1",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Finnish League Division 1",
+    "id": "6342937e4b580c4c0e53fb84"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:63c27a45eb09aa22bf54b8f3",
+  "name": "Georgian Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Georgian Cup",
+    "id": "63c27a45eb09aa22bf54b8f3"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:650701ddef47f9693eb4db48",
+  "name": "Basketball England KitKing Trophy",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Basketball England KitKing Trophy",
+    "id": "650701ddef47f9693eb4db48"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6507df5b106e56a55b74db7a",
+  "name": "Exhibitions-Australian NBL Blitz",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Exhibitions-Australian NBL Blitz",
+    "id": "6507df5b106e56a55b74db7a"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6512bac6c04a1fd17e5c14b2",
+  "name": "West Asia Super League (WASL)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "West Asia Super League (WASL)",
+    "id": "6512bac6c04a1fd17e5c14b2"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6519f18558347b94e4c546df",
+  "name": "Mexican Copa Value LNBP",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Mexican Copa Value LNBP",
+    "id": "6519f18558347b94e4c546df"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:652665795b4510df44c3afed",
+  "name": "Basketball England EABL-North",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Basketball England EABL-North",
+    "id": "652665795b4510df44c3afed"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6526658e5b4510df44c3afee",
+  "name": "Basketball England EABL-South",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Basketball England EABL-South",
+    "id": "6526658e5b4510df44c3afee"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:652666235b4510df44c3afef",
+  "name": "Basketball England NBL1-A",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Basketball England NBL1-A",
+    "id": "652666235b4510df44c3afef"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:653290988d6872324c5012f1",
+  "name": "Basketball England-The College Basketball League (CBL)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Basketball England-The College Basketball League (CBL)",
+    "id": "653290988d6872324c5012f1"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6533bc21c7384445ed0bc16a",
+  "name": "Japan BLeague 2",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Japan BLeague 2",
+    "id": "6533bc21c7384445ed0bc16a"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:653a21605501649a44e5b907",
+  "name": "Alpe Adria Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Alpe Adria Cup",
+    "id": "653a21605501649a44e5b907"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:655324f88026e71d397be189",
+  "name": "Taiwanese P. League+ (PLG)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Taiwanese P. League+ (PLG)",
+    "id": "655324f88026e71d397be189"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6583e1e49956108263bf9fe1",
+  "name": "Argentinian Super Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Argentinian Super Cup",
+    "id": "6583e1e49956108263bf9fe1"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:65b23000a52babae56f59ac2",
+  "name": "Russian Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Russian Cup",
+    "id": "65b23000a52babae56f59ac2"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:65d71bbc1f347c88b8760b85",
+  "name": "Czech-Slovak Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Czech-Slovak Cup",
+    "id": "65d71bbc1f347c88b8760b85"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:65fc33e08a1d2b5e18fee350",
+  "name": "Australian NBL1 Central",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Australian NBL1 Central",
+    "id": "65fc33e08a1d2b5e18fee350"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:65fc33ebb372376215580e4f",
+  "name": "Australian NBL1 West",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Australian NBL1 West",
+    "id": "65fc33ebb372376215580e4f"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:65fc33f58a1d2b5e18fee351",
+  "name": "Australian NBL1 North",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Australian NBL1 North",
+    "id": "65fc33f58a1d2b5e18fee351"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:65fc3400b372376215580e50",
+  "name": "Australian NBL1 East",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Australian NBL1 East",
+    "id": "65fc3400b372376215580e50"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:65fc3436d4598cc0bc5a2cec",
+  "name": "Australian NBL1 South",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Australian NBL1 South",
+    "id": "65fc3436d4598cc0bc5a2cec"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:65fc4608e369791707cf9749",
+  "name": "Australia Big V",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Australia Big V",
+    "id": "65fc4608e369791707cf9749"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6661f07a0e4c5953b8cf0dae",
+  "name": "Asia Champions League",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Asia Champions League",
+    "id": "6661f07a0e4c5953b8cf0dae"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:66b9e6e0d761366556ee6079",
+  "name": "Australian NBL1 National Finals",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Australian NBL1 National Finals",
+    "id": "66b9e6e0d761366556ee6079"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:67002dca4723e7cc10203ecc",
+  "name": "Cyprus Super Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Cyprus Super Cup",
+    "id": "67002dca4723e7cc10203ecc"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:670cf265ac0ff58b27e5d15c",
+  "name": "Azerbaijan Basketball League (ABL)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Azerbaijan Basketball League (ABL)",
+    "id": "670cf265ac0ff58b27e5d15c"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:672335ca79417c466feae3ac",
+  "name": "Taiwan Professional Basketball League (TPBL)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Taiwan Professional Basketball League (TPBL)",
+    "id": "672335ca79417c466feae3ac"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:676efa4cbb2335b59b68468b",
+  "name": "Swiss Patrick Baumann Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Swiss Patrick Baumann Cup",
+    "id": "676efa4cbb2335b59b68468b"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:679b2126330f3cdc99abd28d",
+  "name": "Azerbaijan cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Azerbaijan cup",
+    "id": "679b2126330f3cdc99abd28d"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:67a13e69e365fc3b38c1148d",
+  "name": "Indian National Basketball League (InBL PRO)",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Indian National Basketball League (InBL PRO)",
+    "id": "67a13e69e365fc3b38c1148d"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:67a634c7333b9bc81e76d816",
+  "name": "Latvian Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Latvian Cup",
+    "id": "67a634c7333b9bc81e76d816"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:68cbc5187a25b9636b1424b1",
+  "name": "French LNB Super Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "French LNB Super Cup",
+    "id": "68cbc5187a25b9636b1424b1"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:68cd3f773d4e6a3dbc4a664a",
+  "name": "Israeli SuperCup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Israeli SuperCup",
+    "id": "68cd3f773d4e6a3dbc4a664a"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:68d12eaafc67c5a56f604dab",
+  "name": "British Championship Basketball (BCB) league",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "British Championship Basketball (BCB) league",
+    "id": "68d12eaafc67c5a56f604dab"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:68d130d6d137e07a5577898a",
+  "name": "British Championship Basketball (BCB) Trophy",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "British Championship Basketball (BCB) Trophy",
+    "id": "68d130d6d137e07a5577898a"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:68e756dfa548caee6b02d998",
+  "name": "Winline Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Winline Cup",
+    "id": "68e756dfa548caee6b02d998"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6949a79d3771216c6f6e5d65",
+  "name": "Basketball England NBL National Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Basketball England NBL National Cup",
+    "id": "6949a79d3771216c6f6e5d65"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6999bc806a15e9a9a43e4e8e",
+  "name": "Bulgarian Cup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Bulgarian Cup",
+    "id": "6999bc806a15e9a9a43e4e8e"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6a8c791a544c06e62a642322",
+  "name": "Euroleague SuperCup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Euroleague SuperCup",
+    "id": "6a8c791a544c06e62a642322"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6a9bf8bb9c03bff09b3d3d32",
+  "name": "Slovakian SuperCup",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Slovakian SuperCup",
+    "id": "6a9bf8bb9c03bff09b3d3d32"
+   }
+  ]
+ },
+ {
+  "definitionType": "SingleCompetition",
+  "competitionKey": "54457dce300969b132fcfb3f:COMP:6ab261420613ce1c4fb39d18",
+  "name": "Basketball England EABL-Central",
+  "isPublic": true,
+  "orderNo": 0,
+  "competitions": [
+   {
+    "name": "Basketball England EABL-Central",
+    "id": "6ab261420613ce1c4fb39d18"
+   }
+  ]
+ }
+]

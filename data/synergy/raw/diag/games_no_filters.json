@@ -1,0 +1,340 @@
+{
+ "meta": {
+  "pagination": {
+   "totalRecords": 199
+  },
+  "warnings": []
+ },
+ "data": [
+  {
+   "data": {
+    "id": "6144a0e3ef635b64dbd32b8b",
+    "name": "Cibona@Mornar",
+    "ids": 0,
+    "homeScore": 77,
+    "awayScore": 87,
+    "homeTeam": {
+     "fullName": "KK Mornar Bar",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Mornar",
+     "abbr": "MOR",
+     "id": "57baee4857620213988f29bb"
+    },
+    "awayTeam": {
+     "fullName": "Cibona Zagreb",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Cibona",
+     "abbr": "CIB",
+     "id": "54457def300969b132fd0d51"
+    },
+    "competition": {
+     "name": "Adriatic League (ABA)",
+     "id": "560100ac8dc7a24394b95600"
+    },
+    "league": {
+     "name": "International",
+     "abbr": "I",
+     "id": "54457dce300969b132fcfb3f"
+    },
+    "season": {
+     "name": "2021-2022",
+     "id": "6089924f5e7b4977beddb1d1"
+    },
+    "status": "GameOver",
+    "date": "2021-09-24T18:00:00Z",
+    "lastUpdated": "2026-08-26T13:01:32.081Z",
+    "comment": "",
+    "playByPlaysCount": 333,
+    "playByPlaysUpdated": "2026-05-11T11:20:51.548Z",
+    "possessionsCount": 226,
+    "possessionsUpdated": "2026-05-11T11:20:53.53Z",
+    "possessionsWithLineupsCount": 210,
+    "playerBoxscoresCount": 24,
+    "playerBoxscoresUpdated": "2026-05-11T11:20:52.32Z",
+    "sportradarId": "sr:match:28318186"
+   }
+  },
+  {
+   "data": {
+    "id": "6144a0e3ef635b64dbd32b8c",
+    "name": "Split@Crvena Zvezda",
+    "ids": 0,
+    "homeScore": 97,
+    "awayScore": 61,
+    "homeTeam": {
+     "fullName": "Crvena Zvezda mts",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Crvena Zvezda",
+     "abbr": "CZV",
+     "id": "54457def300969b132fd0d3e"
+    },
+    "awayTeam": {
+     "fullName": "KK Split",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Split",
+     "abbr": "SPL",
+     "id": "54457def300969b132fd0d6b"
+    },
+    "competition": {
+     "name": "Adriatic League (ABA)",
+     "id": "560100ac8dc7a24394b95600"
+    },
+    "league": {
+     "name": "International",
+     "abbr": "I",
+     "id": "54457dce300969b132fcfb3f"
+    },
+    "season": {
+     "name": "2021-2022",
+     "id": "6089924f5e7b4977beddb1d1"
+    },
+    "status": "GameOver",
+    "date": "2021-09-24T20:00:00Z",
+    "lastUpdated": "2026-08-26T13:01:32.188Z",
+    "comment": "",
+    "playByPlaysCount": 337,
+    "playByPlaysUpdated": "2026-05-11T11:20:55.344Z",
+    "possessionsCount": 228,
+    "possessionsUpdated": "2026-05-11T11:20:57.286Z",
+    "possessionsWithLineupsCount": 214,
+    "playerBoxscoresCount": 22,
+    "playerBoxscoresUpdated": "2026-05-11T11:20:56.185Z",
+    "sportradarId": "sr:match:28318178"
+   }
+  },
+  {
+   "data": {
+    "id": "6144a0e3ef635b64dbd32b8d",
+    "name": "Borac@Igokea",
+    "ids": 0,
+    "homeScore": 91,
+    "awayScore": 89,
+    "homeTeam": {
+     "fullName": "Igokea m:tel Aleksandrovac",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Igokea",
+     "abbr": "IGO",
+     "id": "54457df2300969b132fd0e89"
+    },
+    "awayTeam": {
+     "fullName": "Borac Cacak",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Borac Cacak",
+     "abbr": "BCA",
+     "id": "54457df2300969b132fd0e63"
+    },
+    "competition": {
+     "name": "Adriatic League (ABA)",
+     "id": "560100ac8dc7a24394b95600"
+    },
+    "league": {
+     "name": "International",
+     "abbr": "I",
+     "id": "54457dce300969b132fcfb3f"
+    },
+    "season": {
+     "name": "2021-2022",
+     "id": "6089924f5e7b4977beddb1d1"
+    },
+    "status": "GameOver",
+    "date": "2021-09-25T17:00:00Z",
+    "lastUpdated": "2026-08-26T13:01:31.2Z",
+    "comment": "",
+    "playByPlaysCount": 349,
+    "playByPlaysUpdated": "2026-05-11T11:20:59.433Z",
+    "possessionsCount": 232,
+    "possessionsUpdated": "2026-05-11T11:21:01.786Z",
+    "possessionsWithLineupsCount": 225,
+    "playerBoxscoresCount": 24,
+    "playerBoxscoresUpdated": "2026-05-11T11:21:00.291Z",
+    "sportradarId": "sr:match:28318182"
+   }
+  },
+  {
+   "data": {
+    "id": "6144a0e3ef635b64dbd32b8e",
+    "name": "Krka@Cedevita Olimpija",
+    "ids": 0,
+    "homeScore": 88,
+    "awayScore": 56,
+    "homeTeam": {
+     "fullName": "Cedevita Olimpija Ljubljana",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Cedevita Olimpija",
+     "abbr": "Ced",
+     "id": "54457df1300969b132fd0e0c"
+    },
+    "awayTeam": {
+     "fullName": "Krka Novo Mesto",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Krka",
+     "abbr": "KRK",
+     "id": "54457def300969b132fd0d73"
+    },
+    "competition": {
+     "name": "Adriatic League (ABA)",
+     "id": "560100ac8dc7a24394b95600"
+    },
+    "league": {
+     "name": "International",
+     "abbr": "I",
+     "id": "54457dce300969b132fcfb3f"
+    },
+    "season": {
+     "name": "2021-2022",
+     "id": "6089924f5e7b4977beddb1d1"
+    },
+    "status": "GameOver",
+    "date": "2021-09-25T21:00:00Z",
+    "lastUpdated": "2026-08-26T13:01:32.274Z",
+    "comment": "",
+    "playByPlaysCount": 310,
+    "playByPlaysUpdated": "2026-05-11T11:21:04.295Z",
+    "possessionsCount": 224,
+    "possessionsUpdated": "2026-05-11T11:21:06.39Z",
+    "possessionsWithLineupsCount": 201,
+    "playerBoxscoresCount": 23,
+    "playerBoxscoresUpdated": "2026-05-11T11:21:05.098Z",
+    "sportradarId": "sr:match:28318184"
+   }
+  },
+  {
+   "data": {
+    "id": "6144a0e3ef635b64dbd32b8f",
+    "name": "Studentski centar@Mega",
+    "ids": 0,
+    "homeScore": 101,
+    "awayScore": 68,
+    "homeTeam": {
+     "fullName": "KK Mega MIS Soccerbet",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "Mega",
+     "abbr": "MEG",
+     "id": "54457df2300969b132fd0ebe"
+    },
+    "awayTeam": {
+     "fullName": "KK Studentski centar Derby",
+     "conference": {
+      "name": "International",
+      "abbr": "I",
+      "id": "54457dcf300969b132fcfb5c"
+     },
+     "division": {
+      "name": "Int Conference",
+      "abbr": "IC",
+      "id": "54457dd0300969b132fcfba9"
+     },
+     "name": "SC Derby",
+     "abbr": "STC",
+     "id": "5f208db9e0962f87ad826bb4"
+    },
+    "competition": {
+     "name": "Adriatic League (ABA)",
+     "id": "560100ac8dc7a24394b95600"
+    },
+    "league": {
+     "name": "International",
+     "abbr": "I",
+     "id": "54457dce300969b132fcfb3f"
+    },
+    "season": {
+     "name": "2021-2022",
+     "id": "6089924f5e7b4977beddb1d1"
+    },
+    "status": "GameOver",
+    "date": "2021-09-26T12:00:00Z",
+    "lastUpdated": "2026-08-26T13:01:32.336Z",
+    "comment": "",
+    "playByPlaysCount": 359,
+    "playByPlaysUpdated": "2026-06-03T15:44:55.314Z",
+    "possessionsCount": 242,
+    "possessionsUpdated": "2026-06-03T15:44:56.775Z",
+    "possessionsWithLineupsCount": 226,
+    "playerBoxscoresCount": 24,
+    "playerBoxscoresUpdated": "2026-06-03T15:44:55.481Z",
+    "sportradarId": "sr:match:28318188"
+   }
+  }
+ ]
+}

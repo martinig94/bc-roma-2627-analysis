@@ -1,0 +1,55 @@
+player,play_type,shot_type,fga,fgm
+Brajkovic,P&R Roll Man,To basket,8,6
+Candussi,P&R Roll Man,To basket,8,3
+Candussi,P&R Roll Man,"Guarded, 3PT",4,0
+Candussi,P&R Roll Man,"Open, 3PT",2,1
+Candussi,P&R Roll Man,"Guarded, mid-range",1,0
+Candussi,Spot Up,"Guarded, 3PT",8,2
+Candussi,Spot Up,"Open, 3PT",3,2
+DeAngeli,Spot Up,"Guarded, 3PT",6,3
+DeAngeli,Spot Up,"Open, 3PT",4,0
+DeAngeli,Spot Up,To basket,1,1
+DeAngeli,Spot Up,"Dribble jumper, 3PT",1,1
+Galloway,Off Screen,"Guarded, 3PT",4,2
+Galloway,Off Screen,To basket,2,2
+Galloway,Off Screen,"Open, 3PT",2,0
+Galloway,Off Screen,"Dribble jumper, mid-range",1,0
+Galloway,Off Screen,"Dribble jumper, 3PT",1,0
+Galloway,P&R Ball Handler,"Dribble jumper, 3PT",6,4
+Galloway,P&R Ball Handler,To basket,3,1
+Galloway,Spot Up,"Guarded, 3PT",7,3
+Galloway,Spot Up,"Open, 3PT",5,1
+Galloway,Spot Up,"Dribble jumper, mid-range",1,1
+Galloway,Spot Up,"Dribble jumper, 3PT",1,1
+Galloway,Spot Up,"Dribble jumper, short (<17 ft)",1,0
+Galloway,Transition,"Open, 3PT",7,2
+Galloway,Transition,To basket,4,2
+Galloway,Transition,"Guarded, 3PT",2,0
+Galloway,Transition,"Dribble jumper, 3PT",1,0
+Jones,Spot Up,"Guarded, 3PT",11,5
+Jones,Spot Up,To basket,4,0
+Jones,Spot Up,"Open, 3PT",4,1
+Jones,Spot Up,"Dribble jumper, 3PT",1,0
+Jones,Transition,To basket,8,6
+Jones,Transition,"Dribble jumper, 3PT",4,0
+Jones,Transition,"Open, 3PT",2,1
+Jones,Transition,"Guarded, 3PT",2,2
+McDermott,Spot Up,"Open, 3PT",8,5
+McDermott,Spot Up,"Guarded, 3PT",8,1
+McDermott,Spot Up,To basket,2,2
+McDermott,Spot Up,"Dribble jumper, 3PT",1,0
+McDermott,Transition,To basket,4,1
+McDermott,Transition,"Guarded, 3PT",2,0
+McDermott,Transition,"Open, 3PT",2,0
+McDermott,Transition,"Dribble jumper, 3PT",2,0
+Ross,Isolation,To basket,4,2
+Ross,Isolation,"Dribble jumper, 3PT",3,0
+Ross,Isolation,"Dribble jumper, short (<17 ft)",1,0
+Ross,P&R Ball Handler,To basket,17,11
+Ross,P&R Ball Handler,"Dribble jumper, 3PT",13,5
+Ross,P&R Ball Handler,"Dribble jumper, short (<17 ft)",2,2
+Ruzzier,Spot Up,"Guarded, 3PT",4,1
+Ruzzier,Spot Up,"Dribble jumper, short (<17 ft)",2,0
+Ruzzier,Spot Up,"Open, 3PT",1,0
+Ruzzier,Spot Up,To basket,1,0
+Ruzzier,Spot Up,"Dribble jumper, 3PT",1,0

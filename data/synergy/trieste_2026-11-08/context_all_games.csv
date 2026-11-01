@@ -1,0 +1,29 @@
+team,side,metric,value,gp
+Trieste,offense,PPP,0.987,5
+Trieste,offense,Possessions/game,90.2,5
+Trieste,offense,eFG%,51.3,5
+Trieste,offense,TO%,10.9,5
+Trieste,offense,%FT,15.1,5
+Trieste,offense,Score%,45,5
+Trieste,offense,FG%,43.2,5
+Trieste,defense,PPP,0.957,5
+Trieste,defense,Possessions/game,89,5
+Trieste,defense,eFG%,52,5
+Trieste,defense,TO%,13.5,5
+Trieste,defense,%FT,13.7,5
+Trieste,defense,Score%,44.7,5
+Trieste,defense,FG%,45.3,5
+BC Roma,offense,PPP,1.009,11
+BC Roma,offense,Possessions/game,91,11
+BC Roma,offense,eFG%,56.6,11
+BC Roma,offense,TO%,16.2,11
+BC Roma,offense,%FT,11.9,11
+BC Roma,offense,Score%,45.8,11
+BC Roma,offense,FG%,48.8,11
+BC Roma,defense,PPP,1.001,11
+BC Roma,defense,Possessions/game,92.7,11
+BC Roma,defense,eFG%,54.2,11
+BC Roma,defense,TO%,14,11
+BC Roma,defense,%FT,14.2,11
+BC Roma,defense,Score%,45.7,11
+BC Roma,defense,FG%,46.8,11
