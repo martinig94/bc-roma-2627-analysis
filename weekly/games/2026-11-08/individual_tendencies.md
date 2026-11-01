@@ -13,7 +13,7 @@ THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the 
 
 Based on the data only (5 LBA games; Synergy pull of 1 Nov 2026 for shots, LBA box scores and play-by-play for the rest). Trieste's round 6 game at Virtus Bologna (2 Nov) is not included.
 
-- **Ross is the offense.** 16 possessions a game (80 in five), 18.6 PPG, 7.0 assists to 2.0 turnovers, 27/30 from the line; 42 of the team's 71 P&R ball-handler possessions are his. He is also the top of the league-percentile chart for pace (1.00) and draws 11.2 fouls per 40' (37 in 132').
+- **Ross is the offense.** 16 possessions a game (80 in five), 18.6 PPG, 7.0 assists and 1.8 turnovers, 27/30 from the line; 42 of the team's 71 P&R ball-handler possessions are his. He is also the top of the league-percentile chart for pace (1.00) and draws 11.2 fouls per 40' (37 in 132').
 - **Jones is the second engine**: 15.2 PPG, 8.8 rebounds (9 offensive), 9 steals and 9 blocks in 139', 19 transition possessions at 1.32 PPP. Rim activity 0.92 and pace 0.91 in the league percentiles.
 - **The wings shoot threes**: 66% of McDermott's shots are threes, 60% of Galloway's, 53% of Jones's (Ross 39%). Galloway is best from the corner (7/15), McDermott is 8/31 from three overall (25.8%).
 - **The bigs finish near the basket**: Brajkovic 10/14 from two (no three), Candussi 13/21 from two and 5/18 from three. Brajkovic is the highest on rim activity among the bigs (0.87, 3 dunks in 66').

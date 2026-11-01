@@ -17,6 +17,8 @@ still empty shows a grey box *"This section will be filled when the game is revi
 your text and plots. The Synergy plots of the opponent go in the same folder (`python notebooks/synergy_scouting_plots.py data/synergy/<folder> --out ...`,
 then copy the PNGs next to `analysis.md`); the page shows them, in the order of the template, when they are there.
 
+Every analysis is written up on the main page and also on the individual tendencies and offense tendencies pages (key points and the notes under each plot, data only), not just on the main one. Defense tendencies follow when the defensive scheme is reviewed.
+
 Every analysis also has three pages that go deeper, in the same folder; they are created with the analysis (also for the earlier games)
 and linked from the end of the analysis ("More analysis"). They are yours, never overwritten:
 

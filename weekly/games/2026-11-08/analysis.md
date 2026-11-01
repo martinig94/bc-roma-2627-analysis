@@ -100,7 +100,7 @@ Where the shots come from, shot clock, who takes them.
 
 Possessions used and efficiency (Synergy, LBA games):
 
-- Ross: 80 possessions (16 a game), 1.163 PPP, 58.9% eFG, 18.6 PPG, 7.0 assists against 2.0 turnovers a game. 29/56 from the field, 8/22 from three (5 of the 15 top threes), 21/34 from two; 27/30 from the line. On the P&R ball handler: 13 pull-up threes, 5 made; 11/17 at the basket.
+- Ross: 80 possessions (16 a game), 1.163 PPP, 58.9% eFG, 18.6 PPG, 7.0 assists and 1.8 turnovers a game. 29/56 from the field, 8/22 from three (5 of the 15 top threes), 21/34 from two; 27/30 from the line. On the P&R ball handler: 13 pull-up threes, 5 made; 11/17 at the basket.
 - Jones: 77 possessions, 0.987 PPP, 49.2% eFG, 15.2 PPG, 8.8 rebounds (9 offensive). 13/34 from three (5/12 in the corner), 12/30 from two; best in transition (19 possessions, 1.316 PPP).
 - Galloway: 78 possessions, 0.885 PPP, 46.9% eFG, 13.8 PPG; 13/39 from three (7/15 in the corner), 11/26 from two; 3.0 assists.
 - Candussi: 52 possessions, 1.019 PPP, 52.6% eFG, 10.6 PPG; 13/21 from two, 5/18 from three; 18 free-throw attempts.
