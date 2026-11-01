@@ -9,7 +9,7 @@ Each game has two pages you can write on. Work only in `weekly/games/<date>/`:
 
 Example: Varese vs BC Roma is `weekly/games/2026-10-24/analysis.md`.
 Every analysis has the same sections in the same order. From the PAOK game (2026-11-03) on the main page is the short one:
-Key points, results and standings, the two teams compared, roster, starting five and bench, key players (the first three plots,
+Key points, results and standings, the two teams compared, roster, starting five and bench, shot selection, key players (the first three plots,
 the bullets and the other stats), what to expect (with the metrics to check), clips suggested. The three links to the deeper pages
 ("More analysis") are at the top, under the title. Earlier analyses keep their longer layout (scoring sources, assists, turnovers,
 lineups, defensive attitude, other suggested checks on the main page). A section that is
@@ -24,7 +24,7 @@ and linked from the end of the analysis ("More analysis"). They are yours, never
 |---|---|
 | individual tendencies (triangle plots of the shot attempts, energy indices, shot charts by player, rotation by player) | `weekly/games/<date>/individual_tendencies.md` |
 | defense tendencies (scheme, what the team allows) | `weekly/games/<date>/defense_tendencies.md` |
-| offense tendencies (play types, shot selection, assists, turnovers) | `weekly/games/<date>/offense_tendencies.md` |
+| offense tendencies (play types, assists, turnovers) | `weekly/games/<date>/offense_tendencies.md` |
 
 They are plain markdown: text, `{{ figure: name }}` blocks and your own images (same folder, `![caption](file.png)`). A subpage you delete is not
 linked (and is created again the next time the analysis is generated).

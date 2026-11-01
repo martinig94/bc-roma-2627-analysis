@@ -18,7 +18,7 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
 Blocks of this page: {{ header }} {{ standings }} {{ comparison }} {{ roster }} {{ assists }} {{ turnovers }} {{ lineups }} {{ pending }} and
 {{ figure: name }} for any generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting,
 06_hot_spots, {{ shot_charts }} (06b: one chart per player), 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors, 11_starting_fives, 13_rotation_by_minute: who is on the court at each minute, with the next options).
-The three pages that go deeper (individual_tendencies.md, defense_tendencies.md, offense_tendencies.md, same folder) are linked at the top of this page ({{ more_analysis }}) when they exist: shot charts are on the individual page; play types, shot selection, assists and turnovers on the offense page; what the team allows on the defense page.
+The three pages that go deeper (individual_tendencies.md, defense_tendencies.md, offense_tendencies.md, same folder) are linked at the top of this page ({{ more_analysis }}) when they exist: shot charts are on the individual page; play types, assists and turnovers on the offense page; what the team allows on the defense page.
 THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, same order); only the content changes.
 -->
 
@@ -79,6 +79,20 @@ Based on the data only (5 LBA games for Trieste, 6 for BC Roma; Synergy pull of 
 {{ figure: 11_starting_fives }}
 
 {{ figure: 13_rotation_by_minute }}
+
+## Shot selection
+
+Where the shots come from, shot clock, who takes them.
+
+- Trieste takes 340 shots in five games, 166 of them threes (49%; BC Roma 46%), at 33.1% from three and 52.9% from two. By zone (Synergy): paint 153 attempts at 56.2%, mid-range 21 at 28.6%, corner threes 57 at 42.1%, wing threes 56 at 33.9%, top threes 53 at 22.6%.
+- The corner is the productive three (24/57); the top of the key is the weak one (12/53). Ross takes 15 of his 22 threes from the top (5 made), Galloway 14 of his 39.
+- Trieste goes to the line on 5% of spot-up possessions and 14% on P&R ball handler: its free throws come mostly from Ross (30 attempts of the team's 131, 27 made), Candussi (18) and Brajkovic (16).
+
+{{ figure: 04_scoring_sources }}
+
+{{ figure: 05_shooting }}
+
+{{ figure: 06_hot_spots }}
 
 ## Key players
 

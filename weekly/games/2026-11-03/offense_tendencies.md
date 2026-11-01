@@ -24,18 +24,6 @@ Main play types, pace, first options, sets after timeouts and out-of-bounds play
 
 ![PAOK play types per player](06_players_playtype_mix.png)
 
-## Shot selection
-
-Where the shots come from, shot clock, who takes them.
-
-{{ pending }}
-
-{{ figure: 04_scoring_sources }}
-
-{{ figure: 05_shooting }}
-
-{{ figure: 06_hot_spots }}
-
 ## Assists
 
 {{ assists }}
