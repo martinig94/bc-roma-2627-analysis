@@ -116,8 +116,9 @@ def test_analysis_layout_changes_from_the_cutoff_day() -> None:
 
 
 def test_offense_and_individual_pages_receive_the_moved_sections() -> None:
-    """Check assists, turnovers, shot charts and lineups are on the subpages."""
+    """Check assists, turnovers and shot charts are on the subpages."""
     off = pages.default_text("offense_tendencies", A, [])
     ind = pages.default_text("individual_tendencies", A, [])
     assert "{{ assists }}" in off and "{{ turnovers }}" in off
-    assert "{{ shot_charts }}" in ind and "## Lineups" in ind
+    assert "{{ shot_charts }}" in ind and "## Lineups" not in ind
+    assert ind.index("{{ shot_charts }}") < ind.index("## Energy") if "## Energy" in ind else True

@@ -22,7 +22,7 @@ and linked from the end of the analysis ("More analysis"). They are yours, never
 
 | subpage | file |
 |---|---|
-| individual tendencies (triangle plots of the shot attempts, energy indices, shot charts by player, lineups, rotation by player) | `weekly/games/<date>/individual_tendencies.md` |
+| individual tendencies (triangle plots of the shot attempts, energy indices, shot charts by player, rotation by player) | `weekly/games/<date>/individual_tendencies.md` |
 | defense tendencies (scheme, what the team allows) | `weekly/games/<date>/defense_tendencies.md` |
 | offense tendencies (play types, shot selection, assists, turnovers) | `weekly/games/<date>/offense_tendencies.md` |
 

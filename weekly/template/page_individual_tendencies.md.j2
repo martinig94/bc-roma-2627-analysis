@@ -29,14 +29,7 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 
 [[ figure: 12_triangles_players_low_attempts ]]
 {% endif %}
-{% if '15_energy_indices.png' in files %}## Energy: rim activity and pace
-
-Two scores per player, built from box score and play-by-play only, shown as league percentiles (0.5 = league median; shrunk towards it for players with few minutes). ==Rim activity==: offensive rebounds, blocks, dunks and fouls drawn per 40 minutes. ==High pace==: drive finishes, fast-break shots and assists, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. Players are sorted by minutes played.
-
-[[ figure: 15_energy_indices ]]
-
-[[ pending ]]
-{% endif %}## Shot charts by player
+## Shot charts by player
 
 [[ shot_charts ]]
 {% for f in files|sort if f.startswith('05_player_') and f.endswith('_shot_profile.png') %}
@@ -44,15 +37,14 @@ Two scores per player, built from box score and play-by-play only, shown as leag
 {% set deep = '05c_player_' ~ f|replace('05_player_', '')|replace('_shot_profile.png', '') ~ '_shot_types.png' %}{% if deep in files %}
 [[ figure: {{ deep[:-4] }} ]]
 {% endif %}{% endfor %}
-## Lineups
+{% if '15_energy_indices.png' in files %}## Energy: rim activity and pace
+
+Two scores per player, built from box score and play-by-play only, shown as league percentiles (0.5 = league median; shrunk towards it for players with few minutes). ==Rim activity==: offensive rebounds, blocks, dunks and fouls drawn per 40 minutes. ==High pace==: drive finishes, fast-break shots and assists, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. Players are sorted by minutes played.
+
+[[ figure: 15_energy_indices ]]
 
 [[ pending ]]
-{% for f in ['07_lineups_usage_vs_ppp', '08_lineups_offense_vs_defense', '09_lineups_style_profile'] %}{% if f ~ '.png' in files %}
-[[ figure: {{ f }} ]]
-{% endif %}{% endfor %}{% if has_lineups %}
-[[ lineups ]]
-{% endif %}
-{% set rot = [] %}{% for f in files|sort if f.startswith('14_player_rotation_') %}{% set _ = rot.append(f) %}{% endfor %}{% if rot %}## Rotation by player
+{% endif %}{% set rot = [] %}{% for f in files|sort if f.startswith('14_player_rotation_') %}{% set _ = rot.append(f) %}{% endfor %}{% if rot %}## Rotation by player
 
 When each player is on the court in each quarter, in the last 5 games of the competition: one bar per quarter, the clock runs from 10:00 down to 0:00, dark green = on the court in every game at that moment, white = in none.
 {% for f in rot %}
