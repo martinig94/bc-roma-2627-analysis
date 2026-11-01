@@ -75,8 +75,8 @@ When each player is on the court in each quarter, in the last 5 games of the com
 ## Players to watch
 
 - **Ross.** The ball stops with him: P&R ball handler 42 possessions at 1.14 PPP, 13 pull-up threes off the screen (5 made), 11/17 at the basket, fouls drawn at the highest rate of the roster. He takes 15 of his 22 threes from the top of the key.
-- **Jones in transition and on the offensive boards.** 19 transition possessions at 1.32 PPP (the rest of the roster combined is below 0.8 on 64 possessions); 12 spot-up three attempts in the corner (5 made).
+- **Jones in transition and on the offensive boards.** 19 transition possessions at 1.32 PPP (25 points), against 0.82 PPP for the rest of the roster combined (49 possessions, 40 points); 12 corner-three attempts (5 made) and 9 blocks and 9 steals.
 - **Galloway and McDermott.** 39 and 31 three-point attempts at 33.3% and 25.8%; McDermott's transition possessions score 0.17 PPP (12), Galloway's 0.63 (16).
-- **Candussi and Brajkovic.** Roll-man and cut finishers (Candussi 18 roll-man possessions at 0.72 PPP, Brajkovic 10 at 1.30). Candussi's lineups defend best (0.714 allowed with DeAngeli and Ross).
+- **Candussi and Brajkovic.** Roll-man and cut finishers (Candussi 18 roll-man possessions at 0.72 PPP, Brajkovic 10 at 1.30). The five of Candussi, DeAngeli, Ross, McDermott and Galloway allowed 0.714 PPP in 35 defensive possessions (small sample).
 - **Ruzzier.** Plays 21' off the bench with the lowest efficiency of the regulars (0.838 PPP, 37.5% eFG; 17 assists, 5 turnovers), but is the second ball handler: 12 P&R ball-handler possessions at 1.17 PPP.
 - Sample warning: apart from Ross, Jones and Galloway nobody has used more than 60 possessions in five games.
