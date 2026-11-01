@@ -288,9 +288,10 @@ def build_opponents(tg: pd.DataFrame, today: date) -> list[dict]:
             files += copy_images(pages.GAMES / a["date"], dest=dest)       # your own images, next to the page file
             meta, body = pages.load("analysis", a["date"], a, files)       # weekly/games/<date>/analysis.md (or the default)
             state, game_day = pages.state(meta, body), a["date"]
-            page_md = pages.expand(body, "analysis", a, files, AUTHOR)
             subpages = build_subpages(a, files)
-            if subpages:
+            a["subpages"] = [{"name": sp["name"], "title": sp["title"]} for sp in subpages]     # for the {{ more_analysis }} block
+            page_md = pages.expand(body, "analysis", a, files, AUTHOR)
+            if subpages and not re.search(r"\{\{\s*more_analysis\s*\}\}", pages.SKIP.sub("", body)):      # old layout: the links close the page
                 page_md += "\n\n## More analysis\n\n" + "\n".join(f"* [{sp['title']}]({sp['name']}.html)" for sp in subpages) + "\n"
             title, rnd = meta.get("title") or f"{a['home_team']} vs {a['away_team']}", a["round"]
             link, edit_file = a["team_link"], pages.edit_path("analysis", a["date"])

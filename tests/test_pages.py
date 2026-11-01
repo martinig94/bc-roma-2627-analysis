@@ -103,3 +103,21 @@ def test_eurocup_analysis_names_the_competition_in_its_heading() -> None:
     """Check eurocup analysis names the competition in its heading."""
     text = pages.new_page("analysis", {**A, "competition": "EuroCup"}, [])
     assert "## EuroCup so far: results and standings" in text
+
+
+def test_analysis_layout_changes_from_the_cutoff_day() -> None:
+    """Check games before 2026-11-08 keep the old analysis layout and later ones get the restructured one."""
+    old = pages.new_page("analysis", A, [])
+    new = pages.new_page("analysis", {**A, "date": pages.LAYOUT_V2_FROM}, [])
+    for section in ("## Assists", "## Turnovers", "## Lineups", "## Defensive attitude", "## Scoring sources"):
+        assert section in old and section not in new
+    assert "{{ more_analysis }}" in new and "{{ more_analysis }}" not in pages.split_front(old)[1].split("-->")[-1]
+    assert new.index("{{ more_analysis }}") < new.index("## Key points")
+
+
+def test_offense_and_individual_pages_receive_the_moved_sections() -> None:
+    """Check assists, turnovers, shot charts and lineups are on the subpages."""
+    off = pages.default_text("offense_tendencies", A, [])
+    ind = pages.default_text("individual_tendencies", A, [])
+    assert "{{ assists }}" in off and "{{ turnovers }}" in off
+    assert "{{ shot_charts }}" in ind and "## Lineups" in ind
