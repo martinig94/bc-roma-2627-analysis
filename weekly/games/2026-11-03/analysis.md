@@ -32,11 +32,11 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 Based on the data only (EuroCup, 5 games each; Synergy pull of 28 Oct 2026 and leaderboards of 1 Nov 2026 for play types, shots and lineups; EuroCup box scores for the rest). PAOK's 11 games in all competitions are not in the numbers: only the 5 EuroCup games are.
 
-- PAOK is 3-2 and 2nd of 8 (level on points with Manresa, Lietkabelis and Ulm; Bahcesehir leads at 4-1); BC Roma is 2-3, 7th. PAOK won at home against Manresa (93-78) and Ulm (87-78) and at Bosna (75-72), and lost at Lietkabelis (86-95) and at Bahcesehir (81-84).
+- PAOK is 3-2 and 2nd of 8 (level on points with Manresa, Lietkabelis and Ulm; Bahcesehir leads at 4-1); BC Roma is 2-3, 7th.
 - PAOK is better at both ends by the numbers: offensive rating 112.4 against 105.3, defensive rating 107.6 against 111.3, net rating +4.7 against -6.0.
-- Synergy, 32 teams: PAOK's offense scores 1.000 PPP (8th) with the 7th-best eFG% (55.8%) and the 2nd-best Score% (47.6%); its defense allows 0.953 PPP (15th) but the 29th-best eFG% (56.1% allowed), offset by 18.0% turnovers forced (5th). BC Roma: 0.905 PPP (26th) on offense, 0.951 allowed (14th), and 18.2% turnovers (4th highest).
+- PAOK's offense scores 1.000 PPP (8th) with the 7th-best eFG% (55.8%) and the 2nd-best Score% (47.6%); its defense allows 0.953 PPP (15th) but the 29th-best eFG% (56.1% allowed). BC Roma: 0.905 PPP (26th) on offense, 0.951 allowed (14th).
 - Points come from the paint: 141 of PAOK's 302 attempts (47%) at 70.9%; threes are 43% of the attempts at 30.0%. Osman scores 21.6 a game and takes 10.4 free throws a game (52 in five games, 40 made).
-- Efficient play types on offense: spot-ups (22% of possessions, 1.106 PPP, 6th) and transition (15%, 1.333, 8th, 70.5% eFG). The P&R ball handler, also 22% of the possessions, is not (0.785 PPP, 25th, 22.6% turnovers).
+- Efficient play types on offense: spot-ups (22% of possessions, 1.106 PPP, 6th) and transition (15%, 1.333, 8th, 70.5% eFG). The P&R ball handler, also 22% of the possessions, is not very efficient (0.785 PPP, 25th, 22.6% turnovers).
 - On defense PAOK is best against the roll man (0.591 PPP, 1st) and post-ups (0.516, 2nd) and weakest against isolations (1.231, 32nd), the P&R ball handler (1.033, 30th), spot-ups (1.027, 29th) and handoffs (1.846, 27th).
 - No fixed starting five: only Osman and Gray started all five games. The bench scores 38.0 of PAOK's 84.4 points a game; Foster and Tyree, who came off the bench in four games each, score 14.0 and 15.6 a game.
 
@@ -60,7 +60,7 @@ Based on the data only (EuroCup, 5 games each; Synergy pull of 28 Oct 2026 and l
 
 - Offense: PAOK shoots 55.8% eFG (7th of 32) and scores on 47.6% of its possessions (2nd); BC Roma 50.5% (24th) and 41.3% (25th). BC Roma loses the ball on 18.2% of possessions (4th highest), PAOK on 15.4%.
 - Defense: BC Roma allows 52.3% eFG (13th), PAOK 56.1% (29th); PAOK forces turnovers on 18.0% of possessions (5th highest), BC Roma on 14.8% (20th highest).
-- Pace: PAOK plays slower, 75.4 possessions per 40' against 79.2 for BC Roma (84.4 and 91.0 possessions a game in Synergy's count).
+- Pace: PAOK plays slower, 84.4 and 91.0 possessions a game in Synergy's count.
 - Rebounds: BC Roma takes more offensive rebounds (34.1% of the available, 12.6 a game; PAOK 29.8%, 9.6) and gets fewer defensive ones (65.5% against 71.7%).
 - Free throws: PAOK attempts more (FT rate 38.1 against 33.0) and shoots worse (73.9% against 80.4%).
 
@@ -123,6 +123,8 @@ Possessions used and efficiency (Synergy, EuroCup games):
 
 {{ figure: 10_major_factors }}
 
+- Osman is a fundamental factor in many aspects of the game (Points, DR, Steals, FD but also TO)
+
 ## What to expect
 
 From the numbers only (5 EuroCup games each, so tendencies, not predictions):
@@ -150,16 +152,13 @@ From the numbers only (5 EuroCup games each, so tendencies, not predictions):
 
 - Data caveat: the Synergy pull is hand-extracted from the web app and the samples are small (5 games); read the figures as descriptive. See `data/synergy/paok_2026-11-03/README.md`.
 - PAOK's other games (11 in all competitions, 6 outside the EuroCup) are not in the numbers; ranks come from the 1 Nov leaderboards (32 EuroCup teams, 5 games each).
-- Calathes played four of the five EuroCup games: check his availability.
 
 ## Clips suggested
 
-Game clock from the Synergy shot list (time remaining in the period):
+**Osman in transition** (10 made, mostly at the rim). 
 
-**Osman in transition** (10 made, mostly at the rim; examples): at Bahcesehir Q3 0:10; vs Ulm Q1 3:51 and Q4 5:20; at Lietkabelis Q1 6:38 and Q3 8:32.
+**Foster in transition at the rim**.
 
-**Foster in transition at the rim**: at Bahcesehir Q2 6:58, Q2 2:54, Q3 4:05 and Q4 1:30.
+**Tyree transition threes**.  
 
-**Tyree transition threes** vs Manresa: Q4 6:19 (guarded) and Q4 0:01 (open); Tyree at the rim vs Ulm Q4 6:36 and Q4 3:38.
-
-**Alexander roll-man finishes** (7 attempts, 7 made): at Bahcesehir Q1 6:38, Q4 4:38 and Q4 3:17; at Bosna Q1 9:59 and Q1 4:35; vs Manresa Q1 3:36 and Q2 8:35.
+**Alexander roll-man finishes** (7 attempts, 7 made).
