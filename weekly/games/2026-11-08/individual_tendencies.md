@@ -35,19 +35,6 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 
 {{ figure: 12_triangles_players_low_attempts }}
 
-## Energy: rim activity and pace
-
-Two scores per player, built from box score and play-by-play only, shown as league percentiles (0.5 = league median; shrunk towards it for players with few minutes). ==Rim activity==: offensive rebounds, blocks, dunks and fouls drawn per 40 minutes. ==High pace==: drive finishes, fast-break shots and assists, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. LBA, 5 games, players sorted by minutes played; the reference is every LBA player with at least 40 minutes.
-
-{{ figure: 15_energy_indices }}
-
-- **Ross: pace.** 1.00 (the top of the reference), rim activity 0.77: 37 fouls drawn in 132' (11.2 per 40'), 24 drive finishes and 12 fast-break shots plus assists; only 3 offensive rebounds and no block.
-- **Jones: high on both** (rim 0.92, pace 0.91): 10 offensive rebounds, 9 blocks, 2 dunks, 9 steals and 11 drive finishes in 139'.
-- **Brajkovic: rim activity 0.87** (3 dunks, 6 offensive rebounds, 10 fouls drawn in 66', four games), pace 0.75; **DeAngeli** is the opposite on the other axis (rim 0.63, pace 0.05: 2 drive finishes in 119').
-- **McDermott** is mostly a pace player (0.61; 18 fouls drawn in 153') with little rim activity (0.36). **Galloway** is close to the median on both (0.53, 0.41): 14 offensive rebounds but no dunk and 9 drive finishes in 155'.
-- **Ruzzier** has the lowest rim activity of the regulars (0.16, no dunk and no block in 107') and an average pace (0.49; 11 drive finishes).
-- **Candussi** is average to below (0.49, 0.38): 7 offensive rebounds, 2 drive finishes.
-
 ## Shot charts by player
 
 {{ shot_charts }}
@@ -71,24 +58,18 @@ Shot profile (made/attempted by location and play type) and, where a player has 
 ![Canka shot profile](05_player_canka_shot_profile.png)
 ![Paiano shot profile](05_player_paiano_shot_profile.png)
 
-## Lineups
+## Energy: rim activity and pace
 
-![Lineups: usage vs PPP](07_lineups_usage_vs_ppp.png)
+Two scores per player, built from box score and play-by-play only, shown as league percentiles (0.5 = league median; shrunk towards it for players with few minutes). ==Rim activity==: offensive rebounds, blocks, dunks and fouls drawn per 40 minutes. ==High pace==: drive finishes, fast-break shots and assists, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. LBA, 5 games, players sorted by minutes played; the reference is every LBA player with at least 40 minutes.
 
-Trieste's rotation is concentrated: McDermott is in all six of the most-used lineups, Galloway in five and Jones in three.
+{{ figure: 15_energy_indices }}
 
-- Ross, McDermott, Galloway, Jones, Brajkovic (the starters): 80 possessions, 0.80 PPP scored (47.4% eFG), 0.867 allowed in 83 defensive possessions, TO% 16.3.
-- Candussi, Ross, McDermott, Galloway, Jones (48): 0.917 scored, 0.915 allowed.
-- Candussi, DeAngeli, Ross, McDermott, Galloway (30): 1.067 scored, 0.714 allowed; the best of the frequent lineups at both ends.
-- Ruzzier, DeAngeli, McDermott, Galloway, Jones (28): 0.679 scored, 0.96 allowed. The two bench-heavy lineups with Ruzzier and Candussi (24 possessions) allow 1.231.
-
-![Lineups: offense vs defense](08_lineups_offense_vs_defense.png)
-
-The starting five scores below Trieste's average (0.80 against 0.987) and defends better than it (0.867 against 0.957).
-
-![Lineups: style profile](09_lineups_style_profile.png)
-
-{{ lineups }}
+- **Ross: pace.** 1.00 (the top of the reference), rim activity 0.77: 37 fouls drawn in 132' (11.2 per 40'), 24 drive finishes and 12 fast-break shots plus assists; only 3 offensive rebounds and no block.
+- **Jones: high on both** (rim 0.92, pace 0.91): 10 offensive rebounds, 9 blocks, 2 dunks, 9 steals and 11 drive finishes in 139'.
+- **Brajkovic: rim activity 0.87** (3 dunks, 6 offensive rebounds, 10 fouls drawn in 66', four games), pace 0.75; **DeAngeli** is the opposite on the other axis (rim 0.63, pace 0.05: 2 drive finishes in 119').
+- **McDermott** is mostly a pace player (0.61; 18 fouls drawn in 153') with little rim activity (0.36). **Galloway** is close to the median on both (0.53, 0.41): 14 offensive rebounds but no dunk and 9 drive finishes in 155'.
+- **Ruzzier** has the lowest rim activity of the regulars (0.16, no dunk and no block in 107') and an average pace (0.49; 11 drive finishes).
+- **Candussi** is average to below (0.49, 0.38): 7 offensive rebounds, 2 drive finishes.
 
 ## Rotation by player
 

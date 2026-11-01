@@ -1,6 +1,6 @@
 <!--
 HOW TO EDIT THIS PAGE (this comment is not shown on the site)
-- This file is yours: it is never overwritten. It is linked at the end of the opponent analysis of the same game (analysis.md).
+- This file is yours: it is never overwritten. It is linked at the top of the opponent analysis of the same game (analysis.md).
 - {{ pending }} is a grey box saying "This section will be filled when the game is reviewed". Replace it with your text.
 - Your own plots and images: put the file in this folder (weekly/games/<date>/) and write ![caption](file.png).
 - Highlight with ==text==.
@@ -28,6 +28,28 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 ### Lower-volume players
 
 {{ figure: 12_triangles_players_low_attempts }}
+
+## Shot charts by player
+
+{{ shot_charts }}
+
+![Roster percentile radars](05b_player_radars_roster_percentile.png)
+![Alexander shot profile](05_player_alexander_shot_profile.png)
+![Bazinas shot profile](05_player_bazinas_shot_profile.png)
+![Calathes shot profile](05_player_calathes_shot_profile.png)
+![Calathes shot types](05c_player_calathes_shot_types.png)
+![Chougkaz shot profile](05_player_chougkaz_shot_profile.png)
+![Foster shot profile](05_player_foster_shot_profile.png)
+![Foster shot types](05c_player_foster_shot_types.png)
+![Gray shot profile](05_player_gray_shot_profile.png)
+![Hudgins shot profile](05_player_hudgins_shot_profile.png)
+![Mitrou-long shot profile](05_player_mitrou-long_shot_profile.png)
+![Moore shot profile](05_player_moore_shot_profile.png)
+![Motiejunas shot profile](05_player_motiejunas_shot_profile.png)
+![Osman shot profile](05_player_osman_shot_profile.png)
+![Osman shot types](05c_player_osman_shot_types.png)
+![Tyree shot profile](05_player_tyree_shot_profile.png)
+![Tyree shot types](05c_player_tyree_shot_types.png)
 
 ## Energy: rim activity and pace
 

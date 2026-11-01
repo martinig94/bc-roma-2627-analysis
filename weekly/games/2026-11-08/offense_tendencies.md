@@ -28,20 +28,6 @@ Main play types, pace, first options, sets after timeouts and out-of-bounds play
 
 - Ross (P&R ball handler 42, isolation 10, spot-up 9), Ruzzier (P&R ball handler 12) and Galloway (12) are the ball handlers. Jones and McDermott are the spot-up and transition players (23 and 19 spot-up possessions); Candussi and Brajkovic finish the roll man (18 and 10 possessions) and cut (8 and 5).
 
-## Shot selection
-
-Where the shots come from, shot clock, who takes them.
-
-- Trieste takes 340 shots in five games, 166 of them threes (49%; BC Roma 46%), at 33.1% from three and 52.9% from two. By zone (Synergy): paint 153 attempts at 56.2%, mid-range 21 at 28.6%, corner threes 57 at 42.1%, wing threes 56 at 33.9%, top threes 53 at 22.6%.
-- The corner is the productive three (24/57); the top of the key is the weak one (12/53). Ross takes 15 of his 22 threes from the top (5 made), Galloway 14 of his 39.
-- Trieste goes to the line on 5% of spot-up possessions and 14% on P&R ball handler: its free throws come mostly from Ross (30 attempts of the team's 131, 27 made), Candussi (18) and Brajkovic (16).
-
-{{ figure: 04_scoring_sources }}
-
-{{ figure: 05_shooting }}
-
-{{ figure: 06_hot_spots }}
-
 ## Assists
 
 {{ assists }}
