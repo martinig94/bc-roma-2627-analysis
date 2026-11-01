@@ -8,7 +8,7 @@ Each game has two pages you can write on. Work only in `weekly/games/<date>/`:
 | BC Roma before the game | `weekly/games/<date>/snapshot.md` |
 
 Example: Varese vs BC Roma is `weekly/games/2026-10-24/analysis.md`.
-Every analysis has the same sections in the same order. From the Trieste game (2026-11-08) on the main page is the short one:
+Every analysis has the same sections in the same order. From the PAOK game (2026-11-03) on the main page is the short one:
 Key points, results and standings, the two teams compared, roster, starting five and bench, key players (the first three plots,
 the bullets and the other stats), what to expect (with the metrics to check), clips suggested. The three links to the deeper pages
 ("More analysis") are at the top, under the title. Earlier analyses keep their longer layout (scoring sources, assists, turnovers,

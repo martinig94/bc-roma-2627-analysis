@@ -106,7 +106,7 @@ def test_eurocup_analysis_names_the_competition_in_its_heading() -> None:
 
 
 def test_analysis_layout_changes_from_the_cutoff_day() -> None:
-    """Check games before 2026-11-08 keep the old analysis layout and later ones get the restructured one."""
+    """Check games before 2026-11-03 keep the old analysis layout and later ones get the restructured one."""
     old = pages.new_page("analysis", A, [])
     new = pages.new_page("analysis", {**A, "date": pages.LAYOUT_V2_FROM}, [])
     for section in ("## Assists", "## Turnovers", "## Lineups", "## Defensive attitude", "## Scoring sources"):

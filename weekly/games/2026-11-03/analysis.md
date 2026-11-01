@@ -18,13 +18,15 @@ HOW TO EDIT THIS PAGE (this comment is not shown on the site)
 Blocks of this page: {{ header }} {{ standings }} {{ comparison }} {{ roster }} {{ assists }} {{ turnovers }} {{ lineups }} {{ pending }} and
 {{ figure: name }} for any generated image (01_results_timeline, 02_starters_bench, 03_minutes, 04_scoring_sources, 05_shooting,
 06_hot_spots, {{ shot_charts }} (06b: one chart per player), 07_key_players, 08_shot_distribution, 09_basic_stats, 10_major_factors, 11_starting_fives, 13_rotation_by_minute: who is on the court at each minute, with the next options).
-The three pages that go deeper (individual_tendencies.md, defense_tendencies.md, offense_tendencies.md, same folder) are linked at the end of this page when they exist.
+The three pages that go deeper (individual_tendencies.md, defense_tendencies.md, offense_tendencies.md, same folder) are linked at the top of this page ({{ more_analysis }}) when they exist: shot charts and lineups are on the individual page; play types, shot selection, assists and turnovers on the offense page; what the team allows on the defense page.
 THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, same order); only the content changes.
 -->
 
 # Paok Thessaloniki vs BC Roma
 
 {{ header }}
+
+{{ more_analysis }}
 
 ## Key points
 
@@ -66,25 +68,6 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ figure: 13_rotation_by_minute }}
 
-## Scoring sources, tendencies and shooting maps
-
-{{ pending }}
-
-{{ figure: 04_scoring_sources }}
-
-{{ figure: 05_shooting }}
-
-{{ figure: 06_hot_spots }}
-
-### Shot charts by player
-
-{{ shot_charts }}
-
-![PAOK play types](02_opponent_playtypes.png)
-![PAOK play types and PPP](03_playtype_ppp_ref_vs_opp.png)
-
-![PAOK play types per player](06_players_playtype_mix.png)
-
 ## Key players
 
 ### Shooting
@@ -93,49 +76,13 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ figure: 07_key_players }}
 
-{{ figure: 08_shot_distribution }}
-
 ![Players volume and efficiency](04_players_volume_efficiency.png)
-![Roster percentile radars](05b_player_radars_roster_percentile.png)
 
-![Osman shot profile](05_player_osman_shot_profile.png)
-![Osman shot types](05c_player_osman_shot_types.png)
-![Gray shot profile](05_player_gray_shot_profile.png)
-![Foster shot profile](05_player_foster_shot_profile.png)
-![Foster shot types](05c_player_foster_shot_types.png)
-![Tyree shot profile](05_player_tyree_shot_profile.png)
-![Tyree shot types](05c_player_tyree_shot_types.png)
-![Alexander shot profile](05_player_alexander_shot_profile.png)
-![Calathes shot profile](05_player_calathes_shot_profile.png)
-![Calathes shot types](05c_player_calathes_shot_types.png)
-![Moore shot profile](05_player_moore_shot_profile.png)
-![Mitrou-Long shot profile](05_player_mitrou-long_shot_profile.png)
-![Hudgins shot profile](05_player_hudgins_shot_profile.png)
-![Bazinas shot profile](05_player_bazinas_shot_profile.png)
-![Chougkaz shot profile](05_player_chougkaz_shot_profile.png)
-![Motiejunas shot profile](05_player_motiejunas_shot_profile.png)
+{{ figure: 08_shot_distribution }}
 
 ### Other stats
 
 {{ figure: 10_major_factors }}
-
-## Assists
-
-{{ assists }}
-
-## Turnovers
-
-{{ turnovers }}
-
-## Lineups
-
-{{ pending }}
-
-{{ lineups }}
-
-## Defensive attitude
-
-{{ pending }}
 
 ## What to expect
 
@@ -145,10 +92,10 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 {{ pending }}
 
-## Clips suggested
+### Other checks
 
 {{ pending }}
 
-## Other suggested checks
+## Clips suggested
 
 {{ pending }}
