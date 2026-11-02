@@ -13,6 +13,7 @@ Samples are tiny early in the season: read the shares as tendencies.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 import unicodedata
 
@@ -136,17 +137,19 @@ def load_positions(data: Path, team: str, competition: str, players: list[str]) 
 def assign_lanes(share: pd.DataFrame, positions: dict[str, str] | None = None) -> list[list[tuple[str, float]]]:
     """For each minute, five (player, share) pairs in lane order.
 
-    The five players with the highest share are picked; anyone who was in the top five the minute before
-    keeps his lane, newcomers take the free lanes (highest share first), so a name change in a lane is a switch.
-    At the first minute of every quarter the five are instead ordered by position (PG, SG, SF, PF, C) when `positions` is given.
+    The five players with the highest share are picked. With `positions`, every minute is ordered by position
+    (PG, SG, SF, PF, C; equal positions by share), so a bar is a role. Without it, anyone who was in the top five
+    the minute before keeps his lane and newcomers take the free lanes, so a name change in a lane is a switch.
     """
     tie_break = share.sum(axis=1)   # equal shares: the player with more minutes overall goes first
     prev: list[str | None] = [None] * LANES
     out = []
-    for i, m in enumerate(share.columns):
+    for m in share.columns:
         top = share[m].to_frame("s").assign(t=tie_break).sort_values(["s", "t"], ascending=False).head(LANES).index.tolist()
-        if positions is not None and i % MINUTES_PER_QUARTER == 0:
-            prev = sorted(top, key=lambda p: (position_rank(positions.get(p)), top.index(p)))
+        if positions is not None:
+            lanes = sorted(top, key=lambda p: (position_rank(positions.get(p)), top.index(p)))
+            out.append([(p, float(share.loc[p, m])) for p in lanes])
+            continue
         lanes: list[str | None] = [p if p in top else None for p in prev]
         for p in (p for p in top if p not in lanes):
             lanes[lanes.index(None)] = p
@@ -242,11 +245,110 @@ def fig_rotation(share: pd.DataFrame, avg: pd.DataFrame, n_games: int, team: str
 
     fig.suptitle(f"{team}: rotation by minute, {league} {stamp}  |  {n_games} games", x=0.01, ha="left", y=0.985, **SUP_KW)
     fig.text(0.01, 0.945, "Name = player most often on the court at that minute across the games; colour = share of games on court "
-             "(yellow low, dark green high); a new name in a bar = substitution;\n"
-             "positions (PG, SG, SF, PF, C) come from the roster role, so they are approximate, and order the bars at each quarter start;\n"
+             "(yellow low, dark green high);\n"
+             "bars are ordered by position (PG, SG, SF, PF, C) at every minute; positions come from the roster role, so they are approximate;\n"
              "small rows below a quarter = next most frequent players at that minute.", fontsize=8.5, color=TEXT2, va="center")
     path = out / (filename or f"rotation_{team.replace(' ', '_')}_{league.replace(' ', '')}.png")
     save_fig(fig, path); plt.close(fig)
+    return path
+
+
+HTML_TEMPLATE = """<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>__TITLE__</title>
+<style>
+body{font:13px system-ui,sans-serif;color:#1a1a2e;margin:16px 24px;background:#fff}
+h1{font-size:20px;margin:0 0 4px}p.note{color:#555a6e;margin:0 0 14px;max-width:900px}
+.q{display:grid;grid-template-columns:36px repeat(10,1fr);gap:2px;margin-bottom:18px}
+.ql{font-weight:700;font-size:15px;color:#555a6e;display:flex;align-items:center}
+.cell{border-radius:3px;padding:5px 2px;text-align:center;cursor:default;line-height:1.25;min-width:0;overflow:hidden}
+.cell b{display:block;font-size:12px;white-space:nowrap}.cell span{font-size:10px;opacity:.9}
+.cell.dim{opacity:.25}.cell.same{outline:3px solid #1a1a2e;outline-offset:-2px}
+.mh{grid-column:2/-1;display:grid;grid-template-columns:repeat(10,1fr);color:#777;font-size:10px;text-align:center}
+#tip{position:fixed;display:none;background:#fff;border:1px solid #c9ccd6;border-radius:6px;padding:8px 10px;
+box-shadow:0 4px 16px rgba(0,0,0,.2);pointer-events:none;z-index:9;min-width:230px;max-width:290px}
+#tip h3{margin:0 0 2px;font-size:13px}#tip .sub{color:#777;font-size:11px;margin-bottom:6px}
+#tip table{border-collapse:collapse;width:100%}#tip td{padding:2px 4px;font-size:12px}
+#tip td.p{color:#555a6e;width:46px}#tip td.s{text-align:right;width:44px;font-variant-numeric:tabular-nums}
+#tip tr.same td{font-weight:700}#tip .bar{display:inline-block;height:8px;border-radius:2px;vertical-align:middle}
+.legend{display:flex;align-items:center;gap:6px;margin:0 0 14px;color:#555a6e;font-size:11px}
+.legend i{display:inline-block;width:160px;height:8px;background:linear-gradient(90deg,__GRADIENT__)}
+</style></head><body>
+<h1>__TITLE__</h1>
+<p class="note">Rows = positions (PG, SG, SF, PF, C) at every minute; colour = share of games on court. Hover a player: the
+tooltip lists the other options at that minute, same role first (then neighbouring roles), with their share of games on court.
+Positions come from the roster role, so they are approximate.</p>
+<div class="legend">20% or less <i></i> 100%</div><div id="quarters"></div><div id="tip"></div>
+<script>
+const D=__DATA__;
+const quarters=document.getElementById('quarters'),tip=document.getElementById('tip');
+const colour=v=>{const t=Math.max(0,Math.min(1,(v-D.low)/(1-D.low))),n=D.stops.length-1,i=Math.min(n-1,Math.floor(t*n)),f=t*n-i,
+a=D.stops[i],b=D.stops[i+1];return'rgb('+a.map((x,k)=>Math.round(x+(b[k]-x)*f)).join(',')+')'};
+const dist=(a,b)=>{if(!a||!b)return 9;return Math.min(...a.map(x=>Math.min(...b.map(y=>Math.abs(x-y)))))};
+const idx=l=>l?l.split('/').map(p=>D.positions.indexOf(p)):null;
+D.quarters.forEach((q,qi)=>{
+ const grid=document.createElement('div');grid.className='q';
+ const lab=document.createElement('div');lab.className='ql';lab.textContent='Q'+(qi+1);
+ const head=document.createElement('div');head.className='mh';
+ for(let k=0;k<10;k++){const s=document.createElement('span');s.textContent=k+'-'+(k+1);head.appendChild(s)}
+ grid.append(document.createElement('div'),head);
+ for(let lane=0;lane<5;lane++){
+  const l=document.createElement('div');l.className='ql';l.style.fontSize='11px';grid.appendChild(l);
+  q.forEach((minute,k)=>{
+   const [name,val]=minute.lanes[lane],c=document.createElement('div');c.className='cell';c.dataset.p=name;
+   c.style.background=colour(val);c.style.color=val<D.darkBelow?'#1a1a2e':'#fff';
+   c.innerHTML='<b>'+name+'</b><span>'+Math.round(val*100)+'%'+(D.pos[name]?' · '+D.pos[name]:'')+'</span>';
+   c.onmousemove=e=>show(e,c,name,val,minute,qi*10+k);c.onmouseleave=hide;grid.appendChild(c)});
+ }
+ quarters.appendChild(grid)});
+function show(e,cell,name,val,minute,m){
+ const me=idx(D.pos[name]);
+ const alts=val>=0.995?[]:minute.alts.map(([p,s])=>({p,s,d:dist(me,idx(D.pos[p]))})).sort((a,b)=>a.d-b.d||b.s-a.s);
+ const rows=alts.map(a=>'<tr'+(a.d===0?' class="same"':'')+'><td>'+a.p+'</td><td class="p">'+(D.pos[a.p]||'')+'</td><td class="s">'+
+ Math.round(a.s*100)+'%</td><td><span class="bar" style="width:'+Math.round(a.s*60)+'px;background:'+colour(a.s)+'"></span></td></tr>').join('');
+ const qn=Math.floor(m/10)+1,mn=m%10;
+ tip.innerHTML='<h3>'+name+' '+(D.pos[name]||'')+' - '+Math.round(val*100)+'%</h3><div class="sub">Q'+qn+', minute '+mn+'-'+(mn+1)+
+ (rows?'. Alternatives, same role first:</div><table>'+rows+'</table>':'. On court in every game: no alternatives.</div>');
+ document.querySelectorAll('.cell').forEach(x=>x.classList.toggle('dim',x.dataset.p!==name));
+ tip.style.display='block';
+ const w=tip.offsetWidth,h=tip.offsetHeight;
+ tip.style.left=Math.min(e.clientX+14,innerWidth-w-8)+'px';tip.style.top=Math.min(e.clientY+14,innerHeight-h-8)+'px';}
+const fit=()=>{try{window.frameElement.style.height=document.documentElement.scrollHeight+'px'}catch(e){}};
+fit();addEventListener('resize',fit);
+function hide(){tip.style.display='none';document.querySelectorAll('.cell').forEach(x=>x.classList.remove('dim'))}
+</script></body></html>
+"""
+
+
+def html_rotation(share: pd.DataFrame, team: str, league: str, stamp: str, n_games: int, out: Path,
+                  positions: dict[str, str] | None = None, filename: str | None = None) -> Path:
+    """Save an interactive version of the rotation chart (standalone HTML, no external files) and return its path.
+
+    Hovering a player shows the other options at that minute: players not among the five, same role first, then
+    neighbouring roles, each with the share of games on court.
+
+    Args:
+        share: Output of `minute_presence`.
+        team: Team name, used in the title and file name.
+        league: League label for the title.
+        stamp: Period description for the title.
+        n_games: Games behind the shares.
+        out: Folder that receives the HTML.
+        positions: Surname -> position label from `load_positions`.
+        filename: HTML name; default `rotation_<team>_<league>.html`.
+    """
+    positions = positions or {}
+    lanes = assign_lanes(share, positions)
+    alts = next_options(share, lanes, len(share.index))
+    minutes = [{"lanes": l, "alts": a} for l, a in zip(lanes, alts)]
+    data = {"quarters": [minutes[q * MINUTES_PER_QUARTER:(q + 1) * MINUTES_PER_QUARTER] for q in range(QUARTERS)],
+            "pos": positions, "positions": POSITIONS, "low": SHARE_LOW, "darkBelow": DARK_TEXT_BELOW,
+            "stops": [[round(255 * c) for c in CMAP(t)[:3]] for t in np.linspace(0, 1, 4)]}
+    gradient = ",".join(f"rgb({','.join(map(str, s))})" for s in data["stops"])
+    title = f"{team}: rotation by minute, {league} {stamp} | {n_games} games"
+    html = (HTML_TEMPLATE.replace("__TITLE__", title).replace("__GRADIENT__", gradient)
+            .replace("__DATA__", json.dumps(data, ensure_ascii=False)))
+    path = out / (filename or f"rotation_{team.replace(' ', '_')}_{league.replace(' ', '')}.html")
+    path.write_text(html, encoding="utf-8")
     return path
 
 
@@ -306,6 +408,7 @@ def main() -> None:
             for i in range(a.options):
                 print("  next " + " | ".join(f"{(o[i][0] + ' ' + format(o[i][1], '.0%')) if len(o) > i else '':>10}" for o in nxt[q * MINUTES_PER_QUARTER:(q + 1) * MINUTES_PER_QUARTER]))
         print(fig_rotation(share, avg, n_games, team, league, stamp, out, a.options, positions))
+        print(html_rotation(share, team, league, stamp, n_games, out, positions))
 
 
 if __name__ == "__main__":
