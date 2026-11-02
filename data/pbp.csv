@@ -25581,3 +25581,1083 @@ game_id,seq,period,clock,elapsed_sec,score_home,score_away,team_id,team,home_clu
 25405,681,4,00:11,589,99,80,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Tiro libero segnato,,,,,,,,A,7,False,0,
 25405,682,4,00:11,589,99,81,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Tiro libero segnato,,,,,,,,A,7,False,0,681
 25405,683,4,00:00,600,99,81,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25403,103,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25403,104,1,10:00,0,0,0,1762,Maxima Roma,0,536,2,Miro,Bilan,Palla contesa,,,,,,,0,,,False,0,
+25403,105,1,09:49,11,0,0,1762,Maxima Roma,0,9375,17,Xavier,Moon,Palla persa,50,Passaggio sbagliato,,,32,27,0,A,9,False,0,
+25403,106,1,09:36,24,0,0,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,3 punti sbagliato,1,Tiro in sospensione,,,68,61,1,A,9,False,0,
+25403,107,1,09:36,24,0,0,1762,Maxima Roma,0,9375,17,Xavier,Moon,Rimbalzo difensivo,,,,,68,61,1,A,9,False,0,106
+25403,108,1,09:27,33,0,2,1762,Maxima Roma,0,5913,24,Carl,Wheatle,2 punti segnato,8,Da penetrazione,500,contropiede,8,56,0,A,3,True,0,
+25403,109,1,09:27,33,0,2,1762,Maxima Roma,0,9375,17,Xavier,Moon,Assist,,,500,contropiede,8,56,0,A,3,False,0,108
+25403,110,1,09:01,59,0,2,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,,,69,77,1,A,8,False,0,
+25403,111,1,09:01,59,0,2,1762,Maxima Roma,0,536,2,Miro,Bilan,Rimbalzo difensivo,,,,,69,77,1,A,8,False,0,110
+25403,112,1,08:48,72,0,2,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,2,Tiro in corsa,1005,stoppata,15,45,0,A,6,False,0,
+25403,113,1,08:48,72,0,2,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Stoppata,,,,,15,45,0,A,6,False,0,112
+25403,114,1,08:48,72,0,2,1762,Maxima Roma,0,9375,17,Xavier,Moon,Stoppata subita,,,,,15,45,0,A,6,False,0,112
+25403,115,1,08:48,72,0,2,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,15,45,0,A,6,False,0,112
+25403,116,1,08:39,81,0,2,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Palla persa,50,Passaggio sbagliato,,,70,34,1,A,9,False,0,
+25403,117,1,08:39,81,0,2,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Palla recuperata,,,,,70,34,1,A,9,False,0,116
+25403,118,1,08:33,87,0,4,1762,Maxima Roma,0,9374,3,Aaron,Holiday,2 punti segnato,7,Appoggio a canestro,,,9,53,0,A,3,True,0,
+25403,119,1,08:25,95,0,4,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,3 punti sbagliato,1,Tiro in sospensione,,,71,27,1,A,9,False,0,
+25403,120,1,08:25,95,0,4,1762,Maxima Roma,0,9375,17,Xavier,Moon,Rimbalzo difensivo,,,,,71,27,1,A,9,False,0,119
+25403,121,1,08:16,104,0,4,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Fallo commesso,103,tiro,,,14,62,1,D,6,False,0,
+25403,122,1,08:16,104,0,4,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Fallo Subito,,,,,14,62,1,D,6,False,0,121
+25403,123,1,07:59,121,0,4,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25403,124,1,07:59,121,0,5,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Tiro libero segnato,,,,,,,,A,7,False,0,123
+25403,125,1,07:54,126,0,5,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Fallo commesso,103,tiro,,,77,62,0,D,7,False,0,
+25403,126,1,07:54,126,0,5,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Fallo Subito,,,,,77,62,0,D,7,False,0,125
+25403,127,1,07:54,126,0,5,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25403,128,1,07:54,126,1,5,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Tiro libero segnato,,,,,,,,A,7,False,0,127
+25403,129,1,07:34,146,1,5,1762,Maxima Roma,0,9391,4,Hunter,Tyson,2 punti sbagliato,8,Da penetrazione,1003,tip-in appoggio canestro made,8,61,0,A,3,False,0,
+25403,130,1,07:34,146,1,5,1762,Maxima Roma,0,536,2,Miro,Bilan,Rimbalzo offensivo,,,,,8,61,0,A,3,False,0,129
+25403,131,1,07:34,146,1,7,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti segnato,7,Appoggio a canestro,,,8,61,0,A,3,True,0,
+25403,132,1,07:20,160,1,7,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,3 punti sbagliato,1,Tiro in sospensione,,,69,35,1,A,9,False,0,
+25403,133,1,07:20,160,1,7,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Rimbalzo difensivo,,,,,69,35,1,A,9,False,0,132
+25403,134,1,07:10,170,1,7,1762,Maxima Roma,0,9391,4,Hunter,Tyson,3 punti sbagliato,1,Tiro in sospensione,,,29,25,0,A,8,False,0,
+25403,135,1,07:10,170,1,7,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,29,25,0,A,8,False,0,134
+25403,136,1,06:55,185,1,7,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Fallo commesso,103,tiro,,,86,51,0,D,6,False,0,
+25403,137,1,06:55,185,1,7,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Fallo Subito,,,,,86,51,0,D,6,False,0,136
+25403,138,1,06:55,185,2,7,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,139,1,06:55,185,3,7,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Tiro libero segnato,,,,,,,,A,7,False,0,138
+25403,140,1,06:46,194,3,7,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Fallo commesso,100,personale,,,21,36,1,D,7,False,0,
+25403,141,1,06:46,194,3,7,1762,Maxima Roma,0,536,2,Miro,Bilan,Fallo Subito,,,,,21,36,1,D,7,False,0,140
+25403,142,1,06:37,203,3,9,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti segnato,8,Da penetrazione,,,9,52,0,A,3,True,0,
+25403,143,1,06:37,203,3,9,1762,Maxima Roma,0,9375,17,Xavier,Moon,Assist,,,,,9,52,0,A,3,False,0,142
+25403,144,1,06:13,227,6,9,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,3 punti segnato,1,Tiro in sospensione,,,74,82,1,A,8,False,0,
+25403,145,1,06:13,227,6,9,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Assist,,,,,74,82,1,A,8,False,0,144
+25403,146,1,05:52,248,6,9,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,8,Da penetrazione,1005,stoppata,11,51,0,A,6,False,0,
+25403,147,1,05:52,248,6,9,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Stoppata,,,,,11,51,0,A,6,False,0,146
+25403,148,1,05:52,248,6,9,1762,Maxima Roma,0,9375,17,Xavier,Moon,Stoppata subita,,,,,11,51,0,A,6,False,0,146
+25403,149,1,05:52,248,6,9,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Rimbalzo difensivo,,,,,11,51,0,A,6,False,0,146
+25403,150,1,05:47,253,6,9,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Palla persa,51,Palleggio,,,88,57,1,A,6,False,0,
+25403,151,1,05:47,253,6,9,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Palla recuperata,,,,,88,57,1,A,6,False,0,150
+25403,152,1,05:42,258,6,11,1762,Maxima Roma,0,9391,4,Hunter,Tyson,2 punti segnato,7,Appoggio a canestro,500,contropiede,8,55,0,A,3,True,0,
+25403,153,1,05:42,258,6,11,1762,Maxima Roma,0,9375,17,Xavier,Moon,Assist,,,500,contropiede,8,55,0,A,3,False,0,152
+25403,154,1,05:31,269,6,11,1762,Maxima Roma,0,536,2,Miro,Bilan,Fallo commesso,100,personale,,,75,43,0,D,7,False,0,
+25403,155,1,05:31,269,6,11,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Fallo Subito,,,,,75,43,0,D,7,False,0,154
+25403,156,1,05:31,269,6,11,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Uscita,,,,,,,,,,False,0,
+25403,157,1,05:31,269,6,11,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,Ingresso,,,,,,,,,,False,0,156
+25403,158,1,05:31,269,6,11,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Uscita,,,,,,,,,,False,0,156
+25403,159,1,05:31,269,6,11,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Ingresso,,,,,,,,,,False,0,156
+25403,160,1,05:18,282,6,11,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,3 punti sbagliato,1,Tiro in sospensione,,,94,4,1,A,5,False,0,
+25403,161,1,05:18,282,6,11,1762,Maxima Roma,0,536,2,Miro,Bilan,Rimbalzo difensivo,,,,,94,4,1,A,5,False,0,160
+25403,162,1,05:01,299,6,11,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti sbagliato,7,Appoggio a canestro,,,5,55,0,A,3,False,0,
+25403,163,1,05:01,299,6,11,1762,Maxima Roma,0,536,2,Miro,Bilan,Rimbalzo offensivo,,,,,5,55,0,A,3,False,0,162
+25403,164,1,04:58,302,6,11,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti sbagliato,7,Appoggio a canestro,,,6,55,0,A,3,False,0,
+25403,165,1,04:58,302,6,11,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Rimbalzo offensivo,,,,,6,55,0,A,3,False,0,164
+25403,166,1,04:47,313,6,11,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti sbagliato,4,Giro e Tiro,,,8,43,0,A,3,False,0,
+25403,167,1,04:47,313,6,11,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Rimbalzo difensivo,,,,,8,43,0,A,3,False,0,166
+25403,168,1,04:44,316,6,11,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Fallo commesso,100,personale,,,18,53,0,A,6,False,0,
+25403,169,1,04:44,316,6,11,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Fallo Subito,,,,,18,53,0,A,6,False,0,168
+25403,170,1,04:44,316,6,11,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Ingresso,,,,,,,,,,False,0,
+25403,171,1,04:44,316,6,11,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Ingresso,,,,,,,,,,False,0,170
+25403,172,1,04:44,316,6,11,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Uscita,,,,,,,,,,False,0,170
+25403,173,1,04:44,316,6,11,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Uscita,,,,,,,,,,False,0,170
+25403,174,1,04:37,323,6,11,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,2 punti sbagliato,6,Arresto e tiro,,,80,68,1,A,2,False,0,
+25403,175,1,04:37,323,6,11,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Rimbalzo difensivo,,,,,80,68,1,A,2,False,0,174
+25403,176,1,04:26,334,6,11,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,3 punti sbagliato,1,Tiro in sospensione,,,31,36,0,A,9,False,0,
+25403,177,1,04:26,334,6,11,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,31,36,0,A,9,False,0,176
+25403,178,1,04:16,344,6,11,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,,,67,77,1,A,8,False,0,
+25403,179,1,04:16,344,6,11,1762,Maxima Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,67,77,1,A,8,False,0,178
+25403,180,1,04:15,345,6,11,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Fallo commesso,100,personale,,,86,51,1,A,6,False,0,
+25403,181,1,04:15,345,6,11,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Fallo Subito,,,,,86,51,1,A,6,False,0,180
+25403,182,1,03:55,365,6,13,1762,Maxima Roma,0,9391,4,Hunter,Tyson,2 punti segnato,8,Da penetrazione,,,7,58,0,A,3,True,0,
+25403,183,1,03:45,375,8,13,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,2 punti segnato,9,Schiacciata,,,94,51,1,A,3,True,1,
+25403,184,1,03:45,375,8,13,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,Assist,,,,,94,51,1,A,3,False,0,183
+25403,185,1,03:26,394,8,13,1762,Maxima Roma,0,5913,24,Carl,Wheatle,3 punti sbagliato,1,Tiro in sospensione,,,5,3,0,A,1,False,0,
+25403,186,1,03:26,394,8,13,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,5,3,0,A,1,False,0,185
+25403,187,1,03:12,408,8,13,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,2 punti sbagliato,7,Appoggio a canestro,,,94,54,1,A,3,False,0,
+25403,188,1,03:12,408,8,13,1762,Maxima Roma,0,9375,17,Xavier,Moon,Rimbalzo difensivo,,,,,94,54,1,A,3,False,0,187
+25403,189,1,02:53,427,8,13,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti sbagliato,4,Giro e Tiro,,,10,48,0,A,6,False,0,
+25403,190,1,02:53,427,8,13,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,10,48,0,A,6,False,0,189
+25403,191,1,02:46,434,8,13,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Palla persa,50,Passaggio sbagliato,,,74,73,1,A,7,False,0,
+25403,192,1,02:46,434,8,13,1762,Maxima Roma,0,9375,17,Xavier,Moon,Palla recuperata,,,,,74,73,1,A,7,False,0,191
+25403,193,1,02:37,443,8,13,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,2,Tiro in corsa,,,12,71,0,A,4,False,0,
+25403,194,1,02:37,443,8,13,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,12,71,0,A,4,False,0,193
+25403,195,1,02:24,456,8,13,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,2 punti sbagliato,2,Tiro in corsa,,,84,68,1,A,2,False,0,
+25403,196,1,02:24,456,8,13,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Rimbalzo difensivo,,,,,84,68,1,A,2,False,0,195
+25403,197,1,02:02,478,8,13,1762,Maxima Roma,0,536,2,Miro,Bilan,3 punti sbagliato,1,Tiro in sospensione,,,32,57,0,A,9,False,0,
+25403,198,1,02:02,478,8,13,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Rimbalzo offensivo,,,,,32,57,0,A,9,False,0,197
+25403,199,1,01:56,484,8,13,1762,Maxima Roma,0,9391,4,Hunter,Tyson,3 punti sbagliato,1,Tiro in sospensione,,,31,38,0,A,9,False,0,
+25403,200,1,01:56,484,8,13,1763,Dolomiti Energia Trentino,1,,,,,Rimbalzi difensivi di squadra,,,,,31,38,0,A,9,False,0,199
+25403,201,1,01:54,486,8,13,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Uscita,,,,,,,,,,False,0,
+25403,202,1,01:54,486,8,13,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Ingresso,,,,,,,,,,False,0,201
+25403,203,1,01:54,486,8,13,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,201
+25403,204,1,01:54,486,8,13,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,Uscita,,,,,,,,,,False,0,201
+25403,205,1,01:54,486,8,13,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Ingresso,,,,,,,,,,False,0,201
+25403,206,1,01:54,486,8,13,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Uscita,,,,,,,,,,False,0,201
+25403,207,1,01:54,486,8,13,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Ingresso,,,,,,,,,,False,0,201
+25403,208,1,01:54,486,8,13,1762,Maxima Roma,0,9375,17,Xavier,Moon,Uscita,,,,,,,,,,False,0,201
+25403,209,1,01:54,486,8,13,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Uscita,,,,,,,,,,False,0,201
+25403,210,1,01:54,486,8,13,1762,Maxima Roma,0,774,100,John,Brown,Ingresso,,,,,,,,,,False,0,201
+25403,211,1,01:44,496,8,13,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Palla persa,50,Passaggio sbagliato,,,72,57,1,A,7,False,0,
+25403,212,1,01:44,496,8,13,1762,Maxima Roma,0,536,2,Miro,Bilan,Palla recuperata,,,,,72,57,1,A,7,False,0,211
+25403,213,1,01:31,509,8,13,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti sbagliato,7,Appoggio a canestro,,,16,50,0,A,6,False,0,
+25403,214,1,01:31,509,8,13,1762,Maxima Roma,0,,,,,Rimbalzi offensivi di squadra,,,,,16,50,0,A,6,False,0,213
+25403,215,1,01:27,513,8,13,1762,Maxima Roma,0,536,2,Miro,Bilan,Uscita,,,,,,,,,,False,0,
+25403,216,1,01:27,513,8,13,1762,Maxima Roma,0,934,29,Gora,Camara,Ingresso,,,,,,,,,,False,0,215
+25403,217,1,01:24,516,8,13,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,3 punti sbagliato,6,Arresto e tiro,,,32,45,0,A,9,False,0,
+25403,218,1,01:24,516,8,13,1762,Maxima Roma,0,774,100,John,Brown,Rimbalzo offensivo,,,,,32,45,0,A,9,False,0,217
+25403,219,1,01:19,521,8,13,1762,Maxima Roma,0,774,100,John,Brown,Palla persa,51,Palleggio,,,5,61,0,A,3,False,0,
+25403,220,1,01:19,521,8,13,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Ingresso,,,,,,,,,,False,0,
+25403,221,1,01:19,521,8,13,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Uscita,,,,,,,,,,False,0,220
+25403,222,1,01:05,535,10,13,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,2 punti segnato,6,Arresto e tiro,,,90,69,1,A,2,False,0,
+25403,223,1,00:42,558,10,13,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,3 punti sbagliato,1,Tiro in sospensione,,,20,91,0,A,10,False,0,
+25403,224,1,00:42,558,10,13,1762,Maxima Roma,0,774,100,John,Brown,Rimbalzo offensivo,,,,,20,91,0,A,10,False,0,223
+25403,225,1,00:37,563,10,13,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti sbagliato,1,Tiro in sospensione,,,13,95,0,A,10,False,0,
+25403,226,1,00:37,563,10,13,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Rimbalzo difensivo,,,,,13,95,0,A,10,False,0,225
+25403,227,1,00:29,571,10,13,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,2 punti sbagliato,6,Arresto e tiro,,,94,75,1,A,2,False,0,
+25403,228,1,00:29,571,10,13,1762,Maxima Roma,0,774,100,John,Brown,Rimbalzo difensivo,,,,,94,75,1,A,2,False,0,227
+25403,229,1,00:22,578,10,13,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Fallo commesso,100,personale,,,59,41,1,A,9,False,0,
+25403,230,1,00:22,578,10,13,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Fallo Subito,,,,,59,41,1,A,9,False,0,229
+25403,231,1,00:05,595,10,13,1762,Maxima Roma,0,9374,3,Aaron,Holiday,2 punti sbagliato,8,Da penetrazione,,,12,54,0,A,6,False,0,
+25403,232,1,00:05,595,10,13,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Rimbalzo difensivo,,,,,12,54,0,A,6,False,0,231
+25403,233,1,00:02,598,10,13,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,72,24,1,A,10,False,0,
+25403,234,1,00:00,600,10,13,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25403,235,2,10:00,0,10,13,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25403,236,2,09:58,2,10,13,1762,Maxima Roma,0,774,100,John,Brown,Fallo commesso,100,personale,,,67,49,0,D,9,False,0,
+25403,237,2,09:58,2,10,13,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Fallo Subito,,,,,67,49,0,D,9,False,0,236
+25403,238,2,09:44,16,10,13,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,2 punti sbagliato,7,Appoggio a canestro,,,95,45,1,A,3,False,0,
+25403,239,2,09:44,16,10,13,1762,Maxima Roma,0,934,29,Gora,Camara,Rimbalzo difensivo,,,,,95,45,1,A,3,False,0,238
+25403,240,2,09:25,35,10,15,1762,Maxima Roma,0,9374,3,Aaron,Holiday,2 punti segnato,4,Giro e Tiro,,,17,66,0,A,4,True,0,
+25403,241,2,09:14,46,10,15,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,2 punti sbagliato,8,Da penetrazione,,,94,57,1,A,3,False,0,
+25403,242,2,09:14,46,10,15,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Rimbalzo offensivo,,,,,94,57,1,A,3,False,0,241
+25403,243,2,09:09,51,12,15,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,2 punti segnato,9,Schiacciata,,,94,51,1,A,3,True,1,
+25403,244,2,09:02,58,12,15,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti sbagliato,6,Arresto e tiro,,,30,64,0,A,9,False,0,
+25403,245,2,09:02,58,12,15,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Rimbalzo difensivo,,,,,30,64,0,A,9,False,0,244
+25403,246,2,08:37,83,12,15,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,2 punti sbagliato,7,Appoggio a canestro,,,93,39,1,A,3,False,0,
+25403,247,2,08:37,83,12,15,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Rimbalzo difensivo,,,,,93,39,1,A,3,False,0,246
+25403,248,2,08:28,92,12,18,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti segnato,1,Tiro in sospensione,500,contropiede,27,24,0,A,8,False,0,
+25403,249,2,08:28,92,12,18,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Assist,,,500,contropiede,27,24,0,A,8,False,0,248
+25403,250,2,08:04,116,14,18,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,2 punti segnato,8,Da penetrazione,,,93,55,1,A,3,True,0,
+25403,251,2,08:04,116,14,18,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Assist,,,,,93,55,1,A,3,False,0,250
+25403,252,2,07:40,140,14,18,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Fallo commesso,100,personale,,,9,45,1,D,3,False,0,
+25403,253,2,07:40,140,14,18,1762,Maxima Roma,0,934,29,Gora,Camara,Fallo Subito,,,,,9,45,1,D,3,False,0,252
+25403,254,2,07:24,156,14,18,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,3 punti sbagliato,1,Tiro in sospensione,,,33,48,0,A,9,False,0,
+25403,255,2,07:24,156,14,18,1762,Maxima Roma,0,774,100,John,Brown,Rimbalzo offensivo,,,,,33,48,0,A,9,False,0,254
+25403,256,2,07:19,161,14,20,1762,Maxima Roma,0,774,100,John,Brown,2 punti segnato,4,Giro e Tiro,,,8,69,0,A,4,False,0,
+25403,257,2,07:19,161,14,20,1763,Dolomiti Energia Trentino,1,,,,,Time Out,,,,,,,1,,,False,0,
+25403,258,2,07:12,168,14,20,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,3 punti sbagliato,1,Tiro in sospensione,,,69,78,1,A,8,False,0,
+25403,259,2,07:12,168,14,20,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Rimbalzo difensivo,,,,,69,78,1,A,8,False,0,258
+25403,260,2,06:56,184,14,20,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,3 punti sbagliato,1,Tiro in sospensione,,,19,89,0,A,10,False,0,
+25403,261,2,06:56,184,14,20,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Rimbalzo difensivo,,,,,19,89,0,A,4,False,0,260
+25403,262,2,06:52,188,14,20,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Fallo commesso,100,personale,,,31,69,0,A,9,False,0,
+25403,263,2,06:52,188,14,20,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Fallo Subito,,,,,31,69,0,A,9,False,0,262
+25403,264,2,06:51,189,14,20,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Uscita,,,,,,,,,,False,0,
+25403,265,2,06:51,189,14,20,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Ingresso,,,,,,,,,,False,0,264
+25403,266,2,06:36,204,17,20,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,3 punti segnato,1,Tiro in sospensione,,,68,71,1,A,9,False,0,
+25403,267,2,06:36,204,17,20,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Assist,,,,,68,71,1,A,9,False,0,266
+25403,268,2,06:18,222,17,20,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Fallo commesso,103,tiro,,,14,64,1,D,4,False,0,
+25403,269,2,06:18,222,17,20,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Fallo Subito,,,,,14,64,1,D,4,False,0,268
+25403,270,2,06:18,222,17,20,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Uscita,,,,,,,,,,False,0,
+25403,271,2,06:18,222,17,20,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Ingresso,,,,,,,,,,False,0,270
+25403,272,2,06:18,222,17,21,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,273,2,06:18,222,17,22,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Tiro libero segnato,,,,,,,,A,7,False,0,272
+25403,274,2,06:18,222,17,22,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Uscita,,,,,,,,,,False,0,
+25403,275,2,06:18,222,17,22,1762,Maxima Roma,0,9375,17,Xavier,Moon,Ingresso,,,,,,,,,,False,0,274
+25403,276,2,06:01,239,17,22,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,3 punti sbagliato,1,Tiro in sospensione,,,72,25,1,A,10,False,0,
+25403,277,2,06:01,239,17,22,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Rimbalzo difensivo,,,,,72,25,1,A,10,False,0,276
+25403,278,2,05:50,250,17,22,1762,Maxima Roma,0,774,100,John,Brown,Palla persa,51,Palleggio,,,18,40,0,A,6,False,0,
+25403,279,2,05:50,250,17,22,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Uscita,,,,,,,,,,False,0,
+25403,280,2,05:50,250,17,22,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Ingresso,,,,,,,,,,False,0,279
+25403,281,2,05:29,271,17,22,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Fallo commesso,100,personale,,,77,55,0,D,7,False,0,
+25403,282,2,05:29,271,17,22,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Fallo Subito,,,,,77,55,0,D,7,False,0,281
+25403,283,2,05:29,271,17,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Ingresso,,,,,,,,,,False,0,
+25403,284,2,05:29,271,17,22,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Uscita,,,,,,,,,,False,0,283
+25403,285,2,05:25,275,17,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Palla persa,51,Palleggio,,,64,92,1,A,8,False,0,
+25403,286,2,05:25,275,17,22,1762,Maxima Roma,0,9375,17,Xavier,Moon,Palla recuperata,,,,,64,92,1,A,8,False,0,285
+25403,287,2,05:09,291,17,22,1762,Maxima Roma,0,774,100,John,Brown,Palla persa,53,Passi,,,8,33,0,A,2,False,0,
+25403,288,2,05:09,291,17,22,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Uscita,,,,,,,,,,False,0,
+25403,289,2,05:09,291,17,22,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Ingresso,,,,,,,,,,False,0,288
+25403,290,2,05:09,291,17,22,1762,Maxima Roma,0,536,2,Miro,Bilan,Ingresso,,,,,,,,,,False,0,288
+25403,291,2,05:09,291,17,22,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Ingresso,,,,,,,,,,False,0,288
+25403,292,2,05:09,291,17,22,1762,Maxima Roma,0,934,29,Gora,Camara,Uscita,,,,,,,,,,False,0,288
+25403,293,2,05:09,291,17,22,1762,Maxima Roma,0,774,100,John,Brown,Uscita,,,,,,,,,,False,0,288
+25403,294,2,04:48,312,17,22,1762,Maxima Roma,0,9375,17,Xavier,Moon,Fallo commesso,103,tiro,,,86,42,0,D,6,False,0,
+25403,295,2,04:48,312,17,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Fallo Subito,,,,,86,42,0,D,6,False,0,294
+25403,296,2,04:48,312,18,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,297,2,04:48,312,19,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Tiro libero segnato,,,,,,,,A,7,False,0,296
+25403,298,2,04:29,331,19,22,1762,Maxima Roma,0,536,2,Miro,Bilan,Palla persa,50,Passaggio sbagliato,,,35,49,0,A,9,False,0,
+25403,299,2,04:21,339,19,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,3 punti sbagliato,1,Tiro in sospensione,,,72,74,1,A,9,False,0,
+25403,300,2,04:21,339,19,22,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Rimbalzo difensivo,,,,,72,74,1,A,9,False,0,299
+25403,301,2,04:11,349,19,22,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,3 punti sbagliato,1,Tiro in sospensione,,,21,12,0,A,8,False,0,
+25403,302,2,04:11,349,19,22,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Rimbalzo difensivo,,,,,21,12,0,A,8,False,0,301
+25403,303,2,04:01,359,19,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,2 punti sbagliato,2,Tiro in corsa,,,85,61,1,A,6,False,0,
+25403,304,2,04:01,359,19,22,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Rimbalzo difensivo,,,,,85,61,1,A,6,False,0,303
+25403,305,2,03:57,363,19,22,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Palla persa,51,Palleggio,,,58,48,0,D,9,False,0,
+25403,306,2,03:57,363,19,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Palla recuperata,,,,,58,48,0,D,9,False,0,305
+25403,307,2,03:54,366,21,22,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,2 punti segnato,7,Appoggio a canestro,,,92,48,1,A,3,True,0,
+25403,308,2,03:53,367,21,22,1762,Maxima Roma,0,,,,,Time Out,,,,,,,0,,,False,0,
+25403,309,2,03:53,367,21,22,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Ingresso,,,,,,,,,,False,0,
+25403,310,2,03:53,367,21,22,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Uscita,,,,,,,,,,False,0,309
+25403,311,2,03:51,369,21,22,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Fallo commesso,100,personale,,,20,72,1,D,4,False,0,
+25403,312,2,03:51,369,21,22,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Fallo Subito,,,,,20,72,1,D,4,False,0,311
+25403,313,2,03:45,375,21,22,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Ingresso,,,,,,,,,,False,0,
+25403,314,2,03:45,375,21,22,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Uscita,,,,,,,,,,False,0,313
+25403,315,2,03:38,382,21,22,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,8,Da penetrazione,,,7,57,0,A,3,False,0,
+25403,316,2,03:38,382,21,22,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,7,57,0,A,3,False,0,315
+25403,317,2,03:34,386,21,22,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Fallo commesso,100,personale,,,45,25,0,A,8,False,0,
+25403,318,2,03:34,386,21,22,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Fallo Subito,,,,,45,25,0,A,8,False,0,317
+25403,319,2,03:34,386,21,22,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Ingresso,,,,,,,,,,False,0,
+25403,320,2,03:34,386,21,22,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Uscita,,,,,,,,,,False,0,319
+25403,321,2,03:34,386,22,22,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,322,2,03:34,386,23,22,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Tiro libero segnato,,,,,,,,A,7,False,0,321
+25403,323,2,03:17,403,23,22,1762,Maxima Roma,0,9374,3,Aaron,Holiday,2 punti sbagliato,6,Arresto e tiro,,,16,38,0,A,2,False,0,
+25403,324,2,03:17,403,23,22,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Rimbalzo difensivo,,,,,16,38,0,A,2,False,0,323
+25403,325,2,03:01,419,25,22,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,2 punti segnato,7,Appoggio a canestro,,,92,52,1,A,3,True,0,
+25403,326,2,03:01,419,25,22,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Assist,,,,,92,52,1,A,3,False,0,325
+25403,327,2,02:38,442,25,25,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti segnato,1,Tiro in sospensione,,,31,34,0,A,9,False,0,
+25403,328,2,02:38,442,25,25,1762,Maxima Roma,0,536,2,Miro,Bilan,Assist,,,,,31,34,0,A,9,False,0,327
+25403,329,2,02:26,454,25,25,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Palla persa,50,Passaggio sbagliato,,,79,51,1,A,7,False,0,
+25403,330,2,02:26,454,25,25,1762,Maxima Roma,0,9375,17,Xavier,Moon,Palla recuperata,,,,,79,51,1,A,7,False,0,329
+25403,331,2,02:22,458,25,25,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,8,Da penetrazione,1005,stoppata,8,59,0,A,3,False,0,
+25403,332,2,02:22,458,25,25,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Stoppata,,,,,8,59,0,A,3,False,0,331
+25403,333,2,02:22,458,25,25,1762,Maxima Roma,0,9375,17,Xavier,Moon,Stoppata subita,,,,,8,59,0,A,3,False,0,331
+25403,334,2,02:22,458,25,25,1762,Maxima Roma,0,,,,,Rimbalzi offensivi di squadra,,,,,8,59,0,A,3,False,0,331
+25403,335,2,02:22,458,25,25,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Uscita,,,,,,,,,,False,0,
+25403,336,2,02:22,458,25,25,1762,Maxima Roma,0,774,100,John,Brown,Ingresso,,,,,,,,,,False,0,335
+25403,337,2,02:11,469,25,25,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Fallo commesso,100,personale,,,4,69,1,D,4,False,0,
+25403,338,2,02:11,469,25,25,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Fallo Subito,,,,,4,69,1,D,4,False,0,337
+25403,339,2,02:11,469,25,25,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Uscita,,,,,,,,,,False,0,
+25403,340,2,02:11,469,25,25,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,339
+25403,341,2,01:58,482,25,25,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti sbagliato,5,Tiro in Step Back,,,32,68,0,A,9,False,0,
+25403,342,2,01:58,482,25,25,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Rimbalzo difensivo,,,,,32,68,0,A,9,False,0,341
+25403,343,2,01:50,490,25,25,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,3 punti sbagliato,1,Tiro in sospensione,,,70,79,1,A,8,False,0,
+25403,344,2,01:50,490,25,25,1762,Maxima Roma,0,9375,17,Xavier,Moon,Rimbalzo difensivo,,,,,70,79,1,A,8,False,0,343
+25403,345,2,01:33,507,25,27,1762,Maxima Roma,0,5913,24,Carl,Wheatle,2 punti segnato,3,Tiro in fadeaway,,,14,73,0,A,4,False,0,
+25403,346,2,01:19,521,25,27,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,2 punti sbagliato,8,Da penetrazione,,,92,45,1,A,3,False,0,
+25403,347,2,01:19,521,25,27,1762,Maxima Roma,0,9375,17,Xavier,Moon,Rimbalzo difensivo,,,,,92,45,1,A,3,False,0,346
+25403,348,2,01:08,532,25,27,1762,Maxima Roma,0,774,100,John,Brown,2 punti sbagliato,3,Tiro in fadeaway,,,11,75,0,A,4,False,0,
+25403,349,2,01:08,532,25,27,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,11,75,0,A,4,False,0,348
+25403,350,2,00:48,552,25,27,1762,Maxima Roma,0,9375,17,Xavier,Moon,Fallo commesso,103,tiro,,,84,51,0,D,6,False,0,
+25403,351,2,00:48,552,25,27,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Fallo Subito,,,,,84,51,0,D,6,False,0,350
+25403,352,2,00:48,552,25,27,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Ingresso,,,,,,,,,,False,0,
+25403,353,2,00:48,552,25,27,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Uscita,,,,,,,,,,False,0,352
+25403,354,2,00:48,552,25,27,1762,Maxima Roma,0,536,2,Miro,Bilan,Uscita,,,,,,,,,,False,0,352
+25403,355,2,00:48,552,25,27,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Uscita,,,,,,,,,,False,0,352
+25403,356,2,00:48,552,25,27,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Ingresso,,,,,,,,,,False,0,352
+25403,357,2,00:48,552,25,27,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Ingresso,,,,,,,,,,False,0,352
+25403,358,2,00:48,552,25,27,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25403,359,2,00:48,552,26,27,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Tiro libero segnato,,,,,,,,A,7,False,0,358
+25403,360,2,00:48,552,26,27,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Assist,,,,,,,,,,False,0,358
+25403,361,2,00:26,574,26,27,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Fallo commesso,100,personale,,,24,69,1,D,7,False,0,
+25403,362,2,00:26,574,26,27,1762,Maxima Roma,0,9375,17,Xavier,Moon,Fallo Subito,,,,,24,69,1,D,7,False,0,361
+25403,363,2,00:26,574,26,27,1762,Maxima Roma,0,9375,17,Xavier,Moon,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25403,364,2,00:26,574,26,28,1762,Maxima Roma,0,9375,17,Xavier,Moon,Tiro libero segnato,,,,,,,,A,7,False,0,363
+25403,365,2,00:26,574,26,28,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Uscita,,,,,,,,,,False,0,
+25403,366,2,00:26,574,26,28,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Ingresso,,,,,,,,,,False,0,365
+25403,367,2,00:09,591,26,28,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Fallo commesso,106,offensivo,,,87,52,1,A,6,False,0,
+25403,368,2,00:09,591,26,28,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Palla persa,,,,,87,52,1,A,6,False,0,367
+25403,369,2,00:09,591,26,28,1762,Maxima Roma,0,774,100,John,Brown,Fallo Subito,,,,,87,52,1,A,6,False,0,367
+25403,370,2,00:07,593,26,28,1762,Maxima Roma,0,,,,,Time Out,,,,,,,0,,,False,0,
+25403,371,2,00:07,593,26,28,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Uscita,,,,,,,,,,False,0,
+25403,372,2,00:07,593,26,28,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,371
+25403,373,2,00:07,593,26,28,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Ingresso,,,,,,,,,,False,0,371
+25403,374,2,00:07,593,26,28,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Uscita,,,,,,,,,,False,0,371
+25403,375,2,00:07,593,26,28,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Ingresso,,,,,,,,,,False,0,371
+25403,376,2,00:07,593,26,28,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Ingresso,,,,,,,,,,False,0,371
+25403,377,2,00:07,593,26,28,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Uscita,,,,,,,,,,False,0,371
+25403,378,2,00:07,593,26,28,1762,Maxima Roma,0,774,100,John,Brown,Uscita,,,,,,,,,,False,0,371
+25403,379,2,00:02,598,26,28,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,8,50,0,A,3,False,0,
+25403,380,2,00:00,600,26,28,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25403,381,3,10:00,0,26,28,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Ingresso,,,,,,,,,,False,0,
+25403,382,3,10:00,0,26,28,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Uscita,,,,,,,,,,False,0,381
+25403,383,3,10:00,0,26,28,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Uscita,,,,,,,,,,False,0,381
+25403,384,3,10:00,0,26,28,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Ingresso,,,,,,,,,,False,0,381
+25403,385,3,10:00,0,26,28,1762,Maxima Roma,0,536,2,Miro,Bilan,Ingresso,,,,,,,,,,False,0,381
+25403,386,3,10:00,0,26,28,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Uscita,,,,,,,,,,False,0,381
+25403,387,3,10:00,0,26,28,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Uscita,,,,,,,,,,False,0,381
+25403,388,3,10:00,0,26,28,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Ingresso,,,,,,,,,,False,0,381
+25403,389,3,10:00,0,26,28,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25403,390,3,09:45,15,26,28,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Palla persa,50,Passaggio sbagliato,,,11,36,0,A,2,False,0,
+25403,391,3,09:45,15,26,28,1762,Maxima Roma,0,9375,17,Xavier,Moon,Palla recuperata,,,,,11,36,0,A,2,False,0,390
+25403,392,3,09:35,25,26,28,1762,Maxima Roma,0,9391,4,Hunter,Tyson,3 punti sbagliato,1,Tiro in sospensione,,,71,70,1,A,9,False,0,
+25403,393,3,09:35,25,26,28,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,71,70,0,D,9,False,0,392
+25403,394,3,09:31,29,26,28,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,3 punti sbagliato,1,Tiro in sospensione,,,29,84,0,A,10,False,0,
+25403,395,3,09:31,29,26,28,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Rimbalzo difensivo,,,,,29,84,1,D,10,False,0,394
+25403,396,3,09:19,41,26,28,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Fallo commesso,106,offensivo,,,68,70,1,A,9,False,0,
+25403,397,3,09:19,41,26,28,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Palla persa,,,,,68,70,1,A,9,False,0,396
+25403,398,3,09:19,41,26,28,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Fallo Subito,,,,,68,70,1,A,9,False,0,396
+25403,399,3,08:56,64,28,28,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,2 punti segnato,9,Schiacciata,,,6,49,0,A,3,True,1,
+25403,400,3,08:56,64,28,28,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Assist,,,,,6,49,0,A,3,False,0,399
+25403,401,3,08:38,82,28,28,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Palla persa,50,Passaggio sbagliato,,,72,22,1,A,10,False,0,
+25403,402,3,08:38,82,28,28,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Palla recuperata,,,,,72,22,1,A,10,False,0,401
+25403,403,3,08:31,89,28,28,1762,Maxima Roma,0,536,2,Miro,Bilan,Fallo commesso,100,personale,,,31,44,1,D,9,False,0,
+25403,404,3,08:31,89,28,28,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Fallo Subito,,,,,31,44,1,D,9,False,0,403
+25403,405,3,08:24,96,28,28,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,3 punti sbagliato,1,Tiro in sospensione,,,27,77,0,A,10,False,0,
+25403,406,3,08:24,96,28,28,1762,Maxima Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,27,77,0,A,10,False,0,405
+25403,407,3,08:07,113,28,28,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,1,Tiro in sospensione,,,75,43,1,A,7,False,0,
+25403,408,3,08:07,113,28,28,1762,Maxima Roma,0,536,2,Miro,Bilan,Rimbalzo offensivo,,,,,75,43,1,A,7,False,0,407
+25403,409,3,08:00,120,28,30,1762,Maxima Roma,0,5913,24,Carl,Wheatle,2 punti segnato,9,Schiacciata,,,95,53,1,A,3,True,1,
+25403,410,3,08:00,120,28,30,1762,Maxima Roma,0,536,2,Miro,Bilan,Assist,,,,,95,53,1,A,3,False,0,409
+25403,411,3,07:53,127,30,30,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,2 punti segnato,7,Appoggio a canestro,500,contropiede,8,56,0,A,3,True,0,
+25403,412,3,07:53,127,30,30,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Assist,,,500,contropiede,8,56,0,A,3,False,0,411
+25403,413,3,07:37,143,30,32,1762,Maxima Roma,0,5913,24,Carl,Wheatle,2 punti segnato,6,Arresto e tiro,,,83,38,1,A,6,True,0,
+25403,414,3,07:37,143,30,32,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Fallo commesso,103,tiro,,,83,38,0,D,6,False,0,
+25403,415,3,07:37,143,30,32,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Fallo Subito,,,,,83,38,0,D,6,False,0,414
+25403,416,3,07:37,143,30,32,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Uscita,,,,,,,,,,False,0,
+25403,417,3,07:37,143,30,32,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Ingresso,,,,,,,,,,False,0,416
+25403,418,3,07:37,143,30,33,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,419,3,07:29,151,30,33,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,3 punti sbagliato,1,Tiro in sospensione,,,31,60,0,A,9,False,0,
+25403,420,3,07:29,151,30,33,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Rimbalzo difensivo,,,,,31,60,0,A,9,False,0,419
+25403,421,3,07:12,168,30,35,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti segnato,2,Tiro in corsa,,,82,51,1,A,6,True,0,
+25403,422,3,07:12,168,30,35,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Assist,,,,,82,51,1,A,6,False,0,421
+25403,423,3,06:59,181,33,35,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,3 punti segnato,1,Tiro in sospensione,,,32,51,0,A,9,False,0,
+25403,424,3,06:59,181,33,35,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Assist,,,,,32,51,0,A,9,False,0,423
+25403,425,3,06:40,200,33,35,1762,Maxima Roma,0,536,2,Miro,Bilan,2 punti sbagliato,2,Tiro in corsa,,,82,60,1,A,6,False,0,
+25403,426,3,06:40,200,33,35,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Rimbalzo difensivo,,,,,82,60,1,A,6,False,0,425
+25403,427,3,06:31,209,35,35,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,2 punti segnato,8,Da penetrazione,,,8,62,0,A,3,True,0,
+25403,428,3,06:31,209,35,35,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Fallo commesso,103,tiro,,,8,62,1,D,3,False,0,
+25403,429,3,06:31,209,35,35,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Fallo Subito,,,,,8,62,1,D,3,False,0,428
+25403,430,3,06:31,209,36,35,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,431,3,06:12,228,36,35,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Fallo commesso,100,personale,,,90,57,0,D,6,False,0,
+25403,432,3,06:12,228,36,35,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Fallo Subito,,,,,90,57,0,D,6,False,0,431
+25403,433,3,06:12,228,36,35,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Fallo commesso,100,personale,,,69,73,0,D,9,False,0,
+25403,434,3,06:12,228,36,35,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Fallo Subito,,,,,69,73,0,D,9,False,0,433
+25403,435,3,06:05,235,36,38,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti segnato,1,Tiro in sospensione,,,72,21,1,A,10,False,0,
+25403,436,3,06:05,235,36,38,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Assist,,,,,72,21,1,A,10,False,0,435
+25403,437,3,05:45,255,36,38,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,,,34,59,0,A,9,False,0,
+25403,438,3,05:45,255,36,38,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Rimbalzo offensivo,,,,,34,59,0,A,9,False,0,437
+25403,439,3,05:32,268,36,38,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,,,6,96,0,A,5,False,0,
+25403,440,3,05:32,268,36,38,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Rimbalzo offensivo,,,,,6,96,0,A,5,False,0,439
+25403,441,3,05:26,274,36,38,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Fallo commesso,100,personale,,,43,57,1,D,9,False,0,
+25403,442,3,05:26,274,36,38,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Fallo Subito,,,,,43,57,1,D,9,False,0,441
+25403,443,3,05:16,284,36,38,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,3 punti sbagliato,1,Tiro in sospensione,,,27,21,0,A,8,False,0,
+25403,444,3,05:16,284,36,38,1762,Maxima Roma,0,9375,17,Xavier,Moon,Rimbalzo difensivo,,,,,27,21,0,A,8,False,0,443
+25403,445,3,04:58,302,36,41,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti segnato,1,Tiro in sospensione,,,67,61,1,A,9,False,0,
+25403,446,3,04:47,313,36,41,1762,Maxima Roma,0,536,2,Miro,Bilan,Fallo commesso,103,tiro,,,11,51,1,D,6,False,0,
+25403,447,3,04:47,313,36,41,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Fallo Subito,,,,,11,51,1,D,6,False,0,446
+25403,448,3,04:47,313,36,41,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Ingresso,,,,,,,,,,False,0,
+25403,449,3,04:47,313,36,41,1763,Dolomiti Energia Trentino,1,9170,30,Josè Alfred,Medina Bouza,Uscita,,,,,,,,,,False,0,448
+25403,450,3,04:47,313,36,41,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Ingresso,,,,,,,,,,False,0,448
+25403,451,3,04:47,313,36,41,1762,Maxima Roma,0,9375,17,Xavier,Moon,Uscita,,,,,,,,,,False,0,448
+25403,452,3,04:47,313,37,41,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,453,3,04:47,313,38,41,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Tiro libero segnato,,,,,,,,A,7,False,0,452
+25403,454,3,04:36,324,38,41,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Palla persa,50,Passaggio sbagliato,,,73,89,1,A,8,False,0,
+25403,455,3,04:36,324,38,41,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Palla recuperata,,,,,73,89,1,A,8,False,0,454
+25403,456,3,04:31,329,40,41,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,2 punti segnato,9,Schiacciata,500,contropiede,8,49,0,A,3,True,1,
+25403,457,3,04:31,329,40,41,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Assist,,,,,8,49,0,A,3,False,0,456
+25403,458,3,04:09,351,40,41,1762,Maxima Roma,0,5913,24,Carl,Wheatle,3 punti sbagliato,1,Tiro in sospensione,,,70,29,1,A,9,False,0,
+25403,459,3,04:09,351,40,41,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Rimbalzo offensivo,,,,,70,29,1,A,9,False,0,458
+25403,460,3,04:00,360,40,41,1762,Maxima Roma,0,9391,4,Hunter,Tyson,3 punti sbagliato,1,Tiro in sospensione,,,91,3,1,A,5,False,0,
+25403,461,3,04:00,360,40,41,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Rimbalzo difensivo,,,,,91,3,1,A,5,False,0,460
+25403,462,3,03:50,370,40,41,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,3 punti sbagliato,1,Tiro in sospensione,,,32,53,0,A,9,False,0,
+25403,463,3,03:50,370,40,41,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Rimbalzo offensivo,,,,,32,53,0,A,9,False,0,462
+25403,464,3,03:39,381,40,41,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,3 punti sbagliato,1,Tiro in sospensione,,,32,37,0,A,9,False,0,
+25403,465,3,03:39,381,40,41,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Rimbalzo offensivo,,,,,32,37,0,A,9,False,0,464
+25403,466,3,03:24,396,40,41,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Fallo commesso,103,tiro,,,14,45,1,D,6,False,0,
+25403,467,3,03:24,396,40,41,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Fallo Subito,,,,,14,45,1,D,6,False,0,466
+25403,468,3,03:24,396,40,41,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Uscita,,,,,,,,,,False,0,
+25403,469,3,03:24,396,40,41,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,468
+25403,470,3,03:24,396,40,41,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Uscita,,,,,,,,,,False,0,468
+25403,471,3,03:24,396,40,41,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Ingresso,,,,,,,,,,False,0,468
+25403,472,3,03:24,396,40,41,1762,Maxima Roma,0,536,2,Miro,Bilan,Uscita,,,,,,,,,,False,0,468
+25403,473,3,03:24,396,40,41,1762,Maxima Roma,0,9391,4,Hunter,Tyson,Uscita,,,,,,,,,,False,0,468
+25403,474,3,03:24,396,40,41,1762,Maxima Roma,0,934,29,Gora,Camara,Ingresso,,,,,,,,,,False,0,468
+25403,475,3,03:24,396,40,41,1762,Maxima Roma,0,774,100,John,Brown,Ingresso,,,,,,,,,,False,0,468
+25403,476,3,03:24,396,41,41,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,477,3,03:24,396,42,41,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Tiro libero segnato,,,,,,,,A,7,False,0,476
+25403,478,3,03:11,409,42,43,1762,Maxima Roma,0,774,100,John,Brown,2 punti segnato,7,Appoggio a canestro,,,93,57,1,A,3,True,0,
+25403,479,3,03:11,409,42,43,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Assist,,,,,93,57,1,A,3,False,0,478
+25403,480,3,02:53,427,42,43,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,2 punti sbagliato,7,Appoggio a canestro,,,14,54,0,A,6,False,0,
+25403,481,3,02:53,427,42,43,1762,Maxima Roma,0,934,29,Gora,Camara,Rimbalzo difensivo,,,,,14,54,0,A,6,False,0,480
+25403,482,3,02:41,439,42,45,1762,Maxima Roma,0,9374,3,Aaron,Holiday,2 punti segnato,2,Tiro in corsa,,,85,56,1,A,6,True,0,
+25403,483,3,02:25,455,42,45,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,3 punti sbagliato,1,Tiro in sospensione,,,34,47,0,A,9,False,0,
+25403,484,3,02:25,455,42,45,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Rimbalzo difensivo,,,,,34,47,0,A,9,False,0,483
+25403,485,3,02:18,462,42,45,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti sbagliato,1,Tiro in sospensione,,,67,67,1,A,9,False,0,
+25403,486,3,02:18,462,42,45,1762,Maxima Roma,0,934,29,Gora,Camara,Rimbalzo offensivo,,,,,67,67,1,A,9,False,0,485
+25403,487,3,02:16,464,42,45,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Fallo commesso,100,personale,,,91,66,0,D,2,False,0,
+25403,488,3,02:16,464,42,45,1762,Maxima Roma,0,934,29,Gora,Camara,Fallo Subito,,,,,91,66,0,D,2,False,0,487
+25403,489,3,02:16,464,42,45,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Uscita,,,,,,,,,,False,0,
+25403,490,3,02:16,464,42,45,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Ingresso,,,,,,,,,,False,0,489
+25403,491,3,02:16,464,42,45,1762,Maxima Roma,0,9375,17,Xavier,Moon,Ingresso,,,,,,,,,,False,0,489
+25403,492,3,02:16,464,42,45,1762,Maxima Roma,0,5913,24,Carl,Wheatle,Uscita,,,,,,,,,,False,0,489
+25403,493,3,02:00,480,42,45,1762,Maxima Roma,0,,,,,Palle perse di squadra,602,24 Secondi,,,68,39,1,A,9,False,0,
+25403,494,3,01:49,491,42,45,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,2 punti sbagliato,8,Da penetrazione,,,12,62,0,A,6,False,0,
+25403,495,3,01:49,491,42,45,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Rimbalzo difensivo,,,,,12,62,0,A,6,False,0,494
+25403,496,3,01:29,511,42,47,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,2 punti segnato,4,Giro e Tiro,,,86,50,1,A,6,True,0,
+25403,497,3,01:28,512,42,47,1763,Dolomiti Energia Trentino,1,,,,,Time Out,,,,,,,0,,,False,0,
+25403,498,3,01:13,527,42,47,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Palla persa,51,Palleggio,,,17,67,0,A,4,False,0,
+25403,499,3,01:13,527,42,47,1762,Maxima Roma,0,9375,17,Xavier,Moon,Palla recuperata,,,,,17,67,0,A,4,False,0,498
+25403,500,3,01:03,537,42,47,1762,Maxima Roma,0,774,100,John,Brown,2 punti sbagliato,3,Tiro in fadeaway,,,89,74,1,A,2,False,0,
+25403,501,3,01:03,537,42,47,1763,Dolomiti Energia Trentino,1,,,,,Rimbalzi difensivi di squadra,,,,,89,74,1,A,2,False,0,500
+25403,502,3,01:01,539,42,47,1762,Maxima Roma,0,934,29,Gora,Camara,Fallo commesso,100,personale,,,89,52,1,A,6,False,0,
+25403,503,3,01:01,539,42,47,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Fallo Subito,,,,,89,52,1,A,6,False,0,502
+25403,504,3,01:01,539,43,47,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,505,3,01:01,539,43,47,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Tiro libero sbagliato,,,,,,,,A,7,False,0,504
+25403,506,3,01:01,539,43,47,1762,Maxima Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,,,,,,False,0,504
+25403,507,3,01:00,540,43,47,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Uscita,,,,,,,,,,False,0,
+25403,508,3,01:00,540,43,47,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,Ingresso,,,,,,,,,,False,0,507
+25403,509,3,00:47,553,43,47,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,6,Arresto e tiro,,,80,38,1,A,6,False,0,
+25403,510,3,00:47,553,43,47,1762,Maxima Roma,0,934,29,Gora,Camara,Rimbalzo offensivo,,,,,80,38,1,A,6,False,0,509
+25403,511,3,00:38,562,43,50,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,3 punti segnato,1,Tiro in sospensione,,,71,23,1,A,10,False,0,
+25403,512,3,00:38,562,43,50,1762,Maxima Roma,0,9375,17,Xavier,Moon,Assist,,,,,71,23,1,A,10,False,0,511
+25403,513,3,00:15,585,43,50,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,,,33,68,0,A,9,False,0,
+25403,514,3,00:15,585,43,50,1762,Maxima Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,33,68,0,A,9,False,0,513
+25403,515,3,00:09,591,43,50,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Ingresso,,,,,,,,,,False,0,
+25403,516,3,00:09,591,43,50,1762,Maxima Roma,0,934,29,Gora,Camara,Uscita,,,,,,,,,,False,0,515
+25403,517,3,00:02,598,43,50,1762,Maxima Roma,0,9375,17,Xavier,Moon,2 punti sbagliato,4,Giro e Tiro,1007,nessun rimbalzo,87,37,1,A,4,False,0,
+25403,518,3,00:00,600,43,50,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25403,519,4,10:00,0,43,50,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Ingresso,,,,,,,,,,False,0,
+25403,520,4,10:00,0,43,50,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Uscita,,,,,,,,,,False,0,519
+25403,521,4,10:00,0,43,50,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Uscita,,,,,,,,,,False,0,519
+25403,522,4,10:00,0,43,50,1762,Maxima Roma,0,934,29,Gora,Camara,Ingresso,,,,,,,,,,False,0,519
+25403,523,4,10:00,0,43,50,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25403,524,4,09:58,2,43,50,1762,Maxima Roma,0,9375,17,Xavier,Moon,Palla persa,51,Palleggio,,,37,98,1,D,10,False,0,
+25403,525,4,09:58,2,43,50,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Palla recuperata,,,,,37,98,1,D,10,False,0,524
+25403,526,4,09:54,6,45,50,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,2 punti segnato,9,Schiacciata,500,contropiede,10,56,0,A,6,True,1,
+25403,527,4,09:54,6,45,50,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Ingresso,,,,,,,,,,False,0,
+25403,528,4,09:54,6,45,50,1762,Maxima Roma,0,9375,17,Xavier,Moon,Uscita,,,,,,,,,,False,0,527
+25403,529,4,09:46,14,45,50,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Fallo commesso,100,personale,,,62,35,0,D,9,False,0,
+25403,530,4,09:46,14,45,50,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Fallo Subito,,,,,62,35,0,D,9,False,0,529
+25403,531,4,09:33,27,45,53,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,3 punti segnato,5,Tiro in Step Back,,,71,21,1,A,10,False,0,
+25403,532,4,09:16,44,45,53,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Palla persa,51,Palleggio,,,19,47,0,A,6,False,0,
+25403,533,4,09:16,44,45,53,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Palla recuperata,,,,,19,47,0,A,6,False,0,532
+25403,534,4,09:10,50,45,53,1762,Maxima Roma,0,934,29,Gora,Camara,2 punti sbagliato,7,Appoggio a canestro,,,92,56,1,A,3,False,0,
+25403,535,4,09:10,50,45,53,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,92,56,1,A,3,False,0,534
+25403,536,4,09:06,54,45,53,1762,Maxima Roma,0,774,100,John,Brown,Fallo commesso,100,personale,,,18,78,1,D,4,False,0,
+25403,537,4,09:06,54,45,53,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Fallo Subito,,,,,18,78,1,D,4,False,0,536
+25403,538,4,08:58,62,45,53,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,3 punti sbagliato,1,Tiro in sospensione,,,29,25,0,A,8,False,0,
+25403,539,4,08:58,62,45,53,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Rimbalzo difensivo,,,,,29,25,0,A,8,False,0,538
+25403,540,4,08:36,84,45,53,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Fallo commesso,100,personale,,,94,58,0,D,3,False,0,
+25403,541,4,08:36,84,45,53,1762,Maxima Roma,0,934,29,Gora,Camara,Fallo Subito,,,,,94,58,0,D,3,False,0,540
+25403,542,4,08:35,85,45,56,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,3 punti segnato,1,Tiro in sospensione,,,75,85,1,A,8,False,0,
+25403,543,4,08:35,85,45,56,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Assist,,,,,75,85,1,A,8,False,0,542
+25403,544,4,08:12,108,45,56,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,3 punti sbagliato,1,Tiro in sospensione,,,32,71,0,A,9,False,0,
+25403,545,4,08:12,108,45,56,1762,Maxima Roma,0,774,100,John,Brown,Rimbalzo difensivo,,,,,32,71,0,A,9,False,0,544
+25403,546,4,07:53,127,45,59,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti segnato,5,Tiro in Step Back,,,72,80,1,A,8,False,0,
+25403,547,4,07:53,127,45,59,1763,Dolomiti Energia Trentino,1,,,,,Time Out,,,,,,,0,,,False,0,
+25403,548,4,07:53,127,45,59,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Ingresso,,,,,,,,,,False,0,
+25403,549,4,07:53,127,45,59,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Uscita,,,,,,,,,,False,0,548
+25403,550,4,07:38,142,45,59,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Palla persa,51,Palleggio,,,29,80,0,A,10,False,0,
+25403,551,4,07:38,142,45,59,1762,Maxima Roma,0,934,29,Gora,Camara,Palla recuperata,,,,,29,80,0,A,10,False,0,550
+25403,552,4,07:27,153,45,59,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,3 punti sbagliato,1,Tiro in sospensione,,,68,51,1,A,9,False,0,
+25403,553,4,07:27,153,45,59,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Rimbalzo difensivo,,,,,68,51,1,A,9,False,0,552
+25403,554,4,07:15,165,45,59,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,3 punti sbagliato,1,Tiro in sospensione,,,27,20,0,A,8,False,0,
+25403,555,4,07:15,165,45,59,1762,Maxima Roma,0,934,29,Gora,Camara,Rimbalzo difensivo,,,,,27,20,0,A,8,False,0,554
+25403,556,4,07:00,180,45,62,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti segnato,6,Arresto e tiro,,,69,38,1,A,9,False,0,
+25403,557,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,9,47,0,A,3,False,0,
+25403,558,4,06:45,195,45,62,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Stoppata,,,,,9,47,0,A,3,False,0,557
+25403,559,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Stoppata subita,,,,,9,47,0,A,3,False,0,557
+25403,560,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,,,,,Rimbalzi offensivi di squadra,,,,,9,47,0,A,3,False,0,557
+25403,561,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,9329,4,Charles,Brown,Uscita,,,,,,,,,,False,0,
+25403,562,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Ingresso,,,,,,,,,,False,0,561
+25403,563,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Ingresso,,,,,,,,,,False,0,561
+25403,564,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,378,26,Jordan,Bayehe,Uscita,,,,,,,,,,False,0,561
+25403,565,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,3 punti sbagliato,1,Tiro in sospensione,,,8,97,0,A,5,False,0,
+25403,566,4,06:45,195,45,62,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,Rimbalzo offensivo,,,,,8,97,0,A,5,False,0,565
+25403,567,4,06:41,199,47,62,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,2 punti segnato,7,Appoggio a canestro,,,8,57,0,A,3,True,0,
+25403,568,4,06:28,212,47,65,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,3 punti segnato,1,Tiro in sospensione,,,93,98,1,A,1,False,0,
+25403,569,4,06:28,212,47,65,1762,Maxima Roma,0,774,100,John,Brown,Assist,,,,,93,98,1,A,1,False,0,568
+25403,570,4,06:10,230,47,65,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,3 punti sbagliato,1,Tiro in sospensione,,,32,37,0,A,9,False,0,
+25403,571,4,06:10,230,47,65,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Rimbalzo difensivo,,,,,32,37,0,A,9,False,0,570
+25403,572,4,06:04,236,47,67,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,2 punti segnato,9,Schiacciata,500,contropiede,93,51,1,A,3,True,1,
+25403,573,4,06:04,236,47,67,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Assist,,,500,contropiede,93,51,1,A,3,False,0,572
+25403,574,4,06:02,238,47,67,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Ingresso,,,,,,,,,,False,0,
+25403,575,4,06:02,238,47,67,1763,Dolomiti Energia Trentino,1,2148,10,Toto,Forray,Uscita,,,,,,,,,,False,0,574
+25403,576,4,05:46,254,47,67,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,2 punti sbagliato,6,Arresto e tiro,,,18,71,0,A,4,False,0,
+25403,577,4,05:46,254,47,67,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Rimbalzo difensivo,,,,,18,71,0,A,4,False,0,576
+25403,578,4,05:43,257,47,67,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Palla persa,51,Palleggio,,,13,93,1,D,4,False,0,
+25403,579,4,05:39,261,47,67,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,2 punti sbagliato,6,Arresto e tiro,,,22,64,0,A,7,False,0,
+25403,580,4,05:39,261,47,67,1762,Maxima Roma,0,934,29,Gora,Camara,Rimbalzo difensivo,,,,,22,64,0,A,7,False,0,579
+25403,581,4,05:25,275,47,69,1762,Maxima Roma,0,774,100,John,Brown,2 punti segnato,9,Schiacciata,,,93,51,1,A,3,True,1,
+25403,582,4,05:25,275,47,69,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Assist,,,,,93,51,1,A,3,False,0,581
+25403,583,4,05:24,276,47,69,1763,Dolomiti Energia Trentino,1,,,,,Time Out,,,,,,,0,,,False,0,
+25403,584,4,05:12,288,47,69,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Palla persa,50,Passaggio sbagliato,,,20,51,0,A,6,False,0,
+25403,585,4,05:12,288,47,69,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Palla recuperata,,,,,20,51,0,A,6,False,0,584
+25403,586,4,05:08,292,47,71,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,2 punti segnato,7,Appoggio a canestro,500,contropiede,93,48,1,A,3,True,0,
+25403,587,4,05:08,292,47,71,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Assist,,,500,contropiede,93,48,1,A,3,False,0,586
+25403,588,4,04:54,306,47,71,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,2 punti sbagliato,8,Da penetrazione,,,7,57,0,A,3,False,0,
+25403,589,4,04:54,306,47,71,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Rimbalzo offensivo,,,,,7,57,0,A,3,False,0,588
+25403,590,4,04:47,313,50,71,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,3 punti segnato,1,Tiro in sospensione,,,5,4,0,A,1,False,0,
+25403,591,4,04:47,313,50,71,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Assist,,,,,5,4,0,A,1,False,0,590
+25403,592,4,04:36,324,50,71,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Fallo commesso,100,personale,,,68,75,0,D,8,False,0,
+25403,593,4,04:36,324,50,71,1762,Maxima Roma,0,934,29,Gora,Camara,Fallo Subito,,,,,68,75,0,D,8,False,0,592
+25403,594,4,04:36,324,50,71,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Uscita,,,,,,,,,,False,0,
+25403,595,4,04:36,324,50,71,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Ingresso,,,,,,,,,,False,0,594
+25403,596,4,04:29,331,50,71,1762,Maxima Roma,0,9374,3,Aaron,Holiday,3 punti sbagliato,1,Tiro in sospensione,,,68,81,1,A,8,False,0,
+25403,597,4,04:29,331,50,71,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Rimbalzo difensivo,,,,,68,81,1,A,8,False,0,596
+25403,598,4,04:21,339,50,71,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,3 punti sbagliato,1,Tiro in sospensione,,,14,95,0,A,10,False,0,
+25403,599,4,04:21,339,50,71,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Rimbalzo offensivo,,,,,14,95,0,A,10,False,0,598
+25403,600,4,04:18,342,50,71,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Fallo commesso,106,offensivo,,,31,65,0,A,9,False,0,
+25403,601,4,04:18,342,50,71,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Palla persa,,,,,31,65,0,A,9,False,0,600
+25403,602,4,04:18,342,50,71,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Fallo Subito,,,,,31,65,0,A,9,False,0,600
+25403,603,4,03:59,361,50,71,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Fallo commesso,103,tiro,,,91,67,0,D,2,False,0,
+25403,604,4,03:59,361,50,71,1762,Maxima Roma,0,934,29,Gora,Camara,Fallo Subito,,,,,91,67,0,D,2,False,0,603
+25403,605,4,03:58,362,50,71,1762,Maxima Roma,0,,,,,Time Out,,,,,,,1,,,False,0,
+25403,606,4,03:58,362,50,72,1762,Maxima Roma,0,934,29,Gora,Camara,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,607,4,03:58,362,50,73,1762,Maxima Roma,0,934,29,Gora,Camara,Tiro libero segnato,,,,,,,,A,7,False,0,606
+25403,608,4,03:52,368,50,73,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Palla persa,51,Palleggio,,,32,33,0,A,9,False,0,
+25403,609,4,03:52,368,50,73,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,Palla recuperata,,,,,32,33,0,A,9,False,0,608
+25403,610,4,03:47,373,50,76,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,3 punti segnato,1,Tiro in sospensione,,,84,96,1,A,8,False,0,
+25403,611,4,03:47,373,50,76,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Assist,,,,,84,96,1,A,8,False,0,610
+25403,612,4,03:27,393,50,76,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Palla persa,50,Passaggio sbagliato,,,9,74,0,A,4,False,0,
+25403,613,4,03:27,393,50,76,1762,Maxima Roma,0,774,100,John,Brown,Palla recuperata,,,,,9,74,0,A,4,False,0,612
+25403,614,4,03:20,400,50,76,1762,Maxima Roma,0,9374,3,Aaron,Holiday,2 punti sbagliato,4,Giro e Tiro,,,85,64,1,A,2,False,0,
+25403,615,4,03:20,400,50,76,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Rimbalzo offensivo,,,,,85,64,1,A,2,False,0,614
+25403,616,4,03:16,404,50,76,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Ingresso,,,,,,,,,,False,0,
+25403,617,4,03:16,404,50,76,1763,Dolomiti Energia Trentino,1,9328,8,Quincy,Olivari,Uscita,,,,,,,,,,False,0,616
+25403,618,4,03:14,406,50,79,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,3 punti segnato,1,Tiro in sospensione,,,78,92,1,A,8,False,0,
+25403,619,4,03:14,406,50,79,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Assist,,,,,78,92,1,A,8,False,0,618
+25403,620,4,03:05,415,50,79,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,3 punti sbagliato,1,Tiro in sospensione,,,32,55,0,A,9,False,0,
+25403,621,4,03:05,415,50,79,1762,Maxima Roma,0,934,29,Gora,Camara,Rimbalzo difensivo,,,,,32,55,0,A,9,False,0,620
+25403,622,4,02:47,433,50,79,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,Fallo commesso,100,personale,,,64,49,0,D,9,False,0,
+25403,623,4,02:47,433,50,79,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Fallo Subito,,,,,64,49,0,D,9,False,0,622
+25403,624,4,02:47,433,50,80,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,625,4,02:47,433,50,81,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Tiro libero segnato,,,,,,,,A,7,False,0,624
+25403,626,4,02:35,445,53,81,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,3 punti segnato,1,Tiro in sospensione,,,26,81,0,A,10,False,0,
+25403,627,4,02:35,445,53,81,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Assist,,,,,26,81,0,A,10,False,0,626
+25403,628,4,02:11,469,53,84,1762,Maxima Roma,0,5764,16,Giovanni,Veronesi,3 punti segnato,1,Tiro in sospensione,,,88,95,1,A,8,False,0,
+25403,629,4,02:11,469,53,84,1762,Maxima Roma,0,774,100,John,Brown,Assist,,,,,88,95,1,A,8,False,0,628
+25403,630,4,01:50,490,53,84,1763,Dolomiti Energia Trentino,1,439,5,Alessandro,Bertini,3 punti sbagliato,5,Tiro in Step Back,,,26,19,0,A,8,False,0,
+25403,631,4,01:50,490,53,84,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Rimbalzo offensivo,,,,,26,19,0,A,8,False,0,630
+25403,632,4,01:43,497,56,84,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,3 punti segnato,1,Tiro in sospensione,,,17,94,0,A,10,False,0,
+25403,633,4,01:43,497,56,84,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Assist,,,,,17,94,0,A,10,False,0,632
+25403,634,4,01:42,498,56,84,1762,Maxima Roma,0,9374,3,Aaron,Holiday,Uscita,,,,,,,,,,False,0,
+25403,635,4,01:42,498,56,84,1762,Maxima Roma,0,625,23,Federico,Bonacini,Ingresso,,,,,,,,,,False,0,634
+25403,636,4,01:25,515,56,84,1763,Dolomiti Energia Trentino,1,7449,21,Selom,Mawugbe,Fallo commesso,100,personale,,,91,42,0,D,3,False,0,
+25403,637,4,01:25,515,56,84,1762,Maxima Roma,0,934,29,Gora,Camara,Fallo Subito,,,,,91,42,0,D,3,False,0,636
+25403,638,4,01:25,515,56,84,1762,Maxima Roma,0,9409,8,Francesco,Carnevale,Ingresso,,,,,,,,,,False,0,
+25403,639,4,01:25,515,56,84,1762,Maxima Roma,0,774,100,John,Brown,Uscita,,,,,,,,,,False,0,638
+25403,640,4,01:25,515,56,85,1762,Maxima Roma,0,934,29,Gora,Camara,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,641,4,01:25,515,56,85,1762,Maxima Roma,0,934,29,Gora,Camara,Tiro libero sbagliato,,,,,,,,A,7,False,0,640
+25403,642,4,01:25,515,56,85,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,,,,,,False,0,640
+25403,643,4,01:15,525,59,85,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,3 punti segnato,1,Tiro in sospensione,,,27,25,0,A,8,False,0,
+25403,644,4,01:15,525,59,85,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Assist,,,,,27,25,0,A,8,False,0,643
+25403,645,4,01:02,538,59,85,1762,Maxima Roma,0,9409,8,Francesco,Carnevale,3 punti sbagliato,1,Tiro in sospensione,,,77,87,1,A,8,False,0,
+25403,646,4,01:02,538,59,85,1762,Maxima Roma,0,934,29,Gora,Camara,Rimbalzo offensivo,,,,,77,87,1,A,8,False,0,645
+25403,647,4,00:59,541,59,85,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Fallo commesso,103,tiro,,,90,51,0,D,6,False,0,
+25403,648,4,00:59,541,59,85,1762,Maxima Roma,0,934,29,Gora,Camara,Fallo Subito,,,,,90,51,0,D,6,False,0,647
+25403,649,4,00:59,541,59,86,1762,Maxima Roma,0,934,29,Gora,Camara,Tiro libero segnato,,,,,,,,A,7,False,0,
+25403,650,4,00:59,541,59,86,1762,Maxima Roma,0,934,29,Gora,Camara,Tiro libero sbagliato,,,,,,,,A,7,False,0,649
+25403,651,4,00:59,541,59,86,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,Rimbalzo difensivo,,,,,,,,,,False,0,649
+25403,652,4,00:43,557,59,86,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,3 punti sbagliato,1,Tiro in sospensione,,,29,28,0,A,9,False,0,
+25403,653,4,00:43,557,59,86,1762,Maxima Roma,0,625,23,Federico,Bonacini,Rimbalzo difensivo,,,,,29,28,0,A,9,False,0,652
+25403,654,4,00:29,571,59,88,1762,Maxima Roma,0,934,29,Gora,Camara,2 punti segnato,4,Giro e Tiro,,,89,57,1,A,6,True,0,
+25403,655,4,00:29,571,59,88,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,Assist,,,,,89,57,1,A,6,False,0,654
+25403,656,4,00:16,584,62,88,1763,Dolomiti Energia Trentino,1,9327,24,Isaiah,Bigelow,3 punti segnato,1,Tiro in sospensione,,,25,85,0,A,10,False,0,
+25403,657,4,00:16,584,62,88,1763,Dolomiti Energia Trentino,1,9330,0,Darius,Brown,Assist,,,,,25,85,0,A,10,False,0,656
+25403,658,4,00:03,597,62,88,1762,Maxima Roma,0,76,5,Mirza,Alibegovic,3 punti sbagliato,1,Tiro in sospensione,,,67,64,1,A,9,False,0,
+25403,659,4,00:03,597,62,88,1763,Dolomiti Energia Trentino,1,7279,7,Cheickh,Niang,Rimbalzo difensivo,,,,,67,64,1,A,9,False,0,658
+25403,660,4,00:00,600,62,88,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25407,102,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25407,103,1,09:59,1,0,0,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Palla contesa,,,,,,,1,,,False,0,
+25407,105,1,09:42,18,0,2,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,2 punti segnato,1,Tiro in sospensione,,,84,50,1,A,6,True,0,
+25407,106,1,09:42,18,0,2,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Assist,,,,,84,50,1,A,6,False,0,105
+25407,107,1,09:23,37,0,2,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti sbagliato,1,Tiro in sospensione,,,74,88,1,A,8,False,0,
+25407,108,1,09:23,37,0,2,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Rimbalzo offensivo,,,,,74,88,1,A,8,False,0,107
+25407,109,1,09:17,43,2,2,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,2 punti segnato,9,Schiacciata,,,95,51,1,A,3,True,1,
+25407,110,1,09:17,43,2,2,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Assist,,,,,95,51,1,A,3,False,0,109
+25407,111,1,09:05,55,2,2,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,2 punti sbagliato,11,Gancio,,,12,58,0,A,6,False,0,
+25407,112,1,09:05,55,2,2,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Rimbalzo difensivo,,,,,12,58,0,A,6,False,0,111
+25407,113,1,08:53,67,2,2,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,2 punti sbagliato,1,Tiro in sospensione,,,76,62,1,A,7,False,0,
+25407,114,1,08:53,67,2,2,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo difensivo,,,,,76,62,1,A,7,False,0,113
+25407,115,1,08:37,83,2,2,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,2 punti sbagliato,1,Tiro in sospensione,,,23,44,0,A,7,False,0,
+25407,116,1,08:37,83,2,2,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Rimbalzo difensivo,,,,,23,44,0,A,7,False,0,115
+25407,117,1,08:26,94,2,2,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,3 punti sbagliato,1,Tiro in sospensione,,,76,16,1,A,10,False,0,
+25407,118,1,08:26,94,2,2,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Rimbalzo difensivo,,,,,76,16,1,A,10,False,0,117
+25407,119,1,08:16,104,2,2,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Fallo commesso,103,tiro,,,6,57,1,D,3,False,0,
+25407,120,1,08:16,104,2,2,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Fallo Subito,,,,,6,57,1,D,3,False,0,119
+25407,121,1,08:16,104,2,3,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25407,122,1,08:16,104,2,4,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,121
+25407,123,1,08:16,104,2,4,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Assist,,,,,,,,,,False,0,121
+25407,124,1,07:55,125,2,4,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,2 punti sbagliato,7,Appoggio a canestro,,,93,61,1,A,3,False,0,
+25407,125,1,07:55,125,2,4,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo difensivo,,,,,93,61,1,A,3,False,0,124
+25407,126,1,07:39,141,2,4,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,2 punti sbagliato,1,Tiro in sospensione,,,24,51,0,A,7,False,0,
+25407,127,1,07:39,141,2,4,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Rimbalzo difensivo,,,,,24,51,0,A,7,False,0,126
+25407,128,1,07:31,149,4,4,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,2 punti segnato,9,Schiacciata,500,contropiede,95,51,1,A,3,True,1,
+25407,129,1,07:31,149,4,4,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Assist,,,500,contropiede,95,51,1,A,3,False,0,128
+25407,130,1,07:10,170,4,4,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,3 punti sbagliato,1,Tiro in sospensione,,,12,96,0,A,10,False,0,
+25407,131,1,07:10,170,4,4,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Rimbalzo difensivo,,,,,12,96,0,A,10,False,0,130
+25407,132,1,06:59,181,4,4,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,2 punti sbagliato,1,Tiro in sospensione,,,80,56,1,A,6,False,0,
+25407,133,1,06:59,181,4,4,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Rimbalzo offensivo,,,,,80,56,1,A,6,False,0,132
+25407,134,1,06:44,196,4,4,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,2 punti sbagliato,1,Tiro in sospensione,,,85,52,1,A,6,False,0,
+25407,135,1,06:44,196,4,4,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Rimbalzo difensivo,,,,,85,52,1,A,6,False,0,134
+25407,136,1,06:22,218,4,6,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,2 punti segnato,1,Tiro in sospensione,,,19,45,0,A,6,True,0,
+25407,137,1,06:10,230,4,6,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Fallo commesso,100,personale,,,68,30,0,D,9,False,0,
+25407,138,1,06:10,230,4,6,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Fallo Subito,,,,,68,30,0,D,9,False,0,137
+25407,139,1,06:10,230,4,6,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Ingresso,,,,,,,,,,False,0,
+25407,140,1,06:10,230,4,6,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Uscita,,,,,,,,,,False,0,139
+25407,141,1,05:57,243,4,6,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,3 punti sbagliato,1,Tiro in sospensione,,,75,14,1,A,10,False,0,
+25407,142,1,05:57,243,4,6,1752,Bertram Derthona Tortona,0,,,,,Rimbalzi difensivi di squadra,,,,,75,14,1,A,10,False,0,141
+25407,143,1,05:37,263,4,8,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,2 punti segnato,7,Appoggio a canestro,,,7,58,0,A,3,True,0,
+25407,144,1,05:18,282,4,8,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti sbagliato,1,Tiro in sospensione,,,74,83,1,A,8,False,0,
+25407,145,1,05:18,282,4,8,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo difensivo,,,,,74,83,1,A,8,False,0,144
+25407,146,1,05:14,286,4,8,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Fallo commesso,100,personale,,,64,32,1,A,9,False,0,
+25407,147,1,05:14,286,4,8,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo Subito,,,,,64,32,1,A,9,False,0,146
+25407,148,1,05:02,298,4,8,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Palla persa,50,Passaggio sbagliato,,,16,46,0,A,6,False,0,
+25407,149,1,05:02,298,4,8,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Palla recuperata,,,,,16,46,0,A,6,False,0,148
+25407,150,1,04:57,303,6,8,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,2 punti segnato,2,Tiro in corsa,500,contropiede,94,56,1,A,3,True,0,
+25407,151,1,04:57,303,6,8,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Assist,,,500,contropiede,94,56,1,A,3,False,0,150
+25407,152,1,04:46,314,6,8,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Fallo commesso,100,personale,,,8,64,1,D,4,False,0,
+25407,153,1,04:46,314,6,8,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Fallo Subito,,,,,8,64,1,D,4,False,0,152
+25407,154,1,04:46,314,6,8,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Uscita,,,,,,,,,,False,0,
+25407,155,1,04:46,314,6,8,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Ingresso,,,,,,,,,,False,0,154
+25407,156,1,04:33,327,6,8,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,2 punti sbagliato,11,Gancio,,,13,51,0,A,6,False,0,
+25407,157,1,04:33,327,6,8,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Rimbalzo difensivo,,,,,13,51,0,A,6,False,0,156
+25407,158,1,04:12,348,8,8,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,2 punti segnato,6,Arresto e tiro,,,80,57,1,A,6,True,0,
+25407,159,1,04:12,348,8,8,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Assist,,,,,80,57,1,A,6,False,0,158
+25407,160,1,03:55,365,8,8,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,3 punti sbagliato,1,Tiro in sospensione,,,6,3,0,A,1,False,0,
+25407,161,1,03:55,365,8,8,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Rimbalzo difensivo,,,,,6,3,0,A,1,False,0,160
+25407,162,1,03:45,375,8,8,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Uscita,,,,,,,,,,False,0,
+25407,163,1,03:45,375,8,8,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Ingresso,,,,,,,,,,False,0,162
+25407,164,1,03:45,375,8,8,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Uscita,,,,,,,,,,False,0,162
+25407,165,1,03:45,375,8,8,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Ingresso,,,,,,,,,,False,0,162
+25407,166,1,03:45,375,8,8,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Uscita,,,,,,,,,,False,0,162
+25407,167,1,03:45,375,8,8,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Ingresso,,,,,,,,,,False,0,162
+25407,168,1,03:45,375,8,8,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,Ingresso,,,,,,,,,,False,0,162
+25407,169,1,03:45,375,8,8,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Uscita,,,,,,,,,,False,0,162
+25407,170,1,03:42,378,10,8,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,2 punti segnato,9,Schiacciata,,,95,51,1,A,3,True,1,
+25407,171,1,03:42,378,10,8,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Assist,,,,,95,51,1,A,3,False,0,170
+25407,172,1,03:18,402,10,8,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Palla persa,53,Passi,,,7,45,0,A,3,False,0,
+25407,173,1,03:18,402,10,8,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Ingresso,,,,,,,,,,False,0,
+25407,174,1,03:18,402,10,8,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Uscita,,,,,,,,,,False,0,173
+25407,175,1,03:03,417,10,8,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,2 punti sbagliato,1,Tiro in sospensione,,,88,79,1,A,2,False,0,
+25407,176,1,03:03,417,10,8,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Rimbalzo difensivo,,,,,88,79,1,A,2,False,0,175
+25407,177,1,02:55,425,10,8,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,3 punti sbagliato,1,Tiro in sospensione,,,28,78,0,A,10,False,0,
+25407,178,1,02:55,425,10,8,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Rimbalzo difensivo,,,,,28,78,0,A,10,False,0,177
+25407,179,1,02:42,438,10,8,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,2 punti sbagliato,2,Tiro in corsa,,,92,58,1,A,3,False,0,
+25407,180,1,02:42,438,10,8,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Rimbalzo offensivo,,,,,92,58,1,A,3,False,0,179
+25407,181,1,02:39,441,10,8,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Uscita,,,,,,,,,,False,0,
+25407,182,1,02:39,441,10,8,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Ingresso,,,,,,,,,,False,0,181
+25407,183,1,02:39,441,10,8,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Uscita,,,,,,,,,,False,0,181
+25407,184,1,02:39,441,10,8,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Ingresso,,,,,,,,,,False,0,181
+25407,185,1,02:39,441,10,8,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Fallo commesso,103,tiro,,,92,49,0,D,3,False,0,
+25407,186,1,02:39,441,10,8,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Fallo Subito,,,,,92,49,0,D,3,False,0,185
+25407,187,1,02:39,441,11,8,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,188,1,02:39,441,12,8,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Tiro libero segnato,,,,,,,,A,7,False,0,187
+25407,189,1,02:24,456,12,10,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,2 punti segnato,9,Schiacciata,,,5,50,0,A,3,True,1,
+25407,190,1,02:24,456,12,10,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Assist,,,,,5,50,0,A,3,False,0,189
+25407,191,1,02:05,475,12,10,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,2 punti sbagliato,1,Tiro in sospensione,,,88,56,1,A,6,False,0,
+25407,192,1,02:05,475,12,10,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Rimbalzo difensivo,,,,,88,56,1,A,6,False,0,191
+25407,193,1,01:56,484,12,10,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,3 punti sbagliato,1,Tiro in sospensione,,,29,75,0,A,10,False,0,
+25407,194,1,01:56,484,12,10,1752,Bertram Derthona Tortona,0,,,,,Rimbalzi offensivi di squadra,,,,,29,75,0,A,10,False,0,193
+25407,195,1,01:53,487,12,10,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Fallo commesso,100,personale,,,14,51,1,D,6,False,0,
+25407,196,1,01:53,487,12,10,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Fallo Subito,,,,,14,51,1,D,6,False,0,195
+25407,197,1,01:53,487,12,10,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Ingresso,,,,,,,,,,False,0,
+25407,198,1,01:53,487,12,10,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Uscita,,,,,,,,,,False,0,197
+25407,199,1,01:42,498,12,10,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo commesso,103,tiro,,,6,57,1,D,3,False,0,
+25407,200,1,01:42,498,12,10,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Fallo Subito,,,,,6,57,1,D,3,False,0,199
+25407,201,1,01:42,498,12,11,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,202,1,01:42,498,12,12,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Tiro libero segnato,,,,,,,,A,7,False,0,201
+25407,203,1,01:29,511,14,12,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,2 punti segnato,8,Da penetrazione,,,94,56,1,A,3,True,0,
+25407,204,1,01:14,526,14,12,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Palla persa,50,Passaggio sbagliato,,,18,48,0,A,6,False,0,
+25407,205,1,01:14,526,14,12,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Palla recuperata,,,,,18,48,0,A,6,False,0,204
+25407,206,1,00:54,546,17,12,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,3 punti segnato,1,Tiro in sospensione,,,77,89,1,A,8,False,0,
+25407,207,1,00:54,546,17,12,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Assist,,,,,77,89,1,A,8,False,0,206
+25407,208,1,00:31,569,17,12,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Fallo commesso,100,personale,,,27,32,1,D,7,False,0,
+25407,209,1,00:31,569,17,12,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Fallo Subito,,,,,27,32,1,D,7,False,0,208
+25407,210,1,00:31,569,17,12,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Uscita,,,,,,,,,,False,0,
+25407,211,1,00:31,569,17,12,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Ingresso,,,,,,,,,,False,0,210
+25407,212,1,00:31,569,17,13,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,213,1,00:31,569,17,14,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Tiro libero segnato,,,,,,,,A,7,False,0,212
+25407,214,1,00:31,569,17,14,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Uscita,,,,,,,,,,False,0,
+25407,215,1,00:31,569,17,14,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Ingresso,,,,,,,,,,False,0,214
+25407,216,1,00:08,592,19,14,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,2 punti segnato,6,Arresto e tiro,,,79,84,1,A,7,False,0,
+25407,217,1,00:01,599,19,14,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,33,25,0,A,8,False,0,
+25407,218,1,00:00,600,19,14,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25407,219,2,10:00,0,19,14,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Uscita,,,,,,,,,,False,0,
+25407,220,2,10:00,0,19,14,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Ingresso,,,,,,,,,,False,0,219
+25407,221,2,10:00,0,19,14,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Uscita,,,,,,,,,,False,0,219
+25407,222,2,10:00,0,19,14,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Ingresso,,,,,,,,,,False,0,219
+25407,223,2,10:00,0,19,14,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25407,224,2,09:48,12,21,14,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,2 punti segnato,8,Da penetrazione,,,94,46,1,A,3,True,0,
+25407,225,2,09:48,12,21,14,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Fallo commesso,103,tiro,,,94,46,0,D,3,False,0,
+25407,226,2,09:48,12,21,14,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Fallo Subito,,,,,94,46,0,D,3,False,0,225
+25407,227,2,09:48,12,22,14,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,228,2,09:25,35,22,14,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,2 punti sbagliato,4,Giro e Tiro,,,10,21,0,A,2,False,0,
+25407,229,2,09:25,35,22,14,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Rimbalzo difensivo,,,,,10,21,0,A,2,False,0,228
+25407,230,2,09:09,51,24,14,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,2 punti segnato,8,Da penetrazione,,,93,57,1,A,3,True,0,
+25407,231,2,09:09,51,24,14,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Assist,,,,,93,57,1,A,3,False,0,230
+25407,232,2,08:57,63,24,14,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,3 punti sbagliato,1,Tiro in sospensione,,,5,4,0,A,1,False,0,
+25407,233,2,08:57,63,24,14,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Rimbalzo difensivo,,,,,5,4,0,A,1,False,0,232
+25407,234,2,08:40,80,26,14,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,2 punti segnato,6,Arresto e tiro,,,94,81,1,A,2,False,0,
+25407,235,2,08:40,80,26,14,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Assist,,,,,94,81,1,A,2,False,0,234
+25407,236,2,08:40,80,26,14,1752,Bertram Derthona Tortona,0,,,,,Time Out,,,,,,,0,,,False,0,
+25407,237,2,08:24,96,26,14,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,2 punti sbagliato,7,Appoggio a canestro,,,11,65,0,A,4,False,0,
+25407,238,2,08:24,96,26,14,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Rimbalzo difensivo,,,,,11,65,0,A,4,False,0,237
+25407,239,2,08:05,115,26,14,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,2 punti sbagliato,11,Gancio,,,90,54,1,A,6,False,0,
+25407,240,2,08:05,115,26,14,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Rimbalzo difensivo,,,,,90,54,1,A,6,False,0,239
+25407,241,2,07:55,125,26,14,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Fallo commesso,100,personale,,,19,43,1,D,6,False,0,
+25407,242,2,07:55,125,26,14,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Fallo Subito,,,,,19,43,1,D,6,False,0,241
+25407,243,2,07:55,125,26,14,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Ingresso,,,,,,,,,,False,0,
+25407,244,2,07:55,125,26,14,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Uscita,,,,,,,,,,False,0,243
+25407,245,2,07:53,127,26,17,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,3 punti segnato,1,Tiro in sospensione,,,22,12,0,A,8,False,0,
+25407,246,2,07:53,127,26,17,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Assist,,,,,22,12,0,A,8,False,0,245
+25407,247,2,07:31,149,26,17,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,3 punti sbagliato,1,Tiro in sospensione,,,88,97,1,A,8,False,0,
+25407,248,2,07:31,149,26,17,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Rimbalzo difensivo,,,,,88,97,1,A,8,False,0,247
+25407,249,2,07:26,154,26,17,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Palla persa,50,Passaggio sbagliato,,,65,65,0,D,9,False,0,
+25407,250,2,07:26,154,26,17,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Uscita,,,,,,,,,,False,0,
+25407,251,2,07:26,154,26,17,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Ingresso,,,,,,,,,,False,0,250
+25407,252,2,07:23,157,26,17,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Fallo commesso,100,personale,,,68,80,0,D,8,False,0,
+25407,253,2,07:23,157,26,17,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,68,80,0,D,8,False,0,252
+25407,254,2,07:15,165,28,17,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,2 punti segnato,7,Appoggio a canestro,,,94,45,1,A,3,True,0,
+25407,255,2,07:15,165,28,17,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Assist,,,,,94,45,1,A,3,False,0,254
+25407,256,2,07:15,165,28,17,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Fallo commesso,103,tiro,,,94,45,0,D,3,False,0,
+25407,257,2,07:15,165,28,17,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Fallo Subito,,,,,94,45,0,D,3,False,0,256
+25407,258,2,07:15,165,28,17,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25407,259,2,07:15,165,28,17,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Rimbalzo difensivo,,,,,,,,,,False,0,258
+25407,260,2,07:04,176,28,17,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Ingresso,,,,,,,,,,False,0,
+25407,261,2,07:04,176,28,17,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Uscita,,,,,,,,,,False,0,260
+25407,262,2,06:56,184,28,17,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,3 punti sbagliato,1,Tiro in sospensione,,,25,13,0,A,8,False,0,
+25407,263,2,06:56,184,28,17,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Rimbalzo difensivo,,,,,25,13,0,A,8,False,0,262
+25407,264,2,06:30,210,28,17,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,2 punti sbagliato,1,Tiro in sospensione,,,75,77,1,A,7,False,0,
+25407,265,2,06:30,210,28,17,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Rimbalzo difensivo,,,,,75,77,1,A,7,False,0,264
+25407,266,2,06:26,214,28,17,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Fallo commesso,100,personale,,,90,46,1,A,6,False,0,
+25407,267,2,06:26,214,28,17,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Fallo Subito,,,,,90,46,1,A,6,False,0,266
+25407,268,2,06:26,214,28,17,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Uscita,,,,,,,,,,False,0,
+25407,269,2,06:26,214,28,17,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Ingresso,,,,,,,,,,False,0,268
+25407,270,2,06:26,214,28,17,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Ingresso,,,,,,,,,,False,0,268
+25407,271,2,06:26,214,28,17,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,Uscita,,,,,,,,,,False,0,268
+25407,272,2,06:26,214,28,17,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Ingresso,,,,,,,,,,False,0,268
+25407,273,2,06:26,214,28,17,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Uscita,,,,,,,,,,False,0,268
+25407,274,2,06:13,227,28,17,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Fallo commesso,103,tiro,,,12,45,1,D,6,False,0,
+25407,275,2,06:13,227,28,17,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Fallo Subito,,,,,12,45,1,D,6,False,0,274
+25407,276,2,06:13,227,28,18,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,277,2,06:13,227,28,18,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Tiro libero sbagliato,,,,,,,,A,7,False,0,276
+25407,278,2,06:13,227,28,18,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Assist,,,,,,,,,,False,0,276
+25407,279,2,06:13,227,28,18,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Rimbalzo difensivo,,,,,,,,,,False,0,276
+25407,280,2,06:01,239,28,18,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Palla persa,50,Passaggio sbagliato,,,91,61,1,A,3,False,0,
+25407,281,2,06:01,239,28,18,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Palla recuperata,,,,,91,61,1,A,3,False,0,280
+25407,282,2,05:54,246,28,20,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,2 punti segnato,8,Da penetrazione,,,6,56,0,A,3,True,0,
+25407,283,2,05:53,247,28,20,1771,APU Old Wild West Udine,1,,,,,Time Out,,,,,,,1,,,False,0,
+25407,284,2,05:41,259,30,20,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,2 punti segnato,8,Da penetrazione,,,94,38,1,A,3,True,0,
+25407,285,2,05:25,275,30,23,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,3 punti segnato,1,Tiro in sospensione,,,36,51,0,A,9,False,0,
+25407,286,2,05:25,275,30,23,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Assist,,,,,36,51,0,A,9,False,0,285
+25407,287,2,05:03,297,30,23,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Fallo commesso,100,personale,,,69,73,0,D,9,False,0,
+25407,288,2,05:03,297,30,23,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,69,73,0,D,9,False,0,287
+25407,289,2,04:58,302,30,23,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,94,43,1,A,3,False,0,
+25407,290,2,04:58,302,30,23,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Stoppata,,,,,94,43,1,A,3,False,0,289
+25407,291,2,04:58,302,30,23,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Stoppata subita,,,,,94,43,1,A,3,False,0,289
+25407,292,2,04:58,302,30,23,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Rimbalzo difensivo,,,,,94,43,1,A,3,False,0,289
+25407,293,2,04:50,310,30,26,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,3 punti segnato,1,Tiro in sospensione,,,21,93,0,A,10,False,0,
+25407,294,2,04:30,330,30,26,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,2 punti sbagliato,8,Da penetrazione,1003,tip-in appoggio canestro made,92,47,1,A,3,False,0,
+25407,295,2,04:30,330,30,26,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Rimbalzo offensivo,,,,,92,47,1,A,3,False,0,294
+25407,296,2,04:30,330,32,26,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,2 punti segnato,7,Appoggio a canestro,,,92,47,1,A,3,True,0,
+25407,297,2,04:20,340,32,26,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,2 punti sbagliato,8,Da penetrazione,,,8,56,0,A,3,False,0,
+25407,298,2,04:20,340,32,26,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Rimbalzo difensivo,,,,,8,56,0,A,3,False,0,297
+25407,299,2,04:04,356,35,26,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti segnato,1,Tiro in sospensione,,,67,57,1,A,9,False,0,
+25407,300,2,03:46,374,35,26,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Palla persa,50,Passaggio sbagliato,,,39,43,0,A,9,False,0,
+25407,301,2,03:46,374,35,26,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Palla recuperata,,,,,39,43,0,A,9,False,0,300
+25407,302,2,03:35,385,35,26,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,2 punti sbagliato,7,Appoggio a canestro,,,94,41,1,A,3,False,0,
+25407,303,2,03:35,385,35,26,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Rimbalzo difensivo,,,,,94,41,1,A,3,False,0,302
+25407,304,2,03:28,392,35,29,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,3 punti segnato,1,Tiro in sospensione,,,27,15,0,A,8,False,0,
+25407,305,2,03:28,392,35,29,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Assist,,,,,27,15,0,A,8,False,0,304
+25407,306,2,03:11,409,35,29,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti sbagliato,1,Tiro in sospensione,,,72,88,1,A,8,False,0,
+25407,307,2,03:11,409,35,29,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Rimbalzo difensivo,,,,,72,88,1,A,8,False,0,306
+25407,308,2,03:02,418,35,29,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Fallo commesso,100,personale,,,6,71,1,D,4,False,0,
+25407,309,2,03:02,418,35,29,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Fallo Subito,,,,,6,71,1,D,4,False,0,308
+25407,310,2,03:02,418,35,29,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Uscita,,,,,,,,,,False,0,
+25407,311,2,03:02,418,35,29,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Ingresso,,,,,,,,,,False,0,310
+25407,312,2,03:02,418,35,29,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Ingresso,,,,,,,,,,False,0,310
+25407,313,2,03:02,418,35,29,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Uscita,,,,,,,,,,False,0,310
+25407,314,2,03:02,418,35,29,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Ingresso,,,,,,,,,,False,0,310
+25407,315,2,03:02,418,35,29,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Uscita,,,,,,,,,,False,0,310
+25407,316,2,03:02,418,35,29,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Ingresso,,,,,,,,,,False,0,310
+25407,317,2,03:02,418,35,29,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Uscita,,,,,,,,,,False,0,310
+25407,318,2,03:00,420,35,29,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,2 punti sbagliato,1,Tiro in sospensione,,,6,85,0,A,4,False,0,
+25407,319,2,03:00,420,35,29,1752,Bertram Derthona Tortona,0,,,,,Rimbalzi offensivi di squadra,,,,,6,85,0,A,4,False,0,318
+25407,320,2,02:52,428,35,29,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Palla persa,50,Passaggio sbagliato,,,15,51,0,A,6,False,0,
+25407,321,2,02:52,428,35,29,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Palla recuperata,,,,,15,51,0,A,6,False,0,320
+25407,322,2,02:34,446,35,29,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Palla persa,53,Passi,,,71,83,1,A,8,False,0,
+25407,323,2,02:34,446,35,29,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Uscita,,,,,,,,,,False,0,
+25407,324,2,02:34,446,35,29,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,Ingresso,,,,,,,,,,False,0,323
+25407,325,2,02:17,463,35,29,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,2 punti sbagliato,11,Gancio,,,14,55,0,A,6,False,0,
+25407,326,2,02:17,463,35,29,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Rimbalzo difensivo,,,,,14,55,1,D,6,False,0,325
+25407,327,2,01:53,487,35,29,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,2 punti sbagliato,8,Da penetrazione,,,94,59,1,A,3,False,0,
+25407,328,2,01:53,487,35,29,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Rimbalzo offensivo,,,,,94,59,1,A,3,False,0,327
+25407,329,2,01:47,493,35,29,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,3 punti sbagliato,1,Tiro in sospensione,,,72,26,1,A,9,False,0,
+25407,330,2,01:47,493,35,29,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Rimbalzo difensivo,,,,,72,26,1,A,9,False,0,329
+25407,331,2,01:38,502,35,29,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Fallo commesso,103,tiro,,,7,58,1,D,3,False,0,
+25407,332,2,01:38,502,35,29,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Fallo Subito,,,,,7,58,1,D,3,False,0,331
+25407,333,2,01:38,502,35,29,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Ingresso,,,,,,,,,,False,0,
+25407,334,2,01:38,502,35,29,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Uscita,,,,,,,,,,False,0,333
+25407,335,2,01:38,502,35,29,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Ingresso,,,,,,,,,,False,0,333
+25407,336,2,01:38,502,35,29,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,Uscita,,,,,,,,,,False,0,333
+25407,337,2,01:38,502,35,29,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Tiro libero sbagliato,500,contropiede,,,,,,A,7,False,0,
+25407,338,2,01:38,502,35,30,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,337
+25407,339,2,01:38,502,35,30,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Assist,,,,,,,,,,False,0,337
+25407,340,2,01:21,519,35,30,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,3 punti sbagliato,1,Tiro in sospensione,,,74,20,1,A,10,False,0,
+25407,341,2,01:21,519,35,30,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Rimbalzo difensivo,,,,,74,20,1,A,10,False,0,340
+25407,342,2,01:18,522,35,30,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Fallo commesso,100,personale,,,84,61,1,A,6,False,0,
+25407,343,2,01:18,522,35,30,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Fallo Subito,,,,,84,61,1,A,6,False,0,342
+25407,344,2,01:18,522,35,30,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25407,345,2,01:18,522,35,31,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Tiro libero segnato,,,,,,,,A,7,False,0,344
+25407,346,2,01:05,535,37,31,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,2 punti segnato,7,Appoggio a canestro,,,94,45,1,A,3,True,0,
+25407,347,2,01:05,535,37,31,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Assist,,,,,94,45,1,A,3,False,0,346
+25407,348,2,00:45,555,37,31,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,2 punti sbagliato,1,Tiro in sospensione,,,24,46,0,A,7,False,0,
+25407,349,2,00:45,555,37,31,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Rimbalzo difensivo,,,,,24,46,0,A,7,False,0,348
+25407,350,2,00:39,561,37,31,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Fallo commesso,103,tiro,,,92,44,0,D,3,False,0,
+25407,351,2,00:39,561,37,31,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Fallo Subito,,,,,92,44,0,D,3,False,0,350
+25407,352,2,00:39,561,37,31,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,Ingresso,,,,,,,,,,False,0,
+25407,353,2,00:39,561,37,31,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Uscita,,,,,,,,,,False,0,352
+25407,354,2,00:39,561,37,31,1752,Bertram Derthona Tortona,0,,,,,Time Out,,,,,,,0,,,False,0,
+25407,355,2,00:39,561,37,31,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Tiro libero sbagliato,500,contropiede,,,,,,A,7,False,0,
+25407,356,2,00:39,561,38,31,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,355
+25407,357,2,00:34,566,38,31,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,2 punti sbagliato,8,Da penetrazione,,,7,43,0,A,3,False,0,
+25407,358,2,00:34,566,38,31,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Rimbalzo difensivo,,,,,7,43,0,A,3,False,0,357
+25407,359,2,00:19,581,40,31,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,2 punti segnato,8,Da penetrazione,,,92,49,1,A,3,True,0,
+25407,360,2,00:01,599,40,33,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,2 punti segnato,7,Appoggio a canestro,,,6,44,0,A,3,True,0,
+25407,361,2,00:01,599,40,33,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Fallo commesso,103,tiro,,,6,44,1,D,3,False,0,
+25407,362,2,00:01,599,40,33,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo Subito,,,,,6,44,1,D,3,False,0,361
+25407,363,2,00:01,599,40,33,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25407,364,2,00:01,599,40,33,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Rimbalzo difensivo,,,,,,,,,,False,0,363
+25407,365,2,00:00,600,40,33,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25407,366,3,10:00,0,40,33,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Ingresso,,,,,,,,,,False,0,
+25407,367,3,10:00,0,40,33,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Uscita,,,,,,,,,,False,0,366
+25407,368,3,10:00,0,40,33,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Ingresso,,,,,,,,,,False,0,366
+25407,369,3,10:00,0,40,33,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Uscita,,,,,,,,,,False,0,366
+25407,370,3,10:00,0,40,33,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,Uscita,,,,,,,,,,False,0,366
+25407,371,3,10:00,0,40,33,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Ingresso,,,,,,,,,,False,0,366
+25407,372,3,10:00,0,40,33,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Uscita,,,,,,,,,,False,0,366
+25407,373,3,10:00,0,40,33,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Ingresso,,,,,,,,,,False,0,366
+25407,374,3,10:00,0,40,33,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25407,375,3,09:45,15,40,33,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,3 punti sbagliato,1,Tiro in sospensione,,,73,80,1,A,8,False,0,
+25407,376,3,09:45,15,40,33,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo offensivo,,,,,73,80,1,A,8,False,0,375
+25407,377,3,09:30,30,40,33,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,3 punti sbagliato,1,Tiro in sospensione,,,76,15,1,A,10,False,0,
+25407,378,3,09:30,30,40,33,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo offensivo,,,,,76,15,1,A,10,False,0,377
+25407,379,3,09:22,38,40,33,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,3 punti sbagliato,1,Tiro in sospensione,,,83,93,1,A,8,False,0,
+25407,380,3,09:22,38,40,33,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Rimbalzo difensivo,,,,,83,93,1,A,8,False,0,379
+25407,381,3,08:56,64,40,33,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,3 punti sbagliato,1,Tiro in sospensione,1006,violazione 24sec,34,79,0,A,10,False,0,
+25407,382,3,08:56,64,40,33,1771,APU Old Wild West Udine,1,,,,,Palle perse di squadra,1006,violazione 24sec,,,34,79,0,A,10,False,0,
+25407,383,3,08:46,74,40,33,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Palla persa,50,Passaggio sbagliato,,,73,76,1,A,8,False,0,
+25407,384,3,08:46,74,40,33,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Palla recuperata,,,,,73,76,1,A,8,False,0,383
+25407,385,3,08:40,80,40,33,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,2 punti sbagliato,7,Appoggio a canestro,,,6,56,0,A,3,False,0,
+25407,386,3,08:40,80,40,33,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo difensivo,,,,,6,56,0,A,3,False,0,385
+25407,387,3,08:32,88,40,33,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Fallo commesso,103,tiro,,,92,42,0,D,3,False,0,
+25407,388,3,08:32,88,40,33,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Fallo Subito,,,,,92,42,0,D,3,False,0,387
+25407,389,3,08:32,88,40,34,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,390,3,08:32,88,40,35,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Tiro libero segnato,,,,,,,,A,7,False,0,389
+25407,391,3,08:16,104,42,35,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,2 punti segnato,8,Da penetrazione,,,9,55,0,A,3,True,0,
+25407,392,3,07:54,126,42,37,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,2 punti segnato,8,Da penetrazione,,,91,49,1,A,3,True,0,
+25407,393,3,07:28,152,45,37,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,3 punti segnato,1,Tiro in sospensione,,,33,43,0,A,9,False,0,
+25407,394,3,07:16,164,45,39,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,2 punti segnato,6,Arresto e tiro,,,77,49,1,A,7,False,0,
+25407,395,3,06:58,182,45,39,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti sbagliato,1,Tiro in sospensione,,,27,83,0,A,10,False,0,
+25407,396,3,06:58,182,45,39,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo difensivo,,,,,27,83,0,A,10,False,0,395
+25407,397,3,06:42,198,45,41,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,2 punti segnato,8,Da penetrazione,,,93,62,1,A,2,True,0,
+25407,398,3,06:23,217,45,41,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,3 punti sbagliato,1,Tiro in sospensione,,,26,11,0,A,8,False,0,
+25407,399,3,06:23,217,45,41,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo difensivo,,,,,26,11,0,A,8,False,0,398
+25407,400,3,06:04,236,45,43,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,2 punti segnato,8,Da penetrazione,,,94,44,1,A,3,True,0,
+25407,401,3,06:04,236,45,43,1771,APU Old Wild West Udine,1,,,,,Time Out,,,,,,,0,,,False,0,
+25407,402,3,06:04,236,45,43,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Uscita,,,,,,,,,,False,0,
+25407,403,3,06:04,236,45,43,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Ingresso,,,,,,,,,,False,0,402
+25407,404,3,06:04,236,45,43,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Ingresso,,,,,,,,,,False,0,402
+25407,405,3,06:04,236,45,43,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Uscita,,,,,,,,,,False,0,402
+25407,406,3,05:56,244,45,43,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Palla persa,50,Passaggio sbagliato,,,32,29,0,A,9,False,0,
+25407,407,3,05:56,244,45,43,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Palla recuperata,,,,,32,29,0,A,9,False,0,406
+25407,408,3,05:52,248,45,45,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,2 punti segnato,9,Schiacciata,500,contropiede,95,51,1,A,3,True,1,
+25407,409,3,05:29,271,45,45,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo commesso,100,personale,,,31,59,1,D,9,False,0,
+25407,410,3,05:29,271,45,45,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,31,59,1,D,9,False,0,409
+25407,411,3,05:26,274,45,45,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Fallo commesso,100,personale,,,20,75,1,D,4,False,0,
+25407,412,3,05:26,274,45,45,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Fallo Subito,,,,,20,75,1,D,4,False,0,411
+25407,413,3,05:17,283,45,45,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo commesso,103,tiro,,,9,34,1,D,2,False,0,
+25407,414,3,05:17,283,45,45,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,9,34,1,D,2,False,0,413
+25407,415,3,05:17,283,46,45,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,416,3,05:17,283,46,45,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Tiro libero sbagliato,,,,,,,,A,7,False,0,415
+25407,417,3,05:17,283,46,45,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Rimbalzo difensivo,,,,,,,,,,False,0,415
+25407,418,3,05:01,299,46,48,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,3 punti segnato,1,Tiro in sospensione,,,69,37,1,A,9,False,0,
+25407,419,3,04:44,316,46,48,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Fallo commesso,106,offensivo,,,29,79,0,A,10,False,0,
+25407,420,3,04:44,316,46,48,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Palla persa,,,,,29,79,0,A,10,False,0,419
+25407,421,3,04:44,316,46,48,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Fallo Subito,,,,,29,79,0,A,10,False,0,419
+25407,422,3,04:44,316,46,48,1771,APU Old Wild West Udine,1,6653,6,Skylar,Spencer,Uscita,,,,,,,,,,False,0,
+25407,423,3,04:44,316,46,48,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Ingresso,,,,,,,,,,False,0,422
+25407,424,3,04:33,327,46,48,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Uscita,,,,,,,,,,False,0,
+25407,425,3,04:33,327,46,48,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Ingresso,,,,,,,,,,False,0,424
+25407,426,3,04:24,336,46,50,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,2 punti segnato,6,Arresto e tiro,,,84,52,1,A,6,True,0,
+25407,427,3,04:05,355,46,50,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,3 punti sbagliato,1,Tiro in sospensione,,,15,97,0,A,10,False,0,
+25407,428,3,04:05,355,46,50,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Rimbalzo difensivo,,,,,15,97,0,A,10,False,0,427
+25407,429,3,03:59,361,46,50,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo commesso,100,personale,,,65,75,0,D,8,False,0,
+25407,430,3,03:59,361,46,50,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo Subito,,,,,65,75,0,D,8,False,0,429
+25407,431,3,03:59,361,46,50,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Ingresso,,,,,,,,,,False,0,
+25407,432,3,03:59,361,46,50,1771,APU Old Wild West Udine,1,7391,45,Denzel,Valentine,Uscita,,,,,,,,,,False,0,431
+25407,433,3,03:51,369,46,50,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo commesso,106,offensivo,,,76,63,1,A,7,False,0,
+25407,434,3,03:51,369,46,50,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Palla persa,,,,,76,63,1,A,7,False,0,433
+25407,435,3,03:51,369,46,50,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,76,63,1,A,7,False,0,433
+25407,436,3,03:51,369,46,50,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,Ingresso,,,,,,,,,,False,0,
+25407,437,3,03:51,369,46,50,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Uscita,,,,,,,,,,False,0,436
+25407,438,3,03:32,388,46,50,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Fallo commesso,100,personale,,,45,40,1,D,9,False,0,
+25407,439,3,03:32,388,46,50,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Fallo Subito,,,,,45,40,1,D,9,False,0,438
+25407,440,3,03:32,388,46,50,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25407,441,3,03:32,388,47,50,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Tiro libero segnato,,,,,,,,A,7,False,0,440
+25407,442,3,03:14,406,47,50,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,2 punti sbagliato,8,Da penetrazione,,,88,53,1,A,6,False,0,
+25407,443,3,03:14,406,47,50,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Rimbalzo difensivo,,,,,88,53,1,A,6,False,0,442
+25407,444,3,03:03,417,47,50,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Palla persa,50,Passaggio sbagliato,,,19,50,0,A,6,False,0,
+25407,445,3,03:03,417,47,50,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Palla recuperata,,,,,19,50,0,A,6,False,0,444
+25407,446,3,02:57,423,47,52,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,2 punti segnato,7,Appoggio a canestro,500,contropiede,93,46,1,A,3,True,0,
+25407,447,3,02:57,423,47,52,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Assist,,,,,93,46,1,A,3,False,0,446
+25407,448,3,02:40,440,49,52,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,2 punti segnato,8,Da penetrazione,,,10,57,0,A,6,True,0,
+25407,449,3,02:24,456,49,52,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,2 punti sbagliato,1,Tiro in sospensione,,,81,62,1,A,2,False,0,
+25407,450,3,02:24,456,49,52,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Rimbalzo difensivo,,,,,81,62,1,A,2,False,0,449
+25407,451,3,02:08,472,51,52,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,2 punti segnato,6,Arresto e tiro,,,23,51,0,A,7,False,0,
+25407,452,3,01:51,489,51,52,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,2 punti sbagliato,7,Appoggio a canestro,,,94,46,1,A,3,False,0,
+25407,453,3,01:51,489,51,52,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Rimbalzo difensivo,,,,,94,46,1,A,3,False,0,452
+25407,454,3,01:44,496,53,52,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,2 punti segnato,2,Tiro in corsa,500,contropiede,6,55,0,A,3,True,0,
+25407,455,3,01:31,509,53,52,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Fallo commesso,100,personale,,,70,28,0,D,9,False,0,
+25407,456,3,01:31,509,53,52,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Fallo Subito,,,,,70,28,0,D,9,False,0,455
+25407,457,3,01:31,509,53,52,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Uscita,,,,,,,,,,False,0,
+25407,458,3,01:31,509,53,52,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Ingresso,,,,,,,,,,False,0,457
+25407,459,3,01:31,509,53,52,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Uscita,,,,,,,,,,False,0,457
+25407,460,3,01:31,509,53,52,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Ingresso,,,,,,,,,,False,0,457
+25407,461,3,01:31,509,53,52,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Uscita,,,,,,,,,,False,0,457
+25407,462,3,01:31,509,53,52,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Ingresso,,,,,,,,,,False,0,457
+25407,463,3,01:19,521,53,52,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,3 punti sbagliato,1,Tiro in sospensione,,,69,35,1,A,9,False,0,
+25407,464,3,01:19,521,53,52,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Rimbalzo offensivo,,,,,69,35,1,A,9,False,0,463
+25407,465,3,01:16,524,53,52,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Palla persa,53,Passi,,,86,48,1,A,6,False,0,
+25407,466,3,01:16,524,53,52,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Ingresso,,,,,,,,,,False,0,
+25407,467,3,01:16,524,53,52,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Uscita,,,,,,,,,,False,0,466
+25407,468,3,01:05,535,53,52,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Fallo commesso,100,personale,,,27,68,1,D,7,False,0,
+25407,469,3,01:05,535,53,52,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,27,68,1,D,7,False,0,468
+25407,470,3,01:05,535,54,52,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,471,3,01:05,535,55,52,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Tiro libero segnato,,,,,,,,A,7,False,0,470
+25407,472,3,00:45,555,55,52,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,3 punti sbagliato,1,Tiro in sospensione,,,76,16,1,A,10,False,0,
+25407,473,3,00:45,555,55,52,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Rimbalzo difensivo,,,,,76,16,1,A,10,False,0,472
+25407,474,3,00:28,572,55,52,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,3 punti sbagliato,1,Tiro in sospensione,,,31,60,0,A,9,False,0,
+25407,475,3,00:28,572,55,52,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Rimbalzo difensivo,,,,,31,60,0,A,9,False,0,474
+25407,476,3,00:12,588,55,52,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Fallo commesso,100,personale,,,68,62,0,D,9,False,0,
+25407,477,3,00:12,588,55,52,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Fallo Subito,,,,,68,62,0,D,9,False,0,476
+25407,478,3,00:12,588,55,53,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,479,3,00:12,588,55,53,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Tiro libero sbagliato,,,,,,,,A,7,False,0,478
+25407,480,3,00:12,588,55,53,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Rimbalzo difensivo,,,,,,,,,,False,0,478
+25407,481,3,00:05,595,55,53,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Fallo commesso,100,personale,,,37,59,1,D,9,False,0,
+25407,482,3,00:05,595,55,53,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,37,59,1,D,9,False,0,481
+25407,483,3,00:05,595,55,53,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Ingresso,,,,,,,,,,False,0,
+25407,484,3,00:05,595,55,53,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Uscita,,,,,,,,,,False,0,483
+25407,485,3,00:05,595,56,53,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,486,3,00:05,595,57,53,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Tiro libero segnato,,,,,,,,A,7,False,0,485
+25407,487,3,00:05,595,57,53,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Uscita,,,,,,,,,,False,0,
+25407,488,3,00:05,595,57,53,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,Ingresso,,,,,,,,,,False,0,487
+25407,489,3,00:05,595,57,53,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Ingresso,,,,,,,,,,False,0,487
+25407,490,3,00:05,595,57,53,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Uscita,,,,,,,,,,False,0,487
+25407,491,3,00:01,599,57,53,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,2 punti sbagliato,2,Tiro in corsa,1007,nessun rimbalzo,88,59,1,A,6,False,0,
+25407,492,3,00:00,600,57,53,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25407,493,4,10:00,0,57,53,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Uscita,,,,,,,,,,False,0,
+25407,494,4,10:00,0,57,53,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Ingresso,,,,,,,,,,False,0,493
+25407,495,4,10:00,0,57,53,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Ingresso,,,,,,,,,,False,0,493
+25407,496,4,10:00,0,57,53,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,Uscita,,,,,,,,,,False,0,493
+25407,497,4,10:00,0,57,53,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Uscita,,,,,,,,,,False,0,493
+25407,498,4,10:00,0,57,53,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Ingresso,,,,,,,,,,False,0,493
+25407,499,4,10:00,0,57,53,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25407,500,4,09:45,15,57,53,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,2 punti sbagliato,8,Da penetrazione,,,6,43,0,A,3,False,0,
+25407,501,4,09:45,15,57,53,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Rimbalzo difensivo,,,,,6,43,0,A,3,False,0,500
+25407,502,4,09:38,22,57,53,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo commesso,100,personale,,,91,71,0,D,2,False,0,
+25407,503,4,09:38,22,57,53,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Fallo Subito,,,,,91,71,0,D,2,False,0,502
+25407,504,4,09:36,24,57,55,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,2 punti segnato,1,Tiro in sospensione,,,93,78,1,A,2,False,0,
+25407,505,4,09:36,24,57,55,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Assist,,,,,93,78,1,A,2,False,0,504
+25407,506,4,09:11,49,57,55,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Fallo commesso,103,tiro,,,10,47,1,D,6,False,0,
+25407,507,4,09:11,49,57,55,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Fallo Subito,,,,,10,47,1,D,6,False,0,506
+25407,508,4,09:11,49,58,55,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,509,4,09:11,49,59,55,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Tiro libero segnato,,,,,,,,A,7,False,0,508
+25407,510,4,09:11,49,59,55,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Assist,,,,,,,,,,False,0,508
+25407,512,4,08:53,67,59,57,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,2 punti segnato,1,Tiro in sospensione,,,90,68,1,A,2,False,0,
+25407,513,4,08:53,67,59,57,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,Assist,,,,,90,68,1,A,2,False,0,512
+25407,514,4,08:41,79,62,57,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,3 punti segnato,1,Tiro in sospensione,,,22,90,0,A,10,False,0,
+25407,515,4,08:41,79,62,57,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Assist,,,,,22,90,0,A,10,False,0,514
+25407,516,4,08:29,91,62,57,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,3 punti sbagliato,1,Tiro in sospensione,,,68,57,1,A,9,False,0,
+25407,517,4,08:29,91,62,57,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Rimbalzo difensivo,,,,,68,57,1,A,9,False,0,516
+25407,518,4,08:11,109,62,57,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,2 punti sbagliato,7,Appoggio a canestro,,,7,57,0,A,3,False,0,
+25407,519,4,08:11,109,62,57,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,Rimbalzo difensivo,,,,,7,57,0,A,3,False,0,518
+25407,520,4,08:03,117,62,57,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,2 punti sbagliato,2,Tiro in corsa,,,90,51,1,A,6,False,0,
+25407,521,4,08:03,117,62,57,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Rimbalzo difensivo,,,,,90,51,1,A,6,False,0,520
+25407,522,4,07:40,140,65,57,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti segnato,1,Tiro in sospensione,,,20,11,0,A,8,False,0,
+25407,523,4,07:40,140,65,57,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Assist,,,,,20,11,0,A,8,False,0,522
+25407,524,4,07:25,155,65,57,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Fallo commesso,106,offensivo,,,91,63,1,A,2,False,0,
+25407,525,4,07:25,155,65,57,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Palla persa,,,,,91,63,1,A,2,False,0,524
+25407,526,4,07:25,155,65,57,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Fallo Subito,,,,,91,63,1,A,2,False,0,524
+25407,527,4,07:25,155,65,57,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Ingresso,,,,,,,,,,False,0,
+25407,528,4,07:25,155,65,57,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Uscita,,,,,,,,,,False,0,527
+25407,529,4,07:25,155,65,57,1752,Bertram Derthona Tortona,0,4268,6,Andrea,Pecchia,Uscita,,,,,,,,,,False,0,527
+25407,530,4,07:25,155,65,57,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Ingresso,,,,,,,,,,False,0,527
+25407,531,4,07:03,177,65,57,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,2 punti sbagliato,7,Appoggio a canestro,,,5,60,0,A,3,False,0,
+25407,532,4,07:03,177,65,57,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Rimbalzo offensivo,,,,,5,60,0,A,3,False,0,531
+25407,533,4,06:58,182,65,57,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti sbagliato,1,Tiro in sospensione,,,16,5,0,A,8,False,0,
+25407,534,4,06:58,182,65,57,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Rimbalzo offensivo,,,,,16,5,0,A,8,False,0,533
+25407,535,4,06:49,191,65,57,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,2 punti sbagliato,8,Da penetrazione,,,5,40,0,A,3,False,0,
+25407,537,4,06:49,191,65,57,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Stoppata,,,,,5,40,1,D,3,False,0,535
+25407,538,4,06:49,191,65,57,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Stoppata subita,,,,,5,40,0,A,3,False,0,535
+25407,539,4,06:49,191,65,57,1771,APU Old Wild West Udine,1,,,,,Rimbalzi offensivi di squadra,,,,,5,40,0,A,3,False,0,535
+25407,540,4,06:49,191,65,57,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Ingresso,,,,,,,,,,False,0,
+25407,541,4,06:49,191,65,57,1752,Bertram Derthona Tortona,0,75,7,Amar,Alibegovic,Uscita,,,,,,,,,,False,0,540
+25407,542,4,06:49,191,65,57,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Ingresso,,,,,,,,,,False,0,540
+25407,543,4,06:49,191,65,57,1752,Bertram Derthona Tortona,0,1875,100,Paul,Eboua,Uscita,,,,,,,,,,False,0,540
+25407,544,4,06:40,200,65,57,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,2 punti sbagliato,1,Tiro in sospensione,,,21,49,0,A,7,False,0,
+25407,545,4,06:40,200,65,57,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Rimbalzo difensivo,,,,,21,49,0,A,7,False,0,544
+25407,546,4,06:29,211,65,59,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,2 punti segnato,8,Da penetrazione,,,92,47,1,A,3,True,0,
+25407,547,4,06:29,211,65,59,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,Fallo commesso,103,tiro,,,92,47,0,D,3,False,0,
+25407,548,4,06:29,211,65,59,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo Subito,,,,,92,47,0,D,3,False,0,547
+25407,549,4,06:29,211,65,59,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25407,553,4,06:29,211,65,59,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Rimbalzo difensivo,,,,,,,,,,False,0,549
+25407,550,4,06:29,211,65,59,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Ingresso,,,,,,,,,,False,0,
+25407,551,4,06:29,211,65,59,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Uscita,,,,,,,,,,False,0,550
+25407,554,4,06:11,229,67,59,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,2 punti segnato,7,Appoggio a canestro,,,7,56,0,A,3,True,0,
+25407,555,4,06:11,229,67,59,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Assist,,,,,7,56,0,A,3,False,0,554
+25407,556,4,06:11,229,67,59,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,Fallo commesso,103,tiro,,,7,56,1,D,3,False,0,
+25407,557,4,06:11,229,67,59,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Fallo Subito,,,,,7,56,1,D,3,False,0,556
+25407,558,4,06:11,229,67,59,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Uscita,,,,,,,,,,False,0,
+25407,559,4,06:11,229,67,59,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Ingresso,,,,,,,,,,False,0,558
+25407,560,4,06:11,229,68,59,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,561,4,05:50,250,68,59,1752,Bertram Derthona Tortona,0,7431,4,Justin,Gorham,2 punti sbagliato,1,Tiro in sospensione,,,94,33,1,A,4,False,0,
+25407,562,4,05:50,250,68,59,1752,Bertram Derthona Tortona,0,,,,,Rimbalzi offensivi di squadra,,,,,94,33,1,A,4,False,0,561
+25407,563,4,05:48,252,68,59,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Fallo commesso,100,personale,,,90,46,0,D,6,False,0,
+25407,564,4,05:48,252,68,59,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Fallo Subito,,,,,90,46,0,D,6,False,0,563
+25407,565,4,05:48,252,68,59,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Uscita,,,,,,,,,,False,0,
+25407,566,4,05:48,252,68,59,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Ingresso,,,,,,,,,,False,0,565
+25407,567,4,05:45,255,68,59,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo commesso,103,tiro,,,94,43,0,D,3,False,0,
+25407,568,4,05:45,255,68,59,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Fallo Subito,,,,,94,43,0,D,3,False,0,567
+25407,569,4,05:45,255,68,60,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,570,4,05:45,255,68,61,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Tiro libero segnato,,,,,,,,A,7,False,0,569
+25407,571,4,05:45,255,68,61,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Assist,,,,,,,,,,False,0,569
+25407,572,4,05:33,267,68,61,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Palla persa,53,Passi,,,31,82,0,A,10,False,0,
+25407,573,4,05:16,284,68,63,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,2 punti segnato,8,Da penetrazione,,,94,42,1,A,3,True,0,
+25407,574,4,05:03,297,68,63,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo commesso,100,personale,,,33,39,1,D,9,False,0,
+25407,575,4,05:03,297,68,63,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,33,39,1,D,9,False,0,574
+25407,576,4,04:58,302,68,63,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,3 punti sbagliato,1,Tiro in sospensione,,,25,89,0,A,10,False,0,
+25407,577,4,04:58,302,68,63,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Rimbalzo offensivo,,,,,25,89,0,A,10,False,0,576
+25407,578,4,04:54,306,68,63,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Fallo commesso,103,tiro,,,6,58,1,D,3,False,0,
+25407,579,4,04:54,306,68,63,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Fallo Subito,,,,,6,58,1,D,3,False,0,578
+25407,580,4,04:54,306,69,63,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,581,4,04:54,306,70,63,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,Tiro libero segnato,,,,,,,,A,7,False,0,580
+25407,582,4,04:41,319,70,66,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,3 punti segnato,1,Tiro in sospensione,,,71,30,1,A,9,False,0,
+25407,583,4,04:21,339,72,66,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,2 punti segnato,6,Arresto e tiro,,,14,77,0,A,4,False,0,
+25407,584,4,04:00,360,72,68,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,2 punti segnato,1,Tiro in sospensione,,,84,49,1,A,6,True,0,
+25407,585,4,04:00,360,72,68,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,Assist,,,,,84,49,1,A,6,False,0,584
+25407,586,4,03:41,379,75,68,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti segnato,1,Tiro in sospensione,,,27,15,0,A,8,False,0,
+25407,587,4,03:41,379,75,68,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Assist,,,,,27,15,0,A,8,False,0,586
+25407,588,4,03:20,400,75,68,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Palla persa,53,Passi,,,78,79,1,A,7,False,0,
+25407,589,4,03:09,411,75,68,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,2 punti sbagliato,6,Arresto e tiro,,,18,44,0,A,6,False,0,
+25407,590,4,03:09,411,75,68,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Rimbalzo offensivo,,,,,18,44,0,A,6,False,0,589
+25407,591,4,02:56,424,78,68,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,3 punti segnato,1,Tiro in sospensione,,,26,87,0,A,10,False,0,
+25407,592,4,02:56,424,78,68,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Assist,,,,,26,87,0,A,10,False,0,591
+25407,593,4,02:55,425,78,68,1752,Bertram Derthona Tortona,0,,,,,Time Out,,,,,,,1,,,False,0,
+25407,594,4,02:55,425,78,68,1752,Bertram Derthona Tortona,0,9038,17,Dominik,Olejniczak,Uscita,,,,,,,,,,False,0,
+25407,595,4,02:55,425,78,68,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Ingresso,,,,,,,,,,False,0,594
+25407,596,4,02:39,441,78,68,1752,Bertram Derthona Tortona,0,9009,42,Aljami,Durham,3 punti sbagliato,1,Tiro in sospensione,,,94,3,1,A,5,False,0,
+25407,597,4,02:39,441,78,68,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Rimbalzo difensivo,,,,,94,3,1,A,5,False,0,596
+25407,598,4,02:16,464,81,68,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,3 punti segnato,1,Tiro in sospensione,,,20,8,0,A,8,False,0,
+25407,599,4,01:56,484,81,68,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Fallo commesso,100,personale,,,66,34,0,D,9,False,0,
+25407,600,4,01:56,484,81,68,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo Subito,,,,,66,34,0,D,9,False,0,599
+25407,601,4,01:56,484,81,68,1771,APU Old Wild West Udine,1,6189,3,Joseph,Mobio,Ingresso,,,,,,,,,,False,0,
+25407,602,4,01:56,484,81,68,1771,APU Old Wild West Udine,1,9021,26,Nick,McGlynn,Uscita,,,,,,,,,,False,0,601
+25407,603,4,01:56,484,81,69,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,604,4,01:56,484,81,70,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Tiro libero segnato,,,,,,,,A,7,False,0,603
+25407,605,4,01:37,503,83,70,1771,APU Old Wild West Udine,1,9030,31,Andrea,Calzavara,2 punti segnato,8,Da penetrazione,,,7,55,0,A,3,True,0,
+25407,606,4,01:29,511,83,72,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,2 punti segnato,7,Appoggio a canestro,,,94,45,1,A,3,True,0,
+25407,607,4,01:10,530,83,72,1752,Bertram Derthona Tortona,0,9006,35,Karim,Jallow,Fallo commesso,103,tiro,,,32,71,1,D,9,False,0,
+25407,608,4,01:10,530,83,72,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Fallo Subito,,,,,32,71,1,D,9,False,0,607
+25407,609,4,01:10,530,83,72,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25407,610,4,01:10,530,83,72,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Tiro libero sbagliato,,,,,,,,A,7,False,0,609
+25407,611,4,01:10,530,84,72,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Tiro libero segnato,,,,,,,,A,7,False,0,609
+25407,612,4,00:57,543,84,74,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,2 punti segnato,7,Appoggio a canestro,,,93,58,1,A,3,True,0,
+25407,613,4,00:35,565,84,74,1771,APU Old Wild West Udine,1,9302,24,Raequan,Battle,3 punti sbagliato,1,Tiro in sospensione,,,31,25,0,A,8,False,0,
+25407,614,4,00:35,565,84,74,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Rimbalzo offensivo,,,,,31,25,0,A,8,False,0,613
+25407,615,4,00:25,575,84,74,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Fallo commesso,100,personale,,,41,35,1,D,9,False,0,
+25407,616,4,00:25,575,84,74,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Fallo Subito,,,,,41,35,1,D,9,False,0,615
+25407,617,4,00:25,575,84,74,1752,Bertram Derthona Tortona,0,7048,3,Prentiss,Hubb,Ingresso,,,,,,,,,,False,0,
+25407,618,4,00:25,575,84,74,1752,Bertram Derthona Tortona,0,9351,21,Dante,Maddox,Uscita,,,,,,,,,,False,0,617
+25407,619,4,00:25,575,85,74,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Tiro libero segnato,,,,,,,,A,7,False,0,
+25407,620,4,00:25,575,86,74,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Tiro libero segnato,,,,,,,,A,7,False,0,619
+25407,621,4,00:25,575,86,74,1752,Bertram Derthona Tortona,0,,,,,Time Out,,,,,,,1,,,False,0,
+25407,622,4,00:25,575,86,74,1771,APU Old Wild West Udine,1,9358,11,Zan,Sisko,Uscita,,,,,,,,,,False,0,
+25407,623,4,00:25,575,86,74,1771,APU Old Wild West Udine,1,821,21,Lorenzo,Bucarelli,Ingresso,,,,,,,,,,False,0,622
+25407,624,4,00:25,575,86,74,1771,APU Old Wild West Udine,1,425,22,Eimantas,Bendzius,Uscita,,,,,,,,,,False,0,622
+25407,625,4,00:25,575,86,74,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,Ingresso,,,,,,,,,,False,0,622
+25407,626,4,00:02,598,86,77,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,3 punti segnato,1,Tiro in sospensione,,,67,53,1,A,9,False,0,
+25407,627,4,00:00,600,86,77,,,,,,,,Fine Tempo,,,,,,,,,,False,0,

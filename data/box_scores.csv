@@ -1215,3 +1215,59 @@ game_id,match_datetime,round,team_id,team,opponent_id,opponent,home,row_type,pla
 25405,2026-11-01T12:00:00.000+01:00,6,1753,Umana Reyer Venezia,1772,Napoli Basketball,0,player,5481,TES-AME-94,100,Amedeo,TESSITORI,1,19,1140,14,4,7,0,1,6,8,2,3,5,1,0,3,0,0,4,8,0,1,2,15,0.9333333,-16
 25405,2026-11-01T12:00:00.000+01:00,6,1753,Umana Reyer Venezia,1772,Napoli Basketball,0,team,,,,,,,,,0,,,,,,,3,0,3,,0,0,,,0,0,0,0,,3,,
 25405,2026-11-01T12:00:00.000+01:00,6,1753,Umana Reyer Venezia,1772,Napoli Basketball,0,total,,,,,,,200,12000,81,16,32,5,23,34,39,11,16,27,10,6,14,1,3,27,33,0,1,3,75,0.8488242818181818,
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,9330,BRO-DAR-99,0,Darius,BROWN,1,23,1380,3,0,3,1,6,0,0,1,2,3,5,0,3,0,1,2,1,0,0,0,-2,0.25,-12
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,9329,BRO-CHA-97,4,Charles,BROWN,1,19,1140,6,2,4,0,3,2,2,0,6,6,0,1,5,0,0,1,1,0,0,1,3,0.4615385,-12
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,439,BER-ALE-02,5,Alessandro,BERTINI,0,20,1200,1,0,1,0,5,1,2,1,3,4,0,0,1,0,0,3,4,0,0,0,-2,0.125,-7
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,7279,NIA-CHE-08,7,Cheickh,NIANG,0,20,1200,7,2,3,1,3,0,0,0,2,2,1,1,2,0,0,3,1,0,0,1,4,0.875,-16
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,9328,OLI-QUI-01,8,Quincy,OLIVARI,1,29,1740,12,1,5,2,8,4,5,0,3,3,4,0,2,1,0,0,3,0,0,0,10,0.6857143,-15
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,2148,FOR-TOT-86,10,Toto,FORRAY,0,9,540,2,1,2,0,2,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,1,0.5,-16
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,7119,CAT-FED-08,11,Federico,CATTAPAN,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,7118,TRI-VIT-08,12,Vittorio,TRIGGIANI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,7449,MAW-SEL-98,21,Selom,MAWUGBE,0,23,1380,8,3,3,0,0,2,2,6,1,7,1,1,1,0,0,4,2,0,0,2,14,1.6,-8
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,9327,BIG-ISA-00,24,Isaiah,BIGELOW,0,27,1620,15,2,4,3,7,2,2,0,5,5,3,0,1,0,0,3,2,0,0,1,15,1.1538462,-20
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,378,BAY-JOR-99,26,Jordan,BAYEHE,1,18,1080,5,1,2,0,2,3,4,0,3,3,0,0,0,0,0,3,3,0,0,0,4,0.8333333,-20
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,player,9170,MED-JOS-07,30,Josè Alfred,MEDINA BOUZA,1,12,720,3,0,0,1,2,0,0,0,1,1,0,1,0,2,0,3,1,0,0,0,4,1.5,-4
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,team,,,,,,,,,0,,,,,,,1,2,3,,0,0,,,0,0,0,0,,3,,
+25403,2026-11-01T16:00:00.000+01:00,6,1763,Dolomiti Energia Trentino,1762,Maxima Roma,1,total,,,,,,,200,12000,62,12,27,8,38,14,17,10,28,38,15,4,15,3,1,22,18,0,0,5,54,0.79844323,
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,536,BIL-MIR-89,2,Miro,BILAN,1,20,1200,6,3,9,0,1,0,0,3,2,5,2,1,1,0,0,3,1,0,0,0,4,0.5454545,1
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,9374,HOL-AAR-96,3,Aaron,HOLIDAY,1,29,1740,28,3,6,6,11,4,4,1,2,3,6,2,0,1,0,3,5,0,0,0,34,1.4736842,30
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,9391,TYS-HUN-00,4,Hunter,TYSON,1,18,1080,5,2,3,0,4,1,2,1,1,2,0,0,2,0,0,2,4,0,0,0,1,0.5,-1
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,76,ALI-MIR-92,5,Mirza,ALIBEGOVIC,0,20,1200,18,3,3,4,8,0,0,0,3,3,2,0,1,0,0,1,0,0,0,1,17,1.5,19
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,9409,CAR-FRA-XX,8,Francesco,CARNEVALE,0,1,60,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,-2
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,3185,LEM-BRY-95,11,Brynton,LEMAR,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,5764,VER-GIO-98,16,Giovanni,VERONESI,0,25,1500,9,0,0,3,7,0,0,1,5,6,1,2,1,0,0,2,1,0,0,0,12,1.125,21
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,9375,MOO-XAV-95,17,Xavier,MOON,1,22,1320,1,0,9,0,0,1,2,0,6,6,4,5,2,0,3,2,1,0,0,0,0,0.0833333,7
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,625,BON-FED,23,Federico,BONACINI,0,2,120,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,-2
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,5913,WHE-CAR-98,24,Carl,WHEATLE,1,22,1320,9,4,4,0,2,1,1,1,4,5,2,1,1,0,0,2,2,0,0,1,14,1.2,3
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,934,CAM-GOR-18,29,Gora,CAMARA,0,20,1200,6,1,2,0,0,4,6,3,5,8,0,1,0,0,0,1,7,0,0,0,18,1.2,25
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,player,774,BRO-JHO-92,100,John,BROWN,0,21,1260,6,3,5,0,0,0,0,3,2,5,2,1,3,0,0,2,1,0,0,1,8,0.75,29
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,team,,,,,,,,,0,,,,,,,2,4,6,,0,1,,,0,0,0,0,,5,,
+25403,2026-11-01T16:00:00.000+01:00,6,1762,Maxima Roma,1763,Dolomiti Energia Trentino,0,total,,,,,,,200,12000,88,19,41,13,34,11,15,15,35,50,19,13,12,1,3,18,22,0,0,3,113,0.9308302222222221,
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,6189,MOB-JOS-98,3,Joseph,MOBIO,1,22,1320,4,2,3,0,0,0,0,1,2,3,0,0,0,0,0,1,0,0,0,1,5,1.3333333,-13
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,6653,SPE-SKY-94,6,Skylar,SPENCER,1,18,1080,4,2,5,0,0,0,1,3,5,8,1,0,2,0,1,4,1,0,0,0,3,0.5333333,-14
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,9358,SIS-ZAN-97,11,Zan,SISKO,1,26,1560,14,4,7,1,2,3,4,2,2,4,5,1,2,0,0,3,4,0,0,0,18,1.0769231,5
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,9196,BJE-MAK-08,18,Mak,BJEDOV,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,821,BUC-LOR,21,Lorenzo,BUCARELLI,0,12,720,3,1,2,0,1,1,2,1,3,4,0,0,0,0,0,2,2,0,0,0,4,0.75,10
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,425,BEN-EIM-90,22,Eimantas,BENDZIUS,0,20,1200,12,1,2,3,4,1,3,1,2,3,3,0,0,0,0,1,1,0,0,0,14,1.6,23
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,9302,BAT-RAE-01,24,Raequan,BATTLE,1,32,1920,16,3,7,3,9,1,1,0,1,1,0,1,2,0,1,2,1,0,0,1,4,0.8648649,9
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,9021,MCG-NIC-96,26,Nick,MCGLYNN,0,20,1200,9,2,4,0,1,5,5,1,5,6,1,0,0,0,0,4,3,0,0,1,12,1.2,25
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,7539,GRA-MAT-07,30,Mattia,GRASSI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,9030,CAL-AND-01,31,Andrea,CALZAVARA,0,28,1680,18,4,8,1,3,7,8,1,1,2,4,1,0,0,0,4,9,0,0,0,23,1.2,16
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,6562,CAV-MAT-03,34,Matteo,CAVALLERO,0,2,120,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,-2
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,player,7391,VAL-DEN-93,45,Denzel,VALENTINE,1,20,1200,4,2,3,0,4,0,0,0,6,6,2,2,0,0,0,2,0,0,0,0,7,0.5714286,-14
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,team,,,,,,,,,0,,,,,,,1,0,1,,0,1,,,0,0,0,0,,0,,
+25407,2026-11-01T17:00:00.000+01:00,6,1771,APU Old Wild West Udine,1752,Bertram Derthona Tortona,1,total,,,,,,,200,12000,86,22,42,8,24,18,24,11,27,38,16,5,7,0,2,23,21,0,0,3,92,1.11298832,
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,7048,HUB-PRE-99,3,Prentiss,HUBB,0,20,1200,5,0,4,0,3,5,7,0,1,1,2,0,1,0,0,2,5,0,0,0,1,0.4347826,-7
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,7431,GOR-JUS-98,4,Justin,GORHAM,1,25,1500,9,4,8,0,1,1,2,2,7,9,0,0,1,0,0,1,1,0,0,0,11,0.8181818,4
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,4268,PEC-AND-97,6,Andrea,PECCHIA,0,9,540,0,0,0,0,1,0,0,0,2,2,0,0,0,0,0,2,0,0,0,0,-1,0,-12
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,75,ALI-AMA-95,7,Amar,ALIBEGOVIC,0,15,900,5,1,2,1,2,0,0,0,2,2,1,0,1,0,0,2,1,0,0,0,4,1,-13
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,7537,DIM-EDO-08,9,Edoardo,DI MEO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,656,BOR-GIO,12,Giordano,BORTOLANI,0,21,1260,10,2,4,2,4,0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,8,1.25,-24
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,9038,OLE-DOM-96,17,Dominik,OLEJNICZAK,1,23,1380,7,2,5,0,0,3,4,0,3,3,1,1,1,0,0,3,3,0,0,0,7,0.875,1
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,9351,MAD-DAN-02,21,Dante,MADDOX,1,25,1500,28,7,8,4,6,2,3,0,1,1,3,1,4,1,0,5,5,0,0,1,26,1.4358974,16
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,2313,GAZ-GIU-91,24,Giulio,GAZZOTTI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,9006,JAL-KAR-97,35,Karim,JALLOW,1,26,1560,2,1,3,0,1,0,0,1,3,4,0,0,1,0,0,2,2,0,0,0,2,0.4,5
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,9009,DUR-ALJ-98,42,Aljami,DURHAM,1,22,1320,10,3,3,0,2,4,4,0,0,0,4,0,1,0,0,3,2,0,0,0,10,1.25,-4
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,1875,EBO-PAU-00,100,Paul,EBOUA,0,14,840,1,0,0,0,1,1,2,0,5,5,1,1,1,1,0,1,4,0,0,0,9,0.3333333,-11
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,team,,,,,,,,,0,,,,,,,3,1,4,,0,0,,,0,0,0,0,,4,,
+25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,total,,,,,,,200,12000,77,20,37,7,21,16,22,6,26,32,13,3,11,2,0,21,23,0,0,2,81,0.8663550111111111,
