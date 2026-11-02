@@ -198,7 +198,10 @@ def copy_images(src: Path, *more: Path, dest: Path) -> list[str]:
     names = copy_photos(src, dest)
     for folder in (src, *more):
         for f in sorted(folder.glob("*")):
-            if f.suffix.lower() in IMAGES:
+            if f.suffix.lower() == ".html":      # interactive figures (standalone pages shown in an iframe)
+                shutil.copy(f, dest / f.name)
+                names.append(f.name)
+            elif f.suffix.lower() in IMAGES:
                 shutil.copy(f, dest / f.name)
                 names.append(f.name)
                 if f.suffix.lower() == ".png":

@@ -146,6 +146,10 @@ def state(meta: dict[str, str], body: str) -> str:
 def figure_md(arg: str, files: list[str]) -> str:
     """Return the markdown image of the figure `arg` (name with or without extension), or a note if the file is missing."""
     name = arg if "." in arg else f"{arg}.png"
+    interactive = Path(name).with_suffix(".html").name
+    if name.endswith(".png") and interactive in files:      # interactive version of the figure replaces the image
+        caption = re.sub(r"^\d+_", "", Path(name).stem).replace("_", " ")
+        return f'<iframe src="{interactive}" title="{caption}" class="interactive" loading="lazy" style="width:100%;height:1150px;border:0"></iframe>'
     if name not in files:
         return f"*(figure `{arg}` is not available)*"
     caption = re.sub(r"^\d+_", "", Path(name).stem).replace("_", " ")

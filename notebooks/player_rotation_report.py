@@ -22,7 +22,7 @@ from matplotlib.colors import LinearSegmentedColormap, Normalize
 import lba_style
 from game_report import PERIOD_LEN, stints
 from lba_style import SUP_KW, TEXT, TEXT2, save_fig
-from rotation_report import EUROCUP_CODE, LBA, OPTIONS, fig_rotation, load_competition, load_positions, minute_presence
+from rotation_report import EUROCUP_CODE, LBA, OPTIONS, fig_rotation, html_rotation, load_competition, load_positions, minute_presence
 from weekly_config import ROOT
 
 DATA = ROOT / "data"
@@ -132,14 +132,15 @@ def fig_quarter(shares: dict[str, np.ndarray], q: int, team: str, league: str, d
 
 
 ROTATION_MINUTES_PNG = "13_rotation_by_minute.png"   # opponent page: who is on the court at each minute, with the next options
-PLAYER_ROTATION_PREFIX = "14_player_rotation_"       # opponent individual page: one chart per player
+ROTATION_MINUTES_HTML = "13_rotation_by_minute.html"  # interactive version: the opponent page shows it instead of the PNG
+PLAYER_ROTATION_PREFIX ="14_player_rotation_"       # opponent individual page: one chart per player
 TOP_PLAYERS = 10                                     # players with a chart: the ones with the most minutes in the games used
 
 
 def opponent_figures(data: Path, team: str, date: str, competition: str, out: Path) -> list[Path]:
     """Save the rotation charts of an opponent into its analysis folder, from the games of `competition` before `date`.
 
-    Writes `13_rotation_by_minute.png` (all those games) and `14_player_rotation_<Surname>.png` for the `TOP_PLAYERS`
+    Writes `13_rotation_by_minute.png` and its interactive `.html` (all those games) and `14_player_rotation_<Surname>.png` for the `TOP_PLAYERS`
     players with the most minutes in the last `LAST_GAMES` games. Nothing is written when the team has no game yet.
 
     Args:
@@ -159,7 +160,8 @@ def opponent_figures(data: Path, team: str, date: str, competition: str, out: Pa
             return []
         share, avg, n_games = minute_presence(box, pbp, team)
         positions = load_positions(data, team, competition, list(share.index))
-        paths = [fig_rotation(share, avg, n_games, team, league, stamp, out, OPTIONS, positions, ROTATION_MINUTES_PNG)]
+        paths = [fig_rotation(share, avg, n_games, team, league, stamp, out, OPTIONS, positions, ROTATION_MINUTES_PNG),
+                 html_rotation(share, team, league, stamp, n_games, out, positions, ROTATION_MINUTES_HTML)]
         games = last_games(box, team, LAST_GAMES)
         on = team_on_court(box, pbp[pbp.game_id.isin(games)], team, games)
         dates = [str(box[box.game_id == g].date.iloc[0]) for g in games]
