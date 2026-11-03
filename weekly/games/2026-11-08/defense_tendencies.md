@@ -23,13 +23,13 @@ Pressure, pick-and-roll coverage, switching, zone use, transition defense.
 
 Play types and shot zones allowed, points per possession, rebounds and turnovers forced.
 
-From Synergy's defensive play types (5 LBA games):
+From Synergy's defensive play types (6 LBA games, Bologna included; play-type ranks are from the 1 Nov leaderboard):
 
-- Trieste allows 0.957 PPP (9th) and 52.0% eFG (9th), with 13.5% turnovers forced (league 14.6%).
-- Strongest: P&R roll man (38 possessions, 0.684 PPP, 1st in the LBA; 26.3% turnovers), isolation (17, 0.588, 2nd), spot-ups (131 possessions, 0.916 PPP, 7th; opponents shoot 31.4% from three, 27/86), transition (50, 1.08, 5th).
-- Weakest: P&R ball handler (67 possessions, 1.060 PPP, 16th, 63.8% eFG; but 23.9% turnovers and 17.9% of possessions end in free throws), post-ups (26, 1.038, 13th), cuts (39 possessions, 1.154, 63.3% FG, 19 of the 30 shots made), put-backs (25, 1.20).
-- BC Roma's P&R ball handler (96 possessions, 1.052 PPP, 2nd) and cuts (35, 1.657, 1st) meet Trieste's two most exposed play types; its roll man (57, 1.158, 5th) meets the league's best roll-man defense.
-- Spot-ups are 29% of what Trieste defends, the highest share in the LBA (level with Trento); BC Roma is 4th in spot-up PPP (1.103; 45.8% from three on 83 attempts).
+- Trieste allows 0.954 PPP (8th) and 51.1% eFG (6th), with 12.3% turnovers forced (14th; league 14.4%).
+- Strongest: P&R roll man (48 possessions, 0.708 PPP, 1st in the LBA on 1 Nov; 20.8% turnovers), isolation (21, 0.476; 3/18 from the field), spot-ups (152 possessions, 0.954 PPP; opponents shoot 33.0% from three, 34/103), transition (72, 1.028).
+- Weakest: cuts (43 possessions, 1.186 PPP, 63.6% FG, 21 of the 33 shots made), put-backs (33, 1.273, 65.4% FG), P&R ball handler (83 possessions, 1.012 PPP, 59.3% eFG; but 21.7% turnovers and 14.5% of possessions end in free throws), post-ups (32, 0.969).
+- BC Roma's cuts (35 possessions, 1.657 PPP, 1st on 1 Nov) and put-backs (27, 1.111) meet Trieste's two most exposed play types; its P&R ball handler (96, 1.052, 2nd) meets a defense that allows 1.012 and forces turnovers; its roll man (57, 1.158, 5th) meets the league's best roll-man defense (1 Nov).
+- Spot-ups are 28% of what Trieste defends, the highest share in the LBA on 1 Nov (with Trento); BC Roma is 4th in spot-up PPP (1.103; 45.8% from three on 83 attempts).
 
 ## Clips
 

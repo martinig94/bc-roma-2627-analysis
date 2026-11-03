@@ -11,41 +11,41 @@ THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the 
 
 ## Key points
 
-Based on the data only (5 LBA games; Synergy pull of 1 Nov 2026 for play types and shots, LBA box scores and play-by-play for assists and turnovers). Trieste's round 6 game at Virtus Bologna (2 Nov) is not included.
+Based on the data only (6 LBA games, round 6 at Virtus Bologna included; Synergy pull of 3 Nov 2026 for play types and shots, LBA box scores and play-by-play for assists and turnovers).
 
-- **Efficiency in the middle of the league**: 0.987 PPP (10th), 51.3% eFG (11th), 45.0% of possessions with a score (9th); 89.0 points a game (7th) on 90.2 possessions.
-- **The P&R ball handler is the offense**: 16% of possessions at 1.183 PPP (1st in the LBA, 66.3% eFG). Ross has 42 of the 71 possessions (1.14 PPP); Ruzzier 12 (1.17).
-- **Spot-ups are the largest block** (22% of possessions, 1.02 PPP, 6th) with 35.1% from three (27/77). Transition (15%, 0.956 PPP) is the worst in the LBA, and roll man (0.778), isolations (0.815) and post-ups (0.722) are all below average.
-- **Threes are half of the attempts** (166 of 340): 42.1% from the corner (24/57), 33.9% from the wings, 22.6% from the top (12/53). Paint attempts go in at 56.2%.
-- **Ross creates for the others**: 7 assists to Jones and 7 to DeAngeli, 5 each to Brajkovic and Candussi; Galloway's most frequent targets are the bigs (4 each to Candussi and Brajkovic).
-- **Lowest turnover rate in the LBA** (10.9% of possessions, league 14.7%); the ball handlers lose the most in absolute numbers (Ross 9, Galloway 8, McDermott 7) and Brajkovic has the highest rate per minute among the starters after Ross (0.061).
+- **Efficiency in the upper half on points, middle on shooting**: 1.004 PPP (5th), 51.8% eFG (11th), 45.8% of possessions with a score (9th); 90.8 points a game (5th) on 90.3 possessions; free throws end 15.3% of possessions (4th).
+- **The P&R ball handler is the offense**: 17% of possessions at 1.207 PPP (65.2% eFG). Ross has 55 of the 92 possessions (1.09 PPP); Galloway 15 (1.27) and Ruzzier 14 (1.14).
+- **Spot-ups are the largest block** (22% of possessions, 1.050 PPP) with 36.7% from three (33/90). Transition (15%, 1.063 PPP; 0.956 before Bologna) improved, while roll man (0.736), isolations (0.722) and post-ups (0.789) stay below average.
+- **Threes are half of the attempts** (199 of 410): 43.8% from the corner (28/64), 32.8% from the wings, 22.1% from the top (15/68). Paint attempts go in at 57.8%.
+- **Ross creates for the others**: 8 assists to Jones, 7 to DeAngeli, 6 each to Brajkovic and McDermott and 5 to Candussi; Galloway's most frequent target is Candussi (5).
+- **Lowest turnover rate in the LBA** (10.7% of possessions, league 14.4%); the ball handlers lose the most in absolute numbers (Ross 11, Galloway 9, McDermott 7, Ruzzier 7), and Ross has the highest rate per minute (0.069).
 
 ## Play types and sets
 
 Main play types, pace, first options, sets after timeouts and out-of-bounds plays.
 
-- Spot-ups are 22% of the possessions (1.02 PPP, 35.2% FG, 35.1% from three on 77 attempts). The P&R ball handler is 16% (1.183 PPP), transition 15% (0.956), roll man 10% (0.778).
+- Spot-ups are 22% of the possessions (1.050 PPP, 37.0% FG, 36.7% from three on 90 attempts). The P&R ball handler is 17% (1.207 PPP), transition 15% (1.063), roll man 10% (0.736).
 
 ![Trieste play types](02_opponent_playtypes.png)
 ![Trieste play types and PPP](03_playtype_ppp_ref_vs_opp.png)
 
-- BC Roma scores more per possession than Trieste on spot-ups, transition, roll man, cuts, isolations and post-ups; Trieste is ahead on the P&R ball handler (1.183 vs 1.052), put-backs, off-screen plays and handoffs; BC Roma's cuts (1.657 PPP, 1st in the LBA) are the biggest gap (Trieste 1.172).
+- BC Roma scores more per possession than Trieste on spot-ups, transition, roll man, cuts, isolations and post-ups; Trieste is ahead on the P&R ball handler (1.207 vs 1.052), put-backs, off-screen plays and handoffs; BC Roma's cuts (1.657 PPP, 1st in the LBA on 1 Nov) are the biggest gap (Trieste 1.212).
 
 ![Trieste play types per player](06_players_playtype_mix.png)
 
-- Ross (P&R ball handler 42, isolation 10, spot-up 9), Ruzzier (P&R ball handler 12) and Galloway (12) are the ball handlers. Jones and McDermott are the spot-up and transition players (23 and 19 spot-up possessions); Candussi and Brajkovic finish the roll man (18 and 10 possessions) and cut (8 and 5).
+- Ross (P&R ball handler 55, isolation 12, spot-up 9), Ruzzier (P&R ball handler 14) and Galloway (15) are the ball handlers. Jones (25 spot-up, 25 transition) and McDermott (22 spot-up, 15 transition) are the spot-up and transition players; Candussi and Brajkovic finish the roll man (22 and 13 possessions) and Candussi the cut (8).
 
 ## Assists
 
 {{ assists }}
 
-Ross is the passer of the four most frequent pairs (Jones 7, DeAngeli 7, Brajkovic 5, Candussi 5); Galloway's pairs go to the two bigs (Candussi 4, Brajkovic 4). The wings Jones and McDermott are scorers rather than passers (1.2 and 1.0 assists a game in the LBA box score).
+Ross is the passer of the five most frequent pairs (Jones 8, DeAngeli 7, Brajkovic 6, McDermott 6, Candussi 5); Galloway's most frequent pair is with Candussi (5). The wings Jones and McDermott are scorers rather than passers (1.3 and 1.0 assists a game in the LBA box score).
 
 ## Turnovers
 
 {{ turnovers }}
 
-Ross (9 in 132') and Brajkovic (4 in 66') have the highest turnover rates per minute (0.068 and 0.061); all four of Brajkovic's came against Verona, Ruzzier's worst game (3) was the same one. Jones and Candussi lose 0.8 balls a game. In Synergy's count Trieste turns it over on 10.9% of possessions, the lowest in the LBA, and on 12.7% of its P&R ball-handler possessions.
+Ross (11 in 159') and Ruzzier (7 in 125') have the highest turnover rates per minute (0.069 and 0.056); all four of Brajkovic's came against Verona, Ruzzier's worst game (3) was the same one. Jones loses 1.0 balls a game and Candussi 0.8. In Synergy's count Trieste turns it over on 10.7% of possessions, the lowest in the LBA, and on 10.9% of its P&R ball-handler possessions.
 
 ## Clips
 

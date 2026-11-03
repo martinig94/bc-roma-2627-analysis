@@ -11,13 +11,13 @@ THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the 
 
 ## Key points
 
-Based on the data only (5 LBA games; Synergy pull of 1 Nov 2026 for shots, LBA box scores and play-by-play for the rest). Trieste's round 6 game at Virtus Bologna (2 Nov) is not included.
+Based on the data only (6 LBA games, round 6 at Virtus Bologna included; Synergy pull of 3 Nov 2026 for shots, LBA box scores and play-by-play for the rest).
 
-- **Ross is the offense.** 16 possessions a game (80 in five), 18.6 PPG, 7.0 assists and 1.8 turnovers, 27/30 from the line; 42 of the team's 71 P&R ball-handler possessions are his. He is also the top of the league-percentile chart for pace (1.00) and draws 11.2 fouls per 40' (37 in 132').
-- **Jones is the second engine**: 15.2 PPG, 8.8 rebounds (9 offensive), 9 steals and 9 blocks in 139', 19 transition possessions at 1.32 PPP. Rim activity 0.92 and pace 0.91 in the league percentiles.
-- **The wings shoot threes**: 66% of McDermott's shots are threes, 60% of Galloway's, 53% of Jones's (Ross 39%). Galloway is best from the corner (7/15), McDermott is 8/31 from three overall (25.8%).
-- **The bigs finish near the basket**: Brajkovic 10/14 from two (no three), Candussi 13/21 from two and 5/18 from three. Brajkovic is the highest on rim activity among the bigs (0.87, 3 dunks in 66').
-- **Shot mix drifted from threes towards the paint.** The share of threes by game: 55% (Milano), 52% (Venezia), 45% (Varese), 49% (Cantù), 44% (Verona); the three losses average 51%, the two wins 46%. Five games: a tendency, not a rule.
+- **Ross is the offense.** 16.5 possessions a game (99 in six), 18.5 PPG, 6.8 assists and 1.8 turnovers, 33/38 from the line; 55 of the team's 92 P&R ball-handler possessions are his. He is also the top of the league-percentile chart for pace (1.00) and draws 10.8 fouls per 40' (43 in 159').
+- **Jones is the second engine**: 16.2 PPG, 8.8 rebounds (13 offensive), 11 steals and 9 blocks in 172', 25 transition possessions at 1.32 PPP. Rim activity 0.94 and pace 0.92 in the league percentiles.
+- **The wings shoot threes**: 63% of McDermott's shots are threes, 58% of Galloway's, 50% of Jones's (Ross 42%). Galloway is best from the corner (9/17), McDermott is 12/38 from three overall (31.6%).
+- **The bigs finish near the basket**: Brajkovic 11/16 from two (no three), Candussi 15/24 from two and 5/22 from three. Brajkovic is the highest on rim activity among the bigs (0.80, 3 dunks in 87').
+- **Shot mix drifted from threes towards the paint.** The share of threes by game: 55% (Milano), 51% (Venezia), 46% (Varese), 49% (Cantù), 44% (Verona), 47% (Bologna); the three losses average 51%, the three wins 47%. Six games: a tendency, not a rule.
 
 ## Shot attempts: 3PT, paint and mid-range
 
@@ -60,20 +60,20 @@ Shot profile (made/attempted by location and play type) and, where a player has 
 
 ## Energy: rim activity and pace
 
-Two scores per player, built from box score and play-by-play only, shown as league percentiles (0.5 = league median; shrunk towards it for players with few minutes). ==Rim activity==: offensive rebounds, blocks, dunks and fouls drawn per 40 minutes. ==High pace==: drive finishes, fast-break shots and assists, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. LBA, 5 games, players sorted by minutes played; the reference is every LBA player with at least 40 minutes.
+Two scores per player, built from box score and play-by-play only, shown as league percentiles (0.5 = league median; shrunk towards it for players with few minutes). ==Rim activity==: offensive rebounds, blocks, dunks and fouls drawn per 40 minutes. ==High pace==: drive finishes, fast-break shots and assists, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. LBA, 6 games, players sorted by minutes played; the reference is every LBA player with at least 40 minutes.
 
 {{ figure: 15_energy_indices }}
 
-- **Ross: pace.** 1.00 (the top of the reference), rim activity 0.77: 37 fouls drawn in 132' (11.2 per 40'), 24 drive finishes and 12 fast-break shots plus assists; only 3 offensive rebounds and no block.
-- **Jones: high on both** (rim 0.92, pace 0.91): 10 offensive rebounds, 9 blocks, 2 dunks, 9 steals and 11 drive finishes in 139'.
-- **Brajkovic: rim activity 0.87** (3 dunks, 6 offensive rebounds, 10 fouls drawn in 66', four games), pace 0.75; **DeAngeli** is the opposite on the other axis (rim 0.63, pace 0.05: 2 drive finishes in 119').
-- **McDermott** is mostly a pace player (0.61; 18 fouls drawn in 153') with little rim activity (0.36). **Galloway** is close to the median on both (0.53, 0.41): 14 offensive rebounds but no dunk and 9 drive finishes in 155'.
-- **Ruzzier** has the lowest rim activity of the regulars (0.16, no dunk and no block in 107') and an average pace (0.49; 11 drive finishes).
-- **Candussi** is average to below (0.49, 0.38): 7 offensive rebounds, 2 drive finishes.
+- **Ross: pace.** 1.00 (the top of the reference), rim activity 0.74: 43 fouls drawn in 159' (10.8 per 40'), 27 drive finishes and 13 fast-break shots plus assists; only 3 offensive rebounds and no block.
+- **Jones: high on both** (rim 0.94, pace 0.92): 13 offensive rebounds, 9 blocks, 4 dunks, 11 steals and 11 drive finishes in 172'.
+- **Brajkovic: rim activity 0.80** (3 dunks, 6 offensive rebounds, 11 fouls drawn in 87', five games), pace 0.61; **DeAngeli** has the lowest pace of the roster (rim 0.45, pace 0.02: 3 drive finishes in 136').
+- **McDermott** is below the median on both (rim 0.42, pace 0.44; 21 fouls drawn in 186'). **Galloway** is similar (0.45, 0.34): 15 offensive rebounds but no dunk and 11 drive finishes in 187'.
+- **Ruzzier** has the lowest rim activity of the regulars (0.11, no dunk and no block in 125') and a below-average pace (0.40; 13 drive finishes).
+- **Candussi** is average on rim activity and low on pace (0.62, 0.27): 9 offensive rebounds, 2 drive finishes.
 
 ## Rotation by player
 
-When each player is on the court in each quarter, in the last 5 games of the competition: one bar per quarter, the clock runs from 10:00 down to 0:00, dark green = on the court in every game at that moment, white = in none.
+When each player is on the court in each quarter, in the last 6 games of the competition: one bar per quarter, the clock runs from 10:00 down to 0:00, dark green = on the court in every game at that moment, white = in none.
 
 {{ figure: 14_player_rotation_Brajkovic }}
 
@@ -97,9 +97,9 @@ When each player is on the court in each quarter, in the last 5 games of the com
 
 ## Players to watch
 
-- **Ross.** The ball stops with him: P&R ball handler 42 possessions at 1.14 PPP, 13 pull-up threes off the screen (5 made), 11/17 at the basket, fouls drawn at the highest rate of the roster. He takes 15 of his 22 threes from the top of the key.
-- **Jones in transition and on the offensive boards.** 19 transition possessions at 1.32 PPP (25 points), against 0.82 PPP for the rest of the roster combined (49 possessions, 40 points); 12 corner-three attempts (5 made) and 9 blocks and 9 steals.
-- **Galloway and McDermott.** 39 and 31 three-point attempts at 33.3% and 25.8%; McDermott's transition possessions score 0.17 PPP (12), Galloway's 0.63 (16).
-- **Candussi and Brajkovic.** Roll-man and cut finishers (Candussi 18 roll-man possessions at 0.72 PPP, Brajkovic 10 at 1.30). The five of Candussi, DeAngeli, Ross, McDermott and Galloway allowed 0.714 PPP in 35 defensive possessions (small sample).
-- **Ruzzier.** Plays 21' off the bench with the lowest efficiency of the regulars (0.838 PPP, 37.5% eFG; 17 assists, 5 turnovers), but is the second ball handler: 12 P&R ball-handler possessions at 1.17 PPP.
-- Sample warning: apart from Ross, Jones and Galloway nobody has used more than 60 possessions in five games.
+- **Ross.** The ball stops with him: P&R ball handler 55 possessions at 1.09 PPP, 18 pull-up threes off the screen (7 made), 12/20 at the basket, fouls drawn at the highest rate of the roster. He takes 21 of his 29 threes from the top of the key.
+- **Jones in transition and on the offensive boards.** 25 transition possessions at 1.32 PPP (33 points), against 0.95 PPP for the rest of the roster combined (55 possessions, 52 points); 13 corner-three attempts (6 made), 13 offensive rebounds, 9 blocks and 11 steals.
+- **Galloway and McDermott.** 45 and 38 three-point attempts at 35.6% and 31.6%; McDermott's transition possessions score 0.60 PPP (15), Galloway's 0.72 (18); both are good as spot-ups (1.32 and 1.27 PPP, 22 possessions each). They scored 24 and 23 at Bologna.
+- **Candussi and Brajkovic.** Roll-man and cut finishers (Candussi 22 roll-man possessions at 0.59 PPP, Brajkovic 13 at 1.31). The five of Candussi, Ross, McDermott, Galloway and Jones allowed 0.833 PPP in 54 defensive possessions (small sample).
+- **Ruzzier.** Plays 21' off the bench with the lowest efficiency of the regulars (0.786 PPP, 37.0% eFG; 20 assists, 7 turnovers), but is the second ball handler: 14 P&R ball-handler possessions at 1.14 PPP.
+- Sample warning: apart from Ross, Jones, Galloway, McDermott and Candussi nobody has used more than 60 possessions in six games.
