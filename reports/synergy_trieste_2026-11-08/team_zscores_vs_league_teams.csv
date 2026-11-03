@@ -1,49 +1,49 @@
 team,side,metric,value,league_mean,league_sd,z_better_is_higher,basis
-BC Roma,offense,PPP,1.009,0.977,0.082,0.384,all_games
-BC Roma,offense,eFG%,56.6,53.006,4.525,0.794,all_games
-BC Roma,offense,TO%,16.2,14.669,2.109,-0.726,all_games
-BC Roma,offense,%FT,11.9,14.031,2.183,-0.976,all_games
-BC Roma,offense,Score%,45.8,44.7,3.601,0.305,all_games
-BC Roma,offense,FG%,48.8,45.644,4.044,0.78,all_games
-Trieste,offense,PPP,0.987,0.977,0.082,0.116,all_games
-Trieste,offense,eFG%,51.3,53.006,4.525,-0.377,all_games
-Trieste,offense,TO%,10.9,14.669,2.109,1.787,all_games
-Trieste,offense,%FT,15.1,14.031,2.183,0.49,all_games
-Trieste,offense,Score%,45.0,44.7,3.601,0.083,all_games
-Trieste,offense,FG%,43.2,45.644,4.044,-0.604,all_games
-BC Roma,defense,PPP,1.001,0.978,0.068,-0.341,all_games
-BC Roma,defense,eFG%,54.2,53.025,4.031,-0.291,all_games
-BC Roma,defense,TO%,14.0,14.594,1.837,-0.323,all_games
-BC Roma,defense,%FT,14.2,13.969,2.616,-0.088,all_games
-BC Roma,defense,Score%,45.7,44.731,2.66,-0.364,all_games
-BC Roma,defense,FG%,46.8,45.644,3.504,-0.33,all_games
-Trieste,defense,PPP,0.957,0.978,0.068,0.311,all_games
-Trieste,defense,eFG%,52.0,53.025,4.031,0.254,all_games
-Trieste,defense,TO%,13.5,14.594,1.837,-0.595,all_games
-Trieste,defense,%FT,13.7,13.969,2.616,0.103,all_games
-Trieste,defense,Score%,44.7,44.731,2.66,0.012,all_games
-Trieste,defense,FG%,45.3,45.644,3.504,0.098,all_games
-BC Roma,offense,PPP,1.095,0.977,0.082,1.432,competition_only
-BC Roma,offense,eFG%,61.4,53.006,4.525,1.855,competition_only
-BC Roma,offense,TO%,14.5,14.669,2.109,0.08,competition_only
-BC Roma,offense,%FT,11.2,14.031,2.183,-1.297,competition_only
-BC Roma,offense,Score%,49.5,44.7,3.601,1.333,competition_only
-BC Roma,offense,FG%,52.7,45.644,4.044,1.745,competition_only
-Trieste,offense,PPP,0.987,0.977,0.082,0.116,competition_only
-Trieste,offense,eFG%,51.3,53.006,4.525,-0.377,competition_only
-Trieste,offense,TO%,10.9,14.669,2.109,1.787,competition_only
-Trieste,offense,%FT,15.1,14.031,2.183,0.49,competition_only
-Trieste,offense,Score%,45.0,44.7,3.601,0.083,competition_only
-Trieste,offense,FG%,43.2,45.644,4.044,-0.604,competition_only
-BC Roma,defense,PPP,1.043,0.978,0.068,-0.963,competition_only
-BC Roma,defense,eFG%,55.8,53.025,4.031,-0.688,competition_only
-BC Roma,defense,TO%,13.3,14.594,1.837,-0.704,competition_only
-BC Roma,defense,%FT,16.4,13.969,2.616,-0.929,competition_only
-BC Roma,defense,Score%,47.4,44.731,2.66,-1.003,competition_only
-BC Roma,defense,FG%,47.9,45.644,3.504,-0.644,competition_only
-Trieste,defense,PPP,0.957,0.978,0.068,0.311,competition_only
-Trieste,defense,eFG%,52.0,53.025,4.031,0.254,competition_only
-Trieste,defense,TO%,13.5,14.594,1.837,-0.595,competition_only
-Trieste,defense,%FT,13.7,13.969,2.616,0.103,competition_only
-Trieste,defense,Score%,44.7,44.731,2.66,0.012,competition_only
-Trieste,defense,FG%,45.3,45.644,3.504,0.098,competition_only
+BC Roma,offense,PPP,1.009,0.979,0.076,0.392,all_games
+BC Roma,offense,eFG%,56.6,52.919,4.256,0.865,all_games
+BC Roma,offense,TO%,16.2,14.438,2.166,-0.814,all_games
+BC Roma,offense,%FT,11.9,14.056,1.946,-1.108,all_games
+BC Roma,offense,Score%,45.8,44.838,3.337,0.288,all_games
+BC Roma,offense,FG%,48.8,45.612,3.784,0.842,all_games
+Trieste,offense,PPP,1.004,0.979,0.076,0.326,all_games
+Trieste,offense,eFG%,51.8,52.919,4.256,-0.263,all_games
+Trieste,offense,TO%,10.7,14.438,2.166,1.725,all_games
+Trieste,offense,%FT,15.3,14.056,1.946,0.639,all_games
+Trieste,offense,Score%,45.8,44.838,3.337,0.288,all_games
+Trieste,offense,FG%,43.9,45.612,3.784,-0.453,all_games
+BC Roma,defense,PPP,1.001,0.98,0.064,-0.325,all_games
+BC Roma,defense,eFG%,54.2,52.931,3.886,-0.326,all_games
+BC Roma,defense,TO%,14.0,14.388,2.041,-0.19,all_games
+BC Roma,defense,%FT,14.2,14.062,2.518,-0.055,all_games
+BC Roma,defense,Score%,45.7,44.862,2.489,-0.336,all_games
+BC Roma,defense,FG%,46.8,45.619,3.36,-0.352,all_games
+Trieste,defense,PPP,0.954,0.98,0.064,0.411,all_games
+Trieste,defense,eFG%,51.1,52.931,3.886,0.471,all_games
+Trieste,defense,TO%,12.3,14.388,2.041,-1.023,all_games
+Trieste,defense,%FT,12.5,14.062,2.518,0.62,all_games
+Trieste,defense,Score%,44.3,44.862,2.489,0.226,all_games
+Trieste,defense,FG%,44.7,45.619,3.36,0.273,all_games
+BC Roma,offense,PPP,1.095,0.979,0.076,1.526,competition_only
+BC Roma,offense,eFG%,61.4,52.919,4.256,1.993,competition_only
+BC Roma,offense,TO%,14.5,14.438,2.166,-0.029,competition_only
+BC Roma,offense,%FT,11.2,14.056,1.946,-1.468,competition_only
+BC Roma,offense,Score%,49.5,44.838,3.337,1.397,competition_only
+BC Roma,offense,FG%,52.7,45.612,3.784,1.873,competition_only
+Trieste,offense,PPP,1.004,0.979,0.076,0.326,competition_only
+Trieste,offense,eFG%,51.8,52.919,4.256,-0.263,competition_only
+Trieste,offense,TO%,10.7,14.438,2.166,1.725,competition_only
+Trieste,offense,%FT,15.3,14.056,1.946,0.639,competition_only
+Trieste,offense,Score%,45.8,44.838,3.337,0.288,competition_only
+Trieste,offense,FG%,43.9,45.612,3.784,-0.453,competition_only
+BC Roma,defense,PPP,1.043,0.98,0.064,-0.983,competition_only
+BC Roma,defense,eFG%,55.8,52.931,3.886,-0.738,competition_only
+BC Roma,defense,TO%,13.3,14.388,2.041,-0.533,competition_only
+BC Roma,defense,%FT,16.4,14.062,2.518,-0.928,competition_only
+BC Roma,defense,Score%,47.4,44.862,2.489,-1.019,competition_only
+BC Roma,defense,FG%,47.9,45.619,3.36,-0.679,competition_only
+Trieste,defense,PPP,0.954,0.98,0.064,0.411,competition_only
+Trieste,defense,eFG%,51.1,52.931,3.886,0.471,competition_only
+Trieste,defense,TO%,12.3,14.388,2.041,-1.023,competition_only
+Trieste,defense,%FT,12.5,14.062,2.518,0.62,competition_only
+Trieste,defense,Score%,44.3,44.862,2.489,0.226,competition_only
+Trieste,defense,FG%,44.7,45.619,3.36,0.273,competition_only

@@ -1,4 +1,74 @@
 date,game,period,clock,player,play_type,shot_type,zone,made,description
+2026-11-02,Trieste@VirtusBologna,4,0:34,Colbey Ross,Isolation,To basket,Paint,1,4 Colbey Ross > ISO > Left > Drives Right > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,1:12,Langston Galloway,P&R Ball Handler,To basket,Paint,1,9 Langston Galloway > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,1:33,Sean McDermott,Cut,To basket,Paint,0,4 Colbey Ross > ISO > Right > Drives Left > Defense Commits > Ball Delivered > 30 Sean McDermott > Cut > Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,2:12,Langston Galloway,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,9 Langston Galloway > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,2:47,Colbey Ross,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,4 Colbey Ross > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,3:34,Colbey Ross,Cut,To basket,Paint,1,4 Colbey Ross > Cut > Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,4:07,Langston Galloway,Spot Up,"Guarded, mid-range",Mid-range,0,9 Langston Galloway > Spot-Up > No Dribble Jumper > Guarded > Medium/17' to <3p > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,4:12,Colbey Ross,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,5:23,Lajae Jones,Isolation,"Dribble jumper, mid-range",Mid-range,0,25 Lajae Jones > ISO > Left > Early Jumper > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,6:30,Langston Galloway,Spot Up,"Open, 3PT",Corner 3,1,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Langston Galloway > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,7:36,Sean McDermott,Spot Up,"Guarded, 3PT",Corner 3,1,10 Michele Ruzzier > ISO > Right > Drives Right > Defense Commits > Ball Delivered > 30 Sean McDermott > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,8:34,Colbey Ross,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,4 Colbey Ross > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,9:22,Lodovico DeAngeli,Spot Up,To basket,Paint,1,4 Colbey Ross > P&R Ball Handler > High P&R > Defense Commits > Ball Delivered > 8 Lodovico DeAngeli > Spot-Up > Drives Right > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,0:21,Francesco Candussi,Other,To basket,Paint,1,13 Francesco Candussi > Post-Up > Flash Middle > Post Pin > No Dribble Move > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,0:54,Michele Ruzzier,P&R Ball Handler,To basket,Paint,1,10 Michele Ruzzier > P&R Ball Handler > Right P&R > Side > Go Away from Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,1:01,Francesco Candussi,P&R Roll Man,"Open, 3PT",Wing 3,0,10 Michele Ruzzier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 13 Francesco Candussi > P&R Roll Man > Slips the Pick > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,2:16,Francesco Candussi,Spot Up,"Open, 3PT",Top 3,0,13 Francesco Candussi > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,3:57,Lajae Jones,Transition,To basket,Paint,1,25 Lajae Jones > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,4:08,Lajae Jones,Off Screen,"Guarded, 3PT",Wing 3,0,25 Lajae Jones > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,4:41,Colbey Ross,P&R Ball Handler,To basket,Paint,1,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,4:54,Colbey Ross,Isolation,"Dribble jumper, 3PT",Top 3,0,4 Colbey Ross > ISO > Top > Early Jumper > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,5:27,Francesco Candussi,Transition,To basket,Paint,1,13 Francesco Candussi > Transition > Trailer > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,5:53,Sean McDermott,Off Screen,"Guarded, 3PT",Top 3,0,30 Sean McDermott > Off Screen > To Shooter's Right > Flare > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,6:25,Sean McDermott,Transition,To basket,Paint,1,30 Sean McDermott > Transition > Trailer > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,6:54,Langston Galloway,Spot Up,"Guarded, 3PT",Wing 3,0,9 Langston Galloway > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,7:01,Lajae Jones,Isolation,To basket,Paint,0,25 Lajae Jones > ISO > Top > Drives Right > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,7:32,Langston Galloway,Spot Up,"Guarded, 3PT",Corner 3,1,9 Langston Galloway > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,7:37,Sean McDermott,Spot Up,"Guarded, 3PT",Wing 3,0,30 Sean McDermott > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,8:06,Sean McDermott,Spot Up,"Guarded, 3PT",Top 3,1,9 Langston Galloway > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Sean McDermott > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,9:38,Langston Galloway,Spot Up,To basket,Paint,1,9 Langston Galloway > Spot-Up > Drives Right > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,0:08,Lajae Jones,Spot Up,"Guarded, 3PT",Corner 3,1,10 Michele Ruzzier > ISO > Right > Drives Right > Defense Commits > Ball Delivered > 25 Lajae Jones > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,0:54,Lodovico DeAngeli,Spot Up,To basket,Paint,0,10 Michele Ruzzier > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Lodovico DeAngeli > Spot-Up > Drives Right > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,1:15,Lajae Jones,Transition,To basket,Paint,0,25 Lajae Jones > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,1:31,Langston Galloway,Isolation,To basket,Paint,1,9 Langston Galloway > ISO > Top > Drives Left > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,2:13,Langston Galloway,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,9 Langston Galloway > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,2:45,Lajae Jones,Isolation,"Dribble jumper, 3PT",Wing 3,0,25 Lajae Jones > ISO > Right > Early Jumper > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,3:15,Lajae Jones,Transition,To basket,Paint,1,25 Lajae Jones > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,3:29,Michele Ruzzier,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,10 Michele Ruzzier > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,3:56,Lajae Jones,P&R Roll Man,"Open, 3PT",Top 3,0,30 Sean McDermott > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 25 Lajae Jones > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,4:18,Lajae Jones,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,1,25 Lajae Jones > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Make 2 Pts Foul > 1 Pts
+2026-11-02,Trieste@VirtusBologna,2,4:37,Sean McDermott,Off Screen,"Guarded, 3PT",Corner 3,0,30 Sean McDermott > Off Screen > To Shooter's Left > Straight > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,5:15,Langston Galloway,Transition,"Dribble jumper, 3PT",Wing 3,0,9 Langston Galloway > Transition > Left Wing > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,6:01,Lajae Jones,Transition,"Dribble jumper, 3PT",Top 3,0,25 Lajae Jones > Transition > Ballhandler > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,6:28,Lajae Jones,Cut,To basket,Paint,1,25 Lajae Jones > Cut > Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,6:43,Sean McDermott,Offensive Rebounds (Put Backs),To basket,Paint,0,30 Sean McDermott > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,6:43,Colbey Ross,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,7:27,Lajae Jones,P&R Ball Handler,To basket,Paint,1,25 Lajae Jones > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > To Basket > Make 2 Pts Foul > 1 Pts
+2026-11-02,Trieste@VirtusBologna,2,8:01,Colbey Ross,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,9:27,Lodovico DeAngeli,Spot Up,"Guarded, 3PT",Corner 3,0,10 Michele Ruzzier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Lodovico DeAngeli > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,0:01,Sean McDermott,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,30 Sean McDermott > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,1:01,Francesco Candussi,Spot Up,"Guarded, 3PT",Top 3,0,13 Francesco Candussi > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,1:10,Abramo Canka,Spot Up,"Open, 3PT",Wing 3,0,10 Michele Ruzzier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 7 Abramo Canka > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,1:20,Francesco Candussi,P&R Roll Man,To basket,Paint,0,10 Michele Ruzzier > P&R Ball Handler > High P&R > Defense Commits > Ball Delivered > 13 Francesco Candussi > P&R Roll Man > Slips the Pick > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,2:08,Langston Galloway,Isolation,To basket,Paint,0,9 Langston Galloway > ISO > Right > Drives Right > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,2:43,Michele Ruzzier,Isolation,To basket,Paint,0,10 Michele Ruzzier > ISO > Top > Drives Right > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,3:21,Colbey Ross,Off Screen,"Open, 3PT",Corner 3,0,4 Colbey Ross > Off Screen > To Shooter's Left > Straight > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,4:10,Lajae Jones,Other,"Dribble jumper, short (<17 ft)",Paint,1,25 Lajae Jones > Hand Off > From Dribble > Top > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,4:48,Francesco Candussi,P&R Roll Man,"Open, 3PT",Top 3,0,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 13 Francesco Candussi > P&R Roll Man > Slips the Pick > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,5:21,Sean McDermott,Transition,"Guarded, 3PT",Wing 3,1,30 Sean McDermott > Transition > Right Wing > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,5:39,Lajae Jones,Transition,To basket,Paint,1,25 Lajae Jones > Transition > Ballhandler > To Basket > Make 2 Pts Foul > 1 Pts
+2026-11-02,Trieste@VirtusBologna,1,5:57,Colbey Ross,P&R Ball Handler,To basket,Paint,0,4 Colbey Ross > P&R Ball Handler > High P&R > Go Away from Pick > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,6:14,Sean McDermott,Transition,To basket,Paint,1,30 Sean McDermott > Transition > Right Wing > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,6:30,Sean McDermott,Offensive Rebounds (Put Backs),To basket,Paint,1,30 Sean McDermott > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,6:30,Luka Brajkovic,P&R Roll Man,To basket,Paint,0,4 Colbey Ross > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 17 Luka Brajkovic > P&R Roll Man > Slips the Pick > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,7:13,Lajae Jones,Spot Up,"Guarded, 3PT",Wing 3,0,4 Colbey Ross > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 25 Lajae Jones > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,7:44,Luka Brajkovic,P&R Roll Man,To basket,Paint,1,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 17 Luka Brajkovic > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,8:03,Colbey Ross,P&R Ball Handler,To basket,Paint,0,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,8:24,Colbey Ross,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,8:55,Langston Galloway,Spot Up,"Guarded, 3PT",Wing 3,1,4 Colbey Ross > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Langston Galloway > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,9:27,Sean McDermott,Cut,Other,Paint,1,30 Sean McDermott > Cut > Screen > Make 2 Pts
 2026-10-25,Verona@Trieste,4,0:03,Lodovico DeAngeli,Cut,To basket,Paint,0,8 Lodovico DeAngeli > Cut > Basket > Miss 2 Pts
 2026-10-25,Verona@Trieste,4,0:16,Sean McDermott,Offensive Rebounds (Put Backs),To basket,Paint,1,30 Sean McDermott > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
 2026-10-25,Verona@Trieste,4,0:16,Lodovico DeAngeli,Transition,To basket,Paint,0,8 Lodovico DeAngeli > Transition > Leak Outs > To Basket > Miss 2 Pts
