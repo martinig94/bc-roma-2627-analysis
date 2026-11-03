@@ -1271,3 +1271,58 @@ game_id,match_datetime,round,team_id,team,opponent_id,opponent,home,row_type,pla
 25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,player,1875,EBO-PAU-00,100,Paul,EBOUA,0,14,840,1,0,0,0,1,1,2,0,5,5,1,1,1,1,0,1,4,0,0,0,9,0.3333333,-11
 25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,team,,,,,,,,,0,,,,,,,3,1,4,,0,0,,,0,0,0,0,,4,,
 25407,2026-11-01T17:00:00.000+01:00,6,1752,Bertram Derthona Tortona,1771,APU Old Wild West Udine,0,total,,,,,,,200,12000,77,20,37,7,21,16,22,6,26,32,13,3,11,2,0,21,23,0,0,2,81,0.8663550111111111,
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,9366,BEL-RAS-03,0,Rasheed,BELLO,1,21,1260,7,3,6,0,2,1,2,0,2,2,1,0,2,0,0,4,2,1,0,0,0,0.6363636,-13
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,9368,CAR-MAR-99,2,Marcus,CARR,0,27,1620,12,3,6,2,7,0,2,2,1,3,5,0,0,0,0,2,3,0,0,0,11,0.8571429,3
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,9369,KOK-KEV-01,3,Kevin,KOKILA,0,23,1380,8,3,6,0,0,2,2,3,5,8,3,0,0,2,0,3,3,0,0,0,18,1.1428571,8
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,1051,CAS-DAV-03,7,Davide,CASARIN,0,12,720,4,2,5,0,0,0,0,1,2,3,2,1,1,0,1,4,2,0,0,0,3,0.6666667,8
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,9370,MOO-WEN-01,8,Wendell,MOORE,1,21,1260,10,5,9,0,3,0,0,3,4,7,0,0,3,1,0,3,1,0,0,0,6,0.6666667,-21
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,9371,EVA-KES-00,9,Kessler,EDWARDS,0,24,1440,15,3,3,3,6,0,0,1,3,4,0,0,1,1,0,0,1,0,0,0,17,1.5,6
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,6797,BAI-MAT-07,13,Matteo,BAIOCCHI,0,1,60,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,9187,MIL-MAR-09,15,Marco,MILAZZO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,9004,ALS-DER-97,21,Derrick,ALSTON,1,19,1140,16,3,7,1,8,7,7,0,2,2,1,0,0,0,0,4,3,0,0,1,7,0.8648649,-3
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,2608,HAC-DAN-87,23,Daniel,HACKETT,0,23,1380,4,2,2,0,2,0,0,1,1,2,2,2,0,0,0,2,0,0,0,0,6,1,4
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,7132,FER-FRA-05,24,Francesco,FERRARI,1,16,960,13,2,4,3,4,0,0,1,6,7,1,0,0,0,1,2,1,0,0,0,16,1.625,-14
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,player,1774,DIO-MOU-18,35,Mouhamet Rassoul,DIOUF,1,13,780,4,1,5,0,0,2,2,2,0,2,3,0,0,0,1,0,1,0,0,0,5,0.6666667,-14
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,team,,,,,,,,,0,,,,,,,3,1,4,,0,0,,,0,0,0,0,,4,,
+25400,2026-11-02T20:00:00.000+01:00,6,1750,Virtus Costa Bologna,1767,Pallacanestro Trieste,1,total,,,,,,,200,12000,93,27,53,9,32,12,15,17,28,45,18,3,7,4,3,24,17,1,0,1,94,0.96262286,
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,6604,ROS-COL-98,4,Colbey,ROSS,1,27,1620,18,3,6,2,7,6,8,0,2,2,6,1,2,0,0,4,6,0,0,0,17,0.9473684,9
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,9005,CAN-ABR-02,7,Abramo,CANKA,0,4,240,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,-4,0,-7
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,1592,DEA-LUD-18,8,Lodovico,DEANGELI,0,17,1020,2,1,2,0,1,0,0,0,4,4,0,0,1,0,0,2,0,0,0,0,1,0.5,-4
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,6993,GAL-LAN-91,9,Langston,GALLOWAY,1,32,1920,24,4,6,3,6,7,8,1,4,5,2,0,1,0,0,1,4,0,0,0,27,1.4117647,3
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,4890,RUZ-MIC-93,10,Michele,RUZZIER,0,18,1080,2,1,2,0,1,0,0,0,2,2,3,0,2,0,0,2,1,0,0,0,2,0.4,-2
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,7616,MAR-EMA-07,11,Emanuele,MARTUCCI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,949,CAN-FRA-94,13,Francesco,CANDUSSI,0,15,900,6,2,3,0,4,2,2,2,2,4,1,0,1,1,0,0,1,0,0,0,7,0.6666667,-3
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,7420,BRA-LUK-99,17,Luka,BRAJKOVIC,1,21,1260,4,1,2,0,0,2,2,0,3,3,2,0,0,2,0,3,1,0,0,0,8,1.3333333,9
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,9390,JON-LAJ-04,25,Lajae,JONES,1,33,1980,21,7,10,1,6,4,5,3,6,9,2,2,2,0,3,1,7,0,0,2,26,1.0243902,20
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,7007,MCD-SEA-96,30,Sean,MCDERMOTT,1,33,1980,23,4,6,4,7,3,4,3,5,8,1,0,0,0,1,1,3,0,0,1,27,1.5333333,10
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,player,7478,PAI-DAV-XX,15,Davide,PAIANO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,team,,,,,,,,,0,,,,,,,1,4,5,,0,1,,,0,0,0,0,,4,,
+25400,2026-11-02T20:00:00.000+01:00,6,1767,Pallacanestro Trieste,1750,Virtus Costa Bologna,0,total,,,,,,,200,12000,100,23,37,10,33,24,29,10,32,42,17,3,10,3,4,17,23,0,0,3,115,0.977107075,
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,9012,FLA-SAV-99,1,Savion,FLAGG,1,35,2100,17,5,8,1,4,4,4,0,5,5,3,3,3,0,0,4,4,0,0,0,19,1,-1
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,9342,GRA-HAS-96,3,Hassani,GRAVETT,1,28,1680,10,3,4,1,4,1,2,1,5,6,6,1,2,0,0,4,2,0,0,0,14,0.9090909,1
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,6619,OKE-LEO-03,8,Leonardo,OKEKE,0,12,720,6,1,2,0,0,4,4,1,1,2,2,1,0,0,1,5,2,0,0,0,6,1.5,6
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,3880,MOR-RIC,9,Riccardo,MORASCHINI,1,28,1680,10,1,3,1,4,5,6,0,3,3,2,0,2,0,2,1,5,0,0,0,9,0.8333333,-6
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,4217,PAR-MAT-01,10,Matteo,PARRAVICINI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,9365,MIL-ISA-94,15,Isaiah,MILES,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,9343,BRO-CHA-96,22,Chad,BROWN,1,22,1320,9,2,6,0,0,5,8,2,7,9,1,0,1,2,3,1,5,0,0,2,14,0.8181818,-14
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,2494,GRA-AND-93,24,Andrejs,GRAZULIS,0,15,900,2,1,1,0,2,0,0,0,1,1,0,0,1,2,0,1,1,0,0,0,2,0.5,-10
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,3855,MOR-DAV-98,25,Davide,MORETTI,0,20,1200,16,2,4,1,1,9,10,0,1,1,1,0,1,0,1,2,5,0,0,0,16,1.4545455,-20
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,5660,UDO-LIA,27,Liam,UDOM,0,8,480,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,2,1,0,0,0,-4,0,-14
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,6133,OSV-OLI-93,31,Osvaldas,OLISEVICIUS,1,31,1860,12,3,7,2,4,0,0,3,0,3,2,1,3,0,0,2,4,0,0,0,11,0.8571429,-8
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,player,9072,MOL-MAT-XX,36,Matteo,MOLTENI,0,1,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,team,,,,,,,,,0,,,,,,,2,2,4,,0,2,,,0,0,0,0,,2,,
+25406,2026-11-02T20:30:00.000+01:00,6,1765,Acqua S.Bernardo Cantù,1751,Armani Olimpia Milano,1,total,,,,,,,200,12000,82,18,36,6,20,28,34,10,25,35,17,6,16,4,8,22,29,0,0,2,89,0.9840368,
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,854,BUR-JAS-97,0,Jason,BURNELL,1,13,780,3,0,2,1,2,0,0,1,1,2,0,0,1,0,0,2,1,0,0,0,0,0.6,-10
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,9031,COL-RJ-99,2,R.J.,COLE,1,21,1260,14,4,7,0,3,6,7,3,0,3,4,0,0,1,0,3,6,0,0,0,18,1.037037,-2
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,9378,WRI-MOS-98,5,Moses,WRIGHT,1,20,1200,8,3,7,0,1,2,4,2,4,6,0,0,1,3,0,2,3,0,0,2,10,0.7272727,-3
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,1775,DIO-OUS-00,6,Ousmane,DIOP,0,14,840,7,1,4,0,0,5,6,2,4,6,1,0,2,3,2,5,5,0,0,0,9,0.7777778,10
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,5568,TON-STE-93,7,Stefano,TONUT,1,12,720,5,1,2,1,1,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,4,1.6666667,-10
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,7405,BOL-LEA-00,10,Leandro,BOLMARO,0,18,1080,14,3,5,2,2,2,2,0,3,3,2,4,0,0,0,1,2,0,0,0,22,1.75,17
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,5499,THO-DAR-95,13,Darius,THOMPSON,0,19,1140,10,3,8,1,3,1,2,0,1,1,1,2,0,0,0,3,1,0,0,0,4,0.8333333,15
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,4692,RIC-GIA-91,17,Giampaolo,RICCI,0,27,1620,10,2,2,2,2,0,0,1,3,4,0,0,0,1,0,3,0,0,0,1,12,2.5,23
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,2103,FLA-DIE-96,21,Diego,FLACCADORI,0,14,840,5,1,2,1,2,0,0,1,0,1,4,1,0,0,0,2,0,0,0,0,7,1.25,8
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,6156,HAL-DEV-95,22,Devon,HALL,1,23,1380,7,3,4,0,2,1,2,1,4,5,2,1,1,0,1,1,1,0,0,0,9,0.875,-4
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,9008,GUD-MAR-95,23,Marko,GUDURIC,0,14,840,12,3,6,1,1,3,3,0,1,1,2,0,2,0,1,5,2,0,0,0,6,1.1428571,15
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,player,45,AKE-NIC-95,45,Nicola,AKELE,0,5,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,6
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,team,,,,,,,,,0,,,,,,,1,1,2,,0,0,,,0,0,0,0,,2,,
+25406,2026-11-02T20:30:00.000+01:00,6,1751,Armani Olimpia Milano,1765,Acqua S.Bernardo Cantù,0,total,,,,,,,200,12000,95,24,49,9,19,20,26,12,23,35,16,8,7,8,4,29,22,0,0,3,103,1.1963586,

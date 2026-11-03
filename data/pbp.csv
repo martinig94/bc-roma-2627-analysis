@@ -26661,3 +26661,1149 @@ game_id,seq,period,clock,elapsed_sec,score_home,score_away,team_id,team,home_clu
 25407,625,4,00:25,575,86,74,1771,APU Old Wild West Udine,1,6562,34,Matteo,Cavallero,Ingresso,,,,,,,,,,False,0,622
 25407,626,4,00:02,598,86,77,1752,Bertram Derthona Tortona,0,656,12,Giordano,Bortolani,3 punti segnato,1,Tiro in sospensione,,,67,53,1,A,9,False,0,
 25407,627,4,00:00,600,86,77,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25400,103,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25400,104,1,10:00,0,0,0,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Palla contesa,,,,,,,0,,,False,0,
+25400,105,1,09:38,22,0,0,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,13,35,0,A,2,False,0,
+25400,106,1,09:38,22,0,0,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Stoppata,,,,,13,35,0,A,2,False,0,105
+25400,107,1,09:38,22,0,0,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Stoppata subita,,,,,13,35,0,A,2,False,0,105
+25400,108,1,09:38,22,0,0,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Rimbalzo difensivo,,,,,13,35,0,A,2,False,0,105
+25400,109,1,09:27,33,0,2,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,2 punti segnato,7,Appoggio a canestro,,,92,53,1,A,3,True,0,
+25400,110,1,09:27,33,0,2,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Assist,,,,,92,53,1,A,3,False,0,109
+25400,111,1,09:10,50,0,2,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,2 punti sbagliato,7,Appoggio a canestro,,,9,63,0,A,4,False,0,
+25400,112,1,09:10,50,0,2,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,9,63,0,A,4,False,0,111
+25400,113,1,08:55,65,0,5,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,3 punti segnato,1,Tiro in sospensione,,,72,19,1,A,10,False,0,
+25400,114,1,08:55,65,0,5,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Assist,,,,,72,19,1,A,10,False,0,113
+25400,115,1,08:37,83,3,5,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,3 punti segnato,1,Tiro in sospensione,,,32,57,0,A,9,False,0,
+25400,116,1,08:37,83,3,5,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Assist,,,,,32,57,0,A,9,False,0,115
+25400,117,1,08:24,96,3,8,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,3 punti segnato,1,Tiro in sospensione,,,67,55,1,A,9,False,0,
+25400,118,1,08:13,107,3,8,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Fallo commesso,103,tiro,,,27,23,1,D,8,False,0,
+25400,119,1,08:13,107,3,8,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Fallo Subito,,,,,27,23,1,D,8,False,0,118
+25400,120,1,08:13,107,4,8,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,121,1,08:13,107,5,8,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Tiro libero segnato,,,,,,,,A,7,False,0,120
+25400,122,1,08:13,107,6,8,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Tiro libero segnato,,,,,,,,A,7,False,0,120
+25400,123,1,08:13,107,6,8,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Assist,,,,,,,,,,False,0,120
+25400,124,1,08:03,117,6,8,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,2 punti sbagliato,1,Tiro in sospensione,,,84,43,1,A,6,False,0,
+25400,125,1,08:03,117,6,8,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo difensivo,,,,,84,43,1,A,6,False,0,124
+25400,126,1,07:56,124,8,8,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,2 punti segnato,8,Da penetrazione,,,3,60,0,A,3,True,0,
+25400,127,1,07:44,136,8,10,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,2 punti segnato,7,Appoggio a canestro,,,90,57,1,A,6,True,0,
+25400,128,1,07:44,136,8,10,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Assist,,,,,90,57,1,A,6,False,0,127
+25400,129,1,07:28,152,10,10,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,8,Da penetrazione,,,11,61,0,A,6,True,0,
+25400,130,1,07:13,167,10,10,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,76,87,1,A,8,False,0,
+25400,131,1,07:13,167,10,10,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo difensivo,,,,,76,87,1,A,8,False,0,130
+25400,132,1,06:56,184,10,10,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,2 punti sbagliato,1,Tiro in sospensione,,,20,66,0,A,4,False,0,
+25400,133,1,06:56,184,10,10,1767,Pallacanestro Trieste,0,,,,,Rimbalzi difensivi di squadra,,,,,20,66,0,A,4,False,0,132
+25400,134,1,06:30,210,10,10,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,2 punti sbagliato,7,Appoggio a canestro,1003,tip-in appoggio canestro made,89,49,1,A,6,False,0,
+25400,135,1,06:30,210,10,10,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Rimbalzo offensivo,,,,,89,49,1,A,6,False,0,134
+25400,136,1,06:30,210,10,12,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,2 punti segnato,7,Appoggio a canestro,,,89,49,1,A,6,True,0,
+25400,137,1,06:19,221,10,12,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Palla persa,50,Passaggio sbagliato,,,32,61,0,A,9,False,0,
+25400,138,1,06:19,221,10,12,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Palla recuperata,,,,,32,61,0,A,9,False,0,137
+25400,139,1,06:14,226,10,14,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,2 punti segnato,7,Appoggio a canestro,500,contropiede,93,47,1,A,3,True,0,
+25400,140,1,06:14,226,10,14,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Assist,,,500,contropiede,93,47,1,A,3,False,0,139
+25400,141,1,06:06,234,10,14,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo commesso,103,tiro,,,9,47,1,D,3,False,0,
+25400,142,1,06:06,234,10,14,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Fallo Subito,,,,,9,47,1,D,3,False,0,141
+25400,143,1,06:06,234,11,14,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25400,144,1,06:06,234,12,14,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,143
+25400,145,1,05:57,243,12,14,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,2 punti sbagliato,8,Da penetrazione,,,90,54,1,A,6,False,0,
+25400,146,1,05:57,243,12,14,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,90,54,1,A,6,False,0,145
+25400,147,1,05:43,257,12,14,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Palla persa,50,Passaggio sbagliato,,,28,27,0,A,9,False,0,
+25400,148,1,05:43,257,12,14,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Palla recuperata,,,,,28,27,0,A,9,False,0,147
+25400,151,1,05:39,261,12,16,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti segnato,7,Appoggio a canestro,,,94,47,1,A,3,True,0,
+25400,152,1,05:39,261,12,16,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo commesso,103,tiro,,,94,47,0,D,3,False,0,
+25400,153,1,05:39,261,12,16,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Fallo Subito,,,,,94,47,0,D,3,False,0,152
+25400,154,1,05:39,261,12,17,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25400,155,1,05:28,272,14,17,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,2 punti segnato,9,Schiacciata,,,10,39,0,A,6,True,1,
+25400,156,1,05:28,272,14,17,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Assist,,,,,10,39,0,A,6,False,0,155
+25400,157,1,05:21,279,14,20,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,3 punti segnato,1,Tiro in sospensione,,,73,20,1,A,10,False,0,
+25400,158,1,05:21,279,14,20,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Assist,,,,,73,20,1,A,10,False,0,157
+25400,159,1,05:09,291,14,20,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo commesso,106,offensivo,,,11,47,0,A,6,False,0,
+25400,160,1,05:09,291,14,20,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Palla persa,,,,,11,47,0,A,6,False,0,159
+25400,161,1,05:09,291,14,20,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Fallo Subito,,,,,11,47,0,A,6,False,0,159
+25400,162,1,05:09,291,14,20,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Ingresso,,,,,,,,,,False,0,
+25400,163,1,05:09,291,14,20,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Uscita,,,,,,,,,,False,0,162
+25400,164,1,05:09,291,14,20,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Ingresso,,,,,,,,,,False,0,
+25400,165,1,05:09,291,14,20,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Uscita,,,,,,,,,,False,0,164
+25400,166,1,04:53,307,14,20,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Ingresso,,,,,,,,,,False,0,
+25400,167,1,04:53,307,14,20,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Uscita,,,,,,,,,,False,0,166
+25400,168,1,04:48,312,14,20,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,3 punti sbagliato,1,Tiro in sospensione,,,67,47,1,A,9,False,0,
+25400,169,1,04:48,312,14,20,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,67,47,1,A,9,False,0,168
+25400,170,1,04:31,329,14,20,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti sbagliato,1,Tiro in sospensione,,,24,87,0,A,10,False,0,
+25400,171,1,04:31,329,14,20,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo offensivo,,,,,24,87,0,A,10,False,0,170
+25400,172,1,04:25,335,14,20,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,2 punti sbagliato,7,Appoggio a canestro,,,7,45,0,A,3,False,0,
+25400,173,1,04:25,335,14,20,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,7,45,0,A,3,False,0,172
+25400,174,1,04:10,350,14,22,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti segnato,3,Tiro in fadeaway,,,88,56,1,A,6,True,0,
+25400,175,1,04:09,351,14,22,1750,Virtus Costa Bologna,1,,,,,Time Out,,,,,,,0,,,False,0,
+25400,176,1,04:09,351,14,22,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Uscita,,,,,,,,,,False,0,
+25400,177,1,04:09,351,14,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Ingresso,,,,,,,,,,False,0,176
+25400,178,1,04:09,351,14,22,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Ingresso,,,,,,,,,,False,0,176
+25400,179,1,04:09,351,14,22,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Uscita,,,,,,,,,,False,0,176
+25400,180,1,04:09,351,14,22,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Ingresso,,,,,,,,,,False,0,176
+25400,181,1,04:09,351,14,22,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Uscita,,,,,,,,,,False,0,176
+25400,182,1,03:49,371,14,22,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,2 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,23,53,0,A,7,False,0,
+25400,183,1,03:49,371,14,22,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Rimbalzo offensivo,,,,,23,53,0,A,7,False,0,182
+25400,184,1,03:49,371,16,22,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,2 punti segnato,7,Appoggio a canestro,,,23,53,0,A,7,False,0,
+25400,185,1,03:24,396,16,22,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Uscita,,,,,,,,,,False,0,
+25400,186,1,03:24,396,16,22,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Ingresso,,,,,,,,,,False,0,185
+25400,187,1,03:21,399,16,22,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,3 punti sbagliato,1,Tiro in sospensione,,,76,87,1,A,8,False,0,
+25400,188,1,03:21,399,16,22,1750,Virtus Costa Bologna,1,,,,,Rimbalzi difensivi di squadra,,,,,76,87,1,A,8,False,0,187
+25400,189,1,03:17,403,16,22,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Uscita,,,,,,,,,,False,0,
+25400,190,1,03:17,403,16,22,1767,Pallacanestro Trieste,0,9005,7,Abramo,Canka,Ingresso,,,,,,,,,,False,0,189
+25400,192,1,02:59,421,16,22,1767,Pallacanestro Trieste,0,9005,7,Abramo,Canka,Fallo commesso,100,personale,,,8,50,1,D,3,False,0,
+25400,193,1,02:59,421,16,22,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Fallo Subito,,,,,8,50,1,D,3,False,0,192
+25400,194,1,02:59,421,16,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Palla persa,55,Infrazione di campo,,,55,85,0,D,8,False,0,
+25400,195,1,02:55,425,16,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo commesso,100,personale,,,59,57,0,D,9,False,0,
+25400,196,1,02:55,425,16,22,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Fallo Subito,,,,,59,57,0,D,9,False,0,195
+25400,197,1,02:55,425,16,22,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Ingresso,,,,,,,,,,False,0,
+25400,198,1,02:55,425,16,22,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Uscita,,,,,,,,,,False,0,197
+25400,199,1,02:43,437,16,22,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,2 punti sbagliato,8,Da penetrazione,,,92,51,1,A,3,False,0,
+25400,200,1,02:43,437,16,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Rimbalzo difensivo,,,,,92,51,1,A,3,False,0,199
+25400,201,1,02:37,443,18,22,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti segnato,8,Da penetrazione,,,8,52,0,A,3,True,0,
+25400,202,1,02:27,453,18,22,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Fallo commesso,100,personale,,,73,81,0,D,8,False,0,
+25400,203,1,02:27,453,18,22,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Fallo Subito,,,,,73,81,0,D,8,False,0,202
+25400,204,1,02:08,472,18,22,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,2 punti sbagliato,7,Appoggio a canestro,1006,violazione 24sec,88,39,1,A,6,False,0,
+25400,205,1,02:08,472,18,22,1767,Pallacanestro Trieste,0,,,,,Palle perse di squadra,1006,violazione 24sec,,,88,39,1,A,6,False,0,
+25400,206,1,02:01,479,20,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti segnato,8,Da penetrazione,,,6,58,0,A,3,True,0,
+25400,207,1,01:35,505,20,22,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Palla persa,50,Passaggio sbagliato,,,65,27,1,A,9,False,0,
+25400,208,1,01:35,505,20,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Palla recuperata,,,,,65,27,1,A,9,False,0,207
+25400,209,1,01:33,507,22,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti segnato,7,Appoggio a canestro,500,contropiede,15,63,0,A,4,True,0,
+25400,210,1,01:33,507,22,22,1767,Pallacanestro Trieste,0,,,,,Time Out,,,,,,,1,,,False,0,
+25400,211,1,01:33,507,22,22,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Uscita,,,,,,,,,,False,0,
+25400,212,1,01:33,507,22,22,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Ingresso,,,,,,,,,,False,0,211
+25400,213,1,01:20,520,22,22,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,2 punti sbagliato,1,Tiro in sospensione,,,90,55,1,A,6,False,0,
+25400,214,1,01:20,520,22,22,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Rimbalzo offensivo,,,,,90,55,1,A,6,False,0,213
+25400,215,1,01:10,530,22,22,1767,Pallacanestro Trieste,0,9005,7,Abramo,Canka,3 punti sbagliato,1,Tiro in sospensione,,,79,6,1,A,10,False,0,
+25400,216,1,01:10,530,22,22,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Rimbalzo offensivo,,,,,79,6,1,A,10,False,0,215
+25400,217,1,01:01,539,22,22,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,3 punti sbagliato,1,Tiro in sospensione,,,68,40,1,A,9,False,0,
+25400,218,1,01:01,539,22,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Rimbalzo difensivo,,,,,68,40,1,A,9,False,0,217
+25400,219,1,00:56,544,22,22,1767,Pallacanestro Trieste,0,9005,7,Abramo,Canka,Fallo commesso,100,personale,,,44,85,1,D,10,False,0,
+25400,220,1,00:56,544,22,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo Subito,,,,,44,85,1,D,10,False,0,219
+25400,221,1,00:41,559,24,22,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,2 punti segnato,7,Appoggio a canestro,,,12,49,0,A,6,True,0,
+25400,222,1,00:41,559,24,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Assist,,,,,12,49,0,A,6,False,0,221
+25400,223,1,00:35,565,24,22,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Palla persa,50,Passaggio sbagliato,,,54,71,1,A,9,False,0,
+25400,224,1,00:25,575,24,22,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,3 punti sbagliato,1,Tiro in sospensione,,,34,55,0,A,9,False,0,
+25400,225,1,00:25,575,24,22,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Rimbalzo offensivo,,,,,34,55,0,A,9,False,0,224
+25400,226,1,00:12,588,24,22,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,2 punti sbagliato,1,Tiro in sospensione,,,16,52,0,A,6,False,0,
+25400,227,1,00:12,588,24,22,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Rimbalzo difensivo,,,,,16,52,0,A,6,False,0,226
+25400,228,1,00:01,599,24,25,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,3 punti segnato,5,Tiro in Step Back,,,70,77,1,A,8,False,0,
+25400,229,1,00:00,600,24,25,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25400,230,2,10:00,0,24,25,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25400,231,2,09:48,12,26,25,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,2 punti segnato,7,Appoggio a canestro,,,9,59,0,A,3,True,0,
+25400,232,2,09:48,12,26,25,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Assist,,,,,9,59,0,A,3,False,0,231
+25400,233,2,09:27,33,26,25,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,3 punti sbagliato,1,Tiro in sospensione,,,81,95,1,A,8,False,0,
+25400,234,2,09:27,33,26,25,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Rimbalzo difensivo,,,,,81,95,1,A,8,False,0,233
+25400,235,2,09:18,42,26,25,1767,Pallacanestro Trieste,0,9005,7,Abramo,Canka,Fallo commesso,100,personale,,,19,58,1,D,6,False,0,
+25400,236,2,09:18,42,26,25,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo Subito,,,,,19,58,1,D,6,False,0,235
+25400,237,2,09:18,42,26,25,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Ingresso,,,,,,,,,,False,0,
+25400,238,2,09:18,42,26,25,1767,Pallacanestro Trieste,0,9005,7,Abramo,Canka,Uscita,,,,,,,,,,False,0,237
+25400,239,2,09:18,42,26,25,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Ingresso,,,,,,,,,,False,0,237
+25400,240,2,09:18,42,26,25,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Uscita,,,,,,,,,,False,0,237
+25400,241,2,09:14,46,29,25,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti segnato,1,Tiro in sospensione,,,33,40,0,A,9,False,0,
+25400,242,2,09:14,46,29,25,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Assist,,,,,33,40,0,A,9,False,0,241
+25400,243,2,09:01,59,29,25,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Palla persa,50,Passaggio sbagliato,,,65,38,1,A,9,False,0,
+25400,244,2,09:01,59,29,25,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Ingresso,,,,,,,,,,False,0,
+25400,245,2,09:01,59,29,25,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Uscita,,,,,,,,,,False,0,244
+25400,246,2,08:50,70,32,25,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,3 punti segnato,1,Tiro in sospensione,,,23,14,0,A,8,False,0,
+25400,247,2,08:50,70,32,25,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Assist,,,,,23,14,0,A,8,False,0,246
+25400,248,2,08:35,85,32,25,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Palla persa,50,Passaggio sbagliato,,,83,67,1,A,2,False,0,
+25400,249,2,08:35,85,32,25,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Uscita,,,,,,,,,,False,0,
+25400,250,2,08:35,85,32,25,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Uscita,,,,,,,,,,False,0,249
+25400,251,2,08:35,85,32,25,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Ingresso,,,,,,,,,,False,0,249
+25400,252,2,08:35,85,32,25,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Ingresso,,,,,,,,,,False,0,249
+25400,253,2,08:26,94,35,25,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,3 punti segnato,1,Tiro in sospensione,,,26,84,0,A,10,False,0,
+25400,254,2,08:26,94,35,25,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Assist,,,,,26,84,0,A,10,False,0,253
+25400,255,2,08:01,119,35,28,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,3 punti segnato,1,Tiro in sospensione,,,67,44,1,A,9,False,0,
+25400,256,2,07:41,139,37,28,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,2 punti segnato,3,Tiro in fadeaway,,,17,50,0,A,6,True,0,
+25400,257,2,07:27,153,37,30,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti segnato,7,Appoggio a canestro,,,90,58,1,A,6,True,0,
+25400,258,2,07:27,153,37,30,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Fallo commesso,103,tiro,,,90,58,0,D,6,False,0,
+25400,259,2,07:27,153,37,30,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Fallo Subito,,,,,90,58,0,D,6,False,0,258
+25400,260,2,07:27,153,37,30,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Uscita,,,,,,,,,,False,0,
+25400,261,2,07:27,153,37,30,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Uscita,,,,,,,,,,False,0,260
+25400,262,2,07:27,153,37,30,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Ingresso,,,,,,,,,,False,0,260
+25400,263,2,07:27,153,37,30,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,260
+25400,264,2,07:27,153,37,30,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Ingresso,,,,,,,,,,False,0,260
+25400,265,2,07:27,153,37,30,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Ingresso,,,,,,,,,,False,0,260
+25400,266,2,07:27,153,37,31,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,267,2,07:12,168,40,31,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,3 punti segnato,1,Tiro in sospensione,,,28,82,0,A,10,False,0,
+25400,268,2,07:12,168,40,31,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Assist,,,,,28,82,0,A,10,False,0,267
+25400,269,2,06:58,182,40,31,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Fallo commesso,100,personale,,,76,74,0,D,7,False,0,
+25400,270,2,06:58,182,40,31,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Fallo Subito,,,,,76,74,0,D,7,False,0,269
+25400,271,2,06:43,197,40,31,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,2 punti sbagliato,1,Tiro in sospensione,1004,tip-in appoggio canestro miss,76,55,1,A,7,False,0,
+25400,272,2,06:43,197,40,31,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo offensivo,,,,,76,55,1,A,7,False,0,271
+25400,273,2,06:43,197,40,31,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,2 punti sbagliato,7,Appoggio a canestro,,,76,55,1,A,7,False,0,
+25400,274,2,06:43,197,40,31,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Rimbalzo offensivo,,,,,76,55,1,A,7,False,0,273
+25400,275,2,06:28,212,40,33,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti segnato,9,Schiacciata,,,94,50,1,A,3,True,1,
+25400,276,2,06:28,212,40,33,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Assist,,,,,94,50,1,A,3,False,0,275
+25400,277,2,06:11,229,40,33,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo commesso,100,personale,,,27,53,1,D,7,False,0,
+25400,278,2,06:11,229,40,33,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Fallo Subito,,,,,27,53,1,D,7,False,0,277
+25400,279,2,06:10,230,40,33,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti sbagliato,7,Appoggio a canestro,,,15,57,0,A,6,False,0,
+25400,280,2,06:10,230,40,33,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Rimbalzo difensivo,,,,,15,57,0,A,6,False,0,279
+25400,281,2,06:01,239,40,33,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,68,72,1,A,9,False,0,
+25400,282,2,06:01,239,40,33,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Rimbalzo difensivo,,,,,68,72,1,A,9,False,0,281
+25400,283,2,05:53,247,40,33,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,3 punti sbagliato,1,Tiro in sospensione,,,27,20,0,A,8,False,0,
+25400,284,2,05:53,247,40,33,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,27,20,0,A,8,False,0,283
+25400,285,2,05:44,256,40,33,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo commesso,103,tiro,,,91,51,0,D,3,False,0,
+25400,286,2,05:44,256,40,33,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Fallo Subito,,,,,91,51,0,D,3,False,0,285
+25400,287,2,05:44,256,40,33,1750,Virtus Costa Bologna,1,6797,13,Matteo,Baiocchi,Ingresso,,,,,,,,,,False,0,
+25400,288,2,05:44,256,40,33,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Uscita,,,,,,,,,,False,0,287
+25400,289,2,05:44,256,40,33,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Uscita,,,,,,,,,,False,0,
+25400,290,2,05:44,256,40,33,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Ingresso,,,,,,,,,,False,0,289
+25400,291,2,05:44,256,40,34,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,292,2,05:44,256,40,34,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Tiro libero sbagliato,,,,,,,,A,7,False,0,291
+25400,293,2,05:44,256,40,34,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,,,,,,False,0,291
+25400,294,2,05:38,262,40,34,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo commesso,103,tiro,,,8,48,1,D,3,False,0,
+25400,295,2,05:38,262,40,34,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Fallo Subito,,,,,8,48,1,D,3,False,0,294
+25400,296,2,05:38,262,40,34,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Uscita,,,,,,,,,,False,0,
+25400,297,2,05:38,262,40,34,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Ingresso,,,,,,,,,,False,0,296
+25400,298,2,05:38,262,40,34,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25400,299,2,05:38,262,41,34,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Tiro libero segnato,,,,,,,,A,7,False,0,298
+25400,300,2,05:38,262,41,34,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Uscita,,,,,,,,,,False,0,
+25400,301,2,05:38,262,41,34,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Ingresso,,,,,,,,,,False,0,300
+25400,302,2,05:15,285,41,34,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,3 punti sbagliato,1,Tiro in sospensione,,,73,83,1,A,8,False,0,
+25400,303,2,05:15,285,41,34,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Rimbalzo difensivo,,,,,73,83,1,A,8,False,0,302
+25400,304,2,05:06,294,41,34,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,11,50,0,A,6,False,0,
+25400,305,2,05:06,294,41,34,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Stoppata,,,,,11,50,0,A,6,False,0,304
+25400,306,2,05:06,294,41,34,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Stoppata subita,,,,,11,50,0,A,6,False,0,304
+25400,307,2,05:06,294,41,34,1750,Virtus Costa Bologna,1,,,,,Rimbalzi offensivi di squadra,,,,,11,50,0,A,6,False,0,304
+25400,308,2,05:00,300,41,34,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,3 punti sbagliato,1,Tiro in sospensione,,,32,30,0,A,9,False,0,
+25400,309,2,05:00,300,41,34,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo offensivo,,,,,32,30,0,A,9,False,0,308
+25400,310,2,04:52,308,41,34,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti sbagliato,1,Tiro in sospensione,,,18,59,0,A,6,False,0,
+25400,311,2,04:52,308,41,34,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,18,59,0,A,6,False,0,310
+25400,312,2,04:42,318,41,34,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Fallo commesso,100,personale,,,88,67,0,D,2,False,0,
+25400,313,2,04:42,318,41,34,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Fallo Subito,,,,,88,67,0,D,2,False,0,312
+25400,314,2,04:37,323,41,34,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,3 punti sbagliato,1,Tiro in sospensione,,,86,96,1,A,8,False,0,
+25400,315,2,04:37,323,41,34,1750,Virtus Costa Bologna,1,6797,13,Matteo,Baiocchi,Rimbalzo difensivo,,,,,86,96,1,A,8,False,0,314
+25400,316,2,04:32,328,44,34,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,3 punti segnato,1,Tiro in sospensione,500,contropiede,22,11,0,A,8,False,0,
+25400,317,2,04:32,328,44,34,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Assist,,,500,contropiede,22,11,0,A,8,False,0,316
+25400,318,2,04:18,342,44,36,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti segnato,5,Tiro in Step Back,,,82,31,1,A,4,False,0,
+25400,319,2,04:18,342,44,36,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Fallo commesso,103,tiro,,,82,31,0,D,4,False,0,
+25400,320,2,04:18,342,44,36,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Fallo Subito,,,,,82,31,0,D,4,False,0,319
+25400,321,2,04:18,342,44,36,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Ingresso,,,,,,,,,,False,0,
+25400,322,2,04:18,342,44,36,1750,Virtus Costa Bologna,1,6797,13,Matteo,Baiocchi,Uscita,,,,,,,,,,False,0,321
+25400,323,2,04:18,342,44,37,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,324,2,04:07,353,44,37,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Fallo commesso,103,tiro,,,11,50,1,D,6,False,0,
+25400,325,2,04:07,353,44,37,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Fallo Subito,,,,,11,50,1,D,6,False,0,324
+25400,326,2,04:07,353,45,37,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,327,2,04:07,353,46,37,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Tiro libero segnato,,,,,,,,A,7,False,0,326
+25400,328,2,04:07,353,46,37,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,,,,,,False,0,326
+25400,329,2,04:07,353,46,37,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Ingresso,,,,,,,,,,False,0,
+25400,330,2,04:07,353,46,37,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Uscita,,,,,,,,,,False,0,329
+25400,331,2,03:56,364,46,37,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,68,53,1,A,9,False,0,
+25400,332,2,03:56,364,46,37,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Rimbalzo difensivo,,,,,68,53,1,A,9,False,0,331
+25400,333,2,03:48,372,48,37,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,2 punti segnato,2,Tiro in corsa,500,contropiede,10,67,0,A,4,False,0,
+25400,335,2,03:48,372,48,37,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,10,67,0,A,4,False,0,333
+25400,336,2,03:29,391,48,37,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,3 punti sbagliato,1,Tiro in sospensione,,,70,75,1,A,8,False,0,
+25400,337,2,03:29,391,48,37,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,70,75,1,A,8,False,0,336
+25400,338,2,03:23,397,48,37,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,3 punti sbagliato,1,Tiro in sospensione,,,17,3,0,A,8,False,0,
+25400,339,2,03:23,397,48,37,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,17,3,0,A,8,False,0,338
+25400,340,2,03:15,405,48,39,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti segnato,9,Schiacciata,500,contropiede,91,51,1,A,3,True,1,
+25400,341,2,03:01,419,48,39,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,2 punti sbagliato,1,Tiro in sospensione,,,22,49,0,A,7,False,0,
+25400,342,2,03:01,419,48,39,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,22,49,0,A,7,False,0,341
+25400,343,2,02:45,435,48,39,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,68,37,1,A,9,False,0,
+25400,344,2,02:45,435,48,39,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,68,37,1,A,9,False,0,343
+25400,345,2,02:37,443,48,39,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,3 punti sbagliato,1,Tiro in sospensione,,,31,66,0,A,9,False,0,
+25400,346,2,02:37,443,48,39,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Rimbalzo offensivo,,,,,31,66,0,A,9,False,0,345
+25400,347,2,02:30,450,48,39,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Fallo commesso,103,tiro,,,12,53,1,D,6,False,0,
+25400,348,2,02:30,450,48,39,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Fallo Subito,,,,,12,53,1,D,6,False,0,347
+25400,349,2,02:30,450,48,39,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Ingresso,,,,,,,,,,False,0,
+25400,350,2,02:30,450,48,39,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Uscita,,,,,,,,,,False,0,349
+25400,351,2,02:30,450,48,39,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Ingresso,,,,,,,,,,False,0,349
+25400,352,2,02:30,450,48,39,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Uscita,,,,,,,,,,False,0,349
+25400,353,2,02:30,450,49,39,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,354,2,02:30,450,50,39,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Tiro libero segnato,,,,,,,,A,7,False,0,353
+25400,355,2,02:30,450,50,39,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Assist,,,,,,,,,,False,0,353
+25400,356,2,02:30,450,50,39,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Uscita,,,,,,,,,,False,0,
+25400,357,2,02:30,450,50,39,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Ingresso,,,,,,,,,,False,0,356
+25400,358,2,02:13,467,50,39,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,3 punti sbagliato,1,Tiro in sospensione,,,69,63,1,A,9,False,0,
+25400,359,2,02:13,467,50,39,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Rimbalzo difensivo,,,,,69,63,1,A,9,False,0,358
+25400,360,2,01:56,484,50,39,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti sbagliato,4,Giro e Tiro,,,19,43,0,A,6,False,0,
+25400,361,2,01:56,484,50,39,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Rimbalzo offensivo,,,,,19,43,0,A,6,False,0,360
+25400,362,2,01:50,490,53,39,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti segnato,1,Tiro in sospensione,,,28,22,0,A,8,False,0,
+25400,363,2,01:50,490,53,39,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Assist,,,,,28,22,0,A,8,False,0,362
+25400,364,2,01:48,492,53,39,1767,Pallacanestro Trieste,0,,,,,Time Out,,,,,,,1,,,False,0,
+25400,365,2,01:31,509,53,41,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,2 punti segnato,8,Da penetrazione,,,91,64,1,A,2,True,0,
+25400,366,2,01:22,518,53,41,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,3 punti sbagliato,1,Tiro in sospensione,,,19,10,0,A,8,False,0,
+25400,367,2,01:22,518,53,41,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Rimbalzo difensivo,,,,,19,10,0,A,8,False,0,366
+25400,368,2,01:15,525,53,41,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,88,61,1,A,6,False,0,
+25400,369,2,01:15,525,53,41,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Stoppata,,,,,88,61,1,A,6,False,0,368
+25400,370,2,01:15,525,53,41,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Stoppata subita,,,,,88,61,1,A,6,False,0,368
+25400,371,2,01:15,525,53,41,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo offensivo,,,,,88,61,1,A,6,False,0,368
+25400,372,2,01:07,533,53,41,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Palla persa,50,Passaggio sbagliato,,,86,81,1,A,2,False,0,
+25400,373,2,01:07,533,53,41,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Palla recuperata,,,,,86,81,1,A,2,False,0,372
+25400,374,2,01:03,537,53,41,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti sbagliato,7,Appoggio a canestro,,,11,45,0,A,6,False,0,
+25400,375,2,01:03,537,53,41,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Rimbalzo difensivo,,,,,11,45,0,A,6,False,0,374
+25400,376,2,00:54,546,53,41,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,2 punti sbagliato,7,Appoggio a canestro,,,89,51,1,A,6,False,0,
+25400,377,2,00:54,546,53,41,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Rimbalzo difensivo,,,,,89,51,1,A,6,False,0,376
+25400,378,2,00:50,550,53,41,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Palla persa,50,Passaggio sbagliato,,,88,39,0,D,6,False,0,
+25400,379,2,00:47,553,53,41,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo commesso,100,personale,,,75,24,0,D,7,False,0,
+25400,380,2,00:47,553,53,41,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Fallo Subito,,,,,75,24,0,D,7,False,0,379
+25400,381,2,00:47,553,53,42,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,382,2,00:47,553,53,43,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Tiro libero segnato,,,,,,,,A,7,False,0,381
+25400,383,2,00:47,553,53,43,1750,Virtus Costa Bologna,1,,,,,Time Out,,,,,,,0,,,False,0,
+25400,384,2,00:41,559,53,43,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Ingresso,,,,,,,,,,False,0,
+25400,385,2,00:41,559,53,43,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Uscita,,,,,,,,,,False,0,384
+25400,386,2,00:41,559,55,43,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti segnato,7,Appoggio a canestro,,,10,62,0,A,6,True,0,
+25400,387,2,00:08,592,55,46,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,3 punti segnato,1,Tiro in sospensione,,,95,98,1,A,1,False,0,
+25400,388,2,00:08,592,55,46,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Assist,,,,,95,98,1,A,1,False,0,387
+25400,389,2,00:00,600,55,46,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,2 punti sbagliato,1,Tiro in sospensione,,,6,50,0,A,3,False,0,
+25400,390,2,00:00,600,55,46,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Rimbalzo difensivo,,,,,6,50,0,A,3,False,0,389
+25400,391,2,00:00,600,55,46,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25400,392,3,10:00,0,55,46,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,
+25400,393,3,10:00,0,55,46,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Ingresso,,,,,,,,,,False,0,392
+25400,394,3,10:00,0,55,46,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Ingresso,,,,,,,,,,False,0,392
+25400,395,3,10:00,0,55,46,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Uscita,,,,,,,,,,False,0,392
+25400,396,3,10:00,0,55,46,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Uscita,,,,,,,,,,False,0,392
+25400,397,3,10:00,0,55,46,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Ingresso,,,,,,,,,,False,0,392
+25400,398,3,10:00,0,55,46,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25400,399,3,09:38,22,55,48,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,2 punti segnato,7,Appoggio a canestro,,,8,59,0,A,3,True,0,
+25400,400,3,09:19,41,55,48,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,3 punti sbagliato,1,Tiro in sospensione,,,70,77,1,A,8,False,0,
+25400,401,3,09:19,41,55,48,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Rimbalzo difensivo,,,,,70,77,1,A,8,False,0,400
+25400,402,3,09:10,50,55,48,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Fallo commesso,103,tiro,,,16,62,1,D,6,False,0,
+25400,403,3,09:10,50,55,48,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo Subito,,,,,16,62,1,D,6,False,0,402
+25400,404,3,09:10,50,55,49,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,405,3,09:10,50,55,49,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Tiro libero sbagliato,,,,,,,,A,7,False,0,404
+25400,406,3,09:10,50,55,49,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Rimbalzo difensivo,,,,,,,,,,False,0,404
+25400,407,3,09:03,57,57,49,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti segnato,3,Tiro in fadeaway,,,86,51,1,A,6,True,0,
+25400,408,3,08:45,75,57,49,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Fallo commesso,103,tiro,,,10,63,1,D,4,False,0,
+25400,409,3,08:45,75,57,49,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Fallo Subito,,,,,10,63,1,D,4,False,0,408
+25400,410,3,08:45,75,57,49,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25400,411,3,08:45,75,57,50,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Tiro libero segnato,,,,,,,,A,7,False,0,410
+25400,412,3,08:26,94,59,50,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,2 punti segnato,11,Gancio,,,87,56,1,A,6,True,0,
+25400,413,3,08:06,114,59,53,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,3 punti segnato,1,Tiro in sospensione,,,31,71,0,A,9,False,0,
+25400,414,3,08:06,114,59,53,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Assist,,,,,31,71,0,A,9,False,0,413
+25400,416,3,07:47,133,59,53,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,88,51,1,A,6,False,0,
+25400,417,3,07:47,133,59,53,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Rimbalzo offensivo,,,,,88,51,1,A,6,False,0,416
+25400,418,3,07:47,133,61,53,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti segnato,7,Appoggio a canestro,,,88,51,1,A,6,True,0,
+25400,419,3,07:37,143,61,53,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,3 punti sbagliato,1,Tiro in sospensione,,,32,35,0,A,9,False,0,
+25400,420,3,07:37,143,61,53,1767,Pallacanestro Trieste,0,,,,,Rimbalzi offensivi di squadra,,,,,32,35,0,A,9,False,0,419
+25400,421,3,07:33,147,61,53,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Uscita,,,,,,,,,,False,0,
+25400,422,3,07:33,147,61,53,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Ingresso,,,,,,,,,,False,0,421
+25400,423,3,07:32,148,61,56,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,3 punti segnato,1,Tiro in sospensione,,,24,90,0,A,10,False,0,
+25400,424,3,07:32,148,61,56,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Assist,,,,,24,90,0,A,10,False,0,423
+25400,425,3,07:16,164,63,56,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,2 punti segnato,8,Da penetrazione,,,90,43,1,A,6,True,0,
+25400,426,3,07:01,179,63,56,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,13,57,0,A,6,False,0,
+25400,427,3,07:01,179,63,56,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Stoppata,,,,,13,57,0,A,6,False,0,426
+25400,428,3,07:01,179,63,56,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Stoppata subita,,,,,13,57,0,A,6,False,0,426
+25400,429,3,07:01,179,63,56,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo offensivo,,,,,13,57,0,A,6,False,0,426
+25400,430,3,06:54,186,63,56,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,3 punti sbagliato,1,Tiro in sospensione,,,27,25,0,A,8,False,0,
+25400,431,3,06:54,186,63,56,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,27,25,0,A,8,False,0,430
+25400,432,3,06:52,188,63,56,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Fallo commesso,100,personale,,,91,44,0,D,3,False,0,
+25400,433,3,06:52,188,63,56,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Fallo Subito,,,,,91,44,0,D,3,False,0,432
+25400,434,3,06:52,188,63,56,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Ingresso,,,,,,,,,,False,0,
+25400,435,3,06:52,188,63,56,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Uscita,,,,,,,,,,False,0,434
+25400,436,3,06:36,204,63,56,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,3 punti sbagliato,1,Tiro in sospensione,,,67,39,1,A,9,False,0,
+25400,437,3,06:36,204,63,56,1767,Pallacanestro Trieste,0,,,,,Rimbalzi difensivi di squadra,,,,,67,39,1,A,9,False,0,436
+25400,438,3,06:35,205,63,56,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Fallo commesso,100,personale,,,79,56,1,A,7,False,0,
+25400,439,3,06:35,205,63,56,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Fallo Subito,,,,,79,56,1,A,7,False,0,438
+25400,440,3,06:35,205,63,56,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Ingresso,,,,,,,,,,False,0,
+25400,441,3,06:35,205,63,56,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Uscita,,,,,,,,,,False,0,440
+25400,442,3,06:25,215,63,58,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,2 punti segnato,9,Schiacciata,,,7,50,0,A,3,True,1,
+25400,443,3,06:25,215,63,58,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Assist,,,,,7,50,0,A,3,False,0,442
+25400,444,3,06:12,228,63,58,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,3 punti sbagliato,1,Tiro in sospensione,,,67,54,1,A,9,False,0,
+25400,445,3,06:12,228,63,58,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,67,54,1,A,9,False,0,444
+25400,446,3,06:03,237,63,58,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Fallo commesso,100,personale,,,13,18,1,D,2,False,0,
+25400,447,3,06:03,237,63,58,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo Subito,,,,,13,18,1,D,2,False,0,446
+25400,448,3,06:03,237,63,58,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Ingresso,,,,,,,,,,False,0,
+25400,449,3,06:03,237,63,58,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Uscita,,,,,,,,,,False,0,448
+25400,450,3,05:53,247,63,58,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,3 punti sbagliato,1,Tiro in sospensione,,,32,69,0,A,9,False,0,
+25400,451,3,05:53,247,63,58,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Rimbalzo difensivo,,,,,32,69,0,A,9,False,0,450
+25400,452,3,05:38,262,63,58,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,3 punti sbagliato,1,Tiro in sospensione,,,70,28,1,A,9,False,0,
+25400,453,3,05:38,262,63,58,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Rimbalzo difensivo,,,,,70,28,1,A,9,False,0,452
+25400,454,3,05:27,273,63,60,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,2 punti segnato,11,Gancio,,,18,44,0,A,6,True,0,
+25400,455,3,05:27,273,63,60,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Assist,,,,,18,44,0,A,6,False,0,454
+25400,456,3,05:18,282,65,60,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,1,Tiro in sospensione,,,95,31,1,A,4,False,0,
+25400,457,3,04:54,306,65,60,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,3 punti sbagliato,5,Tiro in Step Back,,,34,57,0,A,9,False,0,
+25400,458,3,04:54,306,65,60,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Rimbalzo difensivo,,,,,34,57,0,A,9,False,0,457
+25400,459,3,04:50,310,65,60,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Palla persa,50,Passaggio sbagliato,,,79,55,1,A,7,False,0,
+25400,460,3,04:50,310,65,60,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Uscita,,,,,,,,,,False,0,
+25400,461,3,04:50,310,65,60,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Ingresso,,,,,,,,,,False,0,460
+25400,462,3,04:50,310,65,60,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Ingresso,,,,,,,,,,False,0,
+25400,463,3,04:50,310,65,60,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Uscita,,,,,,,,,,False,0,462
+25400,464,3,04:41,319,65,62,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,2 punti segnato,8,Da penetrazione,,,5,45,0,A,3,True,0,
+25400,465,3,04:33,327,65,62,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,2 punti sbagliato,8,Da penetrazione,1003,tip-in appoggio canestro made,92,45,1,A,3,False,0,
+25400,466,3,04:33,327,65,62,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo offensivo,,,,,92,45,1,A,3,False,0,465
+25400,467,3,04:33,327,67,62,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti segnato,7,Appoggio a canestro,,,92,45,1,A,3,True,0,
+25400,468,3,04:08,352,67,62,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,25,18,0,A,8,False,0,
+25400,469,3,04:08,352,67,62,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo difensivo,,,,,25,18,0,A,8,False,0,468
+25400,470,3,04:04,356,67,62,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Palla persa,50,Passaggio sbagliato,,,14,54,1,D,6,False,0,
+25400,471,3,04:04,356,67,62,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Palla recuperata,,,,,14,54,1,D,6,False,0,470
+25400,472,3,03:57,363,67,64,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti segnato,4,Giro e Tiro,,,11,45,0,A,6,True,0,
+25400,473,3,03:38,382,69,64,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,2 punti segnato,1,Tiro in sospensione,,,89,46,1,A,6,True,0,
+25400,474,3,03:28,392,69,64,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Fallo commesso,100,personale,,,12,28,1,D,2,False,0,
+25400,475,3,03:28,392,69,64,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo Subito,,,,,12,28,1,D,2,False,0,474
+25400,476,3,03:28,392,69,64,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Uscita,,,,,,,,,,False,0,
+25400,477,3,03:28,392,69,64,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Ingresso,,,,,,,,,,False,0,476
+25400,478,3,03:28,392,69,64,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Ingresso,,,,,,,,,,False,0,476
+25400,479,3,03:28,392,69,64,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Uscita,,,,,,,,,,False,0,476
+25400,480,3,03:28,392,69,65,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,481,3,03:28,392,69,66,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,480
+25400,482,3,03:28,392,69,66,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Uscita,,,,,,,,,,False,0,
+25400,483,3,03:28,392,69,66,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Ingresso,,,,,,,,,,False,0,482
+25400,484,3,03:15,405,69,66,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti sbagliato,2,Tiro in corsa,,,85,54,1,A,6,False,0,
+25400,485,3,03:15,405,69,66,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo offensivo,,,,,85,54,1,A,6,False,0,484
+25400,486,3,03:09,411,69,66,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti sbagliato,1,Tiro in sospensione,,,67,48,1,A,9,False,0,
+25400,487,3,03:09,411,69,66,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Rimbalzo difensivo,,,,,67,48,1,A,9,False,0,486
+25400,488,3,03:03,417,69,66,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo commesso,103,tiro,,,25,85,1,D,10,False,0,
+25400,489,3,03:03,417,69,66,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Fallo Subito,,,,,25,85,1,D,10,False,0,488
+25400,490,3,03:03,417,69,67,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25400,491,3,03:03,417,69,68,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,490
+25400,492,3,03:03,417,69,69,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,490
+25400,493,3,03:03,417,69,69,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Assist,,,,,,,,,,False,0,490
+25400,494,3,02:55,425,69,69,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,94,51,1,A,3,False,0,
+25400,495,3,02:55,425,69,69,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Stoppata,,,,,94,51,1,A,3,False,0,494
+25400,496,3,02:55,425,69,69,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Stoppata subita,,,,,94,51,1,A,3,False,0,494
+25400,497,3,02:55,425,69,69,1767,Pallacanestro Trieste,0,,,,,Rimbalzi difensivi di squadra,,,,,94,51,1,A,3,False,0,494
+25400,498,3,02:53,427,69,69,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Uscita,,,,,,,,,,False,0,
+25400,499,3,02:53,427,69,69,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Ingresso,,,,,,,,,,False,0,498
+25400,500,3,02:39,441,69,69,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo commesso,100,personale,,,22,52,1,D,7,False,0,
+25400,501,3,02:39,441,69,69,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Fallo Subito,,,,,22,52,1,D,7,False,0,500
+25400,502,3,02:39,441,69,70,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,503,3,02:39,441,69,71,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Tiro libero segnato,,,,,,,,A,7,False,0,502
+25400,504,3,02:30,450,69,71,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti sbagliato,7,Appoggio a canestro,,,92,44,1,A,3,False,0,
+25400,505,3,02:30,450,69,71,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Rimbalzo difensivo,,,,,92,44,1,A,3,False,0,504
+25400,506,3,02:16,464,69,71,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,3 punti sbagliato,1,Tiro in sospensione,,,34,57,0,A,9,False,0,
+25400,507,3,02:16,464,69,71,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo difensivo,,,,,34,57,0,A,9,False,0,506
+25400,508,3,02:07,473,69,71,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti sbagliato,7,Appoggio a canestro,,,90,51,1,A,6,False,0,
+25400,511,3,02:07,473,69,71,1767,Pallacanestro Trieste,0,,,,,Rimbalzi difensivi di squadra,,,,,90,51,0,D,6,False,0,508
+25400,512,3,02:07,473,69,71,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo commesso,100,personale,,,86,49,1,A,6,False,0,
+25400,513,3,02:07,473,69,71,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Fallo Subito,,,,,86,49,1,A,6,False,0,512
+25400,514,3,02:07,473,69,72,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,515,3,02:07,473,69,73,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Tiro libero segnato,,,,,,,,A,7,False,0,514
+25400,516,3,02:07,473,69,73,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Uscita,,,,,,,,,,False,0,
+25400,517,3,02:07,473,69,73,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Ingresso,,,,,,,,,,False,0,516
+25400,518,3,01:51,489,69,73,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti sbagliato,1,Tiro in sospensione,,,83,49,1,A,6,False,0,
+25400,519,3,01:51,489,69,73,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Rimbalzo difensivo,,,,,83,49,1,A,6,False,0,518
+25400,520,3,01:33,507,69,73,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Palla persa,54,Fuori dal campo,,,8,40,0,A,3,False,0,
+25400,521,3,01:19,521,69,73,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,3 punti sbagliato,1,Tiro in sospensione,,,81,8,1,A,10,False,0,
+25400,522,3,01:19,521,69,73,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Rimbalzo difensivo,,,,,81,8,1,A,10,False,0,521
+25400,523,3,01:01,539,69,73,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,3 punti sbagliato,1,Tiro in sospensione,,,35,36,0,A,9,False,0,
+25400,524,3,01:01,539,69,73,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Rimbalzo offensivo,,,,,35,36,0,A,9,False,0,523
+25400,525,3,00:54,546,69,75,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,2 punti segnato,8,Da penetrazione,,,14,58,0,A,6,True,0,
+25400,526,3,00:44,556,72,75,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,3 punti segnato,1,Tiro in sospensione,,,75,17,1,A,10,False,0,
+25400,527,3,00:44,556,72,75,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,75,17,1,A,10,False,0,526
+25400,528,3,00:21,579,72,77,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,2 punti segnato,7,Appoggio a canestro,,,10,48,0,A,6,True,0,
+25400,529,3,00:21,579,72,77,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Assist,,,,,10,48,0,A,6,False,0,528
+25400,530,3,00:15,585,72,77,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Fallo commesso,100,personale,,,14,49,0,A,6,False,0,
+25400,531,3,00:15,585,72,77,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo Subito,,,,,14,49,0,A,6,False,0,530
+25400,532,3,00:15,585,72,77,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Ingresso,,,,,,,,,,False,0,
+25400,533,3,00:15,585,72,77,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Uscita,,,,,,,,,,False,0,532
+25400,534,3,00:03,597,72,77,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Fallo commesso,100,personale,,,64,51,0,D,9,False,0,
+25400,535,3,00:03,597,72,77,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo Subito,,,,,64,51,0,D,9,False,0,534
+25400,538,3,00:01,599,72,77,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Fallo commesso,100,personale,,,78,56,0,D,7,False,0,
+25400,539,3,00:01,599,72,77,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Fallo Subito,,,,,78,56,0,D,7,False,0,538
+25400,536,3,00:00,600,72,77,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti sbagliato,1,Tiro in sospensione,,,71,24,1,A,10,False,0,
+25400,537,3,00:00,600,72,77,1750,Virtus Costa Bologna,1,,,,,Rimbalzi offensivi di squadra,,,,,71,24,1,A,10,False,0,536
+25400,540,3,00:00,600,72,77,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25400,541,4,10:00,0,72,77,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Ingresso,,,,,,,,,,False,0,
+25400,542,4,10:00,0,72,77,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Uscita,,,,,,,,,,False,0,541
+25400,543,4,10:00,0,72,77,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Ingresso,,,,,,,,,,False,0,541
+25400,544,4,10:00,0,72,77,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Uscita,,,,,,,,,,False,0,541
+25400,545,4,10:00,0,72,77,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25400,546,4,09:46,14,74,77,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,2 punti segnato,8,Da penetrazione,,,93,56,1,A,3,True,0,
+25400,547,4,09:22,38,74,79,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,2 punti segnato,8,Da penetrazione,,,10,56,0,A,6,True,0,
+25400,548,4,09:14,46,74,79,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,3 punti sbagliato,1,Tiro in sospensione,,,88,98,1,A,8,False,0,
+25400,549,4,09:14,46,74,79,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Rimbalzo offensivo,,,,,88,98,1,A,8,False,0,548
+25400,550,4,09:10,50,74,79,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Fallo commesso,103,tiro,,,95,51,0,D,3,False,0,
+25400,551,4,09:10,50,74,79,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Fallo Subito,,,,,95,51,0,D,3,False,0,550
+25400,552,4,09:10,50,75,79,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,553,4,09:10,50,76,79,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Tiro libero segnato,,,,,,,,A,7,False,0,552
+25400,554,4,09:01,59,76,79,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Palla persa,50,Passaggio sbagliato,,,22,46,0,A,7,False,0,
+25400,555,4,09:01,59,76,79,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Palla recuperata,,,,,22,46,0,A,7,False,0,554
+25400,556,4,08:43,77,76,79,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,3 punti sbagliato,1,Tiro in sospensione,,,82,94,1,A,8,False,0,
+25400,557,4,08:43,77,76,79,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Rimbalzo difensivo,,,,,82,94,1,A,8,False,0,556
+25400,558,4,08:34,86,76,79,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,3 punti sbagliato,1,Tiro in sospensione,,,32,75,0,A,10,False,0,
+25400,559,4,08:34,86,76,79,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Rimbalzo difensivo,,,,,32,75,0,A,10,False,0,558
+25400,560,4,08:22,98,76,79,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti sbagliato,2,Tiro in corsa,,,89,48,1,A,6,False,0,
+25400,561,4,08:22,98,76,79,1750,Virtus Costa Bologna,1,,,,,Rimbalzi offensivi di squadra,,,,,89,48,1,A,6,False,0,560
+25400,562,4,08:21,99,76,79,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Ingresso,,,,,,,,,,False,0,
+25400,563,4,08:21,99,76,79,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Uscita,,,,,,,,,,False,0,562
+25400,564,4,08:21,99,76,79,1767,Pallacanestro Trieste,0,949,13,Francesco,Candussi,Uscita,,,,,,,,,,False,0,
+25400,565,4,08:21,99,76,79,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Ingresso,,,,,,,,,,False,0,564
+25400,566,4,08:11,109,78,79,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,2 punti segnato,4,Giro e Tiro,,,93,57,1,A,3,True,0,
+25400,567,4,08:11,109,78,79,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Assist,,,,,93,57,1,A,3,False,0,566
+25400,568,4,07:47,133,78,79,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Fallo commesso,100,personale,,,13,39,1,D,6,False,0,
+25400,569,4,07:47,133,78,79,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo Subito,,,,,13,39,1,D,6,False,0,568
+25400,570,4,07:36,144,78,82,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,3 punti segnato,1,Tiro in sospensione,,,17,6,0,A,8,False,0,
+25400,571,4,07:36,144,78,82,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Assist,,,,,17,6,0,A,8,False,0,570
+25400,572,4,07:09,171,78,82,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,2 punti sbagliato,1,Tiro in sospensione,,,82,48,1,A,6,False,0,
+25400,573,4,07:09,171,78,82,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Rimbalzo difensivo,,,,,82,48,1,A,6,False,0,572
+25400,585,4,06:58,182,78,83,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Tiro libero segnato,,,,,,,0,A,7,False,0,
+25400,574,4,06:58,182,78,83,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Fallo commesso,103,tiro,,,14,53,1,D,6,False,0,
+25400,575,4,06:58,182,78,83,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Fallo Subito,,,,,14,53,1,D,6,False,0,574
+25400,576,4,06:58,182,78,83,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Fallo commesso,121,tecnico categoria 1,,,6,40,1,D,3,False,0,
+25400,577,4,06:58,182,78,83,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Uscita,,,,,,,,,,False,0,
+25400,578,4,06:58,182,78,83,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Ingresso,,,,,,,,,,False,0,577
+25400,579,4,06:58,182,78,83,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Uscita,,,,,,,,,,False,0,577
+25400,580,4,06:58,182,78,83,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Ingresso,,,,,,,,,,False,0,577
+25400,581,4,06:58,182,78,83,1767,Pallacanestro Trieste,0,4890,10,Michele,Ruzzier,Uscita,,,,,,,,,,False,0,577
+25400,582,4,06:58,182,78,83,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Ingresso,,,,,,,,,,False,0,577
+25400,583,4,06:58,182,78,83,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,
+25400,584,4,06:58,182,78,83,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Ingresso,,,,,,,,,,False,0,583
+25400,586,4,06:58,182,78,84,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,587,4,06:58,182,78,85,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Tiro libero segnato,,,,,,,,A,7,False,0,586
+25400,588,4,06:58,182,78,85,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Assist,,,,,,,,,,False,0,586
+25400,589,4,06:44,196,78,85,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti sbagliato,3,Tiro in fadeaway,,,78,50,1,A,7,False,0,
+25400,590,4,06:44,196,78,85,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Rimbalzo difensivo,,,,,78,50,1,A,7,False,0,589
+25400,591,4,06:30,210,78,88,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,3 punti segnato,1,Tiro in sospensione,,,19,7,0,A,8,False,0,
+25400,592,4,06:30,210,78,88,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Assist,,,,,19,7,0,A,8,False,0,591
+25400,593,4,06:12,228,80,88,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,8,Da penetrazione,,,92,59,1,A,3,True,0,
+25400,594,4,06:02,238,80,88,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Fallo commesso,103,tiro,,,13,52,1,D,6,False,0,
+25400,595,4,06:02,238,80,88,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo Subito,,,,,13,52,1,D,6,False,0,594
+25400,596,4,06:02,238,80,88,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,Ingresso,,,,,,,,,,False,0,
+25400,597,4,06:02,238,80,88,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Uscita,,,,,,,,,,False,0,596
+25400,598,4,06:02,238,80,88,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25400,599,4,06:02,238,80,89,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,598
+25400,600,4,05:49,251,80,89,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Fallo commesso,100,personale,,,64,38,0,D,9,False,0,
+25400,601,4,05:49,251,80,89,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Fallo Subito,,,,,64,38,0,D,9,False,0,600
+25400,602,4,05:49,251,80,89,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Uscita,,,,,,,,,,False,0,
+25400,603,4,05:49,251,80,89,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Ingresso,,,,,,,,,,False,0,602
+25400,604,4,05:49,251,80,89,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Ingresso,,,,,,,,,,False,0,602
+25400,605,4,05:49,251,80,89,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Uscita,,,,,,,,,,False,0,602
+25400,606,4,05:47,253,80,89,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,2 punti sbagliato,7,Appoggio a canestro,,,94,47,1,A,3,False,0,
+25400,607,4,05:47,253,80,89,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,94,47,1,A,3,False,0,606
+25400,608,4,05:23,277,80,89,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,11,29,0,A,2,False,0,
+25400,609,4,05:23,277,80,89,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Stoppata,,,,,11,29,0,A,2,False,0,608
+25400,610,4,05:23,277,80,89,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Stoppata subita,,,,,11,29,0,A,2,False,0,608
+25400,611,4,05:23,277,80,89,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Rimbalzo difensivo,,,,,11,29,0,A,2,False,0,608
+25400,612,4,05:08,292,80,89,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,70,81,1,A,8,False,0,
+25400,613,4,05:08,292,80,89,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo offensivo,,,,,70,81,1,A,8,False,0,612
+25400,614,4,05:08,292,82,89,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,7,Appoggio a canestro,,,70,81,1,A,2,False,0,
+25400,615,4,05:05,295,82,89,1767,Pallacanestro Trieste,0,,,,,Time Out,,,,,,,0,,,False,0,
+25400,616,4,04:49,311,82,89,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Palla persa,50,Passaggio sbagliato,,,20,61,0,A,6,False,0,
+25400,617,4,04:26,334,82,89,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,2 punti sbagliato,1,Tiro in sospensione,,,86,59,1,A,6,False,0,
+25400,618,4,04:26,334,82,89,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,86,59,1,A,6,False,0,617
+25400,619,4,04:12,348,82,89,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,3 punti sbagliato,1,Tiro in sospensione,,,34,42,0,A,9,False,0,
+25400,620,4,04:12,348,82,89,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Rimbalzo offensivo,,,,,34,42,0,A,9,False,0,619
+25400,621,4,04:07,353,82,89,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,2 punti sbagliato,1,Tiro in sospensione,,,7,16,0,A,2,False,0,
+25400,622,4,04:07,353,82,89,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Rimbalzo difensivo,,,,,7,16,0,A,2,False,0,621
+25400,623,4,03:55,365,85,89,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,3 punti segnato,1,Tiro in sospensione,,,74,19,1,A,10,False,0,
+25400,624,4,03:55,365,85,89,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,74,19,1,A,10,False,0,623
+25400,625,4,03:34,386,85,91,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,2 punti segnato,7,Appoggio a canestro,,,11,53,0,A,6,True,0,
+25400,626,4,03:34,386,85,91,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Assist,,,,,11,53,0,A,6,False,0,625
+25400,627,4,03:27,393,85,91,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo commesso,100,personale,,,91,28,0,D,4,False,0,
+25400,628,4,03:27,393,85,91,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo Subito,,,,,91,28,0,D,4,False,0,627
+25400,629,4,03:27,393,85,91,1750,Virtus Costa Bologna,1,9369,3,Kevin,Kokila,Uscita,,,,,,,,,,False,0,
+25400,630,4,03:27,393,85,91,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Ingresso,,,,,,,,,,False,0,629
+25400,631,4,03:27,393,85,91,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Ingresso,,,,,,,,,,False,0,629
+25400,632,4,03:27,393,85,91,1767,Pallacanestro Trieste,0,7420,17,Luka,Brajkovic,Uscita,,,,,,,,,,False,0,629
+25400,633,4,03:27,393,85,91,1750,Virtus Costa Bologna,1,,,,,Time Out,,,,,,,1,,,False,0,
+25400,634,4,03:22,398,85,91,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,3 punti sbagliato,1,Tiro in sospensione,,,69,78,1,A,8,False,0,
+25400,635,4,03:22,398,85,91,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Rimbalzo offensivo,,,,,69,78,1,A,8,False,0,634
+25400,636,4,03:10,410,87,91,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti segnato,7,Appoggio a canestro,,,91,52,1,A,3,True,0,
+25400,637,4,02:47,433,87,91,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,3 punti sbagliato,1,Tiro in sospensione,,,35,58,0,A,9,False,0,
+25400,638,4,02:47,433,87,91,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Rimbalzo difensivo,,,,,35,58,0,A,9,False,0,637
+25400,639,4,02:31,449,87,91,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,65,68,1,A,9,False,0,
+25400,640,4,02:31,449,87,91,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo offensivo,,,,,65,68,1,A,9,False,0,639
+25400,641,4,02:31,449,89,91,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,7,Appoggio a canestro,,,65,68,1,A,7,False,0,
+25400,642,4,02:29,451,89,91,1767,Pallacanestro Trieste,0,,,,,Time Out,,,,,,,0,,,False,0,
+25400,643,4,02:12,468,89,93,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,2 punti segnato,1,Tiro in sospensione,,,21,53,0,A,7,False,0,
+25400,644,4,02:00,480,91,93,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,2 punti segnato,7,Appoggio a canestro,,,93,49,1,A,3,True,0,
+25400,645,4,02:00,480,91,93,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,93,49,1,A,3,False,0,644
+25400,646,4,01:33,507,91,93,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,13,36,0,A,2,False,0,
+25400,647,4,01:33,507,91,93,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Stoppata,,,,,13,36,0,A,2,False,0,646
+25400,648,4,01:33,507,91,93,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Stoppata subita,,,,,13,36,0,A,2,False,0,646
+25400,649,4,01:33,507,91,93,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Rimbalzo difensivo,,,,,13,36,0,A,2,False,0,646
+25400,650,4,01:26,514,91,93,1767,Pallacanestro Trieste,0,1592,8,Lodovico,Deangeli,Fallo commesso,103,tiro,,,93,50,0,D,3,False,0,
+25400,651,4,01:26,514,91,93,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo Subito,,,,,93,50,0,D,3,False,0,650
+25400,652,4,01:26,514,91,93,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25400,653,4,01:26,514,91,93,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Tiro libero sbagliato,,,,,,,,A,7,False,0,652
+25400,654,4,01:26,514,91,93,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,,,,,,False,0,652
+25400,655,4,01:12,528,91,95,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,2 punti segnato,8,Da penetrazione,,,9,48,0,A,3,True,0,
+25400,656,4,00:57,543,91,95,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti sbagliato,7,Appoggio a canestro,,,89,45,1,A,6,False,0,
+25400,657,4,00:57,543,91,95,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Rimbalzo difensivo,,,,,89,45,1,A,6,False,0,656
+25400,658,4,00:34,566,91,97,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,2 punti segnato,2,Tiro in corsa,,,15,49,0,A,6,True,0,
+25400,659,4,00:34,566,91,97,1750,Virtus Costa Bologna,1,,,,,Time Out,,,,,,,1,,,False,0,
+25400,660,4,00:29,571,91,97,1750,Virtus Costa Bologna,1,9004,21,Derrick,Alston,3 punti sbagliato,1,Tiro in sospensione,,,68,41,1,A,9,False,0,
+25400,661,4,00:29,571,91,97,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Rimbalzo offensivo,,,,,68,41,1,A,9,False,0,660
+25400,662,4,00:24,576,91,97,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti sbagliato,1,Tiro in sospensione,,,70,73,1,A,9,False,0,
+25400,663,4,00:24,576,91,97,1767,Pallacanestro Trieste,0,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,70,73,1,A,9,False,0,662
+25400,664,4,00:19,581,91,97,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo commesso,100,personale,,,68,65,1,A,9,False,0,
+25400,665,4,00:19,581,91,97,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Fallo Subito,,,,,68,65,1,A,9,False,0,664
+25400,666,4,00:19,581,91,98,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,
+25400,667,4,00:19,581,91,99,1767,Pallacanestro Trieste,0,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,666
+25400,668,4,00:19,581,91,99,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Ingresso,,,,,,,,,,False,0,
+25400,669,4,00:19,581,91,99,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,668
+25400,670,4,00:12,588,93,99,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,2 punti segnato,8,Da penetrazione,,,88,52,1,A,6,True,0,
+25400,671,4,00:08,592,93,99,1750,Virtus Costa Bologna,1,9366,0,Rasheed,Bello,Fallo commesso,100,personale,,,90,21,1,A,4,False,0,
+25400,672,4,00:08,592,93,99,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Fallo Subito,,,,,90,21,1,A,4,False,0,671
+25400,673,4,00:08,592,93,99,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25400,674,4,00:08,592,93,100,1767,Pallacanestro Trieste,0,7007,30,Sean,McDermott,Tiro libero segnato,,,,,,,,A,7,False,0,673
+25400,675,4,00:01,599,93,100,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,3 punti sbagliato,1,Tiro in sospensione,,,76,13,1,A,10,False,0,
+25400,676,4,00:01,599,93,100,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Rimbalzo difensivo,,,,,76,13,1,A,10,False,0,675
+25400,677,4,00:01,599,93,100,1767,Pallacanestro Trieste,0,6993,9,Langston,Galloway,Palla persa,53,Passi,,,83,77,0,D,2,False,0,
+25400,678,4,00:01,599,93,100,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,79,93,1,A,8,False,0,
+25400,679,4,00:00,600,93,100,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25406,102,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25406,103,1,10:00,0,0,0,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Palla contesa,,,,,,,1,,,False,0,
+25406,104,1,09:55,5,0,3,1751,Armani Olimpia Milano,0,5568,7,Stefano,Tonut,3 punti segnato,1,Tiro in sospensione,,,75,85,1,A,8,False,0,
+25406,105,1,09:55,5,0,3,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Assist,,,,,75,85,1,A,8,False,0,104
+25406,106,1,09:32,28,2,3,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,2 punti segnato,8,Da penetrazione,,,11,50,0,A,6,True,0,
+25406,107,1,09:10,50,2,3,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Palla persa,50,Passaggio sbagliato,,,92,66,1,A,2,False,0,
+25406,108,1,09:10,50,2,3,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Palla recuperata,,,,,92,66,1,A,2,False,0,107
+25406,109,1,09:04,56,4,3,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,2 punti segnato,9,Schiacciata,500,contropiede,5,50,0,A,3,True,1,
+25406,110,1,09:04,56,4,3,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Assist,,,500,contropiede,5,50,0,A,3,False,0,109
+25406,111,1,08:47,73,4,3,1751,Armani Olimpia Milano,0,5568,7,Stefano,Tonut,2 punti sbagliato,2,Tiro in corsa,,,92,31,1,A,4,False,0,
+25406,112,1,08:47,73,4,3,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo difensivo,,,,,92,31,1,A,4,False,0,111
+25406,113,1,08:38,82,4,3,1751,Armani Olimpia Milano,0,5568,7,Stefano,Tonut,Fallo commesso,100,personale,,,35,52,1,D,9,False,0,
+25406,114,1,08:38,82,4,3,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Fallo Subito,,,,,35,52,1,D,9,False,0,113
+25406,115,1,08:28,92,6,3,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,2 punti segnato,2,Tiro in corsa,,,9,78,0,A,4,False,0,
+25406,116,1,08:04,116,6,3,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,3 punti sbagliato,1,Tiro in sospensione,,,82,9,1,A,10,False,0,
+25406,117,1,08:04,116,6,3,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Rimbalzo offensivo,,,,,82,9,1,A,10,False,0,116
+25406,118,1,07:58,122,6,3,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,3 punti sbagliato,1,Tiro in sospensione,,,70,30,1,A,9,False,0,
+25406,119,1,07:58,122,6,3,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo difensivo,,,,,70,30,1,A,9,False,0,118
+25406,120,1,07:50,130,6,3,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,3 punti sbagliato,1,Tiro in sospensione,,,2,4,0,A,1,False,0,
+25406,121,1,07:50,130,6,3,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Rimbalzo difensivo,,,,,2,4,0,A,1,False,0,120
+25406,122,1,07:40,140,6,3,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,3 punti sbagliato,1,Tiro in sospensione,,,73,25,1,A,10,False,0,
+25406,123,1,07:40,140,6,3,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Rimbalzo difensivo,,,,,73,25,1,A,10,False,0,122
+25406,124,1,07:35,145,6,3,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Fallo commesso,100,personale,,,93,44,1,A,3,False,0,
+25406,125,1,07:35,145,6,3,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Fallo Subito,,,,,93,44,1,A,3,False,0,124
+25406,126,1,07:20,160,6,3,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,8,58,0,A,3,False,0,
+25406,127,1,07:20,160,6,3,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Stoppata,,,,,8,58,0,A,3,False,0,126
+25406,128,1,07:20,160,6,3,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Stoppata subita,,,,,8,58,0,A,3,False,0,126
+25406,129,1,07:20,160,6,3,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Rimbalzo offensivo,,,,,8,58,0,A,3,False,0,126
+25406,130,1,07:11,169,8,3,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,2 punti segnato,6,Arresto e tiro,,,7,79,0,A,4,False,0,
+25406,131,1,07:11,169,8,3,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Fallo commesso,100,personale,,,7,63,1,D,4,False,0,
+25406,132,1,07:11,169,8,3,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Fallo Subito,,,,,7,63,1,D,4,False,0,131
+25406,133,1,07:01,179,10,3,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,2 punti segnato,8,Da penetrazione,,,5,60,0,A,3,True,0,
+25406,134,1,07:01,179,10,3,1751,Armani Olimpia Milano,0,,,,,Time Out,,,,,,,1,,,False,0,
+25406,135,1,06:46,194,10,5,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,2 punti segnato,6,Arresto e tiro,,,80,29,1,A,4,False,0,
+25406,136,1,06:27,213,10,5,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Palla persa,54,Fuori dal campo,,,5,4,0,A,1,False,0,
+25406,137,1,06:12,228,10,7,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,2 punti segnato,2,Tiro in corsa,,,91,40,1,A,3,True,0,
+25406,138,1,06:09,231,10,7,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Palla persa,54,Fuori dal campo,,,97,49,0,D,3,False,0,
+25406,139,1,06:06,234,10,10,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,3 punti segnato,1,Tiro in sospensione,,,73,87,1,A,8,False,0,
+25406,140,1,06:06,234,10,10,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Assist,,,,,73,87,1,A,8,False,0,139
+25406,141,1,05:47,253,10,10,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,2 punti sbagliato,8,Da penetrazione,1005,stoppata,7,63,0,A,4,False,0,
+25406,142,1,05:47,253,10,10,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Stoppata,,,,,7,63,0,A,4,False,0,141
+25406,143,1,05:47,253,10,10,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Stoppata subita,,,,,7,63,0,A,4,False,0,141
+25406,144,1,05:47,253,10,10,1765,Acqua S.Bernardo Cantù,1,,,,,Rimbalzi offensivi di squadra,,,,,7,63,0,A,4,False,0,141
+25406,145,1,05:43,257,12,10,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,2 punti segnato,7,Appoggio a canestro,,,7,55,0,A,3,True,0,
+25406,146,1,05:43,257,12,10,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Assist,,,,,7,55,0,A,3,False,0,145
+25406,147,1,05:23,277,12,10,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Fallo commesso,100,personale,,,89,70,0,D,2,False,0,
+25406,148,1,05:23,277,12,10,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Fallo Subito,,,,,89,70,0,D,2,False,0,147
+25406,149,1,05:23,277,12,10,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Ingresso,,,,,,,,,,False,0,
+25406,150,1,05:23,277,12,10,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Uscita,,,,,,,,,,False,0,149
+25406,151,1,05:21,279,12,10,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Palla persa,54,Fuori dal campo,,,83,95,1,A,8,False,0,
+25406,152,1,05:09,291,12,10,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Palla persa,51,Palleggio,,,13,96,0,A,10,False,0,
+25406,153,1,04:56,304,12,10,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,2 punti sbagliato,2,Tiro in corsa,,,89,69,1,A,2,False,0,
+25406,154,1,04:56,304,12,10,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Rimbalzo difensivo,,,,,89,69,1,A,2,False,0,153
+25406,155,1,04:51,309,12,10,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Fallo commesso,103,tiro,,,12,60,1,D,6,False,0,
+25406,156,1,04:51,309,12,10,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Fallo Subito,,,,,12,60,1,D,6,False,0,155
+25406,157,1,04:51,309,12,10,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Uscita,,,,,,,,,,False,0,
+25406,158,1,04:51,309,12,10,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Ingresso,,,,,,,,,,False,0,157
+25406,159,1,04:51,309,12,10,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Uscita,,,,,,,,,,False,0,157
+25406,160,1,04:51,309,12,10,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Ingresso,,,,,,,,,,False,0,157
+25406,161,1,04:51,309,12,10,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Ingresso,,,,,,,,,,False,0,157
+25406,162,1,04:51,309,12,10,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Uscita,,,,,,,,,,False,0,157
+25406,163,1,04:51,309,13,10,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25406,164,1,04:51,309,14,10,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,163
+25406,165,1,04:33,327,14,10,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,2 punti sbagliato,6,Arresto e tiro,,,85,81,1,A,2,False,0,
+25406,166,1,04:33,327,14,10,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Rimbalzo difensivo,,,,,85,81,1,A,2,False,0,165
+25406,167,1,04:11,349,14,10,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,2 punti sbagliato,2,Tiro in corsa,,,8,39,0,A,3,False,0,
+25406,168,1,04:11,349,14,10,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Rimbalzo difensivo,,,,,8,39,0,A,3,False,0,167
+25406,169,1,04:07,353,14,10,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Fallo commesso,100,personale,,,59,48,0,D,9,False,0,
+25406,170,1,04:07,353,14,10,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo Subito,,,,,59,48,0,D,9,False,0,169
+25406,171,1,04:07,353,14,10,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Uscita,,,,,,,,,,False,0,
+25406,172,1,04:07,353,14,10,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Ingresso,,,,,,,,,,False,0,171
+25406,173,1,04:07,353,14,10,1751,Armani Olimpia Milano,0,5568,7,Stefano,Tonut,Uscita,,,,,,,,,,False,0,171
+25406,174,1,04:07,353,14,10,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Ingresso,,,,,,,,,,False,0,171
+25406,175,1,03:56,364,14,10,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,2 punti sbagliato,7,Appoggio a canestro,,,95,43,1,A,3,False,0,
+25406,176,1,03:56,364,14,10,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Rimbalzo difensivo,,,,,95,43,1,A,3,False,0,175
+25406,177,1,03:48,372,17,10,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,3 punti segnato,1,Tiro in sospensione,,,31,31,0,A,9,False,0,
+25406,178,1,03:34,386,17,12,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,2 punti segnato,8,Da penetrazione,,,93,62,1,A,2,True,0,
+25406,179,1,03:34,386,17,12,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Fallo commesso,103,tiro,,,93,62,0,D,2,False,0,
+25406,180,1,03:34,386,17,12,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Fallo Subito,,,,,93,62,0,D,2,False,0,179
+25406,181,1,03:34,386,17,12,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Uscita,,,,,,,,,,False,0,
+25406,182,1,03:34,386,17,12,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Ingresso,,,,,,,,,,False,0,181
+25406,183,1,03:34,386,17,12,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Uscita,,,,,,,,,,False,0,181
+25406,184,1,03:34,386,17,12,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Ingresso,,,,,,,,,,False,0,181
+25406,185,1,03:34,386,17,13,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,186,1,03:17,403,17,13,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,3 punti sbagliato,6,Arresto e tiro,,,32,45,0,A,9,False,0,
+25406,187,1,03:17,403,17,13,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Rimbalzo difensivo,,,,,32,45,0,A,9,False,0,186
+25406,188,1,03:08,412,17,13,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Fallo commesso,100,personale,,,92,45,0,D,3,False,0,
+25406,189,1,03:08,412,17,13,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo Subito,,,,,92,45,0,D,3,False,0,188
+25406,190,1,03:08,412,17,13,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Uscita,,,,,,,,,,False,0,
+25406,191,1,03:08,412,17,13,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Ingresso,,,,,,,,,,False,0,190
+25406,192,1,03:05,415,17,15,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,2 punti segnato,7,Appoggio a canestro,,,96,44,1,A,3,True,0,
+25406,193,1,03:05,415,17,15,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Assist,,,,,96,44,1,A,3,False,0,192
+25406,200,1,02:40,440,17,15,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Palla persa,51,Palleggio,,,,,0,,,False,0,
+25406,202,1,02:40,440,17,15,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Palla recuperata,,,,,,,1,,,False,0,200
+25406,194,1,02:40,440,17,15,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,2 punti sbagliato,7,Appoggio a canestro,,,7,64,0,A,4,False,0,
+25406,195,1,02:40,440,17,15,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Stoppata,,,,,7,64,1,D,4,False,0,194
+25406,196,1,02:40,440,17,15,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Stoppata subita,,,,,7,64,0,A,4,False,0,194
+25406,197,1,02:40,440,17,15,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Rimbalzo offensivo,,,,,7,64,0,A,4,False,0,194
+25406,198,1,02:33,447,17,17,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,2 punti segnato,8,Da penetrazione,,,93,43,1,A,3,True,0,
+25406,199,1,02:30,450,17,17,1765,Acqua S.Bernardo Cantù,1,,,,,Time Out,,,,,,,0,,,False,0,
+25406,203,1,02:11,469,17,17,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,2 punti sbagliato,7,Appoggio a canestro,,,14,47,0,A,6,False,0,
+25406,204,1,02:11,469,17,17,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Rimbalzo offensivo,,,,,14,47,0,A,6,False,0,203
+25406,205,1,02:06,474,17,17,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,2 punti sbagliato,1,Tiro in sospensione,,,14,49,0,A,6,False,0,
+25406,206,1,02:06,474,17,17,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Rimbalzo offensivo,,,,,14,49,0,A,6,False,0,205
+25406,207,1,02:03,477,17,17,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,8,46,0,A,3,False,0,
+25406,208,1,02:03,477,17,17,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Stoppata,,,,,8,46,0,A,3,False,0,207
+25406,209,1,02:03,477,17,17,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Stoppata subita,,,,,8,46,0,A,3,False,0,207
+25406,210,1,02:03,477,17,17,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Rimbalzo difensivo,,,,,8,46,0,A,3,False,0,207
+25406,211,1,02:03,477,17,17,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Fallo commesso,100,personale,,,12,41,0,A,6,False,0,
+25406,212,1,02:03,477,17,17,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo Subito,,,,,12,41,0,A,6,False,0,211
+25406,213,1,02:03,477,17,17,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Ingresso,,,,,,,,,,False,0,
+25406,214,1,02:03,477,17,17,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Uscita,,,,,,,,,,False,0,213
+25406,215,1,02:03,477,17,18,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,216,1,02:03,477,17,19,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Tiro libero segnato,,,,,,,,A,7,False,0,215
+25406,217,1,02:03,477,17,19,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Fallo commesso,100,personale,,,94,46,1,A,3,False,0,
+25406,218,1,02:03,477,17,19,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Fallo Subito,,,,,94,46,1,A,3,False,0,217
+25406,219,1,02:03,477,18,19,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,220,1,02:03,477,19,19,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,219
+25406,221,1,01:49,491,19,19,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Palla persa,51,Palleggio,,,80,46,1,A,6,False,0,
+25406,222,1,01:49,491,19,19,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Palla recuperata,,,,,80,46,1,A,6,False,0,221
+25406,223,1,01:44,496,21,19,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,2 punti segnato,8,Da penetrazione,500,contropiede,7,58,0,A,3,True,0,
+25406,224,1,01:44,496,21,19,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Assist,,,500,contropiede,7,58,0,A,3,False,0,223
+25406,225,1,01:37,503,21,19,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Fallo commesso,100,personale,,,90,48,0,D,6,False,0,
+25406,226,1,01:37,503,21,19,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo Subito,,,,,90,48,0,D,6,False,0,225
+25406,227,1,01:37,503,21,19,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25406,228,1,01:37,503,21,20,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Tiro libero segnato,,,,,,,,A,7,False,0,227
+25406,229,1,01:37,503,21,20,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Assist,,,,,,,,,,False,0,227
+25406,230,1,01:21,519,21,20,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,3 punti sbagliato,1,Tiro in sospensione,,,29,22,0,A,8,False,0,
+25406,231,1,01:21,519,21,20,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Rimbalzo difensivo,,,,,29,22,0,A,8,False,0,230
+25406,232,1,01:03,537,21,23,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,3 punti segnato,1,Tiro in sospensione,,,74,18,1,A,10,False,0,
+25406,233,1,01:03,537,21,23,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Assist,,,,,74,18,1,A,10,False,0,232
+25406,234,1,00:54,546,21,23,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Fallo commesso,100,personale,,,26,54,1,D,7,False,0,
+25406,235,1,00:54,546,21,23,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Fallo Subito,,,,,26,54,1,D,7,False,0,234
+25406,236,1,00:54,546,21,23,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Ingresso,,,,,,,,,,False,0,
+25406,237,1,00:54,546,21,23,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Uscita,,,,,,,,,,False,0,236
+25406,238,1,00:54,546,22,23,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,239,1,00:54,546,23,23,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,238
+25406,240,1,00:44,556,23,23,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Palla persa,51,Palleggio,,,88,47,1,A,6,False,0,
+25406,241,1,00:44,556,23,23,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Palla recuperata,,,,,88,47,1,A,6,False,0,240
+25406,242,1,00:39,561,25,23,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,2 punti segnato,7,Appoggio a canestro,500,contropiede,6,45,0,A,3,True,0,
+25406,243,1,00:39,561,25,23,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Assist,,,500,contropiede,6,45,0,A,3,False,0,242
+25406,244,1,00:39,561,25,23,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Uscita,,,,,,,,,,False,0,
+25406,245,1,00:39,561,25,23,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Ingresso,,,,,,,,,,False,0,244
+25406,246,1,00:25,575,25,23,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,2 punti sbagliato,8,Da penetrazione,,,90,44,1,A,6,False,0,
+25406,247,1,00:25,575,25,23,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Rimbalzo difensivo,,,,,90,44,1,A,6,False,0,246
+25406,248,1,00:08,592,25,23,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo commesso,100,personale,,,17,67,1,D,4,False,0,
+25406,249,1,00:08,592,25,23,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Fallo Subito,,,,,17,67,1,D,4,False,0,248
+25406,250,1,00:08,592,26,23,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,251,1,00:08,592,27,23,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Tiro libero segnato,,,,,,,,A,7,False,0,250
+25406,252,1,00:01,599,27,23,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,2 punti sbagliato,8,Da penetrazione,1005,stoppata,93,56,1,A,3,False,0,
+25406,253,1,00:01,599,27,23,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Stoppata,,,,,93,56,1,A,3,False,0,252
+25406,254,1,00:01,599,27,23,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Stoppata subita,,,,,93,56,1,A,3,False,0,252
+25406,255,1,00:01,599,27,23,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Rimbalzo difensivo,,,,,93,56,1,A,3,False,0,252
+25406,256,1,00:00,600,27,23,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25406,257,2,10:00,0,27,23,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25406,258,2,09:53,7,27,23,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Fallo commesso,100,personale,,,14,37,1,D,2,False,0,
+25406,259,2,09:53,7,27,23,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Fallo Subito,,,,,14,37,1,D,2,False,0,258
+25406,260,2,09:49,11,29,23,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,2 punti segnato,2,Tiro in corsa,,,8,31,0,A,2,False,0,
+25406,261,2,09:49,11,29,23,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Assist,,,,,8,31,0,A,2,False,0,260
+25406,262,2,09:25,35,29,23,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,92,40,1,A,3,False,0,
+25406,263,2,09:25,35,29,23,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Stoppata,,,,,92,40,1,A,3,False,0,262
+25406,264,2,09:25,35,29,23,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Stoppata subita,,,,,92,40,1,A,3,False,0,262
+25406,265,2,09:25,35,29,23,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo difensivo,,,,,92,40,1,A,3,False,0,262
+25406,266,2,09:13,47,29,23,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,2 punti sbagliato,7,Appoggio a canestro,,,10,46,0,A,6,False,0,
+25406,267,2,09:13,47,29,23,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Rimbalzo difensivo,,,,,10,46,0,A,6,False,0,266
+25406,268,2,09:02,58,29,23,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Palla persa,50,Passaggio sbagliato,,,89,36,1,A,4,False,0,
+25406,269,2,09:02,58,29,23,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Palla recuperata,,,,,89,36,1,A,4,False,0,268
+25406,270,2,08:59,61,29,23,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Fallo commesso,103,tiro,,,7,44,1,D,3,False,0,
+25406,271,2,08:59,61,29,23,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Fallo Subito,,,,,7,44,1,D,3,False,0,270
+25406,272,2,08:59,61,29,23,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Ingresso,,,,,,,,,,False,0,
+25406,273,2,08:59,61,29,23,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Uscita,,,,,,,,,,False,0,272
+25406,274,2,08:59,61,29,23,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Uscita,,,,,,,,,,False,0,272
+25406,275,2,08:59,61,29,23,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Ingresso,,,,,,,,,,False,0,272
+25406,276,2,08:59,61,29,23,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Uscita,,,,,,,,,,False,0,272
+25406,277,2,08:59,61,29,23,1751,Armani Olimpia Milano,0,45,45,Nicola,Akele,Ingresso,,,,,,,,,,False,0,272
+25406,278,2,08:59,61,30,23,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25406,279,2,08:59,61,31,23,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,278
+25406,280,2,08:37,83,31,23,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,2 punti sbagliato,8,Da penetrazione,,,89,61,1,A,6,False,0,
+25406,281,2,08:37,83,31,23,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Rimbalzo difensivo,,,,,89,61,1,A,6,False,0,280
+25406,282,2,08:26,94,31,23,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,3 punti sbagliato,6,Arresto e tiro,,,32,57,0,A,9,False,0,
+25406,283,2,08:26,94,31,23,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Rimbalzo difensivo,,,,,32,57,0,A,9,False,0,282
+25406,284,2,08:06,114,31,23,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,2 punti sbagliato,6,Arresto e tiro,1003,tip-in appoggio canestro made,92,31,1,A,4,False,0,
+25406,285,2,08:06,114,31,23,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Rimbalzo offensivo,,,,,92,31,1,A,4,False,0,284
+25406,286,2,08:06,114,31,25,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,2 punti segnato,7,Appoggio a canestro,,,92,31,1,A,4,False,0,
+25406,287,2,07:37,143,31,25,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Palla persa,51,Palleggio,,,17,63,0,A,4,False,0,
+25406,288,2,07:37,143,31,25,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Palla recuperata,,,,,17,63,0,A,4,False,0,287
+25406,289,2,07:30,150,31,27,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,2 punti segnato,8,Da penetrazione,500,contropiede,92,55,1,A,3,True,0,
+25406,290,2,07:21,159,31,27,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Fallo commesso,100,personale,,,17,29,1,D,2,False,0,
+25406,291,2,07:21,159,31,27,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Fallo Subito,,,,,17,29,1,D,2,False,0,290
+25406,292,2,07:21,159,31,27,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Uscita,,,,,,,,,,False,0,
+25406,293,2,07:21,159,31,27,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Ingresso,,,,,,,,,,False,0,292
+25406,294,2,07:12,168,31,27,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,3 punti sbagliato,1,Tiro in sospensione,,,32,74,0,A,9,False,0,
+25406,295,2,07:12,168,31,27,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Rimbalzo difensivo,,,,,32,74,0,A,9,False,0,294
+25406,296,2,07:02,178,31,27,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Fallo commesso,100,personale,,,84,64,0,D,2,False,0,
+25406,297,2,07:02,178,31,27,1751,Armani Olimpia Milano,0,45,45,Nicola,Akele,Fallo Subito,,,,,84,64,0,D,2,False,0,296
+25406,298,2,06:55,185,31,27,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,3 punti sbagliato,6,Arresto e tiro,,,68,33,1,A,9,False,0,
+25406,299,2,06:55,185,31,27,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Rimbalzo difensivo,,,,,68,33,1,A,9,False,0,298
+25406,300,2,06:34,206,31,27,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,2 punti sbagliato,8,Da penetrazione,,,10,44,0,A,6,False,0,
+25406,301,2,06:34,206,31,27,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Rimbalzo offensivo,,,,,10,44,0,A,6,False,0,300
+25406,302,2,06:30,210,31,27,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Palla persa,50,Passaggio sbagliato,,,15,48,0,A,6,False,0,
+25406,303,2,06:30,210,31,27,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Palla recuperata,,,,,15,48,0,A,6,False,0,302
+25406,304,2,06:15,225,31,30,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,3 punti segnato,1,Tiro in sospensione,,,76,89,1,A,8,False,0,
+25406,305,2,06:15,225,31,30,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Assist,,,,,76,89,1,A,8,False,0,304
+25406,306,2,06:02,238,34,30,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,3 punti segnato,1,Tiro in sospensione,,,5,99,0,A,5,False,0,
+25406,307,2,06:02,238,34,30,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Assist,,,,,5,99,0,A,5,False,0,306
+25406,308,2,05:38,262,34,32,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,2 punti segnato,6,Arresto e tiro,,,75,56,1,A,7,False,0,
+25406,309,2,05:17,283,34,32,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Fallo commesso,100,personale,,,13,17,1,D,2,False,0,
+25406,310,2,05:17,283,34,32,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Fallo Subito,,,,,13,17,1,D,2,False,0,309
+25406,311,2,05:17,283,34,32,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Uscita,,,,,,,,,,False,0,
+25406,312,2,05:17,283,34,32,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Ingresso,,,,,,,,,,False,0,311
+25406,313,2,05:17,283,34,32,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Ingresso,,,,,,,,,,False,0,311
+25406,314,2,05:17,283,34,32,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Uscita,,,,,,,,,,False,0,311
+25406,315,2,05:07,293,34,32,1751,Armani Olimpia Milano,0,45,45,Nicola,Akele,Fallo commesso,100,personale,,,14,70,1,D,4,False,0,
+25406,316,2,05:07,293,34,32,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Fallo Subito,,,,,14,70,1,D,4,False,0,315
+25406,317,2,05:07,293,35,32,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,318,2,05:07,293,36,32,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,317
+25406,319,2,04:56,304,36,35,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,3 punti segnato,1,Tiro in sospensione,,,72,83,1,A,8,False,0,
+25406,320,2,04:56,304,36,35,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Assist,,,,,72,83,1,A,8,False,0,319
+25406,321,2,04:41,319,36,35,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Fallo commesso,100,personale,,,8,66,1,D,4,False,0,
+25406,322,2,04:41,319,36,35,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Fallo Subito,,,,,8,66,1,D,4,False,0,321
+25406,323,2,04:41,319,37,35,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,324,2,04:41,319,37,35,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Tiro libero sbagliato,,,,,,,,A,7,False,0,323
+25406,325,2,04:41,319,37,35,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Rimbalzo difensivo,,,,,,,,,,False,0,323
+25406,326,2,04:22,338,37,38,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,3 punti segnato,1,Tiro in sospensione,,,70,75,1,A,8,False,0,
+25406,327,2,04:22,338,37,38,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Assist,,,,,70,75,1,A,8,False,0,326
+25406,328,2,04:15,345,37,38,1765,Acqua S.Bernardo Cantù,1,,,,,Time Out,,,,,,,0,,,False,0,
+25406,329,2,04:15,345,37,38,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Ingresso,,,,,,,,,,False,0,
+25406,330,2,04:15,345,37,38,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Uscita,,,,,,,,,,False,0,329
+25406,331,2,04:15,345,37,38,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Ingresso,,,,,,,,,,False,0,329
+25406,332,2,04:15,345,37,38,1751,Armani Olimpia Milano,0,45,45,Nicola,Akele,Uscita,,,,,,,,,,False,0,329
+25406,333,2,03:56,364,37,38,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,3 punti sbagliato,1,Tiro in sospensione,,,6,3,0,A,1,False,0,
+25406,334,2,03:56,364,37,38,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Rimbalzo difensivo,,,,,6,3,0,A,1,False,0,333
+25406,335,2,03:30,390,37,38,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,2 punti sbagliato,4,Giro e Tiro,1004,tip-in appoggio canestro miss,94,71,1,A,2,False,0,
+25406,336,2,03:30,390,37,38,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Rimbalzo offensivo,,,,,94,71,1,A,2,False,0,335
+25406,337,2,03:30,390,37,38,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,2 punti sbagliato,7,Appoggio a canestro,,,94,71,1,A,2,False,0,
+25406,338,2,03:30,390,37,38,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Rimbalzo difensivo,,,,,94,71,1,A,2,False,0,337
+25406,339,2,03:20,400,37,38,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Palla persa,50,Passaggio sbagliato,,,15,69,0,A,4,False,0,
+25406,340,2,03:20,400,37,38,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Ingresso,,,,,,,,,,False,0,
+25406,341,2,03:20,400,37,38,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Uscita,,,,,,,,,,False,0,340
+25406,342,2,03:07,413,37,38,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Fallo commesso,103,tiro,,,86,61,0,D,6,False,0,
+25406,343,2,03:07,413,37,38,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo Subito,,,,,86,61,0,D,6,False,0,342
+25406,344,2,03:07,413,37,39,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,345,2,03:07,413,37,40,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Tiro libero segnato,,,,,,,,A,7,False,0,344
+25406,346,2,03:05,415,37,40,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo commesso,100,personale,,,84,69,1,A,2,False,0,
+25406,347,2,03:05,415,37,40,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Fallo Subito,,,,,84,69,1,A,2,False,0,346
+25406,348,2,03:05,415,38,40,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,349,2,03:05,415,39,40,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,348
+25406,350,2,02:49,431,39,40,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,2 punti sbagliato,2,Tiro in corsa,,,89,52,1,A,6,False,0,
+25406,351,2,02:49,431,39,40,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Rimbalzo offensivo,,,,,89,52,1,A,6,False,0,350
+25406,352,2,02:45,435,39,43,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,3 punti segnato,1,Tiro in sospensione,,,90,98,1,A,8,False,0,
+25406,353,2,02:45,435,39,43,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Assist,,,,,90,98,1,A,8,False,0,352
+25406,354,2,02:27,453,39,43,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Palla persa,50,Passaggio sbagliato,,,8,66,0,A,4,False,0,
+25406,355,2,02:27,453,39,43,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Palla recuperata,,,,,8,66,0,A,4,False,0,354
+25406,356,2,02:22,458,39,45,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,2 punti segnato,9,Schiacciata,500,contropiede,95,51,1,A,3,True,1,
+25406,357,2,02:22,458,39,45,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Assist,,,500,contropiede,95,51,1,A,3,False,0,356
+25406,358,2,02:03,477,39,45,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,2 punti sbagliato,9,Schiacciata,1005,stoppata,11,50,0,A,6,False,0,
+25406,359,2,02:03,477,39,45,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Stoppata,,,,,11,50,0,A,6,False,0,358
+25406,360,2,02:03,477,39,45,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Stoppata subita,,,,,11,50,0,A,6,False,0,358
+25406,361,2,02:03,477,39,45,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo offensivo,,,,,11,50,0,A,6,False,0,358
+25406,362,2,02:02,478,39,45,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Fallo commesso,103,tiro,,,11,47,1,D,6,False,0,
+25406,363,2,02:02,478,39,45,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Fallo Subito,,,,,11,47,1,D,6,False,0,362
+25406,364,2,02:02,478,39,45,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Ingresso,,,,,,,,,,False,0,
+25406,365,2,02:02,478,39,45,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Uscita,,,,,,,,,,False,0,364
+25406,366,2,02:02,478,39,45,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Ingresso,,,,,,,,,,False,0,364
+25406,367,2,02:02,478,39,45,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Uscita,,,,,,,,,,False,0,364
+25406,368,2,02:02,478,40,45,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,369,2,02:02,478,41,45,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Tiro libero segnato,,,,,,,,A,7,False,0,368
+25406,370,2,01:46,494,41,45,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Fallo commesso,100,personale,,,94,69,0,D,2,False,0,
+25406,371,2,01:46,494,41,45,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Fallo Subito,,,,,94,69,0,D,2,False,0,370
+25406,372,2,01:33,507,41,45,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Fallo commesso,100,personale,,,67,57,0,D,9,False,0,
+25406,373,2,01:33,507,41,45,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo Subito,,,,,67,57,0,D,9,False,0,372
+25406,374,2,01:24,516,41,47,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,2 punti segnato,9,Schiacciata,,,95,51,1,A,3,True,1,
+25406,375,2,01:24,516,41,47,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Assist,,,,,95,51,1,A,3,False,0,374
+25406,376,2,01:07,533,44,47,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,3 punti segnato,6,Arresto e tiro,,,29,77,0,A,10,False,0,
+25406,377,2,00:55,545,44,47,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Fallo commesso,100,personale,,,66,61,0,D,9,False,0,
+25406,378,2,00:55,545,44,47,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo Subito,,,,,66,61,0,D,9,False,0,377
+25406,379,2,00:55,545,44,48,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,380,2,00:55,545,44,49,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Tiro libero segnato,,,,,,,,A,7,False,0,379
+25406,381,2,00:55,545,44,49,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Uscita,,,,,,,,,,False,0,
+25406,382,2,00:55,545,44,49,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Ingresso,,,,,,,,,,False,0,381
+25406,383,2,00:30,570,47,49,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,3 punti segnato,1,Tiro in sospensione,,,30,75,0,A,10,False,0,
+25406,384,2,00:30,570,47,49,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Assist,,,,,30,75,0,A,10,False,0,383
+25406,385,2,00:11,589,47,51,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,2 punti segnato,6,Arresto e tiro,,,83,39,1,A,6,True,0,
+25406,386,2,00:01,599,47,51,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,2 punti sbagliato,8,Da penetrazione,1005,stoppata,15,47,0,A,6,False,0,
+25406,387,2,00:01,599,47,51,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Stoppata,,,,,15,47,0,A,6,False,0,386
+25406,388,2,00:01,599,47,51,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Stoppata subita,1007,nessun rimbalzo,,,15,47,0,A,6,False,0,386
+25406,389,2,00:00,600,47,51,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25406,390,3,10:00,0,47,51,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Ingresso,,,,,,,,,,False,0,
+25406,391,3,10:00,0,47,51,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Uscita,,,,,,,,,,False,0,390
+25406,392,3,10:00,0,47,51,1751,Armani Olimpia Milano,0,5568,7,Stefano,Tonut,Ingresso,,,,,,,,,,False,0,390
+25406,393,3,10:00,0,47,51,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Uscita,,,,,,,,,,False,0,390
+25406,394,3,10:00,0,47,51,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25406,395,3,09:52,8,47,51,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,2 punti sbagliato,8,Da penetrazione,1005,stoppata,5,65,0,A,4,False,0,
+25406,396,3,09:52,8,47,51,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Stoppata,,,,,5,65,0,A,4,False,0,395
+25406,397,3,09:52,8,47,51,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Stoppata subita,,,,,5,65,0,A,4,False,0,395
+25406,398,3,09:52,8,47,51,1751,Armani Olimpia Milano,0,,,,,Rimbalzi offensivi di squadra,,,,,5,65,0,A,4,False,0,395
+25406,399,3,09:46,14,47,53,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,2 punti segnato,8,Da penetrazione,,,5,48,0,A,3,True,0,
+25406,400,3,09:32,28,47,53,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Fallo commesso,100,personale,,,95,71,0,D,2,False,0,
+25406,401,3,09:32,28,47,53,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Fallo Subito,,,,,95,71,0,D,2,False,0,400
+25406,402,3,09:24,36,47,53,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,3 punti sbagliato,6,Arresto e tiro,1003,tip-in appoggio canestro made,71,75,1,A,8,False,0,
+25406,403,3,09:24,36,47,53,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Rimbalzo offensivo,,,,,71,75,1,A,8,False,0,402
+25406,404,3,09:24,36,49,53,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,2 punti segnato,7,Appoggio a canestro,,,71,75,1,A,2,False,0,
+25406,405,3,09:14,46,49,55,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,2 punti segnato,8,Da penetrazione,,,9,43,0,A,3,True,0,
+25406,406,3,09:14,46,49,55,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Fallo commesso,103,tiro,,,9,43,1,D,3,False,0,
+25406,407,3,09:14,46,49,55,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo Subito,,,,,9,43,1,D,3,False,0,406
+25406,408,3,09:14,46,49,56,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,409,3,09:00,60,49,56,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,2 punti sbagliato,4,Giro e Tiro,,,93,73,1,A,2,False,0,
+25406,410,3,09:00,60,49,56,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Rimbalzo difensivo,,,,,93,73,1,A,2,False,0,409
+25406,411,3,08:53,67,49,56,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,3 punti sbagliato,1,Tiro in sospensione,,,34,55,0,A,9,False,0,
+25406,412,3,08:53,67,49,56,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Rimbalzo difensivo,,,,,34,55,0,A,9,False,0,411
+25406,413,3,08:46,74,52,56,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,3 punti segnato,1,Tiro in sospensione,500,contropiede,77,88,1,A,8,False,0,
+25406,414,3,08:46,74,52,56,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Assist,,,500,contropiede,77,88,1,A,8,False,0,413
+25406,415,3,08:27,93,52,56,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,2 punti sbagliato,11,Gancio,,,14,45,0,A,6,False,0,
+25406,416,3,08:27,93,52,56,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Rimbalzo offensivo,,,,,14,45,0,A,6,False,0,415
+25406,417,3,08:21,99,52,56,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,2 punti sbagliato,3,Tiro in fadeaway,,,12,60,0,A,6,False,0,
+25406,418,3,08:21,99,52,56,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo difensivo,,,,,12,60,0,A,6,False,0,417
+25406,419,3,08:07,113,52,56,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo commesso,100,personale,,,92,40,0,D,3,False,0,
+25406,420,3,08:07,113,52,56,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Fallo Subito,,,,,92,40,0,D,3,False,0,419
+25406,421,3,07:59,121,52,56,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,3 punti sbagliato,1,Tiro in sospensione,,,97,98,1,A,1,False,0,
+25406,422,3,07:59,121,52,56,1751,Armani Olimpia Milano,0,5568,7,Stefano,Tonut,Rimbalzo difensivo,,,,,97,98,1,A,1,False,0,421
+25406,423,3,07:40,140,52,56,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,2 punti sbagliato,4,Giro e Tiro,,,5,69,0,A,4,False,0,
+25406,424,3,07:40,140,52,56,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Rimbalzo difensivo,,,,,5,69,0,A,4,False,0,423
+25406,425,3,07:29,151,52,56,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,2 punti sbagliato,2,Tiro in corsa,,,92,48,1,A,3,False,0,
+25406,426,3,07:29,151,52,56,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo offensivo,,,,,92,48,1,A,3,False,0,425
+25406,427,3,07:22,158,54,56,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,2 punti segnato,1,Tiro in sospensione,,,94,56,1,A,3,True,0,
+25406,428,3,07:22,158,54,56,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Assist,,,,,94,56,1,A,3,False,0,427
+25406,429,3,07:08,172,54,58,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,2 punti segnato,9,Schiacciata,,,4,51,0,A,3,True,1,
+25406,430,3,07:08,172,54,58,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Assist,,,,,4,51,0,A,3,False,0,429
+25406,431,3,06:51,189,54,58,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Ingresso,,,,,,,,,,False,0,
+25406,432,3,06:51,189,54,58,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Uscita,,,,,,,,,,False,0,431
+25406,433,3,06:38,202,54,58,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,3 punti sbagliato,5,Tiro in Step Back,,,73,87,1,A,8,False,0,
+25406,434,3,06:38,202,54,58,1751,Armani Olimpia Milano,0,,,,,Rimbalzi difensivi di squadra,,,,,73,87,1,A,8,False,0,433
+25406,435,3,06:31,209,54,58,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,3 punti sbagliato,6,Arresto e tiro,,,32,59,0,A,9,False,0,
+25406,436,3,06:31,209,54,58,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Rimbalzo difensivo,,,,,32,59,0,A,9,False,0,435
+25406,437,3,06:15,225,54,58,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,2 punti sbagliato,3,Tiro in fadeaway,,,87,73,1,A,2,False,0,
+25406,438,3,06:15,225,54,58,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Rimbalzo difensivo,,,,,87,73,1,A,2,False,0,437
+25406,439,3,05:55,245,54,60,1751,Armani Olimpia Milano,0,5568,7,Stefano,Tonut,2 punti segnato,6,Arresto e tiro,,,7,15,0,A,2,False,0,
+25406,440,3,05:33,267,56,60,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,2 punti segnato,3,Tiro in fadeaway,,,94,72,1,A,2,False,0,
+25406,441,3,05:33,267,56,60,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Assist,,,,,94,72,1,A,2,False,0,440
+25406,442,3,05:17,283,56,60,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,2 punti sbagliato,8,Da penetrazione,,,9,40,0,A,3,False,0,
+25406,443,3,05:17,283,56,60,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Rimbalzo offensivo,,,,,9,40,0,A,3,False,0,442
+25406,444,3,05:13,287,56,60,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,3 punti sbagliato,1,Tiro in sospensione,,,33,54,0,A,9,False,0,
+25406,445,3,05:13,287,56,60,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Rimbalzo difensivo,,,,,33,54,0,A,9,False,0,444
+25406,446,3,04:53,307,58,60,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,2 punti segnato,5,Tiro in Step Back,,,95,76,1,A,2,False,0,
+25406,447,3,04:39,321,58,60,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Palla persa,50,Passaggio sbagliato,,,37,50,0,A,9,False,0,
+25406,448,3,04:39,321,58,60,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Palla recuperata,,,,,37,50,0,A,9,False,0,447
+25406,449,3,04:34,326,60,60,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,2 punti segnato,8,Da penetrazione,500,contropiede,95,58,1,A,3,True,0,
+25406,450,3,04:34,326,60,60,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Assist,,,500,contropiede,95,58,1,A,3,False,0,449
+25406,451,3,04:11,349,60,60,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,2 punti sbagliato,4,Giro e Tiro,,,23,55,0,A,7,False,0,
+25406,452,3,04:11,349,60,60,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Rimbalzo difensivo,,,,,23,55,0,A,7,False,0,451
+25406,453,3,03:57,363,62,60,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,2 punti segnato,7,Appoggio a canestro,,,95,48,1,A,3,True,0,
+25406,454,3,03:57,363,62,60,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Assist,,,,,95,48,1,A,3,False,0,453
+25406,455,3,03:56,364,62,60,1751,Armani Olimpia Milano,0,,,,,Time Out,,,,,,,0,,,False,0,
+25406,456,3,03:56,364,62,60,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Uscita,,,,,,,,,,False,0,
+25406,457,3,03:56,364,62,60,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Ingresso,,,,,,,,,,False,0,456
+25406,458,3,03:56,364,62,60,1751,Armani Olimpia Milano,0,854,0,Jason,Burnell,Uscita,,,,,,,,,,False,0,456
+25406,459,3,03:56,364,62,60,1751,Armani Olimpia Milano,0,5568,7,Stefano,Tonut,Uscita,,,,,,,,,,False,0,456
+25406,460,3,03:56,364,62,60,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Ingresso,,,,,,,,,,False,0,456
+25406,461,3,03:56,364,62,60,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Ingresso,,,,,,,,,,False,0,456
+25406,462,3,03:56,364,62,60,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Uscita,,,,,,,,,,False,0,456
+25406,463,3,03:56,364,62,60,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Ingresso,,,,,,,,,,False,0,456
+25406,464,3,03:46,374,62,60,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Fallo commesso,100,personale,,,33,46,1,D,9,False,0,
+25406,465,3,03:46,374,62,60,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Fallo Subito,,,,,33,46,1,D,9,False,0,464
+25406,466,3,03:46,374,62,60,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Uscita,,,,,,,,,,False,0,
+25406,467,3,03:46,374,62,60,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Uscita,,,,,,,,,,False,0,466
+25406,468,3,03:46,374,62,60,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Ingresso,,,,,,,,,,False,0,466
+25406,469,3,03:46,374,62,60,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Ingresso,,,,,,,,,,False,0,466
+25406,470,3,03:41,379,62,60,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Fallo commesso,103,tiro,,,9,40,1,D,3,False,0,
+25406,471,3,03:41,379,62,60,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Fallo Subito,,,,,9,40,1,D,3,False,0,470
+25406,472,3,03:41,379,62,61,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,473,3,03:41,379,62,62,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Tiro libero segnato,,,,,,,,A,7,False,0,472
+25406,474,3,03:41,379,62,62,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Assist,,,,,,,,,,False,0,472
+25406,475,3,03:22,398,62,62,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Fallo commesso,100,personale,,,95,65,0,D,2,False,0,
+25406,476,3,03:22,398,62,62,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Fallo Subito,,,,,95,65,0,D,2,False,0,475
+25406,477,3,03:22,398,62,62,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Uscita,,,,,,,,,,False,0,
+25406,478,3,03:22,398,62,62,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Ingresso,,,,,,,,,,False,0,477
+25406,479,3,03:11,409,64,62,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,2 punti segnato,7,Appoggio a canestro,,,93,46,1,A,3,True,0,
+25406,480,3,03:11,409,64,62,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Assist,,,,,93,46,1,A,3,False,0,479
+25406,481,3,02:47,433,64,62,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,2 punti sbagliato,8,Da penetrazione,1003,tip-in appoggio canestro made,9,55,0,A,3,False,0,
+25406,482,3,02:47,433,64,62,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Rimbalzo offensivo,,,,,9,55,0,A,3,False,0,481
+25406,483,3,02:47,433,64,64,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,2 punti segnato,7,Appoggio a canestro,,,9,55,0,A,3,True,0,
+25406,484,3,02:32,448,64,64,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Palla persa,51,Palleggio,,,86,29,1,A,4,False,0,
+25406,485,3,02:32,448,64,64,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Palla recuperata,,,,,86,29,1,A,4,False,0,484
+25406,486,3,02:16,464,64,64,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Fallo commesso,100,personale,,,6,74,1,D,4,False,0,
+25406,487,3,02:16,464,64,64,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo Subito,,,,,6,74,1,D,4,False,0,486
+25406,488,3,02:16,464,64,64,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Ingresso,,,,,,,,,,False,0,
+25406,489,3,02:16,464,64,64,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Uscita,,,,,,,,,,False,0,488
+25406,490,3,02:02,478,64,64,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Fallo commesso,103,tiro,,,19,52,1,D,6,False,0,
+25406,491,3,02:02,478,64,64,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Fallo Subito,,,,,19,52,1,D,6,False,0,490
+25406,492,3,02:02,478,64,64,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Uscita,,,,,,,,,,False,0,
+25406,493,3,02:02,478,64,64,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Ingresso,,,,,,,,,,False,0,492
+25406,494,3,02:02,478,64,64,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25406,495,3,02:02,478,64,65,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Tiro libero segnato,,,,,,,,A,7,False,0,494
+25406,496,3,01:44,496,64,65,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Fallo commesso,100,personale,,,93,43,0,D,3,False,0,
+25406,497,3,01:44,496,64,65,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Fallo Subito,,,,,93,43,0,D,3,False,0,496
+25406,498,3,01:29,511,64,65,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,94,52,1,A,3,False,0,
+25406,499,3,01:29,511,64,65,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Stoppata,,,,,94,52,1,A,3,False,0,498
+25406,500,3,01:29,511,64,65,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Stoppata subita,,,,,94,52,1,A,3,False,0,498
+25406,501,3,01:29,511,64,65,1765,Acqua S.Bernardo Cantù,1,,,,,Palle perse di squadra,1006,violazione 24sec,,,94,52,1,A,3,False,0,498
+25406,502,3,01:14,526,64,65,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,2 punti sbagliato,8,Da penetrazione,,,14,53,0,A,6,False,0,
+25406,503,3,01:14,526,64,65,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Rimbalzo offensivo,,,,,14,53,0,A,6,False,0,502
+25406,504,3,01:14,526,64,65,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Fallo commesso,100,personale,,,14,52,1,D,6,False,0,
+25406,505,3,01:14,526,64,65,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo Subito,,,,,14,52,1,D,6,False,0,504
+25406,506,3,01:14,526,64,66,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,507,3,01:14,526,64,67,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Tiro libero segnato,,,,,,,,A,7,False,0,506
+25406,508,3,00:58,542,64,67,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Palla persa,50,Passaggio sbagliato,,,73,79,1,A,8,False,0,
+25406,509,3,00:41,559,64,69,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,2 punti segnato,6,Arresto e tiro,,,19,31,0,A,2,False,0,
+25406,510,3,00:17,583,64,69,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,2 punti sbagliato,6,Arresto e tiro,,,81,28,1,A,4,False,0,
+25406,511,3,00:17,583,64,69,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Rimbalzo difensivo,,,,,81,28,1,A,4,False,0,510
+25406,512,3,00:00,600,64,72,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,3 punti segnato,5,Tiro in Step Back,,,27,81,0,A,10,False,0,
+25406,513,3,00:00,600,64,72,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25406,514,4,10:00,0,64,72,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Uscita,,,,,,,,,,False,0,
+25406,515,4,10:00,0,64,72,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Ingresso,,,,,,,,,,False,0,514
+25406,516,4,10:00,0,64,72,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Ingresso,,,,,,,,,,False,0,514
+25406,517,4,10:00,0,64,72,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Uscita,,,,,,,,,,False,0,514
+25406,518,4,10:00,0,64,72,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25406,519,4,09:47,13,64,72,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Palla persa,50,Passaggio sbagliato,,,95,43,1,A,3,False,0,
+25406,520,4,09:33,27,64,72,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,2 punti sbagliato,8,Da penetrazione,1005,stoppata,11,59,0,A,6,False,0,
+25406,521,4,09:33,27,64,72,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Stoppata,,,,,11,59,0,A,6,False,0,520
+25406,522,4,09:33,27,64,72,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Stoppata subita,,,,,11,59,0,A,6,False,0,520
+25406,523,4,09:33,27,64,72,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Rimbalzo difensivo,,,,,11,59,0,A,6,False,0,520
+25406,524,4,09:28,32,64,72,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Uscita,,,,,,,,,,False,0,
+25406,525,4,09:28,32,64,72,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Ingresso,,,,,,,,,,False,0,524
+25406,526,4,09:28,32,64,72,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Fallo commesso,100,personale,,,58,29,0,D,9,False,0,
+25406,527,4,09:28,32,64,72,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Fallo Subito,,,,,58,29,0,D,9,False,0,526
+25406,528,4,09:17,43,64,72,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Palla persa,50,Passaggio sbagliato,,,73,21,1,A,10,False,0,
+25406,529,4,09:17,43,64,72,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Palla recuperata,,,,,73,21,1,A,10,False,0,528
+25406,530,4,09:08,52,64,74,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,2 punti segnato,8,Da penetrazione,,,7,44,0,A,3,True,0,
+25406,531,4,09:07,53,64,74,1765,Acqua S.Bernardo Cantù,1,,,,,Time Out,,,,,,,1,,,False,0,
+25406,532,4,09:07,53,64,74,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Ingresso,,,,,,,,,,False,0,
+25406,533,4,09:07,53,64,74,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Uscita,,,,,,,,,,False,0,532
+25406,534,4,09:07,53,64,74,1765,Acqua S.Bernardo Cantù,1,5660,27,Liam,Udom,Uscita,,,,,,,,,,False,0,532
+25406,535,4,09:07,53,64,74,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Ingresso,,,,,,,,,,False,0,532
+25406,536,4,08:45,75,64,74,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,3 punti sbagliato,1,Tiro in sospensione,,,96,97,1,A,1,False,0,
+25406,537,4,08:45,75,64,74,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Rimbalzo difensivo,,,,,96,97,1,A,1,False,0,536
+25406,538,4,08:23,97,64,74,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,2 punti sbagliato,2,Tiro in corsa,,,12,40,0,A,6,False,0,
+25406,539,4,08:23,97,64,74,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Rimbalzo difensivo,,,,,12,40,0,A,6,False,0,538
+25406,540,4,08:01,119,64,74,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,3 punti sbagliato,1,Tiro in sospensione,,,67,41,1,A,9,False,0,
+25406,541,4,08:01,119,64,74,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Rimbalzo difensivo,,,,,67,41,1,A,9,False,0,540
+25406,542,4,07:41,139,64,74,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Palla persa,50,Passaggio sbagliato,,,32,63,0,A,9,False,0,
+25406,543,4,07:41,139,64,74,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Palla recuperata,,,,,32,63,0,A,9,False,0,542
+25406,544,4,07:41,139,64,74,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Fallo commesso,123,tattico,,,43,65,0,A,9,False,0,
+25406,545,4,07:41,139,64,74,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Fallo Subito,,,,,43,65,0,A,9,False,0,544
+25406,546,4,07:41,139,64,74,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Ingresso,,,,,,,,,,False,0,
+25406,547,4,07:41,139,64,74,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Uscita,,,,,,,,,,False,0,546
+25406,548,4,07:41,139,65,74,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25406,549,4,07:41,139,66,74,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,548
+25406,550,4,07:26,154,66,74,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,3 punti sbagliato,6,Arresto e tiro,1005,stoppata,77,10,1,A,10,False,0,
+25406,551,4,07:26,154,66,74,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Stoppata,,,,,77,10,1,A,10,False,0,550
+25406,552,4,07:26,154,66,74,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Stoppata subita,,,,,77,10,1,A,10,False,0,550
+25406,553,4,07:26,154,66,74,1765,Acqua S.Bernardo Cantù,1,,,,,Palle perse di squadra,1006,violazione 24sec,,,77,10,1,A,10,False,0,550
+25406,554,4,07:09,171,66,77,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,3 punti segnato,1,Tiro in sospensione,,,3,97,0,A,5,False,0,
+25406,555,4,07:09,171,66,77,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Assist,,,,,3,97,0,A,5,False,0,554
+25406,556,4,06:54,186,66,77,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo commesso,103,tiro,,,91,62,0,D,2,False,0,
+25406,557,4,06:54,186,66,77,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Fallo Subito,,,,,91,62,0,D,2,False,0,556
+25406,558,4,06:54,186,66,77,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Ingresso,,,,,,,,,,False,0,
+25406,559,4,06:54,186,66,77,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Uscita,,,,,,,,,,False,0,558
+25406,560,4,06:54,186,66,77,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25406,561,4,06:54,186,67,77,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Tiro libero segnato,,,,,,,,A,7,False,0,560
+25406,562,4,06:44,196,67,77,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Fallo commesso,103,tiro,,,10,54,1,D,6,False,0,
+25406,563,4,06:44,196,67,77,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Fallo Subito,,,,,10,54,1,D,6,False,0,562
+25406,564,4,06:44,196,67,77,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Ingresso,,,,,,,,,,False,0,
+25406,565,4,06:44,196,67,77,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Uscita,,,,,,,,,,False,0,564
+25406,566,4,06:44,196,67,78,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,567,4,06:44,196,67,79,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Tiro libero segnato,,,,,,,,A,7,False,0,566
+25406,568,4,06:35,205,67,79,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo commesso,100,personale,,,64,37,0,D,9,False,0,
+25406,569,4,06:35,205,67,79,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Fallo Subito,,,,,64,37,0,D,9,False,0,568
+25406,570,4,06:35,205,67,79,1751,Armani Olimpia Milano,0,7405,10,Leandro,Bolmaro,Uscita,,,,,,,,,,False,0,
+25406,571,4,06:35,205,67,79,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Ingresso,,,,,,,,,,False,0,570
+25406,572,4,06:23,217,70,79,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,3 punti segnato,1,Tiro in sospensione,,,75,88,1,A,8,False,0,
+25406,573,4,06:23,217,70,79,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Assist,,,,,75,88,1,A,8,False,0,572
+25406,574,4,05:56,244,70,81,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,2 punti segnato,2,Tiro in corsa,,,19,45,0,A,6,True,0,
+25406,575,4,05:49,251,70,81,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo commesso,103,tiro,,,93,52,0,D,3,False,0,
+25406,576,4,05:49,251,70,81,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Fallo Subito,,,,,93,52,0,D,3,False,0,575
+25406,577,4,05:49,251,71,81,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25406,578,4,05:49,251,72,81,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,577
+25406,579,4,05:35,265,72,83,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,2 punti segnato,6,Arresto e tiro,,,23,35,0,A,7,False,0,
+25406,580,4,05:13,287,72,83,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,3 punti sbagliato,6,Arresto e tiro,,,69,36,1,A,9,False,0,
+25406,581,4,05:13,287,72,83,1765,Acqua S.Bernardo Cantù,1,,,,,Rimbalzi offensivi di squadra,,,,,69,36,1,A,9,False,0,580
+25406,582,4,05:12,288,72,83,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Fallo commesso,100,personale,,,90,45,0,D,6,False,0,
+25406,583,4,05:12,288,72,83,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Fallo Subito,,,,,90,45,0,D,6,False,0,582
+25406,584,4,05:12,288,73,83,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,585,4,05:12,288,74,83,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Tiro libero segnato,,,,,,,,A,7,False,0,584
+25406,586,4,05:03,297,74,83,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,2 punti sbagliato,8,Da penetrazione,,,10,40,0,A,6,False,0,
+25406,587,4,05:03,297,74,83,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Rimbalzo offensivo,,,,,10,40,0,A,6,False,0,586
+25406,588,4,05:03,297,74,83,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Fallo commesso,103,tiro,,,6,45,1,D,3,False,0,
+25406,589,4,05:03,297,74,83,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Fallo Subito,,,,,6,45,1,D,3,False,0,588
+25406,590,4,05:03,297,74,83,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25406,591,4,05:03,297,74,84,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Tiro libero segnato,,,,,,,,A,7,False,0,590
+25406,592,4,04:47,313,74,84,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,3 punti sbagliato,5,Tiro in Step Back,,,69,72,1,A,9,False,0,
+25406,593,4,04:47,313,74,84,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Rimbalzo difensivo,,,,,69,72,1,A,9,False,0,592
+25406,594,4,04:37,323,74,84,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,2 punti sbagliato,8,Da penetrazione,,,4,59,0,A,3,False,0,
+25406,595,4,04:37,323,74,84,1765,Acqua S.Bernardo Cantù,1,,,,,Rimbalzi difensivi di squadra,,,,,4,59,0,A,3,False,0,594
+25406,596,4,04:37,323,74,84,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Fallo commesso,100,personale,,,8,49,0,A,3,False,0,
+25406,597,4,04:37,323,74,84,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Fallo Subito,,,,,8,49,0,A,3,False,0,596
+25406,598,4,04:37,323,74,84,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Ingresso,,,,,,,,,,False,0,
+25406,599,4,04:37,323,74,84,1751,Armani Olimpia Milano,0,1775,6,Ousmane,Diop,Uscita,,,,,,,,,,False,0,598
+25406,600,4,04:37,323,75,84,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,601,4,04:37,323,76,84,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Tiro libero segnato,,,,,,,,A,7,False,0,600
+25406,602,4,04:20,340,76,84,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Fallo commesso,103,tiro,,,6,51,1,D,3,False,0,
+25406,603,4,04:20,340,76,84,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Fallo Subito,,,,,6,51,1,D,3,False,0,602
+25406,604,4,04:20,340,76,84,1765,Acqua S.Bernardo Cantù,1,6619,8,Leonardo,Okeke,Uscita,,,,,,,,,,False,0,
+25406,605,4,04:20,340,76,84,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Ingresso,,,,,,,,,,False,0,604
+25406,606,4,04:20,340,76,85,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,607,4,04:20,340,76,86,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Tiro libero segnato,,,,,,,,A,7,False,0,606
+25406,608,4,04:20,340,76,86,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Assist,,,,,,,,,,False,0,606
+25406,609,4,03:59,361,76,86,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Palla persa,50,Passaggio sbagliato,,,91,41,1,A,3,False,0,
+25406,610,4,03:59,361,76,86,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Palla recuperata,,,,,91,41,1,A,3,False,0,609
+25406,611,4,03:53,367,76,86,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,3 punti sbagliato,1,Tiro in sospensione,,,26,19,0,A,8,False,0,
+25406,612,4,03:53,367,76,86,1765,Acqua S.Bernardo Cantù,1,,,,,Rimbalzi difensivi di squadra,,,,,26,19,0,A,8,False,0,611
+25406,613,4,03:50,370,76,86,1765,Acqua S.Bernardo Cantù,1,,,,,Time Out,,,,,,,1,,,False,0,
+25406,614,4,03:50,370,76,86,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Uscita,,,,,,,,,,False,0,
+25406,615,4,03:50,370,76,86,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Ingresso,,,,,,,,,,False,0,614
+25406,616,4,03:31,389,76,86,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Palla persa,50,Passaggio sbagliato,,,97,28,1,A,4,False,0,
+25406,617,4,03:31,389,76,86,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Palla recuperata,,,,,97,28,1,A,4,False,0,616
+25406,618,4,03:15,405,76,88,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,2 punti segnato,8,Da penetrazione,,,9,67,0,A,4,True,0,
+25406,619,4,03:05,415,78,88,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,2 punti segnato,7,Appoggio a canestro,,,95,42,1,A,3,True,0,
+25406,620,4,03:05,415,78,88,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Assist,,,,,95,42,1,A,3,False,0,619
+25406,621,4,02:44,436,78,88,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,3 punti sbagliato,5,Tiro in Step Back,,,30,80,0,A,10,False,0,
+25406,622,4,02:44,436,78,88,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo difensivo,,,,,30,80,0,A,10,False,0,621
+25406,623,4,02:42,438,78,88,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Fallo commesso,100,personale,,,7,33,0,A,2,False,0,
+25406,624,4,02:42,438,78,88,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Fallo Subito,,,,,7,33,0,A,2,False,0,623
+25406,625,4,02:42,438,78,88,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Ingresso,,,,,,,,,,False,0,
+25406,626,4,02:42,438,78,88,1751,Armani Olimpia Milano,0,5499,13,Darius,Thompson,Uscita,,,,,,,,,,False,0,625
+25406,627,4,02:42,438,78,88,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Uscita,,,,,,,,,,False,0,625
+25406,628,4,02:42,438,78,88,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Ingresso,,,,,,,,,,False,0,625
+25406,629,4,02:42,438,79,88,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,630,4,02:42,438,79,88,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Tiro libero sbagliato,,,,,,,,A,7,False,0,629
+25406,631,4,02:42,438,79,88,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Rimbalzo difensivo,,,,,,,,,,False,0,629
+25406,632,4,02:28,452,79,88,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,2 punti sbagliato,11,Gancio,,,11,63,0,A,4,False,0,
+25406,633,4,02:28,452,79,88,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo difensivo,,,,,11,63,0,A,4,False,0,632
+25406,634,4,02:10,470,79,88,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,2 punti sbagliato,4,Giro e Tiro,,,94,34,1,A,4,False,0,
+25406,635,4,02:10,470,79,88,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Rimbalzo difensivo,,,,,94,34,1,A,4,False,0,634
+25406,636,4,01:55,485,79,88,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,3 punti sbagliato,6,Arresto e tiro,,,28,85,0,A,10,False,0,
+25406,637,4,01:55,485,79,88,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Rimbalzo offensivo,,,,,28,85,0,A,10,False,0,636
+25406,638,4,01:54,486,79,88,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Fallo commesso,103,tiro,,,21,54,1,D,7,False,0,
+25406,639,4,01:54,486,79,88,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Fallo Subito,,,,,21,54,1,D,7,False,0,638
+25406,640,4,01:54,486,79,88,1765,Acqua S.Bernardo Cantù,1,9012,1,Savion,Flagg,Uscita,,,,,,,,,,False,0,
+25406,641,4,01:54,486,79,88,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Ingresso,,,,,,,,,,False,0,640
+25406,642,4,01:54,486,79,88,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25406,643,4,01:54,486,79,88,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Tiro libero sbagliato,,,,,,,,A,7,False,0,642
+25406,644,4,01:54,486,79,88,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Rimbalzo offensivo,,,,,,,,,,False,0,642
+25406,645,4,01:53,487,79,90,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,2 punti segnato,7,Appoggio a canestro,,,9,54,0,A,3,True,0,
+25406,646,4,01:35,505,79,90,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo commesso,103,tiro,,,90,48,0,D,6,False,0,
+25406,647,4,01:35,505,79,90,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Fallo Subito,,,,,90,48,0,D,6,False,0,646
+25406,648,4,01:35,505,80,90,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,649,4,01:35,505,80,90,1765,Acqua S.Bernardo Cantù,1,3855,25,Davide,Moretti,Tiro libero sbagliato,,,,,,,,A,7,False,0,648
+25406,650,4,01:35,505,80,90,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Assist,,,,,,,,,,False,0,648
+25406,651,4,01:35,505,80,90,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Rimbalzo difensivo,,,,,,,,,,False,0,648
+25406,652,4,01:25,515,80,92,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,2 punti segnato,8,Da penetrazione,,,7,67,0,A,4,True,0,
+25406,653,4,01:12,528,80,92,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,2 punti sbagliato,2,Tiro in corsa,,,92,38,1,A,3,False,0,
+25406,654,4,01:12,528,80,92,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Rimbalzo difensivo,,,,,92,38,1,A,3,False,0,653
+25406,655,4,01:08,532,80,94,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,2 punti segnato,8,Da penetrazione,500,contropiede,6,57,0,A,3,True,0,
+25406,656,4,01:08,532,80,94,1751,Armani Olimpia Milano,0,6156,22,Devon,Hall,Assist,,,500,contropiede,6,57,0,A,3,False,0,655
+25406,657,4,01:07,533,80,94,1765,Acqua S.Bernardo Cantù,1,,,,,Time Out,,,,,,,1,,,False,0,
+25406,658,4,01:07,533,80,94,1765,Acqua S.Bernardo Cantù,1,2494,24,Andrejs,Grazulis,Ingresso,,,,,,,,,,False,0,
+25406,659,4,01:07,533,80,94,1765,Acqua S.Bernardo Cantù,1,6133,31,Osvaldas,Olisevicius,Uscita,,,,,,,,,,False,0,658
+25406,660,4,00:52,548,80,94,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Fallo commesso,103,tiro,,,95,45,0,D,3,False,0,
+25406,661,4,00:52,548,80,94,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Fallo Subito,,,,,95,45,0,D,3,False,0,660
+25406,662,4,00:52,548,80,94,1751,Armani Olimpia Milano,0,2103,21,Diego,Flaccadori,Ingresso,,,,,,,,,,False,0,
+25406,663,4,00:52,548,80,94,1751,Armani Olimpia Milano,0,9008,23,Marko,Guduric,Uscita,,,,,,,,,,False,0,662
+25406,664,4,00:52,548,80,94,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25406,665,4,00:52,548,80,94,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Tiro libero sbagliato,,,,,,,,A,7,False,0,664
+25406,666,4,00:52,548,80,94,1751,Armani Olimpia Milano,0,4692,17,Giampaolo,Ricci,Rimbalzo difensivo,,,,,,,,,,False,0,664
+25406,667,4,00:33,567,80,94,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Fallo commesso,103,tiro,,,7,61,1,D,3,False,0,
+25406,668,4,00:33,567,80,94,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Fallo Subito,,,,,7,61,1,D,3,False,0,667
+25406,669,4,00:33,567,80,94,1765,Acqua S.Bernardo Cantù,1,3880,9,Riccardo,Moraschini,Uscita,,,,,,,,,,False,0,
+25406,670,4,00:33,567,80,94,1765,Acqua S.Bernardo Cantù,1,9072,36,Matteo,Molteni,Ingresso,,,,,,,,,,False,0,669
+25406,671,4,00:33,567,80,94,1751,Armani Olimpia Milano,0,9378,5,Moses,Wright,Uscita,,,,,,,,,,False,0,
+25406,672,4,00:33,567,80,94,1751,Armani Olimpia Milano,0,45,45,Nicola,Akele,Ingresso,,,,,,,,,,False,0,671
+25406,673,4,00:33,567,80,95,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Tiro libero segnato,,,,,,,,A,7,False,0,
+25406,674,4,00:33,567,80,95,1751,Armani Olimpia Milano,0,9031,2,R.J.,Cole,Tiro libero sbagliato,,,,,,,,A,7,False,0,673
+25406,675,4,00:33,567,80,95,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,Rimbalzo difensivo,,,,,,,,,,False,0,673
+25406,676,4,00:24,576,82,95,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,2 punti segnato,9,Schiacciata,,,95,50,1,A,3,True,1,
+25406,677,4,00:24,576,82,95,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Assist,,,,,95,50,1,A,3,False,0,676
+25406,678,4,00:00,600,82,95,,,,,,,,Fine Tempo,,,,,,,,,,False,0,

@@ -12,10 +12,10 @@
   "venue": null,
   "played": false,
   "version": 8,
-  "n_before": 57,
+  "n_before": 59,
   "opponent_analysis": "matchup_Paok_Thessaloniki_vs_BC_Roma_before_2026-11-03",
   "record": "2-4",
-  "position": 11,
+  "position": 12,
   "points": 4,
   "record_ec": "2-3",
   "form": "LLLLW",
@@ -672,7 +672,7 @@
   "ts_pir_lba": {
     "file": "ts_pir_lba.png",
     "players": 9,
-    "others": 156,
+    "others": 157,
     "games": 6
   },
   "ts_pir_ec": {
