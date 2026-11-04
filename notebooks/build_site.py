@@ -54,7 +54,7 @@ SUBPAGES = {"individual_tendencies": "Individual tendencies", "defense_tendencie
             "offense_tendencies": "Offense tendencies"}   # optional pages next to analysis.md: weekly/games/<date>/<name>.md
 LEGACY_REPORT_SCRIPT = "manresa_report.py"        # script named in the hand-written opponent pages' auto section
 STALE_DOCS = ("prematch.html", "analyses", "analyses.json", "weekly", "weekly.json")   # replaced by the current structure
-MARKDOWN_EXTENSIONS = ["tables", "md_in_html", "sane_lists"]
+MARKDOWN_EXTENSIONS = ["tables", "md_in_html", "sane_lists", "toc"]
 STATE_BADGES = {"draft": "✎ automatic draft, not reviewed", "progress": "✎ work in progress"}
 # colours of the compare page's dumbbell charts (inlined in the page's JavaScript)
 COMPARE_COLORS = {
@@ -152,15 +152,29 @@ def mark_highlights(text: str) -> str:
                    for p in parts)
 
 
+MORE_MARKER = "<!-- more -->"
+
+
+def split_brief(body: str) -> str:
+    """Split a section body at the `<!-- more -->` line: what comes before stays visible as the short summary ("In short"),
+    what follows goes into a drop-down ("Details"). A body without the marker is returned as it is."""
+    brief, marker, rest = body.partition(MORE_MARKER)
+    if not marker or not rest.strip():
+        return body.replace(MORE_MARKER, "")
+    lead = f'<div class="brief"><div class="brief-label">In short</div>{brief}</div>' if brief.strip() else ""
+    return f'{lead}<details class="more"><summary>Details</summary><div class="more-body">{rest}</div></details>'
+
+
 def sections(html_text: str) -> str:
     """Every main heading (h2) and what follows it up to the next one becomes a <details open> section that can be closed.
-    What comes before the first h2 (title, banners, intro) stays outside."""
+    What comes before the first h2 (title, banners, intro) stays outside. Inside a section, `<!-- more -->` separates the
+    short summary from the drop-down with the rest (see split_brief)."""
     parts = re.split(r"(<h2(?: [^>]*)?>.*?</h2>)", html_text, flags=re.S)
     if len(parts) < 3:
         return html_text
     out = [parts[0]]
     for head, body in zip(parts[1::2], parts[2::2]):
-        out.append(f'<details class="sec" open><summary>{head}</summary><div class="sec-body">{body}</div></details>')
+        out.append(f'<details class="sec" open><summary>{head}</summary><div class="sec-body">{split_brief(body)}</div></details>')
     return "".join(out)
 
 

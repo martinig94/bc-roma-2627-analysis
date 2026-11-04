@@ -157,7 +157,8 @@ def figure_md(arg: str, files: list[str]) -> str:
 
 
 def expand(body: str, kind: str, a: dict[str, Any], files: list[str], author: str = "") -> str:
-    """Replace the {{ block }} lines of a page with the generated markdown (comments and code spans are left as they are)."""
+    """Replace the {{ block }} lines of a page with the generated markdown (comments and code spans are left as they are; comments are
+    then dropped, except the `<!-- more -->` line that splits a section into its summary and its drop-down, see build_site.split_brief)."""
     mod = TPL.get_template(BLOCKS_TEMPLATE).module
 
     def block(m: re.Match) -> str:
@@ -172,7 +173,7 @@ def expand(body: str, kind: str, a: dict[str, Any], files: list[str], author: st
 
     parts = SKIP.split(body)
     out = "".join(p if i % 2 else BLOCK.sub(block, p) for i, p in enumerate(parts))
-    return prune_empty(re.sub(r"<!--.*?-->", "", out, flags=re.S)).lstrip()
+    return prune_empty(re.sub(r"<!--(?!\s*more\s*-->).*?-->", "", out, flags=re.S)).lstrip()
 
 
 def prune_empty(md: str) -> str:

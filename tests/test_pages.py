@@ -113,7 +113,7 @@ def test_analysis_layout_changes_from_the_cutoff_day() -> None:
         assert section in old and section not in new
     assert "{{ more_analysis }}" in new and "{{ more_analysis }}" not in pages.split_front(old)[1].split("-->")[-1]
     assert new.index("{{ more_analysis }}") < new.index("## Key points")
-    assert new.index("## Starting five and bench") < new.index("## Shot selection") < new.index("## Key players")
+    assert new.index("## Roster, starting five and bench") < new.index("## Shot selection") < new.index("## Key players")
 
 
 def test_offense_and_individual_pages_receive_the_moved_sections() -> None:

@@ -12,8 +12,16 @@ THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the 
 ## Key points
 
 [[ pending ]]
+
+<!-- more -->
+
+[[ pending ]]
 {% if '12_triangles_team_attempts.png' in files %}
 ## Shot attempts: 3PT, paint and mid-range
+
+[[ pending ]]
+
+<!-- more -->
 
 How the shot attempts of each game split between threes, paint and mid-range: one dot per game (green = won, red = lost), the smoothed areas hold the densest 50% and 80% of the games, the black square is the average.
 
@@ -31,6 +39,10 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 {% endif %}
 ## Shot charts by player
 
+Shot profile (made/attempted by location and play type) and shot types within each play type. Team zone totals: link to the shot selection section of the analysis page.
+
+<!-- more -->
+
 [[ shot_charts ]]
 {% for f in files|sort if f.startswith('05_player_') and f.endswith('_shot_profile.png') %}
 [[ figure: {{ f[:-4] }} ]]
@@ -39,17 +51,16 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 {% endif %}{% endfor %}
 {% if '15_energy_indices.png' in files %}## Energy: rim activity and pace
 
+[[ pending ]]
+
+<!-- more -->
+
 Two scores per player, built from box score and play-by-play only, shown as league percentiles (0.5 = league median; shrunk towards it for players with few minutes). ==Rim activity==: offensive rebounds, blocks, dunks and fouls drawn per 40 minutes. ==High pace==: drive finishes, fast-break shots and assists, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. Players are sorted by minutes played.
 
 [[ figure: 15_energy_indices ]]
-
-[[ pending ]]
 {% endif %}{% set rot = [] %}{% for f in files|sort if f.startswith('14_player_rotation_') %}{% set _ = rot.append(f) %}{% endfor %}{% if rot %}## Rotation by player
 
-When each player is on the court in each quarter, in the last 5 games of the competition: one bar per quarter, the clock runs from 10:00 down to 0:00, dark green = on the court in every game at that moment, white = in none.
+When each player is on the court in each quarter, in the competition, as in the analysis page's rotation by minute. One bar per quarter, the clock runs from 10:00 down to 0:00, dark green = on the court in every game at that moment, white = in none.
 {% for f in rot %}
 [[ figure: {{ f[:-4] }} ]]
 {% endfor %}{% endif %}
-## Players to watch
-
-[[ pending ]]
