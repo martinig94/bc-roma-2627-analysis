@@ -1,0 +1,656 @@
+player,season,pid,game_id,comp,play_type,poss,pts,fga,fgm,fg3a,fg3m,to,fta,sf,score
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadc9ed,Adriatic League Supercup,Spot Up,2,0,2,0,2,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc31aaf,Adriatic League (ABA),Spot Up,2,3,2,1,1,0,0,1,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d6397ca,Adriatic League (ABA),Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373a79,EuroCup,Spot Up,3,0,3,0,1,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6adecbb45b92dadc6b9,Adriatic League Supercup,Spot Up,2,5,2,2,1,1,0,0,0,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373f1c,EuroCup,Spot Up,2,3,1,1,0,0,0,2,1,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d639d47,Adriatic League (ABA),Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c1ecbb45b92db2dda7,Adriatic League (ABA),Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c98ecbb45b92dc31103,Adriatic League (ABA),Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d63a348,Adriatic League (ABA),Spot Up,2,0,2,0,1,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadcbf0,Adriatic League Supercup,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086879ecbb45b92d15ce3b,EuroCup,Spot Up,2,2,0,0,0,0,1,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086878ecbb45b92d15c116,EuroCup,Spot Up,2,0,2,0,2,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d638f01,Adriatic League (ABA),Spot Up,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508687aecbb45b92d15dc95,EuroCup,Spot Up,4,2,4,1,2,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a126ecbb45b92d2fffc3,EuroCup,Spot Up,1,2,0,0,0,0,0,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc315c6,Adriatic League (ABA),Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2ff865,EuroCup,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d639d47,Adriatic League (ABA),P&R Ball Handler,8,7,6,2,4,2,1,2,1,3
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c1ecbb45b92db2dda7,Adriatic League (ABA),P&R Ball Handler,3,8,2,2,2,2,0,2,1,3
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373a79,EuroCup,P&R Ball Handler,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086878ecbb45b92d15c116,EuroCup,P&R Ball Handler,2,0,1,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc317dd,Adriatic League (ABA),P&R Ball Handler,2,2,1,1,0,0,1,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086879ecbb45b92d15ce3b,EuroCup,P&R Ball Handler,2,0,1,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadcbf0,Adriatic League Supercup,P&R Ball Handler,3,2,1,1,0,0,2,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e63ecbb45b92d374a7b,EuroCup,P&R Ball Handler,7,3,4,0,2,0,1,4,2,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508810decbb45b92db51b19,EuroCup,P&R Ball Handler,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c98ecbb45b92dc31103,Adriatic League (ABA),P&R Ball Handler,8,10,5,3,2,0,2,4,2,4
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2fe641,EuroCup,P&R Ball Handler,5,2,4,1,3,0,1,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a126ecbb45b92d2fffc3,EuroCup,P&R Ball Handler,6,14,4,4,3,3,1,3,2,5
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d63a348,Adriatic League (ABA),P&R Ball Handler,4,6,2,2,0,0,1,3,2,3
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c2ecbb45b92db2e35e,Adriatic League (ABA),P&R Ball Handler,7,6,4,2,3,2,3,0,0,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508687aecbb45b92d15dc95,EuroCup,P&R Ball Handler,2,0,0,0,0,0,2,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d638f01,Adriatic League (ABA),P&R Ball Handler,4,5,3,2,2,1,1,0,0,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadc9ed,Adriatic League Supercup,P&R Ball Handler,2,2,0,0,0,0,1,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2ff865,EuroCup,P&R Ball Handler,2,0,2,0,1,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc315c6,Adriatic League (ABA),P&R Ball Handler,4,2,3,1,2,0,1,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc31aaf,Adriatic League (ABA),P&R Ball Handler,2,0,2,0,2,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d6397ca,Adriatic League (ABA),P&R Ball Handler,3,2,2,1,0,0,1,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373f1c,EuroCup,Transition,2,2,1,0,1,0,0,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6adecbb45b92dadc6b9,Adriatic League Supercup,Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d639d47,Adriatic League (ABA),Transition,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c1ecbb45b92db2dda7,Adriatic League (ABA),Transition,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086879ecbb45b92d15ce3b,EuroCup,Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadcbf0,Adriatic League Supercup,Transition,2,4,2,2,0,0,0,0,0,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e63ecbb45b92d374a7b,EuroCup,Transition,2,0,1,0,1,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc317dd,Adriatic League (ABA),Transition,2,0,1,0,1,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2fe641,EuroCup,Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c98ecbb45b92dc31103,Adriatic League (ABA),Transition,1,1,0,0,0,0,0,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d63a348,Adriatic League (ABA),Transition,4,6,2,1,0,0,0,4,0,3
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c2ecbb45b92db2e35e,Adriatic League (ABA),Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a126ecbb45b92d2fffc3,EuroCup,Transition,1,3,1,1,0,0,0,1,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508687aecbb45b92d15dc95,EuroCup,Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d6397ca,Adriatic League (ABA),Transition,2,2,2,1,0,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc315c6,Adriatic League (ABA),Transition,1,2,1,1,0,0,0,1,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadc9ed,Adriatic League Supercup,Transition,6,7,5,3,0,0,1,1,1,3
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2ff865,EuroCup,Transition,2,5,2,2,0,0,0,1,1,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc31aaf,Adriatic League (ABA),Transition,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086878ecbb45b92d15c116,EuroCup,P&R Roll Man,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6adecbb45b92dadc6b9,Adriatic League Supercup,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508687aecbb45b92d15dc95,EuroCup,Cut,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c1ecbb45b92db2dda7,Adriatic League (ABA),Cut,1,1,0,0,0,0,0,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d63a348,Adriatic League (ABA),Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c98ecbb45b92dc31103,Adriatic League (ABA),Isolation,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2fe641,EuroCup,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a126ecbb45b92d2fffc3,EuroCup,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c2ecbb45b92db2e35e,Adriatic League (ABA),Isolation,1,1,0,0,0,0,0,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508687aecbb45b92d15dc95,EuroCup,Isolation,3,0,1,0,0,0,2,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d638f01,Adriatic League (ABA),Isolation,4,2,1,0,0,0,2,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2ff865,EuroCup,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc315c6,Adriatic League (ABA),Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc31aaf,Adriatic League (ABA),Isolation,2,4,1,1,0,0,0,2,0,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d6397ca,Adriatic League (ABA),Isolation,2,2,2,1,0,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d639d47,Adriatic League (ABA),Isolation,2,1,1,0,1,0,0,2,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6adecbb45b92dadc6b9,Adriatic League Supercup,Isolation,4,1,3,0,1,0,0,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373a79,EuroCup,Isolation,2,0,2,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086878ecbb45b92d15c116,EuroCup,Isolation,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc317dd,Adriatic League (ABA),Isolation,2,3,2,1,2,1,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086879ecbb45b92d15ce3b,EuroCup,Isolation,3,4,3,2,0,0,0,0,0,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadcbf0,Adriatic League Supercup,Isolation,2,2,0,0,0,0,1,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e63ecbb45b92d374a7b,EuroCup,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc317dd,Adriatic League (ABA),Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086879ecbb45b92d15ce3b,EuroCup,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c98ecbb45b92dc31103,Adriatic League (ABA),Handoffs,1,1,0,0,0,0,0,2,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6adecbb45b92dadc6b9,Adriatic League Supercup,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373f1c,EuroCup,Handoffs,1,2,0,0,0,0,0,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508687aecbb45b92d15dc95,EuroCup,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373a79,EuroCup,Handoffs,1,2,0,0,0,0,0,2,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2fe641,EuroCup,Off Screen,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6adecbb45b92dadc6b9,Adriatic League Supercup,Off Screen,2,2,2,1,1,0,0,0,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086879ecbb45b92d15ce3b,EuroCup,Miscellaneous Plays,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadcbf0,Adriatic League Supercup,Miscellaneous Plays,2,3,0,0,0,0,0,4,0,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadc9ed,Adriatic League Supercup,Miscellaneous Plays,1,2,0,0,0,0,0,2,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc31aaf,Adriatic League (ABA),Miscellaneous Plays,3,7,1,1,1,1,0,4,1,3
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc315c6,Adriatic League (ABA),Miscellaneous Plays,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2ff865,EuroCup,Miscellaneous Plays,2,3,1,1,0,0,1,1,1,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e63ecbb45b92d374a7b,EuroCup,Miscellaneous Plays,3,1,1,0,0,0,1,2,0,1
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c2ecbb45b92db2e35e,Adriatic League (ABA),Miscellaneous Plays,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e59c0,Italian Serie A League,Spot Up,3,6,3,2,3,2,0,0,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98bf14,Italian Serie A League,Spot Up,2,6,2,2,2,2,0,0,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96becbb45b92ddf8459,Italian Serie A League,Spot Up,3,3,3,1,2,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a829ecbb45b92dc2fc42,Italian Serie A League,Spot Up,4,0,3,0,2,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,Italian Serie A League,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4decbb45b92d442cbd,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd3ecbb45b92d04e315,Italian Serie A League,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4eecbb45b92d444697,Italian Serie A League,Spot Up,2,2,2,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd4ecbb45b92d04e9d8,Italian Serie A League,Spot Up,2,6,2,2,2,2,0,0,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad1772,Italian Serie A League,Spot Up,3,0,3,0,2,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9ab1,FIBA Champions League,Spot Up,2,6,2,2,2,2,0,0,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fdecbb45b92dad218e,Italian Serie A League,Spot Up,2,6,1,1,1,1,0,3,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,Italian Serie A League,Spot Up,2,0,2,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4cecbb45b92d44236c,Italian Serie A League,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f0376,Italian Serie A League,Spot Up,4,5,4,2,3,1,0,0,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e49dc,Italian Serie A League,Spot Up,4,3,4,1,4,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad09aa,Italian Serie A League,Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e59c0,Italian Serie A League,P&R Ball Handler,4,2,2,1,0,0,2,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,66486f4c0e6d641d2f614dc6,Italian Serie A League,P&R Ball Handler,6,3,4,0,1,0,0,4,2,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f022b,Italian Serie A League,P&R Ball Handler,7,3,3,1,2,1,3,2,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,664abcbc0e6d641d2fc12c36,Italian Serie A League,P&R Ball Handler,9,10,7,4,2,2,1,2,1,4
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e49dc,Italian Serie A League,P&R Ball Handler,5,5,2,1,2,1,2,2,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad09aa,Italian Serie A League,P&R Ball Handler,8,8,8,3,5,2,0,1,1,3
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4cecbb45b92d44236c,Italian Serie A League,P&R Ball Handler,3,4,1,1,0,0,1,2,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,Italian Serie A League,P&R Ball Handler,7,5,3,1,3,1,3,2,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fdecbb45b92dad218e,Italian Serie A League,P&R Ball Handler,4,4,2,1,1,0,1,2,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9ab1,FIBA Champions League,P&R Ball Handler,9,9,8,3,3,1,0,2,1,4
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f0376,Italian Serie A League,P&R Ball Handler,4,2,2,1,0,0,2,1,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad1772,Italian Serie A League,P&R Ball Handler,4,5,3,2,2,1,1,0,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd4ecbb45b92d04e9d8,Italian Serie A League,P&R Ball Handler,12,6,8,2,4,1,4,1,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9a4a,FIBA Champions League,P&R Ball Handler,6,6,4,2,1,1,1,2,1,3
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd5ecbb45b92d04f96c,Italian Serie A League,P&R Ball Handler,6,5,6,2,3,1,0,1,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4eecbb45b92d444697,Italian Serie A League,P&R Ball Handler,3,0,2,0,1,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd3ecbb45b92d04e315,Italian Serie A League,P&R Ball Handler,6,5,5,2,2,0,1,1,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303f9ecbb45b92d98b149,Italian Serie A League,P&R Ball Handler,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f04bd,Italian Serie A League,P&R Ball Handler,5,3,4,1,2,0,1,1,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4decbb45b92d442cbd,Italian Serie A League,P&R Ball Handler,7,7,5,3,1,1,2,0,0,3
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,Italian Serie A League,P&R Ball Handler,6,8,5,3,0,0,0,3,2,4
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a829ecbb45b92dc2fc42,Italian Serie A League,P&R Ball Handler,9,8,5,4,0,0,4,0,0,4
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96becbb45b92ddf8459,Italian Serie A League,P&R Ball Handler,5,4,3,1,2,1,1,2,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a1ecbb45b92d6e3fd6,Italian Serie A League,P&R Ball Handler,9,6,4,2,1,0,4,2,0,3
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98bf14,Italian Serie A League,P&R Ball Handler,5,5,4,1,2,1,0,2,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303f9ecbb45b92d98b149,Italian Serie A League,Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9ab1,FIBA Champions League,Transition,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fdecbb45b92dad218e,Italian Serie A League,Transition,2,2,2,1,1,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f04bd,Italian Serie A League,Transition,1,2,0,0,0,0,0,2,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9a4a,FIBA Champions League,Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd4ecbb45b92d04e9d8,Italian Serie A League,Transition,3,5,3,2,1,1,0,0,0,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd5ecbb45b92d04f96c,Italian Serie A League,Transition,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad1772,Italian Serie A League,Transition,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e59c0,Italian Serie A League,Transition,2,0,2,0,2,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f022b,Italian Serie A League,Transition,5,4,4,1,1,0,0,3,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e49dc,Italian Serie A League,Transition,2,4,1,1,0,0,0,2,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,Italian Serie A League,Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4cecbb45b92d44236c,Italian Serie A League,Transition,3,2,3,1,1,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,Italian Serie A League,Transition,2,2,0,0,0,0,1,2,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a829ecbb45b92dc2fc42,Italian Serie A League,Transition,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a1ecbb45b92d6e3fd6,Italian Serie A League,Transition,2,3,2,1,0,0,0,1,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96becbb45b92ddf8459,Italian Serie A League,Transition,6,4,4,1,1,0,1,2,1,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98bf14,Italian Serie A League,Transition,3,2,3,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4eecbb45b92d444697,Italian Serie A League,Transition,2,1,0,0,0,0,1,2,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a1ecbb45b92d6e3fd6,Italian Serie A League,Cut,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98bf14,Italian Serie A League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd5ecbb45b92d04f96c,Italian Serie A League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad1772,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9ab1,FIBA Champions League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4eecbb45b92d444697,Italian Serie A League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd3ecbb45b92d04e315,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,66486f4c0e6d641d2f614dc6,Italian Serie A League,Offensive Rebounds (Put Backs),1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9ab1,FIBA Champions League,Offensive Rebounds (Put Backs),1,3,1,1,0,0,0,1,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad09aa,Italian Serie A League,Isolation,2,3,2,1,1,0,0,1,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a829ecbb45b92dc2fc42,Italian Serie A League,Isolation,2,2,1,0,0,0,0,2,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e59c0,Italian Serie A League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4eecbb45b92d444697,Italian Serie A League,Isolation,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f022b,Italian Serie A League,Isolation,2,2,2,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd4ecbb45b92d04e9d8,Italian Serie A League,Isolation,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9a4a,FIBA Champions League,Isolation,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd5ecbb45b92d04f96c,Italian Serie A League,Isolation,2,2,2,1,1,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4decbb45b92d442cbd,Italian Serie A League,Isolation,2,3,2,1,2,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,Italian Serie A League,Isolation,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98bf14,Italian Serie A League,Isolation,2,2,2,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,Italian Serie A League,Post-Up,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e59c0,Italian Serie A League,Post-Up,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,Italian Serie A League,Post-Up,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a829ecbb45b92dc2fc42,Italian Serie A League,Handoffs,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303f9ecbb45b92d98b149,Italian Serie A League,Handoffs,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,Italian Serie A League,Handoffs,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f04bd,Italian Serie A League,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f022b,Italian Serie A League,Handoffs,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9a4a,FIBA Champions League,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd4ecbb45b92d04e9d8,Italian Serie A League,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a1ecbb45b92d6e3fd6,Italian Serie A League,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4decbb45b92d442cbd,Italian Serie A League,Handoffs,2,3,2,1,2,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9ab1,FIBA Champions League,Handoffs,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f0376,Italian Serie A League,Handoffs,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,664abcbc0e6d641d2fc12c36,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad09aa,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,Italian Serie A League,Off Screen,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4cecbb45b92d44236c,Italian Serie A League,Off Screen,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f04bd,Italian Serie A League,Off Screen,2,3,2,1,2,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,66486f4c0e6d641d2f614dc6,Italian Serie A League,Off Screen,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd3ecbb45b92d04e315,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98bf14,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96becbb45b92ddf8459,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,Italian Serie A League,Off Screen,2,0,2,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9ab1,FIBA Champions League,Off Screen,1,3,1,1,1,1,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fdecbb45b92dad218e,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad1772,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4eecbb45b92d444697,Italian Serie A League,Miscellaneous Plays,1,2,1,1,0,0,0,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303f9ecbb45b92d98b149,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f04bd,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a829ecbb45b92dc2fc42,Italian Serie A League,Miscellaneous Plays,2,2,0,0,0,0,1,2,1,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,Italian Serie A League,Miscellaneous Plays,1,0,1,0,1,0,0,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4decbb45b92d442cbd,Italian Serie A League,Miscellaneous Plays,2,0,1,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a1ecbb45b92d6e3fd6,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96becbb45b92ddf8459,Italian Serie A League,Miscellaneous Plays,2,0,0,0,0,0,2,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,66486f4c0e6d641d2f614dc6,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e59c0,Italian Serie A League,Miscellaneous Plays,3,2,0,0,0,0,2,2,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4cecbb45b92d44236c,Italian Serie A League,Miscellaneous Plays,2,1,0,0,0,0,1,2,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e49dc,Italian Serie A League,Miscellaneous Plays,4,3,2,1,1,1,2,0,0,1
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad09aa,Italian Serie A League,Miscellaneous Plays,2,0,0,0,0,0,2,0,0,0
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9a4a,FIBA Champions League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275e9,Italian Serie A League,Spot Up,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc3736b849ebea5ae6c278,Italian Serie A League Exhibitions,Spot Up,3,0,3,0,3,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a5b4794d52938e26f8,Italian Serie A League,Spot Up,4,7,4,3,2,1,0,0,0,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d03a,Italian Serie A League,Spot Up,5,3,5,1,4,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda3bf6fbd4c45825ef2,Italian Serie A League,Spot Up,3,5,3,2,2,1,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc09cf1d4a0be429302d,Italian Serie A League,Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea3951,Italian Serie A League,Spot Up,2,6,2,2,2,2,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95a540b95be6005d034,Italian Serie A League,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf6ff4c0cd0938f6ec32b,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d040,Italian Serie A League,Spot Up,3,0,3,0,3,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,682f39a4de052164f982a79f,Italian Serie A League,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3895e66c4153bc04443,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26f0,Italian Serie A League,Spot Up,3,2,3,1,2,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7014c0cd0938f6ec339,Italian Serie A League,Spot Up,4,6,4,2,4,2,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dafbb0503efb189160af03,Italian Serie A League,Spot Up,2,5,2,2,1,1,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66de0377d4705bff230b624a,Italian Serie A League Exhibitions,Spot Up,6,7,6,3,4,1,0,0,0,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffd57116cba19f2de8e,Italian Serie A League,Spot Up,3,6,3,2,3,2,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275eb,Italian Serie A League,Spot Up,2,3,2,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3875e66c4153bc0442f,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d6,Italian Serie A League Exhibitions,Spot Up,4,5,4,2,2,0,0,1,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda1bf6fbd4c45825ee1,Italian Serie A League,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be429303a,Italian Serie A League,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be4293040,Italian Serie A League,Spot Up,3,5,2,1,2,1,0,2,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea394c,Italian Serie A League,Spot Up,2,0,2,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda3bf6fbd4c45825ef2,Italian Serie A League,P&R Ball Handler,16,18,12,8,4,2,4,0,0,8
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffd57116cba19f2de8e,Italian Serie A League,P&R Ball Handler,10,4,6,0,5,0,1,6,2,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7014c0cd0938f6ec339,Italian Serie A League,P&R Ball Handler,12,10,9,4,2,1,2,2,0,5
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dafbb0503efb189160af03,Italian Serie A League,P&R Ball Handler,6,6,2,0,1,0,1,6,2,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26f0,Italian Serie A League,P&R Ball Handler,7,10,3,2,1,1,1,6,2,5
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275e9,Italian Serie A League,P&R Ball Handler,9,10,7,4,2,0,1,2,1,5
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea394c,Italian Serie A League,P&R Ball Handler,4,2,3,1,1,0,1,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be429303a,Italian Serie A League,P&R Ball Handler,5,2,2,0,1,0,1,4,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275eb,Italian Serie A League,P&R Ball Handler,4,3,1,1,0,0,2,2,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffb57116cba19f2de7f,Italian Serie A League,P&R Ball Handler,7,6,3,1,2,1,1,6,3,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc3736b849ebea5ae6c278,Italian Serie A League Exhibitions,P&R Ball Handler,2,0,1,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf6ff4c0cd0938f6ec32b,Italian Serie A League,P&R Ball Handler,4,5,4,2,2,1,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffc57116cba19f2de86,Italian Serie A League,P&R Ball Handler,6,5,3,1,0,0,1,4,1,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95a540b95be6005d034,Italian Serie A League,P&R Ball Handler,5,4,2,1,0,0,2,2,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc09cf1d4a0be429302d,Italian Serie A League,P&R Ball Handler,8,7,7,3,3,1,0,2,0,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d040,Italian Serie A League,P&R Ball Handler,10,7,7,3,2,1,3,0,0,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,682f39a4de052164f982a79f,Italian Serie A League,P&R Ball Handler,4,3,4,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d03a,Italian Serie A League,P&R Ball Handler,6,2,5,1,2,0,0,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66de0377d4705bff230b624a,Italian Serie A League Exhibitions,P&R Ball Handler,7,2,2,0,1,0,4,2,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be4293040,Italian Serie A League,P&R Ball Handler,7,4,7,2,3,0,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea3951,Italian Serie A League,P&R Ball Handler,4,5,3,1,1,1,0,2,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3895e66c4153bc04443,Italian Serie A League,P&R Ball Handler,4,3,3,1,1,1,1,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26e8,Italian Serie A League,P&R Ball Handler,3,2,2,1,0,0,0,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d6,Italian Serie A League Exhibitions,P&R Ball Handler,9,10,5,3,2,1,3,3,2,4
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda1bf6fbd4c45825ee1,Italian Serie A League,P&R Ball Handler,18,15,14,5,2,1,2,4,1,7
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7004c0cd0938f6ec332,Italian Serie A League,P&R Ball Handler,7,3,6,1,2,0,1,1,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3875e66c4153bc0442f,Italian Serie A League,P&R Ball Handler,1,3,1,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d4,Exhibitions-Italian Serie A,P&R Ball Handler,8,5,3,1,2,0,3,4,2,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a5b4794d52938e26f8,Italian Serie A League,P&R Ball Handler,7,3,6,1,0,0,0,2,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275e9,Italian Serie A League,Transition,3,6,3,3,0,0,0,0,0,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc3736b849ebea5ae6c278,Italian Serie A League Exhibitions,Transition,3,1,2,0,0,0,0,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d4,Exhibitions-Italian Serie A,Transition,2,0,1,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffb57116cba19f2de7f,Italian Serie A League,Transition,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda3bf6fbd4c45825ef2,Italian Serie A League,Transition,4,2,3,1,2,0,1,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d03a,Italian Serie A League,Transition,3,7,2,2,1,1,0,3,2,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95a540b95be6005d034,Italian Serie A League,Transition,4,4,4,2,1,0,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf6ff4c0cd0938f6ec32b,Italian Serie A League,Transition,3,4,3,2,0,0,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffc57116cba19f2de86,Italian Serie A League,Transition,4,3,2,1,2,1,2,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3895e66c4153bc04443,Italian Serie A League,Transition,1,1,0,0,0,0,0,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26e8,Italian Serie A League,Transition,3,2,1,1,0,0,1,2,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7014c0cd0938f6ec339,Italian Serie A League,Transition,2,1,1,0,1,0,0,2,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dafbb0503efb189160af03,Italian Serie A League,Transition,2,2,2,1,1,0,0,1,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66de0377d4705bff230b624a,Italian Serie A League Exhibitions,Transition,1,2,0,0,0,0,0,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26f0,Italian Serie A League,Transition,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275eb,Italian Serie A League,Transition,1,2,0,0,0,0,0,2,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be4293040,Italian Serie A League,Transition,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d6,Italian Serie A League Exhibitions,Transition,3,3,2,1,0,0,0,2,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7004c0cd0938f6ec332,Italian Serie A League,Transition,2,3,2,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be429303a,Italian Serie A League,Transition,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d040,Italian Serie A League,P&R Roll Man,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26f0,Italian Serie A League,P&R Roll Man,2,0,1,0,1,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc09cf1d4a0be429302d,Italian Serie A League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea394c,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda1bf6fbd4c45825ee1,Italian Serie A League,Cut,2,3,1,1,0,0,0,2,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dafbb0503efb189160af03,Italian Serie A League,Cut,1,3,1,1,0,0,0,1,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26f0,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275e9,Italian Serie A League,Cut,2,3,2,1,0,0,0,1,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7014c0cd0938f6ec339,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26e8,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffc57116cba19f2de86,Italian Serie A League,Offensive Rebounds (Put Backs),1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275eb,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be429303a,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffb57116cba19f2de7f,Italian Serie A League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3875e66c4153bc0442f,Italian Serie A League,Isolation,1,3,1,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d6,Italian Serie A League Exhibitions,Isolation,1,3,1,1,0,0,0,1,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda1bf6fbd4c45825ee1,Italian Serie A League,Isolation,4,0,4,0,2,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7004c0cd0938f6ec332,Italian Serie A League,Isolation,2,0,1,0,1,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be429303a,Italian Serie A League,Isolation,4,3,3,1,1,1,1,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275e9,Italian Serie A League,Isolation,5,3,4,1,3,1,1,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3895e66c4153bc04443,Italian Serie A League,Isolation,6,7,5,2,3,2,0,2,1,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26e8,Italian Serie A League,Isolation,2,2,2,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7014c0cd0938f6ec339,Italian Serie A League,Isolation,8,6,6,1,3,0,0,4,1,3
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dafbb0503efb189160af03,Italian Serie A League,Isolation,2,5,2,2,1,1,0,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffd57116cba19f2de8e,Italian Serie A League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26f0,Italian Serie A League,Isolation,1,3,1,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be4293040,Italian Serie A League,Isolation,1,2,0,0,0,0,0,2,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d03a,Italian Serie A League,Isolation,4,4,3,1,1,0,0,3,2,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda3bf6fbd4c45825ef2,Italian Serie A League,Isolation,5,5,4,2,2,1,1,0,0,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc09cf1d4a0be429302d,Italian Serie A League,Isolation,2,0,2,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea3951,Italian Serie A League,Isolation,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d040,Italian Serie A League,Isolation,3,0,1,0,1,0,2,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf6ff4c0cd0938f6ec32b,Italian Serie A League,Isolation,3,3,2,1,1,1,1,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffc57116cba19f2de86,Italian Serie A League,Isolation,2,0,1,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,682f39a4de052164f982a79f,Italian Serie A League,Isolation,3,4,2,1,0,0,0,2,1,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d4,Exhibitions-Italian Serie A,Isolation,1,3,1,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26e8,Italian Serie A League,Post-Up,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea3951,Italian Serie A League,Post-Up,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda1bf6fbd4c45825ee1,Italian Serie A League,Post-Up,1,1,0,0,0,0,0,2,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc09cf1d4a0be429302d,Italian Serie A League,Post-Up,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be4293040,Italian Serie A League,Post-Up,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffd57116cba19f2de8e,Italian Serie A League,Post-Up,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffb57116cba19f2de7f,Italian Serie A League,Post-Up,1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc3736b849ebea5ae6c278,Italian Serie A League Exhibitions,Post-Up,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a5b4794d52938e26f8,Italian Serie A League,Post-Up,1,2,0,0,0,0,0,2,1,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d040,Italian Serie A League,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3895e66c4153bc04443,Italian Serie A League,Handoffs,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dafbb0503efb189160af03,Italian Serie A League,Handoffs,1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66de0377d4705bff230b624a,Italian Serie A League Exhibitions,Handoffs,1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275eb,Italian Serie A League,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3875e66c4153bc0442f,Italian Serie A League,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be429303a,Italian Serie A League,Handoffs,2,2,2,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d6,Italian Serie A League Exhibitions,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea394c,Italian Serie A League,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a5b4794d52938e26f8,Italian Serie A League,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffb57116cba19f2de7f,Italian Serie A League,Handoffs,2,2,2,1,1,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc09cf1d4a0be429302d,Italian Serie A League,Handoffs,1,2,1,1,0,0,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,682f39a4de052164f982a79f,Italian Serie A League,Handoffs,2,0,2,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95a540b95be6005d034,Italian Serie A League,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf6ff4c0cd0938f6ec32b,Italian Serie A League,Handoffs,1,3,1,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d4,Exhibitions-Italian Serie A,Off Screen,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3895e66c4153bc04443,Italian Serie A League,Off Screen,2,3,2,1,2,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26e8,Italian Serie A League,Off Screen,1,3,1,1,1,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda3bf6fbd4c45825ef2,Italian Serie A League,Off Screen,3,0,0,0,0,0,3,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7004c0cd0938f6ec332,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d6,Italian Serie A League Exhibitions,Off Screen,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d040,Italian Serie A League,Off Screen,2,3,2,1,2,1,0,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc3736b849ebea5ae6c278,Italian Serie A League Exhibitions,Miscellaneous Plays,2,1,0,0,0,0,1,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffb57116cba19f2de7f,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d03a,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95a540b95be6005d034,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d040,Italian Serie A League,Miscellaneous Plays,2,2,1,1,0,0,1,0,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf6ff4c0cd0938f6ec32b,Italian Serie A League,Miscellaneous Plays,2,2,0,0,0,0,1,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3895e66c4153bc04443,Italian Serie A League,Miscellaneous Plays,1,1,0,0,0,0,0,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26e8,Italian Serie A League,Miscellaneous Plays,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be4293040,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dafbb0503efb189160af03,Italian Serie A League,Miscellaneous Plays,1,1,0,0,0,0,0,2,0,1
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffd57116cba19f2de8e,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea3951,Italian Serie A League,Miscellaneous Plays,2,0,0,0,0,0,2,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275eb,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d6,Italian Serie A League Exhibitions,Miscellaneous Plays,1,0,1,0,1,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7004c0cd0938f6ec332,Italian Serie A League,Miscellaneous Plays,1,0,1,0,0,0,0,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be429303a,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea394c,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad01e,FIBA Champions League,Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808ad,FIBA Champions League,Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3f431dd3cdf5807035,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,Italian Serie A League,Spot Up,5,4,4,1,3,0,0,2,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68d7b408ae76904d2df9ebb1,Exhibitions,Spot Up,3,5,2,1,2,1,0,2,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dd03f97b67305a3411ee,Italian Serie A League,Spot Up,5,9,5,3,5,3,0,0,0,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e9e7452f2aff00c1431a,Italian Serie A League,Spot Up,3,6,3,2,2,2,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8bb,Exhibitions,Spot Up,1,3,0,0,0,0,0,3,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78639f1f75b6feaad02e,FIBA Champions League,Spot Up,5,0,5,0,4,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b16c,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71cf06250260458ac8b7,Exhibitions-Italian Serie A,Spot Up,4,6,4,2,4,2,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0eb08da055054fefd13a62,Italian Serie A League,Spot Up,2,6,2,2,2,2,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b557f3074719f4429a0d2d,FIBA Champions League,Spot Up,4,3,4,1,4,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,Italian Serie A League,Spot Up,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808aa,FIBA Champions League,Spot Up,2,6,2,2,2,2,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3d431dd3cdf5807022,Italian Serie A League,Spot Up,2,0,2,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e20,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad025,FIBA Champions League,Spot Up,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f75,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd63c104bc5eedf8d65,Italian Serie A League,Spot Up,2,5,2,2,1,1,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,Italian Serie A League,Spot Up,2,0,2,0,2,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b8,Exhibitions-Italian Serie A,Spot Up,5,9,5,3,5,3,0,0,0,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de71,Italian Serie A League,Spot Up,2,0,2,0,2,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9593239932d950b161,Italian Serie A League,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b9,Exhibitions-Italian Serie A,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c71a243008195e1f7e,Italian Serie A League,Spot Up,3,2,2,0,2,0,0,2,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa58,Italian Serie A League,Spot Up,3,0,3,0,3,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a1296fc5241ba63d255e03a,Italian Serie A League,Spot Up,3,3,3,1,3,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e791b575d488e64faa66,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f79,Italian Serie A League,Spot Up,4,8,3,2,3,2,0,2,0,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b56280377ef947e808b8af,FIBA Champions League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b169,Italian Serie A League,Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3e431dd3cdf580702f,Italian Serie A League,Spot Up,2,3,2,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e31,Italian Serie A League,Spot Up,4,3,3,1,2,1,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55340fd0e35e848780896,FIBA Champions League,Spot Up,2,2,2,1,1,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0eb08da055054fefd13a62,Italian Serie A League,P&R Ball Handler,7,7,5,3,1,1,2,0,0,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e791b575d488e64faa66,Italian Serie A League,P&R Ball Handler,5,6,4,2,1,0,0,2,1,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f79,Italian Serie A League,P&R Ball Handler,4,8,3,2,3,2,0,2,0,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa58,Italian Serie A League,P&R Ball Handler,2,5,1,1,1,1,0,2,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a1296fc5241ba63d255e03a,Italian Serie A League,P&R Ball Handler,6,4,4,1,0,0,1,2,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b9,Exhibitions-Italian Serie A,P&R Ball Handler,4,5,3,2,1,0,1,1,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c71a243008195e1f7e,Italian Serie A League,P&R Ball Handler,7,3,6,1,1,1,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de71,Italian Serie A League,P&R Ball Handler,4,4,4,2,0,0,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b8,Exhibitions-Italian Serie A,P&R Ball Handler,6,5,2,1,1,0,2,4,0,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,Italian Serie A League,P&R Ball Handler,3,3,3,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9593239932d950b161,Italian Serie A League,P&R Ball Handler,5,6,3,2,0,0,1,2,1,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd63c104bc5eedf8d65,Italian Serie A League,P&R Ball Handler,3,0,0,0,0,0,3,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f75,Italian Serie A League,P&R Ball Handler,11,8,9,3,2,0,1,2,0,4
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad025,FIBA Champions League,P&R Ball Handler,3,2,3,1,1,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808ad,FIBA Champions League,P&R Ball Handler,5,3,1,0,0,0,2,4,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55340fd0e35e848780896,FIBA Champions League,P&R Ball Handler,7,3,4,0,2,0,0,6,0,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e31,Italian Serie A League,P&R Ball Handler,4,2,4,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e38,Italian Serie A League,P&R Ball Handler,6,5,1,0,1,0,2,6,1,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3e431dd3cdf580702f,Italian Serie A League,P&R Ball Handler,4,1,3,0,3,0,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd43c104bc5eedf8d52,Italian Serie A League,P&R Ball Handler,2,0,1,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b56280377ef947e808b8af,FIBA Champions League,P&R Ball Handler,5,5,2,2,0,0,2,2,0,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b169,Italian Serie A League,P&R Ball Handler,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e24,Italian Serie A League,P&R Ball Handler,5,3,3,1,1,0,2,1,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71cf06250260458ac8b7,Exhibitions-Italian Serie A,P&R Ball Handler,4,8,4,3,2,1,0,1,1,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78639f1f75b6feaad02e,FIBA Champions League,P&R Ball Handler,8,4,4,1,0,0,3,2,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8bb,Exhibitions,P&R Ball Handler,4,4,2,1,1,0,0,4,2,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dd03f97b67305a3411ee,Italian Serie A League,P&R Ball Handler,8,2,4,1,1,0,3,2,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68d7b408ae76904d2df9ebb1,Exhibitions,P&R Ball Handler,8,2,6,1,3,0,2,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d5c,Italian Serie A League,P&R Ball Handler,11,14,9,6,2,0,1,3,1,7
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e9e7452f2aff00c1431a,Italian Serie A League,P&R Ball Handler,4,0,2,0,2,0,2,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,Italian Serie A League,P&R Ball Handler,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3f431dd3cdf5807035,Italian Serie A League,P&R Ball Handler,5,6,3,2,2,1,2,1,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b16c,Italian Serie A League,P&R Ball Handler,5,5,5,2,2,1,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad01e,FIBA Champions League,P&R Ball Handler,5,4,5,2,0,0,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8ba,Exhibitions-Italian Serie A,P&R Ball Handler,2,0,2,0,2,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e20,Italian Serie A League,P&R Ball Handler,7,5,3,0,0,0,1,6,2,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808aa,FIBA Champions League,P&R Ball Handler,4,3,1,1,1,1,3,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3d431dd3cdf5807022,Italian Serie A League,P&R Ball Handler,7,8,4,2,3,1,2,3,2,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,Italian Serie A League,P&R Ball Handler,5,8,3,3,0,0,1,2,1,4
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9793239932d950b177,Italian Serie A League,P&R Ball Handler,6,9,3,3,1,1,2,2,1,4
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b557f3074719f4429a0d2d,FIBA Champions League,P&R Ball Handler,2,2,0,0,0,0,1,2,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,Italian Serie A League,Transition,3,5,2,2,0,0,0,2,1,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,Italian Serie A League,Transition,1,2,0,0,0,0,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808aa,FIBA Champions League,Transition,2,0,2,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e20,Italian Serie A League,Transition,4,5,2,2,0,0,1,2,1,3
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0eb08da055054fefd13a62,Italian Serie A League,Transition,1,3,1,1,1,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b557f3074719f4429a0d2d,FIBA Champions League,Transition,6,4,2,0,1,0,2,4,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9793239932d950b177,Italian Serie A League,Transition,2,3,2,1,1,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8bb,Exhibitions,Transition,3,3,0,0,0,0,1,4,2,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71cf06250260458ac8b7,Exhibitions-Italian Serie A,Transition,5,3,2,1,0,0,2,2,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad01e,FIBA Champions League,Transition,2,0,1,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,Italian Serie A League,Transition,2,1,0,0,0,0,1,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3f431dd3cdf5807035,Italian Serie A League,Transition,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b16c,Italian Serie A League,Transition,2,4,1,1,0,0,0,2,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68d7b408ae76904d2df9ebb1,Exhibitions,Transition,3,6,2,1,1,1,0,3,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d5c,Italian Serie A League,Transition,3,5,3,2,1,1,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e9e7452f2aff00c1431a,Italian Serie A League,Transition,4,4,1,1,0,0,2,2,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd43c104bc5eedf8d52,Italian Serie A League,Transition,1,2,0,0,0,0,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3e431dd3cdf580702f,Italian Serie A League,Transition,4,2,3,1,1,0,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e31,Italian Serie A League,Transition,2,0,1,0,1,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e38,Italian Serie A League,Transition,4,4,2,2,0,0,2,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808ad,FIBA Champions League,Transition,2,0,2,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e24,Italian Serie A League,Transition,3,4,1,1,0,0,1,2,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b169,Italian Serie A League,Transition,4,4,2,0,1,0,0,4,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b56280377ef947e808b8af,FIBA Champions League,Transition,3,4,2,1,1,0,0,2,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c71a243008195e1f7e,Italian Serie A League,Transition,4,4,4,2,0,0,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9593239932d950b161,Italian Serie A League,Transition,3,2,2,1,1,0,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b9,Exhibitions-Italian Serie A,Transition,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a1296fc5241ba63d255e03a,Italian Serie A League,Transition,2,2,1,1,0,0,1,1,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa58,Italian Serie A League,Transition,1,2,0,0,0,0,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f79,Italian Serie A League,Transition,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad025,FIBA Champions League,Transition,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd63c104bc5eedf8d65,Italian Serie A League,Transition,1,2,0,0,0,0,0,2,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f75,Italian Serie A League,Transition,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b8,Exhibitions-Italian Serie A,Transition,4,0,1,0,0,0,3,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b16c,Italian Serie A League,P&R Roll Man,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f79,Italian Serie A League,P&R Roll Man,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b9,Exhibitions-Italian Serie A,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de71,Italian Serie A League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8bb,Exhibitions,Cut,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e791b575d488e64faa66,Italian Serie A League,Cut,1,1,0,0,0,0,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9593239932d950b161,Italian Serie A League,Cut,2,0,1,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa58,Italian Serie A League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f75,Italian Serie A League,Cut,2,3,1,1,0,0,0,2,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,Italian Serie A League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad01e,FIBA Champions League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad025,FIBA Champions League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68d7b408ae76904d2df9ebb1,Exhibitions,Cut,2,5,2,2,0,0,0,1,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd63c104bc5eedf8d65,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e9e7452f2aff00c1431a,Italian Serie A League,Cut,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808aa,FIBA Champions League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b16c,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e20,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b56280377ef947e808b8af,FIBA Champions League,Cut,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b169,Italian Serie A League,Cut,1,1,0,0,0,0,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a1296fc5241ba63d255e03a,Italian Serie A League,Offensive Rebounds (Put Backs),1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3e431dd3cdf580702f,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,Italian Serie A League,Offensive Rebounds (Put Backs),1,3,1,1,1,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9593239932d950b161,Italian Serie A League,Offensive Rebounds (Put Backs),1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,Italian Serie A League,Offensive Rebounds (Put Backs),1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c71a243008195e1f7e,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b169,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808aa,FIBA Champions League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad025,FIBA Champions League,Isolation,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,Italian Serie A League,Isolation,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e9e7452f2aff00c1431a,Italian Serie A League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3e431dd3cdf580702f,Italian Serie A League,Isolation,1,3,1,1,0,0,0,1,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808ad,FIBA Champions League,Isolation,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e38,Italian Serie A League,Isolation,3,2,3,1,1,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e20,Italian Serie A League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b56280377ef947e808b8af,FIBA Champions League,Isolation,4,4,1,1,0,0,2,3,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b557f3074719f4429a0d2d,FIBA Champions League,Isolation,2,2,0,0,0,0,1,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e24,Italian Serie A League,Isolation,2,5,2,2,1,1,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b169,Italian Serie A League,Isolation,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0eb08da055054fefd13a62,Italian Serie A League,Isolation,3,0,3,0,3,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9793239932d950b177,Italian Serie A League,Isolation,3,4,3,2,1,0,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b9,Exhibitions-Italian Serie A,Isolation,2,3,1,1,0,0,0,2,1,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9593239932d950b161,Italian Serie A League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8bb,Exhibitions,Isolation,2,5,2,2,1,1,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e791b575d488e64faa66,Italian Serie A League,Isolation,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71cf06250260458ac8b7,Exhibitions-Italian Serie A,Isolation,2,2,2,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c71a243008195e1f7e,Italian Serie A League,Isolation,2,0,2,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a1296fc5241ba63d255e03a,Italian Serie A League,Isolation,2,0,2,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,Italian Serie A League,Isolation,2,0,2,0,2,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd63c104bc5eedf8d65,Italian Serie A League,Isolation,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad01e,FIBA Champions League,Isolation,2,0,2,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68d7b408ae76904d2df9ebb1,Exhibitions,Isolation,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dd03f97b67305a3411ee,Italian Serie A League,Isolation,3,3,2,1,1,1,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,Italian Serie A League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f79,Italian Serie A League,Post-Up,1,3,1,1,0,0,0,1,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71cf06250260458ac8b7,Exhibitions-Italian Serie A,Post-Up,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b557f3074719f4429a0d2d,FIBA Champions League,Post-Up,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e24,Italian Serie A League,Post-Up,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8bb,Exhibitions,Handoffs,2,2,2,1,1,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c71a243008195e1f7e,Italian Serie A League,Handoffs,3,5,3,2,2,1,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b56280377ef947e808b8af,FIBA Champions League,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b169,Italian Serie A League,Handoffs,2,3,2,1,2,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e24,Italian Serie A League,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808ad,FIBA Champions League,Handoffs,3,0,2,0,1,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e38,Italian Serie A League,Handoffs,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e31,Italian Serie A League,Handoffs,3,2,2,1,0,0,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808aa,FIBA Champions League,Handoffs,6,4,5,1,3,1,0,2,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,Italian Serie A League,Handoffs,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd43c104bc5eedf8d52,Italian Serie A League,Handoffs,2,0,1,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68d7b408ae76904d2df9ebb1,Exhibitions,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e9e7452f2aff00c1431a,Italian Serie A League,Handoffs,2,4,2,2,0,0,0,0,0,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b16c,Italian Serie A League,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3f431dd3cdf5807035,Italian Serie A League,Handoffs,2,2,1,1,0,0,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,Italian Serie A League,Handoffs,3,3,2,1,1,1,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f75,Italian Serie A League,Handoffs,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e791b575d488e64faa66,Italian Serie A League,Handoffs,5,0,4,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71cf06250260458ac8b7,Exhibitions-Italian Serie A,Handoffs,1,0,1,0,0,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b9,Exhibitions-Italian Serie A,Handoffs,4,0,1,0,0,0,3,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808ad,FIBA Champions League,Off Screen,1,3,1,1,1,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e24,Italian Serie A League,Off Screen,1,3,1,1,1,1,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71cf06250260458ac8b7,Exhibitions-Italian Serie A,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e38,Italian Serie A League,Off Screen,2,3,1,1,1,1,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad01e,FIBA Champions League,Off Screen,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808aa,FIBA Champions League,Off Screen,1,2,0,0,0,0,0,2,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e791b575d488e64faa66,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de71,Italian Serie A League,Off Screen,1,2,1,1,0,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b8,Exhibitions-Italian Serie A,Off Screen,1,2,0,0,0,0,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e9e7452f2aff00c1431a,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9593239932d950b161,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b56280377ef947e808b8af,FIBA Champions League,Off Screen,1,1,0,0,0,0,0,2,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,Italian Serie A League,Miscellaneous Plays,2,0,0,0,0,0,2,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d5c,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b8,Exhibitions-Italian Serie A,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,Italian Serie A League,Miscellaneous Plays,2,0,1,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad01e,FIBA Champions League,Miscellaneous Plays,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e791b575d488e64faa66,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f79,Italian Serie A League,Miscellaneous Plays,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b9,Exhibitions-Italian Serie A,Miscellaneous Plays,3,2,0,0,0,0,2,2,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8bb,Exhibitions,Miscellaneous Plays,2,2,0,0,0,0,1,2,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de71,Italian Serie A League,Miscellaneous Plays,2,0,0,0,0,0,2,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c71a243008195e1f7e,Italian Serie A League,Miscellaneous Plays,2,2,2,1,1,0,0,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9793239932d950b177,Italian Serie A League,Miscellaneous Plays,1,3,1,1,0,0,0,1,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b557f3074719f4429a0d2d,FIBA Champions League,Miscellaneous Plays,2,2,1,1,0,0,1,0,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e24,Italian Serie A League,Miscellaneous Plays,2,0,1,0,1,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808ad,FIBA Champions League,Miscellaneous Plays,1,0,1,0,1,0,0,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0eb08da055054fefd13a62,Italian Serie A League,Miscellaneous Plays,3,2,0,0,0,0,2,2,0,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e20,Italian Serie A League,Miscellaneous Plays,2,0,0,0,0,0,2,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e38,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3e431dd3cdf580702f,Italian Serie A League,Miscellaneous Plays,1,3,1,1,0,0,0,1,1,1
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd43c104bc5eedf8d52,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd758,Italian Serie A League,Spot Up,6,9,3,1,2,0,0,7,2,4
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980273f3547296522fd74f,Italian Serie A League,Spot Up,1,3,1,1,1,1,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be906426ff,Italian Serie A League,Spot Up,1,2,0,0,0,0,0,2,1,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f958,Exhibitions-Italian Serie A,Spot Up,4,7,2,1,2,1,0,4,2,3
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a98001a370c9d0eea8d5086,Italian Serie A League,Spot Up,1,0,1,0,0,0,0,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f956,Exhibitions-Italian Serie A,Spot Up,1,0,1,0,1,0,0,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f957,Exhibitions-Italian Serie A,Spot Up,3,5,3,2,2,1,0,0,0,2
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f957,Exhibitions-Italian Serie A,P&R Ball Handler,3,3,3,1,3,1,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980273f3547296522fd74f,Italian Serie A League,P&R Ball Handler,6,6,3,2,1,0,2,2,0,3
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd758,Italian Serie A League,P&R Ball Handler,9,8,8,4,2,0,1,0,0,4
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be906426ff,Italian Serie A League,P&R Ball Handler,14,13,10,5,4,1,2,4,1,6
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f958,Exhibitions-Italian Serie A,P&R Ball Handler,2,0,1,0,0,0,1,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a98001a370c9d0eea8d5086,Italian Serie A League,P&R Ball Handler,8,17,6,5,5,4,0,4,1,7
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f956,Exhibitions-Italian Serie A,P&R Ball Handler,9,4,6,2,3,0,3,0,0,2
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd75f,Italian Serie A League,P&R Ball Handler,5,4,5,2,1,0,0,0,0,2
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be90642709,Italian Serie A League,P&R Ball Handler,13,12,9,3,5,2,1,6,2,6
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f958,Exhibitions-Italian Serie A,Transition,2,0,2,0,1,0,0,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd75f,Italian Serie A League,Transition,3,2,2,1,0,0,1,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f957,Exhibitions-Italian Serie A,Transition,2,0,1,0,1,0,1,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be906426ff,Italian Serie A League,Transition,3,2,3,1,1,0,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f956,Exhibitions-Italian Serie A,Transition,1,1,0,0,0,0,0,2,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980273f3547296522fd74f,Italian Serie A League,Transition,2,5,2,2,1,1,0,0,0,2
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980273f3547296522fd74f,Italian Serie A League,Cut,1,2,0,0,0,0,0,2,1,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be90642709,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd758,Italian Serie A League,Cut,1,2,1,1,0,0,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be906426ff,Italian Serie A League,Cut,1,3,1,1,0,0,0,1,1,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd758,Italian Serie A League,Offensive Rebounds (Put Backs),1,2,0,0,0,0,0,2,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a98001a370c9d0eea8d5086,Italian Serie A League,Isolation,1,0,1,0,0,0,0,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be90642709,Italian Serie A League,Isolation,2,2,2,1,1,0,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980273f3547296522fd74f,Italian Serie A League,Isolation,2,2,2,1,1,0,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd758,Italian Serie A League,Isolation,3,2,2,1,1,0,1,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be906426ff,Italian Serie A League,Isolation,2,2,1,0,0,0,0,2,1,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f957,Exhibitions-Italian Serie A,Isolation,2,2,0,0,0,0,0,4,1,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f958,Exhibitions-Italian Serie A,Isolation,1,2,0,0,0,0,0,2,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd75f,Italian Serie A League,Isolation,2,0,2,0,1,0,0,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f956,Exhibitions-Italian Serie A,Isolation,1,2,1,1,0,0,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f958,Exhibitions-Italian Serie A,Handoffs,1,2,0,0,0,0,0,2,1,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be906426ff,Italian Serie A League,Handoffs,1,3,1,1,1,1,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be90642709,Italian Serie A League,Handoffs,1,0,0,0,0,0,1,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f956,Exhibitions-Italian Serie A,Off Screen,2,2,2,1,1,0,0,0,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be906426ff,Italian Serie A League,Off Screen,1,2,0,0,0,0,0,2,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be90642709,Italian Serie A League,Off Screen,1,0,1,0,1,0,0,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f958,Exhibitions-Italian Serie A,Off Screen,1,1,0,0,0,0,0,2,1,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a98001a370c9d0eea8d5086,Italian Serie A League,Off Screen,1,0,1,0,0,0,0,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a98001a370c9d0eea8d5086,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd758,Italian Serie A League,Miscellaneous Plays,2,2,0,0,0,0,1,2,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be90642709,Italian Serie A League,Miscellaneous Plays,1,2,0,0,0,0,0,2,0,1
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f958,Exhibitions-Italian Serie A,Miscellaneous Plays,3,4,0,0,0,0,1,4,0,2
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd75f,Italian Serie A League,Miscellaneous Plays,1,0,0,0,0,0,1,0,0,0
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f956,Exhibitions-Italian Serie A,Miscellaneous Plays,1,1,0,0,0,0,0,2,0,1

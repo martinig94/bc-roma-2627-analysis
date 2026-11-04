@@ -39,7 +39,7 @@ YELLOW, GREY, GRID, TEXT, TEXT2, TEXT3 = '#F2B705', '#8A8F98', '#e3e4ea', '#222'
 COMP_COLORS = {'Spanish ACB League': '#B04A3A', 'FIBA Europe Cup': '#2E7D6B', 'Adriatic League (ABA)': '#3E6DA8', 'EuroCup': '#F2B705',
                'German League': '#4C4C4C', 'German Cup': '#8A8F98', 'BNXT League': '#7FA6D6',
                'Italian Serie A League': '#2E7D6B', 'Italian Serie A Cup': '#8CC7B8', 'VTB United League': '#7A3E9D', 'Winline Cup': '#C9A7E0',
-               'Basketball Africa League': '#D9822B'}
+               'Basketball Africa League': '#D9822B', 'FIBA Champions League': '#C2559C', 'Adriatic League Supercup': '#9DB7D5'}
 SITUATIONS = {   # play type (Synergy chain) -> (panel title, sub-type order (first token after the play type), action order (next token))
     'P&R Ball Handler': ('P&R ball handler', ['High P&R', 'Left P&R', 'Right P&R'], ['Dribble Off Pick', 'Go Away from Pick', 'Takes Early Jump Shot']),
     'ISO': ('Isolation', ['Top', 'Left', 'Right'], ['Early Jumper', 'Drives Left', 'Drives Right']),
@@ -108,7 +108,11 @@ def season_line(p: str, s: pd.DataFrame, g: pd.DataFrame) -> str:
     for se, gg in g[g.player == p].groupby('season'):
         comps = ', '.join(c.replace(' (ABA)', '').replace(' League', '') for c in gg.comp.unique())
         parts.append(f'{se}: {gg.game_id.nunique()} games, {len(s[(s.player == p) & (s.season == se)])} FGA ({comps})')
-    return ' · '.join(parts)
+    line = ' · '.join(parts)
+    if len(line) > 150:   # four seasons with long competition lists: two lines
+        half = len(parts) // 2 + len(parts) % 2
+        line = ' · '.join(parts[:half]) + '\n' + ' · '.join(parts[half:])
+    return line
 
 
 def pct_label(fgm: int, fga: int) -> str:

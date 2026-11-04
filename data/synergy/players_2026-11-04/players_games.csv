@@ -1,0 +1,128 @@
+player,season,pid,game_id,date,home,away,comp,poss,fga,pts
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6adecbb45b92dadc6b9,2023-09-18,Buducnost,Zadar,Adriatic League Supercup,11,9,10
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373f1c,2023-11-21,Buducnost,Trento,EuroCup,5,2,7
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d639d47,2023-11-11,Buducnost,Split,Adriatic League (ABA),12,8,11
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c1ecbb45b92db2dda7,2023-11-25,Buducnost,Cedevita Olimpija,Adriatic League (ABA),6,4,15
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e62ecbb45b92d373a79,2023-11-14,Ulm,Buducnost,EuroCup,7,5,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadcbf0,2023-09-20,Buducnost,Igokea,Adriatic League Supercup,11,5,14
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086879ecbb45b92d15ce3b,2023-11-01,Bourg,Buducnost,EuroCup,10,7,6
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc317dd,2023-10-14,Buducnost,Krka,Adriatic League (ABA),7,4,5
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086878ecbb45b92d15c116,2023-10-25,ClujNapoca,Buducnost,EuroCup,6,5,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c98ecbb45b92dc31103,2023-09-30,Buducnost,Zadar,Adriatic League (ABA),12,6,15
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2fe641,2023-10-04,Buducnost,Lietkabelis,EuroCup,8,7,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002087ecbb45b92d63a348,2023-11-18,Igokea,Buducnost,Adriatic League (ABA),11,7,14
+Ross,2023-24,65088d96ecbb45b92dea4d87,65086e63ecbb45b92d374a7b,2023-11-29,Gran Canaria,Buducnost,EuroCup,13,7,4
+Ross,2023-24,65088d96ecbb45b92dea4d87,650028c2ecbb45b92db2e35e,2023-12-02,Borac Cacak,Buducnost,Adriatic League (ABA),10,6,7
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508810decbb45b92db51b19,2023-12-06,Lietkabelis,Buducnost,EuroCup,1,1,0
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a126ecbb45b92d2fffc3,2023-10-17,Buducnost,WKSSlaskWroclaw,EuroCup,9,6,19
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d638f01,2023-10-28,Buducnost,Mega,Adriatic League (ABA),9,5,9
+Ross,2023-24,65088d96ecbb45b92dea4d87,6508687aecbb45b92d15dc95,2023-11-08,Buducnost,Aris,EuroCup,12,6,2
+Ross,2023-24,65088d96ecbb45b92dea4d87,65002086ecbb45b92d6397ca,2023-11-05,Crvena Zvezda,Buducnost,Adriatic League (ABA),8,7,6
+Ross,2023-24,65088d96ecbb45b92dea4d87,6505a125ecbb45b92d2ff865,2023-10-11,Turk Telekom,Buducnost,EuroCup,8,7,8
+Ross,2023-24,65088d96ecbb45b92dea4d87,6502e6aeecbb45b92dadc9ed,2023-09-19,Buducnost,SC Derby,Adriatic League Supercup,11,7,11
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc315c6,2023-10-07,Mornar,Buducnost,Adriatic League (ABA),8,7,4
+Ross,2023-24,65088d96ecbb45b92dea4d87,65000c99ecbb45b92dc31aaf,2023-10-20,Buducnost,Cibona,Adriatic League (ABA),10,7,16
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,664abcbc0e6d641d2fc12c36,2024-05-21,VirtusBologna,Derthona Tortona,Italian Serie A League,10,8,10
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e49dc,2024-03-10,Derthona Tortona,Napoli Basket,Italian Serie A League,15,9,15
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98cab8,2024-04-06,Brescia,Derthona Tortona,Italian Serie A League,15,10,15
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4cecbb45b92d44236c,2024-01-28,Derthona Tortona,Reggio Emilia,Italian Serie A League,10,6,10
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad09aa,2024-04-13,Trento,Derthona Tortona,Italian Serie A League,14,12,14
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a2ecbb45b92d6e59c0,2024-03-17,Scafati,Derthona Tortona,Italian Serie A League,14,8,10
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,66486f4c0e6d641d2f614dc6,2024-05-18,Derthona Tortona,VirtusBologna,Italian Serie A League,9,6,6
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f022b,2024-05-11,VirtusBologna,Derthona Tortona,Italian Serie A League,15,10,9
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9a4a,2024-01-03,Derthona Tortona,Galatasaray,FIBA Champions League,10,5,6
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd4ecbb45b92d04e9d8,2024-01-14,Milano,Derthona Tortona,Italian Serie A League,19,14,17
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd5ecbb45b92d04f96c,2024-01-21,Derthona Tortona,Venezia,Italian Serie A League,10,10,9
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fcecbb45b92dad1772,2024-04-20,Derthona Tortona,Pesaro,Italian Serie A League,10,8,9
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6585667ef8d4f68f987f9ab1,2024-01-09,Galatasaray,Derthona Tortona,FIBA Champions League,16,14,21
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a6fdecbb45b92dad218e,2024-04-28,Derthona Tortona,VirtusBologna,Italian Serie A League,9,6,12
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f0376,2024-05-13,VirtusBologna,Derthona Tortona,Italian Serie A League,9,7,7
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303f9ecbb45b92d98b149,2024-03-24,Derthona Tortona,Varese,Italian Serie A League,4,3,2
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4eecbb45b92d444697,2024-02-10,Derthona Tortona,Sassari,Italian Serie A League,10,7,8
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6639eec8b25941e0e94f04bd,2024-05-16,Derthona Tortona,VirtusBologna,Italian Serie A League,10,6,8
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502fbd3ecbb45b92d04e315,2024-01-07,Derthona Tortona,Scafati,Italian Serie A League,9,8,7
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650301a1ecbb45b92d6e3fd6,2024-03-03,Pistoia,Derthona Tortona,Italian Serie A League,14,7,9
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96becbb45b92ddf8459,2023-12-30,Napoli Basket,Derthona Tortona,Italian Serie A League,17,11,11
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,650303faecbb45b92d98bf14,2024-03-30,Derthona Tortona,Cremona,Italian Serie A League,14,13,15
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502f96aecbb45b92ddf80d1,2023-12-23,Derthona Tortona,Treviso,Italian Serie A League,15,12,14
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6502ff4decbb45b92d442cbd,2024-02-04,Brindisi,Derthona Tortona,Italian Serie A League,15,12,16
+Ross,2023-24,6586ff8ef8d4f68f985b86e9,6505a829ecbb45b92dc2fc42,2024-05-05,Treviso,Derthona Tortona,Italian Serie A League,19,11,16
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7004c0cd0938f6ec332,2024-12-29,Trieste,Venezia,Italian Serie A League,13,11,6
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d6,2024-09-07,Venezia,Trieste,Italian Serie A League Exhibitions,20,14,21
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3875e66c4153bc0442f,2024-12-01,Sassari,Trieste,Italian Serie A League,5,4,9
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda1bf6fbd4c45825ee1,2024-10-12,Derthona Tortona,Trieste,Italian Serie A League,26,20,19
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26e8,2025-04-06,Trieste,Napoli Basket,Italian Serie A League,12,9,11
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf3895e66c4153bc04443,2024-12-15,VirtusBologna,Trieste,Italian Serie A League,17,13,18
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea3951,2025-05-19,Brescia,Trieste,Italian Serie A League,10,7,11
+Ross,2024-25,66d40549c8fcce5ed216fc01,66de0377d4705bff230b624a,2024-09-08,Trieste,Reggio Emilia,Italian Serie A League Exhibitions,15,9,13
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be4293040,2025-05-10,Trieste,Sassari,Italian Serie A League,14,9,11
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeda3bf6fbd4c45825ef2,2024-10-26,Treviso,Trieste,Italian Serie A League,31,22,30
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc6870b86901a1923eb2d4,2024-09-04,Trieste,Treviso,Exhibitions-Italian Serie A,12,5,8
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a5b4794d52938e26f8,2025-04-13,Venezia,Trieste,Italian Serie A League,13,11,12
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc0acf1d4a0be429303a,2025-05-04,Varese,Trieste,Italian Serie A League,15,10,9
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275eb,2024-10-06,Napoli Basket,Trieste,Italian Serie A League,10,5,10
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dad3dd357ba89540d275e9,2024-09-29,Trieste,Milano,Italian Serie A League,20,17,22
+Ross,2024-25,66d40549c8fcce5ed216fc01,68230eccec61a34cdcea394c,2025-05-17,Brescia,Trieste,Italian Serie A League,9,7,4
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebc9a4b4794d52938e26f0,2025-04-19,Trieste,Trento,Italian Serie A League,15,10,17
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffd57116cba19f2de8e,2024-11-17,Trieste,Trapani,Italian Serie A League,16,11,10
+Ross,2024-25,66d40549c8fcce5ed216fc01,66dafbb0503efb189160af03,2025-02-01,Trieste,Derthona Tortona,Italian Serie A League,15,10,24
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf7014c0cd0938f6ec339,2025-01-05,Scafati,Trieste,Italian Serie A League,27,21,25
+Ross,2024-25,66d40549c8fcce5ed216fc01,682f39a4de052164f982a79f,2025-05-24,Trieste,Brescia,Italian Serie A League,10,9,7
+Ross,2024-25,66d40549c8fcce5ed216fc01,66ebcc09cf1d4a0be429302d,2025-04-28,Cremona,Trieste,Italian Serie A League,14,13,12
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d03a,2025-01-18,Reggio Emilia,Trieste,Italian Serie A League,19,15,16
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffc57116cba19f2de86,2024-11-09,Trento,Trieste,Italian Serie A League,13,7,8
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf6ff4c0cd0938f6ec32b,2024-12-21,Trieste,Cremona,Italian Serie A League,15,12,20
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95a540b95be6005d034,2025-01-12,Trieste,Pistoia,Italian Serie A League,12,7,8
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daf95b540b95be6005d040,2025-01-26,Milano,Trieste,Italian Serie A League,22,16,12
+Ross,2024-25,66d40549c8fcce5ed216fc01,66cc3736b849ebea5ae6c278,2024-08-31,Trieste,Cremona,Italian Serie A League Exhibitions,11,7,2
+Ross,2024-25,66d40549c8fcce5ed216fc01,66daeffb57116cba19f2de7f,2024-11-03,Trieste,Varese,Italian Serie A League,13,7,10
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78639f1f75b6feaad02e,2026-02-11,Trieste,Gran Canaria,FIBA Champions League,13,9,4
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e24,2025-10-11,Napoli Basket,Trieste,Italian Serie A League,15,10,15
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b56280377ef947e808b8af,2025-12-17,Trieste,s.Oliver,FIBA Champions League,17,8,17
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e31,2025-10-18,Venezia,Trieste,Italian Serie A League,13,10,7
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97e5855b7ff8f975e38,2025-10-26,Trieste,APU Udine,Italian Serie A League,17,8,14
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808ad,2025-10-21,Igokea,Trieste,FIBA Champions League,14,9,9
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55340fd0e35e848780896,2025-10-07,s.Oliver,Trieste,FIBA Champions League,9,6,5
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd43c104bc5eedf8d52,2025-11-01,Treviso,Trieste,Italian Serie A League,6,2,2
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b169,2026-04-26,VirtusBologna,Trieste,Italian Serie A League,11,8,13
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3e431dd3cdf580702f,2026-04-04,Trieste,Varese,Italian Serie A League,13,11,14
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b8,2025-09-10,Trieste,Ilirija,Exhibitions-Italian Serie A,17,8,16
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa5f,2026-02-01,Trieste,Treviso,Italian Serie A League,13,11,10
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad025,2026-02-04,Trieste,Nymburk,FIBA Champions League,7,7,4
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd63c104bc5eedf8d65,2025-11-15,Cremona,Trieste,Italian Serie A League,8,4,11
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f75,2026-05-16,Brescia,Trieste,Italian Serie A League,17,14,18
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a1296fc5241ba63d255e03a,2026-05-25,Brescia,Trieste,Italian Serie A League,14,11,9
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e790b575d488e64faa58,2026-01-24,Trieste,Sassari,Italian Serie A League,7,5,7
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e791b575d488e64faa66,2026-02-08,Derthona Tortona,Trieste,Italian Serie A League,16,12,10
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c61a243008195e1f79,2026-05-18,Brescia,Trieste,Italian Serie A League,12,10,21
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de71,2025-12-29,Trieste,VirtusBologna,Italian Serie A League,10,8,6
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9593239932d950b161,2026-04-19,Trieste,Brescia,Italian Serie A League,14,10,8
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8b9,2025-09-14,Venezia,Trieste,Exhibitions-Italian Serie A,16,8,14
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9793239932d950b177,2026-05-10,Trieste,Cremona,Italian Serie A League,12,9,19
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0190c71a243008195e1f7e,2026-05-21,Trieste,Brescia,Italian Serie A League,22,20,18
+Ross,2025-26,66d40549c8fcce5ed216fc01,6a0eb08da055054fefd13a62,2026-05-23,Trieste,Brescia,Italian Serie A League,16,11,18
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b557f3074719f4429a0d2d,2025-11-04,Trieste,Igokea,FIBA Champions League,17,8,13
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8ba,2025-09-19,Trieste,Cedevita Olimpija,Exhibitions-Italian Serie A,2,2,0
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6d97d5855b7ff8f975e20,2025-10-04,Trieste,Trapani,Italian Serie A League,17,9,15
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e6615d47e1858ba0de68,2025-12-21,Varese,Trieste,Italian Serie A League,13,7,15
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b55342fd0e35e8487808aa,2025-10-15,Trieste,Galatasaray,FIBA Champions League,17,12,17
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3d431dd3cdf5807022,2026-03-29,Cantu,Trieste,Italian Serie A League,9,6,8
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dd03f97b67305a3411ee,2025-12-13,Trieste,Reggio Emilia,Italian Serie A League,16,11,14
+Ross,2025-26,66d40549c8fcce5ed216fc01,68d7b408ae76904d2df9ebb1,2025-09-28,Cantu,Trieste,Exhibitions,18,13,20
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d5c,2025-11-09,Brescia,Trieste,Italian Serie A League,15,12,19
+Ross,2025-26,66d40549c8fcce5ed216fc01,696f78629f1f75b6feaad01e,2026-01-28,Lenovo Tenerife,Trieste,FIBA Champions League,13,12,9
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6dbd53c104bc5eedf8d59,2025-11-12,Trieste,Derthona Tortona,Italian Serie A League,17,12,10
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6e9e7452f2aff00c1431a,2026-02-14,Trieste,Napoli Basket,Italian Serie A League,16,11,14
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ec3f431dd3cdf5807035,2026-04-12,APU Udine,Trieste,Italian Serie A League,10,7,11
+Ross,2025-26,66d40549c8fcce5ed216fc01,68b6ee9693239932d950b16c,2026-05-03,Milano,Trieste,Italian Serie A League,12,10,14
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71cf06250260458ac8b7,2025-09-03,Trento,Trieste,Exhibitions-Italian Serie A,18,14,19
+Ross,2025-26,66d40549c8fcce5ed216fc01,68ac71d006250260458ac8bb,2025-09-23,Saski Baskonia,Trieste,Exhibitions,15,6,19
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f956,2026-08-30,Trieste,LeonessaBrescia,Exhibitions-Italian Serie A,15,10,10
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a98001a370c9d0eea8d5086,2026-09-27,Milano,Trieste,Italian Serie A League,12,9,17
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f958,2026-09-05,Varese,Trieste,Exhibitions-Italian Serie A,14,5,16
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd75f,2026-10-18,Trieste,Cantu,Italian Serie A League,11,9,6
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be90642709,2026-11-02,Virtus Bologna,Trieste,Italian Serie A League,19,13,18
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a96e6db4966f6f7d795f957,2026-09-04,Trieste,FortitudoBologna,Exhibitions-Italian Serie A,10,7,10
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980273f3547296522fd74f,2026-10-04,Trieste,Venezia,Italian Serie A League,12,8,18
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a980274f3547296522fd758,2026-10-10,Varese,Trieste,Italian Serie A League,22,14,25
+Ross,2026-27,66d40549c8fcce5ed216fc01,6a9925138407a9be906426ff,2026-10-25,Trieste,Verona,Italian Serie A League,23,16,27

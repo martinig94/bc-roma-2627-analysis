@@ -39,6 +39,7 @@ Based on the data only: 6 LBA games each (Trieste's round 6 at Virtus Bologna in
 - ==The offense is Ross in the pick-and-roll and the lowest turnover rate in the LBA==; the rest of the play types are average or worse. Numbers: [offense](offense_tendencies.html#play-types-and-sets), [team comparison](#bc-roma-and-trieste-compared).
 - ==The defense is strong against the roll man and isolations and soft on cuts and put-backs==: [defense](defense_tendencies.html#what-they-allow).
 - ==Eight-man rotation, same starting five for five games==, a short bench: [roster and rotation](#roster-starting-five-and-bench).
+- ==Ross has run the high pick-and-roll for four seasons== and finishes it with a drive (mostly to the right of the rim) or a pull-up three: [four seasons of shots](individual_tendencies.html#ross-four-seasons-of-shots).
 - ==Where the game is decided==: the P&R ball handler both ways, transition, cuts and put-backs: [what to expect](#what-to-expect).
 
 ## LBA so far: results and standings
@@ -106,7 +107,7 @@ By zone (Synergy): paint 185 attempts at 57.8%, mid-range 26 at 30.8%, corner th
 
 ## Key players
 
-Ross, Jones and Galloway carry the usage; nobody else has used more than 75 possessions. Per-player lines, strengths and tendencies are on [individual tendencies](individual_tendencies.html#key-points).
+Ross, Jones and Galloway carry the usage; nobody else has used more than 75 possessions. Per-player lines, strengths and tendencies are on [individual tendencies](individual_tendencies.html#key-points). Ross's four seasons of shots (play types, pick-and-roll sides, driving direction, zones) are on [Ross: four seasons of shots](individual_tendencies.html#ross-four-seasons-of-shots).
 
 <!-- more -->
 
