@@ -6,6 +6,7 @@ Reads `players_shots.csv` and `players_games.csv` of the data folder (see its RE
   10_player_<name>_zones_by_season.png   field-goal attempts per game and FG% by zone, one bar per season
   10b_player_<name>_situations.png       P&R ball handler by side, isolation by location, transition by role (and the action after it)
   10c_player_<name>_triangles.png        3PT / paint / mid-range split of the attempts, one dot per game, one triangle per season
+  10d_player_<name>_drives.png           finishes at the basket left or right of the rim (P&R ball handler, isolation, both), by season
 
 Descriptive only, based solely on the data (field-goal attempts: possessions ending in a turnover, a foul or a pass are not in the
 shot list). Every figure carries the date and the author (weekly/config.json). Exhibitions and third-division games are left out.
@@ -243,6 +244,49 @@ def fig_triangles(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
     c.save(fig, f'10c_player_{p.lower()}_triangles.png', 'corners: 3-point, paint (Synergy rim/paint zone) and mid-range (other two-point) attempts; one dot per game')
 
 
+RIM_X = 250                                                 # Synergy court coordinates of court/2/shots: rim at (250, 330); x < 250 = offense's right side
+SIDE_COLORS = {'left': '#4F7FBF', 'right': '#1F3A5F'}
+DRIVE_PANELS = [('P&R ball handler', ['P&R Ball Handler']), ('Isolation', ['ISO']), ('P&R ball handler + isolation', ['P&R Ball Handler', 'ISO'])]
+
+
+def fig_drives(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
+    """Finishes at the basket, left or right of the rim: P&R ball handler, isolation, both — one pair of bars per season."""
+    d = s[(s.player == p) & s.description.str.contains('To Basket', regex=False) & (s.pts_att == 2) & s.x.notna()].copy()
+    d['side'] = np.where(d.x < RIM_X, 'right', 'left')
+    seasons = [se for se in SEASON_COLORS if se in set(s[s.player == p].season)]
+    fig, axs = plt.subplots(1, 3, figsize=(14, 5.6))
+    fig.subplots_adjust(left=.06, right=.98, top=.68, bottom=.19, wspace=.25)
+    w = .36
+    for ax, (title, pts) in zip(axs, DRIVE_PANELS):
+        x = d[d.pt.isin(pts)]
+        t = x.groupby(['season', 'side']).agg(fga=('made', 'size'), fgm=('made', 'sum'))
+        for i, side in enumerate(('left', 'right')):
+            pos = np.arange(len(seasons)) + (i - .5) * w
+            n = [int(t.fga.get((se, side), 0)) for se in seasons]
+            m = [int(t.fgm.get((se, side), 0)) for se in seasons]
+            ax.bar(pos, n, w * .94, color=SIDE_COLORS[side], label=f'{side} of the rim')
+            for xx, nn, mm in zip(pos, n, m):
+                if nn:
+                    ax.text(xx, nn + .8, f'{mm}/{nn}\n{100 * mm / nn:.0f}%', ha='center', va='bottom', fontsize=7.5, color=TEXT2)
+        tot = x.groupby('season').size().reindex(seasons, fill_value=0)
+        right = x[x.side == 'right'].groupby('season').size().reindex(seasons, fill_value=0)
+        ax.set_title(title + '\n' + ' · '.join(f'{100 * right[se] / tot[se]:.0f}% right' if tot[se] else '–' for se in seasons), fontsize=9, color=TEXT2, loc='left', pad=8)
+        ax.set_xticks(np.arange(len(seasons))); ax.set_xticklabels(seasons, fontsize=8.5)
+        ax.grid(axis='y', color=GRID, lw=.7); ax.set_axisbelow(True); ax.tick_params(axis='y', labelsize=8); ax.tick_params(axis='x', length=0)
+    axs[0].set_ylabel('finishes at the basket (attempts)', fontsize=8.5, color=TEXT2)
+    for ax in axs: ax.set_ylim(0, max(ax.get_ylim()[1], 10) * 1.18)
+    fig.legend(handles=[Patch(fc=SIDE_COLORS[k], label=f'{k.capitalize()} of the rim') for k in ('left', 'right')], loc='upper right', ncol=2, fontsize=8.5, bbox_to_anchor=(.98, .99))
+    fig.text(.02, .955, f'{p}: drives to the basket, left or right of the rim, {NSEASONS[len(seasons)]}', fontsize=14, fontweight='bold')
+    fig.text(.02, .895, season_line(p, s, g), fontsize=8.5, color=TEXT2)
+    fig.text(.02, .865, 'Shots logged "To Basket" out of the pick-and-roll (ball handler) and the isolation, split by the side of the rim where the shot is taken (left / right from the '
+             'offense\'s point of view).\nLabels: made/attempted and FG%; under each title, the share of the finishes taken on the right side, season by season.',
+             fontsize=8.5, color=TEXT2, va='top')
+    note = ('Side of the rim from the x coordinate of the shot in the Synergy shot chart (rim at the centre). Finishes at the rim only: pull-ups, floaters logged as jumpers, '
+            'free throws and possessions without a shot are not counted. Small samples per season and side: tendencies, not rules.')
+    fig.text(.02, .06, note, fontsize=7, color=TEXT3)
+    c.save(fig, f'10d_player_{p.lower()}_drives.png', 'free throws excluded')
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('data', type=Path); ap.add_argument('--out', type=Path, required=True)
@@ -252,7 +296,7 @@ def main() -> None:
     s, g = load(a.data)
     c = Ctx(a.out, a.author, a.date)
     for p in (a.players.split(',') if a.players else sorted(s.player.unique())):
-        fig_zones(c, p, s, g); fig_situations(c, p, s, g); fig_triangles(c, p, s, g)
+        fig_zones(c, p, s, g); fig_situations(c, p, s, g); fig_triangles(c, p, s, g); fig_drives(c, p, s, g)
         print(p, '->', a.out / f'10*_player_{p.lower()}_*.png')
 
 
