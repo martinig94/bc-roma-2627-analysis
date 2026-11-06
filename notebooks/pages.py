@@ -149,7 +149,9 @@ def figure_md(arg: str, files: list[str]) -> str:
     interactive = Path(name).with_suffix(".html").name
     if name.endswith(".png") and interactive in files:      # interactive version of the figure replaces the image
         caption = re.sub(r"^\d+_", "", Path(name).stem).replace("_", " ")
-        return f'<iframe src="{interactive}" title="{caption}" class="interactive" loading="lazy" style="width:100%;height:1150px;border:0"></iframe>'
+        frame = f'<iframe src="{interactive}" title="{caption}" class="interactive" loading="lazy" style="width:100%;height:1150px;border:0"></iframe>'
+        # the iframe is not printed: the PNG of the same figure takes its place (see .print-only in site.html.j2)
+        return frame + (f'<img class="print-only" src="{name}" alt="{caption}">' if name in files else "")
     if name not in files:
         return f"*(figure `{arg}` is not available)*"
     caption = re.sub(r"^\d+_", "", Path(name).stem).replace("_", " ")
