@@ -88,6 +88,18 @@
   .hl-tools button[aria-pressed="true"] { background:var(--gold); }
   .hl-tools button:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
   @media print { .hl-tools, .edit { display:none; } }
+  .pdf-panel { margin:.6rem 0; padding:.6rem 1rem; border:1px solid var(--gold); border-radius:8px; background:var(--flag); font-size:.9rem; text-align:left; }
+  .pdf-panel label { display:block; margin:.15rem 0; cursor:pointer; }
+  .pdf-panel .pdf-actions { margin-top:.5rem; display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .pdf-panel button { font:inherit; padding:3px 12px; border:1px solid #cfc7b3; border-radius:999px; background:var(--paper); color:var(--ink); cursor:pointer; }
+  .pdf-panel button.go { background:var(--gold); border-color:var(--gold); font-weight:600; }
+  @media print {
+    @page { margin:12mm; }
+    header, .author, .sec-tools, .pdf-panel, .comments, .pdf-skip { display:none !important; }
+    main { max-width:none; padding:0; } body { font-size:11px; line-height:1.35; }
+    .doc table { font-size:10px; } .doc tr, .doc img { break-inside:avoid; } details.sec > summary::before { content:""; width:0; }
+    h2, h3 { break-after:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
   .pick label { margin-right:12px; }
   .pick select { width:auto; min-width:260px; }
   .button { display:inline-block; padding:5px 14px; border:1px solid var(--gold); border-radius:999px; background:var(--gold); color:var(--ink); text-decoration:none; font-weight:600; }
@@ -154,6 +166,74 @@
   secs[0].parentNode.insertBefore(bar, secs[0]);
 })();
 </script>
+{% if pdf %}<script>
+// "Download PDF": tick the pages of the game (analysis, offense, defense, individual) to save as one PDF; the browser's print dialog
+// opens (destination: Save as PDF). Pages other than the open one are fetched from the site. All sections and Details are opened,
+// and the page is put back afterwards.
+(function () {
+  var PAGES = {{ pdf_pages|tojson }}, main = document.querySelector("main");
+  var here = location.pathname.split("/").pop() || "index.html";
+  var secs = [].slice.call(document.querySelectorAll("main details.sec"));
+  var bar = document.querySelector(".sec-tools");
+  if (!bar) { bar = document.createElement("p"); bar.className = "sec-tools"; (secs[0] || main.firstChild).parentNode.insertBefore(bar, secs[0] || main.firstChild); }
+  var panel = document.createElement("div"); panel.className = "pdf-panel"; panel.hidden = true;
+  var boxes = {};
+  PAGES.forEach(function (p) {
+    var lab = document.createElement("label"), cb = document.createElement("input");
+    cb.type = "checkbox"; cb.checked = p.href === here; boxes[p.href] = cb;
+    lab.appendChild(cb); lab.appendChild(document.createTextNode(" " + p.label + (p.href === here ? " (this page)" : ""))); panel.appendChild(lab);
+  });
+  var actions = document.createElement("div"); actions.className = "pdf-actions";
+  var btn = function (text, fn, cls) {
+    var b = document.createElement("button"); b.type = "button"; b.textContent = text; if (cls) b.className = cls;
+    b.addEventListener("click", fn); actions.appendChild(b); return b;
+  };
+  var setAll = function (on) { Object.keys(boxes).forEach(function (k) { boxes[k].checked = on; }); };
+  var status = document.createElement("span"); status.className = "muted";
+  var fetchPage = function (p) {
+    return fetch(p.href).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (t) {
+      var m = new DOMParser().parseFromString(t, "text/html").querySelector("main"), box = document.createElement("div");
+      box.className = "pdf-extra"; box.style.breakBefore = "page";
+      [].slice.call(m.children).forEach(function (c) { if (!c.matches(".edit, .comments, .sec-tools, .pdf-panel, script")) box.appendChild(document.importNode(c, true)); });
+      [].forEach.call(box.querySelectorAll("details"), function (d) { d.open = true; });
+      return box;
+    });
+  };
+  btn("All", function () { setAll(true); });
+  btn("None", function () { setAll(false); });
+  btn("Download PDF", function () {
+    var chosen = PAGES.filter(function (p) { return boxes[p.href].checked; });
+    if (!chosen.length) { status.textContent = "Tick at least one page."; return; }
+    status.textContent = "Preparing the pages...";
+    Promise.all(chosen.filter(function (p) { return p.href !== here; }).map(fetchPage)).then(function (extra) {
+      var opened = [].slice.call(document.querySelectorAll("main details")).map(function (d) { return [d, d.open]; });
+      var old = document.title, anchor = main.querySelector(".comments") || null;
+      [].forEach.call(main.querySelectorAll("details"), function (d) { d.open = true; });
+      if (!boxes[here].checked) [].forEach.call(main.children, function (c) { if (!c.matches(".comments, script")) c.classList.add("pdf-skip"); });
+      extra.forEach(function (b) { main.insertBefore(b, anchor); });
+      var restore = function () {
+        extra.forEach(function (b) { b.remove(); });
+        [].forEach.call(main.querySelectorAll(".pdf-skip"), function (d) { d.classList.remove("pdf-skip"); });
+        opened.forEach(function (o) { o[0].open = o[1]; }); document.title = old;
+        window.removeEventListener("afterprint", restore);
+      };
+      window.addEventListener("afterprint", restore);
+      document.title = (document.querySelector("main h1") || {textContent: old}).textContent.trim().replace(/[\/:*?"<>|]+/g, "");
+      status.textContent = ""; window.print();
+    }).catch(function () {
+      status.textContent = "Other pages cannot be read when the file is opened from disk: open the published site (or serve docs/ locally).";
+    });
+  }, "go");
+  btn("Close", function () { panel.hidden = true; });
+  actions.appendChild(status);
+  var note = document.createElement("div"); note.className = "muted"; note.textContent = "In the print dialog choose Save as PDF as the destination.";
+  panel.appendChild(actions); panel.appendChild(note);
+  var open = document.createElement("button"); open.type = "button"; open.textContent = "Download PDF";
+  open.title = "Choose the pages of this game to save as one PDF";
+  open.addEventListener("click", function () { panel.hidden = !panel.hidden; });
+  bar.appendChild(open); bar.parentNode.insertBefore(panel, bar.nextSibling);
+})();
+</script>{% endif %}
 <script>
 // Live highlighter and pen. Highlighter on: a click on a table cell highlights it in the chosen colour (shift-click: the row),
 // selecting text highlights the text; a click on a highlight removes it. Pen on: draw over the images with the mouse or a finger.
