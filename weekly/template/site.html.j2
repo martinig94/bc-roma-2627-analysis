@@ -88,6 +88,15 @@
   .hl-tools button[aria-pressed="true"] { background:var(--gold); }
   .hl-tools button:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
   @media print { .hl-tools, .edit { display:none; } }
+  /* roster table (tagged by the script below): header row and first three columns (photo, #, player) stay in view while scrolling */
+  table.roster { max-height:75vh; overflow:auto; border-collapse:separate; border-spacing:0; }
+  table.roster th { position:sticky; top:0; z-index:2; background:var(--tint); }
+  table.roster :is(th, td):nth-child(-n+3) { position:sticky; background:var(--paper); z-index:1; box-sizing:border-box; }
+  table.roster th:nth-child(-n+3) { background:var(--tint); z-index:3; }
+  table.roster :is(th, td):nth-child(1) { left:0; width:64px; min-width:64px; max-width:64px; }
+  table.roster :is(th, td):nth-child(2) { left:64px; width:44px; min-width:44px; max-width:44px; }
+  table.roster :is(th, td):nth-child(3) { left:108px; width:170px; min-width:170px; max-width:170px; overflow:hidden; text-overflow:ellipsis; box-shadow:2px 0 0 var(--line); }
+  .print-only { display:none; }
   .pdf-panel { margin:.6rem 0; padding:.6rem 1rem; border:1px solid var(--gold); border-radius:8px; background:var(--flag); font-size:.9rem; text-align:left; }
   .pdf-panel label { display:block; margin:.15rem 0; cursor:pointer; }
   .pdf-panel .pdf-actions { margin-top:.5rem; display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
@@ -99,6 +108,14 @@
     main { max-width:none; padding:0; } body { font-size:11px; line-height:1.35; }
     .doc table { font-size:10px; } .doc tr, .doc img { break-inside:avoid; } details.sec > summary::before { content:""; width:0; }
     h2, h3 { break-after:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    /* tables: no scroll box on paper, the whole table is laid out on the page width (cells wrap, photos shrink) */
+    .doc table { display:table; width:100%; max-height:none; overflow:visible; }
+    .doc th, .doc td { white-space:normal; padding:1px 3px; }
+    table.roster { font-size:7.5px; border-collapse:collapse; }
+    table.roster :is(th, td) { position:static !important; width:auto !important; min-width:0 !important; max-width:none !important; box-shadow:none !important; }
+    table.roster td img { width:22px; height:27px; } table.roster td img.face { width:22px; height:27px; margin-right:3px; }
+    /* the interactive figure (iframe) is replaced by its PNG */
+    iframe.interactive { display:none !important; } .print-only { display:block; max-width:100%; }
   }
   .pick label { margin-right:12px; }
   .pick select { width:auto; min-width:260px; }
@@ -141,6 +158,16 @@
   <button type="button" id="dw-toggle" aria-pressed="false" hidden title="Draw over the images with the mouse or a finger. Kept in this browser only.">&#9999; Pen</button>
   <button type="button" id="hl-toggle" aria-pressed="false" title="Select text or click table cells to highlight them (shift-click: the whole row); click a highlight to remove it. Kept in this browser only.">&#9998; Highlighter</button>
 </div>
+<script>
+// Tag the roster tables (first header cells: empty, "#", "Player") so their header and first three columns stay in view
+function tagRoster(root) {
+  [].forEach.call(root.querySelectorAll("table"), function (t) {
+    var h = t.querySelectorAll("tr:first-child > th"), txt = function (i) { return h[i] ? h[i].textContent.trim() : null; };
+    if (h.length > 3 && txt(0) === "" && txt(1) === "#" && txt(2) === "Player") t.classList.add("roster");
+  });
+}
+tagRoster(document.querySelector("main"));
+</script>
 <script>
 // A link to a heading inside a closed section or drop-down opens it first
 (function () {
@@ -196,6 +223,7 @@
       box.className = "pdf-extra"; box.style.breakBefore = "page";
       [].slice.call(m.children).forEach(function (c) { if (!c.matches(".edit, .comments, .sec-tools, .pdf-panel, script")) box.appendChild(document.importNode(c, true)); });
       [].forEach.call(box.querySelectorAll("details"), function (d) { d.open = true; });
+      tagRoster(box);
       return box;
     });
   };
