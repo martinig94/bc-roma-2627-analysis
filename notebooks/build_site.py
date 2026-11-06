@@ -238,12 +238,13 @@ def folder_name(home: str, away: str, day: str) -> str:
     return f"matchup_{home.replace(' ', '_')}_vs_{away.replace(' ', '_')}_before_{day}"
 
 
-def shell(title: str, body: str, root: str, nav: dict, comments: bool = False, edit: str | None = None) -> str:
-    """Wrap an HTML body in the site template (header, nav, optional comment box and edit link)."""
+def shell(title: str, body: str, root: str, nav: dict, comments: bool = False, edit: str | None = None,
+          pdf_pages: list[dict] | None = None) -> str:
+    """Wrap an HTML body in the site template (header, nav, optional comment box, edit link and PDF download of the sections)."""
     c = CFG.get("comments") or {}
     edit_url = f"{GITHUB}/{CFG['repo']}/edit/{CFG['branch']}/{edit}" if edit and CFG.get("repo") else None
     return TPL.get_template("site.html.j2").render(title=title, body=body, root=root, nav=nav, site_title=CFG["site_title"], league=CFG["league"], season=CFG["season"],
-                                                   comments=comments, author=CFG.get("author"), edit_url=edit_url, has_reviews=bool(CFG.get("reviews")), comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
+                                                   comments=comments, pdf=pdf_pages is not None, pdf_pages=pdf_pages or [], author=CFG.get("author"), edit_url=edit_url, has_reviews=bool(CFG.get("reviews")), comments_repo=c.get("repo"), comments_label=c.get("label", "comment"))
 
 
 # ── page builders: each returns the list of entries it created ──────────────────
@@ -684,10 +685,15 @@ def write_pages(kind: str, entries: list[dict], nav: dict) -> None:
     """Write docs/<kind>/<slug>/index.html for every entry."""
     for e in entries:
         page = DOCS / kind / e["slug"] / "index.html"
-        page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav, comments=True, edit=e.get("edit")), encoding="utf-8")
+        pdf = None                               # opponent analyses can be downloaded as PDF: pages of the game and sections of the open page
+        if kind == "opponent":
+            by_name = {sp["name"]: sp for sp in e.get("subpages", [])}
+            pdf = [{"href": "index.html", "label": "Analysis"}] + [
+                {"href": f"{name}.html", "label": SUBPAGES[name]} for name in ("offense_tendencies", "defense_tendencies", "individual_tendencies") if name in by_name]
+        page.write_text(shell(f"{e['title']} · {CFG['site_title']}", e["html"], "../../", nav, comments=True, edit=e.get("edit"), pdf_pages=pdf), encoding="utf-8")
         for sp in e.get("subpages", []):         # next to index.html, so the images of the game folder resolve
             (page.parent / f"{sp['name']}.html").write_text(shell(f"{sp['title']} · {e['title']} · {CFG['site_title']}", sp["html"], "../../", nav,
-                                                                  comments=True, edit=sp["edit"]), encoding="utf-8")
+                                                                  comments=True, edit=sp["edit"], pdf_pages=pdf), encoding="utf-8")
 
 
 def next_games(snaps: list[dict], opps: list[dict], today: date) -> list[dict]:
