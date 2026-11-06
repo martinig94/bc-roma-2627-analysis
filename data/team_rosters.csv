@@ -101,6 +101,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1768,Longobardi Scafati Basket,9348,Ze'Rik,Onyema,21,Centro,2001-10-31,San Antonio,USA,206,107,2026-07-01,2027-06-30,1wLBcwvvb9Zzi2XMrHWzFjcG
 2026,1768,Longobardi Scafati Basket,3526,Bruno,Mascolo,33,Playmaker,1996-08-04,Castellamare di Stabia,ITA,186,85,2026-07-01,2027-06-30,QLjP8Un3io8Jk3N7T6qDej3s
 2026,1768,Longobardi Scafati Basket,9346,Brandon,Johnson,88,Ala/Centro,2002-01-15,Raleigh,USA,203,95,2026-07-01,2027-06-30,SWHeJp6DE4dxgtob8NQUQp4u
+2026,1768,Longobardi Scafati Basket,9452,Mehdy,Ngouama,00,Guardia,1995-07-06,Blanc-Mesnil,FRA,188,79,2026-11-05,2027-06-30,
 2026,1762,Maxima Roma,536,Miro,Bilan,2,Centro,1989-07-21,Sibenik,HRV,213,122,2026-07-01,2027-06-30,hDPEL1tCrwey3d1PLzMFJ7pJ
 2026,1762,Maxima Roma,9374,Aaron,Holiday,3,Playmaker,1996-09-30,Louisiana,USA,183,84,2026-07-01,2027-06-30,EBP9bcXDmn54Y74mwZBhj6ba
 2026,1762,Maxima Roma,9391,Hunter,Tyson,4,Ala,2000-06-13,Monroe,USA,203,,2026-07-01,2027-06-30,xMchXDeSHe8s8TeR5CWUUDuc
@@ -209,6 +210,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1760,UNA Hotels Reggio Emilia,6640,Riccardo,Rossato,6,Play/Guardia,1996-09-18,Venezia,ITA,190,85,2026-07-01,2027-06-30,onz7B4xr365h6t5HL2nooSDR
 2026,1760,UNA Hotels Reggio Emilia,6309,Tomas,Woldetensae,7,Ala,1998-04-30,Bologna,ITA,196,91,2026-07-01,2027-06-30,tzyCysCGEe468QSigPE4RGsQ
 2026,1760,UNA Hotels Reggio Emilia,5823,Riccardo,Visconti,9,Guardia,1998-10-08,Torino,ITA,197,88,2026-07-01,2027-06-30,4DqyMbVEkSoxG1BpH1163U9s
+2026,1760,UNA Hotels Reggio Emilia,6617,Troy,Caupain,10,Playmaker,1995-11-29,New York,USA,193,95,2026-11-05,2027-06-30,CwAhCJ3984Qqign7xLaX8jaz
 2026,1760,UNA Hotels Reggio Emilia,7195,Luca,Manfredotti,11,Ala,2008-02-10,Castelnovo Monti,ITA,198,88,2026-07-01,2027-06-30,7dsdfjTeLXaAjVn5EbmvuMuP
 2026,1760,UNA Hotels Reggio Emilia,5663,Lorenzo,Uglietti,16,Playmaker,1994-06-27,Torino,ITA,192,84,2026-07-01,2027-06-30,zLE7bJXJWNbaeMr4woXk5WiE
 2026,1760,UNA Hotels Reggio Emilia,7565,Arseniy,Hadzhyiev,19,-,2008-01-07,Reggio Emilia,ITA,,,2026-07-01,2027-06-30,
