@@ -1,0 +1,29 @@
+team,side,metric,value,gp
+Ulm,offense,PPP,0.969,15
+Ulm,offense,Possessions/game,86.8,15
+Ulm,offense,eFG%,54.9,15
+Ulm,offense,TO%,16.2,15
+Ulm,offense,%FT,11.6,15
+Ulm,offense,Score%,44.2,15
+Ulm,offense,FG%,48.3,15
+Ulm,defense,PPP,0.962,15
+Ulm,defense,Possessions/game,89.9,15
+Ulm,defense,eFG%,53.3,15
+Ulm,defense,TO%,15.3,15
+Ulm,defense,%FT,13.7,15
+Ulm,defense,Score%,44,15
+Ulm,defense,FG%,46,15
+BC Roma,offense,PPP,1.033,12
+BC Roma,offense,Possessions/game,90,12
+BC Roma,offense,eFG%,57.6,12
+BC Roma,offense,TO%,15.9,12
+BC Roma,offense,%FT,12.6,12
+BC Roma,offense,Score%,46.8,12
+BC Roma,offense,FG%,49.6,12
+BC Roma,defense,PPP,1.019,12
+BC Roma,defense,Possessions/game,92.1,12
+BC Roma,defense,eFG%,54.8,12
+BC Roma,defense,TO%,13.7,12
+BC Roma,defense,%FT,14.4,12
+BC Roma,defense,Score%,46.2,12
+BC Roma,defense,FG%,47.2,12

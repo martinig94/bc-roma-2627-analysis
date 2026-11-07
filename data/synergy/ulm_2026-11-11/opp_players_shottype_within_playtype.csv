@@ -1,0 +1,64 @@
+player,play_type,shot_type,fga,fgm
+Atamna,P&R Ball Handler,"Dribble jumper, 3PT",8,4
+Atamna,P&R Ball Handler,To basket,3,0
+Atamna,P&R Ball Handler,"Dribble jumper, mid-range",1,0
+Atamna,P&R Ball Handler,"Dribble jumper, short (<17 ft)",1,0
+Atamna,Spot Up,"Guarded, 3PT",5,2
+Atamna,Spot Up,"Open, 3PT",2,0
+Atamna,Spot Up,"Dribble jumper, 3PT",2,0
+Atamna,Transition,To basket,9,6
+Atamna,Transition,"Dribble jumper, 3PT",2,1
+Atamna,Transition,"Open, 3PT",1,0
+Faye,Spot Up,"Guarded, 3PT",6,2
+Faye,Spot Up,"Guarded, mid-range",1,0
+Faye,Spot Up,"Open, 3PT",1,1
+Faye,Spot Up,"Dribble jumper, 3PT",1,0
+Rataj,Other,Other,9,6
+Rataj,Other,To basket,4,3
+Rataj,Other,"Open, 3PT",1,0
+Rataj,Spot Up,"Guarded, 3PT",4,1
+Rataj,Spot Up,"Dribble jumper, short (<17 ft)",4,2
+Rataj,Spot Up,To basket,2,2
+Rataj,Spot Up,"Open, 3PT",1,0
+Rataj,Spot Up,"Open, mid-range",1,1
+Rataj,Spot Up,"Dribble jumper, 3PT",1,0
+Rataj,Spot Up,"Dribble jumper, mid-range",1,0
+Schmidt,Spot Up,"Guarded, 3PT",3,2
+Schmidt,Spot Up,"Dribble jumper, 3PT",3,3
+Schmidt,Spot Up,"Dribble jumper, short (<17 ft)",2,0
+Schmidt,Spot Up,"Open, 3PT",1,1
+Shittu,Offensive Rebounds (Put Backs),To basket,10,7
+Shittu,P&R Roll Man,To basket,6,3
+Shittu,P&R Roll Man,"Guarded, 3PT",2,1
+Shittu,P&R Roll Man,"Open, 3PT",1,0
+Sims,P&R Ball Handler,To basket,4,3
+Sims,P&R Ball Handler,"Dribble jumper, short (<17 ft)",3,2
+Sims,P&R Ball Handler,"Dribble jumper, 3PT",1,0
+Sims,Spot Up,"Guarded, 3PT",8,3
+Sims,Spot Up,"Open, 3PT",6,3
+Sims,Spot Up,"Dribble jumper, short (<17 ft)",3,1
+Sims,Spot Up,"Dribble jumper, 3PT",2,0
+Sims,Spot Up,"Dribble jumper, mid-range",1,0
+Sims,Spot Up,"Guarded, mid-range",1,1
+Sims,Transition,To basket,10,6
+Sims,Transition,"Dribble jumper, 3PT",4,3
+Sims,Transition,"Guarded, 3PT",1,0
+Sims,Transition,"Open, 3PT",1,1
+Traore,P&R Roll Man,To basket,5,5
+Traore,P&R Roll Man,"Open, 3PT",4,1
+Traore,P&R Roll Man,"Dribble jumper, short (<17 ft)",2,0
+Traore,P&R Roll Man,"Dribble jumper, 3PT",1,1
+Traore,P&R Roll Man,"Open, mid-range",1,1
+Traore,Spot Up,"Guarded, 3PT",5,1
+Traore,Spot Up,To basket,3,2
+Traore,Spot Up,"Dribble jumper, 3PT",2,0
+Traore,Spot Up,"Dribble jumper, mid-range",1,0
+Traore,Spot Up,"Open, 3PT",1,0
+Watson,P&R Ball Handler,"Dribble jumper, 3PT",5,3
+Watson,P&R Ball Handler,To basket,4,1
+Watson,P&R Ball Handler,"Dribble jumper, short (<17 ft)",3,2
+Watson,Spot Up,"Guarded, 3PT",14,7
+Watson,Spot Up,"Dribble jumper, 3PT",4,3
+Watson,Spot Up,"Open, 3PT",2,1
+Watson,Spot Up,To basket,2,1
+Watson,Spot Up,"Dribble jumper, short (<17 ft)",2,0

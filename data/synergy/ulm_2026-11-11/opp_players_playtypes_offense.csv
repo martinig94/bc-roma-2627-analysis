@@ -1,0 +1,96 @@
+player,play_type,poss,pts,ppp,full
+Atamna,P&R Ball Handler,16,12,0.75,Adam Atamna
+Atamna,Transition,15,19,1.267,Adam Atamna
+Atamna,Spot Up,10,6,0.6,Adam Atamna
+Atamna,Miscellaneous Plays,6,3,0.5,Adam Atamna
+Atamna,Isolation,4,9,2.25,Adam Atamna
+Atamna,Handoffs,3,0,0,Adam Atamna
+Atamna,Cut,1,2,2,Adam Atamna
+Atamna,Off Screen,1,0,0,Adam Atamna
+Faye,Spot Up,10,11,1.1,Meissa Faye
+Faye,Transition,8,5,0.625,Meissa Faye
+Faye,P&R Ball Handler,5,8,1.6,Meissa Faye
+Faye,Off Screen,5,0,0,Meissa Faye
+Faye,Cut,4,4,1,Meissa Faye
+Faye,Isolation,3,0,0,Meissa Faye
+Faye,Offensive Rebounds (Put Backs),2,0,0,Meissa Faye
+Faye,P&R Roll Man,1,0,0,Meissa Faye
+Fischer,Transition,4,6,1.5,Luke Fischer
+Fischer,Spot Up,3,4,1.333,Luke Fischer
+Fischer,P&R Ball Handler,2,0,0,Luke Fischer
+Fischer,Isolation,2,2,1,Luke Fischer
+Fischer,Handoffs,2,2,1,Luke Fischer
+Fischer,Off Screen,1,2,2,Luke Fischer
+Heckel,Transition,7,4,0.571,Marvin Heckel
+Heckel,Spot Up,6,11,1.833,Marvin Heckel
+Heckel,P&R Ball Handler,6,2,0.333,Marvin Heckel
+Heckel,Isolation,2,3,1.5,Marvin Heckel
+Heckel,Miscellaneous Plays,2,0,0,Marvin Heckel
+Heckel,Handoffs,1,0,0,Marvin Heckel
+Koroma,P&R Roll Man,3,0,0,Dwayne Koroma
+Koroma,Miscellaneous Plays,3,0,0,Dwayne Koroma
+Koroma,Transition,2,0,0,Dwayne Koroma
+Koroma,Offensive Rebounds (Put Backs),2,2,1,Dwayne Koroma
+Koroma,Cut,1,2,2,Dwayne Koroma
+Liedtke,Miscellaneous Plays,7,5,0.714,Lenny Liedtke
+Liedtke,Spot Up,3,3,1,Lenny Liedtke
+Liedtke,Transition,2,4,2,Lenny Liedtke
+Liedtke,P&R Roll Man,2,3,1.5,Lenny Liedtke
+Liedtke,Cut,2,4,2,Lenny Liedtke
+Liedtke,P&R Ball Handler,1,0,0,Lenny Liedtke
+Rataj,Spot Up,20,19,0.95,Michael Rataj
+Rataj,Post-Up,14,20,1.429,Michael Rataj
+Rataj,Transition,8,11,1.375,Michael Rataj
+Rataj,Miscellaneous Plays,8,4,0.5,Michael Rataj
+Rataj,P&R Ball Handler,4,4,1,Michael Rataj
+Rataj,Offensive Rebounds (Put Backs),4,8,2,Michael Rataj
+Rataj,Isolation,4,4,1,Michael Rataj
+Rataj,Cut,3,4,1.333,Michael Rataj
+Rataj,Off Screen,3,2,0.667,Michael Rataj
+Rataj,P&R Roll Man,1,0,0,Michael Rataj
+Schmidt,Spot Up,9,18,2,Devin Schmidt
+Schmidt,P&R Ball Handler,8,6,0.75,Devin Schmidt
+Schmidt,Transition,5,5,1,Devin Schmidt
+Schmidt,Off Screen,4,6,1.5,Devin Schmidt
+Schmidt,Isolation,2,0,0,Devin Schmidt
+Schmidt,Miscellaneous Plays,2,0,0,Devin Schmidt
+Schmidt,P&R Roll Man,1,0,0,Devin Schmidt
+Schmidt,Offensive Rebounds (Put Backs),1,0,0,Devin Schmidt
+Schmidt,Handoffs,1,0,0,Devin Schmidt
+Shittu,P&R Roll Man,13,12,0.923,Simisola Shittu
+Shittu,Offensive Rebounds (Put Backs),10,16,1.6,Simisola Shittu
+Shittu,Cut,9,14,1.556,Simisola Shittu
+Shittu,Transition,8,10,1.25,Simisola Shittu
+Shittu,Post-Up,5,4,0.8,Simisola Shittu
+Shittu,Spot Up,4,3,0.75,Simisola Shittu
+Shittu,Miscellaneous Plays,4,1,0.25,Simisola Shittu
+Shittu,Isolation,2,2,1,Simisola Shittu
+Sims,Transition,22,28,1.273,Jaylen Sims
+Sims,Spot Up,21,22,1.048,Jaylen Sims
+Sims,P&R Ball Handler,13,14,1.077,Jaylen Sims
+Sims,Post-Up,6,3,0.5,Jaylen Sims
+Sims,Isolation,5,4,0.8,Jaylen Sims
+Sims,Miscellaneous Plays,5,2,0.4,Jaylen Sims
+Sims,Cut,4,4,1,Jaylen Sims
+Sims,Offensive Rebounds (Put Backs),4,6,1.5,Jaylen Sims
+Sims,Off Screen,3,5,1.667,Jaylen Sims
+Sims,P&R Roll Man,1,3,3,Jaylen Sims
+Sims,Handoffs,1,2,2,Jaylen Sims
+Traore,P&R Roll Man,18,23,1.278,Armel Traore
+Traore,Spot Up,13,7,0.538,Armel Traore
+Traore,Transition,6,6,1,Armel Traore
+Traore,Cut,6,3,0.5,Armel Traore
+Traore,Offensive Rebounds (Put Backs),5,8,1.6,Armel Traore
+Traore,Miscellaneous Plays,4,0,0,Armel Traore
+Traore,Isolation,3,7,2.333,Armel Traore
+Traore,Post-Up,1,0,0,Armel Traore
+Watson,Spot Up,25,35,1.4,Ibi Watson
+Watson,P&R Ball Handler,17,15,0.882,Ibi Watson
+Watson,Transition,7,3,0.429,Ibi Watson
+Watson,Isolation,5,4,0.8,Ibi Watson
+Watson,Off Screen,5,2,0.4,Ibi Watson
+Watson,Miscellaneous Plays,4,2,0.5,Ibi Watson
+Watson,Offensive Rebounds (Put Backs),3,6,2,Ibi Watson
+Watson,Cut,2,5,2.5,Ibi Watson
+Watson,Post-Up,1,0,0,Ibi Watson
+Watson,Handoffs,1,0,0,Ibi Watson

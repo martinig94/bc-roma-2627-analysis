@@ -1,0 +1,130 @@
+player,dimension,category,fgm,fga
+Atamna,play_type,P&R Ball Handler,4,13
+Atamna,play_type,Transition,7,12
+Atamna,play_type,Spot Up,2,9
+Atamna,play_type,Other,1,4
+Atamna,play_type,Isolation,3,3
+Atamna,play_type,Cut,1,1
+Atamna,play_type,Off Screen,0,1
+Atamna,shot_location,Corner 3,2,5
+Atamna,shot_location,Wing 3,3,12
+Atamna,shot_location,Paint,9,16
+Atamna,shot_location,Top 3,3,7
+Atamna,shot_location,Mid-range,1,3
+Faye,play_type,Spot Up,3,9
+Faye,play_type,Transition,2,3
+Faye,play_type,P&R Ball Handler,3,4
+Faye,play_type,Off Screen,0,4
+Faye,play_type,Cut,2,3
+Faye,play_type,Isolation,0,2
+Faye,play_type,Offensive Rebounds (Put Backs),0,2
+Faye,play_type,P&R Roll Man,0,1
+Faye,shot_location,Wing 3,3,7
+Faye,shot_location,Paint,5,12
+Faye,shot_location,Mid-range,0,2
+Faye,shot_location,Corner 3,2,5
+Faye,shot_location,Top 3,0,2
+Fischer,play_type,Transition,3,3
+Fischer,play_type,Spot Up,2,3
+Fischer,play_type,P&R Ball Handler,0,1
+Fischer,play_type,Isolation,1,1
+Fischer,play_type,Other,1,2
+Fischer,play_type,Off Screen,1,1
+Fischer,shot_location,Paint,8,11
+Heckel,play_type,Transition,2,5
+Heckel,play_type,Spot Up,4,4
+Heckel,play_type,P&R Ball Handler,1,2
+Heckel,play_type,Isolation,1,1
+Heckel,play_type,Other,0,1
+Heckel,shot_location,Paint,5,6
+Heckel,shot_location,Corner 3,1,4
+Heckel,shot_location,Wing 3,1,2
+Heckel,shot_location,Top 3,1,1
+Koroma,play_type,P&R Roll Man,0,3
+Koroma,play_type,Offensive Rebounds (Put Backs),1,2
+Koroma,play_type,Cut,1,1
+Koroma,shot_location,Paint,2,6
+Liedtke,play_type,Other,1,2
+Liedtke,play_type,Spot Up,1,3
+Liedtke,play_type,Transition,2,2
+Liedtke,play_type,P&R Roll Man,1,2
+Liedtke,play_type,Cut,2,2
+Liedtke,play_type,P&R Ball Handler,0,1
+Liedtke,shot_location,Wing 3,0,3
+Liedtke,shot_location,Paint,6,7
+Liedtke,shot_location,Corner 3,1,1
+Liedtke,shot_location,Top 3,0,1
+Rataj,play_type,Spot Up,6,14
+Rataj,play_type,Other,9,14
+Rataj,play_type,Transition,5,7
+Rataj,play_type,P&R Ball Handler,2,4
+Rataj,play_type,Offensive Rebounds (Put Backs),3,3
+Rataj,play_type,Isolation,2,4
+Rataj,play_type,Cut,2,2
+Rataj,play_type,Off Screen,1,2
+Rataj,play_type,P&R Roll Man,0,1
+Rataj,shot_location,Mid-range,11,21
+Rataj,shot_location,Top 3,0,4
+Rataj,shot_location,Paint,17,21
+Rataj,shot_location,Wing 3,1,3
+Rataj,shot_location,Corner 3,1,2
+Schmidt,play_type,Spot Up,6,9
+Schmidt,play_type,P&R Ball Handler,2,6
+Schmidt,play_type,Transition,2,4
+Schmidt,play_type,Off Screen,2,4
+Schmidt,play_type,Isolation,0,1
+Schmidt,play_type,P&R Roll Man,0,1
+Schmidt,shot_location,Wing 3,8,12
+Schmidt,shot_location,Corner 3,3,4
+Schmidt,shot_location,Mid-range,0,4
+Schmidt,shot_location,Paint,1,3
+Schmidt,shot_location,Top 3,0,2
+Shittu,play_type,P&R Roll Man,4,9
+Shittu,play_type,Offensive Rebounds (Put Backs),7,10
+Shittu,play_type,Cut,6,7
+Shittu,play_type,Transition,3,4
+Shittu,play_type,Other,2,4
+Shittu,play_type,Spot Up,1,3
+Shittu,play_type,Isolation,1,1
+Shittu,shot_location,Paint,21,30
+Shittu,shot_location,Wing 3,0,2
+Shittu,shot_location,Mid-range,2,4
+Shittu,shot_location,Top 3,1,2
+Sims,play_type,Transition,10,16
+Sims,play_type,Spot Up,8,21
+Sims,play_type,P&R Ball Handler,5,8
+Sims,play_type,Other,2,5
+Sims,play_type,Isolation,1,3
+Sims,play_type,Cut,2,4
+Sims,play_type,Offensive Rebounds (Put Backs),2,3
+Sims,play_type,Off Screen,2,3
+Sims,play_type,P&R Roll Man,1,1
+Sims,shot_location,Top 3,4,8
+Sims,shot_location,Paint,13,22
+Sims,shot_location,Corner 3,5,10
+Sims,shot_location,Mid-range,8,14
+Sims,shot_location,Wing 3,3,10
+Traore,play_type,P&R Roll Man,8,13
+Traore,play_type,Spot Up,3,12
+Traore,play_type,Transition,3,4
+Traore,play_type,Cut,0,3
+Traore,play_type,Offensive Rebounds (Put Backs),4,5
+Traore,play_type,Isolation,3,3
+Traore,shot_location,Paint,14,19
+Traore,shot_location,Wing 3,2,6
+Traore,shot_location,Top 3,2,6
+Traore,shot_location,Mid-range,3,7
+Traore,shot_location,Corner 3,0,2
+Watson,play_type,Spot Up,12,24
+Watson,play_type,P&R Ball Handler,6,12
+Watson,play_type,Transition,1,5
+Watson,play_type,Isolation,2,3
+Watson,play_type,Off Screen,1,5
+Watson,play_type,Other,0,2
+Watson,play_type,Offensive Rebounds (Put Backs),2,2
+Watson,play_type,Cut,2,2
+Watson,shot_location,Paint,5,9
+Watson,shot_location,Mid-range,6,12
+Watson,shot_location,Top 3,6,13
+Watson,shot_location,Wing 3,6,14
+Watson,shot_location,Corner 3,3,7

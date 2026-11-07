@@ -1,0 +1,387 @@
+date,game,period,clock,player,play_type,shot_type,zone,made,description
+2026-11-03,Bahcesehir@Ulm,2,3:15,Armel Traore,Offensive Rebounds (Put Backs),To basket,Paint,0,94 Armel Traore > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,0:09,Devin Schmidt,P&R Roll Man,"Guarded, 3PT",Wing 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Devin Schmidt > P&R Roll Man > Pick and Pops > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,4,0:29,Michael Rataj,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,12 Michael Rataj > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,0:51,Armel Traore,Offensive Rebounds (Put Backs),To basket,Paint,1,94 Armel Traore > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,0:50,Luke Fischer,Other,To basket,Paint,0,43 Luke Fischer > Hand Off > From Stationary > Right > To Basket > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,1:21,Jaylen Sims,Isolation,"Dribble jumper, 3PT",Top 3,0,30 Jaylen Sims > ISO > Top > Early Jumper > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,4,2:01,Ibi Watson,P&R Ball Handler,To basket,Paint,1,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts Foul > 0 Pts
+2026-11-03,Bahcesehir@Ulm,4,2:37,Michael Rataj,Transition,"Guarded, mid-range",Mid-range,0,12 Michael Rataj > Transition > Right Wing > No Dribble Jumper > Guarded > Medium/17' to <3p > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,4:05,Ibi Watson,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,1,2 Ibi Watson > ISO > Right > Drives Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,4:47,Armel Traore,Isolation,"Dribble jumper, 3PT",Wing 3,1,94 Armel Traore > ISO > Right > Early Jumper > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,4,5:53,Ibi Watson,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,4,6:30,Simisola Shittu,P&R Roll Man,To basket,Paint,0,0 Adam Atamna > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,7:08,Luke Fischer,Spot Up,To basket,Paint,1,0 Adam Atamna > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 43 Luke Fischer > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,8:00,Jaylen Sims,Offensive Rebounds (Put Backs),To basket,Paint,1,30 Jaylen Sims > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,8:03,Jaylen Sims,Spot Up,"Open, 3PT",Corner 3,0,43 Luke Fischer > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,4,8:59,Luke Fischer,Isolation,To basket,Paint,1,43 Luke Fischer > ISO > Right > Drives Right > To Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,4,9:39,Adam Atamna,Spot Up,"Guarded, 3PT",Corner 3,1,0 Adam Atamna > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,3,,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,1,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,3,,Ibi Watson,Spot Up,"Guarded, 3PT",Wing 3,0,43 Luke Fischer > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,3,0:10,Michael Rataj,P&R Roll Man,"Dribble jumper, 3PT",Top 3,0,0 Adam Atamna > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > P&R Roll Man > Slips the Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,3,1:04,Michael Rataj,Other,Other,Mid-range,1,12 Michael Rataj > Post-Up > Left Block > Right Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,3,1:27,Ibi Watson,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,2 Ibi Watson > P&R Ball Handler > High P&R > Takes Early Jump Shot > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,3,2:08,Jaylen Sims,Spot Up,"Open, 3PT",Corner 3,1,30 Jaylen Sims > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,3,2:49,Michael Rataj,Offensive Rebounds (Put Backs),Put-back attempt,Mid-range,1,12 Michael Rataj > Offensive Rebound > Short > Scoring Attempt > Short to < 17' > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,3,2:51,Ibi Watson,Spot Up,"Guarded, 3PT",Top 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,3,3:54,Armel Traore,P&R Roll Man,"Dribble jumper, 3PT",Top 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Slips the Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,3,4:57,Armel Traore,Spot Up,To basket,Paint,1,94 Armel Traore > Spot-Up > Drives Right > To Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,3,5:43,Michael Rataj,Spot Up,To basket,Paint,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,3,6:29,Michael Rataj,Other,To basket,Paint,1,12 Michael Rataj > Post-Up > Left Block > Right Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,3,7:17,Michael Rataj,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,0,12 Michael Rataj > ISO > Right > Drives Right > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,3,8:16,Marvin Heckel,P&R Ball Handler,To basket,Paint,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,3,9:12,Armel Traore,Spot Up,"Guarded, 3PT",Wing 3,0,11 Meissa Faye > ISO > Top > Defense Commits > Ball Delivered > 94 Armel Traore > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,2,0:02,Devin Schmidt,Off Screen,"Dribble jumper, 3PT",Wing 3,1,8 Devin Schmidt > Off Screen > To Shooter's Right > Straight > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,2,0:38,Ibi Watson,Spot Up,"Open, 3PT",Wing 3,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,2,2:08,Jaylen Sims,Transition,To basket,Paint,1,30 Jaylen Sims > Transition > Right Wing > To Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,2,3:14,Armel Traore,Offensive Rebounds (Put Backs),To basket,Paint,1,94 Armel Traore > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts Foul > 0 Pts
+2026-11-03,Bahcesehir@Ulm,2,3:17,Adam Atamna,Spot Up,"Open, 3PT",Wing 3,0,0 Adam Atamna > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,2,4:09,Armel Traore,P&R Roll Man,"Open, 3PT",Top 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,2,4:57,Adam Atamna,P&R Ball Handler,To basket,Paint,0,0 Adam Atamna > P&R Ball Handler > High P&R > Go Away from Pick > To Basket > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,2,5:38,Jaylen Sims,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,30 Jaylen Sims > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,2,5:47,Adam Atamna,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,0 Adam Atamna > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,2,6:58,Michael Rataj,Spot Up,"Guarded, 3PT",Wing 3,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts Foul > 1 Pts
+2026-11-03,Bahcesehir@Ulm,2,9:04,Lenny Liedtke,Spot Up,"Open, 3PT",Wing 3,0,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 55 Lenny Liedtke > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,1,0:24,Ibi Watson,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,1,0:57,Meissa Faye,Spot Up,"Guarded, 3PT",Wing 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,1,2:02,Adam Atamna,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,1,2:59,Ibi Watson,Cut,To basket,Paint,1,2 Ibi Watson > Cut > Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,1,4:16,Jaylen Sims,Transition,"Guarded, 3PT",Top 3,0,30 Jaylen Sims > Transition > Trailer > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,1,4:52,Michael Rataj,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,1,12 Michael Rataj > ISO > Right > Drives Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,1,5:23,Armel Traore,Spot Up,"Dribble jumper, 3PT",Top 3,0,94 Armel Traore > Spot-Up > Drives Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,1,5:49,Marvin Heckel,Spot Up,"Guarded, 3PT",Corner 3,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 47 Marvin Heckel > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-03,Bahcesehir@Ulm,1,6:44,Armel Traore,Offensive Rebounds (Put Backs),To basket,Paint,1,94 Armel Traore > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,1,6:46,Michael Rataj,Transition,"Dribble jumper, short (<17 ft)",Mid-range,0,12 Michael Rataj > Transition > Right Wing > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-03,Bahcesehir@Ulm,1,7:13,Jaylen Sims,Cut,To basket,Paint,1,30 Jaylen Sims > Cut > Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,1,7:18,Michael Rataj,Spot Up,"Open, 3PT",Top 3,0,12 Michael Rataj > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-03,Bahcesehir@Ulm,1,8:05,Marvin Heckel,P&R Ball Handler,To basket,Paint,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-11-03,Bahcesehir@Ulm,1,9:43,Ibi Watson,Spot Up,"Guarded, 3PT",Top 3,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,4,0:12,Luke Fischer,P&R Ball Handler,To basket,Paint,0,43 Luke Fischer > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,0:27,Meissa Faye,Transition,To basket,Paint,1,11 Meissa Faye > Transition > Left Wing > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,0:41,Meissa Faye,Spot Up,"Guarded, mid-range",Mid-range,0,11 Meissa Faye > Spot-Up > No Dribble Jumper > Guarded > Medium/17' to <3p > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,1:24,Dwayne Koroma,Cut,To basket,Paint,1,3 Dwayne Koroma > Cut > Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,2:08,Jaylen Sims,Transition,To basket,Paint,0,30 Jaylen Sims > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,2:33,Devin Schmidt,Off Screen,"Dribble jumper, 3PT",Wing 3,0,8 Devin Schmidt > Off Screen > To Shooter's Right > Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,4,3:19,Simisola Shittu,Cut,To basket,Paint,1,30 Jaylen Sims > ISO > Top > Drives Left > Defense Commits > Ball Delivered > 45 Simisola Shittu > Cut > Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,4:22,Adam Atamna,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Takes Early Jump Shot > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,4,4:47,Armel Traore,P&R Roll Man,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Slips the Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,5:00,Adam Atamna,Spot Up,"Open, 3PT",Corner 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 0 Adam Atamna > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,4,5:51,Armel Traore,P&R Roll Man,To basket,Paint,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,6:28,Michael Rataj,Offensive Rebounds (Put Backs),To basket,Paint,1,12 Michael Rataj > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,6:30,Armel Traore,Spot Up,"Guarded, 3PT",Wing 3,0,12 Michael Rataj > Post-Up > Right Block > Right Shoulder > Dribble Move > Defense Commits > Ball Delivered > 94 Armel Traore > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,4,7:22,Adam Atamna,Transition,To basket,Paint,1,0 Adam Atamna > Transition > First Middle > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,7:35,Michael Rataj,Other,Other,Mid-range,0,12 Michael Rataj > Post-Up > Left Block > Right Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,4,8:11,Ibi Watson,Transition,"Open, 3PT",Corner 3,0,2 Ibi Watson > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,4,8:52,Ibi Watson,Spot Up,"Dribble jumper, 3PT",Top 3,1,2 Ibi Watson > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,0:57,Armel Traore,Spot Up,"Guarded, 3PT",Corner 3,0,94 Armel Traore > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,1:34,Meissa Faye,Offensive Rebounds (Put Backs),To basket,Paint,0,11 Meissa Faye > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,3,1:38,Meissa Faye,Cut,To basket,Paint,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Cut > Basket > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,3,2:15,Lenny Liedtke,Cut,Other,Paint,1,55 Lenny Liedtke > Cut > Flash > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,3,2:49,Devin Schmidt,Spot Up,"Guarded, 3PT",Corner 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Devin Schmidt > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,3:57,Michael Rataj,Transition,To basket,Paint,1,12 Michael Rataj > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,3,4:24,Adam Atamna,Isolation,"Dribble jumper, 3PT",Wing 3,1,0 Adam Atamna > ISO > Left > Drives Right > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,5:30,Meissa Faye,Spot Up,"Open, 3PT",Corner 3,1,30 Jaylen Sims > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,6:10,Ibi Watson,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,3,6:41,Michael Rataj,Spot Up,"Open, mid-range",Mid-range,1,12 Michael Rataj > Spot-Up > No Dribble Jumper > Open > Medium/17' to <3p > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,3,6:47,Jaylen Sims,Spot Up,"Dribble jumper, 3PT",Top 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > Drives Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,7:16,Marvin Heckel,Transition,"Dribble jumper, 3PT",Wing 3,0,47 Marvin Heckel > Transition > Ballhandler > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,7:48,Simisola Shittu,Spot Up,"Guarded, 3PT",Wing 3,0,2 Ibi Watson > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,8:55,Ibi Watson,Spot Up,"Guarded, 3PT",Corner 3,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,3,9:36,Armel Traore,P&R Roll Man,To basket,Paint,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,0:22,Meissa Faye,Off Screen,"Guarded, 3PT",Corner 3,0,11 Meissa Faye > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,2,1:01,Devin Schmidt,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,0,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,1:37,Lenny Liedtke,Transition,To basket,Paint,1,55 Lenny Liedtke > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,1:53,Lenny Liedtke,Cut,To basket,Paint,1,55 Lenny Liedtke > Cut > Basket > Make 2 Pts Foul > 0 Pts
+2026-10-27,Ulm@Lietkabelis,2,2:36,Devin Schmidt,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,8 Devin Schmidt > P&R Ball Handler > Left P&R > Side > Takes Early Jump Shot > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,2,3:09,Luke Fischer,Transition,To basket,Paint,1,43 Luke Fischer > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,3:22,Simisola Shittu,Cut,Other,Paint,1,45 Simisola Shittu > Cut > Screen > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,5:04,Michael Rataj,Isolation,"Dribble jumper, short (<17 ft)",Paint,0,12 Michael Rataj > ISO > Top > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,6:53,Jaylen Sims,Transition,"Dribble jumper, 3PT",Top 3,1,30 Jaylen Sims > Transition > Ballhandler > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,2,7:32,Armel Traore,Transition,To basket,Paint,1,94 Armel Traore > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,7:50,Jaylen Sims,Spot Up,"Guarded, 3PT",Corner 3,1,30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,2,8:18,Ibi Watson,P&R Ball Handler,To basket,Paint,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,8:56,Jaylen Sims,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,2,9:40,Jaylen Sims,Off Screen,"Open, 3PT",Corner 3,1,30 Jaylen Sims > Off Screen > To Shooter's Right > Fade > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,1,,Lenny Liedtke,Other,"Dribble jumper, 3PT",Wing 3,0,55 Lenny Liedtke > No Play Type > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,1,1:00,Adam Atamna,Spot Up,"Dribble jumper, 3PT",Wing 3,0,0 Adam Atamna > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,1,1:30,Adam Atamna,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,1,2:22,Meissa Faye,Cut,To basket,Paint,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Cut > Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,2:55,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,0,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,2:57,Luke Fischer,Spot Up,To basket,Paint,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 43 Luke Fischer > Spot-Up > Drives Straight > To Basket > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,3:25,Adam Atamna,Spot Up,"Guarded, 3PT",Wing 3,0,11 Meissa Faye > Post-Up > Left Block > Left Shoulder > Dribble Move > Defense Commits > Ball Delivered > 0 Adam Atamna > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-27,Ulm@Lietkabelis,1,3:56,Adam Atamna,Transition,To basket,Paint,1,0 Adam Atamna > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,4:24,Adam Atamna,Transition,To basket,Paint,1,0 Adam Atamna > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,4:51,Simisola Shittu,Cut,To basket,Paint,1,45 Simisola Shittu > Cut > Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,5:11,Michael Rataj,Other,Other,Paint,1,12 Michael Rataj > Post-Up > Left Block > Left Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,5:48,Ibi Watson,Spot Up,"Guarded, 3PT",Corner 3,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-27,Ulm@Lietkabelis,1,6:41,Marvin Heckel,Transition,To basket,Paint,1,47 Marvin Heckel > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,7:00,Armel Traore,Spot Up,"Dribble jumper, mid-range",Mid-range,0,94 Armel Traore > Spot-Up > Drives Left > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-27,Ulm@Lietkabelis,1,9:08,Ibi Watson,Spot Up,"Guarded, 3PT",Wing 3,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,4,0:06,Jaylen Sims,Spot Up,"Open, 3PT",Wing 3,0,2 Ibi Watson > P&R Ball Handler > Right P&R > Baseline > Go Away from Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,4,0:15,Jaylen Sims,P&R Ball Handler,To basket,Paint,1,30 Jaylen Sims > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > To Basket > Make 2 Pts Foul > 1 Pts
+2026-10-21,Ulm@PAOK,4,0:48,Michael Rataj,Other,Other,Paint,1,12 Michael Rataj > Post-Up > Right Block > Right Shoulder > Dribble Move > To Up and Under > Make 2 Pts
+2026-10-21,Ulm@PAOK,4,1:08,Jaylen Sims,Transition,To basket,Paint,0,30 Jaylen Sims > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,4,1:41,Adam Atamna,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-21,Ulm@PAOK,4,2:04,Ibi Watson,Spot Up,To basket,Paint,0,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > Drives Right > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,4,3:14,Jaylen Sims,Transition,To basket,Paint,0,30 Jaylen Sims > Transition > Right Wing > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,4,3:24,Jaylen Sims,P&R Ball Handler,To basket,Paint,0,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,4,3:48,Michael Rataj,Spot Up,To basket,Paint,1,12 Michael Rataj > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,4,4:26,Armel Traore,Cut,To basket,Paint,0,94 Armel Traore > Cut > Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,4,5:04,Michael Rataj,Other,Other,Mid-range,1,12 Michael Rataj > Post-Up > Left Block > Left Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-10-21,Ulm@PAOK,4,5:31,Jaylen Sims,Other,To basket,Paint,0,30 Jaylen Sims > Post-Up > Flash Middle > Left Shoulder > Dribble Move > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,4,6:14,Jaylen Sims,Spot Up,"Dribble jumper, short (<17 ft)",Paint,1,30 Jaylen Sims > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-21,Ulm@PAOK,4,7:15,Jaylen Sims,P&R Ball Handler,To basket,Paint,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,4,7:45,Meissa Faye,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,0,11 Meissa Faye > ISO > Right > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-21,Ulm@PAOK,4,8:27,Luke Fischer,Transition,To basket,Paint,1,43 Luke Fischer > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,4,8:59,Adam Atamna,P&R Ball Handler,To basket,Paint,0,0 Adam Atamna > P&R Ball Handler > High P&R > Go Away from Pick > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,4,9:46,Meissa Faye,Isolation,"Dribble jumper, 3PT",Top 3,0,11 Meissa Faye > ISO > Top > Early Jumper > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,3,,Adam Atamna,P&R Ball Handler,To basket,Paint,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,3,0:37,Luke Fischer,Off Screen,To basket,Paint,1,43 Luke Fischer > Off Screen > To Shooter's Left > Curl > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,3,1:23,Luke Fischer,Transition,To basket,Paint,1,43 Luke Fischer > Transition > First Middle > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,3,1:42,Meissa Faye,Spot Up,"Guarded, 3PT",Corner 3,1,11 Meissa Faye > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-21,Ulm@PAOK,3,2:34,Simisola Shittu,Other,To basket,Mid-range,0,45 Simisola Shittu > Post-Up > Right Block > Left Shoulder > Dribble Move > To Drop Step > Miss 2 Pts
+2026-10-21,Ulm@PAOK,3,3:20,Jaylen Sims,Other,To basket,Mid-range,0,30 Jaylen Sims > Post-Up > Left Block > Right Shoulder > Dribble Move > To Drop Step > Miss 2 Pts
+2026-10-21,Ulm@PAOK,3,5:07,Adam Atamna,Transition,"Dribble jumper, 3PT",Top 3,1,0 Adam Atamna > Transition > Ballhandler > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-21,Ulm@PAOK,3,5:35,Jaylen Sims,P&R Ball Handler,"Dribble jumper, 3PT",Corner 3,0,30 Jaylen Sims > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,3,5:43,Meissa Faye,Off Screen,To basket,Paint,0,11 Meissa Faye > Off Screen > To Shooter's Right > Curl > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,3,6:52,Jaylen Sims,Transition,To basket,Paint,1,30 Jaylen Sims > Transition > Right Wing > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,3,7:04,Armel Traore,Transition,To basket,Paint,0,94 Armel Traore > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,3,7:57,Michael Rataj,Spot Up,"Guarded, 3PT",Corner 3,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,3,8:41,Jaylen Sims,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-21,Ulm@PAOK,3,9:05,Ibi Watson,Transition,"Guarded, 3PT",Corner 3,0,2 Ibi Watson > Transition > Left Wing > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,2,1:09,Ibi Watson,Spot Up,"Guarded, 3PT",Wing 3,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-21,Ulm@PAOK,2,2:15,Simisola Shittu,P&R Roll Man,"Open, 3PT",Top 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,2,3:08,Simisola Shittu,Isolation,To basket,Paint,1,45 Simisola Shittu > ISO > Top > Drives Right > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,2,3:36,Jaylen Sims,Offensive Rebounds (Put Backs),To basket,Paint,1,30 Jaylen Sims > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,2,3:41,Michael Rataj,Spot Up,"Dribble jumper, short (<17 ft)",Paint,0,12 Michael Rataj > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-21,Ulm@PAOK,2,4:21,Jaylen Sims,Spot Up,"Open, 3PT",Wing 3,1,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-21,Ulm@PAOK,2,5:18,Michael Rataj,Spot Up,"Guarded, 3PT",Wing 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,2,5:49,Ibi Watson,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-21,Ulm@PAOK,2,6:27,Ibi Watson,Off Screen,"Open, mid-range",Mid-range,1,2 Ibi Watson > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Open > Medium/17' to <3p > Make 2 Pts
+2026-10-21,Ulm@PAOK,2,7:00,Adam Atamna,Spot Up,"Guarded, 3PT",Corner 3,1,0 Adam Atamna > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-21,Ulm@PAOK,2,7:34,Armel Traore,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,1,94 Armel Traore > ISO > Right > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-21,Ulm@PAOK,2,8:07,Michael Rataj,Spot Up,"Dribble jumper, short (<17 ft)",Paint,1,2 Ibi Watson > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-21,Ulm@PAOK,2,8:47,Meissa Faye,Off Screen,To basket,Paint,0,11 Meissa Faye > Off Screen > To Shooter's Right > Straight > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,1,0:54,Michael Rataj,Other,To basket,Mid-range,0,12 Michael Rataj > Post-Up > Left Block > Right Shoulder > Dribble Move > To Drop Step > Miss 2 Pts
+2026-10-21,Ulm@PAOK,1,1:53,Jaylen Sims,Off Screen,"Dribble jumper, short (<17 ft)",Mid-range,1,30 Jaylen Sims > Off Screen > To Shooter's Right > Straight > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-21,Ulm@PAOK,1,2:32,Luke Fischer,Spot Up,To basket,Paint,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 43 Luke Fischer > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,1,4:24,Adam Atamna,Transition,To basket,Paint,1,0 Adam Atamna > Transition > First Middle > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,1,4:30,Adam Atamna,Transition,To basket,Paint,0,0 Adam Atamna > Transition > Leak Outs > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,1,4:46,Luke Fischer,Other,To basket,Paint,1,43 Luke Fischer > Hand Off > From Dribble > Right > To Basket > Make 2 Pts
+2026-10-21,Ulm@PAOK,1,5:04,Adam Atamna,Transition,To basket,Paint,0,0 Adam Atamna > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,1,5:53,Ibi Watson,Spot Up,"Guarded, 3PT",Wing 3,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-21,Ulm@PAOK,1,6:22,Michael Rataj,Other,Other,Mid-range,1,12 Michael Rataj > Post-Up > Right Block > Right Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-10-21,Ulm@PAOK,1,6:55,Michael Rataj,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-21,Ulm@PAOK,1,7:38,Simisola Shittu,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts Foul > 1 Pts
+2026-10-21,Ulm@PAOK,1,8:44,Armel Traore,Cut,To basket,Paint,0,94 Armel Traore > Cut > Basket > Miss 2 Pts
+2026-10-21,Ulm@PAOK,1,8:54,Ibi Watson,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-21,Ulm@PAOK,1,9:21,Meissa Faye,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,4,0:02,Simisola Shittu,Transition,To basket,Paint,1,45 Simisola Shittu > Transition > Right Wing > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,4,0:17,Jaylen Sims,Transition,To basket,Paint,1,30 Jaylen Sims > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,4,0:49,Jaylen Sims,P&R Ball Handler,To basket,Mid-range,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,4,1:17,Adam Atamna,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,1,0 Adam Atamna > ISO > Right > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-14,Bosna@Ulm,4,1:29,Jaylen Sims,Spot Up,"Open, 3PT",Wing 3,0,2 Ibi Watson > ISO > Top > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,4,2:07,Simisola Shittu,Other,To basket,Mid-range,1,45 Simisola Shittu > Post-Up > Right Block > Left Shoulder > Dribble Move > To Drop Step > Make 2 Pts
+2026-10-14,Bosna@Ulm,4,3:03,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,1,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts Foul > 1 Pts
+2026-10-14,Bosna@Ulm,4,3:03,Simisola Shittu,Cut,To basket,Paint,0,45 Simisola Shittu > Cut > Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,4,4:18,Armel Traore,P&R Roll Man,"Open, 3PT",Top 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,4,4:42,Jaylen Sims,Other,Other,Mid-range,1,30 Jaylen Sims > Post-Up > Right Block > Face-up > Jumper > Make 2 Pts
+2026-10-14,Bosna@Ulm,4,5:02,Meissa Faye,Off Screen,"Open, 3PT",Wing 3,0,11 Meissa Faye > Off Screen > To Shooter's Left > Straight > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,4,7:04,Jaylen Sims,Spot Up,"Guarded, 3PT",Wing 3,0,30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,4,7:37,Armel Traore,P&R Roll Man,"Open, 3PT",Wing 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,4,8:06,Adam Atamna,Spot Up,"Guarded, 3PT",Top 3,0,0 Adam Atamna > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,4,8:15,Ibi Watson,Off Screen,"Guarded, 3PT",Wing 3,0,2 Ibi Watson > Off Screen > To Shooter's Left > Straight > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,4,8:57,Adam Atamna,Transition,"Open, 3PT",Wing 3,0,0 Adam Atamna > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,3,,Ibi Watson,Isolation,"Dribble jumper, 3PT",Top 3,0,2 Ibi Watson > ISO > Top > Early Jumper > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,3,0:35,Simisola Shittu,Cut,To basket,Paint,1,45 Simisola Shittu > Cut > Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,3,1:05,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,1,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,3,1:06,Adam Atamna,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,0,0 Adam Atamna > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-14,Bosna@Ulm,3,1:48,Adam Atamna,Isolation,To basket,Paint,1,0 Adam Atamna > ISO > Top > Drives Right > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,3,2:28,Simisola Shittu,P&R Roll Man,"Guarded, 3PT",Wing 3,0,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Pick and Pops > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,3,3:01,Jaylen Sims,Transition,To basket,Paint,1,30 Jaylen Sims > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,3,4:25,Devin Schmidt,Transition,To basket,Paint,1,8 Devin Schmidt > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,3,5:05,Devin Schmidt,Transition,"Open, 3PT",Corner 3,0,8 Devin Schmidt > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,3,5:52,Adam Atamna,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,3,6:37,Armel Traore,Isolation,"Dribble jumper, mid-range",Mid-range,1,94 Armel Traore > ISO > Right > Drives Left > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-14,Bosna@Ulm,3,7:16,Meissa Faye,Transition,To basket,Paint,0,11 Meissa Faye > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,3,,Lenny Liedtke,Other,To basket,Paint,1,55 Lenny Liedtke > No Play Type > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,3,8:31,Marvin Heckel,Spot Up,"Open, 3PT",Top 3,1,47 Marvin Heckel > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,3,,Marvin Heckel,Other,"Open, 3PT",Corner 3,0,47 Marvin Heckel > No Play Type > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,3,9:32,Lenny Liedtke,P&R Roll Man,To basket,Paint,1,47 Marvin Heckel > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 55 Lenny Liedtke > P&R Roll Man > Rolls to Basket > Make 2 Pts Foul > 1 Pts
+2026-10-14,Bosna@Ulm,2,0:38,Adam Atamna,Transition,"Dribble jumper, 3PT",Wing 3,0,0 Adam Atamna > Transition > Ballhandler > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,2,1:04,Simisola Shittu,Other,To basket,Paint,0,45 Simisola Shittu > Post-Up > Right Block > Left Shoulder > Dribble Move > To Drop Step > Miss 2 Pts
+2026-10-14,Bosna@Ulm,2,2:08,Meissa Faye,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,2,2:43,Simisola Shittu,P&R Roll Man,To basket,Paint,1,0 Adam Atamna > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,2,3:27,Lenny Liedtke,Spot Up,"Open, 3PT",Corner 3,1,55 Lenny Liedtke > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,2,3:47,Jaylen Sims,Spot Up,"Guarded, 3PT",Wing 3,1,0 Adam Atamna > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,2,4:12,Adam Atamna,Other,"Guarded, 3PT",Corner 3,0,0 Adam Atamna > Hand Off > From Stationary > Left > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,2,4:18,Simisola Shittu,P&R Roll Man,To basket,Paint,0,0 Adam Atamna > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,2,5:26,Ibi Watson,Spot Up,"Guarded, 3PT",Top 3,1,2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,2,5:56,Armel Traore,Cut,To basket,Paint,0,2 Ibi Watson > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > Cut > Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,2,6:30,Ibi Watson,Spot Up,"Guarded, 3PT",Top 3,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,2,7:09,Michael Rataj,Cut,Other,Mid-range,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Cut > Flash > Make 2 Pts
+2026-10-14,Bosna@Ulm,2,7:46,Ibi Watson,Spot Up,"Dribble jumper, 3PT",Top 3,0,30 Jaylen Sims > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > Drives Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,2,8:10,Ibi Watson,Off Screen,"Guarded, 3PT",Wing 3,0,2 Ibi Watson > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,2,8:42,Armel Traore,Transition,To basket,Paint,1,94 Armel Traore > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,2,9:00,Ibi Watson,Spot Up,"Guarded, 3PT",Top 3,0,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,2,9:25,Jaylen Sims,Spot Up,"Dribble jumper, mid-range",Mid-range,0,30 Jaylen Sims > Spot-Up > Drives Right > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,,Dwayne Koroma,Offensive Rebounds (Put Backs),To basket,Paint,1,3 Dwayne Koroma > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,1,,Jaylen Sims,Spot Up,"Dribble jumper, 3PT",Corner 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > Drives Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,1,0:33,Dwayne Koroma,Offensive Rebounds (Put Backs),To basket,Paint,0,3 Dwayne Koroma > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,0:35,Dwayne Koroma,P&R Roll Man,To basket,Paint,0,0 Adam Atamna > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 3 Dwayne Koroma > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,1:36,Devin Schmidt,Off Screen,To basket,Paint,0,8 Devin Schmidt > Off Screen > To Shooter's Left > Straight > To Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,1:57,Devin Schmidt,Spot Up,"Guarded, 3PT",Wing 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Devin Schmidt > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,1,2:29,Meissa Faye,Spot Up,"Guarded, 3PT",Corner 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,1,2:52,Meissa Faye,Cut,To basket,Paint,1,8 Devin Schmidt > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Cut > Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,1,3:27,Lenny Liedtke,Transition,To basket,Paint,1,55 Lenny Liedtke > Transition > Left Wing > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,1,3:47,Ibi Watson,Spot Up,"Dribble jumper, 3PT",Wing 3,1,0 Adam Atamna > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,1,4:09,Devin Schmidt,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Devin Schmidt > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,4:22,Ibi Watson,P&R Ball Handler,To basket,Paint,0,2 Ibi Watson > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,4:44,Marvin Heckel,Isolation,To basket,Paint,1,47 Marvin Heckel > ISO > Top > Drives Right > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,1,5:07,Simisola Shittu,P&R Roll Man,To basket,Paint,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Pick and Pops > Drives Left > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,1,5:42,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,0,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,5:44,Ibi Watson,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Ibi Watson > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,6:22,Jaylen Sims,Transition,To basket,Paint,0,30 Jaylen Sims > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,6:55,Marvin Heckel,Transition,To basket,Paint,1,47 Marvin Heckel > Transition > Right Wing > To Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,1,7:30,Jaylen Sims,Cut,To basket,Paint,0,47 Marvin Heckel > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Cut > Basket > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,8:09,Armel Traore,Offensive Rebounds (Put Backs),To basket,Paint,1,94 Armel Traore > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-14,Bosna@Ulm,1,8:12,Michael Rataj,Other,Other,Mid-range,0,12 Michael Rataj > Post-Up > Right Block > Right Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-10-14,Bosna@Ulm,1,8:41,Jaylen Sims,P&R Roll Man,"Guarded, 3PT",Top 3,1,2 Ibi Watson > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > P&R Roll Man > Pick and Pops > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-14,Bosna@Ulm,1,,Michael Rataj,Other,"Open, 3PT",Top 3,0,12 Michael Rataj > No Play Type > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-14,Bosna@Ulm,1,9:44,Armel Traore,P&R Roll Man,To basket,Paint,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,4,0:02,Adam Atamna,Spot Up,"Dribble jumper, 3PT",Top 3,0,0 Adam Atamna > Spot-Up > Drives Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,4,0:08,Jaylen Sims,Spot Up,"Guarded, 3PT",Wing 3,0,0 Adam Atamna > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,4,0:19,Ibi Watson,Spot Up,To basket,Paint,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > Drives Right > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,4,0:28,Devin Schmidt,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Devin Schmidt > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-07,Ulm@Manresa,4,0:44,Michael Rataj,Other,To basket,Paint,1,12 Michael Rataj > Post-Up > Right Block > Right Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,4,1:27,Devin Schmidt,Spot Up,"Dribble jumper, 3PT",Wing 3,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Devin Schmidt > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,4,2:26,Simisola Shittu,Transition,To basket,Paint,1,45 Simisola Shittu > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,4,2:56,Jaylen Sims,Transition,"Open, 3PT",Top 3,1,30 Jaylen Sims > Transition > Trailer > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,4,3:36,Michael Rataj,P&R Ball Handler,To basket,Paint,0,12 Michael Rataj > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,4,4:20,Ibi Watson,Off Screen,"Open, 3PT",Top 3,0,2 Ibi Watson > Off Screen > To Shooter's Left > Straight > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,4,4:43,Ibi Watson,Other,Other,Mid-range,0,2 Ibi Watson > Post-Up > Left Block > Left Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-10-07,Ulm@Manresa,4,5:06,Adam Atamna,Off Screen,"Open, 3PT",Top 3,0,0 Adam Atamna > Off Screen > To Shooter's Left > Straight > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,4,6:08,Devin Schmidt,Transition,"Dribble jumper, 3PT",Top 3,0,8 Devin Schmidt > Transition > Ballhandler > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,4,6:26,Devin Schmidt,Off Screen,"Guarded, 3PT",Wing 3,1,8 Devin Schmidt > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,4,7:09,Simisola Shittu,Transition,To basket,Mid-range,0,45 Simisola Shittu > Transition > Trailer > To Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,4,7:45,Simisola Shittu,Transition,To basket,Paint,1,45 Simisola Shittu > Transition > Right Wing > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,4,8:01,Meissa Faye,P&R Roll Man,To basket,Paint,0,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > P&R Roll Man > Slips the Pick > To Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,4,8:34,Dwayne Koroma,P&R Roll Man,To basket,Paint,0,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 3 Dwayne Koroma > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,4,9:08,Adam Atamna,Transition,To basket,Paint,1,0 Adam Atamna > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,3,0:09,Devin Schmidt,Transition,"Open, 3PT",Wing 3,1,8 Devin Schmidt > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,3,0:40,Devin Schmidt,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,3,0:59,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,1,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,3,0:59,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,0,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,3,,Adam Atamna,Other,To basket,Paint,0,0 Adam Atamna > No Play Type > To Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,3,1:46,Meissa Faye,Offensive Rebounds (Put Backs),Put-back attempt,Paint,0,11 Meissa Faye > Offensive Rebound > Long > Scoring Attempt > Short to < 17' > Miss 2 Pts
+2026-10-07,Ulm@Manresa,3,1:48,Simisola Shittu,P&R Roll Man,To basket,Paint,0,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,3,2:48,Devin Schmidt,Spot Up,"Dribble jumper, 3PT",Corner 3,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Devin Schmidt > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,3,4:27,Michael Rataj,Spot Up,"Dribble jumper, 3PT",Top 3,0,12 Michael Rataj > Spot-Up > Drives Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,3,5:28,Michael Rataj,Cut,To basket,Paint,1,12 Michael Rataj > Cut > Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,3,5:39,Ibi Watson,Spot Up,"Guarded, 3PT",Wing 3,0,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,3,6:15,Michael Rataj,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,12 Michael Rataj > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-07,Ulm@Manresa,3,7:15,Michael Rataj,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,1,12 Michael Rataj > ISO > Right > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-07,Ulm@Manresa,3,7:39,Jaylen Sims,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,1,30 Jaylen Sims > ISO > Left > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-07,Ulm@Manresa,3,9:00,Ibi Watson,Spot Up,"Dribble jumper, 3PT",Top 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,3,9:27,Simisola Shittu,Spot Up,To basket,Paint,0,45 Simisola Shittu > Spot-Up > Drives Left > To Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,2,0:02,Jaylen Sims,Transition,To basket,Paint,1,30 Jaylen Sims > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,2,0:50,Michael Rataj,Other,To basket,Paint,1,12 Michael Rataj > Post-Up > Right Block > Left Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,2,1:26,Jaylen Sims,Offensive Rebounds (Put Backs),To basket,Paint,0,30 Jaylen Sims > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,2,1:30,Michael Rataj,Spot Up,"Dribble jumper, mid-range",Mid-range,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Spot-Up > Drives Right > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-07,Ulm@Manresa,2,1:48,Lenny Liedtke,Spot Up,"Dribble jumper, short (<17 ft)",Paint,0,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 55 Lenny Liedtke > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-07,Ulm@Manresa,2,3:38,Meissa Faye,Spot Up,"Dribble jumper, 3PT",Wing 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Spot-Up > Drives Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,2,4:29,Adam Atamna,Cut,To basket,Paint,1,2 Ibi Watson > P&R Ball Handler > Right P&R > Side > Go Away from Pick > Defense Commits > Ball Delivered > 0 Adam Atamna > Cut > Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,2,4:49,Adam Atamna,Transition,To basket,Paint,0,0 Adam Atamna > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,2,5:16,Ibi Watson,Transition,"Guarded, 3PT",Wing 3,1,2 Ibi Watson > Transition > Right Wing > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,2,6:14,Armel Traore,P&R Roll Man,To basket,Paint,1,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Rolls to Basket > Make 2 Pts Foul > 1 Pts
+2026-10-07,Ulm@Manresa,2,6:48,Ibi Watson,Cut,Other,Paint,1,2 Ibi Watson > Cut > Screen > Make 2 Pts Foul > 1 Pts
+2026-10-07,Ulm@Manresa,2,7:27,Adam Atamna,Other,"Guarded, 3PT",Corner 3,0,0 Adam Atamna > Hand Off > From Stationary > Left > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,2,7:59,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,1,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts Foul > 1 Pts
+2026-10-07,Ulm@Manresa,2,8:00,Jaylen Sims,Transition,"Dribble jumper, 3PT",Wing 3,0,30 Jaylen Sims > Transition > Ballhandler > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,2,8:36,Jaylen Sims,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,30 Jaylen Sims > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-07,Ulm@Manresa,2,8:57,Adam Atamna,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,2,9:29,Devin Schmidt,Isolation,To basket,Paint,0,8 Devin Schmidt > ISO > Top > Drives Right > To Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,1,0:13,Jaylen Sims,Cut,To basket,Paint,1,30 Jaylen Sims > Cut > Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,1,0:19,Devin Schmidt,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,1,0:55,Devin Schmidt,Spot Up,"Guarded, 3PT",Wing 3,1,8 Devin Schmidt > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,1,1:01,Michael Rataj,Off Screen,"Dribble jumper, short (<17 ft)",Paint,0,12 Michael Rataj > Off Screen > To Shooter's Left > Straight > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-07,Ulm@Manresa,1,1:28,Armel Traore,P&R Roll Man,"Open, 3PT",Top 3,0,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,1,1:42,Marvin Heckel,Transition,"Open, 3PT",Corner 3,0,47 Marvin Heckel > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,1,2:07,Lenny Liedtke,P&R Roll Man,"Guarded, 3PT",Wing 3,0,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 55 Lenny Liedtke > P&R Roll Man > Slips the Pick > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,1,2:26,Jaylen Sims,Transition,"Dribble jumper, 3PT",Top 3,1,30 Jaylen Sims > Transition > Ballhandler > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,1,3:10,Armel Traore,Spot Up,"Guarded, 3PT",Corner 3,0,30 Jaylen Sims > ISO > Right > Defense Commits > Ball Delivered > 94 Armel Traore > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,1,3:25,Marvin Heckel,Transition,"Open, 3PT",Corner 3,0,47 Marvin Heckel > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,1,3:42,Lenny Liedtke,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,55 Lenny Liedtke > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-07,Ulm@Manresa,1,4:49,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,1,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,1,4:52,Ibi Watson,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-07,Ulm@Manresa,1,5:18,Michael Rataj,Off Screen,To basket,Paint,1,12 Michael Rataj > Off Screen > To Shooter's Left > Curl > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,1,5:47,Michael Rataj,Transition,To basket,Paint,1,12 Michael Rataj > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,1,6:09,Marvin Heckel,Spot Up,To basket,Paint,1,47 Marvin Heckel > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,1,6:30,Marvin Heckel,Spot Up,"Open, 3PT",Wing 3,1,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 47 Marvin Heckel > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-07,Ulm@Manresa,1,7:39,Michael Rataj,P&R Ball Handler,To basket,Paint,1,12 Michael Rataj > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,1,7:50,Michael Rataj,Other,Other,Mid-range,0,12 Michael Rataj > Post-Up > Right Block > Right Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-10-07,Ulm@Manresa,1,8:22,Armel Traore,P&R Roll Man,To basket,Paint,1,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-10-07,Ulm@Manresa,1,9:12,Ibi Watson,P&R Ball Handler,To basket,Paint,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-07,Ulm@Manresa,1,9:47,Ibi Watson,Off Screen,To basket,Mid-range,0,2 Ibi Watson > Off Screen > To Shooter's Left > Flare > To Basket > Miss 2 Pts
+2026-09-30,Balkan@Ulm,4,0:10,Armel Traore,P&R Roll Man,"Open, mid-range",Mid-range,1,2 Ibi Watson > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Medium/17' to <3p > Make 2 Pts
+2026-09-30,Balkan@Ulm,4,0:44,Ibi Watson,Isolation,To basket,Paint,1,2 Ibi Watson > ISO > Top > Drives Left > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,4,1:05,Jaylen Sims,Spot Up,"Guarded, 3PT",Corner 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,4,1:49,Ibi Watson,Offensive Rebounds (Put Backs),Put-back attempt,Mid-range,1,2 Ibi Watson > Offensive Rebound > Short > Scoring Attempt > Short to < 17' > Make 2 Pts
+2026-09-30,Balkan@Ulm,4,1:51,Jaylen Sims,Spot Up,"Guarded, 3PT",Corner 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,4,2:56,Ibi Watson,Spot Up,"Guarded, 3PT",Corner 3,1,2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,4,4:39,Adam Atamna,Transition,To basket,Paint,1,0 Adam Atamna > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,4,6:05,Simisola Shittu,P&R Roll Man,To basket,Paint,1,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,4,,Adam Atamna,Other,To basket,Paint,1,0 Adam Atamna > No Play Type > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,4,7:19,Ibi Watson,Other,To basket,Mid-range,0,2 Ibi Watson > Hand Off > From Dribble > Right > To Basket > Miss 2 Pts
+2026-09-30,Balkan@Ulm,4,7:51,Meissa Faye,Spot Up,"Guarded, 3PT",Wing 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,4,9:04,Simisola Shittu,Cut,Other,Paint,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > Cut > Flash > Make 2 Pts
+2026-09-30,Balkan@Ulm,3,0:07,Armel Traore,P&R Roll Man,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > P&R Roll Man > Pick and Pops > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-09-30,Balkan@Ulm,3,0:41,Meissa Faye,Transition,To basket,Paint,1,11 Meissa Faye > Transition > Right Wing > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,3,1:06,Jaylen Sims,Spot Up,"Open, 3PT",Corner 3,1,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,3,1:47,Michael Rataj,Transition,"Open, 3PT",Corner 3,1,12 Michael Rataj > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,3,2:08,Armel Traore,Spot Up,"Open, 3PT",Top 3,0,94 Armel Traore > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,3,2:47,Jaylen Sims,Spot Up,"Guarded, 3PT",Corner 3,0,2 Ibi Watson > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,3,4:05,Armel Traore,Spot Up,To basket,Mid-range,0,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > Spot-Up > Drives Left > To Basket > Miss 2 Pts
+2026-09-30,Balkan@Ulm,3,5:14,Adam Atamna,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,0 Adam Atamna > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,3,5:37,Dwayne Koroma,P&R Roll Man,To basket,Paint,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 3 Dwayne Koroma > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-09-30,Balkan@Ulm,3,6:10,Simisola Shittu,P&R Roll Man,"Guarded, 3PT",Top 3,1,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 45 Simisola Shittu > P&R Roll Man > Pick and Pops > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,3,6:45,Ibi Watson,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,2 Ibi Watson > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-09-30,Balkan@Ulm,3,7:20,Jaylen Sims,Cut,Other,Paint,0,30 Jaylen Sims > Cut > Screen > Miss 2 Pts
+2026-09-30,Balkan@Ulm,3,7:57,Adam Atamna,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,0 Adam Atamna > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-09-30,Balkan@Ulm,3,8:40,Michael Rataj,Other,Other,Mid-range,1,12 Michael Rataj > Post-Up > Right Block > Right Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-09-30,Balkan@Ulm,3,9:17,Jaylen Sims,Other,Other,Mid-range,0,30 Jaylen Sims > Post-Up > Left Block > Left Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-09-30,Balkan@Ulm,2,0:24,Jaylen Sims,Isolation,"Dribble jumper, 3PT",Top 3,0,30 Jaylen Sims > ISO > Top > Early Jumper > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,2,1:33,Armel Traore,Transition,To basket,Paint,1,94 Armel Traore > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,2,1:54,Meissa Faye,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,2,2:26,Devin Schmidt,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,8 Devin Schmidt > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-09-30,Balkan@Ulm,2,3:11,Michael Rataj,Transition,To basket,Paint,1,12 Michael Rataj > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,2,3:42,Simisola Shittu,Offensive Rebounds (Put Backs),To basket,Paint,1,45 Simisola Shittu > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,2,3:44,Jaylen Sims,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,30 Jaylen Sims > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-09-30,Balkan@Ulm,2,4:25,Simisola Shittu,Cut,To basket,Paint,1,45 Simisola Shittu > Cut > Basket > Make 2 Pts Foul > 0 Pts
+2026-09-30,Balkan@Ulm,2,4:54,Michael Rataj,Transition,To basket,Paint,1,12 Michael Rataj > Transition > Left Wing > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,2,5:21,Devin Schmidt,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,2,5:52,Armel Traore,Spot Up,"Guarded, 3PT",Wing 3,1,2 Ibi Watson > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,2,6:20,Michael Rataj,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,12 Michael Rataj > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-09-30,Balkan@Ulm,2,6:54,Jaylen Sims,Off Screen,"Guarded, 3PT",Wing 3,0,30 Jaylen Sims > Off Screen > To Shooter's Left > Straight > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,2,7:20,Ibi Watson,Transition,"Open, 3PT",Wing 3,0,2 Ibi Watson > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,2,7:45,Jaylen Sims,Transition,To basket,Paint,1,30 Jaylen Sims > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,2,8:13,Adam Atamna,Spot Up,"Guarded, 3PT",Wing 3,0,0 Adam Atamna > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,2,8:37,Michael Rataj,Offensive Rebounds (Put Backs),To basket,Paint,1,12 Michael Rataj > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,2,8:39,Jaylen Sims,Spot Up,"Guarded, 3PT",Wing 3,0,0 Adam Atamna > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,2,9:10,Meissa Faye,P&R Ball Handler,To basket,Paint,1,11 Meissa Faye > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-09-30,Balkan@Ulm,2,9:36,Meissa Faye,Spot Up,"Guarded, 3PT",Wing 3,0,0 Adam Atamna > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,1,1:23,Armel Traore,Spot Up,"Dribble jumper, 3PT",Wing 3,0,47 Marvin Heckel > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 94 Armel Traore > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,1,1:57,Armel Traore,Spot Up,To basket,Paint,1,94 Armel Traore > Spot-Up > Drives Straight > To Basket > Make 2 Pts Foul > 0 Pts
+2026-09-30,Balkan@Ulm,1,2:35,Simisola Shittu,Other,To basket,Paint,1,45 Simisola Shittu > Post-Up > Right Block > Left Shoulder > Dribble Move > To Drop Step > Make 2 Pts
+2026-09-30,Balkan@Ulm,1,3:08,Meissa Faye,Spot Up,"Guarded, 3PT",Corner 3,0,2 Ibi Watson > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Meissa Faye > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,1,3:41,Ibi Watson,Spot Up,"Open, 3PT",Corner 3,1,8 Devin Schmidt > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,1,4:25,Devin Schmidt,Spot Up,"Open, 3PT",Corner 3,1,8 Devin Schmidt > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,1,4:49,Jaylen Sims,Other,"Dribble jumper, short (<17 ft)",Mid-range,1,30 Jaylen Sims > Hand Off > From Dribble > Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-09-30,Balkan@Ulm,1,5:20,Ibi Watson,Transition,"Dribble jumper, 3PT",Corner 3,0,2 Ibi Watson > Transition > Left Wing > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,1,5:46,Devin Schmidt,Spot Up,"Dribble jumper, 3PT",Wing 3,1,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Devin Schmidt > Spot-Up > Drives Straight > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,1,6:35,Ibi Watson,Offensive Rebounds (Put Backs),Put-back attempt,Mid-range,1,2 Ibi Watson > Offensive Rebound > Short > Scoring Attempt > Short to < 17' > Make 2 Pts
+2026-09-30,Balkan@Ulm,1,6:38,Michael Rataj,Spot Up,"Guarded, 3PT",Wing 3,0,2 Ibi Watson > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 12 Michael Rataj > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-30,Balkan@Ulm,1,7:56,Ibi Watson,Spot Up,"Guarded, 3PT",Wing 3,1,30 Jaylen Sims > ISO > Top > Defense Commits > Ball Delivered > 2 Ibi Watson > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,1,8:26,Ibi Watson,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,2 Ibi Watson > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-09-30,Balkan@Ulm,1,9:07,Jaylen Sims,Transition,"Dribble jumper, 3PT",Wing 3,1,30 Jaylen Sims > Transition > Ballhandler > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-09-30,Balkan@Ulm,1,9:45,Jaylen Sims,Spot Up,"Guarded, mid-range",Mid-range,1,30 Jaylen Sims > Spot-Up > No Dribble Jumper > Guarded > Medium/17' to <3p > Make 2 Pts
