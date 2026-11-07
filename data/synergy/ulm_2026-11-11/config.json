@@ -1,0 +1,12 @@
+{
+  "opponent":  {"name": "Ulm",     "abbr": "RAT", "games": 6, "games_all": 15},
+  "reference": {"name": "BC Roma", "abbr": "BCR", "games": 6, "games_all": 12},
+  "league": "EuroCup",
+  "competition": "EuroCup",
+  "league_games_each": 6,
+  "season": "2026-27",
+  "date": "7 Nov 2026",
+  "author": "Giulia Martini",
+  "lineup_min_poss": 5,
+  "exclude_players": []
+}

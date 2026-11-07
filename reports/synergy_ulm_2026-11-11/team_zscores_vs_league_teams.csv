@@ -1,0 +1,49 @@
+team,side,metric,value,league_mean,league_sd,z_better_is_higher,basis
+BC Roma,offense,PPP,1.033,0.953,0.065,1.236,all_games
+BC Roma,offense,eFG%,57.6,52.547,4.075,1.24,all_games
+BC Roma,offense,TO%,15.9,15.475,1.651,-0.257,all_games
+BC Roma,offense,%FT,12.6,12.766,1.423,-0.116,all_games
+BC Roma,offense,Score%,46.8,43.409,2.878,1.178,all_games
+BC Roma,offense,FG%,49.6,45.691,3.442,1.136,all_games
+Ulm,offense,PPP,0.969,0.953,0.065,0.245,all_games
+Ulm,offense,eFG%,54.9,52.547,4.075,0.577,all_games
+Ulm,offense,TO%,16.2,15.475,1.651,-0.439,all_games
+Ulm,offense,%FT,11.6,12.766,1.423,-0.819,all_games
+Ulm,offense,Score%,44.2,43.409,2.878,0.275,all_games
+Ulm,offense,FG%,48.3,45.691,3.442,0.758,all_games
+BC Roma,defense,PPP,1.019,0.953,0.056,-1.182,all_games
+BC Roma,defense,eFG%,54.8,52.562,3.24,-0.691,all_games
+BC Roma,defense,TO%,13.7,15.494,2.094,-0.857,all_games
+BC Roma,defense,%FT,14.4,12.756,1.58,-1.04,all_games
+BC Roma,defense,Score%,46.2,43.397,2.426,-1.155,all_games
+BC Roma,defense,FG%,47.2,45.697,2.91,-0.517,all_games
+Ulm,defense,PPP,0.962,0.953,0.056,-0.156,all_games
+Ulm,defense,eFG%,53.3,52.562,3.24,-0.228,all_games
+Ulm,defense,TO%,15.3,15.494,2.094,-0.093,all_games
+Ulm,defense,%FT,13.7,12.756,1.58,-0.597,all_games
+Ulm,defense,Score%,44.0,43.397,2.426,-0.249,all_games
+Ulm,defense,FG%,46.0,45.697,2.91,-0.104,all_games
+BC Roma,offense,PPP,0.97,0.953,0.065,0.26,competition_only
+BC Roma,offense,eFG%,53.4,52.547,4.075,0.209,competition_only
+BC Roma,offense,TO%,17.4,15.475,1.651,-1.166,competition_only
+BC Roma,offense,%FT,14.0,12.766,1.423,0.868,competition_only
+BC Roma,offense,Score%,44.0,43.409,2.878,0.205,competition_only
+BC Roma,offense,FG%,46.3,45.691,3.442,0.177,competition_only
+Ulm,offense,PPP,1.004,0.953,0.065,0.787,competition_only
+Ulm,offense,eFG%,59.6,52.547,4.075,1.731,competition_only
+Ulm,offense,TO%,18.6,15.475,1.651,-1.893,competition_only
+Ulm,offense,%FT,10.8,12.766,1.423,-1.382,competition_only
+Ulm,offense,Score%,44.5,43.409,2.878,0.379,competition_only
+Ulm,offense,FG%,51.6,45.691,3.442,1.717,competition_only
+BC Roma,defense,PPP,0.995,0.953,0.056,-0.75,competition_only
+BC Roma,defense,eFG%,53.9,52.562,3.24,-0.413,competition_only
+BC Roma,defense,TO%,14.0,15.494,2.094,-0.713,competition_only
+BC Roma,defense,%FT,12.4,12.756,1.58,0.225,competition_only
+BC Roma,defense,Score%,45.1,43.397,2.426,-0.702,competition_only
+BC Roma,defense,FG%,46.5,45.697,2.91,-0.276,competition_only
+Ulm,defense,PPP,0.951,0.953,0.056,0.042,competition_only
+Ulm,defense,eFG%,53.8,52.562,3.24,-0.382,competition_only
+Ulm,defense,TO%,17.6,15.494,2.094,1.006,competition_only
+Ulm,defense,%FT,15.5,12.756,1.58,-1.736,competition_only
+Ulm,defense,Score%,44.6,43.397,2.426,-0.496,competition_only
+Ulm,defense,FG%,47.9,45.697,2.91,-0.757,competition_only
