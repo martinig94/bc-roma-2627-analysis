@@ -1,0 +1,44 @@
+<!--
+HOW TO EDIT THIS PAGE (this comment is not shown on the site)
+- This file is yours: it is never overwritten. It is linked at the top of the opponent analysis of the same game (analysis.md).
+- {{ pending }} is a grey box saying "This section will be filled when the game is reviewed". Replace it with your text.
+- Your own plots and images: put the file in this folder (weekly/games/<date>/) and write ![caption](file.png).
+- Highlight with ==text==.
+- A section has a short summary ("In short") and, when there is more, a "Details" drop-down: put an HTML comment holding the word more on its own line between the two. Each fact lives in one section; elsewhere link to it.
+THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the content changes. Rules: .claude/skills/opponent-analysis/SKILL.md
+-->
+
+# Offense tendencies: Verona
+
+## Key points
+
+{{ pending }}
+
+## Play types and sets
+
+Main play types, pace, first options, sets after timeouts and out-of-bounds plays.
+
+{{ pending }}
+
+<!-- more -->
+
+
+## Assists
+
+{{ pending }}
+
+<!-- more -->
+
+{{ assists }}
+
+## Turnovers
+
+{{ pending }}
+
+<!-- more -->
+
+{{ turnovers }}
+
+## Clips
+
+{{ pending }}

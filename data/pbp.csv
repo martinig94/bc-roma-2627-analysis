@@ -27807,3 +27807,1179 @@ game_id,seq,period,clock,elapsed_sec,score_home,score_away,team_id,team,home_clu
 25406,676,4,00:24,576,82,95,1765,Acqua S.Bernardo Cantù,1,9343,22,Chad,Brown,2 punti segnato,9,Schiacciata,,,95,50,1,A,3,True,1,
 25406,677,4,00:24,576,82,95,1765,Acqua S.Bernardo Cantù,1,9342,3,Hassani,Gravett,Assist,,,,,95,50,1,A,3,False,0,676
 25406,678,4,00:00,600,82,95,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25411,103,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25411,104,1,09:59,1,0,0,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla contesa,,,,,,,0,,,False,0,
+25411,105,1,09:48,12,0,0,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti sbagliato,4,Giro e Tiro,,,8,59,0,A,3,False,0,
+25411,106,1,09:48,12,0,0,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,8,59,0,A,3,False,0,105
+25411,107,1,09:35,25,3,0,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,3 punti segnato,1,Tiro in sospensione,,,87,95,1,A,8,False,0,
+25411,108,1,09:35,25,3,0,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Assist,,,,,87,95,1,A,8,False,0,107
+25411,109,1,09:14,46,3,2,1761,BC Roma,0,9381,9,Trentyn,Flowers,2 punti segnato,2,Tiro in corsa,,,14,51,0,A,6,True,0,
+25411,110,1,09:14,46,3,2,1761,BC Roma,0,9380,11,Gerald,Ayayi,Assist,,,,,14,51,0,A,6,False,0,109
+25411,111,1,09:06,54,3,2,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo commesso,103,tiro,,,83,68,0,D,2,False,0,
+25411,112,1,09:06,54,3,2,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,83,68,0,D,2,False,0,111
+25411,113,1,09:06,54,3,2,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25411,114,1,09:06,54,4,2,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,113
+25411,115,1,08:53,67,4,5,1761,BC Roma,0,9380,11,Gerald,Ayayi,3 punti segnato,1,Tiro in sospensione,,,32,53,0,A,9,False,0,
+25411,116,1,08:53,67,4,5,1761,BC Roma,0,9436,22,Kelly,Olynyk,Assist,,,,,32,53,0,A,9,False,0,115
+25411,117,1,08:29,91,7,5,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti segnato,1,Tiro in sospensione,,,81,94,1,A,8,False,0,
+25411,118,1,08:29,91,7,5,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Assist,,,,,81,94,1,A,8,False,0,117
+25411,119,1,08:22,98,7,5,1761,BC Roma,0,9381,9,Trentyn,Flowers,Fallo commesso,106,offensivo,,,12,66,0,A,4,False,0,
+25411,120,1,08:22,98,7,5,1761,BC Roma,0,9381,9,Trentyn,Flowers,Palla persa,,,,,12,66,0,A,4,False,0,119
+25411,121,1,08:22,98,7,5,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Fallo Subito,,,,,12,66,0,A,4,False,0,119
+25411,122,1,08:05,115,7,5,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,3 punti sbagliato,1,Tiro in sospensione,,,66,49,1,A,9,False,0,
+25411,123,1,08:05,115,7,5,1761,BC Roma,0,6138,1,Niccolò,Mannion,Rimbalzo difensivo,,,,,66,49,1,A,9,False,0,122
+25411,124,1,07:59,121,7,8,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti segnato,1,Tiro in sospensione,500,contropiede,32,41,0,A,9,False,0,
+25411,125,1,07:40,140,7,8,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,68,27,1,A,9,False,0,
+25411,126,1,07:40,140,7,8,1761,BC Roma,0,6138,1,Niccolò,Mannion,Rimbalzo difensivo,,,,,68,27,1,A,9,False,0,125
+25411,127,1,07:30,150,7,8,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti sbagliato,1,Tiro in sospensione,,,31,74,0,A,9,False,0,
+25411,128,1,07:30,150,7,8,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Rimbalzo difensivo,,,,,31,74,0,A,9,False,0,127
+25411,129,1,07:22,158,7,8,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Palla persa,50,Passaggio sbagliato,,,78,32,1,A,7,False,0,
+25411,130,1,07:22,158,7,8,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla recuperata,,,,,78,32,1,A,7,False,0,129
+25411,131,1,07:03,177,7,8,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti sbagliato,2,Tiro in corsa,,,9,36,0,A,2,False,0,
+25411,132,1,07:03,177,7,8,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Rimbalzo difensivo,,,,,9,36,0,A,2,False,0,131
+25411,133,1,06:42,198,7,8,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,3 punti sbagliato,1,Tiro in sospensione,,,67,57,1,A,9,False,0,
+25411,134,1,06:42,198,7,8,1761,BC Roma,0,5369,12,Arturs,Strautins,Rimbalzo difensivo,,,,,67,57,1,A,9,False,0,133
+25411,135,1,06:35,205,7,11,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti segnato,1,Tiro in sospensione,,,34,61,0,A,9,False,0,
+25411,136,1,06:22,218,9,11,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,2 punti segnato,4,Giro e Tiro,,,91,47,1,A,3,True,0,
+25411,137,1,06:22,218,9,11,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Assist,,,,,91,47,1,A,3,False,0,136
+25411,138,1,06:07,233,9,11,1761,BC Roma,0,9381,9,Trentyn,Flowers,3 punti sbagliato,1,Tiro in sospensione,,,11,99,0,A,10,False,0,
+25411,139,1,06:07,233,9,11,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Rimbalzo difensivo,,,,,11,99,0,A,10,False,0,138
+25411,140,1,06:02,238,9,11,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Palla persa,51,Palleggio,,,74,69,1,A,7,False,0,
+25411,141,1,06:02,238,9,11,1761,BC Roma,0,5369,12,Arturs,Strautins,Palla recuperata,,,,,74,69,1,A,7,False,0,140
+25411,142,1,05:54,246,9,11,1761,BC Roma,0,9381,9,Trentyn,Flowers,2 punti sbagliato,2,Tiro in corsa,1005,stoppata,16,47,0,A,6,False,0,
+25411,143,1,05:54,246,9,11,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Stoppata,,,,,16,47,0,A,6,False,0,142
+25411,144,1,05:54,246,9,11,1761,BC Roma,0,9381,9,Trentyn,Flowers,Stoppata subita,,,,,16,47,0,A,6,False,0,142
+25411,145,1,05:54,246,9,11,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,16,47,0,A,6,False,0,142
+25411,146,1,05:51,249,9,11,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo commesso,100,personale,,,75,57,0,D,7,False,0,
+25411,147,1,05:51,249,9,11,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,75,57,0,D,7,False,0,146
+25411,148,1,05:51,249,9,11,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Ingresso,,,,,,,,,,False,0,
+25411,149,1,05:51,249,9,11,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Uscita,,,,,,,,,,False,0,148
+25411,150,1,05:51,249,9,11,1761,BC Roma,0,9381,9,Trentyn,Flowers,Uscita,,,,,,,,,,False,0,148
+25411,151,1,05:51,249,9,11,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,148
+25411,152,1,05:45,255,9,11,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Palla persa,50,Passaggio sbagliato,,,73,57,1,A,7,False,0,
+25411,153,1,05:45,255,9,11,1761,BC Roma,0,5369,12,Arturs,Strautins,Palla recuperata,,,,,73,57,1,A,7,False,0,152
+25411,154,1,05:39,261,9,13,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti segnato,9,Schiacciata,500,contropiede,6,54,0,A,3,True,1,
+25411,155,1,05:27,273,9,13,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Palla persa,50,Passaggio sbagliato,,,69,57,1,A,9,False,0,
+25411,156,1,05:27,273,9,13,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla recuperata,,,,,69,57,1,A,9,False,0,155
+25411,157,1,05:20,280,9,13,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti sbagliato,2,Tiro in corsa,1005,stoppata,7,51,0,A,3,False,0,
+25411,158,1,05:20,280,9,13,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Stoppata,,,,,7,51,0,A,3,False,0,157
+25411,159,1,05:20,280,9,13,1761,BC Roma,0,9380,11,Gerald,Ayayi,Stoppata subita,,,,,7,51,0,A,3,False,0,157
+25411,160,1,05:20,280,9,13,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Rimbalzo difensivo,,,,,7,51,0,A,3,False,0,157
+25411,161,1,05:20,280,9,13,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Palla persa,54,Fuori dal campo,,,17,26,1,D,2,False,0,
+25411,162,1,05:06,294,9,13,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti sbagliato,1,Tiro in sospensione,,,33,58,0,A,9,False,0,
+25411,163,1,05:06,294,9,13,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,33,58,0,A,9,False,0,162
+25411,164,1,04:56,304,9,13,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo commesso,100,personale,,,91,45,0,D,3,False,0,
+25411,165,1,04:56,304,9,13,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Fallo Subito,,,,,91,45,0,D,3,False,0,164
+25411,166,1,04:48,312,12,13,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti segnato,1,Tiro in sospensione,,,69,58,1,A,9,False,0,
+25411,167,1,04:48,312,12,13,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Assist,,,,,69,58,1,A,9,False,0,166
+25411,168,1,04:34,326,12,15,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti segnato,2,Tiro in corsa,,,11,54,0,A,6,True,0,
+25411,169,1,04:34,326,12,15,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,11,54,0,A,6,False,0,168
+25411,170,1,04:19,341,14,15,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,2 punti segnato,4,Giro e Tiro,,,92,64,1,A,2,True,0,
+25411,171,1,04:19,341,14,15,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Assist,,,,,92,64,1,A,2,False,0,170
+25411,172,1,04:06,354,14,15,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo commesso,100,personale,,,18,25,1,D,2,False,0,
+25411,173,1,04:06,354,14,15,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo Subito,,,,,18,25,1,D,2,False,0,172
+25411,174,1,04:06,354,14,15,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Ingresso,,,,,,,,,,False,0,
+25411,175,1,04:06,354,14,15,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Uscita,,,,,,,,,,False,0,174
+25411,176,1,04:06,354,14,17,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,2,Tiro in corsa,,,7,60,0,A,3,True,0,
+25411,177,1,04:05,355,14,17,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo commesso,100,personale,,,15,60,0,A,6,False,0,
+25411,178,1,04:05,355,14,17,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Fallo Subito,,,,,15,60,0,A,6,False,0,177
+25411,179,1,03:57,363,14,17,1761,BC Roma,0,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,
+25411,180,1,03:57,363,14,17,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,179
+25411,181,1,03:57,363,15,17,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,182,1,03:57,363,16,17,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Tiro libero segnato,,,,,,,,A,7,False,0,181
+25411,183,1,03:45,375,16,20,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti segnato,1,Tiro in sospensione,,,30,79,0,A,10,False,0,
+25411,184,1,03:45,375,16,20,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,30,79,0,A,10,False,0,183
+25411,185,1,03:30,390,16,20,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,3 punti sbagliato,1,Tiro in sospensione,,,65,53,1,A,9,False,0,
+25411,186,1,03:30,390,16,20,1761,BC Roma,0,5369,12,Arturs,Strautins,Rimbalzo difensivo,,,,,65,53,1,A,9,False,0,185
+25411,187,1,03:18,402,16,22,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,4,Giro e Tiro,,,7,41,0,A,3,True,0,
+25411,188,1,03:06,414,19,22,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,3 punti segnato,1,Tiro in sospensione,,,67,45,1,A,9,False,0,
+25411,189,1,03:06,414,19,22,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Assist,,,,,67,45,1,A,9,False,0,188
+25411,190,1,02:58,422,19,22,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Fallo commesso,100,personale,,,32,64,1,D,9,False,0,
+25411,191,1,02:58,422,19,22,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,32,64,1,D,9,False,0,190
+25411,192,1,02:58,422,19,22,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Uscita,,,,,,,,,,False,0,
+25411,193,1,02:58,422,19,22,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Ingresso,,,,,,,,,,False,0,192
+25411,194,1,02:58,422,19,22,1761,BC Roma,0,9382,19,Marko,Simonovic,Ingresso,,,,,,,,,,False,0,192
+25411,195,1,02:58,422,19,22,1761,BC Roma,0,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,192
+25411,196,1,02:50,430,19,22,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,32,60,0,A,9,False,0,
+25411,197,1,02:50,430,19,22,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Rimbalzo difensivo,,,,,32,60,0,A,9,False,0,196
+25411,198,1,02:44,436,21,22,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,2 punti segnato,7,Appoggio a canestro,,,92,47,1,A,3,True,0,
+25411,199,1,02:44,436,21,22,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Assist,,,,,92,47,1,A,3,False,0,198
+25411,200,1,02:34,446,21,22,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Fallo commesso,123,tattico,,,60,43,1,A,9,False,0,
+25411,415,1,02:34,446,21,22,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,60,43,0,D,9,False,0,200
+25411,201,1,02:34,446,21,23,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,202,1,02:34,446,21,24,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero segnato,,,,,,,,A,7,False,0,201
+25411,203,1,02:34,446,21,24,1761,BC Roma,0,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,
+25411,204,1,02:34,446,21,24,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,203
+25411,205,1,02:17,463,21,24,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,34,51,0,A,9,False,0,
+25411,206,1,02:17,463,21,24,1761,BC Roma,0,9380,11,Gerald,Ayayi,Rimbalzo offensivo,,,,,34,51,0,A,9,False,0,205
+25411,207,1,02:08,472,21,24,1761,BC Roma,0,9382,19,Marko,Simonovic,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,6,3,0,A,1,False,0,
+25411,208,1,02:08,472,21,24,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Fallo commesso,100,personale,,,8,65,1,D,4,False,0,
+25411,209,1,02:08,472,21,24,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo Subito,,,,,8,65,0,A,4,False,0,208
+25411,210,1,02:08,472,21,24,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Ingresso,,,,,,,,,,False,0,
+25411,211,1,02:08,472,21,24,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Uscita,,,,,,,,,,False,0,210
+25411,212,1,01:59,481,21,26,1761,BC Roma,0,6258,5,Corey,Davis,2 punti segnato,2,Tiro in corsa,,,5,62,0,A,3,True,0,
+25411,213,1,01:46,494,21,26,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,67,51,1,A,9,False,0,
+25411,214,1,01:46,494,21,26,1761,BC Roma,0,9380,11,Gerald,Ayayi,Rimbalzo difensivo,,,,,67,51,1,A,9,False,0,213
+25411,215,1,01:39,501,21,26,1761,BC Roma,0,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,
+25411,216,1,01:39,501,21,26,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Ingresso,,,,,,,,,,False,0,215
+25411,217,1,01:39,501,21,26,1761,BC Roma,0,9384,10,Erik,Stevenson,Palla persa,53,Passi,,,17,73,0,A,4,False,0,
+25411,218,1,01:33,507,21,26,1761,BC Roma,0,9382,19,Marko,Simonovic,Fallo commesso,100,personale,,,67,61,0,D,9,False,0,
+25411,219,1,01:33,507,21,26,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Fallo Subito,,,,,67,61,0,D,9,False,0,218
+25411,220,1,01:33,507,22,26,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,221,1,01:33,507,23,26,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Tiro libero segnato,,,,,,,,A,7,False,0,220
+25411,222,1,01:23,517,23,26,1761,BC Roma,0,9380,11,Gerald,Ayayi,Palla persa,50,Passaggio sbagliato,,,23,65,0,A,7,False,0,
+25411,223,1,01:23,517,23,26,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Palla recuperata,,,,,23,65,0,A,7,False,0,222
+25411,224,1,01:16,524,25,26,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,2 punti segnato,2,Tiro in corsa,500,contropiede,91,54,1,A,3,True,0,
+25411,227,1,00:48,552,25,28,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,2,Tiro in corsa,,,5,42,0,A,3,True,0,
+25411,228,1,00:48,552,25,28,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Fallo commesso,103,tiro,,,5,42,1,D,3,False,0,
+25411,229,1,00:48,552,25,28,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo Subito,,,,,5,42,1,D,3,False,0,228
+25411,230,1,00:48,552,25,29,1761,BC Roma,0,9380,11,Gerald,Ayayi,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,231,1,00:45,555,25,29,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,2 punti sbagliato,2,Tiro in corsa,,,94,61,1,A,3,False,0,
+25411,232,1,00:45,555,25,29,1761,BC Roma,0,9382,19,Marko,Simonovic,Rimbalzo difensivo,,,,,94,61,1,A,3,False,0,231
+25411,233,1,00:32,568,25,32,1761,BC Roma,0,6258,5,Corey,Davis,3 punti segnato,1,Tiro in sospensione,,,31,75,0,A,10,False,0,
+25411,234,1,00:30,570,25,32,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Uscita,,,,,,,,,,False,0,
+25411,235,1,00:30,570,25,32,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Ingresso,,,,,,,,,,False,0,234
+25411,236,1,00:30,570,25,32,1761,BC Roma,0,6258,5,Corey,Davis,Fallo commesso,121,tecnico categoria 1,,,62,76,0,D,8,False,0,
+25411,237,1,00:30,570,26,32,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,238,1,00:30,570,26,32,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Ingresso,,,,,,,,,,False,0,
+25411,239,1,00:30,570,26,32,1761,BC Roma,0,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,238
+25411,240,1,00:30,570,26,32,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,238
+25411,241,1,00:30,570,26,32,1761,BC Roma,0,9383,33,Mike,Iuzzolino,Ingresso,,,,,,,,,,False,0,238
+25411,242,1,00:05,595,26,32,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,3 punti sbagliato,1,Tiro in sospensione,,,87,3,1,A,10,False,0,
+25411,243,1,00:05,595,26,32,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Rimbalzo offensivo,,,,,87,3,1,A,10,False,0,242
+25411,244,1,00:05,595,26,32,1761,BC Roma,0,9383,33,Mike,Iuzzolino,Fallo commesso,100,personale,,,78,66,0,D,7,False,0,
+25411,245,1,00:05,595,26,32,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Fallo Subito,,,,,78,66,0,D,7,False,0,244
+25411,246,1,00:05,595,26,32,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Uscita,,,,,,,,,,False,0,
+25411,247,1,00:05,595,26,32,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,246
+25411,248,1,00:05,595,26,32,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,246
+25411,249,1,00:05,595,26,32,1761,BC Roma,0,9383,33,Mike,Iuzzolino,Uscita,,,,,,,,,,False,0,246
+25411,250,1,00:05,595,27,32,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,251,1,00:05,595,28,32,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Tiro libero segnato,,,,,,,,A,7,False,0,250
+25411,252,1,00:02,598,28,32,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,3 punti sbagliato,1,Tiro in sospensione,,,61,56,0,D,9,False,0,
+25411,253,1,00:02,598,28,32,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,61,56,0,D,9,False,0,252
+25411,254,1,00:00,600,28,32,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25411,255,2,10:00,0,28,32,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Ingresso,,,,,,,,,,False,0,
+25411,256,2,10:00,0,28,32,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Uscita,,,,,,,,,,False,0,255
+25411,257,2,10:00,0,28,32,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Ingresso,,,,,,,,,,False,0,255
+25411,258,2,10:00,0,28,32,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Uscita,,,,,,,,,,False,0,255
+25411,259,2,10:00,0,28,32,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Ingresso,,,,,,,,,,False,0,255
+25411,260,2,10:00,0,28,32,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,255
+25411,261,2,10:00,0,28,32,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25411,262,2,09:48,12,28,32,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Fallo commesso,100,personale,,,68,49,0,D,9,False,0,
+25411,263,2,09:48,12,28,32,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,68,49,0,D,9,False,0,262
+25411,264,2,09:34,26,28,32,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Palla persa,50,Passaggio sbagliato,,,86,47,1,A,6,False,0,
+25411,265,2,09:34,26,28,32,1761,BC Roma,0,9382,19,Marko,Simonovic,Palla recuperata,,,,,86,47,1,A,6,False,0,264
+25411,266,2,09:16,44,28,32,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti sbagliato,1,Tiro in sospensione,,,15,50,0,A,6,False,0,
+25411,267,2,09:16,44,28,32,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Rimbalzo difensivo,,,,,15,50,0,A,6,False,0,266
+25411,268,2,09:05,55,28,32,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Fallo commesso,100,personale,,,66,33,0,D,9,False,0,
+25411,269,2,09:05,55,28,32,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,66,33,0,D,9,False,0,268
+25411,270,2,08:59,61,28,32,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Fallo commesso,103,tiro,,,81,49,0,D,6,False,0,
+25411,271,2,08:59,61,28,32,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,81,49,0,D,6,False,0,270
+25411,272,2,08:59,61,28,32,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25411,273,2,08:59,61,28,32,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero sbagliato,,,,,,,,A,7,False,0,272
+25411,274,2,08:59,61,28,32,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,,,,,,False,0,272
+25411,275,2,08:59,61,28,35,1761,BC Roma,0,6258,5,Corey,Davis,3 punti segnato,1,Tiro in sospensione,,,22,89,0,A,10,False,0,
+25411,276,2,08:59,61,28,35,1761,BC Roma,0,9382,19,Marko,Simonovic,Assist,,,,,22,89,0,A,10,False,0,275
+25411,277,2,08:59,61,28,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Palla persa,50,Passaggio sbagliato,,,62,73,1,A,9,False,0,
+25411,278,2,08:59,61,28,35,1761,BC Roma,0,6258,5,Corey,Davis,Palla recuperata,,,,,62,73,1,A,9,False,0,277
+25411,279,2,08:59,61,28,35,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti sbagliato,2,Tiro in corsa,1004,tip-in appoggio canestro miss,5,57,0,A,3,False,0,
+25411,280,2,08:59,61,28,35,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Rimbalzo offensivo,,,,,5,57,0,A,3,False,0,279
+25411,281,2,08:59,61,28,35,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,2 punti sbagliato,7,Appoggio a canestro,,,5,57,0,A,3,False,0,
+25411,282,2,08:59,61,28,35,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo offensivo,,,,,5,57,0,A,3,False,0,281
+25411,283,2,08:59,61,28,35,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,30,24,0,A,8,False,0,
+25411,284,2,08:59,61,28,35,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Rimbalzo offensivo,,,,,30,24,0,A,8,False,0,283
+25411,285,2,08:57,63,28,35,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,2 punti sbagliato,2,Tiro in corsa,1005,stoppata,5,55,0,A,3,False,0,
+25411,286,2,08:57,63,28,35,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Stoppata,,,,,5,55,0,A,3,False,0,285
+25411,287,2,08:57,63,28,35,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Stoppata subita,,,,,5,55,0,A,3,False,0,285
+25411,288,2,08:57,63,28,35,1761,BC Roma,0,,,,,Rimbalzi offensivi di squadra,,,,,5,55,0,A,3,False,0,285
+25411,289,2,08:27,93,28,35,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Ingresso,,,,,,,,,,False,0,
+25411,290,2,08:27,93,28,35,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Uscita,,,,,,,,,,False,0,289
+25411,291,2,08:27,93,28,35,1761,BC Roma,0,9381,9,Trentyn,Flowers,Ingresso,,,,,,,,,,False,0,289
+25411,292,2,08:27,93,28,35,1761,BC Roma,0,9382,19,Marko,Simonovic,Uscita,,,,,,,,,,False,0,289
+25411,293,2,08:27,93,28,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,289
+25411,294,2,08:27,93,28,35,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Uscita,,,,,,,,,,False,0,289
+25411,295,2,08:27,93,28,35,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Fallo commesso,100,personale,,,32,69,1,D,9,False,0,
+25411,296,2,08:27,93,28,35,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo Subito,,,,,32,69,1,D,9,False,0,295
+25411,297,2,08:17,103,28,35,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,2 punti sbagliato,2,Tiro in corsa,,,18,49,0,A,6,False,0,
+25411,298,2,08:17,103,28,35,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Rimbalzo difensivo,,,,,18,49,0,A,6,False,0,297
+25411,299,2,08:05,115,28,35,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,3 punti sbagliato,1,Tiro in sospensione,,,67,41,1,A,9,False,0,
+25411,300,2,08:05,115,28,35,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Rimbalzo offensivo,,,,,67,41,1,A,9,False,0,299
+25411,301,2,08:00,120,28,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo commesso,100,personale,,,87,53,0,D,6,False,0,
+25411,302,2,08:00,120,28,35,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Fallo Subito,,,,,87,53,0,D,6,False,0,301
+25411,303,2,07:54,126,28,35,1761,BC Roma,0,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,
+25411,304,2,07:54,126,28,35,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Uscita,,,,,,,,,,False,0,303
+25411,305,2,07:45,135,28,35,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,2 punti sbagliato,2,Tiro in corsa,,,93,44,1,A,3,False,0,
+25411,306,2,07:45,135,28,35,1761,BC Roma,0,9381,9,Trentyn,Flowers,Rimbalzo difensivo,,,,,93,44,1,A,3,False,0,305
+25411,307,2,07:38,142,28,35,1761,BC Roma,0,6258,5,Corey,Davis,Palla persa,50,Passaggio sbagliato,,,25,60,0,A,7,False,0,
+25411,308,2,07:38,142,28,35,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Palla recuperata,,,,,25,60,0,A,7,False,0,307
+25411,309,2,07:30,150,28,35,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo commesso,103,tiro,,,81,54,0,D,6,False,0,
+25411,310,2,07:30,150,28,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,81,54,0,D,6,False,0,309
+25411,311,2,07:27,153,28,35,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Uscita,,,,,,,,,,False,0,
+25411,312,2,07:27,153,28,35,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Ingresso,,,,,,,,,,False,0,311
+25411,313,2,07:27,153,29,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,314,2,07:27,153,30,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,313
+25411,315,2,07:07,173,30,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,3 punti sbagliato,1,Tiro in sospensione,,,30,60,0,A,9,False,0,
+25411,316,2,07:07,173,30,35,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,30,60,0,A,9,False,0,315
+25411,317,2,07:00,180,30,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Palla persa,50,Passaggio sbagliato,,,76,10,1,A,10,False,0,
+25411,318,2,07:00,180,30,35,1761,BC Roma,0,,,,,Palle recuperate di squadra,,,,,76,10,1,A,10,False,0,317
+25411,319,2,06:40,200,30,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti sbagliato,2,Tiro in corsa,1005,stoppata,8,46,0,A,3,False,0,
+25411,320,2,06:40,200,30,35,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Stoppata,,,,,8,46,0,A,3,False,0,319
+25411,321,2,06:40,200,30,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,Stoppata subita,,,,,8,46,0,A,3,False,0,319
+25411,322,2,06:40,200,30,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Rimbalzo difensivo,,,,,8,46,0,A,3,False,0,319
+25411,323,2,06:30,210,32,35,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,2 punti segnato,2,Tiro in corsa,,,94,52,1,A,3,True,0,
+25411,324,2,06:29,211,32,35,1761,BC Roma,0,,,,,Time Out,,,,,,,0,,,False,0,
+25411,325,2,06:29,211,32,35,1761,BC Roma,0,6258,5,Corey,Davis,Uscita,,,,,,,,,,False,0,
+25411,326,2,06:29,211,32,35,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,325
+25411,327,2,06:25,215,32,35,1761,BC Roma,0,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,
+25411,328,2,06:25,215,32,35,1761,BC Roma,0,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,327
+25411,329,2,06:18,222,32,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti sbagliato,4,Giro e Tiro,,,7,50,0,A,3,False,0,
+25411,330,2,06:18,222,32,35,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,7,50,0,A,3,False,0,329
+25411,331,2,06:10,230,32,35,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,71,19,1,A,10,False,0,
+25411,332,2,06:10,230,32,35,1761,BC Roma,0,9381,9,Trentyn,Flowers,Rimbalzo difensivo,,,,,71,19,1,A,10,False,0,331
+25411,333,2,06:01,239,32,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,2 punti sbagliato,2,Tiro in corsa,1005,stoppata,5,45,0,A,3,False,0,
+25411,334,2,06:01,239,32,35,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Stoppata,,,,,5,45,0,A,3,False,0,333
+25411,335,2,06:01,239,32,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,Stoppata subita,,,,,5,45,0,A,3,False,0,333
+25411,336,2,06:01,239,32,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Rimbalzo difensivo,,,,,5,45,0,A,3,False,0,333
+25411,337,2,05:53,247,34,35,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,2 punti segnato,2,Tiro in corsa,,,90,52,1,A,6,True,0,
+25411,338,2,05:53,247,34,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Assist,,,,,90,52,1,A,6,False,0,337
+25411,339,2,05:51,249,34,35,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo commesso,121,tecnico categoria 1,,,86,53,1,A,6,False,0,
+25411,340,2,05:51,249,34,35,1761,BC Roma,0,9382,19,Marko,Simonovic,Ingresso,,,,,,,,,,False,0,
+25411,341,2,05:51,249,34,35,1761,BC Roma,0,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,340
+25411,342,2,05:51,249,34,36,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,343,2,05:34,266,34,36,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti sbagliato,1,Tiro in sospensione,,,9,3,0,A,1,False,0,
+25411,344,2,05:34,266,34,36,1761,BC Roma,0,9380,11,Gerald,Ayayi,Rimbalzo offensivo,,,,,9,3,0,A,1,False,0,343
+25411,345,2,05:29,271,34,38,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,4,Giro e Tiro,,,8,52,0,A,3,True,0,
+25411,346,2,05:20,280,36,38,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,2 punti segnato,2,Tiro in corsa,,,93,51,1,A,3,True,0,
+25411,347,2,05:20,280,36,38,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Assist,,,,,93,51,1,A,3,False,0,346
+25411,348,2,05:02,298,36,38,1761,BC Roma,0,9381,9,Trentyn,Flowers,2 punti sbagliato,2,Tiro in corsa,1005,stoppata,6,60,0,A,3,False,0,
+25411,349,2,05:02,298,36,38,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Stoppata,,,,,6,60,0,A,3,False,0,348
+25411,350,2,05:02,298,36,38,1761,BC Roma,0,9381,9,Trentyn,Flowers,Stoppata subita,,,,,6,60,0,A,3,False,0,348
+25411,351,2,05:02,298,36,38,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,6,60,0,A,3,False,0,348
+25411,352,2,04:53,307,36,38,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Palla persa,53,Passi,,,87,54,1,A,6,False,0,
+25411,353,2,04:42,318,36,40,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti segnato,2,Tiro in corsa,,,5,59,0,A,3,True,0,
+25411,354,2,04:33,327,38,40,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,2 punti segnato,9,Schiacciata,500,contropiede,91,53,1,A,3,True,1,
+25411,355,2,04:30,330,38,40,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Ingresso,,,,,,,,,,False,0,
+25411,356,2,04:30,330,38,40,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Uscita,,,,,,,,,,False,0,355
+25411,357,2,04:17,343,38,40,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,29,20,0,A,8,False,0,
+25411,358,2,04:17,343,38,40,1761,BC Roma,0,9382,19,Marko,Simonovic,Rimbalzo offensivo,,,,,29,20,0,A,8,False,0,357
+25411,359,2,04:17,343,38,42,1761,BC Roma,0,9382,19,Marko,Simonovic,2 punti segnato,7,Appoggio a canestro,,,29,20,0,A,2,False,0,
+25411,360,2,04:09,351,38,42,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo commesso,100,personale,,,88,31,0,D,4,False,0,
+25411,361,2,04:09,351,38,42,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Fallo Subito,,,,,88,31,0,D,4,False,0,360
+25411,362,2,04:09,351,38,42,1761,BC Roma,0,9381,9,Trentyn,Flowers,Uscita,,,,,,,,,,False,0,
+25411,363,2,04:09,351,38,42,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,362
+25411,364,2,04:09,351,39,42,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,365,2,04:09,351,40,42,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,364
+25411,366,2,04:09,351,40,44,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,1,Tiro in sospensione,,,13,38,0,A,2,True,0,
+25411,367,2,04:00,360,40,44,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,64,59,1,A,9,False,0,
+25411,368,2,04:00,360,40,44,1761,BC Roma,0,6138,1,Niccolò,Mannion,Rimbalzo difensivo,,,,,64,59,1,A,9,False,0,367
+25411,369,2,03:20,400,40,44,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Uscita,,,,,,,,,,False,0,
+25411,370,2,03:20,400,40,44,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Ingresso,,,,,,,,,,False,0,369
+25411,371,2,03:06,414,40,46,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti segnato,1,Tiro in sospensione,,,13,53,0,A,6,True,0,
+25411,372,2,02:51,429,43,46,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,3 punti segnato,1,Tiro in sospensione,,,71,26,1,A,9,False,0,
+25411,373,2,02:51,429,43,46,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Assist,,,,,71,26,1,A,9,False,0,372
+25411,374,2,02:33,447,43,46,1761,BC Roma,0,9382,19,Marko,Simonovic,3 punti sbagliato,1,Tiro in sospensione,,,36,56,0,A,9,False,0,
+25411,375,2,02:33,447,43,46,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,36,56,0,A,9,False,0,374
+25411,376,2,02:16,464,46,46,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,3 punti segnato,1,Tiro in sospensione,,,70,30,1,A,9,False,0,
+25411,377,2,02:16,464,46,46,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Assist,,,,,70,30,1,A,9,False,0,376
+25411,378,2,01:54,486,46,48,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti segnato,2,Tiro in corsa,,,11,69,0,A,4,False,0,
+25411,379,2,01:54,486,46,48,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,11,69,0,A,4,False,0,378
+25411,380,2,01:51,489,46,48,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Fallo commesso,103,tiro,,,10,55,1,D,6,False,0,
+25411,381,2,01:51,489,46,48,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo Subito,,,,,10,55,1,D,6,False,0,380
+25411,382,2,01:51,489,46,48,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Ingresso,,,,,,,,,,False,0,
+25411,383,2,01:51,489,46,48,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Uscita,,,,,,,,,,False,0,382
+25411,384,2,01:51,489,46,48,1761,BC Roma,0,5369,12,Arturs,Strautins,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25411,385,2,01:51,489,46,48,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Rimbalzo difensivo,,,,,,,,,,False,0,384
+25411,386,2,01:45,495,49,48,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,3 punti segnato,1,Tiro in sospensione,,,67,72,1,A,9,False,0,
+25411,387,2,01:45,495,49,48,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Assist,,,,,67,72,1,A,9,False,0,386
+25411,388,2,01:44,496,49,48,1761,BC Roma,0,,,,,Time Out,,,,,,,0,,,False,0,
+25411,389,2,01:44,496,49,48,1761,BC Roma,0,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,
+25411,390,2,01:44,496,49,48,1761,BC Roma,0,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,389
+25411,391,2,01:21,519,49,51,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti segnato,1,Tiro in sospensione,,,25,9,0,A,8,False,0,
+25411,392,2,01:21,519,49,51,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,25,9,0,A,8,False,0,391
+25411,393,2,01:01,539,52,51,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti segnato,1,Tiro in sospensione,,,73,18,1,A,10,False,0,
+25411,394,2,01:01,539,52,51,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Assist,,,,,73,18,1,A,10,False,0,393
+25411,395,2,00:42,558,52,54,1761,BC Roma,0,6258,5,Corey,Davis,3 punti segnato,1,Tiro in sospensione,,,17,6,0,A,8,False,0,
+25411,396,2,00:42,558,52,54,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,17,6,0,A,8,False,0,395
+25411,397,2,00:42,558,52,54,1767,Pallacanestro Trieste,1,,,,,Time Out,,,,,,,1,,,False,0,
+25411,398,2,00:42,558,52,54,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Ingresso,,,,,,,,,,False,0,
+25411,399,2,00:42,558,52,54,1761,BC Roma,0,9382,19,Marko,Simonovic,Uscita,,,,,,,,,,False,0,398
+25411,400,2,00:30,570,52,54,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo commesso,103,tiro,,,67,61,0,D,9,False,0,
+25411,401,2,00:30,570,52,54,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Fallo Subito,,,,,67,61,0,D,9,False,0,400
+25411,402,2,00:30,570,52,54,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Uscita,,,,,,,,,,False,0,
+25411,403,2,00:30,570,52,54,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Ingresso,,,,,,,,,,False,0,402
+25411,404,2,00:30,570,52,54,1761,BC Roma,0,6188,8,Riccardo,Tavernelli,Uscita,,,,,,,,,,False,0,402
+25411,405,2,00:30,570,52,54,1761,BC Roma,0,9382,19,Marko,Simonovic,Ingresso,,,,,,,,,,False,0,402
+25411,406,2,00:30,570,53,54,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,407,2,00:30,570,54,54,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Tiro libero segnato,,,,,,,,A,7,False,0,406
+25411,408,2,00:30,570,55,54,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Tiro libero segnato,,,,,,,,A,7,False,0,406
+25411,409,2,00:30,570,55,54,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Assist,,,,,,,,,,False,0,406
+25411,410,2,00:08,592,55,56,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti segnato,2,Tiro in corsa,,,10,45,0,A,6,True,0,
+25411,411,2,00:00,600,58,56,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti segnato,1,Tiro in sospensione,,,67,35,1,A,9,False,0,
+25411,412,2,00:00,600,58,56,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Assist,,,,,67,35,1,A,9,False,0,411
+25411,413,2,00:00,600,58,56,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25411,416,3,10:00,0,58,56,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Ingresso,,,,,,,,,,False,0,
+25411,417,3,10:00,0,58,56,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Uscita,,,,,,,,,,False,0,416
+25411,418,3,10:00,0,58,56,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Uscita,,,,,,,,,,False,0,416
+25411,419,3,10:00,0,58,56,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Ingresso,,,,,,,,,,False,0,416
+25411,420,3,10:00,0,58,56,1761,BC Roma,0,6258,5,Corey,Davis,Uscita,,,,,,,,,,False,0,416
+25411,421,3,10:00,0,58,56,1761,BC Roma,0,9381,9,Trentyn,Flowers,Ingresso,,,,,,,,,,False,0,416
+25411,422,3,10:00,0,58,56,1761,BC Roma,0,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,416
+25411,423,3,10:00,0,58,56,1761,BC Roma,0,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,416
+25411,424,3,10:00,0,58,56,1761,BC Roma,0,9382,19,Marko,Simonovic,Uscita,,,,,,,,,,False,0,416
+25411,425,3,10:00,0,58,56,1761,BC Roma,0,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,416
+25411,426,3,10:00,0,58,56,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25411,427,3,09:40,20,58,56,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,50,Passaggio sbagliato,,,85,52,1,A,6,False,0,
+25411,428,3,09:40,20,58,56,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Palla recuperata,,,,,85,52,1,A,6,False,0,427
+25411,429,3,09:23,37,58,56,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Palla persa,51,Palleggio,,,21,70,0,A,7,False,0,
+25411,430,3,09:23,37,58,56,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla recuperata,,,,,21,70,0,A,7,False,0,429
+25411,431,3,09:13,47,58,56,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,54,Fuori dal campo,,,29,87,1,D,10,False,0,
+25411,432,3,09:06,54,61,56,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,3 punti segnato,1,Tiro in sospensione,,,32,65,0,A,9,False,0,
+25411,433,3,09:06,54,61,56,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Assist,,,,,32,65,0,A,9,False,0,432
+25411,434,3,08:50,70,61,56,1761,BC Roma,0,9381,9,Trentyn,Flowers,3 punti sbagliato,1,Tiro in sospensione,,,76,6,1,A,10,False,0,
+25411,435,3,08:50,70,61,56,1761,BC Roma,0,5369,12,Arturs,Strautins,Rimbalzo offensivo,,,,,76,6,1,A,10,False,0,434
+25411,436,3,08:50,70,61,56,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo commesso,100,personale,,,79,47,0,D,7,False,0,
+25411,437,3,08:50,70,61,56,1761,BC Roma,0,5369,12,Arturs,Strautins,Fallo Subito,,,,,79,47,0,D,7,False,0,436
+25411,438,3,08:43,77,61,56,1761,BC Roma,0,9380,11,Gerald,Ayayi,Palla persa,54,Fuori dal campo,,,80,17,1,A,4,False,0,
+25411,439,3,08:37,83,64,56,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,3 punti segnato,1,Tiro in sospensione,,,30,69,0,A,9,False,0,
+25411,440,3,08:26,94,64,56,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Fallo commesso,100,personale,,,80,52,0,D,6,False,0,
+25411,441,3,08:26,94,64,56,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,80,52,1,A,6,False,0,440
+25411,442,3,08:24,96,64,58,1761,BC Roma,0,9381,9,Trentyn,Flowers,2 punti segnato,9,Schiacciata,,,94,54,1,A,3,True,1,
+25411,443,3,08:24,96,64,58,1761,BC Roma,0,9380,11,Gerald,Ayayi,Assist,,,,,94,54,1,A,3,False,0,442
+25411,444,3,08:09,111,64,58,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Palla persa,51,Palleggio,,,10,37,0,A,2,False,0,
+25411,445,3,08:09,111,64,58,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla recuperata,,,,,10,37,0,A,2,False,0,444
+25411,446,3,07:58,122,64,61,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti segnato,1,Tiro in sospensione,,,76,15,1,A,10,False,0,
+25411,447,3,07:58,122,64,61,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,76,15,1,A,10,False,0,446
+25411,448,3,07:46,134,67,61,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti segnato,1,Tiro in sospensione,,,32,38,0,A,9,False,0,
+25411,449,3,07:35,145,67,61,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti sbagliato,2,Tiro in corsa,1005,stoppata,91,60,1,A,3,False,0,
+25411,450,3,07:35,145,67,61,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Stoppata,,,,,91,60,1,A,3,False,0,449
+25411,451,3,07:35,145,67,61,1761,BC Roma,0,6138,1,Niccolò,Mannion,Stoppata subita,,,,,91,60,1,A,3,False,0,449
+25411,452,3,07:35,145,67,61,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Rimbalzo difensivo,,,,,91,60,1,A,3,False,0,449
+25411,453,3,07:26,154,67,61,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo commesso,103,tiro,,,11,39,1,D,6,False,0,
+25411,454,3,07:26,154,67,61,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Fallo Subito,,,,,11,39,1,D,6,False,0,453
+25411,455,3,07:26,154,67,61,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25411,456,3,07:26,154,68,61,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Tiro libero segnato,,,,,,,,A,7,False,0,455
+25411,457,3,07:17,163,68,61,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti sbagliato,1,Tiro in sospensione,,,66,36,1,A,9,False,0,
+25411,458,3,07:17,163,68,61,1761,BC Roma,0,,,,,Rimbalzi offensivi di squadra,,,,,66,36,1,A,9,False,0,457
+25411,459,3,07:17,163,68,61,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Fallo commesso,100,personale,,,88,53,0,D,6,False,0,
+25411,460,3,07:17,163,68,61,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo Subito,,,,,88,53,0,D,6,False,0,459
+25411,461,3,07:05,175,68,61,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla persa,51,Palleggio,,,78,38,1,A,7,False,0,
+25411,462,3,06:50,190,68,61,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,29,80,0,A,10,False,0,
+25411,463,3,06:50,190,68,61,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,29,80,0,A,10,False,0,462
+25411,464,3,06:36,204,68,61,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Fallo commesso,100,personale,,,76,61,0,D,7,False,0,
+25411,465,3,06:36,204,68,61,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,76,61,0,D,7,False,0,464
+25411,466,3,06:36,204,68,61,1761,BC Roma,0,9382,19,Marko,Simonovic,Ingresso,,,,,,,,,,False,0,
+25411,467,3,06:36,204,68,61,1761,BC Roma,0,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,466
+25411,468,3,06:20,220,68,61,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,1,Tiro in sospensione,,,69,39,1,A,9,False,0,
+25411,469,3,06:20,220,68,61,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,69,39,1,A,9,False,0,468
+25411,470,3,06:14,226,68,61,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,2 punti sbagliato,2,Tiro in corsa,1003,tip-in appoggio canestro made,5,41,0,A,3,False,0,
+25411,471,3,06:14,226,68,61,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Rimbalzo offensivo,,,,,5,41,0,A,3,False,0,470
+25411,472,3,06:14,226,70,61,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,2 punti segnato,7,Appoggio a canestro,,,5,41,0,A,3,True,0,
+25411,473,3,06:14,226,70,61,1761,BC Roma,0,9382,19,Marko,Simonovic,Fallo commesso,103,tiro,,,8,44,1,D,3,False,0,
+25411,474,3,06:14,226,70,61,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Fallo Subito,,,,,8,44,1,D,3,False,0,473
+25411,475,3,06:14,226,70,61,1761,BC Roma,0,,,,,Time Out,,,,,,,1,,,False,0,
+25411,476,3,06:14,226,70,61,1761,BC Roma,0,9381,9,Trentyn,Flowers,Uscita,,,,,,,,,,False,0,
+25411,477,3,06:14,226,70,61,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,476
+25411,478,3,06:14,226,70,61,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25411,479,3,06:14,226,70,61,1761,BC Roma,0,5369,12,Arturs,Strautins,Rimbalzo difensivo,,,,,,,,,,False,0,478
+25411,480,3,06:02,238,70,61,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti sbagliato,2,Tiro in corsa,,,93,60,1,A,3,False,0,
+25411,481,3,06:02,238,70,61,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Rimbalzo difensivo,,,,,93,60,1,A,3,False,0,480
+25411,482,3,05:46,254,72,61,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,2 punti segnato,2,Tiro in corsa,,,6,57,0,A,3,True,0,
+25411,483,3,05:46,254,72,61,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Assist,,,,,6,57,0,A,3,False,0,482
+25411,484,3,05:25,275,72,63,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti segnato,4,Giro e Tiro,,,91,41,1,A,3,True,0,
+25411,485,3,05:25,275,72,63,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,,,91,41,1,A,3,False,0,484
+25411,486,3,05:00,300,72,63,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,2 punti sbagliato,1,Tiro in sospensione,1004,tip-in appoggio canestro miss,9,43,0,A,3,False,0,
+25411,487,3,05:00,300,72,63,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo offensivo,,,,,9,43,0,A,3,False,0,486
+25411,488,3,05:00,300,72,63,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,2 punti sbagliato,7,Appoggio a canestro,,,9,43,0,A,3,False,0,
+25411,489,3,05:00,300,72,63,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo offensivo,,,,,9,43,0,A,3,False,0,488
+25411,490,3,05:00,300,72,63,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,2 punti sbagliato,7,Appoggio a canestro,,,9,43,0,A,3,False,0,
+25411,491,3,05:00,300,72,63,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Rimbalzo offensivo,,,,,9,43,0,A,3,False,0,490
+25411,492,3,04:51,309,72,63,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,2 punti sbagliato,1,Tiro in sospensione,,,15,27,0,A,2,False,0,
+25411,493,3,04:51,309,72,63,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo offensivo,,,,,15,27,0,A,2,False,0,492
+25411,494,3,04:44,316,72,63,1761,BC Roma,0,9380,11,Gerald,Ayayi,Fallo commesso,103,tiro,,,11,40,1,D,6,False,0,
+25411,495,3,04:44,316,72,63,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,11,40,1,D,6,False,0,494
+25411,496,3,04:44,316,72,63,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Ingresso,,,,,,,,,,False,0,
+25411,497,3,04:44,316,72,63,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Uscita,,,,,,,,,,False,0,496
+25411,498,3,04:44,316,72,63,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Ingresso,,,,,,,,,,False,0,496
+25411,499,3,04:44,316,72,63,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Uscita,,,,,,,,,,False,0,496
+25411,500,3,04:44,316,72,63,1761,BC Roma,0,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,496
+25411,501,3,04:44,316,72,63,1761,BC Roma,0,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,496
+25411,502,3,04:44,316,73,63,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,503,3,04:44,316,74,63,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,502
+25411,504,3,04:44,316,74,63,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Uscita,,,,,,,,,,False,0,
+25411,505,3,04:44,316,74,63,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Ingresso,,,,,,,,,,False,0,504
+25411,506,3,04:44,316,74,63,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Ingresso,,,,,,,,,,False,0,504
+25411,507,3,04:44,316,74,63,1761,BC Roma,0,9382,19,Marko,Simonovic,Uscita,,,,,,,,,,False,0,504
+25411,508,3,04:21,339,74,66,1761,BC Roma,0,5369,12,Arturs,Strautins,3 punti segnato,1,Tiro in sospensione,,,74,18,1,A,10,False,0,
+25411,509,3,04:21,339,74,66,1761,BC Roma,0,6258,5,Corey,Davis,Assist,,,,,74,18,1,A,10,False,0,508
+25411,510,3,03:57,363,74,66,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,2 punti sbagliato,2,Tiro in corsa,,,8,39,0,A,3,False,0,
+25411,511,3,03:57,363,74,66,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Rimbalzo difensivo,,,,,8,39,0,A,3,False,0,510
+25411,512,3,03:57,363,74,66,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Fallo commesso,100,personale,,,10,46,0,A,6,False,0,
+25411,513,3,03:57,363,74,66,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Fallo Subito,,,,,10,46,0,A,6,False,0,512
+25411,514,3,03:57,363,74,67,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,515,3,03:57,363,74,68,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Tiro libero segnato,,,,,,,,A,7,False,0,514
+25411,516,3,03:38,382,77,68,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,3 punti segnato,1,Tiro in sospensione,,,35,52,0,A,9,False,0,
+25411,517,3,03:38,382,77,68,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Assist,,,,,35,52,0,A,9,False,0,516
+25411,518,3,03:21,399,77,71,1761,BC Roma,0,9380,11,Gerald,Ayayi,3 punti segnato,1,Tiro in sospensione,,,79,93,1,A,8,False,0,
+25411,519,3,03:21,399,77,71,1761,BC Roma,0,5369,12,Arturs,Strautins,Assist,,,,,79,93,1,A,8,False,0,518
+25411,520,3,03:09,411,77,71,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Fallo commesso,103,tiro,,,7,41,1,D,3,False,0,
+25411,521,3,03:09,411,77,71,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Fallo Subito,,,,,7,41,1,D,3,False,0,520
+25411,522,3,03:09,411,78,71,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,523,3,03:09,411,79,71,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,522
+25411,524,3,03:09,411,79,71,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Assist,,,,,,,,,,False,0,522
+25411,525,3,03:01,419,79,71,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Fallo commesso,106,offensivo,,,77,26,1,A,7,False,0,
+25411,526,3,03:01,419,79,71,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Palla persa,,,,,77,26,1,A,7,False,0,525
+25411,527,3,03:01,419,79,71,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Fallo Subito,,,,,77,26,1,A,7,False,0,525
+25411,528,3,03:01,419,79,71,1761,BC Roma,0,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,
+25411,529,3,03:01,419,79,71,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,528
+25411,530,3,02:44,436,82,71,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,3 punti segnato,1,Tiro in sospensione,,,30,74,0,A,9,False,0,
+25411,531,3,02:44,436,82,71,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Assist,,,,,30,74,0,A,9,False,0,530
+25411,532,3,02:25,455,82,74,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti segnato,1,Tiro in sospensione,,,67,54,1,A,9,False,0,
+25411,533,3,02:13,467,85,74,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti segnato,1,Tiro in sospensione,,,21,11,0,A,8,False,0,
+25411,534,3,02:13,467,85,74,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Assist,,,,,21,11,0,A,8,False,0,533
+25411,535,3,01:54,486,85,74,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Fallo commesso,103,tiro,,,90,53,0,D,6,False,0,
+25411,536,3,01:54,486,85,74,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,90,53,0,D,6,False,0,535
+25411,537,3,01:54,486,85,74,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Ingresso,,,,,,,,,,False,0,
+25411,538,3,01:54,486,85,74,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Uscita,,,,,,,,,,False,0,537
+25411,539,3,01:54,486,85,74,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25411,540,3,01:54,486,85,75,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero segnato,,,,,,,,A,7,False,0,539
+25411,541,3,01:52,488,85,75,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,3 punti sbagliato,1,Tiro in sospensione,,,25,15,0,A,8,False,0,
+25411,542,3,01:52,488,85,75,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,25,15,0,A,8,False,0,541
+25411,543,3,01:47,493,85,78,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti segnato,1,Tiro in sospensione,,,68,57,1,A,9,False,0,
+25411,544,3,01:43,497,85,78,1767,Pallacanestro Trieste,1,,,,,Time Out,,,,,,,0,,,False,0,
+25411,545,3,01:43,497,85,78,1761,BC Roma,0,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,
+25411,546,3,01:43,497,85,78,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Ingresso,,,,,,,,,,False,0,545
+25411,547,3,01:27,513,85,78,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo commesso,100,personale,,,33,53,1,D,9,False,0,
+25411,548,3,01:27,513,85,78,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Fallo Subito,,,,,33,53,1,D,9,False,0,547
+25411,549,3,01:27,513,86,78,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,550,3,01:27,513,87,78,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,549
+25411,551,3,01:16,524,87,78,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Fallo commesso,100,personale,,,77,26,0,D,7,False,0,
+25411,552,3,01:16,524,87,78,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo Subito,,,,,77,26,0,D,7,False,0,551
+25411,553,3,01:16,524,87,79,1761,BC Roma,0,9384,10,Erik,Stevenson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,554,3,01:16,524,87,80,1761,BC Roma,0,9384,10,Erik,Stevenson,Tiro libero segnato,,,,,,,,A,7,False,0,553
+25411,555,3,00:54,546,90,80,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,3 punti segnato,1,Tiro in sospensione,,,16,7,0,A,8,False,0,
+25411,556,3,00:54,546,90,80,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Assist,,,,,16,7,0,A,8,False,0,555
+25411,557,3,00:34,566,90,82,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti segnato,2,Tiro in corsa,,,85,59,1,A,6,True,0,
+25411,558,3,00:14,586,90,82,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Fallo commesso,100,personale,,,32,30,1,D,9,False,0,
+25411,559,3,00:14,586,90,82,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Fallo Subito,,,,,32,30,1,D,9,False,0,558
+25411,560,3,00:14,586,90,82,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Uscita,,,,,,,,,,False,0,
+25411,561,3,00:14,586,90,82,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Uscita,,,,,,,,,,False,0,560
+25411,562,3,00:14,586,90,82,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Ingresso,,,,,,,,,,False,0,560
+25411,563,3,00:14,586,90,82,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Ingresso,,,,,,,,,,False,0,560
+25411,564,3,00:14,586,90,82,1761,BC Roma,0,9379,7,Giovanni,Emejuru,Uscita,,,,,,,,,,False,0,560
+25411,565,3,00:14,586,90,82,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,560
+25411,566,3,00:14,586,91,82,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,567,3,00:14,586,92,82,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Tiro libero segnato,,,,,,,,A,7,False,0,566
+25411,568,3,00:03,597,92,82,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti sbagliato,2,Tiro in corsa,,,87,58,1,A,6,False,0,
+25411,569,3,00:03,597,92,82,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,87,58,1,A,6,False,0,568
+25411,570,3,00:00,600,92,82,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25411,571,4,10:00,0,92,82,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Ingresso,,,,,,,,,,False,0,
+25411,572,4,10:00,0,92,82,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Uscita,,,,,,,,,,False,0,571
+25411,573,4,10:00,0,92,82,1761,BC Roma,0,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,571
+25411,574,4,10:00,0,92,82,1761,BC Roma,0,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,571
+25411,575,4,10:00,0,92,82,1761,BC Roma,0,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,571
+25411,576,4,10:00,0,92,82,1761,BC Roma,0,3710,24,Andrea,Mezzanotte,Uscita,,,,,,,,,,False,0,571
+25411,577,4,10:00,0,92,82,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25411,578,4,09:49,11,92,82,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo commesso,100,personale,,,21,31,1,D,7,False,0,
+25411,579,4,09:49,11,92,82,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Fallo Subito,,,,,21,31,1,D,7,False,0,578
+25411,580,4,09:34,26,92,82,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,3 punti sbagliato,1,Tiro in sospensione,,,23,5,0,A,8,False,0,
+25411,581,4,09:34,26,92,82,1761,BC Roma,0,,,,,Rimbalzi difensivi di squadra,,,,,23,5,0,A,8,False,0,580
+25411,582,4,09:22,38,92,82,1761,BC Roma,0,9436,22,Kelly,Olynyk,Fallo commesso,106,offensivo,,,69,46,1,A,9,False,0,
+25411,583,4,09:22,38,92,82,1761,BC Roma,0,9436,22,Kelly,Olynyk,Palla persa,,,,,69,46,1,A,9,False,0,582
+25411,584,4,09:22,38,92,82,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Fallo Subito,,,,,69,46,1,A,9,False,0,582
+25411,585,4,09:04,56,92,82,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,3 punti sbagliato,1,Tiro in sospensione,,,27,23,0,A,8,False,0,
+25411,586,4,09:04,56,92,82,1761,BC Roma,0,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,27,23,0,A,8,False,0,585
+25411,587,4,08:56,64,92,84,1761,BC Roma,0,6258,5,Corey,Davis,2 punti segnato,2,Tiro in corsa,,,94,48,1,A,3,True,0,
+25411,588,4,08:37,83,92,84,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,2 punti sbagliato,2,Tiro in corsa,,,13,43,0,A,6,False,0,
+25411,589,4,08:37,83,92,84,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Rimbalzo offensivo,,,,,13,43,0,A,6,False,0,588
+25411,590,4,08:36,84,92,84,1761,BC Roma,0,6258,5,Corey,Davis,Fallo commesso,100,personale,,,36,80,1,D,10,False,0,
+25411,591,4,08:36,84,92,84,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Fallo Subito,,,,,36,80,1,D,10,False,0,590
+25411,592,4,08:36,84,92,84,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Ingresso,,,,,,,,,,False,0,
+25411,593,4,08:36,84,92,84,1767,Pallacanestro Trieste,1,7478,,Davide,Paiano,Uscita,,,,,,,,,,False,0,592
+25411,594,4,08:27,93,92,84,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Fallo commesso,106,offensivo,,,11,62,0,A,6,False,0,
+25411,595,4,08:27,93,92,84,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Palla persa,,,,,11,62,0,A,6,False,0,594
+25411,596,4,08:27,93,92,84,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,11,62,0,A,6,False,0,594
+25411,597,4,08:12,108,92,84,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,80,90,1,A,8,False,0,
+25411,598,4,08:12,108,92,84,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Rimbalzo difensivo,,,,,80,90,1,A,8,False,0,597
+25411,599,4,08:02,118,95,84,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,3 punti segnato,1,Tiro in sospensione,,,29,74,0,A,9,False,0,
+25411,600,4,08:02,118,95,84,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Assist,,,,,29,74,0,A,9,False,0,599
+25411,601,4,07:45,135,95,86,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti segnato,2,Tiro in corsa,,,90,50,1,A,6,True,0,
+25411,602,4,07:27,153,95,86,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,3 punti sbagliato,1,Tiro in sospensione,,,31,35,0,A,9,False,0,
+25411,603,4,07:27,153,95,86,1761,BC Roma,0,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,31,35,0,A,9,False,0,602
+25411,604,4,07:19,161,95,88,1761,BC Roma,0,9384,10,Erik,Stevenson,2 punti segnato,2,Tiro in corsa,,,91,52,1,A,3,True,0,
+25411,605,4,07:07,173,95,88,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Palla persa,54,Fuori dal campo,,,27,79,0,A,10,False,0,
+25411,606,4,07:07,173,95,88,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Ingresso,,,,,,,,,,False,0,
+25411,607,4,07:07,173,95,88,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Uscita,,,,,,,,,,False,0,606
+25411,608,4,07:07,173,95,88,1767,Pallacanestro Trieste,1,7420,17,Luka,Brajkovic,Uscita,,,,,,,,,,False,0,606
+25411,609,4,07:07,173,95,88,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Ingresso,,,,,,,,,,False,0,606
+25411,610,4,06:46,194,95,88,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,50,Passaggio sbagliato,,,91,33,1,A,4,False,0,
+25411,611,4,06:46,194,95,88,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Palla recuperata,,,,,91,33,0,D,4,False,0,610
+25411,612,4,06:46,194,95,88,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,2 punti sbagliato,2,Tiro in corsa,,,7,57,0,A,3,False,0,
+25411,613,4,06:46,194,95,88,1761,BC Roma,0,9384,10,Erik,Stevenson,Stoppata,,,,,7,57,1,D,3,False,0,612
+25411,614,4,06:46,194,95,88,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Stoppata subita,,,,,7,57,0,A,3,False,0,612
+25411,615,4,06:46,194,95,88,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo offensivo,,,,,7,57,0,A,3,False,0,612
+25411,616,4,06:46,194,95,88,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo commesso,103,tiro,,,6,32,1,D,2,False,0,
+25411,617,4,06:46,194,95,88,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Fallo Subito,,,,,6,32,1,D,2,False,0,616
+25411,618,4,06:46,194,95,88,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25411,619,4,06:46,194,96,88,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Tiro libero segnato,,,,,,,,A,7,False,0,618
+25411,620,4,06:33,207,96,90,1761,BC Roma,0,5369,12,Arturs,Strautins,2 punti segnato,2,Tiro in corsa,,,92,51,1,A,3,True,0,
+25411,621,4,06:21,219,96,90,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Fallo commesso,106,offensivo,,,28,51,0,A,7,False,0,
+25411,622,4,06:21,219,96,90,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Palla persa,,,,,28,51,0,A,7,False,0,621
+25411,623,4,06:21,219,96,90,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,28,51,0,A,7,False,0,621
+25411,624,4,06:21,219,96,90,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Uscita,,,,,,,,,,False,0,
+25411,625,4,06:21,219,96,90,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Ingresso,,,,,,,,,,False,0,624
+25411,626,4,06:11,229,96,90,1761,BC Roma,0,9384,10,Erik,Stevenson,3 punti sbagliato,1,Tiro in sospensione,,,75,88,1,A,8,False,0,
+25411,627,4,06:11,229,96,90,1761,BC Roma,0,,,,,Rimbalzi offensivi di squadra,,,,,75,88,1,A,8,False,0,626
+25411,628,4,06:10,230,96,90,1761,BC Roma,0,9384,10,Erik,Stevenson,Palla persa,53,Passi,,,79,15,1,A,7,False,0,
+25411,629,4,05:49,251,98,90,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,2 punti segnato,2,Tiro in corsa,,,5,57,0,A,3,True,0,
+25411,630,4,05:49,251,98,90,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Assist,,,,,5,57,0,A,3,False,0,629
+25411,631,4,05:30,270,98,90,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,1,Tiro in sospensione,,,70,76,1,A,8,False,0,
+25411,632,4,05:30,270,98,90,1767,Pallacanestro Trieste,1,,,,,Rimbalzi difensivi di squadra,,,,,70,76,1,A,8,False,0,631
+25411,633,4,05:30,270,98,90,1761,BC Roma,0,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,
+25411,634,4,05:30,270,98,90,1761,BC Roma,0,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,633
+25411,635,4,05:30,270,98,90,1761,BC Roma,0,9382,19,Marko,Simonovic,Ingresso,,,,,,,,,,False,0,633
+25411,636,4,05:30,270,98,90,1761,BC Roma,0,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,633
+25411,637,4,05:11,289,98,90,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,3 punti sbagliato,1,Tiro in sospensione,,,28,23,0,A,8,False,0,
+25411,638,4,05:11,289,98,90,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Rimbalzo offensivo,,,,,28,23,0,A,8,False,0,637
+25411,639,4,05:11,289,98,90,1761,BC Roma,0,9382,19,Marko,Simonovic,Fallo commesso,100,personale,,,12,54,1,D,6,False,0,
+25411,640,4,05:11,289,98,90,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,12,54,1,D,6,False,0,639
+25411,641,4,05:11,289,98,90,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Ingresso,,,,,,,,,,False,0,
+25411,642,4,05:11,289,98,90,1767,Pallacanestro Trieste,1,4890,10,Michele,Ruzzier,Uscita,,,,,,,,,,False,0,641
+25411,643,4,05:11,289,99,90,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,644,4,05:11,289,100,90,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,643
+25411,645,4,04:58,302,100,90,1761,BC Roma,0,9380,11,Gerald,Ayayi,2 punti sbagliato,1,Tiro in sospensione,,,88,34,1,A,4,False,0,
+25411,646,4,04:58,302,100,90,1761,BC Roma,0,5369,12,Arturs,Strautins,Rimbalzo offensivo,,,,,88,34,1,A,4,False,0,645
+25411,647,4,04:51,309,100,90,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Fallo commesso,100,personale,,,63,57,0,D,9,False,0,
+25411,648,4,04:51,309,100,90,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,63,57,0,D,9,False,0,647
+25411,649,4,04:49,311,100,90,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Fallo commesso,100,personale,,,68,48,0,D,9,False,0,
+25411,650,4,04:49,311,100,90,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,68,48,0,D,9,False,0,649
+25411,651,4,04:40,320,100,93,1761,BC Roma,0,9382,19,Marko,Simonovic,3 punti segnato,1,Tiro in sospensione,,,71,25,1,A,10,False,0,
+25411,652,4,04:40,320,100,93,1761,BC Roma,0,9380,11,Gerald,Ayayi,Assist,,,,,71,25,1,A,10,False,0,651
+25411,653,4,04:16,344,100,93,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,22,91,0,A,10,False,0,
+25411,654,4,04:16,344,100,93,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo offensivo,,,,,22,91,0,A,10,False,0,653
+25411,655,4,04:16,344,102,93,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,2 punti segnato,7,Appoggio a canestro,,,22,91,0,A,4,False,0,
+25411,656,4,04:05,355,102,93,1761,BC Roma,0,6258,5,Corey,Davis,Palla persa,50,Passaggio sbagliato,,,63,53,1,A,9,False,0,
+25411,657,4,04:05,355,102,93,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Palla recuperata,,,,,63,53,1,A,9,False,0,656
+25411,658,4,03:58,362,105,93,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,3 punti segnato,1,Tiro in sospensione,500,contropiede,27,83,0,A,10,False,0,
+25411,659,4,03:58,362,105,93,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Assist,,,500,contropiede,27,83,0,A,10,False,0,658
+25411,660,4,03:58,362,105,93,1761,BC Roma,0,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,
+25411,661,4,03:58,362,105,93,1761,BC Roma,0,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,660
+25411,662,4,03:47,373,105,95,1761,BC Roma,0,9382,19,Marko,Simonovic,2 punti segnato,2,Tiro in corsa,,,94,55,1,A,3,True,0,
+25411,663,4,03:47,373,105,95,1761,BC Roma,0,9384,10,Erik,Stevenson,Assist,,,,,94,55,1,A,3,False,0,662
+25411,664,4,03:23,397,105,95,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,2 punti sbagliato,2,Tiro in corsa,1004,tip-in appoggio canestro miss,11,47,0,A,6,False,0,
+25411,665,4,03:23,397,105,95,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Rimbalzo offensivo,,,,,11,47,0,A,6,False,0,664
+25411,666,4,03:23,397,105,95,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,2 punti sbagliato,7,Appoggio a canestro,,,11,47,0,A,6,False,0,
+25411,667,4,03:23,397,105,95,1761,BC Roma,0,9380,11,Gerald,Ayayi,Rimbalzo difensivo,,,,,11,47,0,A,6,False,0,666
+25411,668,4,03:16,404,105,95,1761,BC Roma,0,9380,11,Gerald,Ayayi,Palla persa,50,Passaggio sbagliato,,,85,30,1,A,4,False,0,
+25411,669,4,03:16,404,105,95,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Palla recuperata,,,,,85,30,1,A,4,False,0,668
+25411,670,4,03:07,413,108,95,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,3 punti segnato,1,Tiro in sospensione,,,14,96,0,A,10,False,0,
+25411,671,4,03:07,413,108,95,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Assist,,,,,14,96,0,A,10,False,0,670
+25411,672,4,02:52,428,108,95,1761,BC Roma,0,9380,11,Gerald,Ayayi,3 punti sbagliato,1,Tiro in sospensione,,,78,13,1,A,10,False,0,
+25411,673,4,02:52,428,108,95,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Rimbalzo difensivo,,,,,78,13,1,A,10,False,0,672
+25411,674,4,02:43,437,110,95,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,2 punti segnato,9,Schiacciata,500,contropiede,6,58,0,A,3,True,1,
+25411,675,4,02:43,437,110,95,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Assist,,,500,contropiede,6,58,0,A,3,False,0,674
+25411,676,4,02:34,446,110,95,1761,BC Roma,0,6138,1,Niccolò,Mannion,3 punti sbagliato,1,Tiro in sospensione,,,70,63,1,A,9,False,0,
+25411,677,4,02:34,446,110,95,1767,Pallacanestro Trieste,1,9390,25,Lajae,Jones,Rimbalzo difensivo,,,,,70,63,1,A,9,False,0,676
+25411,678,4,02:11,469,110,95,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,3 punti sbagliato,1,Tiro in sospensione,,,25,81,0,A,10,False,0,
+25411,679,4,02:11,469,110,95,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,Rimbalzo offensivo,,,,,25,81,0,A,10,False,0,678
+25411,680,4,01:57,483,110,95,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,3 punti sbagliato,1,Tiro in sospensione,,,28,20,0,A,8,False,0,
+25411,681,4,01:57,483,110,95,1761,BC Roma,0,6138,1,Niccolò,Mannion,Rimbalzo difensivo,,,,,28,20,0,A,8,False,0,680
+25411,682,4,01:51,489,110,98,1761,BC Roma,0,9380,11,Gerald,Ayayi,3 punti segnato,1,Tiro in sospensione,500,contropiede,74,84,1,A,8,False,0,
+25411,683,4,01:51,489,110,98,1761,BC Roma,0,6138,1,Niccolò,Mannion,Assist,,,500,contropiede,74,84,1,A,8,False,0,682
+25411,684,4,01:51,489,110,98,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,Ingresso,,,,,,,,,,False,0,
+25411,685,4,01:51,489,110,98,1767,Pallacanestro Trieste,1,949,13,Francesco,Candussi,Uscita,,,,,,,,,,False,0,684
+25411,686,4,01:24,516,113,98,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,3 punti segnato,1,Tiro in sospensione,,,31,55,0,A,9,False,0,
+25411,687,4,01:15,525,113,98,1761,BC Roma,0,6138,1,Niccolò,Mannion,Palla persa,50,Passaggio sbagliato,,,75,53,1,A,7,False,0,
+25411,688,4,01:15,525,113,98,1767,Pallacanestro Trieste,1,6993,9,Langston,Galloway,Palla recuperata,,,,,75,53,1,A,7,False,0,687
+25411,689,4,01:08,532,113,98,1761,BC Roma,0,9384,10,Erik,Stevenson,Fallo commesso,124,flagrant,,,7,49,1,D,3,False,0,
+25411,690,4,01:08,532,113,98,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo Subito,,,,,7,49,1,D,3,False,0,689
+25411,691,4,01:08,532,114,98,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,692,4,01:08,532,114,98,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Tiro libero sbagliato,,,,,,,,A,7,False,0,691
+25411,693,4,00:58,542,116,98,1767,Pallacanestro Trieste,1,7007,30,Sean,McDermott,2 punti segnato,1,Tiro in sospensione,,,23,47,0,A,7,False,0,
+25411,694,4,00:43,557,116,98,1761,BC Roma,0,6138,1,Niccolò,Mannion,2 punti sbagliato,2,Tiro in corsa,,,92,55,1,A,3,False,0,
+25411,695,4,00:43,557,116,98,1761,BC Roma,0,9382,19,Marko,Simonovic,Rimbalzo offensivo,,,,,92,55,1,A,3,False,0,694
+25411,696,4,00:37,563,116,98,1761,BC Roma,0,9382,19,Marko,Simonovic,3 punti sbagliato,1,Tiro in sospensione,,,72,81,1,A,8,False,0,
+25411,697,4,00:37,563,116,98,1767,Pallacanestro Trieste,1,,,,,Rimbalzi difensivi di squadra,,,,,72,81,1,A,8,False,0,696
+25411,698,4,00:26,574,116,98,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,3 punti sbagliato,1,Tiro in sospensione,,,33,47,0,A,9,False,0,
+25411,699,4,00:26,574,116,98,1761,BC Roma,0,9382,19,Marko,Simonovic,Rimbalzo difensivo,,,,,33,47,0,A,9,False,0,698
+25411,700,4,00:21,579,116,98,1767,Pallacanestro Trieste,1,6604,4,Colbey,Ross,Fallo commesso,103,tiro,,,69,67,0,D,9,False,0,
+25411,701,4,00:21,579,116,98,1761,BC Roma,0,6138,1,Niccolò,Mannion,Fallo Subito,,,,,69,67,0,D,9,False,0,700
+25411,702,4,00:21,579,116,99,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero segnato,,,,,,,,A,7,False,0,
+25411,703,4,00:21,579,116,99,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero sbagliato,,,,,,,,A,7,False,0,702
+25411,704,4,00:21,579,116,100,1761,BC Roma,0,6138,1,Niccolò,Mannion,Tiro libero segnato,,,,,,,,A,7,False,0,702
+25411,705,4,00:00,600,116,100,1767,Pallacanestro Trieste,1,1592,8,Lodovico,Deangeli,2 punti sbagliato,2,Tiro in corsa,,,10,47,0,A,6,False,0,
+25411,706,4,00:00,600,116,100,1761,BC Roma,0,9382,19,Marko,Simonovic,Rimbalzo difensivo,,,,,10,47,0,A,6,False,0,705
+25411,707,4,00:00,600,116,100,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25414,102,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25414,103,1,10:00,0,0,0,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Palla contesa,,,,,,,0,,,False,0,
+25414,104,1,09:44,16,3,0,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti segnato,1,Tiro in sospensione,,,91,3,1,A,5,False,0,
+25414,105,1,09:44,16,3,0,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,91,3,1,A,5,False,0,104
+25414,106,1,09:27,33,3,0,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,3 punti sbagliato,1,Tiro in sospensione,,,6,2,0,A,1,False,0,
+25414,107,1,09:27,33,3,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo difensivo,,,,,6,2,0,A,1,False,0,106
+25414,108,1,09:11,49,5,0,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,1,Tiro in sospensione,,,90,69,1,A,2,False,0,
+25414,109,1,08:47,73,5,0,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,8,59,0,A,3,False,0,
+25414,110,1,08:47,73,5,0,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Stoppata,,,,,8,59,0,A,3,False,0,109
+25414,111,1,08:47,73,5,0,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Stoppata subita,,,,,8,59,0,A,3,False,0,109
+25414,112,1,08:47,73,5,0,1753,Umana Reyer Venezia,0,,,,,Rimbalzi offensivi di squadra,,,,,8,59,0,A,3,False,0,109
+25414,113,1,08:47,73,5,0,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,3 punti sbagliato,1,Tiro in sospensione,,,28,22,0,A,8,False,0,
+25414,114,1,08:47,73,5,0,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Rimbalzo difensivo,,,,,28,22,0,A,8,False,0,113
+25414,115,1,08:35,85,5,0,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Palla persa,54,Fuori dal campo,,,90,97,1,A,8,False,0,
+25414,116,1,08:16,104,5,0,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Palla persa,50,Passaggio sbagliato,,,34,54,0,A,9,False,0,
+25414,117,1,08:16,104,5,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Palla recuperata,,,,,34,54,0,A,9,False,0,116
+25414,118,1,08:11,109,5,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti sbagliato,8,Da penetrazione,500,contropiede,94,41,1,A,3,False,0,
+25414,119,1,08:11,109,5,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo offensivo,,,,,94,41,1,A,3,False,0,118
+25414,120,1,08:05,115,5,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,91,49,1,A,3,False,0,
+25414,121,1,08:05,115,5,0,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Stoppata,,,,,91,49,1,A,3,False,0,120
+25414,122,1,08:05,115,5,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Stoppata subita,,,,,91,49,1,A,3,False,0,120
+25414,123,1,08:05,115,5,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo offensivo,,,,,91,49,1,A,3,False,0,120
+25414,124,1,07:58,122,5,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti sbagliato,1,Tiro in sospensione,,,89,51,1,A,6,False,0,
+25414,125,1,07:58,122,5,0,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Rimbalzo difensivo,,,,,89,51,1,A,6,False,0,124
+25414,126,1,07:53,127,5,0,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Palla persa,54,Fuori dal campo,,,2,35,0,A,2,False,0,
+25414,127,1,07:38,142,7,0,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,1,Tiro in sospensione,,,81,33,1,A,4,False,0,
+25414,128,1,07:38,142,7,0,1753,Umana Reyer Venezia,0,,,,,Time Out,,,,,,,0,,,False,0,
+25414,129,1,07:24,156,7,0,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,8,55,0,A,3,False,0,
+25414,130,1,07:24,156,7,0,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Stoppata,,,,,8,55,0,A,3,False,0,129
+25414,131,1,07:24,156,7,0,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Stoppata subita,,,,,8,55,0,A,3,False,0,129
+25414,132,1,07:24,156,7,0,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo difensivo,,,,,8,55,0,A,3,False,0,129
+25414,133,1,07:06,174,9,0,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,2 punti segnato,1,Tiro in sospensione,,,89,46,1,A,6,True,0,
+25414,134,1,07:06,174,9,0,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,89,46,1,A,6,False,0,133
+25414,135,1,06:53,187,9,0,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Palla persa,50,Passaggio sbagliato,,,25,75,0,A,7,False,0,
+25414,136,1,06:53,187,9,0,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Palla recuperata,,,,,25,75,0,A,7,False,0,135
+25414,137,1,06:49,191,11,0,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,8,Da penetrazione,500,contropiede,92,46,1,A,3,True,0,
+25414,138,1,06:31,209,11,0,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,2 punti sbagliato,1,Tiro in sospensione,,,10,65,0,A,4,False,0,
+25414,139,1,06:31,209,11,0,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Rimbalzo offensivo,,,,,10,65,0,A,4,False,0,138
+25414,140,1,06:27,213,11,0,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Fallo commesso,103,tiro,,,10,60,1,D,6,False,0,
+25414,141,1,06:27,213,11,0,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo Subito,,,,,10,60,1,D,6,False,0,140
+25414,142,1,06:27,213,11,0,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Uscita,,,,,,,,,,False,0,
+25414,143,1,06:27,213,11,0,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Ingresso,,,,,,,,,,False,0,142
+25414,144,1,06:27,213,11,1,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,145,1,06:27,213,11,2,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Tiro libero segnato,,,,,,,,A,7,False,0,144
+25414,146,1,06:19,221,13,2,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,8,Da penetrazione,,,94,45,1,A,3,True,0,
+25414,147,1,06:01,239,13,2,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,2 punti sbagliato,1,Tiro in sospensione,,,7,44,0,A,3,False,0,
+25414,148,1,06:01,239,13,2,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Rimbalzo offensivo,,,,,7,44,0,A,3,False,0,147
+25414,149,1,05:55,245,13,5,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,3 punti segnato,1,Tiro in sospensione,,,26,79,0,A,10,False,0,
+25414,150,1,05:55,245,13,5,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Assist,,,,,26,79,0,A,10,False,0,149
+25414,151,1,05:29,271,13,5,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,74,82,1,A,8,False,0,
+25414,152,1,05:29,271,13,5,1753,Umana Reyer Venezia,0,,,,,Rimbalzi difensivi di squadra,,,,,74,82,1,A,8,False,0,151
+25414,153,1,05:15,285,13,7,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,2 punti segnato,1,Tiro in sospensione,,,7,48,0,A,3,True,0,
+25414,154,1,05:15,285,13,7,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Assist,,,,,7,48,0,A,3,False,0,153
+25414,155,1,05:05,295,13,7,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Fallo commesso,100,personale,,,93,44,0,D,3,False,0,
+25414,156,1,05:05,295,13,7,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Fallo Subito,,,,,93,44,0,D,3,False,0,155
+25414,157,1,05:05,295,13,7,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Uscita,,,,,,,,,,False,0,
+25414,158,1,05:05,295,13,7,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Ingresso,,,,,,,,,,False,0,157
+25414,159,1,05:01,299,13,7,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,3 punti sbagliato,1,Tiro in sospensione,,,77,84,1,A,8,False,0,
+25414,160,1,05:01,299,13,7,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Rimbalzo difensivo,,,,,77,84,1,A,8,False,0,159
+25414,161,1,04:37,323,13,7,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,2 punti sbagliato,1,Tiro in sospensione,,,9,58,0,A,3,False,0,
+25414,162,1,04:37,323,13,7,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,9,58,0,A,3,False,0,161
+25414,163,1,04:20,340,13,7,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,2 punti sbagliato,1,Tiro in sospensione,,,91,89,1,A,2,False,0,
+25414,164,1,04:20,340,13,7,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Rimbalzo difensivo,,,,,91,89,1,A,2,False,0,163
+25414,165,1,04:17,343,13,7,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Palla persa,50,Passaggio sbagliato,,,86,55,0,D,6,False,0,
+25414,166,1,04:17,343,13,7,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Palla recuperata,,,,,86,55,0,D,6,False,0,165
+25414,167,1,04:11,349,15,7,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,8,Da penetrazione,500,contropiede,92,50,1,A,3,True,0,
+25414,168,1,03:50,370,15,9,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,2 punti segnato,8,Da penetrazione,,,8,56,0,A,3,True,0,
+25414,169,1,03:50,370,15,9,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo commesso,103,tiro,,,8,56,1,D,3,False,0,
+25414,170,1,03:50,370,15,9,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo Subito,,,,,8,56,1,D,3,False,0,169
+25414,171,1,03:50,370,15,9,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Uscita,,,,,,,,,,False,0,
+25414,172,1,03:50,370,15,9,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,171
+25414,173,1,03:50,370,15,9,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Ingresso,,,,,,,,,,False,0,171
+25414,174,1,03:50,370,15,9,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,171
+25414,175,1,03:50,370,15,10,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,176,1,03:50,370,15,10,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Ingresso,,,,,,,,,,False,0,
+25414,177,1,03:50,370,15,10,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Uscita,,,,,,,,,,False,0,176
+25414,178,1,03:35,385,15,10,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,73,25,1,A,10,False,0,
+25414,179,1,03:35,385,15,10,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Rimbalzo offensivo,,,,,73,25,1,A,10,False,0,178
+25414,180,1,03:31,389,17,10,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti segnato,1,Tiro in sospensione,,,91,47,1,A,3,True,0,
+25414,181,1,03:23,397,17,10,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo commesso,100,personale,,,7,44,1,D,3,False,0,
+25414,182,1,03:23,397,17,10,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Fallo Subito,,,,,7,44,1,D,3,False,0,181
+25414,183,1,03:23,397,17,10,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Ingresso,,,,,,,,,,False,0,
+25414,184,1,03:23,397,17,10,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Uscita,,,,,,,,,,False,0,183
+25414,185,1,03:23,397,17,10,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Ingresso,,,,,,,,,,False,0,
+25414,186,1,03:23,397,17,10,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Uscita,,,,,,,,,,False,0,185
+25414,187,1,03:23,397,17,10,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Uscita,,,,,,,,,,False,0,
+25414,188,1,03:23,397,17,10,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Ingresso,,,,,,,,,,False,0,187
+25414,189,1,03:23,397,17,10,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Uscita,,,,,,,,,,False,0,187
+25414,190,1,03:23,397,17,10,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Ingresso,,,,,,,,,,False,0,187
+25414,191,1,03:23,397,17,10,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,3 punti sbagliato,1,Tiro in sospensione,1001,tip-in schiacciata made,30,18,0,A,8,False,0,
+25414,192,1,03:23,397,17,10,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Rimbalzo offensivo,,,,,30,18,0,A,8,False,0,191
+25414,193,1,03:23,397,17,12,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,2 punti segnato,9,Schiacciata,,,30,18,0,A,2,False,1,
+25414,194,1,02:57,423,20,12,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,3 punti segnato,1,Tiro in sospensione,,,71,76,1,A,8,False,0,
+25414,195,1,02:33,447,20,12,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,3 punti sbagliato,1,Tiro in sospensione,,,33,58,0,A,9,False,0,
+25414,196,1,02:33,447,20,12,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Rimbalzo difensivo,,,,,33,58,0,A,9,False,0,195
+25414,197,1,02:19,461,20,12,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Ingresso,,,,,,,,,,False,0,
+25414,198,1,02:19,461,20,12,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Uscita,,,,,,,,,,False,0,197
+25414,199,1,02:16,464,20,12,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,3 punti sbagliato,1,Tiro in sospensione,,,71,29,1,A,9,False,0,
+25414,200,1,02:16,464,20,12,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Rimbalzo difensivo,,,,,71,29,1,A,9,False,0,199
+25414,201,1,02:08,472,20,12,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,3 punti sbagliato,1,Tiro in sospensione,,,30,66,0,A,9,False,0,
+25414,202,1,02:08,472,20,12,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Rimbalzo offensivo,,,,,30,66,0,A,9,False,0,201
+25414,203,1,02:01,479,20,12,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Palla persa,51,Palleggio,,,6,30,0,A,2,False,0,
+25414,204,1,01:42,498,20,12,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti sbagliato,1,Tiro in sospensione,,,77,89,1,A,8,False,0,
+25414,205,1,01:42,498,20,12,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Rimbalzo offensivo,,,,,77,89,1,A,8,False,0,204
+25414,206,1,01:35,505,22,12,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,2 punti segnato,1,Tiro in sospensione,,,77,31,1,A,7,False,0,
+25414,207,1,01:24,516,22,12,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Fallo commesso,100,personale,,,21,35,1,D,7,False,0,
+25414,208,1,01:24,516,22,12,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Fallo Subito,,,,,21,35,1,D,7,False,0,207
+25414,209,1,01:24,516,22,14,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,2 punti segnato,10,Alley-oop,,,4,51,0,A,3,True,0,
+25414,210,1,01:24,516,22,14,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Assist,,,,,4,51,0,A,3,False,0,209
+25414,211,1,01:05,535,22,14,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Fallo commesso,100,personale,,,85,35,0,D,4,False,0,
+25414,212,1,01:05,535,22,14,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Fallo Subito,,,,,85,35,0,D,4,False,0,211
+25414,213,1,01:00,540,22,14,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,2 punti sbagliato,1,Tiro in sospensione,,,90,56,1,A,6,False,0,
+25414,214,1,01:00,540,22,14,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Rimbalzo offensivo,,,,,90,56,1,A,6,False,0,213
+25414,215,1,00:47,553,22,14,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Fallo commesso,103,tiro,,,92,55,0,D,3,False,0,
+25414,216,1,00:47,553,22,14,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo Subito,,,,,92,55,0,D,3,False,0,215
+25414,217,1,00:47,553,22,14,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Uscita,,,,,,,,,,False,0,
+25414,218,1,00:47,553,22,14,1753,Umana Reyer Venezia,0,6994,44,Sasha,Grant,Ingresso,,,,,,,,,,False,0,217
+25414,219,1,00:47,553,23,14,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,220,1,00:47,553,24,14,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero segnato,,,,,,,,A,7,False,0,219
+25414,221,1,00:47,553,24,14,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Assist,,,,,,,,,,False,0,219
+25414,222,1,00:37,563,24,16,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,2 punti segnato,10,Alley-oop,,,6,53,0,A,3,True,0,
+25414,223,1,00:37,563,24,16,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Assist,,,,,6,53,0,A,3,False,0,222
+25414,224,1,00:21,579,26,16,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti segnato,7,Appoggio a canestro,,,91,42,1,A,3,True,0,
+25414,225,1,00:03,597,26,16,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo commesso,103,tiro,,,7,59,1,D,3,False,0,
+25414,226,1,00:03,597,26,16,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Fallo Subito,,,,,7,59,1,D,3,False,0,225
+25414,227,1,00:03,597,26,16,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,1,,,False,0,
+25414,228,1,00:03,597,26,17,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,229,1,00:03,597,26,18,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Tiro libero segnato,,,,,,,,A,7,False,0,228
+25414,230,1,00:01,599,26,18,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,56,95,1,A,8,False,0,
+25414,231,1,00:00,600,26,18,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25414,232,2,10:00,0,26,18,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Ingresso,,,,,,,,,,False,0,
+25414,233,2,10:00,0,26,18,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,232
+25414,234,2,10:00,0,26,18,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25414,235,2,09:43,17,26,21,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,3 punti segnato,1,Tiro in sospensione,,,32,29,0,A,9,False,0,
+25414,236,2,09:20,40,26,21,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,3 punti sbagliato,1,Tiro in sospensione,,,68,55,1,A,9,False,0,
+25414,237,2,09:20,40,26,21,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Rimbalzo difensivo,,,,,68,55,1,A,9,False,0,236
+25414,238,2,09:05,55,26,21,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Fallo commesso,100,personale,,,33,31,1,D,9,False,0,
+25414,239,2,09:05,55,26,21,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Fallo Subito,,,,,33,31,1,D,9,False,0,238
+25414,240,2,09:05,55,26,21,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Ingresso,,,,,,,,,,False,0,
+25414,241,2,09:05,55,26,21,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,240
+25414,242,2,09:05,55,26,21,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,240
+25414,243,2,09:05,55,26,21,1760,UNA Hotels Reggio Emilia,1,9036,26,Jaime,Echenique,Uscita,,,,,,,,,,False,0,240
+25414,244,2,08:58,62,26,23,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,2 punti segnato,7,Appoggio a canestro,,,6,51,0,A,3,True,0,
+25414,245,2,08:58,62,26,23,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Assist,,,,,6,51,0,A,3,False,0,244
+25414,246,2,08:35,85,26,23,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti sbagliato,1,Tiro in sospensione,,,67,71,1,A,9,False,0,
+25414,247,2,08:35,85,26,23,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Rimbalzo difensivo,,,,,67,71,1,A,9,False,0,246
+25414,248,2,08:30,90,26,23,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Palla persa,50,Passaggio sbagliato,,,64,55,0,D,9,False,0,
+25414,249,2,08:30,90,26,23,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla recuperata,,,,,64,55,0,D,9,False,0,248
+25414,250,2,08:30,90,26,23,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Fallo commesso,100,personale,,,44,41,0,A,9,False,0,
+25414,251,2,08:30,90,26,23,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo Subito,,,,,44,41,0,A,9,False,0,250
+25414,252,2,08:23,97,26,23,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,3 punti sbagliato,1,Tiro in sospensione,,,71,76,1,A,8,False,0,
+25414,253,2,08:23,97,26,23,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Rimbalzo difensivo,,,,,71,76,1,A,8,False,0,252
+25414,254,2,08:11,109,26,23,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo commesso,103,tiro,,,22,51,1,D,7,False,0,
+25414,255,2,08:11,109,26,23,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Fallo Subito,,,,,22,51,1,D,7,False,0,254
+25414,256,2,08:11,109,26,23,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Ingresso,,,,,,,,,,False,0,
+25414,257,2,08:11,109,26,23,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Uscita,,,,,,,,,,False,0,256
+25414,258,2,08:11,109,26,23,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25414,259,2,08:11,109,26,24,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Tiro libero segnato,,,,,,,,A,7,False,0,258
+25414,260,2,07:53,127,26,24,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti sbagliato,1,Tiro in sospensione,,,93,54,1,A,3,False,0,
+25414,261,2,07:53,127,26,24,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Rimbalzo offensivo,,,,,93,54,1,A,3,False,0,260
+25414,262,2,07:42,138,28,24,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,2 punti segnato,7,Appoggio a canestro,,,94,56,1,A,3,True,0,
+25414,263,2,07:29,151,28,24,1753,Umana Reyer Venezia,0,6994,44,Sasha,Grant,Palla persa,50,Passaggio sbagliato,,,30,34,0,A,9,False,0,
+25414,264,2,07:11,169,28,24,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,67,51,1,A,9,False,0,
+25414,265,2,07:11,169,28,24,1753,Umana Reyer Venezia,0,,,,,Rimbalzi difensivi di squadra,,,,,67,51,1,A,9,False,0,264
+25414,266,2,06:51,189,28,24,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,3 punti sbagliato,1,Tiro in sospensione,,,34,45,0,A,9,False,0,
+25414,267,2,06:51,189,28,24,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Rimbalzo difensivo,,,,,34,45,0,A,9,False,0,266
+25414,268,2,06:45,195,30,24,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti segnato,9,Schiacciata,500,contropiede,91,47,1,A,3,True,1,
+25414,269,2,06:45,195,30,24,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Assist,,,500,contropiede,91,47,1,A,3,False,0,268
+25414,270,2,06:29,211,30,24,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo commesso,100,personale,,,7,50,1,D,3,False,0,
+25414,271,2,06:29,211,30,24,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Fallo Subito,,,,,7,50,1,D,3,False,0,270
+25414,272,2,06:29,211,30,24,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Ingresso,,,,,,,,,,False,0,
+25414,273,2,06:29,211,30,24,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Uscita,,,,,,,,,,False,0,272
+25414,274,2,06:29,211,30,24,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Uscita,,,,,,,,,,False,0,272
+25414,275,2,06:29,211,30,24,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Ingresso,,,,,,,,,,False,0,272
+25414,276,2,06:13,227,30,24,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,3 punti sbagliato,1,Tiro in sospensione,,,31,71,0,A,9,False,0,
+25414,277,2,06:13,227,30,24,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Rimbalzo difensivo,,,,,31,71,0,A,9,False,0,276
+25414,278,2,06:02,238,32,24,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,2 punti segnato,7,Appoggio a canestro,,,94,45,1,A,3,True,0,
+25414,279,2,06:02,238,32,24,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Assist,,,,,94,45,1,A,3,False,0,278
+25414,280,2,05:58,242,32,24,1753,Umana Reyer Venezia,0,,,,,Time Out,,,,,,,0,,,False,0,
+25414,281,2,05:58,242,32,24,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Uscita,,,,,,,,,,False,0,
+25414,282,2,05:58,242,32,24,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,281
+25414,283,2,05:58,242,32,24,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Ingresso,,,,,,,,,,False,0,281
+25414,284,2,05:58,242,32,24,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Uscita,,,,,,,,,,False,0,281
+25414,285,2,05:46,254,32,27,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,3 punti segnato,1,Tiro in sospensione,,,3,98,0,A,5,False,0,
+25414,286,2,05:46,254,32,27,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Assist,,,,,3,98,0,A,5,False,0,285
+25414,287,2,05:35,265,32,27,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla persa,50,Passaggio sbagliato,,,88,55,1,A,6,False,0,
+25414,288,2,05:35,265,32,27,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Palla recuperata,,,,,88,55,1,A,6,False,0,287
+25414,289,2,05:31,269,32,27,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo commesso,103,tiro,,,7,48,1,D,3,False,0,
+25414,290,2,05:31,269,32,27,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Fallo Subito,,,,,7,48,1,D,3,False,0,289
+25414,291,2,05:31,269,32,27,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Ingresso,,,,,,,,,,False,0,
+25414,292,2,05:31,269,32,27,1753,Umana Reyer Venezia,0,6994,44,Sasha,Grant,Uscita,,,,,,,,,,False,0,291
+25414,293,2,05:31,269,32,28,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25414,294,2,05:31,269,32,29,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,293
+25414,295,2,05:15,285,32,29,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti sbagliato,1,Tiro in sospensione,,,68,73,1,A,9,False,0,
+25414,296,2,05:15,285,32,29,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Rimbalzo offensivo,,,,,68,73,1,A,9,False,0,295
+25414,297,2,05:07,293,34,29,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,4,Giro e Tiro,,,90,52,1,A,6,True,0,
+25414,298,2,04:58,302,34,29,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Palla persa,54,Fuori dal campo,,,2,80,0,A,4,False,0,
+25414,299,2,04:49,311,34,29,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,3 punti sbagliato,1,Tiro in sospensione,,,72,21,1,A,10,False,0,
+25414,300,2,04:49,311,34,29,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Rimbalzo difensivo,,,,,72,21,1,A,10,False,0,299
+25414,301,2,04:35,325,34,29,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,3 punti sbagliato,1,Tiro in sospensione,,,6,5,0,A,1,False,0,
+25414,302,2,04:35,325,34,29,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Rimbalzo offensivo,,,,,6,5,0,A,1,False,0,301
+25414,303,2,04:32,328,34,29,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Fallo commesso,100,personale,,,5,74,1,D,4,False,0,
+25414,304,2,04:32,328,34,29,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Fallo Subito,,,,,5,74,1,D,4,False,0,303
+25414,305,2,04:32,328,34,29,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Ingresso,,,,,,,,,,False,0,
+25414,306,2,04:32,328,34,29,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,305
+25414,307,2,04:32,328,34,29,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Uscita,,,,,,,,,,False,0,305
+25414,308,2,04:32,328,34,29,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Ingresso,,,,,,,,,,False,0,305
+25414,309,2,04:32,328,34,29,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Uscita,,,,,,,,,,False,0,305
+25414,310,2,04:32,328,34,29,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Ingresso,,,,,,,,,,False,0,305
+25414,311,2,04:32,328,34,29,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25414,312,2,04:32,328,34,29,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Tiro libero sbagliato,,,,,,,,A,7,False,0,311
+25414,313,2,04:32,328,34,29,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,,,,,,False,0,311
+25414,314,2,04:14,346,37,29,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti segnato,1,Tiro in sospensione,,,82,6,1,A,10,False,0,
+25414,315,2,04:14,346,37,29,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Assist,,,,,82,6,1,A,10,False,0,314
+25414,316,2,03:58,362,37,32,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,3 punti segnato,1,Tiro in sospensione,,,22,12,0,A,8,False,0,
+25414,317,2,03:58,362,37,32,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Assist,,,,,22,12,0,A,8,False,0,316
+25414,318,2,03:39,381,37,32,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Fallo commesso,100,personale,,,72,47,0,D,7,False,0,
+25414,319,2,03:39,381,37,32,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Fallo Subito,,,,,72,47,0,D,7,False,0,318
+25414,320,2,03:39,381,37,32,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Uscita,,,,,,,,,,False,0,
+25414,321,2,03:39,381,37,32,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Ingresso,,,,,,,,,,False,0,320
+25414,322,2,03:39,381,37,32,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Uscita,,,,,,,,,,False,0,
+25414,323,2,03:39,381,37,32,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Ingresso,,,,,,,,,,False,0,322
+25414,324,2,03:27,393,39,32,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,2 punti segnato,9,Schiacciata,,,94,49,1,A,3,True,1,
+25414,325,2,03:27,393,39,32,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Assist,,,,,94,49,1,A,3,False,0,324
+25414,326,2,03:16,404,39,32,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Palla persa,51,Palleggio,,,5,75,0,A,4,False,0,
+25414,327,2,03:16,404,39,32,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Ingresso,,,,,,,,,,False,0,
+25414,328,2,03:16,404,39,32,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Uscita,,,,,,,,,,False,0,327
+25414,329,2,03:04,416,41,32,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,2 punti segnato,1,Tiro in sospensione,,,91,54,1,A,3,True,0,
+25414,330,2,03:04,416,41,32,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Assist,,,,,91,54,1,A,3,False,0,329
+25414,331,2,02:43,437,41,32,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,2 punti sbagliato,1,Tiro in sospensione,,,7,48,0,A,3,False,0,
+25414,332,2,02:43,437,41,32,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,7,48,0,A,3,False,0,331
+25414,333,2,02:34,446,41,32,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,3 punti sbagliato,1,Tiro in sospensione,,,71,79,1,A,8,False,0,
+25414,334,2,02:34,446,41,32,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Rimbalzo difensivo,,,,,71,79,1,A,8,False,0,333
+25414,335,2,02:19,461,41,32,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,3 punti sbagliato,1,Tiro in sospensione,,,26,14,0,A,8,False,0,
+25414,336,2,02:19,461,41,32,1760,UNA Hotels Reggio Emilia,1,,,,,Rimbalzi difensivi di squadra,,,,,26,14,0,A,8,False,0,335
+25414,337,2,02:15,465,41,32,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo commesso,100,personale,,,6,54,0,A,3,False,0,
+25414,338,2,02:15,465,41,32,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo Subito,,,,,6,54,0,A,3,False,0,337
+25414,339,2,01:56,484,41,32,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,93,43,1,A,3,False,0,
+25414,340,2,01:56,484,41,32,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Stoppata,,,,,93,43,1,A,3,False,0,339
+25414,341,2,01:56,484,41,32,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Stoppata subita,,,,,93,43,1,A,3,False,0,339
+25414,342,2,01:56,484,41,32,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Rimbalzo offensivo,,,,,93,43,1,A,3,False,0,339
+25414,343,2,01:47,493,43,32,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti segnato,1,Tiro in sospensione,,,93,49,1,A,3,True,0,
+25414,344,2,01:41,499,43,32,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,28,76,0,A,10,False,0,
+25414,345,2,01:41,499,43,32,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Rimbalzo offensivo,,,,,28,76,0,A,10,False,0,344
+25414,346,2,01:41,499,43,34,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,2 punti segnato,7,Appoggio a canestro,,,28,76,0,A,4,False,0,
+25414,347,2,01:23,517,43,34,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Fallo commesso,103,tiro,,,84,48,0,D,6,False,0,
+25414,348,2,01:23,517,43,34,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo Subito,,,,,84,48,0,D,6,False,0,347
+25414,349,2,01:23,517,43,34,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Ingresso,,,,,,,,,,False,0,
+25414,350,2,01:23,517,43,34,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,349
+25414,351,2,01:23,517,43,34,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Ingresso,,,,,,,,,,False,0,349
+25414,352,2,01:23,517,43,34,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Uscita,,,,,,,,,,False,0,349
+25414,353,2,01:23,517,44,34,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,354,2,01:23,517,44,34,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Tiro libero sbagliato,,,,,,,,A,7,False,0,353
+25414,355,2,01:23,517,44,34,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Rimbalzo difensivo,,,,,,,,,,False,0,353
+25414,356,2,01:16,524,44,34,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,2 punti sbagliato,1,Tiro in sospensione,,,6,57,0,A,3,False,0,
+25414,357,2,01:16,524,44,34,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Rimbalzo offensivo,,,,,6,57,0,A,3,False,0,356
+25414,358,2,01:09,531,44,34,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Palla persa,50,Passaggio sbagliato,,,10,51,0,A,6,False,0,
+25414,359,2,01:09,531,44,34,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Palla recuperata,,,,,10,51,0,A,6,False,0,358
+25414,360,2,01:06,534,44,34,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,2 punti sbagliato,1,Tiro in sospensione,,,93,45,1,A,3,False,0,
+25414,361,2,01:06,534,44,34,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Rimbalzo difensivo,,,,,93,45,1,A,3,False,0,360
+25414,362,2,01:01,539,44,34,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,3 punti sbagliato,1,Tiro in sospensione,,,19,7,0,A,8,False,0,
+25414,363,2,01:01,539,44,34,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Rimbalzo difensivo,,,,,19,7,0,A,8,False,0,362
+25414,364,2,00:55,545,44,34,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo commesso,103,tiro,,,92,45,0,D,3,False,0,
+25414,365,2,00:55,545,44,34,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Fallo Subito,,,,,92,45,0,D,3,False,0,364
+25414,366,2,00:55,545,44,34,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Ingresso,,,,,,,,,,False,0,
+25414,367,2,00:55,545,44,34,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,366
+25414,368,2,00:55,545,45,34,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25414,369,2,00:55,545,46,34,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,368
+25414,370,2,00:42,558,46,34,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Fallo commesso,100,personale,,,7,73,1,D,4,False,0,
+25414,371,2,00:42,558,46,34,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo Subito,,,,,7,73,1,D,4,False,0,370
+25414,372,2,00:42,558,46,35,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,373,2,00:42,558,46,36,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Tiro libero segnato,,,,,,,,A,7,False,0,372
+25414,374,2,00:42,558,46,36,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,1,,,False,0,
+25414,375,2,00:42,558,46,36,1753,Umana Reyer Venezia,0,6994,44,Sasha,Grant,Ingresso,,,,,,,,,,False,0,
+25414,376,2,00:42,558,46,36,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Uscita,,,,,,,,,,False,0,375
+25414,377,2,00:26,574,46,36,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Palla persa,51,Palleggio,,,78,58,1,A,7,False,0,
+25414,378,2,00:26,574,46,36,1753,Umana Reyer Venezia,0,6994,44,Sasha,Grant,Palla recuperata,,,,,78,58,1,A,7,False,0,377
+25414,379,2,00:07,593,46,39,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,3 punti segnato,1,Tiro in sospensione,,,27,23,0,A,8,False,0,
+25414,380,2,00:07,593,46,39,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Assist,,,,,27,23,0,A,8,False,0,379
+25414,381,2,00:00,600,46,39,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25414,382,3,10:00,0,46,39,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Uscita,,,,,,,,,,False,0,
+25414,383,3,10:00,0,46,39,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Ingresso,,,,,,,,,,False,0,382
+25414,384,3,10:00,0,46,39,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Uscita,,,,,,,,,,False,0,382
+25414,385,3,10:00,0,46,39,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,382
+25414,386,3,10:00,0,46,39,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Uscita,,,,,,,,,,False,0,382
+25414,387,3,10:00,0,46,39,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,382
+25414,388,3,10:00,0,46,39,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Uscita,,,,,,,,,,False,0,382
+25414,389,3,10:00,0,46,39,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Ingresso,,,,,,,,,,False,0,382
+25414,390,3,10:00,0,46,39,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Uscita,,,,,,,,,,False,0,382
+25414,391,3,10:00,0,46,39,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Ingresso,,,,,,,,,,False,0,382
+25414,392,3,10:00,0,46,39,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Ingresso,,,,,,,,,,False,0,382
+25414,393,3,10:00,0,46,39,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Uscita,,,,,,,,,,False,0,382
+25414,394,3,10:00,0,46,39,1753,Umana Reyer Venezia,0,6994,44,Sasha,Grant,Uscita,,,,,,,,,,False,0,382
+25414,395,3,10:00,0,46,39,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Ingresso,,,,,,,,,,False,0,382
+25414,396,3,10:00,0,46,39,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25414,397,3,09:45,15,46,39,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla persa,50,Passaggio sbagliato,,,13,73,0,A,4,False,0,
+25414,398,3,09:45,15,46,39,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Palla recuperata,,,,,13,73,0,A,4,False,0,397
+25414,399,3,09:25,35,46,39,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,2 punti sbagliato,1,Tiro in sospensione,,,93,42,1,A,3,False,0,
+25414,400,3,09:25,35,46,39,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Rimbalzo difensivo,,,,,93,42,1,A,3,False,0,399
+25414,401,3,09:10,50,46,39,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti sbagliato,4,Giro e Tiro,,,9,28,0,A,2,False,0,
+25414,402,3,09:10,50,46,39,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Rimbalzo difensivo,,,,,9,28,0,A,2,False,0,401
+25414,403,3,08:55,65,46,39,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo commesso,103,tiro,,,75,41,0,D,7,False,0,
+25414,404,3,08:55,65,46,39,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Fallo Subito,,,,,75,41,0,D,7,False,0,403
+25414,405,3,08:55,65,46,40,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,406,3,08:55,65,46,41,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Tiro libero segnato,,,,,,,,A,7,False,0,405
+25414,407,3,08:55,65,46,42,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Tiro libero segnato,,,,,,,,A,7,False,0,405
+25414,408,3,08:37,83,46,42,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo commesso,100,personale,,,7,57,1,D,3,False,0,
+25414,409,3,08:37,83,46,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo Subito,,,,,7,57,1,D,3,False,0,408
+25414,410,3,08:37,83,46,42,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Ingresso,,,,,,,,,,False,0,
+25414,411,3,08:37,83,46,42,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Uscita,,,,,,,,,,False,0,410
+25414,412,3,08:37,83,48,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti segnato,8,Da penetrazione,,,5,61,0,A,3,True,0,
+25414,413,3,08:27,93,48,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo commesso,100,personale,,,79,24,0,D,7,False,0,
+25414,414,3,08:27,93,48,42,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Fallo Subito,,,,,79,24,0,D,7,False,0,413
+25414,415,3,08:15,105,48,42,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,3 punti sbagliato,1,Tiro in sospensione,,,77,86,1,A,8,False,0,
+25414,416,3,08:15,105,48,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo difensivo,,,,,77,86,1,A,8,False,0,415
+25414,417,3,08:12,108,48,42,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Fallo commesso,100,personale,,,79,79,1,A,7,False,0,
+25414,418,3,08:12,108,48,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo Subito,,,,,79,79,1,A,7,False,0,417
+25414,419,3,07:48,132,48,42,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,27,26,0,A,9,False,0,
+25414,420,3,07:48,132,48,42,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Rimbalzo difensivo,,,,,27,26,0,A,9,False,0,419
+25414,421,3,07:31,149,48,42,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,3 punti sbagliato,1,Tiro in sospensione,,,70,45,1,A,9,False,0,
+25414,422,3,07:31,149,48,42,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Rimbalzo offensivo,,,,,70,45,1,A,7,False,0,421
+25414,423,3,07:26,154,48,42,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,3 punti sbagliato,1,Tiro in sospensione,,,69,31,1,A,9,False,0,
+25414,424,3,07:26,154,48,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo difensivo,,,,,69,31,1,A,9,False,0,423
+25414,425,3,07:07,173,48,42,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti sbagliato,1,Tiro in sospensione,,,10,47,0,A,6,False,0,
+25414,426,3,07:07,173,48,42,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Rimbalzo difensivo,,,,,10,47,0,A,6,False,0,425
+25414,427,3,07:00,180,48,42,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,92,47,1,A,3,False,0,
+25414,428,3,07:00,180,48,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Stoppata,,,,,92,47,1,A,3,False,0,427
+25414,429,3,07:00,180,48,42,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Stoppata subita,,,,,92,47,1,A,3,False,0,427
+25414,430,3,07:00,180,48,42,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Rimbalzo difensivo,,,,,92,47,1,A,3,False,0,427
+25414,431,3,06:53,187,51,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,3 punti segnato,1,Tiro in sospensione,500,contropiede,27,22,0,A,8,False,0,
+25414,432,3,06:53,187,51,42,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,27,22,0,A,8,False,0,431
+25414,433,3,06:33,207,51,42,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Fallo commesso,100,personale,,,80,66,0,D,2,False,0,
+25414,434,3,06:33,207,51,42,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Fallo Subito,,,,,80,66,0,D,2,False,0,433
+25414,435,3,06:33,207,51,42,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Uscita,,,,,,,,,,False,0,
+25414,436,3,06:33,207,51,42,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Ingresso,,,,,,,,,,False,0,435
+25414,437,3,06:33,207,51,42,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Uscita,,,,,,,,,,False,0,
+25414,438,3,06:33,207,51,42,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Ingresso,,,,,,,,,,False,0,437
+25414,439,3,06:27,213,51,42,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo commesso,100,personale,,,92,4,0,D,5,False,0,
+25414,440,3,06:27,213,51,42,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Fallo Subito,,,,,92,4,0,D,5,False,0,439
+25414,441,3,06:24,216,51,44,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,2 punti segnato,5,Tiro in Step Back,,,93,69,1,A,2,False,0,
+25414,442,3,06:13,227,51,44,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Fallo commesso,100,personale,,,8,56,1,D,3,False,0,
+25414,443,3,06:13,227,51,44,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo Subito,,,,,8,56,1,D,3,False,0,442
+25414,444,3,06:13,227,51,44,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Ingresso,,,,,,,,,,False,0,
+25414,445,3,06:13,227,51,44,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,444
+25414,446,3,06:13,227,51,44,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Uscita,,,,,,,,,,False,0,444
+25414,447,3,06:13,227,51,44,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Uscita,,,,,,,,,,False,0,444
+25414,448,3,06:13,227,51,44,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Ingresso,,,,,,,,,,False,0,444
+25414,449,3,06:13,227,51,44,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Ingresso,,,,,,,,,,False,0,444
+25414,450,3,06:12,228,53,44,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,9,Schiacciata,,,5,51,0,A,3,True,1,
+25414,451,3,06:12,228,53,44,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,5,51,0,A,3,False,0,450
+25414,452,3,06:00,240,53,44,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo commesso,124,flagrant,,,82,43,0,D,6,False,0,
+25414,456,3,06:00,240,53,44,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Fallo Subito,,,,,82,43,1,A,6,False,0,452
+25414,453,3,06:00,240,53,44,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25414,454,3,06:00,240,53,44,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Tiro libero sbagliato,,,,,,,,A,7,False,0,453
+25414,457,3,05:50,250,53,44,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,2 punti sbagliato,1,Tiro in sospensione,,,90,59,1,A,6,False,0,
+25414,458,3,05:50,250,53,44,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,90,59,1,A,6,False,0,457
+25414,459,3,05:30,270,53,44,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,12,50,0,A,6,False,0,
+25414,460,3,05:30,270,53,44,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Rimbalzo offensivo,,,,,12,50,0,A,6,False,0,459
+25414,461,3,05:30,270,55,44,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,7,Appoggio a canestro,,,12,50,0,A,6,True,0,
+25414,462,3,05:15,285,55,44,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,2 punti sbagliato,1,Tiro in sospensione,,,86,53,1,A,6,False,0,
+25414,463,3,05:15,285,55,44,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Rimbalzo difensivo,,,,,86,53,1,A,6,False,0,462
+25414,464,3,05:05,295,57,44,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,8,Da penetrazione,,,7,44,0,A,3,True,0,
+25414,465,3,05:05,295,57,44,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Fallo commesso,103,tiro,,,7,44,1,D,3,False,0,
+25414,466,3,05:05,295,57,44,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Fallo Subito,,,,,7,44,1,D,3,False,0,465
+25414,467,3,05:05,295,57,44,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Ingresso,,,,,,,,,,False,0,
+25414,468,3,05:05,295,57,44,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,467
+25414,469,3,05:05,295,57,44,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Ingresso,,,,,,,,,,False,0,467
+25414,470,3,05:05,295,57,44,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Uscita,,,,,,,,,,False,0,467
+25414,471,3,05:05,295,58,44,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,472,3,05:05,295,58,44,1753,Umana Reyer Venezia,0,,,,,Time Out,,,,,,,1,,,False,0,
+25414,473,3,04:50,310,58,44,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,2 punti sbagliato,1,Tiro in sospensione,,,94,47,1,A,3,False,0,
+25414,474,3,04:50,310,58,44,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Rimbalzo difensivo,,,,,94,47,1,A,3,False,0,473
+25414,475,3,04:29,331,58,44,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Palla persa,50,Passaggio sbagliato,,,18,66,0,A,4,False,0,
+25414,476,3,04:29,331,58,44,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Palla recuperata,,,,,18,66,0,A,4,False,0,475
+25414,477,3,04:24,336,58,44,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,3 punti sbagliato,1,Tiro in sospensione,,,81,91,1,A,8,False,0,
+25414,478,3,04:24,336,58,44,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Rimbalzo offensivo,,,,,81,91,1,A,8,False,0,477
+25414,479,3,04:20,340,58,47,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,3 punti segnato,1,Tiro in sospensione,,,88,4,1,A,10,False,0,
+25414,480,3,04:20,340,58,47,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Assist,,,,,88,4,1,A,10,False,0,479
+25414,481,3,04:03,357,58,47,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti sbagliato,1,Tiro in sospensione,,,31,47,0,A,9,False,0,
+25414,482,3,04:03,357,58,47,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Rimbalzo difensivo,,,,,31,47,0,A,9,False,0,481
+25414,483,3,03:51,369,58,50,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,3 punti segnato,1,Tiro in sospensione,,,73,23,1,A,10,False,0,
+25414,484,3,03:51,369,58,50,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Assist,,,,,73,23,1,A,10,False,0,483
+25414,485,3,03:28,392,58,50,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti sbagliato,1,Tiro in sospensione,,,7,43,0,A,3,False,0,
+25414,486,3,03:28,392,58,50,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo offensivo,,,,,7,43,0,A,3,False,0,485
+25414,487,3,03:24,396,58,50,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Fallo commesso,103,tiro,,,9,53,1,D,3,False,0,
+25414,488,3,03:24,396,58,50,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo Subito,,,,,9,53,1,D,3,False,0,487
+25414,489,3,03:24,396,58,50,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25414,490,3,03:24,396,59,50,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero segnato,,,,,,,,A,7,False,0,489
+25414,491,3,03:24,396,59,50,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Ingresso,,,,,,,,,,False,0,
+25414,492,3,03:24,396,59,50,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,491
+25414,493,3,03:12,408,59,50,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Fallo commesso,100,personale,,,57,60,0,D,9,False,0,
+25414,494,3,03:12,408,59,50,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Fallo Subito,,,,,57,60,0,D,9,False,0,493
+25414,495,3,03:12,408,59,51,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,496,3,03:12,408,59,52,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Tiro libero segnato,,,,,,,,A,7,False,0,495
+25414,497,3,02:52,428,59,52,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti sbagliato,1,Tiro in sospensione,,,22,14,0,A,8,False,0,
+25414,498,3,02:52,428,59,52,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Rimbalzo difensivo,,,,,22,14,0,A,8,False,0,497
+25414,499,3,02:43,437,59,52,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,3 punti sbagliato,1,Tiro in sospensione,,,71,27,1,A,9,False,0,
+25414,500,3,02:43,437,59,52,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Rimbalzo difensivo,,,,,71,27,1,A,9,False,0,499
+25414,503,3,02:23,457,59,52,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Fallo commesso,100,personale,,,9,54,1,D,3,False,0,
+25414,504,3,02:23,457,59,52,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Fallo Subito,,,,,9,54,0,A,3,False,0,503
+25414,505,3,02:23,457,59,52,1753,Umana Reyer Venezia,0,9360,13,Enoch,Boakye,Uscita,,,,,,,,,,False,0,
+25414,506,3,02:23,457,59,52,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Ingresso,,,,,,,,,,False,0,505
+25414,507,3,02:23,457,60,52,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,509,3,02:23,457,60,52,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Tiro libero sbagliato,,,,,,,,A,7,False,0,507
+25414,510,3,02:23,457,60,52,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Fallo commesso,124,flagrant,,,88,48,0,D,6,False,0,
+25414,511,3,02:23,457,60,52,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Fallo Subito,,,,,88,48,0,D,6,False,0,510
+25414,512,3,02:23,457,60,53,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,513,3,02:23,457,60,54,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Tiro libero segnato,,,,,,,,A,7,False,0,512
+25414,514,3,02:23,457,60,54,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Uscita,,,,,,,,,,False,0,
+25414,515,3,02:23,457,60,54,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Ingresso,,,,,,,,,,False,0,514
+25414,516,3,02:09,471,60,54,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,3 punti sbagliato,1,Tiro in sospensione,,,69,40,1,A,9,False,0,
+25414,517,3,02:09,471,60,54,1753,Umana Reyer Venezia,0,,,,,Rimbalzi offensivi di squadra,,,,,69,40,1,A,9,False,0,516
+25414,520,3,02:02,478,60,54,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Tiro libero sbagliato,,,,,,,1,A,7,False,0,
+25414,521,3,02:02,478,60,55,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Tiro libero segnato,,,,,,,1,A,7,False,0,520
+25414,518,3,02:02,478,60,55,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo commesso,100,personale,,,90,51,0,D,6,False,0,
+25414,519,3,02:02,478,60,55,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Fallo Subito,,,,,90,51,1,A,6,False,0,518
+25414,522,3,01:51,489,60,55,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Fallo commesso,103,tiro,,,9,52,1,D,3,False,0,
+25414,523,3,01:51,489,60,55,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo Subito,,,,,9,52,0,A,3,False,0,522
+25414,524,3,01:51,489,61,55,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,525,3,01:51,489,62,55,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Tiro libero segnato,,,,,,,,A,7,False,0,524
+25414,526,3,01:34,506,62,57,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,2 punti segnato,7,Appoggio a canestro,,,91,49,1,A,3,True,0,
+25414,527,3,01:08,532,62,57,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti sbagliato,1,Tiro in sospensione,,,23,59,0,A,7,False,0,
+25414,528,3,01:08,532,62,57,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Rimbalzo difensivo,,,,,23,59,0,A,7,False,0,527
+25414,529,3,00:52,548,62,59,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,2 punti segnato,4,Giro e Tiro,,,92,37,1,A,4,True,0,
+25414,530,3,00:52,548,62,59,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Assist,,,,,92,37,1,A,4,False,0,529
+25414,531,3,00:36,564,64,59,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti segnato,8,Da penetrazione,,,9,61,0,A,3,True,0,
+25414,532,3,00:08,592,64,59,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,3 punti sbagliato,1,Tiro in sospensione,,,77,13,1,A,10,False,0,
+25414,533,3,00:08,592,64,59,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Rimbalzo difensivo,,,,,77,13,1,A,10,False,0,532
+25414,534,3,00:01,599,64,59,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,28,75,0,A,10,False,0,
+25414,535,3,00:00,600,64,59,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25414,536,4,10:00,0,64,59,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Uscita,,,,,,,,,,False,0,
+25414,537,4,10:00,0,64,59,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Uscita,,,,,,,,,,False,0,536
+25414,538,4,10:00,0,64,59,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Ingresso,,,,,,,,,,False,0,536
+25414,539,4,10:00,0,64,59,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Uscita,,,,,,,,,,False,0,536
+25414,540,4,10:00,0,64,59,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,536
+25414,541,4,10:00,0,64,59,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,536
+25414,542,4,10:00,0,64,59,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Uscita,,,,,,,,,,False,0,536
+25414,543,4,10:00,0,64,59,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Ingresso,,,,,,,,,,False,0,536
+25414,544,4,10:00,0,64,59,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Ingresso,,,,,,,,,,False,0,536
+25414,545,4,10:00,0,64,59,1753,Umana Reyer Venezia,0,2534,32,Erick,Green,Uscita,,,,,,,,,,False,0,536
+25414,546,4,10:00,0,64,59,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25414,547,4,09:45,15,64,59,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo commesso,100,personale,,,92,71,0,D,2,False,0,
+25414,548,4,09:45,15,64,59,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Fallo Subito,,,,,92,71,0,D,2,False,0,547
+25414,549,4,09:41,19,64,59,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,3 punti sbagliato,1,Tiro in sospensione,,,89,98,1,A,8,False,0,
+25414,550,4,09:41,19,64,59,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Rimbalzo difensivo,,,,,89,98,1,A,8,False,0,549
+25414,551,4,09:21,39,66,59,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,1,Tiro in sospensione,,,8,58,0,A,3,True,0,
+25414,552,4,09:21,39,66,59,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,8,58,0,A,3,False,0,551
+25414,553,4,09:01,59,66,59,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Palla persa,51,Palleggio,,,78,86,1,A,8,False,0,
+25414,554,4,09:00,60,66,59,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Uscita,,,,,,,,,,False,0,
+25414,555,4,09:00,60,66,59,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Ingresso,,,,,,,,,,False,0,554
+25414,556,4,08:44,76,66,59,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Palla persa,51,Palleggio,,,7,55,0,A,3,False,0,
+25414,557,4,08:44,76,66,59,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Palla recuperata,,,,,7,55,0,A,3,False,0,556
+25414,558,4,08:32,88,66,61,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,2 punti segnato,1,Tiro in sospensione,,,75,27,1,A,7,False,0,
+25414,559,4,08:15,105,68,61,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti segnato,8,Da penetrazione,,,7,59,0,A,3,True,0,
+25414,560,4,07:53,127,68,61,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,3 punti sbagliato,1,Tiro in sospensione,,,70,75,1,A,8,False,0,
+25414,561,4,07:53,127,68,61,1753,Umana Reyer Venezia,0,,,,,Rimbalzi offensivi di squadra,,,,,70,75,1,A,8,False,0,560
+25414,562,4,07:53,127,68,61,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo commesso,100,personale,,,91,53,0,D,3,False,0,
+25414,563,4,07:53,127,68,61,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Fallo Subito,,,,,91,53,1,A,3,False,0,562
+25414,564,4,07:50,130,68,61,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,91,97,1,A,1,False,0,
+25414,565,4,07:50,130,68,61,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Rimbalzo offensivo,,,,,91,97,1,A,1,False,0,564
+25414,566,4,07:50,130,68,63,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,2 punti segnato,7,Appoggio a canestro,,,91,97,1,A,2,False,0,
+25414,567,4,07:31,149,70,63,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,11,Gancio,,,5,50,0,A,3,True,0,
+25414,568,4,07:31,149,70,63,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,5,50,0,A,3,False,0,567
+25414,569,4,07:04,176,70,63,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,2 punti sbagliato,1,Tiro in sospensione,,,75,37,1,A,7,False,0,
+25414,570,4,07:04,176,70,63,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Rimbalzo offensivo,,,,,75,37,1,A,7,False,0,569
+25414,571,4,06:57,183,70,63,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Palla persa,50,Passaggio sbagliato,,,91,58,1,A,3,False,0,
+25414,572,4,06:57,183,70,63,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Palla recuperata,,,,,91,58,1,A,3,False,0,571
+25414,573,4,06:51,189,70,63,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,3 punti sbagliato,1,Tiro in sospensione,,,24,86,0,A,10,False,0,
+25414,574,4,06:51,189,70,63,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Rimbalzo difensivo,,,,,24,86,0,A,10,False,0,573
+25414,575,4,06:37,203,70,66,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,3 punti segnato,1,Tiro in sospensione,,,80,90,1,A,8,False,0,
+25414,576,4,06:37,203,70,66,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Assist,,,,,80,90,1,A,8,False,0,575
+25414,577,4,06:24,216,72,66,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti segnato,7,Appoggio a canestro,,,6,45,0,A,3,True,0,
+25414,578,4,06:24,216,72,66,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,6,45,0,A,3,False,0,577
+25414,579,4,05:56,244,72,66,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,3 punti sbagliato,1,Tiro in sospensione,,,77,90,1,A,8,False,0,
+25414,580,4,05:56,244,72,66,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,77,90,1,A,8,False,0,579
+25414,581,4,05:37,263,72,66,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti sbagliato,1,Tiro in sospensione,,,10,77,0,A,4,False,0,
+25414,582,4,05:37,263,72,66,1760,UNA Hotels Reggio Emilia,1,,,,,Rimbalzi offensivi di squadra,,,,,10,77,0,A,4,False,0,581
+25414,583,4,05:31,269,72,66,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Fallo commesso,100,personale,,,8,53,1,D,3,False,0,
+25414,584,4,05:31,269,72,66,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo Subito,,,,,8,53,1,D,3,False,0,583
+25414,585,4,05:31,269,72,66,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Ingresso,,,,,,,,,,False,0,
+25414,586,4,05:31,269,72,66,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Uscita,,,,,,,,,,False,0,585
+25414,587,4,05:31,269,72,66,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Ingresso,,,,,,,,,,False,0,585
+25414,588,4,05:31,269,72,66,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,585
+25414,589,4,05:31,269,72,66,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Ingresso,,,,,,,,,,False,0,585
+25414,590,4,05:31,269,72,66,1753,Umana Reyer Venezia,0,1670,5,Giovanni,De Nicolao,Uscita,,,,,,,,,,False,0,585
+25414,591,4,05:21,279,72,66,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti sbagliato,1,Tiro in sospensione,,,20,13,0,A,8,False,0,
+25414,592,4,05:21,279,72,66,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Rimbalzo difensivo,,,,,20,13,0,A,2,False,0,591
+25414,593,4,05:00,300,72,66,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo commesso,121,tecnico categoria 1,,,60,21,0,D,10,False,0,
+25414,594,4,05:00,300,72,67,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,595,4,04:59,301,72,67,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,2 punti sbagliato,1,Tiro in sospensione,,,92,57,1,A,3,False,0,
+25414,596,4,04:59,301,72,67,1760,UNA Hotels Reggio Emilia,1,,,,,Rimbalzi difensivi di squadra,,,,,92,57,1,A,3,False,0,595
+25414,597,4,04:47,313,74,67,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,2 punti segnato,8,Da penetrazione,,,6,57,0,A,3,True,0,
+25414,598,4,04:43,317,74,67,1753,Umana Reyer Venezia,0,,,,,Time Out,,,,,,,1,,,False,0,
+25414,599,4,04:26,334,74,67,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo commesso,100,personale,,,91,58,0,D,3,False,0,
+25414,600,4,04:26,334,74,67,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo Subito,,,,,91,58,1,A,3,False,0,599
+25414,601,4,04:26,334,74,67,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,2 punti sbagliato,1,Tiro in sospensione,,,93,48,1,A,3,False,0,
+25414,602,4,04:26,334,74,67,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Rimbalzo offensivo,,,,,93,48,1,A,3,False,0,601
+25414,603,4,04:25,335,74,67,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,91,47,1,A,3,False,0,
+25414,604,4,04:25,335,74,67,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Stoppata,,,,,91,47,1,A,3,False,0,603
+25414,605,4,04:25,335,74,67,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Stoppata subita,,,,,91,47,1,A,3,False,0,603
+25414,606,4,04:24,336,74,67,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Palla contesa,,,,,,,0,,,False,0,
+25414,607,4,04:24,336,74,67,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Rimbalzo offensivo,,,,,,,0,,,False,0,603
+25414,608,4,04:18,342,74,67,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,
+25414,609,4,04:18,342,74,67,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Ingresso,,,,,,,,,,False,0,608
+25414,610,4,04:16,344,74,67,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti sbagliato,1,Tiro in sospensione,,,15,96,0,A,10,False,0,
+25414,611,4,04:16,344,74,67,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Rimbalzo difensivo,,,,,15,96,0,A,10,False,0,610
+25414,612,4,03:39,381,74,70,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,3 punti segnato,1,Tiro in sospensione,,,94,98,1,A,1,False,0,
+25414,613,4,03:39,381,74,70,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Assist,,,,,94,98,1,A,1,False,0,612
+25414,614,4,03:13,407,74,70,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo commesso,100,personale,,,16,70,1,D,4,False,0,
+25414,615,4,03:13,407,74,70,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo Subito,,,,,16,70,1,D,4,False,0,614
+25414,616,4,03:13,407,74,70,1753,Umana Reyer Venezia,0,,,,,Falli di squadra,,,,,31,11,1,D,8,False,0,
+25414,617,4,03:13,407,75,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,618,4,03:13,407,75,70,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Uscita,,,,,,,,,,False,0,
+25414,619,4,03:13,407,75,70,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,618
+25414,620,4,03:13,407,75,70,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,618
+25414,621,4,03:13,407,75,70,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Ingresso,,,,,,,,,,False,0,618
+25414,622,4,03:07,413,75,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,31,53,0,A,9,False,0,
+25414,623,4,03:07,413,75,70,1760,UNA Hotels Reggio Emilia,1,,,,,Rimbalzi offensivi di squadra,,,,,31,53,0,A,9,False,0,622
+25414,624,4,03:07,413,75,70,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Fallo commesso,100,personale,,,9,50,1,D,3,False,0,
+25414,625,4,03:07,413,75,70,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo Subito,,,,,9,50,1,D,3,False,0,624
+25414,626,4,03:07,413,75,70,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Ingresso,,,,,,,,,,False,0,
+25414,627,4,03:07,413,75,70,1753,Umana Reyer Venezia,0,5481,100,Amedeo,Tessitori,Uscita,,,,,,,,,,False,0,626
+25414,628,4,03:07,413,75,70,1753,Umana Reyer Venezia,0,,,,,Falli di squadra,201,tecnico allenatore,,,40,21,1,D,8,False,0,
+25414,629,4,03:07,413,76,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,630,4,03:07,413,76,70,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo commesso,106,offensivo,,,8,58,0,A,3,False,0,
+25414,631,4,03:07,413,76,70,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Palla persa,,,,,8,58,0,A,3,False,0,630
+25414,632,4,03:07,413,76,70,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Fallo Subito,,,,,8,58,0,A,3,False,0,630
+25414,633,4,03:07,413,76,70,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Ingresso,,,,,,,,,,False,0,
+25414,634,4,03:07,413,76,70,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,633
+25414,635,4,02:52,428,76,73,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,3 punti segnato,1,Tiro in sospensione,,,66,55,1,A,9,False,0,
+25414,636,4,02:17,463,76,73,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo commesso,106,offensivo,,,9,53,0,A,3,False,0,
+25414,637,4,02:17,463,76,73,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Palla persa,,,,,9,53,0,A,3,False,0,636
+25414,638,4,02:17,463,76,73,1753,Umana Reyer Venezia,0,954,7,Leonardo,Candi,Fallo Subito,,,,,9,53,0,A,3,False,0,636
+25414,639,4,02:17,463,76,73,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,
+25414,640,4,02:17,463,76,73,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,639
+25414,641,4,02:08,472,76,75,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,2 punti segnato,1,Tiro in sospensione,,,92,55,1,A,3,True,0,
+25414,642,4,02:07,473,76,75,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,0,,,False,0,
+25414,643,4,01:51,489,76,75,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,3 punti sbagliato,1,Tiro in sospensione,,,30,43,0,A,9,False,0,
+25414,644,4,01:51,489,76,75,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Rimbalzo difensivo,,,,,30,43,0,A,7,False,0,643
+25414,645,4,01:33,507,76,77,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,2 punti segnato,7,Appoggio a canestro,,,93,41,1,A,3,True,0,
+25414,646,4,01:05,535,76,77,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti sbagliato,1,Tiro in sospensione,,,5,44,0,A,3,False,0,
+25414,647,4,01:05,535,76,77,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Rimbalzo difensivo,,,,,5,44,0,A,3,False,0,646
+25414,650,4,00:35,565,76,77,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,0,,,False,0,
+25414,651,4,00:35,565,76,77,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,3 punti sbagliato,1,Tiro in sospensione,,,27,22,0,A,8,False,0,
+25414,652,4,00:35,565,76,77,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Rimbalzo difensivo,,,,,27,22,0,A,8,False,0,651
+25414,653,4,00:35,565,76,77,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo commesso,100,personale,,,88,51,0,D,6,False,0,
+25414,654,4,00:35,565,76,77,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Fallo Subito,,,,,88,51,0,D,6,False,0,653
+25414,655,4,00:35,565,76,77,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,
+25414,656,4,00:35,565,76,77,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,655
+25414,657,4,00:35,565,76,78,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,658,4,00:35,565,76,78,1753,Umana Reyer Venezia,0,9363,30,Glynn,Watson,Tiro libero sbagliato,,,,,,,,A,7,False,0,657
+25414,659,4,00:35,565,76,78,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo difensivo,,,,,,,,,,False,0,657
+25414,660,4,00:34,566,76,78,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti sbagliato,1,Tiro in sospensione,,,29,22,0,A,8,False,0,
+25414,661,4,00:34,566,76,78,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Rimbalzo difensivo,,,,,29,22,0,A,8,False,0,660
+25414,662,4,00:21,579,76,78,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Fallo commesso,100,personale,,,4,29,0,A,2,False,0,
+25414,663,4,00:21,579,76,78,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Fallo Subito,,,,,4,29,0,A,2,False,0,662
+25414,664,4,00:21,579,76,79,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,665,4,00:21,579,76,80,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Tiro libero segnato,,,,,,,,A,7,False,0,664
+25414,666,4,00:21,579,76,80,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,0,,,False,0,
+25414,667,4,00:21,579,76,82,1753,Umana Reyer Venezia,0,7079,33,Kyle,Wiltjer,2 punti segnato,1,Tiro in sospensione,,,93,45,1,A,3,True,0,
+25414,668,4,00:21,579,76,82,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,3 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,28,27,0,A,9,False,0,
+25414,669,4,00:21,579,76,82,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo offensivo,,,,,28,27,0,A,9,False,0,668
+25414,670,4,00:21,579,78,82,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti segnato,7,Appoggio a canestro,,,28,27,0,A,7,False,0,
+25414,671,4,00:09,591,78,82,1753,Umana Reyer Venezia,0,,,,,Time Out,,,,,,,1,,,False,0,
+25414,672,4,00:09,591,78,82,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,
+25414,673,4,00:09,591,78,82,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,672
+25414,674,4,00:09,591,78,82,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo commesso,100,personale,,,74,11,0,D,10,False,0,
+25414,675,4,00:09,591,78,82,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Fallo Subito,,,,,74,11,0,D,10,False,0,674
+25414,676,4,00:08,592,78,83,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Tiro libero segnato,,,,,,,,A,7,False,0,
+25414,677,4,00:08,592,78,83,1753,Umana Reyer Venezia,0,4214,22,Jordan,Parks,Tiro libero sbagliato,,,,,,,,A,7,False,0,676
+25414,678,4,00:08,592,78,83,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Rimbalzo difensivo,,,,,,,,,,False,0,676
+25414,679,4,00:08,592,78,83,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti sbagliato,1,Tiro in sospensione,,,28,17,0,A,8,False,0,
+25414,680,4,00:08,592,78,83,1753,Umana Reyer Venezia,0,6648,8,Ky,Bowman,Rimbalzo difensivo,,,,,28,17,0,A,8,False,0,679
+25414,681,4,00:00,600,78,83,,,,,,,,Fine Tempo,,,,,,,,,,False,0,

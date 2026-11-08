@@ -42,10 +42,10 @@ game_id,championship_id,competition,year,round,round_name,phase_id,match_datetim
 25408,602,,2026,7,7° Giornata,,2026-11-09T20:00:00.000+01:00,0,1750,Virtus Costa Bologna,1769,Tezenis Verona,0,0,,,,,,,,,,,PalaDozza,Bologna,,,,2026-11-06T16:29:19.700+01:00
 25409,602,,2026,7,7° Giornata,,2026-11-08T17:00:00.000+01:00,0,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,0,0,,,,,,,,,,,Unipol Forum,Assago,,,,2026-11-07T09:46:56.282+01:00
 25410,602,,2026,7,7° Giornata,,2026-11-08T17:30:00.000+01:00,0,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,0,0,,,,,,,,,,,Nova Arena,Tortona,,,,2026-11-03T09:33:15.437+01:00
-25411,602,,2026,7,7° Giornata,,2026-11-08T12:00:00.000+01:00,0,1767,Pallacanestro Trieste,1761,BC Roma,0,0,,,,,,,,,,,PalaTrieste,Trieste,,,,2026-11-06T16:29:07.553+01:00
-25412,602,,2026,7,7° Giornata,,2026-11-08T16:00:00.000+01:00,0,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,0,0,,,,,,,,,,,Palazzetto dello Sport,Roma,,,,2026-11-03T09:32:39.137+01:00
+25411,602,,2026,7,7° Giornata,1,2026-11-08T12:00:00.000+01:00,2,1767,Pallacanestro Trieste,1761,BC Roma,116,100,,,,,,,,,,,PalaTrieste,Trieste,4924,Taccetti Francesco,Magro Alessandro,2026-11-08T14:04:59.675+01:00
+25412,602,,2026,7,7° Giornata,,2026-11-08T16:00:00.000+01:00,0,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,0,0,,,,,,,,,,,Palazzetto dello Sport,Roma,,,,2026-11-08T14:28:14.644+01:00
 25413,602,,2026,7,7° Giornata,,2026-11-08T18:00:00.000+01:00,0,1768,Longobardi Scafati Basket,1772,Napoli Basketball,0,0,,,,,,,,,,,Beta Ricambi Arena PalaMangano,Scafati,,,,2026-11-03T09:33:27.575+01:00
-25414,602,,2026,7,7° Giornata,,2026-11-07T20:00:00.000+01:00,0,1760,UNA Hotels Reggio Emilia,1753,Umana Reyer Venezia,0,0,,,,,,,,,,,PalaBigi,Reggio nell'Emilia,,,,2026-11-03T09:31:08.732+01:00
+25414,602,,2026,7,7° Giornata,1,2026-11-07T20:00:00.000+01:00,2,1760,UNA Hotels Reggio Emilia,1753,Umana Reyer Venezia,78,83,,,,,,,,,,,PalaBigi,Reggio nell'Emilia,3661,Priftis Dimitris,Spahija Neven,2026-11-07T22:02:20.680+01:00
 25415,602,,2026,7,7° Giornata,,2026-11-08T19:00:00.000+01:00,0,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,0,0,,,,,,,,,,,Itelyum Arena,Varese,,,,2026-11-03T09:33:57.747+01:00
 25416,602,,2026,8,8° Giornata,,2026-11-14T20:30:00.000+01:00,0,1761,BC Roma,1769,Tezenis Verona,0,0,,,,,,,,,,,Palazzetto dello Sport,Roma,,,,2026-10-08T14:38:04.647+02:00
 25417,602,,2026,8,8° Giornata,,2026-11-15T19:00:00.000+01:00,0,1763,Dolomiti Energia Trentino,1750,Virtus Costa Bologna,0,0,,,,,,,,,,,BTS Arena,Trento,,,,2026-10-08T14:40:00.127+02:00
