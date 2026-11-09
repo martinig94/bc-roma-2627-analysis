@@ -1382,3 +1382,141 @@ game_id,match_datetime,round,team_id,team,opponent_id,opponent,home,row_type,pla
 25414,2026-11-07T20:00:00.000+01:00,7,1753,Umana Reyer Venezia,1760,UNA Hotels Reggio Emilia,0,player,5481,TES-AME-94,100,Amedeo,TESSITORI,1,16,960,11,3,5,0,2,5,5,2,6,8,1,1,3,2,1,5,4,0,0,0,14,0.88,-5
 25414,2026-11-07T20:00:00.000+01:00,7,1753,Umana Reyer Venezia,1760,UNA Hotels Reggio Emilia,0,team,,,,,,,,,0,,,,,,,3,2,5,,0,0,,,2,0,0,0,,3,,
 25414,2026-11-07T20:00:00.000+01:00,7,1753,Umana Reyer Venezia,1760,UNA Hotels Reggio Emilia,0,total,,,,,,,200,12000,83,15,31,10,32,23,31,15,27,42,13,5,12,2,4,20,27,0,0,1,90,0.9238359666666667,
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,854,BUR-JAS-97,0,Jason,BURNELL,1,18,1080,8,2,4,1,3,1,2,4,5,9,2,1,2,0,0,4,3,0,0,0,12,0.8,9
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,9031,COL-RJ-99,2,R.J.,COLE,1,21,1260,10,3,9,0,0,4,5,0,0,0,4,1,2,0,1,1,4,0,0,0,8,0.7407407,7
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,9378,WRI-MOS-98,5,Moses,WRIGHT,0,14,840,11,4,8,0,2,3,6,4,1,5,0,0,2,1,0,3,3,0,0,1,6,0.7333333,-7
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,1775,DIO-OUS-00,6,Ousmane,DIOP,1,17,1020,9,3,5,0,0,3,5,5,4,9,2,1,2,0,0,2,4,0,0,0,17,0.9473684,9
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,5568,TON-STE-93,7,Stefano,TONUT,0,16,960,3,0,2,0,3,3,4,1,2,3,0,3,0,0,1,0,2,0,0,0,4,0.4285714,4
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,5499,THO-DAR-95,13,Darius,THOMPSON,0,19,1140,8,4,8,0,2,0,0,3,3,6,3,0,0,0,0,1,0,0,0,1,10,0.8,-11
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,4692,RIC-GIA-91,17,Giampaolo,RICCI,0,22,1320,10,1,3,2,5,2,2,3,2,5,1,1,2,0,0,4,1,0,0,0,7,0.9090909,-7
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,2103,FLA-DIE-96,21,Diego,FLACCADORI,0,7,420,2,1,1,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,3,1,-1
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,6156,HAL-DEV-95,22,Devon,HALL,1,23,1380,10,2,4,1,2,3,5,2,4,6,3,0,0,0,0,2,4,0,0,0,16,1.1764706,9
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,9008,GUD-MAR-95,23,Marko,GUDURIC,0,17,1020,4,2,2,0,4,0,0,0,1,1,5,3,2,0,0,3,0,0,0,0,4,0.5,-11
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,9388,MAT-GAR-96,24,Garrison,MATHEWS,1,17,1020,11,0,1,1,3,8,9,0,4,4,2,1,1,0,0,1,3,0,0,0,15,1.1578947,9
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,player,45,AKE-NIC-95,45,Nicola,AKELE,0,9,540,2,1,2,0,0,0,0,1,0,1,1,0,0,1,0,3,0,0,0,0,1,1,0
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,team,,,,,,,,,0,,,,,,,0,0,0,,0,0,,,0,0,0,0,,0,,
+25409,2026-11-08T17:00:00.000+01:00,7,1751,Armani Olimpia Milano,1763,Dolomiti Energia Trentino,1,total,,,,,,,200,11990,88,23,49,5,25,27,38,23,26,49,24,11,13,2,2,24,25,0,0,2,103,0.8494558333333333,
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,9330,BRO-DAR-99,0,Darius,BROWN,1,23,1380,11,2,3,0,4,7,7,0,0,0,3,1,5,0,0,3,5,0,0,0,7,0.7096774,-10
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,9329,BRO-CHA-97,4,Charles,BROWN,1,31,1860,11,2,4,1,3,4,4,0,6,6,4,1,4,1,0,3,4,0,0,0,16,0.8461538,-2
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,439,BER-ALE-02,5,Alessandro,BERTINI,0,23,1380,8,0,1,2,2,2,2,0,2,2,1,4,1,0,0,3,1,0,0,0,11,1.6,15
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,7279,NIA-CHE-08,7,Cheickh,NIANG,0,15,900,4,1,3,0,2,2,2,0,1,1,0,0,0,0,0,2,1,0,0,0,0,0.6666667,-1
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,9328,OLI-QUI-01,8,Quincy,OLIVARI,1,34,2040,27,2,6,6,11,5,8,1,3,4,4,1,1,0,0,3,6,0,0,0,26,1.2272727,3
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,7674,FLA-COS-XX,6,Cosimo,FLAUTO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,2148,FOR-TOT-86,10,Toto,FORRAY,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,7119,CAT-FED-08,11,Federico,CATTAPAN,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,7449,MAW-SEL-98,21,Selom,MAWUGBE,1,21,1260,4,2,3,0,0,0,0,2,3,5,1,0,1,0,0,3,2,0,0,1,7,1,-12
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,9327,BIG-ISA-00,24,Isaiah,BIGELOW,0,23,1380,5,1,3,1,4,0,0,1,4,5,2,0,0,1,1,2,1,0,0,0,6,0.7142857,-1
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,378,BAY-JOR-99,26,Jordan,BAYEHE,0,23,1380,14,4,6,1,2,3,5,2,6,8,2,0,0,0,1,4,4,1,0,1,18,1.3333333,7
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,player,9170,MED-JOS-07,30,Josè Alfred,MEDINA BOUZA,1,7,420,2,1,1,0,0,0,0,0,2,2,0,0,0,0,0,3,0,0,1,0,1,2,-9
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,team,,,,,,,,,0,,,,,,,0,1,1,,0,1,,,0,0,0,0,,0,,
+25409,2026-11-08T17:00:00.000+01:00,7,1763,Dolomiti Energia Trentino,1751,Armani Olimpia Milano,0,total,,,,,,,200,11990,86,15,30,11,28,23,28,6,28,34,17,7,13,2,2,26,24,1,1,2,92,1.1219321777777778,
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,7048,HUB-PRE-99,3,Prentiss,HUBB,0,27,1620,12,1,4,3,11,1,2,0,2,2,9,2,2,0,0,1,4,0,0,0,14,0.6666667,2
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,7431,GOR-JUS-98,4,Justin,GORHAM,1,25,1500,10,1,2,2,3,2,2,1,2,3,3,1,1,0,0,0,1,0,0,0,15,1.4285714,8
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,4268,PEC-AND-97,6,Andrea,PECCHIA,0,24,1440,14,3,3,2,4,2,2,3,5,8,1,0,0,0,0,3,3,0,0,0,21,1.75,4
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,75,ALI-AMA-95,7,Amar,ALIBEGOVIC,0,13,780,5,1,2,0,0,3,4,1,1,2,1,0,0,0,0,4,2,0,0,0,4,1.25,3
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,7537,DIM-EDO-08,9,Edoardo,DI MEO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,656,BOR-GIO,12,Giordano,BORTOLANI,0,16,960,6,0,3,2,5,0,0,0,0,0,1,0,1,0,0,2,0,0,0,0,-2,0.6666667,3
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,9038,OLE-DOM-96,17,Dominik,OLEJNICZAK,1,22,1320,7,3,5,0,0,1,2,3,3,6,0,0,3,0,0,1,1,0,0,0,7,0.7777778,1
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,9351,MAD-DAN-02,21,Dante,MADDOX,1,22,1320,9,3,4,1,4,0,0,0,1,1,4,0,1,0,0,2,3,0,0,0,10,1,10
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,2313,GAZ-GIU-91,24,Giulio,GAZZOTTI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,9006,JAL-KAR-97,35,Karim,JALLOW,1,20,1200,12,5,8,0,0,2,2,1,3,4,1,0,2,0,1,2,2,0,0,0,11,1.0909091,10
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,9009,DUR-ALJ-98,42,Aljami,DURHAM,1,15,900,1,0,1,0,2,1,2,0,2,2,0,1,0,0,0,3,4,0,0,0,1,0.25,7
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,player,1875,EBO-PAU-00,100,Paul,EBOUA,0,16,960,11,4,4,0,0,3,3,0,3,3,0,1,1,1,0,2,3,0,0,2,16,1.6923077,7
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,team,,,,,,,,,0,,,,,,,2,3,5,,0,2,,,0,0,0,0,,3,,
+25410,2026-11-08T17:30:00.000+01:00,7,1752,Bertram Derthona Tortona,1764,Nutribullet Treviso Basket,1,total,,,,,,,200,12000,87,21,36,10,29,15,19,11,25,36,20,5,13,1,1,20,23,0,0,2,100,1.05728994,
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,969,CAP-ALE-95,0,Alessandro,CAPPELLETTI,0,27,1620,7,2,8,1,2,0,0,0,1,1,7,1,2,0,0,2,2,0,0,0,7,0.5833333,0
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,9041,CHA-BRE-96,3,Brekkott,CHAPMAN,1,27,1620,9,1,3,1,2,4,4,1,5,6,1,1,1,1,0,3,5,0,0,1,16,1.125,-5
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,4879,RUS-DEW-94,4,DeWayne,RUSSELL,1,33,1980,16,6,11,1,3,1,1,0,2,2,4,0,3,0,0,2,1,0,0,0,11,0.9142857,-14
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,7566,MAN-ALE-08,8,Alessandro,MANFREDOTTI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,7606,VET-ALE-08,10,Alessandro,VETTORI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,3714,MIA-FED-16,11,Federico,MIASCHI,1,12,720,2,1,2,0,1,0,0,0,1,1,0,0,0,0,0,2,0,0,0,0,-1,0.6666667,-3
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,9042,ANI-IKE-98,13,Ike,ANIGBOGU,1,14,840,6,2,3,0,1,2,2,3,4,7,0,0,2,0,0,2,3,0,0,1,10,0.8571429,-1
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,9332,ALL-GRE-04,19,Gregorio,ALLINEI,0,3,180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,1189,CHI-MAT-93,26,Matteo,CHILLO,0,22,1320,2,1,2,0,1,0,0,0,3,3,0,0,1,0,0,2,0,0,0,0,0,0.5,-13
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,6867,SEN-JER-95,30,Jeremy,SENGLIN,0,20,1200,6,1,1,1,2,1,2,0,0,0,3,0,1,0,0,3,1,0,0,0,4,1.2,-6
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,6191,MAC-JP-95,55,JP,MACURA,1,24,1440,15,5,12,1,7,2,4,0,1,1,1,2,1,0,1,4,3,0,0,0,1,0.6818182,-11
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,player,9333,CHE-VAL-97,97,Valentine,CHERY,0,18,1080,13,5,5,0,0,3,4,3,2,5,0,2,1,0,0,3,5,0,0,2,20,1.625,-3
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,team,,,,,,,,,0,,,,,,,6,1,7,,0,1,,,0,0,0,0,,6,,
+25410,2026-11-08T17:30:00.000+01:00,7,1764,Nutribullet Treviso Basket,1752,Bertram Derthona Tortona,0,total,,,,,,,200,12000,76,24,47,5,19,13,17,13,20,33,16,6,13,1,1,23,20,0,0,4,74,0.905916311111111,
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,536,BIL-MIR-89,2,Miro,BILAN,1,28,1680,26,8,12,1,1,7,10,2,6,8,3,0,0,0,0,2,7,0,0,0,35,1.4444444,8
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,9374,HOL-AAR-96,3,Aaron,HOLIDAY,1,23,1380,15,4,6,2,5,1,2,0,1,1,4,0,3,0,0,4,4,1,0,0,11,1,8
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,9391,TYS-HUN-00,4,Hunter,TYSON,1,25,1500,11,3,6,1,2,2,2,3,3,6,0,1,1,0,2,2,2,0,0,0,11,1.1,20
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,76,ALI-MIR-92,5,Mirza,ALIBEGOVIC,0,21,1260,9,0,0,3,7,0,0,0,4,4,3,0,1,0,0,2,0,0,0,0,9,1.125,-5
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,5764,VER-GIO-98,16,Giovanni,VERONESI,0,24,1440,5,1,1,1,4,0,1,1,1,2,1,0,0,0,0,4,1,0,0,0,1,0.9090909,9
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,9375,MOO-XAV-95,17,Xavier,MOON,1,30,1800,18,9,13,0,0,0,0,2,4,6,10,2,2,1,2,3,1,0,0,0,27,1.2,13
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,7222,BRE-AND-08,18,Andrea,BRESCIANI,0,1,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-4
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,625,BON-FED,23,Federico,BONACINI,0,2,120,2,1,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2,1,-5
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,5913,WHE-CAR-98,24,Carl,WHEATLE,1,22,1320,5,2,3,0,0,1,2,0,0,0,0,0,0,0,0,1,1,0,0,1,3,1.25,18
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,934,CAM-GOR-18,29,Gora,CAMARA,0,12,720,8,3,5,0,0,2,2,0,3,3,0,1,1,1,0,4,1,0,0,1,7,1.1428571,4
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,player,774,BRO-JHO-92,100,John,BROWN,0,12,720,0,0,2,0,0,0,0,0,0,0,1,1,0,0,0,2,1,0,0,0,-1,0,-6
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,team,,,,,,,,,0,,,,,,,1,4,5,,0,1,,,0,0,0,0,,4,,
+25412,2026-11-08T16:00:00.000+01:00,7,1762,Maxima Roma,1765,Acqua S.Bernardo Cantù,1,total,,,,,,,200,12000,99,31,50,8,19,13,19,9,26,35,22,6,9,2,4,24,18,1,0,2,109,1.1301547111111112,
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,9012,FLA-SAV-99,1,Savion,FLAGG,1,34,2040,17,8,9,0,2,1,2,0,3,3,2,2,2,1,0,1,2,0,0,0,20,1.2142857,-11
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,9342,GRA-HAS-96,3,Hassani,GRAVETT,1,20,1200,4,1,2,0,7,2,2,0,1,1,5,0,1,1,0,3,2,0,0,0,1,0.3636364,-5
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,6619,OKE-LEO-03,8,Leonardo,OKEKE,0,14,840,7,3,4,0,0,1,2,0,4,4,0,0,0,1,0,5,2,0,0,1,7,1.4,-6
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,3880,MOR-RIC,9,Riccardo,MORASCHINI,1,29,1740,16,2,3,2,3,6,6,1,4,5,4,0,1,0,0,1,6,0,0,0,27,1.6,-18
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,4217,PAR-MAT-01,10,Matteo,PARRAVICINI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,9073,VEN-SIM-XX,11,Simone,VENTURA,0,8,480,2,1,2,0,0,0,0,1,0,1,0,0,1,1,1,0,0,0,0,0,1,0.6666667,0
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,9365,MIL-ISA-94,15,Isaiah,MILES,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,9343,BRO-CHA-96,22,Chad,BROWN,1,24,1440,18,6,7,0,0,6,8,3,2,5,1,0,0,0,0,2,5,0,0,1,24,1.6363636,-4
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,2494,GRA-AND-93,24,Andrejs,GRAZULIS,0,10,600,0,0,2,0,1,0,0,0,1,1,1,0,1,0,0,3,0,0,0,0,-5,0,-8
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,3855,MOR-DAV-98,25,Davide,MORETTI,0,23,1380,7,0,2,2,7,1,1,1,0,1,4,1,2,0,0,1,1,0,0,0,4,0.6086957,-1
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,5660,UDO-LIA,27,Liam,UDOM,0,8,480,2,0,1,0,0,2,2,0,0,0,0,1,0,0,1,1,2,0,0,0,2,1,1
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,player,6133,OSV-OLI-93,31,Osvaldas,OLISEVICIUS,1,30,1800,14,1,6,3,6,3,3,0,1,1,2,1,2,0,0,1,3,0,0,0,10,0.9032258,-8
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,team,,,,,,,,,0,,,,,,,2,5,7,,0,0,,,0,0,0,0,,7,,
+25412,2026-11-08T16:00:00.000+01:00,7,1765,Acqua S.Bernardo Cantù,1762,Maxima Roma,0,total,,,,,,,200,12000,87,22,38,7,26,22,26,8,21,29,19,5,10,4,2,18,23,0,0,2,98,1.0436526555555554,
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,3200,LEV-ALE,4,Alessandro,LEVER,0,15,900,6,3,3,0,2,0,0,0,2,2,0,0,1,0,0,1,0,0,0,0,4,1,4
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,9443,BRA-VIN-09,5,Vincenzo,BRANCACCIO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,2770,IAN-ANT-91,7,Antonio,IANNUZZI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,7030,MOO-CHA-98,8,Charlie Edward,MOORE,1,29,1740,17,1,2,3,6,6,6,0,3,3,6,3,6,0,0,1,6,0,0,0,24,1,1
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,6436,SPI-FRA-05,9,Francesco,SPINELLI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,1142,CER-MAR-92,11,Marco,CERON,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,9347,OFF-MEZ-00,13,Mezie,OFFURUM,1,27,1620,13,4,8,1,3,2,4,4,3,7,0,0,3,0,0,3,5,0,0,1,11,0.8125,-17
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,7319,MCG-ROD-91,17,Rodney,MCGRUDER,0,21,1260,12,3,3,2,3,0,0,1,1,2,2,0,1,0,0,2,0,0,0,0,12,1.7142857,16
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,9348,ONY-ZER-01,21,Ze'Rik,ONYEMA,1,24,1440,8,4,5,0,0,0,2,0,4,4,0,1,1,0,0,3,0,0,0,3,6,1.1428571,-5
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,3526,MAS-BRU-96,33,Bruno,MASCOLO,1,28,1680,8,3,5,0,1,2,2,0,2,2,3,1,3,0,0,3,1,0,0,0,6,0.8,-13
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,9346,JOH-BRA-02,88,Brandon,JOHNSON,1,32,1920,10,2,4,1,4,3,3,1,7,8,1,2,1,0,0,2,3,0,0,0,16,0.952381,-3
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,player,9452,NGO-MEH-95,100,Mehdy,NGOUAMA,0,24,1440,15,4,5,1,2,4,5,2,1,3,4,1,4,0,0,3,5,0,0,0,18,1.1111111,7
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,team,,,,,,,,,0,,,,,,,1,2,3,,0,1,,,0,0,0,0,,2,,
+25413,2026-11-08T18:00:00.000+01:00,7,1768,Longobardi Scafati Basket,1772,Napoli Basketball,1,total,,,,,,,200,12000,89,24,35,8,21,17,22,9,25,34,16,8,21,0,0,18,20,0,0,4,99,1.0666418625,
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,5299,SPI-MAR-95,0,Marco,SPISSU,0,31,1860,12,3,3,2,4,0,0,2,0,2,6,4,5,0,0,3,1,0,0,0,15,1,-2
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,9355,ZAC-SEL-97,1,Zac,SELJAAS,1,33,1980,11,4,5,1,7,0,0,1,0,1,4,1,0,0,0,4,0,0,0,0,6,0.9166667,13
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,9356,DOW-JEF-97,3,Jeff,DOWTIN,1,30,1800,9,3,7,1,4,0,0,0,5,5,7,1,0,0,0,3,4,0,0,0,16,0.8181818,3
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,7550,FER-VIT-08,4,Vittorio Salvatore,FERRARA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,1965,FAG-LEO-04,10,Leonardo,FAGGIAN,0,20,1200,3,1,6,0,1,1,2,0,0,0,3,4,0,0,0,2,2,0,0,0,3,0.375,-6
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,7097,SAN-ASS-07,12,Assane,SANKARE,0,2,120,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,1,0,0,0,-7
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,9357,WHI-JAC-97,14,Jack,WHITE,1,28,1680,21,8,10,1,2,2,2,1,2,3,2,2,2,0,0,3,3,0,0,1,23,1.4,10
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,5433,TAR-KAL-93,25,Kaleb,TARCZEWSKI,1,10,600,0,0,0,0,0,0,0,0,2,2,0,0,1,0,0,2,2,0,0,0,1,0,-2
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,6186,CAR-GUG-99,30,Guglielmo,CARUSO,0,9,540,3,1,2,0,0,1,2,1,0,1,0,0,0,0,0,0,2,0,0,0,4,1,-3
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,5594,TOT-LEO-97,35,Leonardo,TOTÈ,0,7,420,7,3,4,0,0,1,2,0,0,0,0,0,0,0,0,0,2,0,0,0,7,1.4,-7
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,player,9032,RAM-JAH-01,37,Jahmi'us,RAMSEY,1,30,1800,25,4,6,5,10,2,2,1,4,5,2,2,3,0,0,2,2,0,0,0,24,1.25,11
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,team,,,,,,,,,0,,,,,,,4,0,4,,0,0,,,0,0,0,0,,4,,
+25413,2026-11-08T18:00:00.000+01:00,7,1772,Napoli Basketball,1768,Longobardi Scafati Basket,0,total,,,,,,,200,12000,91,27,43,10,28,7,10,10,14,24,24,14,11,0,0,20,18,0,1,1,103,1.0199810624999999,
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,97,ALV-DAV-96,2,Davide,ALVITI,1,28,1680,12,0,2,2,7,6,8,0,5,5,2,0,0,0,0,2,5,0,0,0,13,0.9230769,-11
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,9337,DUK-DAV-99,3,David,DUKE,1,26,1560,24,5,6,3,8,5,7,0,3,3,5,2,2,0,1,1,5,0,0,0,27,1.2307692,4
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,6556,VIL-MAU-04,5,Mauro,VILLA,0,2,120,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,9336,MCD-WIL-98,7,William,MCDOWELL-WHITE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,4034,NIK-STE-97,11,Stefan,NIKOLIC,1,20,1200,1,0,2,0,1,1,2,4,1,5,2,0,0,0,0,0,1,0,0,0,5,0.25,-3
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,9334,HAL-HUN-97,12,Hunter,HALE,1,34,2040,16,3,7,3,10,1,1,0,1,1,3,3,2,0,0,3,4,0,0,1,11,0.8205128,-3
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,3207,LIB-MAT-02,13,Matteo,LIBRIZZI,0,18,1080,9,3,4,1,5,0,0,0,0,0,2,1,0,0,0,3,1,0,0,0,5,1,-9
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,7428,REN-NAT-96,15,Nate,RENFRO,0,19,1140,4,2,6,0,0,0,2,3,4,7,3,0,1,0,0,4,1,0,0,0,4,0.5,8
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,7014,KAM-ISM-01,17,Ismael,KAMAGATE,1,19,1140,6,2,3,0,0,2,4,4,4,8,4,1,0,0,0,3,2,0,0,0,15,1.2,-16
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,9335,ROB-ISA-98,22,Isaiah,ROBY,0,17,1020,7,2,2,1,3,0,0,1,1,2,0,1,1,0,0,0,1,0,0,1,8,1.1666667,9
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,3155,LAU-MAX,34,Maximilian,LADURNER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,player,2790,IKA-IRI-94,35,Iris,IKANGI,0,17,1020,2,1,2,0,3,0,0,1,1,2,0,1,1,0,1,3,1,0,0,1,-3,0.3333333,5
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,team,,,,,,,,,0,,,,,,,2,2,4,,0,0,,,0,0,0,0,,4,,
+25415,2026-11-08T19:00:00.000+01:00,7,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,1,total,,,,,,,200,12000,81,18,34,10,37,15,24,15,23,38,21,9,7,0,2,19,21,0,0,3,90,0.8249287666666666,
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,6189,MOB-JOS-98,3,Joseph,MOBIO,1,28,1680,5,1,4,1,3,0,0,2,3,5,1,2,0,0,0,0,0,0,0,0,8,0.7142857,6
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,6653,SPE-SKY-94,6,Skylar,SPENCER,0,26,1560,6,3,4,0,0,0,0,4,7,11,0,0,1,2,0,1,0,0,0,1,16,1.2,4
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,9358,SIS-ZAN-97,11,Zan,SISKO,1,9,540,0,0,0,0,0,0,0,0,1,1,4,0,0,0,0,2,0,0,0,0,3,0,0
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,9196,BJE-MAK-08,18,Mak,BJEDOV,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,821,BUC-LOR,21,Lorenzo,BUCARELLI,0,15,900,5,0,2,1,3,2,2,0,1,1,5,0,0,0,0,3,2,0,0,0,6,0.8333333,-2
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,425,BEN-EIM-90,22,Eimantas,BENDZIUS,0,13,780,3,0,1,1,3,0,0,0,2,2,2,0,0,0,0,2,0,0,0,0,2,0.75,3
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,9302,BAT-RAE-01,24,Raequan,BATTLE,1,27,1620,18,6,9,1,6,3,4,1,3,4,2,1,3,0,0,4,5,0,0,1,14,0.9,1
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,9021,MCG-NIC-96,26,Nick,MCGLYNN,1,12,720,4,2,4,0,0,0,0,1,3,4,1,0,1,0,0,2,2,0,0,0,6,0.8,-5
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,7539,GRA-MAT-07,30,Mattia,GRASSI,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,9030,CAL-AND-01,31,Andrea,CALZAVARA,0,25,1500,27,5,5,3,5,8,10,0,3,3,2,1,5,0,0,5,7,0,0,0,26,1.35,2
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,6562,CAV-MAT-03,34,Matteo,CAVALLERO,0,11,660,3,0,0,1,2,0,0,0,3,3,0,0,2,0,0,0,1,0,0,0,4,0.75,4
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,player,7391,VAL-DEN-93,45,Denzel,VALENTINE,1,34,2040,13,2,4,3,6,0,0,0,6,6,2,1,1,0,0,3,2,0,0,1,15,1.1818182,1
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,team,,,,,,,,,0,,,,,,,1,1,2,,0,1,,,0,0,0,0,,1,,
+25415,2026-11-08T19:00:00.000+01:00,7,1771,APU Old Wild West Udine,1766,Openjobmetis Varese,0,total,,,,,,,200,12000,84,19,33,11,28,13,16,9,33,42,19,5,14,2,0,22,19,0,0,3,101,0.9421596888888888,
