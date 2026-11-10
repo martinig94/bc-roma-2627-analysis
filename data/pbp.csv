@@ -31759,3 +31759,611 @@ game_id,seq,period,clock,elapsed_sec,score_home,score_away,team_id,team,home_clu
 25415,683,4,00:13,587,81,84,1766,Openjobmetis Varese,1,4034,11,Stefan,Nikolic,Tiro libero sbagliato,,,,,,,,A,7,False,0,682
 25415,684,4,00:13,587,81,84,1771,APU Old Wild West Udine,0,6562,34,Matteo,Cavallero,Rimbalzo difensivo,,,,,,,,,,False,0,682
 25415,685,4,00:00,600,81,84,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25408,103,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25408,104,1,09:59,1,0,0,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Palla contesa,,,,,,,1,,,False,0,
+25408,105,1,09:38,22,0,0,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Palla persa,50,Passaggio sbagliato,,,86,62,1,A,2,False,0,
+25408,106,1,09:38,22,0,0,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Palla recuperata,,,,,86,62,1,A,2,False,0,105
+25408,107,1,09:33,27,3,0,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,3 punti segnato,1,Tiro in sospensione,,,28,85,0,A,10,False,0,
+25408,108,1,09:33,27,3,0,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,28,85,0,A,10,False,0,107
+25408,109,1,09:21,39,3,0,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,88,53,1,A,6,False,0,
+25408,110,1,09:21,39,3,0,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Stoppata,,,,,88,53,1,A,6,False,0,109
+25408,111,1,09:21,39,3,0,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Stoppata subita,,,,,88,53,1,A,6,False,0,109
+25408,112,1,09:21,39,3,0,1769,Tezenis Verona,0,,,,,Rimbalzi offensivi di squadra,,,,,88,53,1,A,6,False,0,109
+25408,113,1,09:14,46,3,0,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,2 punti sbagliato,7,Appoggio a canestro,,,91,40,1,A,3,False,0,
+25408,114,1,09:14,46,3,0,1750,Virtus Costa Bologna,1,,,,,Rimbalzi difensivi di squadra,,,,,91,40,1,A,3,False,0,113
+25408,115,1,09:00,60,3,0,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Fallo commesso,103,tiro,,,10,56,1,D,6,False,0,
+25408,116,1,09:00,60,3,0,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Fallo Subito,,,,,10,56,1,D,6,False,0,115
+25408,117,1,09:00,60,3,0,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25408,118,1,09:00,60,3,0,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Tiro libero sbagliato,,,,,,,,A,7,False,0,117
+25408,119,1,09:00,60,3,0,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,,,,,,False,0,117
+25408,120,1,08:43,77,3,2,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti segnato,7,Appoggio a canestro,,,93,43,1,A,3,True,0,
+25408,121,1,08:33,87,3,2,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti sbagliato,2,Tiro in corsa,,,14,47,0,A,6,False,0,
+25408,122,1,08:33,87,3,2,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Rimbalzo difensivo,,,,,14,47,0,A,6,False,0,121
+25408,123,1,08:25,95,3,5,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti segnato,1,Tiro in sospensione,,,81,7,1,A,10,False,0,
+25408,124,1,08:25,95,3,5,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Assist,,,,,81,7,1,A,10,False,0,123
+25408,125,1,08:11,109,3,5,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,3 punti sbagliato,1,Tiro in sospensione,,,22,91,0,A,10,False,0,
+25408,126,1,08:11,109,3,5,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo offensivo,,,,,22,91,0,A,10,False,0,125
+25408,127,1,08:06,114,3,5,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti sbagliato,7,Appoggio a canestro,,,10,54,0,A,6,False,0,
+25408,128,1,08:06,114,3,5,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,10,54,0,A,6,False,0,127
+25408,129,1,07:56,124,3,8,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti segnato,1,Tiro in sospensione,,,73,84,1,A,8,False,0,
+25408,130,1,07:56,124,3,8,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Assist,,,,,73,84,1,A,8,False,0,129
+25408,131,1,07:50,130,3,8,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Fallo commesso,106,offensivo,,,19,55,0,A,6,False,0,
+25408,132,1,07:50,130,3,8,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Palla persa,,,,,19,55,0,A,6,False,0,131
+25408,133,1,07:50,130,3,8,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,19,55,0,A,6,False,0,131
+25408,134,1,07:38,142,3,8,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Fallo commesso,100,personale,,,91,63,0,D,2,False,0,
+25408,135,1,07:38,142,3,8,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,91,63,0,D,2,False,0,134
+25408,136,1,07:38,142,3,8,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,
+25408,137,1,07:38,142,3,8,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Ingresso,,,,,,,,,,False,0,136
+25408,138,1,07:35,145,3,8,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti sbagliato,1,Tiro in sospensione,,,76,89,1,A,8,False,0,
+25408,139,1,07:35,145,3,8,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo offensivo,,,,,76,89,1,A,8,False,0,138
+25408,140,1,07:29,151,3,8,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Fallo commesso,100,personale,,,87,29,0,D,4,False,0,
+25408,141,1,07:29,151,3,8,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,87,29,0,D,4,False,0,140
+25408,142,1,07:19,161,3,8,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti sbagliato,7,Appoggio a canestro,,,89,53,1,A,6,False,0,
+25408,143,1,07:19,161,3,8,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,89,53,1,A,6,False,0,142
+25408,144,1,07:10,170,3,8,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Fallo commesso,103,tiro,,,7,55,1,D,3,False,0,
+25408,145,1,07:10,170,3,8,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Fallo Subito,,,,,7,55,1,D,3,False,0,144
+25408,146,1,07:10,170,3,8,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25408,147,1,07:10,170,3,8,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Tiro libero sbagliato,,,,,,,,A,7,False,0,146
+25408,148,1,07:10,170,3,8,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,,,,,,False,0,146
+25408,149,1,07:03,177,3,8,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Palla persa,50,Passaggio sbagliato,,,94,57,1,A,3,False,0,
+25408,150,1,06:49,191,5,8,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,2 punti segnato,3,Tiro in fadeaway,,,17,47,0,A,6,True,0,
+25408,151,1,06:49,191,5,8,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Assist,,,,,17,47,0,A,6,False,0,150
+25408,152,1,06:34,206,5,11,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti segnato,1,Tiro in sospensione,,,70,71,1,A,9,False,0,
+25408,153,1,06:34,206,5,11,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Assist,,,,,70,71,1,A,9,False,0,152
+25408,154,1,06:19,221,7,11,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,1,Tiro in sospensione,,,20,47,0,A,6,True,0,
+25408,155,1,06:11,229,7,11,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Fallo commesso,103,tiro,,,94,49,0,D,3,False,0,
+25408,156,1,06:11,229,7,11,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Fallo Subito,,,,,94,49,0,D,3,False,0,155
+25408,157,1,06:11,229,7,11,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,
+25408,158,1,06:11,229,7,11,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Ingresso,,,,,,,,,,False,0,157
+25408,159,1,06:11,229,7,12,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,160,1,06:11,229,7,12,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Tiro libero sbagliato,,,,,,,,A,7,False,0,159
+25408,161,1,06:11,229,7,12,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,,,,,,False,0,159
+25408,162,1,06:11,229,7,12,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo difensivo,,,,,,,,,,False,0,159
+25408,163,1,06:03,237,10,12,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti segnato,1,Tiro in sospensione,,,32,62,0,A,9,False,0,
+25408,164,1,05:49,251,10,12,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Palla persa,50,Passaggio sbagliato,,,91,70,1,A,2,False,0,
+25408,165,1,05:49,251,10,12,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Ingresso,,,,,,,,,,False,0,
+25408,166,1,05:49,251,10,12,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Uscita,,,,,,,,,,False,0,165
+25408,167,1,05:49,251,10,12,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Ingresso,,,,,,,,,,False,0,165
+25408,168,1,05:49,251,10,12,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Uscita,,,,,,,,,,False,0,165
+25408,169,1,05:38,262,10,12,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Fallo commesso,103,tiro,,,12,59,1,D,6,False,0,
+25408,170,1,05:38,262,10,12,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Fallo Subito,,,,,12,59,1,D,6,False,0,169
+25408,171,1,05:38,262,10,12,1769,Tezenis Verona,0,7411,3,Federico,Poser,Ingresso,,,,,,,,,,False,0,
+25408,172,1,05:38,262,10,12,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Uscita,,,,,,,,,,False,0,171
+25408,173,1,05:38,262,11,12,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,174,1,05:38,262,11,12,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Tiro libero sbagliato,,,,,,,,A,7,False,0,173
+25408,175,1,05:38,262,11,12,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,,,,,,False,0,173
+25408,176,1,05:38,262,11,12,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,,,,,,False,0,173
+25408,177,1,05:19,281,11,12,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Fallo commesso,103,tiro,,,88,60,0,D,6,False,0,
+25408,178,1,05:19,281,11,12,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo Subito,,,,,88,60,0,D,6,False,0,177
+25408,179,1,05:19,281,11,12,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Ingresso,,,,,,,,,,False,0,
+25408,180,1,05:19,281,11,12,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Uscita,,,,,,,,,,False,0,179
+25408,181,1,05:19,281,11,13,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,182,1,05:19,281,11,14,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Tiro libero segnato,,,,,,,,A,7,False,0,181
+25408,183,1,05:00,300,11,14,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Fallo commesso,106,offensivo,,,27,55,0,A,7,False,0,
+25408,184,1,05:00,300,11,14,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Palla persa,,,,,27,55,0,A,7,False,0,183
+25408,185,1,05:00,300,11,14,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo Subito,,,,,27,55,0,A,7,False,0,183
+25408,186,1,05:00,300,11,14,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Uscita,,,,,,,,,,False,0,
+25408,187,1,05:00,300,11,14,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Ingresso,,,,,,,,,,False,0,186
+25408,188,1,04:35,325,11,14,1769,Tezenis Verona,0,7411,3,Federico,Poser,2 punti sbagliato,1,Tiro in sospensione,,,91,43,1,A,3,False,0,
+25408,189,1,04:35,325,11,14,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Rimbalzo difensivo,,,,,91,43,1,A,3,False,0,188
+25408,190,1,04:31,329,11,14,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo commesso,100,personale,,,32,45,1,D,9,False,0,
+25408,191,1,04:31,329,11,14,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo Subito,,,,,32,45,1,D,9,False,0,190
+25408,192,1,04:31,329,11,14,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Uscita,,,,,,,,,,False,0,
+25408,193,1,04:31,329,11,14,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Ingresso,,,,,,,,,,False,0,192
+25408,194,1,04:27,333,11,14,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo commesso,100,personale,,,27,32,1,D,7,False,0,
+25408,195,1,04:27,333,11,14,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Fallo Subito,,,,,27,32,1,D,7,False,0,194
+25408,196,1,04:27,333,11,14,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Ingresso,,,,,,,,,,False,0,
+25408,197,1,04:27,333,11,14,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Uscita,,,,,,,,,,False,0,196
+25408,198,1,04:27,333,11,14,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25408,199,1,04:27,333,11,14,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Tiro libero sbagliato,,,,,,,,A,7,False,0,198
+25408,200,1,04:27,333,11,14,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Rimbalzo difensivo,,,,,,,,,,False,0,198
+25408,201,1,04:12,348,11,14,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Palla persa,50,Passaggio sbagliato,,,55,55,1,A,9,False,0,
+25408,202,1,04:12,348,11,14,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Palla recuperata,,,,,55,55,1,A,9,False,0,201
+25408,203,1,04:08,352,13,14,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,2 punti segnato,7,Appoggio a canestro,500,contropiede,9,56,0,A,3,True,0,
+25408,204,1,04:08,352,13,14,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Assist,,,500,contropiede,9,56,0,A,3,False,0,203
+25408,205,1,04:02,358,13,14,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo commesso,100,personale,,,70,86,0,D,8,False,0,
+25408,206,1,04:02,358,13,14,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Fallo Subito,,,,,70,86,0,D,8,False,0,205
+25408,207,1,04:02,358,13,14,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Uscita,,,,,,,,,,False,0,
+25408,208,1,04:02,358,13,14,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Ingresso,,,,,,,,,,False,0,207
+25408,209,1,04:02,358,13,15,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,210,1,04:02,358,13,16,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Tiro libero segnato,,,,,,,,A,7,False,0,209
+25408,211,1,03:55,365,13,16,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,3 punti sbagliato,1,Tiro in sospensione,,,28,82,0,A,10,False,0,
+25408,212,1,03:55,365,13,16,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,28,82,0,A,10,False,0,211
+25408,213,1,03:35,385,13,16,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti sbagliato,1,Tiro in sospensione,,,68,29,1,A,9,False,0,
+25408,214,1,03:35,385,13,16,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo offensivo,,,,,68,29,1,A,9,False,0,213
+25408,215,1,03:21,399,13,16,1769,Tezenis Verona,0,7412,18,Federico,Zampini,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,94,41,1,A,3,False,0,
+25408,216,1,03:21,399,13,16,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Stoppata,,,,,94,41,1,A,3,False,0,215
+25408,217,1,03:21,399,13,16,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Stoppata subita,,,,,94,41,1,A,3,False,0,215
+25408,218,1,03:21,399,13,16,1769,Tezenis Verona,0,,,,,Rimbalzi offensivi di squadra,,,,,94,41,1,A,3,False,0,215
+25408,219,1,03:21,399,13,16,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,2 punti sbagliato,1,Tiro in sospensione,,,86,23,1,A,4,False,0,
+25408,220,1,03:21,399,13,16,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Rimbalzo offensivo,,,,,86,23,1,A,4,False,0,219
+25408,221,1,03:18,402,13,16,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti sbagliato,1,Tiro in sospensione,1006,violazione 24sec,67,59,1,A,9,False,0,
+25408,222,1,03:18,402,13,16,1769,Tezenis Verona,0,,,,,Palle perse di squadra,1006,violazione 24sec,,,67,59,1,A,9,False,0,
+25408,223,1,03:04,416,13,16,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Ingresso,,,,,,,,,,False,0,
+25408,224,1,03:04,416,13,16,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Uscita,,,,,,,,,,False,0,223
+25408,225,1,02:48,432,13,16,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo commesso,100,personale,,,6,28,1,D,2,False,0,
+25408,226,1,02:48,432,13,16,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Fallo Subito,,,,,6,28,1,D,2,False,0,225
+25408,227,1,02:48,432,13,16,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Uscita,,,,,,,,,,False,0,
+25408,228,1,02:48,432,13,16,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Ingresso,,,,,,,,,,False,0,227
+25408,229,1,02:48,432,14,16,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,230,1,02:48,432,15,16,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Tiro libero segnato,,,,,,,,A,7,False,0,229
+25408,231,1,02:26,454,15,16,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti sbagliato,1,Tiro in sospensione,,,62,77,1,A,8,False,0,
+25408,232,1,02:26,454,15,16,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Rimbalzo difensivo,,,,,62,77,1,A,8,False,0,231
+25408,233,1,02:06,474,15,16,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,2 punti sbagliato,7,Appoggio a canestro,,,7,40,0,A,3,False,0,
+25408,234,1,02:06,474,15,16,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Rimbalzo difensivo,,,,,7,40,0,A,3,False,0,233
+25408,235,1,01:55,485,15,18,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti segnato,9,Schiacciata,,,94,57,1,A,3,True,1,
+25408,236,1,01:55,485,15,18,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,94,57,1,A,3,False,0,235
+25408,237,1,01:47,493,17,18,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti segnato,7,Appoggio a canestro,,,7,55,0,A,3,True,0,
+25408,238,1,01:23,517,17,20,1769,Tezenis Verona,0,7411,3,Federico,Poser,2 punti segnato,7,Appoggio a canestro,,,93,49,1,A,3,True,0,
+25408,239,1,01:23,517,17,20,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Assist,,,,,93,49,1,A,3,False,0,238
+25408,240,1,01:16,524,17,20,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Fallo commesso,100,personale,,,16,76,1,D,4,False,0,
+25408,241,1,01:16,524,17,20,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Fallo Subito,,,,,16,76,1,D,4,False,0,240
+25408,242,1,01:16,524,17,20,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Ingresso,,,,,,,,,,False,0,
+25408,243,1,01:16,524,17,20,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,242
+25408,244,1,01:16,524,17,20,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Uscita,,,,,,,,,,False,0,
+25408,245,1,01:16,524,17,20,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Ingresso,,,,,,,,,,False,0,244
+25408,246,1,01:16,524,18,20,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,247,1,01:16,524,19,20,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Tiro libero segnato,,,,,,,,A,7,False,0,246
+25408,248,1,01:00,540,19,20,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Fallo commesso,103,tiro,,,89,51,0,D,6,False,0,
+25408,249,1,01:00,540,19,20,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,89,51,0,D,6,False,0,248
+25408,250,1,01:00,540,19,21,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,251,1,01:00,540,19,22,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Tiro libero segnato,,,,,,,,A,7,False,0,250
+25408,252,1,01:00,540,19,22,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,,,,,,False,0,250
+25408,253,1,00:47,553,21,22,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,2 punti segnato,8,Da penetrazione,,,11,43,0,A,6,True,0,
+25408,254,1,00:30,570,21,22,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Palla persa,50,Passaggio sbagliato,,,87,52,1,A,6,False,0,
+25408,255,1,00:30,570,21,22,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Palla recuperata,,,,,87,52,1,A,6,False,0,254
+25408,256,1,00:24,576,21,22,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti sbagliato,8,Da penetrazione,,,7,56,0,A,3,False,0,
+25408,257,1,00:24,576,21,22,1769,Tezenis Verona,0,7411,3,Federico,Poser,Rimbalzo difensivo,,,,,7,56,0,A,3,False,0,256
+25408,258,1,00:00,600,21,22,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti sbagliato,7,Appoggio a canestro,,,82,65,1,A,2,False,0,
+25408,259,1,00:00,600,21,22,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Rimbalzo difensivo,,,,,82,65,1,A,2,False,0,258
+25408,260,1,00:00,600,21,22,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25408,261,2,10:00,0,21,22,1769,Tezenis Verona,0,7411,3,Federico,Poser,Uscita,,,,,,,,,,False,0,
+25408,262,2,10:00,0,21,22,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Ingresso,,,,,,,,,,False,0,261
+25408,263,2,10:00,0,21,22,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25408,264,2,09:38,22,21,22,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti sbagliato,7,Appoggio a canestro,,,17,49,0,A,6,False,0,
+25408,265,2,09:38,22,21,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Rimbalzo offensivo,,,,,17,49,0,A,6,False,0,264
+25408,266,2,09:31,29,21,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,3 punti sbagliato,1,Tiro in sospensione,,,23,11,0,A,8,False,0,
+25408,267,2,09:31,29,21,22,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Rimbalzo offensivo,,,,,23,11,0,A,8,False,0,266
+25408,268,2,09:27,33,21,22,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Fallo commesso,100,personale,,,14,53,1,D,6,False,0,
+25408,269,2,09:27,33,21,22,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Fallo Subito,,,,,14,53,1,D,6,False,0,268
+25408,270,2,09:20,40,21,22,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Fallo commesso,106,offensivo,,,11,62,0,A,6,False,0,
+25408,271,2,09:20,40,21,22,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Palla persa,,,,,11,62,0,A,6,False,0,270
+25408,272,2,09:20,40,21,22,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Fallo Subito,,,,,11,62,0,A,6,False,0,270
+25408,273,2,09:20,40,21,22,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Ingresso,,,,,,,,,,False,0,
+25408,274,2,09:20,40,21,22,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Uscita,,,,,,,,,,False,0,273
+25408,275,2,09:20,40,21,22,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Ingresso,,,,,,,,,,False,0,
+25408,276,2,09:20,40,21,22,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Uscita,,,,,,,,,,False,0,275
+25408,277,2,09:06,54,21,22,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Palla persa,50,Passaggio sbagliato,,,91,44,1,A,3,False,0,
+25408,278,2,09:06,54,21,22,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Palla recuperata,,,,,91,44,1,A,3,False,0,277
+25408,279,2,09:01,59,23,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti segnato,1,Tiro in sospensione,500,contropiede,9,57,0,A,3,True,0,
+25408,280,2,09:01,59,23,22,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Assist,,,500,contropiede,9,57,0,A,3,False,0,279
+25408,281,2,08:54,66,23,22,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Fallo commesso,100,personale,,,32,63,0,A,9,False,0,
+25408,282,2,08:54,66,23,22,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Fallo Subito,,,,,32,63,0,A,9,False,0,281
+25408,283,2,08:54,66,23,22,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Ingresso,,,,,,,,,,False,0,
+25408,284,2,08:54,66,23,22,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Uscita,,,,,,,,,,False,0,283
+25408,285,2,08:54,66,23,22,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,283
+25408,286,2,08:54,66,23,22,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Ingresso,,,,,,,,,,False,0,283
+25408,287,2,08:38,82,23,24,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti segnato,7,Appoggio a canestro,,,86,60,1,A,6,True,0,
+25408,288,2,08:28,92,23,24,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,3 punti sbagliato,1,Tiro in sospensione,,,29,28,0,A,9,False,0,
+25408,289,2,08:28,92,23,24,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo difensivo,,,,,29,28,0,A,9,False,0,288
+25408,290,2,08:23,97,23,24,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Ingresso,,,,,,,,,,False,0,
+25408,291,2,08:23,97,23,24,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Uscita,,,,,,,,,,False,0,290
+25408,292,2,08:16,104,23,24,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Fallo commesso,100,personale,,,91,61,0,D,3,False,0,
+25408,293,2,08:16,104,23,24,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,91,61,0,D,3,False,0,292
+25408,294,2,08:16,104,23,24,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Uscita,,,,,,,,,,False,0,
+25408,295,2,08:16,104,23,24,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Ingresso,,,,,,,,,,False,0,294
+25408,296,2,08:15,105,23,24,1769,Tezenis Verona,0,9349,10,Mike,Tobey,3 punti sbagliato,1,Tiro in sospensione,,,72,19,1,A,10,False,0,
+25408,297,2,08:15,105,23,24,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Rimbalzo difensivo,,,,,72,19,1,A,10,False,0,296
+25408,298,2,08:09,111,25,24,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,2 punti segnato,10,Alley-oop,,,8,53,0,A,3,True,0,
+25408,299,2,08:09,111,25,24,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,8,53,0,A,3,False,0,298
+25408,300,2,07:55,125,25,24,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo commesso,100,personale,,,64,30,0,D,9,False,0,
+25408,301,2,07:55,125,25,24,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Fallo Subito,,,,,64,30,0,D,9,False,0,300
+25408,302,2,07:47,133,25,24,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti sbagliato,1,Tiro in sospensione,,,85,48,1,A,6,False,0,
+25408,303,2,07:47,133,25,24,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo offensivo,,,,,85,48,1,A,6,False,0,302
+25408,304,2,07:44,136,25,26,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti segnato,7,Appoggio a canestro,,,91,55,1,A,3,True,0,
+25408,305,2,07:29,151,25,26,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,2 punti sbagliato,1,Tiro in sospensione,,,19,52,0,A,6,False,0,
+25408,306,2,07:29,151,25,26,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Rimbalzo difensivo,,,,,19,52,0,A,6,False,0,305
+25408,307,2,07:20,160,25,28,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti segnato,9,Schiacciata,,,95,50,1,A,3,True,1,
+25408,308,2,07:20,160,25,28,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Assist,,,,,95,50,1,A,3,False,0,307
+25408,309,2,07:11,169,28,28,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti segnato,1,Tiro in sospensione,,,31,37,0,A,9,False,0,
+25408,310,2,06:54,186,28,28,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti sbagliato,1,Tiro in sospensione,,,80,59,1,A,6,False,0,
+25408,311,2,06:54,186,28,28,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Rimbalzo difensivo,,,,,80,59,1,A,6,False,0,310
+25408,312,2,06:37,203,28,28,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Palla persa,51,Palleggio,,,13,51,0,A,6,False,0,
+25408,313,2,06:37,203,28,28,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Palla recuperata,,,,,13,51,0,A,6,False,0,312
+25408,314,2,06:37,203,28,30,1769,Tezenis Verona,0,6486,11,Andrea,Loro,2 punti segnato,8,Da penetrazione,500,contropiede,89,46,1,A,6,True,0,
+25408,315,2,06:37,203,28,30,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Fallo commesso,103,tiro,,,87,54,0,D,6,False,0,
+25408,316,2,06:37,203,28,30,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Fallo Subito,,,,,87,54,0,D,6,False,0,315
+25408,317,2,06:37,203,28,30,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Uscita,,,,,,,,,,False,0,
+25408,318,2,06:37,203,28,30,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Ingresso,,,,,,,,,,False,0,317
+25408,319,2,06:37,203,28,30,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Ingresso,,,,,,,,,,False,0,317
+25408,320,2,06:37,203,28,30,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Uscita,,,,,,,,,,False,0,317
+25408,321,2,06:37,203,28,30,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25408,322,2,06:37,203,28,30,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo difensivo,,,,,,,,,,False,0,321
+25408,323,2,06:33,207,28,30,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Palla persa,54,Fuori dal campo,,,9,45,0,A,3,False,0,
+25408,324,2,06:17,223,28,30,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti sbagliato,1,Tiro in sospensione,,,89,88,1,A,2,False,0,
+25408,325,2,06:17,223,28,30,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo offensivo,,,,,89,88,1,A,2,False,0,324
+25408,326,2,06:17,223,28,30,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Fallo commesso,103,tiro,,,95,47,0,D,3,False,0,
+25408,327,2,06:17,223,28,30,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Fallo Subito,,,,,95,47,0,D,3,False,0,326
+25408,328,2,06:17,223,28,30,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25408,329,2,06:17,223,28,31,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Tiro libero segnato,,,,,,,,A,7,False,0,328
+25408,330,2,06:17,223,28,31,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Assist,,,,,,,,,,False,0,328
+25408,331,2,06:17,223,28,31,1769,Tezenis Verona,0,7411,3,Federico,Poser,Ingresso,,,,,,,,,,False,0,
+25408,332,2,06:17,223,28,31,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Uscita,,,,,,,,,,False,0,331
+25408,333,2,06:00,240,28,31,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti sbagliato,1,Tiro in sospensione,,,30,33,0,A,9,False,0,
+25408,334,2,06:00,240,28,31,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,30,33,0,A,9,False,0,333
+25408,335,2,05:57,243,28,31,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Palla persa,50,Passaggio sbagliato,,,18,52,1,D,6,False,0,
+25408,336,2,05:57,243,28,31,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Palla recuperata,,,,,18,52,1,D,6,False,0,335
+25408,337,2,05:52,248,30,31,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,7,Appoggio a canestro,,,7,43,0,A,3,True,0,
+25408,338,2,05:52,248,30,31,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Assist,,,,,7,43,0,A,3,False,0,337
+25408,339,2,05:32,268,30,31,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti sbagliato,1,Tiro in sospensione,,,69,28,1,A,9,False,0,
+25408,340,2,05:32,268,30,31,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Rimbalzo difensivo,,,,,69,28,1,A,9,False,0,339
+25408,341,2,05:26,274,32,31,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,10,Alley-oop,500,contropiede,8,46,0,A,3,True,0,
+25408,342,2,05:26,274,32,31,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Assist,,,500,contropiede,8,46,0,A,3,False,0,341
+25408,343,2,05:25,275,32,31,1769,Tezenis Verona,0,,,,,Time Out,,,,,,,1,,,False,0,
+25408,344,2,05:25,275,32,31,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Ingresso,,,,,,,,,,False,0,
+25408,345,2,05:25,275,32,31,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Uscita,,,,,,,,,,False,0,344
+25408,346,2,05:16,284,32,31,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Palla persa,50,Passaggio sbagliato,,,74,77,1,A,8,False,0,
+25408,347,2,05:05,295,32,31,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo commesso,103,tiro,,,7,55,1,D,3,False,0,
+25408,348,2,05:05,295,32,31,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Fallo Subito,,,,,7,55,1,D,3,False,0,347
+25408,349,2,05:05,295,33,31,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,350,2,05:05,295,33,31,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Tiro libero sbagliato,,,,,,,,A,7,False,0,349
+25408,351,2,05:05,295,33,31,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Assist,,,,,,,,,,False,0,349
+25408,352,2,05:05,295,33,31,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Rimbalzo offensivo,,,,,,,,,,False,0,349
+25408,353,2,05:05,295,33,31,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,2 punti sbagliato,7,Appoggio a canestro,,,12,53,0,A,6,False,0,
+25408,354,2,05:05,295,33,31,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Rimbalzo difensivo,,,,,12,53,0,A,6,False,0,353
+25408,355,2,04:45,315,33,31,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti sbagliato,7,Appoggio a canestro,1003,tip-in appoggio canestro made,94,56,1,A,3,False,0,
+25408,356,2,04:45,315,33,31,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Rimbalzo offensivo,,,,,94,56,1,A,3,False,0,355
+25408,357,2,04:45,315,33,33,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti segnato,7,Appoggio a canestro,,,94,56,1,A,3,True,0,
+25408,358,2,04:29,331,33,33,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti sbagliato,2,Tiro in corsa,,,13,52,0,A,6,False,0,
+25408,359,2,04:29,331,33,33,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,13,52,0,A,6,False,0,358
+25408,360,2,04:21,339,33,33,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti sbagliato,1,Tiro in sospensione,,,68,39,1,A,9,False,0,
+25408,361,2,04:21,339,33,33,1750,Virtus Costa Bologna,1,,,,,Rimbalzi difensivi di squadra,,,,,68,39,1,A,9,False,0,360
+25408,362,2,04:17,343,33,33,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Uscita,,,,,,,,,,False,0,
+25408,363,2,04:17,343,33,33,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Ingresso,,,,,,,,,,False,0,362
+25408,364,2,03:57,363,33,33,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,2 punti sbagliato,7,Appoggio a canestro,,,10,45,0,A,6,False,0,
+25408,365,2,03:57,363,33,33,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,10,45,0,A,6,False,0,364
+25408,366,2,03:48,372,33,33,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti sbagliato,7,Appoggio a canestro,1004,tip-in appoggio canestro miss,91,42,1,A,3,False,0,
+25408,367,2,03:48,372,33,33,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo offensivo,,,,,91,42,1,A,3,False,0,366
+25408,368,2,03:48,372,33,33,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti sbagliato,7,Appoggio a canestro,,,91,42,1,A,3,False,0,
+25408,369,2,03:48,372,33,33,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Rimbalzo difensivo,,,,,91,42,1,A,3,False,0,368
+25408,370,2,03:40,380,33,33,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,3 punti sbagliato,1,Tiro in sospensione,,,29,21,0,A,8,False,0,
+25408,371,2,03:40,380,33,33,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Rimbalzo difensivo,,,,,29,21,0,A,8,False,0,370
+25408,372,2,03:31,389,33,33,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo commesso,100,personale,,,69,29,0,D,9,False,0,
+25408,373,2,03:31,389,33,33,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo Subito,,,,,69,29,0,D,9,False,0,372
+25408,374,2,03:31,389,33,33,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Uscita,,,,,,,,,,False,0,
+25408,375,2,03:31,389,33,33,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Ingresso,,,,,,,,,,False,0,374
+25408,376,2,03:31,389,33,33,1769,Tezenis Verona,0,7411,3,Federico,Poser,Uscita,,,,,,,,,,False,0,374
+25408,377,2,03:31,389,33,33,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Ingresso,,,,,,,,,,False,0,374
+25408,378,2,03:31,389,33,34,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,379,2,03:31,389,33,34,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Tiro libero sbagliato,,,,,,,,A,7,False,0,378
+25408,380,2,03:31,389,33,34,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Rimbalzo difensivo,,,,,,,,,,False,0,378
+25408,381,2,03:23,397,33,34,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti sbagliato,2,Tiro in corsa,,,8,67,0,A,4,False,0,
+25408,382,2,03:23,397,33,34,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Rimbalzo difensivo,,,,,8,67,0,A,4,False,0,381
+25408,383,2,03:15,405,33,34,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti sbagliato,1,Tiro in sospensione,,,81,94,1,A,8,False,0,
+25408,384,2,03:15,405,33,34,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,81,94,1,A,8,False,0,383
+25408,385,2,03:08,412,35,34,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,8,Da penetrazione,,,8,57,0,A,3,True,0,
+25408,386,2,02:58,422,35,34,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Palla persa,50,Passaggio sbagliato,,,87,45,1,A,6,False,0,
+25408,387,2,02:58,422,35,34,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Palla recuperata,,,,,87,45,1,A,6,False,0,386
+25408,388,2,02:53,427,35,34,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Fallo commesso,103,tiro,,,9,63,1,D,4,False,0,
+25408,389,2,02:53,427,35,34,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo Subito,,,,,9,63,1,D,4,False,0,388
+25408,390,2,02:53,427,35,34,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Uscita,,,,,,,,,,False,0,
+25408,391,2,02:53,427,35,34,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Ingresso,,,,,,,,,,False,0,390
+25408,392,2,02:53,427,35,34,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Ingresso,,,,,,,,,,False,0,390
+25408,393,2,02:53,427,35,34,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Uscita,,,,,,,,,,False,0,390
+25408,394,2,02:53,427,35,34,1769,Tezenis Verona,0,7411,3,Federico,Poser,Ingresso,,,,,,,,,,False,0,390
+25408,395,2,02:53,427,35,34,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Uscita,,,,,,,,,,False,0,390
+25408,396,2,02:53,427,35,34,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Uscita,,,,,,,,,,False,0,390
+25408,397,2,02:53,427,35,34,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Ingresso,,,,,,,,,,False,0,390
+25408,398,2,02:53,427,36,34,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25408,399,2,02:53,427,37,34,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,398
+25408,400,2,02:39,441,37,34,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Palla persa,50,Passaggio sbagliato,,,87,51,1,A,6,False,0,
+25408,401,2,02:39,441,37,34,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Palla recuperata,,,,,87,51,1,A,6,False,0,400
+25408,402,2,02:35,445,39,34,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,9,Schiacciata,500,contropiede,8,59,0,A,3,True,1,
+25408,403,2,02:35,445,39,34,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Assist,,,500,contropiede,8,59,0,A,3,False,0,402
+25408,404,2,02:35,445,39,34,1769,Tezenis Verona,0,,,,,Time Out,,,,,,,1,,,False,0,
+25408,405,2,02:11,469,39,34,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,2 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,88,50,1,A,6,False,0,
+25408,406,2,02:11,469,39,34,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Rimbalzo offensivo,,,,,88,50,1,A,6,False,0,405
+25408,407,2,02:11,469,39,36,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,2 punti segnato,7,Appoggio a canestro,,,88,50,1,A,6,True,0,
+25408,408,2,01:51,489,39,36,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo commesso,100,personale,,,15,35,1,D,2,False,0,
+25408,409,2,01:51,489,39,36,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo Subito,,,,,15,35,1,D,2,False,0,408
+25408,410,2,01:47,493,39,36,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti sbagliato,8,Da penetrazione,,,8,55,0,A,3,False,0,
+25408,411,2,01:47,493,39,36,1769,Tezenis Verona,0,7411,3,Federico,Poser,Rimbalzo difensivo,,,,,8,55,0,A,3,False,0,410
+25408,412,2,01:29,511,39,36,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Palla persa,50,Passaggio sbagliato,,,88,45,1,A,6,False,0,
+25408,413,2,01:29,511,39,36,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Palla recuperata,,,,,88,45,1,A,6,False,0,412
+25408,414,2,01:23,517,39,36,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti sbagliato,7,Appoggio a canestro,,,9,40,0,A,3,False,0,
+25408,415,2,01:23,517,39,36,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Rimbalzo offensivo,,,,,9,40,0,A,3,False,0,414
+25408,416,2,01:08,532,39,36,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,3 punti sbagliato,1,Tiro in sospensione,1006,violazione 24sec,26,83,0,A,10,False,0,
+25408,417,2,01:08,532,39,36,1750,Virtus Costa Bologna,1,,,,,Palle perse di squadra,1006,violazione 24sec,,,26,83,0,A,10,False,0,
+25408,418,2,01:03,537,39,36,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Ingresso,,,,,,,,,,False,0,
+25408,419,2,01:03,537,39,36,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,418
+25408,420,2,01:03,537,39,36,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Ingresso,,,,,,,,,,False,0,418
+25408,421,2,01:03,537,39,36,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Uscita,,,,,,,,,,False,0,418
+25408,422,2,00:44,556,39,36,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti sbagliato,1,Tiro in sospensione,,,80,72,1,A,2,False,0,
+25408,423,2,00:44,556,39,36,1750,Virtus Costa Bologna,1,,,,,Rimbalzi difensivi di squadra,,,,,80,72,1,A,2,False,0,422
+25408,424,2,00:43,557,39,36,1750,Virtus Costa Bologna,1,,,,,Time Out,,,,,,,0,,,False,0,
+25408,425,2,00:33,567,39,36,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,3 punti sbagliato,1,Tiro in sospensione,,,34,57,0,A,9,False,0,
+25408,426,2,00:33,567,39,36,1750,Virtus Costa Bologna,1,,,,,Rimbalzi offensivi di squadra,,,,,34,57,0,A,9,False,0,425
+25408,427,2,00:30,570,39,36,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo commesso,100,personale,,,16,58,1,D,6,False,0,
+25408,428,2,00:30,570,39,36,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Fallo Subito,,,,,16,58,1,D,6,False,0,427
+25408,429,2,00:30,570,39,36,1769,Tezenis Verona,0,7411,3,Federico,Poser,Uscita,,,,,,,,,,False,0,
+25408,430,2,00:30,570,39,36,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Ingresso,,,,,,,,,,False,0,429
+25408,431,2,00:30,570,40,36,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,432,2,00:30,570,40,36,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Tiro libero sbagliato,,,,,,,,A,7,False,0,431
+25408,433,2,00:30,570,40,36,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo difensivo,,,,,,,,,,False,0,431
+25408,434,2,00:14,586,40,36,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti sbagliato,1,Tiro in sospensione,,,72,80,1,A,8,False,0,
+25408,435,2,00:14,586,40,36,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Rimbalzo difensivo,,,,,72,80,1,A,8,False,0,434
+25408,436,2,00:03,597,40,36,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo commesso,103,tiro,,,8,61,1,D,3,False,0,
+25408,437,2,00:03,597,40,36,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Fallo Subito,,,,,8,61,1,D,3,False,0,436
+25408,438,2,00:03,597,41,36,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,439,2,00:03,597,42,36,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Tiro libero segnato,,,,,,,,A,7,False,0,438
+25408,440,2,00:03,597,42,36,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Uscita,,,,,,,,,,False,0,
+25408,441,2,00:03,597,42,36,1750,Virtus Costa Bologna,1,6797,13,Matteo,Baiocchi,Ingresso,,,,,,,,,,False,0,440
+25408,442,2,00:01,599,42,36,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,73,90,1,A,8,False,0,
+25408,443,2,00:00,600,42,36,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25408,444,3,10:00,0,42,36,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Ingresso,,,,,,,,,,False,0,
+25408,445,3,10:00,0,42,36,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Uscita,,,,,,,,,,False,0,444
+25408,446,3,10:00,0,42,36,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Ingresso,,,,,,,,,,False,0,444
+25408,447,3,10:00,0,42,36,1750,Virtus Costa Bologna,1,6797,13,Matteo,Baiocchi,Uscita,,,,,,,,,,False,0,444
+25408,448,3,10:00,0,42,36,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Uscita,,,,,,,,,,False,0,444
+25408,449,3,10:00,0,42,36,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Ingresso,,,,,,,,,,False,0,444
+25408,450,3,10:00,0,42,36,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Ingresso,,,,,,,,,,False,0,444
+25408,451,3,10:00,0,42,36,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Uscita,,,,,,,,,,False,0,444
+25408,452,3,10:00,0,42,36,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25408,453,3,09:45,15,42,36,1769,Tezenis Verona,0,6486,11,Andrea,Loro,2 punti sbagliato,7,Appoggio a canestro,1003,tip-in appoggio canestro made,6,45,0,A,3,False,0,
+25408,454,3,09:45,15,42,36,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo offensivo,,,,,6,45,0,A,3,False,0,453
+25408,455,3,09:45,15,42,38,1769,Tezenis Verona,0,6486,11,Andrea,Loro,2 punti segnato,7,Appoggio a canestro,,,6,45,0,A,3,True,0,
+25408,456,3,09:31,29,42,38,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti sbagliato,1,Tiro in sospensione,,,79,55,1,A,7,False,0,
+25408,457,3,09:31,29,42,38,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,79,55,1,A,7,False,0,456
+25408,458,3,09:15,45,42,38,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti sbagliato,1,Tiro in sospensione,,,18,40,0,A,6,False,0,
+25408,459,3,09:15,45,42,38,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo offensivo,,,,,18,40,0,A,6,False,0,458
+25408,460,3,09:08,52,42,38,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti sbagliato,1,Tiro in sospensione,,,24,89,0,A,10,False,0,
+25408,461,3,09:08,52,42,38,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo offensivo,,,,,24,89,0,A,10,False,0,460
+25408,462,3,09:00,60,42,38,1769,Tezenis Verona,0,6486,11,Andrea,Loro,2 punti sbagliato,1,Tiro in sospensione,,,15,63,0,A,4,False,0,
+25408,463,3,09:00,60,42,38,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo difensivo,,,,,15,63,0,A,4,False,0,462
+25408,464,3,08:55,65,42,38,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo commesso,100,personale,,,69,37,0,D,9,False,0,
+25408,465,3,08:55,65,42,38,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo Subito,,,,,69,37,0,D,9,False,0,464
+25408,466,3,08:47,73,42,38,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti sbagliato,1,Tiro in sospensione,,,81,37,1,A,4,False,0,
+25408,467,3,08:47,73,42,38,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo offensivo,,,,,81,37,1,A,4,False,0,466
+25408,468,3,08:36,84,44,38,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,2 punti segnato,1,Tiro in sospensione,,,74,52,1,A,7,False,0,
+25408,469,3,08:10,110,44,40,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,2 punti segnato,7,Appoggio a canestro,,,9,55,0,A,3,True,0,
+25408,470,3,08:10,110,44,40,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,9,55,0,A,3,False,0,469
+25408,471,3,07:56,124,46,40,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti segnato,7,Appoggio a canestro,,,89,53,1,A,6,True,0,
+25408,472,3,07:56,124,46,40,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Assist,,,,,89,53,1,A,6,False,0,471
+25408,473,3,07:54,126,46,40,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo commesso,100,personale,,,31,71,1,D,9,False,0,
+25408,474,3,07:54,126,46,40,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo Subito,,,,,31,71,1,D,9,False,0,473
+25408,475,3,07:44,136,46,40,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,10,47,0,A,6,False,0,
+25408,476,3,07:44,136,46,40,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Stoppata,,,,,10,47,0,A,6,False,0,475
+25408,477,3,07:44,136,46,40,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Stoppata subita,,,,,10,47,0,A,6,False,0,475
+25408,478,3,07:44,136,46,40,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo difensivo,,,,,10,47,0,A,6,False,0,475
+25408,479,3,07:34,146,49,40,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti segnato,1,Tiro in sospensione,,,74,16,1,A,10,False,0,
+25408,480,3,07:16,164,49,40,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,2 punti sbagliato,7,Appoggio a canestro,,,12,45,0,A,6,False,0,
+25408,481,3,07:16,164,49,40,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo difensivo,,,,,12,45,0,A,6,False,0,480
+25408,482,3,07:05,175,49,40,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti sbagliato,1,Tiro in sospensione,,,69,80,1,A,8,False,0,
+25408,483,3,07:05,175,49,40,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo offensivo,,,,,69,80,1,A,8,False,0,482
+25408,484,3,06:56,184,52,40,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,3 punti segnato,1,Tiro in sospensione,,,81,93,1,A,8,False,0,
+25408,485,3,06:56,184,52,40,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Assist,,,,,81,93,1,A,8,False,0,484
+25408,486,3,06:46,194,52,40,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Ingresso,,,,,,,,,,False,0,
+25408,487,3,06:46,194,52,40,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Uscita,,,,,,,,,,False,0,486
+25408,488,3,06:46,194,52,40,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,486
+25408,489,3,06:46,194,52,40,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Ingresso,,,,,,,,,,False,0,486
+25408,490,3,06:42,198,52,43,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti segnato,1,Tiro in sospensione,,,21,10,0,A,8,False,0,
+25408,491,3,06:42,198,52,43,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,21,10,0,A,8,False,0,490
+25408,492,3,06:19,221,52,43,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Fallo commesso,100,personale,,,88,55,0,D,6,False,0,
+25408,493,3,06:19,221,52,43,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Fallo Subito,,,,,88,55,0,D,6,False,0,492
+25408,494,3,06:14,226,52,43,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti sbagliato,1,Tiro in sospensione,,,81,71,1,A,2,False,0,
+25408,495,3,06:14,226,52,43,1769,Tezenis Verona,0,,,,,Rimbalzi difensivi di squadra,,,,,81,71,1,A,2,False,0,494
+25408,496,3,06:14,226,52,43,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Fallo commesso,100,personale,,,87,54,1,A,6,False,0,
+25408,497,3,06:14,226,52,43,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo Subito,,,,,87,54,1,A,6,False,0,496
+25408,498,3,06:14,226,52,43,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,
+25408,499,3,06:14,226,52,43,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Ingresso,,,,,,,,,,False,0,498
+25408,500,3,05:58,242,52,43,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,9,52,0,A,3,False,0,
+25408,501,3,05:58,242,52,43,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Stoppata,,,,,9,52,0,A,3,False,0,500
+25408,502,3,05:58,242,52,43,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Stoppata subita,,,,,9,52,0,A,3,False,0,500
+25408,503,3,05:58,242,52,43,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo offensivo,,,,,9,52,0,A,3,False,0,500
+25408,504,3,05:51,249,52,43,1769,Tezenis Verona,0,,,,,Palle perse di squadra,602,24 Secondi,,,23,67,0,A,7,False,0,
+25408,505,3,05:38,262,55,43,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,3 punti segnato,1,Tiro in sospensione,,,69,70,1,A,9,False,0,
+25408,506,3,05:38,262,55,43,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Assist,,,,,69,70,1,A,9,False,0,505
+25408,507,3,05:27,273,55,46,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti segnato,1,Tiro in sospensione,,,27,78,0,A,10,False,0,
+25408,508,3,05:27,273,55,46,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Assist,,,,,27,78,0,A,10,False,0,507
+25408,509,3,05:09,291,57,46,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti segnato,7,Appoggio a canestro,,,94,49,1,A,3,True,0,
+25408,510,3,04:55,305,57,46,1769,Tezenis Verona,0,9349,10,Mike,Tobey,3 punti sbagliato,1,Tiro in sospensione,,,32,37,0,A,9,False,0,
+25408,511,3,04:55,305,57,46,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Rimbalzo offensivo,,,,,32,37,0,A,9,False,0,510
+25408,512,3,04:49,311,57,48,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti segnato,7,Appoggio a canestro,,,16,56,0,A,6,True,0,
+25408,513,3,04:49,311,57,48,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,16,56,0,A,6,False,0,512
+25408,514,3,04:32,328,57,48,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti sbagliato,1,Tiro in sospensione,,,78,57,1,A,7,False,0,
+25408,515,3,04:32,328,57,48,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,78,57,1,A,7,False,0,514
+25408,516,3,04:23,337,57,48,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Fallo commesso,103,tiro,,,8,53,1,D,3,False,0,
+25408,517,3,04:23,337,57,48,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Fallo Subito,,,,,8,53,1,D,3,False,0,516
+25408,518,3,04:23,337,57,48,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Ingresso,,,,,,,,,,False,0,
+25408,519,3,04:23,337,57,48,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Uscita,,,,,,,,,,False,0,518
+25408,520,3,04:23,337,57,48,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Ingresso,,,,,,,,,,False,0,518
+25408,521,3,04:23,337,57,48,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Uscita,,,,,,,,,,False,0,518
+25408,522,3,04:23,337,57,49,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,523,3,04:23,337,57,50,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Tiro libero segnato,,,,,,,,A,7,False,0,522
+25408,524,3,04:23,337,57,50,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Uscita,,,,,,,,,,False,0,
+25408,525,3,04:23,337,57,50,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Ingresso,,,,,,,,,,False,0,524
+25408,526,3,04:17,343,57,50,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Fallo commesso,106,offensivo,,,70,75,1,A,8,False,0,
+25408,527,3,04:17,343,57,50,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Palla persa,,,,,70,75,1,A,8,False,0,526
+25408,528,3,04:17,343,57,50,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Fallo Subito,,,,,70,75,1,A,8,False,0,526
+25408,529,3,04:17,343,57,50,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Ingresso,,,,,,,,,,False,0,
+25408,530,3,04:17,343,57,50,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Uscita,,,,,,,,,,False,0,529
+25408,531,3,04:01,359,57,53,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti segnato,1,Tiro in sospensione,,,29,25,0,A,8,False,0,
+25408,532,3,04:01,359,57,53,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,29,25,0,A,8,False,0,531
+25408,533,3,03:46,374,59,53,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti segnato,1,Tiro in sospensione,,,79,43,1,A,7,False,0,
+25408,534,3,03:30,390,59,53,1769,Tezenis Verona,0,7412,18,Federico,Zampini,2 punti sbagliato,1,Tiro in sospensione,,,23,38,0,A,7,False,0,
+25408,535,3,03:30,390,59,53,1769,Tezenis Verona,0,,,,,Rimbalzi offensivi di squadra,,,,,23,38,0,A,7,False,0,534
+25408,536,3,03:26,394,59,53,1769,Tezenis Verona,0,7411,3,Federico,Poser,Ingresso,,,,,,,,,,False,0,
+25408,537,3,03:26,394,59,53,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Uscita,,,,,,,,,,False,0,536
+25408,538,3,03:12,408,59,53,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti sbagliato,5,Tiro in Step Back,,,30,23,0,A,8,False,0,
+25408,539,3,03:12,408,59,53,1769,Tezenis Verona,0,7411,3,Federico,Poser,Rimbalzo offensivo,,,,,30,23,0,A,8,False,0,538
+25408,540,3,03:06,414,59,53,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo commesso,100,personale,,,29,67,1,D,9,False,0,
+25408,541,3,03:06,414,59,53,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo Subito,,,,,29,67,1,D,9,False,0,540
+25408,542,3,03:06,414,59,54,1769,Tezenis Verona,0,7411,3,Federico,Poser,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,543,3,03:06,414,59,55,1769,Tezenis Verona,0,7411,3,Federico,Poser,Tiro libero segnato,,,,,,,,A,7,False,0,542
+25408,544,3,02:55,425,59,55,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti sbagliato,1,Tiro in sospensione,,,84,51,1,A,6,False,0,
+25408,545,3,02:55,425,59,55,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Rimbalzo difensivo,,,,,84,51,1,A,6,False,0,544
+25408,546,3,02:49,431,59,55,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Fallo commesso,106,offensivo,,,19,50,0,A,6,False,0,
+25408,547,3,02:49,431,59,55,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Palla persa,,,,,19,50,0,A,6,False,0,546
+25408,548,3,02:49,431,59,55,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Fallo Subito,,,,,19,50,0,A,6,False,0,546
+25408,549,3,02:35,445,59,55,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,3 punti sbagliato,1,Tiro in sospensione,,,67,38,1,A,9,False,0,
+25408,550,3,02:35,445,59,55,1750,Virtus Costa Bologna,1,,,,,Rimbalzi offensivi di squadra,,,,,67,38,1,A,9,False,0,549
+25408,551,3,02:34,446,59,55,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo commesso,100,personale,,,86,51,0,D,6,False,0,
+25408,552,3,02:34,446,59,55,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Fallo Subito,,,,,86,51,0,D,6,False,0,551
+25408,553,3,02:24,456,59,55,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo commesso,103,tiro,,,90,61,0,D,6,False,0,
+25408,554,3,02:24,456,59,55,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo Subito,,,,,90,61,0,D,6,False,0,553
+25408,555,3,02:24,456,60,55,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,556,3,02:24,456,61,55,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Tiro libero segnato,,,,,,,,A,7,False,0,555
+25408,557,3,02:24,456,61,55,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Assist,,,,,,,,,,False,0,555
+25408,558,3,02:24,456,61,55,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Ingresso,,,,,,,,,,False,0,
+25408,559,3,02:24,456,61,55,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Uscita,,,,,,,,,,False,0,558
+25408,560,3,02:08,472,61,55,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti sbagliato,1,Tiro in sospensione,,,28,25,0,A,8,False,0,
+25408,561,3,02:08,472,61,55,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Rimbalzo difensivo,,,,,28,25,0,A,8,False,0,560
+25408,562,3,01:48,492,63,55,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,2 punti segnato,9,Schiacciata,,,90,41,1,A,6,True,1,
+25408,563,3,01:48,492,63,55,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Assist,,,,,90,41,1,A,6,False,0,562
+25408,564,3,01:33,507,63,57,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti segnato,10,Alley-oop,,,11,64,0,A,4,True,0,
+25408,565,3,01:33,507,63,57,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Assist,,,,,11,64,0,A,4,False,0,564
+25408,566,3,01:27,513,65,57,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,2 punti segnato,7,Appoggio a canestro,500,contropiede,94,53,1,A,3,True,0,
+25408,567,3,01:27,513,65,57,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Assist,,,500,contropiede,94,53,1,A,3,False,0,566
+25408,568,3,01:27,513,65,57,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Fallo commesso,103,tiro,500,contropiede,94,53,0,D,3,False,0,
+25408,569,3,01:27,513,65,57,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Fallo Subito,,,500,contropiede,94,53,0,D,3,False,0,568
+25408,570,3,01:27,513,65,57,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Ingresso,,,,,,,,,,False,0,
+25408,571,3,01:27,513,65,57,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Uscita,,,,,,,,,,False,0,570
+25408,572,3,01:27,513,66,57,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,573,3,01:03,537,66,60,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti segnato,1,Tiro in sospensione,,,33,39,0,A,9,False,0,
+25408,574,3,01:03,537,66,60,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,33,39,0,A,9,False,0,573
+25408,575,3,00:40,560,68,60,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti segnato,1,Tiro in sospensione,,,80,48,1,A,6,True,0,
+25408,576,3,00:28,572,68,63,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti segnato,1,Tiro in sospensione,,,25,18,0,A,8,False,0,
+25408,577,3,00:28,572,68,63,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,25,18,0,A,8,False,0,576
+25408,578,3,00:02,598,68,63,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,2 punti sbagliato,9,Schiacciata,,,90,46,1,A,6,False,0,
+25408,579,3,00:02,598,68,63,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,90,46,1,A,6,False,0,578
+25408,580,3,00:01,599,68,63,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,32,56,0,A,9,False,0,
+25408,581,3,00:00,600,68,63,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25408,582,4,10:00,0,68,63,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Ingresso,,,,,,,,,,False,0,
+25408,583,4,10:00,0,68,63,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Uscita,,,,,,,,,,False,0,582
+25408,584,4,10:00,0,68,63,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Ingresso,,,,,,,,,,False,0,582
+25408,585,4,10:00,0,68,63,1750,Virtus Costa Bologna,1,7132,24,Francesco,Ferrari,Uscita,,,,,,,,,,False,0,582
+25408,586,4,10:00,0,68,63,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25408,587,4,09:49,11,70,63,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,2 punti segnato,9,Schiacciata,,,91,46,1,A,3,True,1,
+25408,588,4,09:49,11,70,63,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Assist,,,,,91,46,1,A,3,False,0,587
+25408,589,4,09:28,32,70,63,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti sbagliato,1,Tiro in sospensione,,,33,53,0,A,9,False,0,
+25408,590,4,09:28,32,70,63,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Rimbalzo difensivo,,,,,33,53,0,A,9,False,0,589
+25408,591,4,09:13,47,70,63,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo commesso,100,personale,,,90,47,0,D,6,False,0,
+25408,592,4,09:13,47,70,63,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Fallo Subito,,,,,90,47,0,D,6,False,0,591
+25408,593,4,09:13,47,70,63,1769,Tezenis Verona,0,7411,3,Federico,Poser,Uscita,,,,,,,,,,False,0,
+25408,594,4,09:13,47,70,63,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Ingresso,,,,,,,,,,False,0,593
+25408,595,4,09:13,47,70,63,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Uscita,,,,,,,,,,False,0,
+25408,596,4,09:13,47,70,63,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Ingresso,,,,,,,,,,False,0,595
+25408,597,4,09:04,56,72,63,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti segnato,1,Tiro in sospensione,,,78,41,1,A,7,False,0,
+25408,598,4,08:40,80,72,63,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Palla persa,50,Passaggio sbagliato,,,17,45,0,A,6,False,0,
+25408,599,4,08:40,80,72,63,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Palla recuperata,,,,,17,45,0,A,6,False,0,598
+25408,600,4,08:31,89,75,63,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,3 punti segnato,1,Tiro in sospensione,,,73,14,1,A,10,False,0,
+25408,601,4,08:31,89,75,63,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Assist,,,,,73,14,1,A,10,False,0,600
+25408,602,4,08:30,90,75,63,1769,Tezenis Verona,0,,,,,Time Out,,,,,,,0,,,False,0,
+25408,603,4,08:12,108,75,63,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Fallo commesso,100,personale,,,23,52,1,D,7,False,0,
+25408,604,4,08:12,108,75,63,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Fallo Subito,,,,,23,52,1,D,7,False,0,603
+25408,605,4,08:12,108,75,63,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Uscita,,,,,,,,,,False,0,
+25408,606,4,08:12,108,75,63,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Ingresso,,,,,,,,,,False,0,605
+25408,607,4,08:12,108,75,63,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Ingresso,,,,,,,,,,False,0,
+25408,608,4,08:12,108,75,63,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Uscita,,,,,,,,,,False,0,607
+25408,609,4,08:02,118,75,65,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti segnato,7,Appoggio a canestro,,,10,50,0,A,6,True,0,
+25408,610,4,08:02,118,75,65,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,10,50,0,A,6,False,0,609
+25408,611,4,07:46,134,75,65,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti sbagliato,7,Appoggio a canestro,,,88,48,1,A,6,False,0,
+25408,612,4,07:46,134,75,65,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,88,48,1,A,6,False,0,611
+25408,613,4,07:38,142,75,67,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti segnato,10,Alley-oop,,,7,56,0,A,3,True,0,
+25408,614,4,07:38,142,75,67,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,7,56,0,A,3,False,0,613
+25408,615,4,07:25,155,75,67,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,95,43,1,A,3,False,0,
+25408,616,4,07:25,155,75,67,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Stoppata,,,,,95,43,1,A,3,False,0,615
+25408,617,4,07:25,155,75,67,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Stoppata subita,,,,,95,43,1,A,3,False,0,615
+25408,618,4,07:25,155,75,67,1750,Virtus Costa Bologna,1,,,,,Rimbalzi offensivi di squadra,,,,,95,43,1,A,3,False,0,615
+25408,619,4,07:25,155,75,67,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Uscita,,,,,,,,,,False,0,
+25408,620,4,07:25,155,75,67,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Ingresso,,,,,,,,,,False,0,619
+25408,621,4,07:17,163,77,67,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,1,Tiro in sospensione,,,82,63,1,A,2,True,0,
+25408,622,4,07:04,176,77,67,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Palla persa,50,Passaggio sbagliato,,,16,43,0,A,6,False,0,
+25408,624,4,07:04,176,77,67,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Palla recuperata,,,,,16,43,1,D,6,False,0,622
+25408,625,4,06:56,184,79,67,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,2 punti segnato,1,Tiro in sospensione,,,82,75,1,A,2,False,0,
+25408,626,4,06:56,184,79,67,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Assist,,,,,82,75,1,A,2,False,0,625
+25408,627,4,06:40,200,79,67,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Palla persa,50,Passaggio sbagliato,,,35,84,0,A,10,False,0,
+25408,628,4,06:40,200,79,67,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Palla recuperata,,,,,35,84,0,A,10,False,0,627
+25408,629,4,06:35,205,81,67,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,2 punti segnato,7,Appoggio a canestro,500,contropiede,91,59,1,A,3,True,0,
+25408,630,4,06:35,205,81,67,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Assist,,,500,contropiede,91,59,1,A,3,False,0,629
+25408,631,4,06:35,205,81,67,1769,Tezenis Verona,0,,,,,Time Out,,,,,,,0,,,False,0,
+25408,632,4,06:35,205,81,67,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Ingresso,,,,,,,,,,False,0,
+25408,633,4,06:35,205,81,67,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Uscita,,,,,,,,,,False,0,632
+25408,634,4,06:33,207,81,67,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Fallo commesso,100,personale,,,15,37,1,D,2,False,0,
+25408,635,4,06:33,207,81,67,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo Subito,,,,,15,37,1,D,2,False,0,634
+25408,636,4,06:11,229,81,67,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti sbagliato,1,Tiro in sospensione,,,16,43,0,A,6,False,0,
+25408,637,4,06:11,229,81,67,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo difensivo,,,,,16,43,0,A,6,False,0,636
+25408,638,4,05:48,252,81,67,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,3 punti sbagliato,1,Tiro in sospensione,,,71,80,1,A,8,False,0,
+25408,639,4,05:48,252,81,67,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Rimbalzo difensivo,,,,,71,80,1,A,8,False,0,638
+25408,640,4,05:36,264,81,67,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti sbagliato,1,Tiro in sospensione,,,30,79,0,A,10,False,0,
+25408,641,4,05:36,264,81,67,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo difensivo,,,,,30,79,0,A,10,False,0,640
+25408,642,4,05:31,269,81,67,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo commesso,123,tattico,,,42,15,0,A,8,False,0,
+25408,643,4,05:31,269,81,67,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo Subito,,,,,42,15,0,A,8,False,0,642
+25408,644,4,05:31,269,81,67,1750,Virtus Costa Bologna,1,9371,9,Kessler,Edwards,Uscita,,,,,,,,,,False,0,
+25408,645,4,05:31,269,81,67,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Ingresso,,,,,,,,,,False,0,644
+25408,646,4,05:31,269,81,67,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Uscita,,,,,,,,,,False,0,644
+25408,647,4,05:31,269,81,67,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,644
+25408,648,4,05:31,269,81,67,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Ingresso,,,,,,,,,,False,0,644
+25408,649,4,05:31,269,81,67,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Ingresso,,,,,,,,,,False,0,644
+25408,650,4,05:31,269,81,67,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25408,651,4,05:31,269,82,67,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Tiro libero segnato,,,,,,,,A,7,False,0,650
+25408,652,4,05:23,277,82,67,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,3 punti sbagliato,1,Tiro in sospensione,,,67,67,1,A,9,False,0,
+25408,653,4,05:23,277,82,67,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,67,67,1,A,9,False,0,652
+25408,654,4,05:16,284,82,69,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti segnato,8,Da penetrazione,,,12,50,0,A,6,True,0,
+25408,655,4,05:16,284,82,69,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Fallo commesso,103,tiro,,,12,50,1,D,6,False,0,
+25408,656,4,05:16,284,82,69,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,12,50,1,D,6,False,0,655
+25408,657,4,05:16,284,82,70,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,658,4,05:01,299,85,70,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,3 punti segnato,1,Tiro in sospensione,,,72,27,1,A,9,False,0,
+25408,659,4,04:41,319,85,73,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti segnato,1,Tiro in sospensione,,,30,32,0,A,9,False,0,
+25408,660,4,04:41,319,85,73,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,30,32,0,A,9,False,0,659
+25408,661,4,04:32,328,85,73,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,3 punti sbagliato,1,Tiro in sospensione,,,78,11,1,A,10,False,0,
+25408,662,4,04:32,328,85,73,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Rimbalzo offensivo,,,,,78,11,1,A,10,False,0,661
+25408,663,4,04:23,337,88,73,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,3 punti segnato,1,Tiro in sospensione,,,81,7,1,A,10,False,0,
+25408,664,4,04:23,337,88,73,1750,Virtus Costa Bologna,1,9372,34,Bo,Klintman,Assist,,,,,81,7,1,A,10,False,0,663
+25408,665,4,04:02,358,88,73,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti sbagliato,1,Tiro in sospensione,,,31,29,0,A,9,False,0,
+25408,666,4,04:02,358,88,73,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Rimbalzo difensivo,,,,,31,29,0,A,9,False,0,665
+25408,667,4,03:53,367,88,73,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,3 punti sbagliato,1,Tiro in sospensione,,,70,22,1,A,10,False,0,
+25408,668,4,03:53,367,88,73,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,70,22,1,A,10,False,0,667
+25408,669,4,03:50,370,88,73,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Fallo commesso,100,personale,,,37,37,1,D,9,False,0,
+25408,670,4,03:50,370,88,73,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo Subito,,,,,37,37,1,D,9,False,0,669
+25408,671,4,03:50,370,88,73,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Ingresso,,,,,,,,,,False,0,
+25408,672,4,03:50,370,88,73,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Uscita,,,,,,,,,,False,0,671
+25408,673,4,03:41,379,88,76,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti segnato,1,Tiro in sospensione,,,32,32,0,A,9,False,0,
+25408,674,4,03:21,399,90,76,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,2 punti segnato,7,Appoggio a canestro,,,93,53,1,A,3,True,0,
+25408,675,4,02:57,423,90,76,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Ingresso,,,,,,,,,,False,0,
+25408,676,4,02:57,423,90,76,1750,Virtus Costa Bologna,1,1051,7,Davide,Casarin,Uscita,,,,,,,,,,False,0,675
+25408,677,4,02:42,438,90,76,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti sbagliato,1,Tiro in sospensione,,,29,78,0,A,10,False,0,
+25408,678,4,02:42,438,90,76,1769,Tezenis Verona,0,,,,,Rimbalzi offensivi di squadra,,,,,29,78,0,A,10,False,0,677
+25408,679,4,02:39,441,90,76,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Fallo commesso,100,personale,,,15,64,1,D,4,False,0,
+25408,680,4,02:39,441,90,76,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Fallo Subito,,,,,15,64,1,D,4,False,0,679
+25408,681,4,02:39,441,90,76,1750,Virtus Costa Bologna,1,9370,8,Wendell,Moore,Uscita,,,,,,,,,,False,0,
+25408,682,4,02:39,441,90,76,1750,Virtus Costa Bologna,1,2608,23,Daniel,Hackett,Ingresso,,,,,,,,,,False,0,681
+25408,683,4,02:39,441,90,76,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25408,684,4,02:39,441,90,77,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Tiro libero segnato,,,,,,,,A,7,False,0,683
+25408,685,4,02:39,441,90,77,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Uscita,,,,,,,,,,False,0,
+25408,686,4,02:39,441,90,77,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Ingresso,,,,,,,,,,False,0,685
+25408,687,4,02:17,463,90,77,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,3 punti sbagliato,1,Tiro in sospensione,,,72,81,1,A,8,False,0,
+25408,688,4,02:17,463,90,77,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Rimbalzo difensivo,,,,,72,81,1,A,8,False,0,687
+25408,689,4,02:10,470,90,77,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Ingresso,,,,,,,,,,False,0,
+25408,690,4,02:10,470,90,77,1750,Virtus Costa Bologna,1,1774,35,Mouhamet Rassoul,Diouf,Uscita,,,,,,,,,,False,0,689
+25408,691,4,02:07,473,90,77,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti sbagliato,1,Tiro in sospensione,,,29,16,0,A,8,False,0,
+25408,692,4,02:07,473,90,77,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Rimbalzo difensivo,,,,,29,16,0,A,8,False,0,691
+25408,693,4,01:40,500,92,77,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,2 punti segnato,7,Appoggio a canestro,,,90,51,1,A,6,True,0,
+25408,694,4,01:17,523,92,79,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti segnato,7,Appoggio a canestro,,,11,57,0,A,6,True,0,
+25408,695,4,00:56,544,92,79,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo commesso,103,tiro,,,92,55,0,D,3,False,0,
+25408,696,4,00:56,544,92,79,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Fallo Subito,,,,,92,55,0,D,3,False,0,695
+25408,697,4,00:56,544,93,79,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Tiro libero segnato,,,,,,,,A,7,False,0,
+25408,698,4,00:56,544,93,79,1750,Virtus Costa Bologna,1,9043,31,Aliou,Diarra,Tiro libero sbagliato,,,,,,,,A,7,False,0,697
+25408,699,4,00:56,544,93,79,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Assist,,,,,,,,,,False,0,697
+25408,700,4,00:56,544,93,79,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,,,,,,False,0,697
+25408,701,4,00:48,552,93,79,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Palla persa,53,Passi,,,33,77,0,A,10,False,0,
+25408,702,4,00:48,552,93,79,1750,Virtus Costa Bologna,1,9367,1,Trent,Frazier,Uscita,,,,,,,,,,False,0,
+25408,703,4,00:48,552,93,79,1750,Virtus Costa Bologna,1,6797,13,Matteo,Baiocchi,Ingresso,,,,,,,,,,False,0,702
+25408,704,4,00:23,577,95,79,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti segnato,1,Tiro in sospensione,,,92,61,1,A,3,True,0,
+25408,705,4,00:14,586,95,81,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti segnato,8,Da penetrazione,,,11,49,0,A,6,True,0,
+25408,706,4,00:01,599,95,81,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,85,53,1,A,6,False,0,
+25408,707,4,00:01,599,95,81,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Stoppata,,,,,85,53,1,A,6,False,0,706
+25408,708,4,00:01,599,95,81,1750,Virtus Costa Bologna,1,9368,2,Marcus,Carr,Stoppata subita,,,,,85,53,1,A,6,False,0,706
+25408,709,4,00:01,599,95,81,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,85,53,1,A,6,False,0,706
+25408,710,4,00:01,599,95,81,1769,Tezenis Verona,0,9340,22,RJ,Melendez,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,56,79,0,D,8,False,0,
+25408,711,4,00:00,600,95,81,,,,,,,,Fine Tempo,,,,,,,,,,False,0,

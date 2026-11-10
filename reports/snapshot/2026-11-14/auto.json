@@ -12,7 +12,7 @@
   "venue": "Palazzetto dello Sport",
   "played": false,
   "version": 8,
-  "n_before": 68,
+  "n_before": 69,
   "opponent_analysis": "matchup_BC_Roma_vs_Tezenis_Verona_before_2026-11-14",
   "record": "2-5",
   "position": 12,
@@ -688,7 +688,7 @@
     "teams": null
   },
   "md": {
-    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Napoli | 12 | 6-1 | +50 | WWWLWWW |\n| 2 | Virtus Bologna | 10 | 5-1 | +59 | WWWWWL |\n| 3 | Milano | 10 | 5-2 | +57 | WLWWLWW |\n| 4 | Maxima Roma | 10 | 5-2 | +31 | LLWWWWW |\n| 5 | Treviso | 10 | 5-2 | +15 | WWLWWWL |\n| 6 | Udine | 8 | 4-3 | +7 | WWLLLWW |\n| 7 | Venezia | 8 | 4-3 | -5 | WWLWLLW |\n| 8 | Varese | 8 | 4-3 | +1 | LWWLWWL |\n| 9 | Trieste | 8 | 4-3 | +42 | LLLWWWW |\n| 10 | **Verona** | 6 | 3-3 | -5 | LWWWLL |\n| 11 | Trento | 6 | 3-4 | -22 | WLWWLLL |\n| 12 | **BC Roma** | 4 | 2-5 | +6 | LWLLLWL |\n| 13 | Reggio Emilia | 4 | 2-5 | -14 | LLWLWLL |\n| 14 | Tortona | 4 | 2-5 | -51 | WLLLLLW |\n| 15 | Scafati | 2 | 1-6 | -73 | LLLLWLL |\n| 16 | Cantù | 0 | 0-7 | -98 | LLLLLLL |",
+    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Virtus Bologna | 12 | 6-1 | +73 | WWWWWLW |\n| 2 | Napoli | 12 | 6-1 | +50 | WWWLWWW |\n| 3 | Milano | 10 | 5-2 | +57 | WLWWLWW |\n| 4 | Maxima Roma | 10 | 5-2 | +31 | LLWWWWW |\n| 5 | Treviso | 10 | 5-2 | +15 | WWLWWWL |\n| 6 | Udine | 8 | 4-3 | +7 | WWLLLWW |\n| 7 | Venezia | 8 | 4-3 | -5 | WWLWLLW |\n| 8 | Varese | 8 | 4-3 | +1 | LWWLWWL |\n| 9 | Trieste | 8 | 4-3 | +42 | LLLWWWW |\n| 10 | **Verona** | 6 | 3-4 | -19 | LWWWLLL |\n| 11 | Trento | 6 | 3-4 | -22 | WLWWLLL |\n| 12 | **BC Roma** | 4 | 2-5 | +6 | LWLLLWL |\n| 13 | Reggio Emilia | 4 | 2-5 | -14 | LLWLWLL |\n| 14 | Tortona | 4 | 2-5 | -51 | WLLLLLW |\n| 15 | Scafati | 2 | 1-6 | -73 | LLLLWLL |\n| 16 | Cantù | 0 | 0-7 | -98 | LLLLLLL |",
     "last_results": "- 10-24 · round 5: **L** 103-110 at Varese\n- 10-27 · EuroCup: **L** 80-85 vs Bosna Bh Telecom Sarajevo\n- 10-31 · round 6: **W** 103-90 vs Scafati\n- 11-03 · EuroCup: **L** 111-113 at Paok Thessaloniki\n- 11-08 · round 7: **L** 100-116 at Trieste"
   }
 }
