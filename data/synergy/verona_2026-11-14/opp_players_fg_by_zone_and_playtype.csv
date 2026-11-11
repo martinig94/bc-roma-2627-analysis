@@ -1,0 +1,108 @@
+player,dimension,category,fgm,fga
+Ambrosin,play_type,Spot Up,6,21
+Ambrosin,play_type,Transition,2,4
+Ambrosin,play_type,Off Screen,1,5
+Ambrosin,play_type,P&R Ball Handler,1,3
+Ambrosin,play_type,Cut,1,3
+Ambrosin,play_type,Other,0,1
+Ambrosin,play_type,Offensive Rebounds (Put Backs),1,1
+Ambrosin,shot_location,Paint,5,8
+Ambrosin,shot_location,Wing 3,2,13
+Ambrosin,shot_location,Mid-range,0,4
+Ambrosin,shot_location,Corner 3,1,3
+Ambrosin,shot_location,Top 3,4,10
+Andrews,play_type,P&R Ball Handler,6,22
+Andrews,play_type,Spot Up,6,16
+Andrews,play_type,Transition,1,7
+Andrews,play_type,Isolation,1,4
+Andrews,play_type,Other,1,1
+Andrews,play_type,Off Screen,0,2
+Andrews,play_type,Offensive Rebounds (Put Backs),1,1
+Andrews,shot_location,Paint,6,13
+Andrews,shot_location,Corner 3,2,6
+Andrews,shot_location,Top 3,2,11
+Andrews,shot_location,Mid-range,4,12
+Andrews,shot_location,Wing 3,2,11
+Barbitch,play_type,Spot Up,0,5
+Barbitch,play_type,P&R Ball Handler,1,1
+Barbitch,play_type,Transition,1,1
+Barbitch,play_type,Cut,1,1
+Barbitch,shot_location,Mid-range,0,2
+Barbitch,shot_location,Paint,3,5
+Barbitch,shot_location,Wing 3,0,1
+Loro,play_type,Spot Up,10,34
+Loro,play_type,Transition,7,13
+Loro,play_type,Offensive Rebounds (Put Backs),3,6
+Loro,play_type,Cut,5,5
+Loro,play_type,Other,1,3
+Loro,play_type,Off Screen,1,3
+Loro,shot_location,Wing 3,10,25
+Loro,shot_location,Top 3,1,8
+Loro,shot_location,Corner 3,5,12
+Loro,shot_location,Paint,10,16
+Loro,shot_location,Mid-range,1,3
+Massinburg,play_type,P&R Ball Handler,5,15
+Massinburg,play_type,Spot Up,6,14
+Massinburg,play_type,Transition,3,6
+Massinburg,play_type,Other,0,2
+Massinburg,play_type,Isolation,1,3
+Massinburg,play_type,Off Screen,1,2
+Massinburg,play_type,Cut,2,2
+Massinburg,play_type,Offensive Rebounds (Put Backs),0,1
+Massinburg,shot_location,Paint,9,21
+Massinburg,shot_location,Wing 3,4,10
+Massinburg,shot_location,Top 3,3,10
+Massinburg,shot_location,Corner 3,0,2
+Massinburg,shot_location,Mid-range,2,2
+Melendez,play_type,Spot Up,5,15
+Melendez,play_type,Transition,5,7
+Melendez,play_type,Cut,7,8
+Melendez,play_type,Offensive Rebounds (Put Backs),4,5
+Melendez,play_type,Other,2,5
+Melendez,play_type,P&R Ball Handler,1,1
+Melendez,play_type,P&R Roll Man,2,2
+Melendez,play_type,Isolation,1,1
+Melendez,shot_location,Top 3,1,3
+Melendez,shot_location,Paint,24,31
+Melendez,shot_location,Wing 3,2,5
+Melendez,shot_location,Corner 3,0,3
+Melendez,shot_location,Mid-range,0,2
+Poser,play_type,P&R Roll Man,5,9
+Poser,play_type,Spot Up,0,2
+Poser,play_type,Cut,2,4
+Poser,play_type,Offensive Rebounds (Put Backs),2,3
+Poser,play_type,Other,1,2
+Poser,shot_location,Paint,7,15
+Poser,shot_location,Mid-range,3,5
+Samuels,play_type,Spot Up,10,36
+Samuels,play_type,Transition,6,9
+Samuels,play_type,Other,5,11
+Samuels,play_type,P&R Roll Man,4,8
+Samuels,play_type,Cut,6,8
+Samuels,play_type,Isolation,2,3
+Samuels,shot_location,Wing 3,4,16
+Samuels,shot_location,Paint,26,48
+Samuels,shot_location,Mid-range,0,3
+Samuels,shot_location,Corner 3,1,4
+Samuels,shot_location,Top 3,2,4
+Tobey,play_type,P&R Roll Man,18,22
+Tobey,play_type,Cut,11,13
+Tobey,play_type,Offensive Rebounds (Put Backs),11,12
+Tobey,play_type,Spot Up,2,9
+Tobey,play_type,Other,3,6
+Tobey,play_type,Transition,2,5
+Tobey,play_type,Off Screen,1,1
+Tobey,shot_location,Paint,41,45
+Tobey,shot_location,Wing 3,2,10
+Tobey,shot_location,Top 3,3,9
+Tobey,shot_location,Mid-range,2,4
+Zampini,play_type,P&R Ball Handler,11,21
+Zampini,play_type,Transition,5,7
+Zampini,play_type,Spot Up,5,12
+Zampini,play_type,Isolation,1,11
+Zampini,play_type,Other,1,3
+Zampini,shot_location,Wing 3,7,18
+Zampini,shot_location,Top 3,1,5
+Zampini,shot_location,Mid-range,2,8
+Zampini,shot_location,Paint,11,19
+Zampini,shot_location,Corner 3,2,4

@@ -1,0 +1,73 @@
+player,play_type,shot_type,fga,fgm
+Ambrosin,Spot Up,"Guarded, 3PT",9,3
+Ambrosin,Spot Up,"Open, 3PT",6,1
+Ambrosin,Spot Up,To basket,4,2
+Ambrosin,Spot Up,"Dribble jumper, 3PT",2,0
+Andrews,P&R Ball Handler,To basket,8,3
+Andrews,P&R Ball Handler,"Dribble jumper, 3PT",6,0
+Andrews,P&R Ball Handler,"Dribble jumper, short (<17 ft)",5,1
+Andrews,P&R Ball Handler,"Dribble jumper, mid-range",2,1
+Andrews,P&R Ball Handler,"Guarded, 3PT",1,1
+Andrews,Spot Up,"Guarded, 3PT",5,2
+Andrews,Spot Up,"Open, 3PT",4,2
+Andrews,Spot Up,"Dribble jumper, 3PT",3,0
+Andrews,Spot Up,To basket,2,0
+Andrews,Spot Up,"Dribble jumper, mid-range",1,1
+Andrews,Spot Up,"Dribble jumper, short (<17 ft)",1,1
+Loro,Spot Up,"Guarded, 3PT",15,5
+Loro,Spot Up,"Open, 3PT",11,3
+Loro,Spot Up,"Dribble jumper, 3PT",6,2
+Loro,Spot Up,To basket,2,0
+Loro,Transition,To basket,7,4
+Loro,Transition,"Dribble jumper, 3PT",4,1
+Loro,Transition,"Open, 3PT",1,1
+Loro,Transition,"Guarded, 3PT",1,1
+Massinburg,P&R Ball Handler,To basket,8,2
+Massinburg,P&R Ball Handler,"Dribble jumper, 3PT",6,2
+Massinburg,P&R Ball Handler,"Dribble jumper, short (<17 ft)",1,1
+Massinburg,Spot Up,"Guarded, 3PT",6,3
+Massinburg,Spot Up,"Open, 3PT",4,1
+Massinburg,Spot Up,"Dribble jumper, 3PT",2,1
+Massinburg,Spot Up,To basket,2,1
+Melendez,Cut,To basket,8,7
+Melendez,Spot Up,"Guarded, 3PT",5,2
+Melendez,Spot Up,To basket,4,2
+Melendez,Spot Up,"Open, 3PT",3,1
+Melendez,Spot Up,"Dribble jumper, 3PT",1,0
+Melendez,Spot Up,"Dribble jumper, mid-range",1,0
+Melendez,Spot Up,"Guarded, mid-range",1,0
+Poser,P&R Roll Man,To basket,9,5
+Samuels,Cut,To basket,7,5
+Samuels,Cut,Other,1,1
+Samuels,Other,To basket,8,4
+Samuels,Other,Other,1,0
+Samuels,Other,Hook,1,1
+Samuels,Other,"Dribble jumper, short (<17 ft)",1,0
+Samuels,P&R Roll Man,To basket,6,2
+Samuels,P&R Roll Man,"Guarded, 3PT",1,1
+Samuels,P&R Roll Man,"Open, 3PT",1,1
+Samuels,Spot Up,To basket,19,7
+Samuels,Spot Up,"Open, 3PT",10,2
+Samuels,Spot Up,"Guarded, 3PT",5,0
+Samuels,Spot Up,"Dribble jumper, 3PT",2,1
+Samuels,Transition,To basket,5,4
+Samuels,Transition,"Open, 3PT",4,2
+Tobey,Cut,To basket,12,10
+Tobey,Cut,Other,1,1
+Tobey,Offensive Rebounds (Put Backs),To basket,12,11
+Tobey,P&R Roll Man,To basket,17,17
+Tobey,P&R Roll Man,"Open, 3PT",3,0
+Tobey,P&R Roll Man,"Guarded, 3PT",2,1
+Tobey,Spot Up,"Guarded, 3PT",4,1
+Tobey,Spot Up,"Open, 3PT",4,1
+Tobey,Spot Up,"Dribble jumper, 3PT",1,0
+Zampini,Isolation,"Dribble jumper, 3PT",9,1
+Zampini,Isolation,"Dribble jumper, short (<17 ft)",2,0
+Zampini,P&R Ball Handler,To basket,11,7
+Zampini,P&R Ball Handler,"Dribble jumper, 3PT",5,3
+Zampini,P&R Ball Handler,"Dribble jumper, mid-range",4,1
+Zampini,P&R Ball Handler,"Dribble jumper, short (<17 ft)",1,0
+Zampini,Spot Up,"Open, 3PT",7,4
+Zampini,Spot Up,"Guarded, 3PT",2,0
+Zampini,Spot Up,To basket,2,0
+Zampini,Spot Up,"Open, mid-range",1,1
