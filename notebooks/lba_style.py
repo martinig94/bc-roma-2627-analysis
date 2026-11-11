@@ -127,6 +127,9 @@ def assign_zone_arr(x: np.ndarray, y: np.ndarray) -> np.ndarray:
     return z
 
 
+ROTATE_COURT = True   # shot charts drawn rotated by 180 degrees (basket at the top); text stays upright
+
+
 def draw_half_court(ax: Axes, color: str = COURT, lw: float = 1.4) -> None:
     """Draw a FIBA half court on ``ax``, basket at the origin, units cm (same frame as basketball_analytics).
 
@@ -150,6 +153,8 @@ def draw_half_court(ax: Axes, color: str = COURT, lw: float = 1.4) -> None:
                Arc((0, base + HALF_COURT_LENGTH), 360, 360, theta1=180, theta2=0, lw=lw, color=color)]:
         ax.add_patch(el)
     ax.set_xlim(-790, 790); ax.set_ylim(-200, 1290); ax.set_aspect("equal"); ax.axis("off")
+    if ROTATE_COURT:   # 180-degree rotation (both axes reversed): basket at the top, no mirroring
+        ax.invert_xaxis(); ax.invert_yaxis()
 
 
 COURT_X, COURT_Y = (-742, 742), (-150, 1235)   # inside the lines; shots are clipped to this box

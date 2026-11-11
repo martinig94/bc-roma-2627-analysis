@@ -1,0 +1,29 @@
+team,side,metric,value,gp
+Verona,offense,PPP,0.966,7
+Verona,offense,Possessions/game,91.3,7
+Verona,offense,eFG%,52.8,7
+Verona,offense,TO%,14.7,7
+Verona,offense,%FT,14.7,7
+Verona,offense,Score%,45.1,7
+Verona,offense,FG%,46.3,7
+Verona,defense,PPP,1.06,7
+Verona,defense,Possessions/game,85.4,7
+Verona,defense,eFG%,59.1,7
+Verona,defense,TO%,14.2,7
+Verona,defense,%FT,14.7,7
+Verona,defense,Score%,48.2,7
+Verona,defense,FG%,51.2,7
+BC Roma,offense,PPP,1.032,13
+BC Roma,offense,Possessions/game,90.5,13
+BC Roma,offense,eFG%,57.6,13
+BC Roma,offense,TO%,15.9,13
+BC Roma,offense,%FT,12.2,13
+BC Roma,offense,Score%,46.5,13
+BC Roma,offense,FG%,49.5,13
+BC Roma,defense,PPP,1.034,13
+BC Roma,defense,Possessions/game,92.3,13
+BC Roma,defense,eFG%,55.8,13
+BC Roma,defense,TO%,13.8,13
+BC Roma,defense,%FT,14.7,13
+BC Roma,defense,Score%,46.7,13
+BC Roma,defense,FG%,47.6,13

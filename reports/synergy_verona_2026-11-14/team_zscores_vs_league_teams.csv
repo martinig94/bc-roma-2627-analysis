@@ -1,0 +1,49 @@
+team,side,metric,value,league_mean,league_sd,z_better_is_higher,basis
+BC Roma,offense,PPP,1.032,0.98,0.068,0.759,all_games
+BC Roma,offense,eFG%,57.6,52.919,3.811,1.228,all_games
+BC Roma,offense,TO%,15.9,14.231,1.955,-0.854,all_games
+BC Roma,offense,%FT,12.2,13.869,1.8,-0.927,all_games
+BC Roma,offense,Score%,46.5,44.881,2.937,0.551,all_games
+BC Roma,offense,FG%,49.5,45.675,3.305,1.157,all_games
+Verona,offense,PPP,0.966,0.98,0.068,-0.205,all_games
+Verona,offense,eFG%,52.8,52.919,3.811,-0.031,all_games
+Verona,offense,TO%,14.7,14.231,1.955,-0.24,all_games
+Verona,offense,%FT,14.7,13.869,1.8,0.462,all_games
+Verona,offense,Score%,45.1,44.881,2.937,0.074,all_games
+Verona,offense,FG%,46.3,45.675,3.305,0.189,all_games
+BC Roma,defense,PPP,1.034,0.981,0.06,-0.885,all_games
+BC Roma,defense,eFG%,55.8,52.938,3.726,-0.768,all_games
+BC Roma,defense,TO%,13.8,14.212,1.976,-0.209,all_games
+BC Roma,defense,%FT,14.7,13.869,2.385,-0.349,all_games
+BC Roma,defense,Score%,46.7,44.938,2.334,-0.755,all_games
+BC Roma,defense,FG%,47.6,45.681,3.285,-0.584,all_games
+Verona,defense,PPP,1.06,0.981,0.06,-1.32,all_games
+Verona,defense,eFG%,59.1,52.938,3.726,-1.654,all_games
+Verona,defense,TO%,14.2,14.212,1.976,-0.006,all_games
+Verona,defense,%FT,14.7,13.869,2.385,-0.349,all_games
+Verona,defense,Score%,48.2,44.938,2.334,-1.398,all_games
+Verona,defense,FG%,51.2,45.681,3.285,-1.68,all_games
+BC Roma,offense,PPP,1.084,0.98,0.068,1.518,competition_only
+BC Roma,offense,eFG%,60.9,52.919,3.811,2.094,competition_only
+BC Roma,offense,TO%,14.6,14.231,1.955,-0.189,competition_only
+BC Roma,offense,%FT,10.6,13.869,1.8,-1.816,competition_only
+BC Roma,offense,Score%,48.6,44.881,2.937,1.266,competition_only
+BC Roma,offense,FG%,52.0,45.675,3.305,1.914,competition_only
+Verona,offense,PPP,0.966,0.98,0.068,-0.205,competition_only
+Verona,offense,eFG%,52.8,52.919,3.811,-0.031,competition_only
+Verona,offense,TO%,14.7,14.231,1.955,-0.24,competition_only
+Verona,offense,%FT,14.7,13.869,1.8,0.462,competition_only
+Verona,offense,Score%,45.1,44.881,2.937,0.074,competition_only
+Verona,offense,FG%,46.3,45.675,3.305,0.189,competition_only
+BC Roma,defense,PPP,1.068,0.981,0.06,-1.454,competition_only
+BC Roma,defense,eFG%,57.4,52.938,3.726,-1.198,competition_only
+BC Roma,defense,TO%,13.5,14.212,1.976,-0.36,competition_only
+BC Roma,defense,%FT,16.6,13.869,2.385,-1.145,competition_only
+BC Roma,defense,Score%,48.0,44.938,2.334,-1.312,competition_only
+BC Roma,defense,FG%,48.5,45.681,3.285,-0.858,competition_only
+Verona,defense,PPP,1.06,0.981,0.06,-1.32,competition_only
+Verona,defense,eFG%,59.1,52.938,3.726,-1.654,competition_only
+Verona,defense,TO%,14.2,14.212,1.976,-0.006,competition_only
+Verona,defense,%FT,14.7,13.869,2.385,-0.349,competition_only
+Verona,defense,Score%,48.2,44.938,2.334,-1.398,competition_only
+Verona,defense,FG%,51.2,45.681,3.285,-1.68,competition_only
