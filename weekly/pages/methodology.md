@@ -72,7 +72,7 @@ may differ slightly). An LBA table is never shown for a EuroCup game.
 
 ## Reading the shot-selection triangles and the play-type plots
 
-These three figures are on the *Individual tendencies* page of every analysis. The pictures below use invented numbers; they are drawn
+These figures are on the *Individual tendencies* page of every analysis. The pictures below use invented numbers; they are drawn
 by `notebooks/methodology_figures.py` with the same functions as the real figures.
 
 ### Shot-selection triangle
@@ -90,7 +90,9 @@ or more; a player needs three games with three attempts or more.
 
 One figure per player, from Synergy. Each bar is a play type (spot up, pick and roll, transition, ...), sorted by attempts: the pale bar
 is the attempts, the yellow bar the made field goals. The label gives made/attempted, FG% and the share of the player's attempts.
-Free throws are excluded; *Other* collects handoffs, post-ups and miscellaneous plays. The two play types with most attempts have a
+The label ends with the points per possession (PPP) of that play type: points divided by all its possessions, which end in a shot,
+a turnover or free throws, so it is not the same as the FG% of the bar (*Other* pools handoffs, post-ups and miscellaneous plays).
+Free throws are excluded from the bars; *Other* collects handoffs, post-ups and miscellaneous plays. The two play types with most attempts have a
 green outline and a green name: they are the ones detailed in plot 2.
 
 ![How to read plot 1 (invented data)](../assets/methodology/playtype_dummy.png)
@@ -106,6 +108,25 @@ play types with the green outline in plot 1. Each bar is a Synergy shot type (op
 
 Both plots rest on small samples (a handful of games) and on tables extracted by hand from Synergy: read them as descriptive, not as
 a forecast.
+
+## Energy indices: rim activity and high pace
+
+Two scores per player, built from the box score and the play-by-play only (no judgement of the playing style), on the *Individual
+tendencies* page under "Energy". The pictures use invented numbers; they are drawn by `notebooks/methodology_figures.py`.
+
+- **Rim activity**: offensive rebounds, blocks, dunks and fouls drawn, each per 40 minutes.
+- **High pace**: drive finishes (shots tagged "Da penetrazione" or "Tiro in corsa"), fast-break shots and assists ("contropiede"), fouls
+  drawn and steals per 40 minutes, plus the share of the player's field-goal attempts taken within 8 seconds of the possession start.
+  Fouls drawn count in both scores, on purpose.
+- **How a score is built**: each component is turned into a z-score against all league players with at least 40 minutes (how many
+  standard deviations above or below the league average, clipped at +-3); the z-scores of a score are averaged; the average is then
+  multiplied by minutes / (minutes + 120), so a player with few minutes is pulled towards 0 and a lucky short stint does not top the list.
+- **What the figure shows**: the percentile of the shrunk score among league players (0.5 = league median). Players are sorted by minutes
+  played. For a EuroCup opponent the drives and fast-break shots come from the Synergy pull and are scaled on the LBA players.
+
+![How to read the energy indices (invented data)](../assets/methodology/energy_dummy.png)
+
+![How a high-pace score is built (invented data)](../assets/methodology/energy_build_dummy.png)
 
 ## Page status flags
 

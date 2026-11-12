@@ -71,6 +71,7 @@ MIN_PLAYER_POSS = 20        # players shown in the volume-vs-efficiency scatter 
 MIN_RADAR_POSS = 25         # players with a roster-percentile radar (05b)
 MIN_MIX_POSS = 25           # players in the play-type mix bars (06)
 DEEP_POSS_SHARE = 0.80      # plot 2 (05c) is drawn for the fewest players who together use this share of the roster's possessions ...
+OTHER_PLAYTYPES = ('Handoffs', 'Post-Up', 'Miscellaneous Plays')   # Synergy play types that plot 1 groups as 'Other'
 DEEP_PLAYTYPES = 2          # ... and covers this many of their play types (the ones with most attempts)
 DEFAULT_LINEUP_MIN_POSS = 5   # default for config 'lineup_min_poss'
 MIN_STYLE_POSS = 10         # lineups shown in the style profile (09)
@@ -390,12 +391,13 @@ def pt_label(play_type: str) -> str:
     return short[0].upper() + short[1:]
 
 
-def draw_playtype_bars(ax: Axes, rows: Sequence[tuple[str, int, int]], zoom: int = 0) -> None:
-    """Plot 1: made (solid) over attempted (pale) field goals per play type, most attempts on top.
+def draw_playtype_bars(ax: Axes, rows: Sequence[tuple], zoom: int = 0) -> None:
+    """Plot 1: made (solid) over attempted (pale) field goals per play type, most attempts on top, with the points per possession in the label.
 
     Args:
         ax: Axes to draw on.
-        rows: ``(play type label, attempts, made)`` per play type, in any order.
+        rows: ``(play type label, attempts, made)`` or ``(label, attempts, made, points per possession)`` per play type,
+            in any order. The PPP, when given, is written at the end of the label.
         zoom: Number of top play types that plot 2 looks into; their bars get the plot-2 colour edge and a tag.
     """
     d = sorted(rows, key=lambda r: -r[1])
@@ -404,8 +406,10 @@ def draw_playtype_bars(ax: Axes, rows: Sequence[tuple[str, int, int]], zoom: int
     ax.barh(y, [r[1] for r in d], color=NAVY, alpha=.25, height=.62)
     ax.barh(y, [r[2] for r in d], color=YELLOW, height=.62)
     xmax = max((r[1] for r in d), default=1)
-    for i, (yy, (lab, att, made)) in enumerate(zip(y, d)):
-        ax.text(att + xmax * .015, yy, f'{made}/{att}  ({made / att:.0%} FG, {att / total:.0%} of attempts)', va='center',
+    for i, (yy, r) in enumerate(zip(y, d)):
+        att, made = r[1], r[2]
+        ppp = f', {r[3]:.2f} PPP' if len(r) > 3 and r[3] is not None else ''
+        ax.text(att + xmax * .015, yy, f'{made}/{att}  ({made / att:.0%} FG, {att / total:.0%} of attempts{ppp})', va='center',
                 fontsize=8.5, fontweight='bold' if i < zoom else 'normal', color=INK)
         if i < zoom:
             ax.barh(yy, att, height=.62, fill=False, edgecolor=DEEP, linewidth=2)
@@ -414,8 +418,16 @@ def draw_playtype_bars(ax: Axes, rows: Sequence[tuple[str, int, int]], zoom: int
     for i, label in enumerate(ax.get_yticklabels()):
         if i < zoom:
             label.set_color(DEEP); label.set_fontweight('bold')
-    ax.set_xlim(0, xmax * 1.75); ax.set_xlabel('Field goal attempts', fontsize=9)
+    ax.set_xlim(0, xmax * 2.05); ax.set_xlabel('Field goal attempts', fontsize=9)
     ax.spines['left'].set_visible(False); ax.tick_params(axis='y', length=0)
+
+
+def ppp_by_playtype(po: pd.DataFrame, player: str) -> dict[str, float]:
+    """Points per possession of ``player`` by plot-1 play type; handoffs, post-ups and miscellaneous plays are pooled as 'Other'."""
+    d = po[po.player == player].copy()
+    d['play_type'] = d.play_type.where(~d.play_type.isin(OTHER_PLAYTYPES), 'Other')
+    g = d.groupby('play_type')[['poss', 'pts']].sum()
+    return (g.pts / g.poss.where(g.poss > 0)).dropna().to_dict()
 
 
 def draw_shottype_panel(ax: Axes, rows: Sequence[tuple[str, int, int]], title: str) -> None:
@@ -452,6 +464,7 @@ def plot05(c: Ctx, b: pd.DataFrame) -> None:
     # REVIEW: needs Synergy-extracted CSVs (see module docstring); check the data before using the figure.
     zp = c.read('opp_players_fg_by_zone_and_playtype.csv')
     st = c.read('opp_players_shottype_within_playtype.csv')
+    po = c.read('opp_players_playtypes_offense.csv')
     shot: dict[tuple[str, str], list[tuple[str, int, int]]] = {}
     for r in st.itertuples():
         shot.setdefault((r.player, r.play_type), []).append((r.shot_type, int(r.fga), int(r.fgm)))
@@ -468,7 +481,8 @@ def plot05(c: Ctx, b: pd.DataFrame) -> None:
         sub = f"{head} · {c.comp}, {c.opp['name']} {c.opp['games']} games"
         fname = p.lower().replace(' ', '_')
         zoom = DEEP_PLAYTYPES if p in deep_players else 0
-        rows = [(pt_label(r.category), int(r.fga), int(r.fgm)) for r in pt.itertuples()]
+        ppp = ppp_by_playtype(po, p)
+        rows = [(pt_label(r.category), int(r.fga), int(r.fgm), ppp.get(r.category)) for r in pt.itertuples()]
 
         height = .46 * len(rows) + 2.6
         fig = plt.figure(figsize=(10, height))
@@ -478,9 +492,10 @@ def plot05(c: Ctx, b: pd.DataFrame) -> None:
         fig.text(.02, 1 - .8 / height, sub, fontsize=9, color=INK_3)
         fig.legend(handles=[Patch(fc=NAVY, alpha=.3, label='Attempted'), Patch(fc=YELLOW, alpha=.9, label='Made')],
                    loc='lower left', ncol=2, frameon=False, bbox_to_anchor=(.02, .5 / height))
-        note = ('Other = handoffs, post-ups, miscellaneous plays. Free throws excluded.'
+        note = ('Other = handoffs, post-ups, miscellaneous plays. Free throws excluded from the bars. PPP = points per possession of the '
+                'play type, counting every possession (shots, turnovers, free throws).'
                 + (f' Green outline: the {zoom} main play types, detailed in plot 2.' if zoom else ''))
-        fig.text(.02, .45 / height, note, fontsize=6.8, color=INK_4, va='top')
+        fig.text(.02, .45 / height, textwrap.fill(note, width=150), fontsize=6.8, color=INK_4, va='top')
         c.foot(fig, f'{c.comp} only')
         c.save(fig, f'05_player_{fname}_shot_profile.png', dpi=150)
 
