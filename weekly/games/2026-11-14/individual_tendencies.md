@@ -40,7 +40,7 @@ Tobey and Melendez take most of their shots in the paint; Loro and Ambrosin most
 
 <!-- more -->
 
-How the shot attempts of each game split between threes, paint and mid-range: one dot per game (green = won, red = lost), the smoothed areas hold the densest 50% and 80% of the games, the black square is the average.
+How the shot attempts of each game split between threes, paint and mid-range ([how to read the triangles](../../methodology/#reading-the-shot-selection-triangles-and-the-play-type-plots)): one dot per game (green = won, red = lost), the smoothed areas hold the densest 50% and 80% of the games, the black square is the average.
 
 ### Team
 
@@ -56,11 +56,59 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 
 ## Shot charts by player
 
-Shot profile (made/attempted by location and play type) and shot types within each play type. Team zone totals: link to the shot selection section of the analysis page.
+Zone shot charts, then for each player plot 1 (field goals by play type) and, for the players who together use 80% of the possessions, plot 2 (green: shot types within his two main play types). [How to read plots 1 and 2](../../methodology/#reading-the-shot-selection-triangles-and-the-play-type-plots). Team zone totals: see the shot selection section of the analysis page.
 
 <!-- more -->
 
 {{ shot_charts }}
+
+{{ figure: 05_player_samuels_shot_profile }}
+
+{{ figure: 05c_player_samuels_shot_types }}
+
+{{ figure: 05_player_zampini_shot_profile }}
+
+{{ figure: 05c_player_zampini_shot_types }}
+
+{{ figure: 05_player_tobey_shot_profile }}
+
+{{ figure: 05c_player_tobey_shot_types }}
+
+{{ figure: 05_player_andrews_shot_profile }}
+
+{{ figure: 05c_player_andrews_shot_types }}
+
+{{ figure: 05_player_loro_shot_profile }}
+
+{{ figure: 05c_player_loro_shot_types }}
+
+{{ figure: 05_player_melendez_shot_profile }}
+
+{{ figure: 05c_player_melendez_shot_types }}
+
+{{ figure: 05_player_massinburg_shot_profile }}
+
+{{ figure: 05c_player_massinburg_shot_types }}
+
+{{ figure: 05_player_ambrosin_shot_profile }}
+
+{{ figure: 05_player_poser_shot_profile }}
+
+{{ figure: 05_player_barbitch_shot_profile }}
+
+## Energy: rim activity and pace
+
+Two scores per player, as league percentiles (0.5 = league median): ==rim activity== and ==high pace==. [How the scores are built](../../methodology/#energy-indices-rim-activity-and-high-pace).
+
+- **Massinburg has the highest pace of the roster** (0.90): 12 drive finishes and 8 steals in 112', rim activity only 0.26. **Zampini** (0.77, 12 drive finishes and 30 fouls drawn in 206') and **Melendez** (0.75) follow.
+- **Melendez and Tobey carry the rim activity** (0.97 and 0.95): 7 blocks and 8 dunks in 141' for Melendez, 31 offensive rebounds and 8 dunks in 188' for Tobey.
+- **Loro, Ambrosin and Andrews have the lowest pace** (0.04, 0.04, 0.09): Loro has 1 drive finish in 186', Ambrosin and Andrews no fast-break shot.
+
+<!-- more -->
+
+Built from box score and play-by-play only, shrunk towards the median for players with few minutes. ==Rim activity==: offensive rebounds, blocks, dunks and fouls drawn per 40 minutes. ==High pace==: drive finishes, fast-break shots and assists, fouls drawn, steals per 40 minutes and the share of shots taken within 8 s of the possession start. LBA, 7 games, players sorted by minutes played; the reference is every LBA player with at least 40 minutes. [Method](../../methodology/#energy-indices-rim-activity-and-high-pace).
+
+{{ figure: 15_energy_indices }}
 
 ## Rotation by player
 
