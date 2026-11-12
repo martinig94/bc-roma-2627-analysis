@@ -37,6 +37,15 @@ Key points (top of each page) are headlines: one line per point, at most one num
 * Same page: `[text](#section-title)`. Other page of the game: `[text](offense_tendencies.html#section-title)`; from a sub-page to the main analysis: `./#section-title`.
 * The anchor is the heading lowercased with spaces and punctuation turned into hyphens (`## Roster, starting five and bench` is `#roster-starting-five-and-bench`). Avoid linking to headings with colons.
 * A link to a heading inside a closed drop-down opens it. After building, check that every `#anchor` exists (see 5).
+* **Every figure type that needs explaining has a section in the Methodology page** (`weekly/pages/methodology.md`): what it shows, how it is
+  built, how to read it, with a picture drawn with invented (dummy) data by `notebooks/methodology_figures.py`, using the same drawing
+  functions as the real figure. Two links, both ways:
+  * on the analysis page, the text that introduces the figure ends with a link to that Methodology section (`../../methodology/#anchor`
+    from `docs/opponent/<folder>/`);
+  * in the Methodology section, **just above each dummy figure, one short sentence with a link to the analysis page and section where
+    the real figure is shown** (`../opponent/<folder>/<page>.html#section`; use the latest analysis that has the figure).
+  Do this for every new figure or index of every future analysis, and give the figures their descriptive names: never "plot 1" or
+  "plot 2" (in titles, notes, text or code comments).
 
 ## 4. Writing the numbers
 

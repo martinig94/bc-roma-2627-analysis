@@ -12,9 +12,9 @@ the opponent (the team being scouted) is drawn in navy, the reference team (the 
   02   opponent play types run / faced
   03   offensive PPP by play type, reference team vs opponent
   04   opponent players, possessions used vs eFG% (number in bubble = points per game)
-  05   plot 1, one figure per player: FG made/attempted by play type (05_player_<name>_shot_profile.png)
-  05c  plot 2, for the players who together use DEEP_POSS_SHARE of the roster's possessions: shot types within their
-       DEEP_PLAYTYPES main play types (05c_player_<name>_shot_types.png); green, to mark it as the zoom of plot 1
+  05   field goals by play type, one figure per player: FG made/attempted by play type (05_player_<name>_shot_profile.png)
+  05c  shot types within the main play types, for the players who together use DEEP_POSS_SHARE of the roster's possessions: shot types within their
+       DEEP_PLAYTYPES main play types (05c_player_<name>_shot_types.png); green, to mark it as the deeper look at 05
   05b  player radars, percentile rank within the opponent's roster
   06   possessions used by play type, per player
   07   lineups: usage vs points per possession
@@ -58,7 +58,7 @@ from matplotlib.transforms import Bbox
 ROOT = Path(__file__).resolve().parents[1]
 # Colours: this report uses its own two-team scheme (opponent navy, reference yellow), not lba_style's gold.
 YELLOW, NAVY, GREY = '#F2B705', '#1F3A5F', '#8A8F98'
-DEEP = '#2E7D6B'   # plot 2 (the deeper look at plot 1) is green; plot 1 is navy / yellow
+DEEP = '#2E7D6B'   # the shot types figure (05c, the deeper look at 05) is green; 05 is navy / yellow
 SPINE = '#BBBBBB'
 INK, INK_2, INK_3, INK_4, INK_5, INK_6 = '#222', '#333', '#444', '#555', '#666', '#777'   # text greys, dark to light
 LEADER_LINE = '#999'      # leader lines of placed labels
@@ -70,8 +70,8 @@ MIN_PLAYTYPE_POSS = 10      # play types with fewer possessions are left off fig
 MIN_PLAYER_POSS = 20        # players shown in the volume-vs-efficiency scatter (04)
 MIN_RADAR_POSS = 25         # players with a roster-percentile radar (05b)
 MIN_MIX_POSS = 25           # players in the play-type mix bars (06)
-DEEP_POSS_SHARE = 0.80      # plot 2 (05c) is drawn for the fewest players who together use this share of the roster's possessions ...
-OTHER_PLAYTYPES = ('Handoffs', 'Post-Up', 'Miscellaneous Plays')   # Synergy play types that plot 1 groups as 'Other'
+DEEP_POSS_SHARE = 0.80      # the shot types figure (05c) is drawn for the fewest players who together use this share of the roster's possessions ...
+OTHER_PLAYTYPES = ('Handoffs', 'Post-Up', 'Miscellaneous Plays')   # Synergy play types that the play-type figure (05) groups as 'Other'
 DEEP_PLAYTYPES = 2          # ... and covers this many of their play types (the ones with most attempts)
 DEFAULT_LINEUP_MIN_POSS = 5   # default for config 'lineup_min_poss'
 MIN_STYLE_POSS = 10         # lineups shown in the style profile (09)
@@ -392,13 +392,13 @@ def pt_label(play_type: str) -> str:
 
 
 def draw_playtype_bars(ax: Axes, rows: Sequence[tuple], zoom: int = 0) -> None:
-    """Plot 1: made (solid) over attempted (pale) field goals per play type, most attempts on top, with the points per possession in the label.
+    """Field goals by play type: made (solid) over attempted (pale) field goals per play type, most attempts on top, with the points per possession in the label.
 
     Args:
         ax: Axes to draw on.
         rows: ``(play type label, attempts, made)`` or ``(label, attempts, made, points per possession)`` per play type,
             in any order. The PPP, when given, is written at the end of the label.
-        zoom: Number of top play types that plot 2 looks into; their bars get the plot-2 colour edge and a tag.
+        zoom: Number of top play types that the shot types figure looks into; their bars get its colour (green) as edge and label.
     """
     d = sorted(rows, key=lambda r: -r[1])
     total = max(sum(r[1] for r in d), 1)
@@ -431,7 +431,7 @@ def ppp_by_playtype(po: pd.DataFrame, player: str) -> dict[str, float]:
 
 
 def draw_shottype_panel(ax: Axes, rows: Sequence[tuple[str, int, int]], title: str) -> None:
-    """Plot 2 panel: made (dark) over attempted (pale) field goals per shot type within one play type.
+    """Shot types panel: made (dark) over attempted (pale) field goals per shot type within one play type.
 
     Args:
         ax: Axes to draw on.
@@ -460,7 +460,7 @@ def key_players(b: pd.DataFrame) -> list[str]:
 
 
 def plot05(c: Ctx, b: pd.DataFrame) -> None:
-    """Figures 05 and 05c: per player, plot 1 (FG by play type) and, for the key players, plot 2 (shot types of the top play types)."""
+    """Figures 05 and 05c: per player, field goals by play type and, for the key players, shot types within their top play types."""
     # REVIEW: needs Synergy-extracted CSVs (see module docstring); check the data before using the figure.
     zp = c.read('opp_players_fg_by_zone_and_playtype.csv')
     st = c.read('opp_players_shottype_within_playtype.csv')
@@ -488,13 +488,13 @@ def plot05(c: Ctx, b: pd.DataFrame) -> None:
         fig = plt.figure(figsize=(10, height))
         ax = fig.add_axes([.2, 1.25 / height, .76, (height - 2.35) / height])
         draw_playtype_bars(ax, rows, zoom)
-        fig.text(.02, 1 - .4 / height, f'Plot 1 · {p}: field goals by play type', fontsize=14, fontweight='bold', ha='left')
+        fig.text(.02, 1 - .4 / height, f'{p}: field goals by play type', fontsize=14, fontweight='bold', ha='left')
         fig.text(.02, 1 - .8 / height, sub, fontsize=9, color=INK_3)
         fig.legend(handles=[Patch(fc=NAVY, alpha=.3, label='Attempted'), Patch(fc=YELLOW, alpha=.9, label='Made')],
                    loc='lower left', ncol=2, frameon=False, bbox_to_anchor=(.02, .5 / height))
         note = ('Other = handoffs, post-ups, miscellaneous plays. Free throws excluded from the bars. PPP = points per possession of the '
                 'play type, counting every possession (shots, turnovers, free throws).'
-                + (f' Green outline: the {zoom} main play types, detailed in plot 2.' if zoom else ''))
+                + (f' Green outline: the {zoom} main play types, detailed in the shot types figure.' if zoom else ''))
         fig.text(.02, .45 / height, textwrap.fill(note, width=150), fontsize=6.8, color=INK_4, va='top')
         c.foot(fig, f'{c.comp} only')
         c.save(fig, f'05_player_{fname}_shot_profile.png', dpi=150)
@@ -508,9 +508,9 @@ def plot05(c: Ctx, b: pd.DataFrame) -> None:
         for ax, k in zip(axs[0], top):
             d = shot[k]
             draw_shottype_panel(ax, d, f"{pt_label(k[1])}\n({sum(x[1] for x in d)} attempts; made/attempted)")
-        fig.text(.02, .955, f'Plot 2 · {p}: shot types within his main play types', fontsize=14, fontweight='bold', ha='left',
+        fig.text(.02, .955, f'{p}: shot types within his main play types', fontsize=14, fontweight='bold', ha='left',
                  color=DEEP)
-        fig.text(.02, .895, f'Deeper look at plot 1: his {n} play types with most attempts · {sub}', fontsize=9, color=INK_3)
+        fig.text(.02, .895, f'Deeper look at the field goals by play type: his {n} play types with most attempts · {sub}', fontsize=9, color=INK_3)
         fig.legend(handles=[Patch(fc=DEEP, alpha=.3, label='Attempted'), Patch(fc=DEEP, label='Made')],
                    loc='lower left', ncol=2, frameon=False, bbox_to_anchor=(.02, .045))
         fig.text(.02, .03, f"Drawn for the players who together use {DEEP_POSS_SHARE:.0%} of the roster's possessions; small samples.",

@@ -84,27 +84,33 @@ densest 50% (dark) and 80% (light) of the games, so a small area means a stable 
 of all the shots. Source: the league play-by-play (shot coordinates), games before the date of the analysis. Areas need three games
 or more; a player needs three games with three attempts or more.
 
+Shown in [Verona, individual tendencies: shot attempts](../opponent/matchup_BC_Roma_vs_Tezenis_Verona_before_2026-11-14/individual_tendencies.html#shot-attempts-3pt-paint-and-mid-range).
+
 ![How to read the shot-selection triangle (invented data)](../assets/methodology/triangle_dummy.png)
 
-### Plot 1: field goals by play type
+### Field goals by play type
 
 One figure per player, from Synergy. Each bar is a play type (spot up, pick and roll, transition, ...), sorted by attempts: the pale bar
 is the attempts, the yellow bar the made field goals. The label gives made/attempted, FG% and the share of the player's attempts.
 The label ends with the points per possession (PPP) of that play type: points divided by all its possessions, which end in a shot,
 a turnover or free throws, so it is not the same as the FG% of the bar (*Other* pools handoffs, post-ups and miscellaneous plays).
 Free throws are excluded from the bars; *Other* collects handoffs, post-ups and miscellaneous plays. The two play types with most attempts have a
-green outline and a green name: they are the ones detailed in plot 2.
+green outline and a green name: they are the ones detailed in the shot types figure below.
 
-![How to read plot 1 (invented data)](../assets/methodology/playtype_dummy.png)
+Shown in [Verona, individual tendencies: shot charts by player](../opponent/matchup_BC_Roma_vs_Tezenis_Verona_before_2026-11-14/individual_tendencies.html#shot-charts-by-player).
 
-### Plot 2: shot types within the main play types
+![How to read the field goals by play type figure (invented data)](../assets/methodology/playtype_dummy.png)
 
-A deeper look at plot 1, drawn in green so the two are not confused. It exists only for the players who together use 80% of the
+### Shot types within the main play types
+
+A deeper look at the field goals by play type figure above, drawn in green so the two are not confused. It exists only for the players who together use 80% of the
 roster's possessions (players sorted by possessions used, added up until the share reaches 80%), and has one panel for each of the two
-play types with the green outline in plot 1. Each bar is a Synergy shot type (open or guarded three, to the basket, dribble jumper,
-...): pale = attempts, dark = made. The shot types of a panel add up to the attempts of that play type in plot 1.
+play types with the green outline in that figure. Each bar is a Synergy shot type (open or guarded three, to the basket, dribble jumper,
+...): pale = attempts, dark = made. The shot types of a panel add up to the attempts of that play type in the previous figure.
 
-![How to read plot 2 (invented data)](../assets/methodology/shottype_dummy.png)
+Shown right after it in [Verona, individual tendencies: shot charts by player](../opponent/matchup_BC_Roma_vs_Tezenis_Verona_before_2026-11-14/individual_tendencies.html#shot-charts-by-player).
+
+![How to read the shot types figure (invented data)](../assets/methodology/shottype_dummy.png)
 
 Both plots rest on small samples (a handful of games) and on tables extracted by hand from Synergy: read them as descriptive, not as
 a forecast.
@@ -124,7 +130,11 @@ tendencies* page under "Energy". The pictures use invented numbers; they are dra
 - **What the figure shows**: the percentile of the shrunk score among league players (0.5 = league median). Players are sorted by minutes
   played. For a EuroCup opponent the drives and fast-break shots come from the Synergy pull and are scaled on the LBA players.
 
+Shown in [Verona, individual tendencies: energy](../opponent/matchup_BC_Roma_vs_Tezenis_Verona_before_2026-11-14/individual_tendencies.html#energy-rim-activity-and-pace).
+
 ![How to read the energy indices (invented data)](../assets/methodology/energy_dummy.png)
+
+How a score is built, for the figure above:
 
 ![How a high-pace score is built (invented data)](../assets/methodology/energy_build_dummy.png)
 
