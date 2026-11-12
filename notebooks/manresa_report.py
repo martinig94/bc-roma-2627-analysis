@@ -18,7 +18,7 @@ import pandas as pd
 
 import lba_style
 import weekly_config
-from lba_style import (BLUE, GREEN, ORANGE, RED, SUP_KW, TEXT, TEXT2, draw_half_court, save_fig,
+from lba_style import (BLUE, GREEN, ORANGE, RED, SUP_KW, TEXT, TEXT2, ROTATE_COURT, draw_half_court, save_fig,
                        style_axes)
 from lineups_report import fig_lineups, pick
 from player_names import photo_name, player_key
@@ -434,7 +434,7 @@ def fig_shot_charts(shots: pd.DataFrame, scorers: list[str], out: Path) -> Path:
             sel = mine[mine.made == made]
             ax.scatter(sel.x, sel.y, s=34, c=color, marker=marker, linewidths=1.4 if made == 0 else 0.6,
                        edgecolors="white" if made else None, alpha=0.9, zorder=3)
-        ax.set_ylim(-200, 900)
+        ax.set_ylim(*((900, -200) if ROTATE_COURT else (-200, 900)))   # keep the court rotation
         pct = mine.made.mean() * 100
         ax.set_title(f"{player}: {int(mine.made.sum())}/{len(mine)} FG ({pct:.0f}%)", fontsize=11)
     fig.suptitle("Shot charts of the main scorers, EuroCup games (green = made, red x = missed)", **SUP_KW)
