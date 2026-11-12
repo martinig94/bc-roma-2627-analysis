@@ -95,11 +95,18 @@ gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
 94,6,2026-11-04,BOS,Bosna Bh Telecom Sarajevo,69,BLK,Balkan Botevgrad,78,True
 95,6,2026-11-03,PAO,Paok Thessaloniki,113,BCR,BC Roma,111,True
 96,6,2026-11-03,ULM,Ratiopharm Ulm,82,BAH,Bahcesehir College Istanbul,96,True
+97,7,2026-11-11,LEM,Le Mans Sarthe Basket,88,BGS,Recoletas Salud San Pablo Burgos,80,True
+98,7,2026-11-11,ARI,Aris Thessaloniki,105,RIG,Riga Zelli,81,True
+99,7,2026-11-11,TRT,Baglietto Derthona Tortona,77,JER,Hapoel Midtown Jerusalem,91,True
 100,7,2026-11-10,RTK,Rostock Seawolves,71,LJU,Cedevita Olimpija Ljubljana,88,True
+101,7,2026-11-11,SIA,Siauliai Basketball,71,TNF,La Laguna Tenerife,86,True
 102,7,2026-11-10,LLI,London Lions,80,VNC,Umana Reyer Venice,76,True
 104,7,2026-11-10,CLU,U-Bt Cluj-Napoca,81,TTK,Turk Telekom Ankara,89,True
 105,7,2026-11-10,KLA,Neptunas Klaipeda,90,WRO,Slask Wroclaw,82,True
 106,7,2026-11-10,TRN,Dolomiti Energia Trento,86,BUR,Tofas Bursa,96,True
+107,7,2026-11-11,NIN,Niners Chemnitz,90,NAP,Napoli Basketball,112,True
 108,7,2026-11-10,BOU,Cosea Jl Bourg-En-Bresse,66,BUD,Buducnost Voli Podgorica,68,True
+109,7,2026-11-11,BAH,Bahcesehir College Istanbul,99,LKB,Lietkabelis Panevezys,61,True
+110,7,2026-11-11,BCR,BC Roma,83,ULM,Ratiopharm Ulm,78,True
 111,7,2026-11-10,BLK,Balkan Botevgrad,56,PAO,Paok Thessaloniki,79,True
 112,7,2026-11-10,MAN,Kids&Us Manresa,86,BOS,Bosna Bh Telecom Sarajevo,82,True
