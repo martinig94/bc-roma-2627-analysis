@@ -40,7 +40,7 @@ Tobey and Melendez take most of their shots in the paint; Loro and Ambrosin most
 
 <!-- more -->
 
-How the shot attempts of each game split between threes, paint and mid-range: one dot per game (green = won, red = lost), the smoothed areas hold the densest 50% and 80% of the games, the black square is the average.
+How the shot attempts of each game split between threes, paint and mid-range ([how to read the triangles](../../methodology/#reading-the-shot-selection-triangles-and-the-play-type-plots)): one dot per game (green = won, red = lost), the smoothed areas hold the densest 50% and 80% of the games, the black square is the average.
 
 ### Team
 
@@ -56,11 +56,45 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 
 ## Shot charts by player
 
-Shot profile (made/attempted by location and play type) and shot types within each play type. Team zone totals: link to the shot selection section of the analysis page.
+Zone shot charts, then for each player plot 1 (field goals by play type) and, for the players who together use 80% of the possessions, plot 2 (green: shot types within his two main play types). [How to read plots 1 and 2](../../methodology/#reading-the-shot-selection-triangles-and-the-play-type-plots). Team zone totals: see the shot selection section of the analysis page.
 
 <!-- more -->
 
 {{ shot_charts }}
+
+{{ figure: 05_player_samuels_shot_profile }}
+
+{{ figure: 05c_player_samuels_shot_types }}
+
+{{ figure: 05_player_zampini_shot_profile }}
+
+{{ figure: 05c_player_zampini_shot_types }}
+
+{{ figure: 05_player_tobey_shot_profile }}
+
+{{ figure: 05c_player_tobey_shot_types }}
+
+{{ figure: 05_player_andrews_shot_profile }}
+
+{{ figure: 05c_player_andrews_shot_types }}
+
+{{ figure: 05_player_loro_shot_profile }}
+
+{{ figure: 05c_player_loro_shot_types }}
+
+{{ figure: 05_player_melendez_shot_profile }}
+
+{{ figure: 05c_player_melendez_shot_types }}
+
+{{ figure: 05_player_massinburg_shot_profile }}
+
+{{ figure: 05c_player_massinburg_shot_types }}
+
+{{ figure: 05_player_ambrosin_shot_profile }}
+
+{{ figure: 05_player_poser_shot_profile }}
+
+{{ figure: 05_player_barbitch_shot_profile }}
 
 ## Rotation by player
 

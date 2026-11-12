@@ -70,6 +70,43 @@ may differ slightly). An LBA table is never shown for a EuroCup game.
 - **Five-man lineups**: rebuilt from the substitutions in the play-by-play; best and worst units need a minimum of minutes together
   and are ranked by net points per 40 minutes.
 
+## Reading the shot-selection triangles and the play-type plots
+
+These three figures are on the *Individual tendencies* page of every analysis. The pictures below use invented numbers; they are drawn
+by `notebooks/methodology_figures.py` with the same functions as the real figures.
+
+### Shot-selection triangle
+
+How the field-goal attempts of each game split between three kinds of shot: 3-point (top corner), paint (bottom left: two-point
+attempts inside the lane) and mid-range (bottom right: every other two-point attempt). One dot is one game; the closer it is to a
+corner, the larger that share, and a dot in the middle is an even split. Green = game won, red = lost. The shaded areas hold the
+densest 50% (dark) and 80% (light) of the games, so a small area means a stable shot selection. The black square is the average
+of all the shots. Source: the league play-by-play (shot coordinates), games before the date of the analysis. Areas need three games
+or more; a player needs three games with three attempts or more.
+
+![How to read the shot-selection triangle (invented data)](../assets/methodology/triangle_dummy.png)
+
+### Plot 1: field goals by play type
+
+One figure per player, from Synergy. Each bar is a play type (spot up, pick and roll, transition, ...), sorted by attempts: the pale bar
+is the attempts, the yellow bar the made field goals. The label gives made/attempted, FG% and the share of the player's attempts.
+Free throws are excluded; *Other* collects handoffs, post-ups and miscellaneous plays. The two play types with most attempts have a
+green outline and a green name: they are the ones detailed in plot 2.
+
+![How to read plot 1 (invented data)](../assets/methodology/playtype_dummy.png)
+
+### Plot 2: shot types within the main play types
+
+A deeper look at plot 1, drawn in green so the two are not confused. It exists only for the players who together use 80% of the
+roster's possessions (players sorted by possessions used, added up until the share reaches 80%), and has one panel for each of the two
+play types with the green outline in plot 1. Each bar is a Synergy shot type (open or guarded three, to the basket, dribble jumper,
+...): pale = attempts, dark = made. The shot types of a panel add up to the attempts of that play type in plot 1.
+
+![How to read plot 2 (invented data)](../assets/methodology/shottype_dummy.png)
+
+Both plots rest on small samples (a handful of games) and on tables extracted by hand from Synergy: read them as descriptive, not as
+a forecast.
+
 ## Page status flags
 
 Pages are first generated automatically and then reviewed. For a game still to come, a banner at the top says *Automatic draft, not
