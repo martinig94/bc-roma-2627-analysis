@@ -56,7 +56,7 @@ How the shot attempts of each game split between threes, paint and mid-range ([h
 
 ## Shot charts by player
 
-Zone shot charts, then for each player plot 1 (field goals by play type) and, for the players who together use 80% of the possessions, plot 2 (green: shot types within his two main play types). [How to read plots 1 and 2](../../methodology/#reading-the-shot-selection-triangles-and-the-play-type-plots). Team zone totals: see the shot selection section of the analysis page.
+Zone shot charts, then for each player the field goals by play type and, for the players who together use 80% of the possessions, a green figure with the shot types within his two main play types. [How to read these figures](../../methodology/#reading-the-shot-selection-triangles-and-the-play-type-plots). Team zone totals: see the shot selection section of the analysis page.
 
 <!-- more -->
 

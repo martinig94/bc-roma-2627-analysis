@@ -4,8 +4,8 @@
 
 Writes into weekly/assets/methodology/ (copied to docs/assets by build_site.py):
   triangle_dummy.png     how to read the shot-selection triangles (tendency_triangles.py)
-  playtype_dummy.png     how to read plot 1, field goals by play type (synergy_scouting_plots.py, 05_player_*)
-  shottype_dummy.png     how to read plot 2, shot types within the main play types (05c_player_*)
+  playtype_dummy.png     how to read the field goals by play type figure (synergy_scouting_plots.py, 05_player_*)
+  shottype_dummy.png     how to read the shot types figure (05c_player_*)
   energy_dummy.png       how to read the energy indices (energy_indices.py)
   energy_build_dummy.png how a score is built from its components and shrunk by minutes
 """
@@ -66,16 +66,16 @@ def triangle(out: Path) -> None:
 
 
 def playtype(out: Path) -> None:
-    """Plot 1 with invented numbers and callouts."""
+    """Field goals by play type, with invented numbers and callouts."""
     fig = plt.figure(figsize=(10, 5.2))
     ax = fig.add_axes([.24, .17, .5, .6])
     ssp.draw_playtype_bars(ax, PLAYTYPES, zoom=2)
-    fig.text(.02, .94, "Plot 1 · Player X: field goals by play type", fontsize=14, fontweight="bold")
+    fig.text(.02, .94, "Player X: field goals by play type", fontsize=14, fontweight="bold")
     fig.text(.02, .89, "Dummy player, 83 field-goal attempts", fontsize=9, color=ssp.INK_3)
     notes = [(.79, .74, "Pale bar = attempts,\nsolid yellow = made"),
              (.79, .60, "Label: made/attempted, FG%\nand share of the player's\nattempts"),
              (.79, .46, "Diamond (top axis): points per\npossession of the play type,\ndotted line = 1.00"),
-             (.79, .30,"Green outline and label: the two\nplay types with most attempts,\nzoomed in plot 2")]
+             (.79, .30,"Green outline and label: the two\nplay types with most attempts,\ndetailed in the shot types figure")]
     for x, y, t in notes:
         fig.text(x, y, t, fontsize=8.5, color=ssp.INK_2, va="center", bbox=dict(boxstyle="round,pad=.4", fc="#F7F7F7", ec="#DDDDDD"))
     fig.text(.02, .04, DUMMY_NOTE + " Rows are sorted by attempts. Free throws are excluded.", **NOTE_KW)
@@ -83,16 +83,16 @@ def playtype(out: Path) -> None:
 
 
 def shottype(out: Path) -> None:
-    """Plot 2 with invented numbers: the zoom on the two main play types of the dummy player."""
+    """Shot types within the two main play types of the dummy player, with invented numbers."""
     fig, axs = plt.subplots(1, 2, figsize=(10, 4.4))
     fig.subplots_adjust(left=.14, right=.97, top=.68, bottom=.22, wspace=1.0)
     for ax, (play, rows) in zip(axs, SHOT_TYPES.items()):
         ssp.draw_shottype_panel(ax, rows, f"{play}\n({sum(r[1] for r in rows)} attempts; made/attempted)")
-    fig.text(.02, .94, "Plot 2 · Player X: shot types within his main play types", fontsize=14, fontweight="bold", color=ssp.DEEP)
-    fig.text(.02, .87, "Deeper look at plot 1: one panel for each of the two play types with the green outline.\n"
-             "Pale bar = attempts, dark bar = made; the shot types add up to the attempts of the play type in plot 1.",
+    fig.text(.02, .94, "Player X: shot types within his main play types", fontsize=14, fontweight="bold", color=ssp.DEEP)
+    fig.text(.02, .87, "Deeper look at the field goals by play type: one panel for each of the two play types with the green outline.\n"
+             "Pale bar = attempts, dark bar = made; the shot types add up to the attempts of the play type in the field goals by play type figure.",
              fontsize=9, color=ssp.INK_3, va="top")
-    fig.text(.02, .04, DUMMY_NOTE + " Plot 2 is drawn only for the players who together use 80% of the roster's possessions.", **NOTE_KW)
+    fig.text(.02, .04, DUMMY_NOTE + " This figure is drawn only for the players who together use 80% of the roster's possessions.", **NOTE_KW)
     fig.savefig(out / "shottype_dummy.png", dpi=150); plt.close(fig)
 
 
