@@ -47,12 +47,12 @@ game_id,championship_id,competition,year,round,round_name,phase_id,match_datetim
 25413,602,,2026,7,7° Giornata,1,2026-11-08T18:00:00.000+01:00,2,1768,Longobardi Scafati Basket,1772,Napoli Basketball,89,91,,,,,,,,,,,Beta Ricambi Arena PalaMangano,Scafati,,Bucchi Piero,Repesa Jasmin,2026-11-08T20:48:48.236+01:00
 25414,602,,2026,7,7° Giornata,1,2026-11-07T20:00:00.000+01:00,2,1760,UNA Hotels Reggio Emilia,1753,Umana Reyer Venezia,78,83,,,,,,,,,,,PalaBigi,Reggio nell'Emilia,3661,Priftis Dimitris,Spahija Neven,2026-11-07T22:02:20.680+01:00
 25415,602,,2026,7,7° Giornata,1,2026-11-08T19:00:00.000+01:00,2,1766,Openjobmetis Varese,1771,APU Old Wild West Udine,81,84,,,,,,,,,,,Itelyum Arena,Varese,5067,Kastritis Ioannis,Vertemati Adriano,2026-11-08T20:51:11.736+01:00
-25416,602,,2026,8,8° Giornata,,2026-11-14T20:30:00.000+01:00,0,1761,BC Roma,1769,Tezenis Verona,0,0,,,,,,,,,,,Palazzetto dello Sport,Roma,,,,2026-11-10T08:54:28.430+01:00
+25416,602,,2026,8,8° Giornata,1,2026-11-14T20:30:00.000+01:00,2,1761,BC Roma,1769,Tezenis Verona,88,89,,,,,,,,,,,Palazzetto dello Sport,Roma,2200,Magro Alessandro,Ramagli Alessandro,2026-11-14T22:30:51.614+01:00
 25417,602,,2026,8,8° Giornata,,2026-11-15T19:00:00.000+01:00,0,1763,Dolomiti Energia Trentino,1750,Virtus Costa Bologna,0,0,,,,,,,,,,,BTS Arena,Trento,,,,2026-11-10T09:04:06.353+01:00
-25418,602,,2026,8,8° Giornata,,2026-11-15T16:00:00.000+01:00,0,1764,Nutribullet Treviso Basket,1768,Longobardi Scafati Basket,0,0,,,,,,,,,,,Palaverde,Villorba,,,,2026-11-09T16:56:21.853+01:00
+25418,602,,2026,8,8° Giornata,,2026-11-15T16:00:00.000+01:00,0,1764,Nutribullet Treviso Basket,1768,Longobardi Scafati Basket,0,0,,,,,,,,,,,Palaverde,Villorba,,,,2026-11-15T15:08:40.131+01:00
 25419,602,,2026,8,8° Giornata,,2026-11-15T18:00:00.000+01:00,0,1753,Umana Reyer Venezia,1762,Maxima Roma,0,0,,,,,,,,,,,Palasport Taliercio,Venezia,,,,2026-11-10T09:03:17.756+01:00
 25420,602,,2026,8,8° Giornata,,2026-11-15T17:00:00.000+01:00,0,1772,Napoli Basketball,1767,Pallacanestro Trieste,0,0,,,,,,,,,,,Alcott Arena,Napoli,,,,2026-11-10T09:02:29.442+01:00
-25421,602,,2026,8,8° Giornata,,2026-11-14T20:00:00.000+01:00,0,1760,UNA Hotels Reggio Emilia,1766,Openjobmetis Varese,0,0,,,,,,,,,,,PalaBigi,Reggio nell'Emilia,,,,2026-11-10T08:54:10.245+01:00
+25421,602,,2026,8,8° Giornata,1,2026-11-14T20:00:00.000+01:00,2,1760,UNA Hotels Reggio Emilia,1766,Openjobmetis Varese,84,99,,,,,,,,,,,PalaBigi,Reggio nell'Emilia,3730,Priftis Dimitris,Kastritis Ioannis,2026-11-14T21:53:57.535+01:00
 25422,602,,2026,8,8° Giornata,,2026-11-15T17:30:00.000+01:00,0,1765,Acqua S.Bernardo Cantù,1752,Bertram Derthona Tortona,0,0,,,,,,,,,,,PalaDesio,Desio,,,,2026-11-10T09:02:59.606+01:00
 25423,602,,2026,8,8° Giornata,,2026-11-15T18:15:00.000+01:00,0,1771,APU Old Wild West Udine,1751,Armani Olimpia Milano,0,0,,,,,,,,,,,PalaCarnera Credifriuli,Udine,,,,2026-11-10T09:10:01.255+01:00
 25424,602,,2026,9,9° Giornata,,2026-11-22T18:00:00.000+01:00,0,1750,Virtus Costa Bologna,1761,BC Roma,0,0,,,,,,,,,,,PalaDozza,Bologna,,,,2026-10-14T12:55:04.791+02:00

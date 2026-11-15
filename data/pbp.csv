@@ -32367,3 +32367,1132 @@ game_id,seq,period,clock,elapsed_sec,score_home,score_away,team_id,team,home_clu
 25408,709,4,00:01,599,95,81,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,85,53,1,A,6,False,0,706
 25408,710,4,00:01,599,95,81,1769,Tezenis Verona,0,9340,22,RJ,Melendez,3 punti sbagliato,1,Tiro in sospensione,1007,nessun rimbalzo,56,79,0,D,8,False,0,
 25408,711,4,00:00,600,95,81,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25416,102,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25416,103,1,10:00,0,0,0,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Palla contesa,,,,,,,1,,,False,0,
+25416,104,1,09:52,8,0,0,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Palla persa,54,Fuori dal campo,,,97,52,1,A,3,False,0,
+25416,105,1,09:31,29,0,0,1761,BC Roma,1,9385,3,Paul,Watson,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,6,56,0,A,3,False,0,
+25416,106,1,09:31,29,0,0,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Stoppata,,,,,6,56,0,A,3,False,0,105
+25416,107,1,09:31,29,0,0,1761,BC Roma,1,9385,3,Paul,Watson,Stoppata subita,,,,,6,56,0,A,3,False,0,105
+25416,108,1,09:31,29,0,0,1761,BC Roma,1,9436,22,Kelly,Olynyk,Rimbalzo offensivo,,,,,6,56,0,A,3,False,0,105
+25416,109,1,09:31,29,0,0,1761,BC Roma,1,9436,22,Kelly,Olynyk,2 punti sbagliato,7,Appoggio a canestro,,,6,56,0,A,3,False,0,
+25416,110,1,09:31,29,0,0,1761,BC Roma,1,9436,22,Kelly,Olynyk,2 punti sbagliato,,,1005,stoppata,6,56,0,A,3,False,0,
+25416,111,1,09:31,29,0,0,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Stoppata,,,,,6,56,0,A,3,False,0,110
+25416,112,1,09:31,29,0,0,1761,BC Roma,1,9436,22,Kelly,Olynyk,Stoppata subita,,,,,6,56,0,A,3,False,0,110
+25416,113,1,09:31,29,0,0,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,6,56,0,A,3,False,0,110
+25416,114,1,09:15,45,0,3,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti segnato,6,Arresto e tiro,,,69,51,1,A,9,False,0,
+25416,115,1,09:13,47,0,3,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo commesso,100,personale,,,19,79,1,D,4,False,0,
+25416,116,1,09:13,47,0,3,1761,BC Roma,1,9385,3,Paul,Watson,Fallo Subito,,,,,19,79,0,A,4,False,0,115
+25416,117,1,09:12,48,2,3,1761,BC Roma,1,9436,22,Kelly,Olynyk,2 punti segnato,11,Gancio,,,7,51,0,A,3,True,0,
+25416,118,1,09:12,48,2,3,1761,BC Roma,1,6138,1,Niccolò,Mannion,Assist,,,,,7,51,0,A,3,False,0,117
+25416,119,1,09:12,48,2,3,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,2 punti sbagliato,8,Da penetrazione,,,89,61,1,A,6,False,0,
+25416,120,1,09:12,48,2,3,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Rimbalzo offensivo,,,,,89,61,1,A,6,False,0,119
+25416,121,1,09:12,48,2,6,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti segnato,6,Arresto e tiro,,,74,85,1,A,8,False,0,
+25416,122,1,09:12,48,2,6,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Assist,,,,,74,85,1,A,8,False,0,121
+25416,123,1,09:12,48,5,6,1761,BC Roma,1,9436,22,Kelly,Olynyk,3 punti segnato,5,Tiro in Step Back,,,31,52,0,A,9,False,0,
+25416,124,1,09:09,51,5,6,1761,BC Roma,1,6138,1,Niccolò,Mannion,Fallo commesso,100,personale,,,63,93,0,D,8,False,0,
+25416,125,1,09:09,51,5,6,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo Subito,,,,,63,93,0,D,8,False,0,124
+25416,126,1,07:45,135,5,6,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,89,57,1,A,6,False,0,
+25416,127,1,07:45,135,5,6,1761,BC Roma,1,9385,3,Paul,Watson,Stoppata,,,,,89,57,1,A,6,False,0,126
+25416,128,1,07:45,135,5,6,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Stoppata subita,,,,,89,57,1,A,6,False,0,126
+25416,129,1,07:45,135,5,6,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo offensivo,,,,,89,57,1,A,6,False,0,126
+25416,130,1,07:38,142,5,8,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti segnato,7,Appoggio a canestro,,,95,51,1,A,3,True,0,
+25416,131,1,07:29,151,8,8,1761,BC Roma,1,5369,12,Arturs,Strautins,3 punti segnato,6,Arresto e tiro,,,5,4,0,A,1,False,0,
+25416,132,1,07:29,151,8,8,1761,BC Roma,1,6138,1,Niccolò,Mannion,Assist,,,,,5,4,0,A,1,False,0,131
+25416,133,1,07:17,163,8,8,1761,BC Roma,1,9385,3,Paul,Watson,Fallo commesso,103,tiro,,,98,35,0,D,4,False,0,
+25416,134,1,07:17,163,8,8,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,98,35,0,D,4,False,0,133
+25416,135,1,07:17,163,8,9,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,136,1,07:17,163,8,9,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Tiro libero sbagliato,,,,,,,,A,7,False,0,135
+25416,137,1,07:17,163,8,9,1761,BC Roma,1,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,,,,,,False,0,135
+25416,138,1,07:11,169,11,9,1761,BC Roma,1,9436,22,Kelly,Olynyk,3 punti segnato,6,Arresto e tiro,,,31,61,0,A,9,False,0,
+25416,139,1,07:11,169,11,9,1761,BC Roma,1,6138,1,Niccolò,Mannion,Assist,,,,,31,61,0,A,9,False,0,138
+25416,140,1,06:54,186,11,9,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti sbagliato,1,Tiro in sospensione,,,67,37,1,A,9,False,0,
+25416,141,1,06:54,186,11,9,1761,BC Roma,1,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,67,37,1,A,9,False,0,140
+25416,142,1,06:46,194,11,9,1761,BC Roma,1,6138,1,Niccolò,Mannion,3 punti sbagliato,6,Arresto e tiro,,,26,82,0,A,10,False,0,
+25416,143,1,06:46,194,11,9,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo difensivo,,,,,26,82,0,A,10,False,0,142
+25416,144,1,06:38,202,11,12,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti segnato,6,Arresto e tiro,,,78,91,1,A,8,False,0,
+25416,145,1,06:38,202,11,12,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Assist,,,,,78,91,1,A,8,False,0,144
+25416,146,1,06:21,219,14,12,1761,BC Roma,1,9436,22,Kelly,Olynyk,3 punti segnato,1,Tiro in sospensione,,,30,72,0,A,9,False,0,
+25416,147,1,06:21,219,14,12,1761,BC Roma,1,9384,10,Erik,Stevenson,Assist,,,,,30,72,0,A,9,False,0,146
+25416,148,1,06:04,236,14,14,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti segnato,7,Appoggio a canestro,,,93,49,1,A,3,True,0,
+25416,149,1,06:04,236,14,14,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Assist,,,,,93,49,1,A,3,False,0,148
+25416,150,1,05:53,247,17,14,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti segnato,1,Tiro in sospensione,,,28,27,0,A,9,False,0,
+25416,151,1,05:53,247,17,14,1761,BC Roma,1,6138,1,Niccolò,Mannion,Assist,,,,,28,27,0,A,9,False,0,150
+25416,152,1,05:43,257,17,17,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti segnato,1,Tiro in sospensione,,,69,73,1,A,9,False,0,
+25416,153,1,05:27,273,20,17,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti segnato,6,Arresto e tiro,,,23,16,0,A,8,False,0,
+25416,154,1,05:27,273,20,17,1761,BC Roma,1,6138,1,Niccolò,Mannion,Assist,,,,,23,16,0,A,8,False,0,153
+25416,155,1,05:14,286,20,17,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Palla persa,50,Passaggio sbagliato,,,56,76,1,A,8,False,0,
+25416,156,1,05:14,286,20,17,1761,BC Roma,1,9436,22,Kelly,Olynyk,Palla recuperata,,,,,56,76,1,A,8,False,0,155
+25416,157,1,05:09,291,20,17,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,
+25416,158,1,05:09,291,20,17,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Ingresso,,,,,,,,,,False,0,157
+25416,159,1,05:05,295,20,17,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti sbagliato,6,Arresto e tiro,,,9,3,0,A,1,False,0,
+25416,160,1,05:05,295,20,17,1761,BC Roma,1,5369,12,Arturs,Strautins,Rimbalzo offensivo,,,,,9,3,0,A,1,False,0,159
+25416,161,1,04:59,301,20,17,1761,BC Roma,1,5369,12,Arturs,Strautins,2 punti sbagliato,3,Tiro in fadeaway,,,14,67,0,A,4,False,0,
+25416,162,1,04:59,301,20,17,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,14,67,0,A,4,False,0,161
+25416,163,1,04:40,320,20,19,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti segnato,5,Tiro in Step Back,,,92,25,1,A,4,False,0,
+25416,164,1,04:25,335,20,19,1761,BC Roma,1,6138,1,Niccolò,Mannion,3 punti sbagliato,6,Arresto e tiro,,,32,43,0,A,9,False,0,
+25416,165,1,04:25,335,20,19,1761,BC Roma,1,5369,12,Arturs,Strautins,Rimbalzo offensivo,,,,,32,43,0,A,9,False,0,164
+25416,166,1,04:15,345,20,19,1761,BC Roma,1,9385,3,Paul,Watson,3 punti sbagliato,6,Arresto e tiro,1005,stoppata,3,97,0,A,5,False,0,
+25416,167,1,04:15,345,20,19,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Stoppata,,,,,3,97,0,A,5,False,0,166
+25416,168,1,04:15,345,20,19,1761,BC Roma,1,9385,3,Paul,Watson,Stoppata subita,,,,,3,97,0,A,5,False,0,166
+25416,169,1,04:15,345,20,19,1761,BC Roma,1,9436,22,Kelly,Olynyk,Rimbalzo offensivo,,,,,3,97,0,A,5,False,0,166
+25416,170,1,04:04,356,20,19,1761,BC Roma,1,5369,12,Arturs,Strautins,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,7,55,0,A,3,False,0,
+25416,171,1,04:04,356,20,19,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Stoppata,,,,,7,55,0,A,3,False,0,170
+25416,172,1,04:04,356,20,19,1761,BC Roma,1,5369,12,Arturs,Strautins,Stoppata subita,,,,,7,55,0,A,3,False,0,170
+25416,173,1,04:04,356,20,19,1761,BC Roma,1,5369,12,Arturs,Strautins,Rimbalzo offensivo,,,,,7,55,0,A,3,False,0,170
+25416,174,1,04:04,356,22,19,1761,BC Roma,1,5369,12,Arturs,Strautins,2 punti segnato,7,Appoggio a canestro,,,7,55,0,A,3,True,0,
+25416,175,1,03:50,370,22,19,1761,BC Roma,1,9436,22,Kelly,Olynyk,Fallo commesso,103,tiro,,,91,43,0,D,3,False,0,
+25416,176,1,03:50,370,22,19,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Fallo Subito,,,,,91,43,0,D,3,False,0,175
+25416,177,1,03:50,370,22,19,1761,BC Roma,1,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,
+25416,178,1,03:50,370,22,19,1761,BC Roma,1,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,177
+25416,179,1,03:50,370,22,19,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Uscita,,,,,,,,,,False,0,177
+25416,180,1,03:50,370,22,19,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Ingresso,,,,,,,,,,False,0,177
+25416,181,1,03:50,370,22,19,1761,BC Roma,1,9382,19,Marko,Simonovic,Ingresso,,,,,,,,,,False,0,
+25416,182,1,03:50,370,22,19,1761,BC Roma,1,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,181
+25416,183,1,03:50,370,22,20,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,184,1,03:50,370,22,21,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Tiro libero segnato,,,,,,,,A,7,False,0,183
+25416,185,1,03:36,384,22,21,1761,BC Roma,1,9382,19,Marko,Simonovic,2 punti sbagliato,7,Appoggio a canestro,1004,tip-in appoggio canestro miss,6,49,0,A,3,False,0,
+25416,186,1,03:36,384,22,21,1761,BC Roma,1,9382,19,Marko,Simonovic,Rimbalzo offensivo,,,,,6,49,0,A,3,False,0,185
+25416,187,1,03:36,384,22,21,1761,BC Roma,1,9382,19,Marko,Simonovic,2 punti sbagliato,7,Appoggio a canestro,,,6,49,0,A,3,False,0,
+25416,188,1,03:36,384,22,21,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,6,49,0,A,3,False,0,187
+25416,189,1,03:30,390,22,21,1761,BC Roma,1,9385,3,Paul,Watson,Fallo commesso,100,personale,,,96,74,0,D,2,False,0,
+25416,190,1,03:30,390,22,21,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,96,74,0,D,2,False,0,189
+25416,191,1,03:30,390,22,21,1761,BC Roma,1,9385,3,Paul,Watson,Uscita,,,,,,,,,,False,0,
+25416,192,1,03:30,390,22,21,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Ingresso,,,,,,,,,,False,0,191
+25416,193,1,03:24,396,22,21,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Palla persa,51,Palleggio,,,80,74,1,A,2,False,0,
+25416,194,1,03:24,396,22,21,1761,BC Roma,1,9384,10,Erik,Stevenson,Palla recuperata,,,,,80,74,1,A,2,False,0,193
+25416,195,1,03:19,401,24,21,1761,BC Roma,1,9384,10,Erik,Stevenson,2 punti segnato,8,Da penetrazione,,,5,54,0,A,3,True,0,
+25416,196,1,03:04,416,24,23,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti segnato,8,Da penetrazione,,,94,47,1,A,3,True,0,
+25416,197,1,03:04,416,24,23,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Fallo commesso,103,tiro,,,94,47,0,D,3,False,0,
+25416,198,1,03:04,416,24,23,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,94,47,0,D,3,False,0,197
+25416,199,1,03:04,416,24,23,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Uscita,,,,,,,,,,False,0,
+25416,200,1,03:04,416,24,23,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Ingresso,,,,,,,,,,False,0,199
+25416,201,1,03:04,416,24,23,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25416,202,1,03:04,416,24,23,1761,BC Roma,1,5369,12,Arturs,Strautins,Rimbalzo difensivo,,,,,,,,,,False,0,201
+25416,203,1,02:53,427,24,23,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti sbagliato,6,Arresto e tiro,,,31,42,0,A,9,False,0,
+25416,204,1,02:53,427,24,23,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Rimbalzo offensivo,,,,,31,42,0,A,9,False,0,203
+25416,205,1,02:39,441,26,23,1761,BC Roma,1,9382,19,Marko,Simonovic,2 punti segnato,4,Giro e Tiro,,,11,55,0,A,6,True,0,
+25416,206,1,02:22,458,26,23,1769,Tezenis Verona,0,9340,22,RJ,Melendez,3 punti sbagliato,6,Arresto e tiro,,,97,3,1,A,5,False,0,
+25416,207,1,02:22,458,26,23,1761,BC Roma,1,5369,12,Arturs,Strautins,Rimbalzo difensivo,,,,,97,3,1,A,5,False,0,206
+25416,208,1,02:14,466,26,23,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo commesso,103,tiro,,,9,18,1,D,2,False,0,
+25416,209,1,02:14,466,26,23,1761,BC Roma,1,9384,10,Erik,Stevenson,Fallo Subito,,,,,9,18,1,D,2,False,0,208
+25416,210,1,02:14,466,26,23,1761,BC Roma,1,9381,9,Trentyn,Flowers,Ingresso,,,,,,,,,,False,0,
+25416,211,1,02:14,466,26,23,1761,BC Roma,1,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,210
+25416,212,1,02:14,466,26,23,1769,Tezenis Verona,0,7411,3,Federico,Poser,Ingresso,,,,,,,,,,False,0,210
+25416,213,1,02:14,466,26,23,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Uscita,,,,,,,,,,False,0,210
+25416,214,1,02:14,466,27,23,1761,BC Roma,1,9384,10,Erik,Stevenson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,215,1,02:14,466,28,23,1761,BC Roma,1,9384,10,Erik,Stevenson,Tiro libero segnato,,,,,,,,A,7,False,0,214
+25416,216,1,02:14,466,28,23,1761,BC Roma,1,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,
+25416,217,1,02:14,466,28,23,1761,BC Roma,1,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,216
+25416,218,1,01:59,481,28,23,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti sbagliato,8,Da penetrazione,,,94,46,1,A,3,False,0,
+25416,219,1,01:59,481,28,23,1761,BC Roma,1,9381,9,Trentyn,Flowers,Rimbalzo difensivo,,,,,94,46,1,A,3,False,0,218
+25416,220,1,01:55,485,28,23,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo commesso,103,tiro,,,6,55,1,D,3,False,0,
+25416,221,1,01:55,485,28,23,1761,BC Roma,1,9381,9,Trentyn,Flowers,Fallo Subito,,,,,6,55,1,D,3,False,0,220
+25416,222,1,01:55,485,28,23,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Ingresso,,,,,,,,,,False,0,
+25416,223,1,01:55,485,28,23,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Uscita,,,,,,,,,,False,0,222
+25416,224,1,01:55,485,29,23,1761,BC Roma,1,9381,9,Trentyn,Flowers,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,225,1,01:55,485,29,23,1761,BC Roma,1,9381,9,Trentyn,Flowers,Tiro libero sbagliato,,,,,,,,A,7,False,0,224
+25416,226,1,01:55,485,29,23,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,,,,,,False,0,224
+25416,227,1,01:41,499,29,25,1769,Tezenis Verona,0,7411,3,Federico,Poser,2 punti segnato,11,Gancio,,,93,50,1,A,3,True,0,
+25416,228,1,01:23,517,31,25,1761,BC Roma,1,9380,11,Gerald,Ayayi,2 punti segnato,8,Da penetrazione,,,5,57,0,A,3,True,0,
+25416,229,1,01:23,517,31,25,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Assist,,,,,5,57,0,A,3,False,0,228
+25416,230,1,01:08,532,31,27,1769,Tezenis Verona,0,7411,3,Federico,Poser,2 punti segnato,7,Appoggio a canestro,,,93,53,1,A,3,True,0,
+25416,231,1,01:08,532,31,27,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Assist,,,,,93,53,1,A,3,False,0,230
+25416,232,1,00:55,545,31,27,1761,BC Roma,1,9380,11,Gerald,Ayayi,3 punti sbagliato,6,Arresto e tiro,,,7,98,0,A,5,False,0,
+25416,233,1,00:55,545,31,27,1769,Tezenis Verona,0,7411,3,Federico,Poser,Rimbalzo difensivo,,,,,7,98,1,D,5,False,0,232
+25416,234,1,00:41,559,31,27,1769,Tezenis Verona,0,7411,3,Federico,Poser,2 punti sbagliato,7,Appoggio a canestro,,,92,55,1,A,3,False,0,
+25416,235,1,00:41,559,31,27,1761,BC Roma,1,9380,11,Gerald,Ayayi,Rimbalzo difensivo,,,,,92,55,1,A,3,False,0,234
+25416,236,1,00:36,564,31,27,1761,BC Roma,1,6258,5,Corey,Davis,3 punti sbagliato,1,Tiro in sospensione,,,32,50,0,A,9,False,0,
+25416,237,1,00:36,564,31,27,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,32,50,0,A,9,False,0,236
+25416,238,1,00:26,574,31,27,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,94,48,1,A,3,False,0,
+25416,239,1,00:26,574,31,27,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Stoppata,,,,,94,48,1,A,3,False,0,238
+25416,240,1,00:26,574,31,27,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Stoppata subita,,,,,94,48,1,A,3,False,0,238
+25416,241,1,00:26,574,31,27,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo offensivo,,,,,94,48,1,A,3,False,0,238
+25416,242,1,00:26,574,31,29,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti segnato,7,Appoggio a canestro,,,94,48,1,A,3,True,0,
+25416,243,1,00:07,593,31,29,1761,BC Roma,1,9382,19,Marko,Simonovic,Fallo commesso,106,offensivo,,,9,33,0,A,2,False,0,
+25416,244,1,00:07,593,31,29,1761,BC Roma,1,9382,19,Marko,Simonovic,Palla persa,,,,,9,33,0,A,2,False,0,243
+25416,245,1,00:07,593,31,29,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Fallo Subito,,,,,9,33,0,A,2,False,0,243
+25416,246,1,00:07,593,31,29,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Ingresso,,,,,,,,,,False,0,
+25416,247,1,00:07,593,31,29,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Uscita,,,,,,,,,,False,0,246
+25416,248,1,00:01,599,31,29,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti sbagliato,8,Da penetrazione,,,91,49,1,A,3,False,0,
+25416,249,1,00:01,599,31,29,1761,BC Roma,1,9382,19,Marko,Simonovic,Rimbalzo difensivo,,,,,91,49,1,A,3,False,0,248
+25416,250,1,00:00,600,31,29,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25416,251,2,10:00,0,31,29,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25416,252,2,09:50,10,31,29,1761,BC Roma,1,9382,19,Marko,Simonovic,3 punti sbagliato,6,Arresto e tiro,,,23,86,0,A,10,False,0,
+25416,253,2,09:50,10,31,29,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Rimbalzo difensivo,,,,,23,86,0,A,10,False,0,252
+25416,254,2,09:31,29,31,29,1769,Tezenis Verona,0,7411,3,Federico,Poser,2 punti sbagliato,6,Arresto e tiro,,,76,52,1,A,7,False,0,
+25416,255,2,09:31,29,31,29,1761,BC Roma,1,9380,11,Gerald,Ayayi,Rimbalzo difensivo,,,,,76,52,1,A,7,False,0,254
+25416,256,2,09:24,36,33,29,1761,BC Roma,1,9381,9,Trentyn,Flowers,2 punti segnato,9,Schiacciata,,,5,51,0,A,3,True,1,
+25416,257,2,09:24,36,33,29,1761,BC Roma,1,9380,11,Gerald,Ayayi,Assist,,,,,5,51,0,A,3,False,0,256
+25416,258,2,09:11,49,33,31,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti segnato,8,Da penetrazione,,,95,47,1,A,3,True,0,
+25416,259,2,08:58,62,35,31,1761,BC Roma,1,9382,19,Marko,Simonovic,2 punti segnato,7,Appoggio a canestro,,,4,52,0,A,3,True,0,
+25416,260,2,08:58,62,35,31,1761,BC Roma,1,6258,5,Corey,Davis,Assist,,,,,4,52,0,A,3,False,0,259
+25416,261,2,08:45,75,35,31,1769,Tezenis Verona,0,7412,18,Federico,Zampini,2 punti sbagliato,9,Schiacciata,1005,stoppata,94,52,1,A,3,False,0,
+25416,262,2,08:45,75,35,31,1761,BC Roma,1,9381,9,Trentyn,Flowers,Stoppata,,,,,94,52,1,A,3,False,0,261
+25416,263,2,08:45,75,35,31,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Stoppata subita,,,,,94,52,1,A,3,False,0,261
+25416,264,2,08:45,75,35,31,1761,BC Roma,1,9381,9,Trentyn,Flowers,Rimbalzo difensivo,,,,,94,52,1,A,3,False,0,261
+25416,265,2,08:43,77,35,31,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo commesso,100,personale,,,74,7,1,A,10,False,0,
+25416,266,2,08:43,77,35,31,1761,BC Roma,1,9381,9,Trentyn,Flowers,Fallo Subito,,,,,74,7,1,A,10,False,0,265
+25416,267,2,08:31,89,35,31,1761,BC Roma,1,9380,11,Gerald,Ayayi,2 punti sbagliato,8,Da penetrazione,,,7,57,0,A,3,False,0,
+25416,268,2,08:31,89,35,31,1769,Tezenis Verona,0,7411,3,Federico,Poser,Rimbalzo difensivo,,,,,7,57,0,A,3,False,0,267
+25416,269,2,08:22,98,35,33,1769,Tezenis Verona,0,7411,3,Federico,Poser,2 punti segnato,7,Appoggio a canestro,,,94,52,1,A,3,True,0,
+25416,270,2,08:22,98,35,33,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,94,52,1,A,3,False,0,269
+25416,271,2,08:03,117,35,33,1761,BC Roma,1,9381,9,Trentyn,Flowers,2 punti sbagliato,8,Da penetrazione,,,5,65,0,A,4,False,0,
+25416,272,2,08:03,117,35,33,1769,Tezenis Verona,0,7411,3,Federico,Poser,Rimbalzo difensivo,,,,,5,65,0,A,4,False,0,271
+25416,273,2,07:54,126,35,33,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti sbagliato,6,Arresto e tiro,,,88,3,1,A,10,False,0,
+25416,274,2,07:54,126,35,33,1761,BC Roma,1,9382,19,Marko,Simonovic,Rimbalzo difensivo,,,,,88,3,1,A,10,False,0,273
+25416,275,2,07:42,138,35,33,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo commesso,100,personale,,,11,63,1,D,4,False,0,
+25416,276,2,07:42,138,35,33,1761,BC Roma,1,6258,5,Corey,Davis,Fallo Subito,,,,,11,63,1,D,4,False,0,275
+25416,277,2,07:42,138,35,33,1761,BC Roma,1,9379,7,Giovanni,Emejuru,Ingresso,,,,,,,,,,False,0,
+25416,278,2,07:42,138,35,33,1761,BC Roma,1,9382,19,Marko,Simonovic,Uscita,,,,,,,,,,False,0,277
+25416,279,2,07:42,138,35,33,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Ingresso,,,,,,,,,,False,0,
+25416,280,2,07:42,138,35,33,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,279
+25416,281,2,07:42,138,35,33,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Ingresso,,,,,,,,,,False,0,279
+25416,282,2,07:42,138,35,33,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Uscita,,,,,,,,,,False,0,279
+25416,283,2,07:39,141,35,33,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo commesso,100,personale,,,3,9,1,D,2,False,0,
+25416,284,2,07:39,141,35,33,1761,BC Roma,1,9380,11,Gerald,Ayayi,Fallo Subito,,,,,3,9,1,D,2,False,0,283
+25416,285,2,07:39,141,35,33,1761,BC Roma,1,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,
+25416,286,2,07:39,141,35,33,1761,BC Roma,1,6258,5,Corey,Davis,Uscita,,,,,,,,,,False,0,285
+25416,287,2,07:30,150,35,33,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Fallo commesso,100,personale,,,25,82,1,D,10,False,0,
+25416,288,2,07:30,150,35,33,1761,BC Roma,1,9380,11,Gerald,Ayayi,Fallo Subito,,,,,25,82,1,D,10,False,0,287
+25416,289,2,07:24,156,35,33,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,3 punti sbagliato,6,Arresto e tiro,,,25,80,0,A,10,False,0,
+25416,290,2,07:24,156,35,33,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,25,80,0,A,10,False,0,289
+25416,291,2,07:20,160,35,33,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti sbagliato,8,Da penetrazione,,,91,46,1,A,3,False,0,
+25416,292,2,07:20,160,35,33,1769,Tezenis Verona,0,7411,3,Federico,Poser,Rimbalzo offensivo,,,,,91,46,1,A,3,False,0,291
+25416,293,2,07:20,160,35,33,1761,BC Roma,1,9380,11,Gerald,Ayayi,Fallo commesso,100,personale,,,94,47,0,D,3,False,0,
+25416,294,2,07:20,160,35,33,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo Subito,,,,,94,47,0,D,3,False,0,293
+25416,295,2,07:09,171,35,33,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti sbagliato,6,Arresto e tiro,,,78,13,1,A,10,False,0,
+25416,296,2,07:09,171,35,33,1761,BC Roma,1,9381,9,Trentyn,Flowers,Rimbalzo difensivo,,,,,78,13,1,A,10,False,0,295
+25416,297,2,06:53,187,37,33,1761,BC Roma,1,9379,7,Giovanni,Emejuru,2 punti segnato,9,Schiacciata,,,5,53,0,A,3,True,1,
+25416,298,2,06:53,187,37,33,1761,BC Roma,1,6138,1,Niccolò,Mannion,Assist,,,,,5,53,0,A,3,False,0,297
+25416,299,2,06:31,209,37,33,1761,BC Roma,1,6138,1,Niccolò,Mannion,Fallo commesso,103,tiro,,,79,36,0,D,7,False,0,
+25416,300,2,06:31,209,37,33,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo Subito,,,,,79,36,0,D,7,False,0,299
+25416,301,2,06:31,209,37,33,1761,BC Roma,1,9385,3,Paul,Watson,Ingresso,,,,,,,,,,False,0,
+25416,302,2,06:31,209,37,33,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Uscita,,,,,,,,,,False,0,301
+25416,303,2,06:31,209,37,33,1769,Tezenis Verona,0,7411,3,Federico,Poser,Uscita,,,,,,,,,,False,0,301
+25416,304,2,06:31,209,37,33,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Ingresso,,,,,,,,,,False,0,301
+25416,305,2,06:31,209,37,33,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Uscita,,,,,,,,,,False,0,301
+25416,306,2,06:31,209,37,33,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Ingresso,,,,,,,,,,False,0,301
+25416,307,2,06:31,209,37,34,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,308,2,06:31,209,37,35,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Tiro libero segnato,,,,,,,,A,7,False,0,307
+25416,309,2,06:31,209,37,35,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Uscita,,,,,,,,,,False,0,
+25416,310,2,06:31,209,37,35,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Ingresso,,,,,,,,,,False,0,309
+25416,311,2,06:12,228,39,35,1761,BC Roma,1,6138,1,Niccolò,Mannion,2 punti segnato,1,Tiro in sospensione,,,12,90,0,A,4,False,0,
+25416,312,2,05:51,249,39,35,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti sbagliato,6,Arresto e tiro,,,76,87,1,A,8,False,0,
+25416,313,2,05:51,249,39,35,1769,Tezenis Verona,0,,,,,Rimbalzi offensivi di squadra,,,,,76,87,1,A,8,False,0,312
+25416,314,2,05:51,249,39,35,1761,BC Roma,1,6138,1,Niccolò,Mannion,Fallo commesso,100,personale,,,97,79,0,D,2,False,0,
+25416,315,2,05:51,249,39,35,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo Subito,,,,,97,79,0,D,2,False,0,314
+25416,316,2,05:51,249,39,35,1761,BC Roma,1,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,
+25416,317,2,05:51,249,39,35,1761,BC Roma,1,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,316
+25416,318,2,05:40,260,39,35,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Palla persa,51,Palleggio,,,75,67,1,A,7,False,0,
+25416,319,2,05:40,260,39,35,1761,BC Roma,1,9385,3,Paul,Watson,Palla recuperata,,,,,75,67,0,D,7,False,0,318
+25416,320,2,05:35,265,42,35,1761,BC Roma,1,9385,3,Paul,Watson,3 punti segnato,6,Arresto e tiro,,,30,33,1,D,9,False,0,
+25416,321,2,05:10,290,42,35,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti sbagliato,4,Giro e Tiro,,,80,17,1,A,4,False,0,
+25416,322,2,05:10,290,42,35,1761,BC Roma,1,9379,7,Giovanni,Emejuru,Rimbalzo difensivo,,,,,80,17,1,A,4,False,0,321
+25416,323,2,05:00,300,42,35,1761,BC Roma,1,9380,11,Gerald,Ayayi,2 punti sbagliato,8,Da penetrazione,,,5,52,0,A,3,False,0,
+25416,324,2,05:00,300,42,35,1761,BC Roma,1,,,,,Rimbalzi offensivi di squadra,,,,,5,52,0,A,3,False,0,323
+25416,325,2,05:00,300,42,35,1761,BC Roma,1,9381,9,Trentyn,Flowers,Uscita,,,,,,,,,,False,0,
+25416,326,2,05:00,300,42,35,1761,BC Roma,1,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,325
+25416,327,2,04:56,304,42,35,1761,BC Roma,1,9385,3,Paul,Watson,3 punti sbagliato,6,Arresto e tiro,,,20,90,0,A,10,False,0,
+25416,328,2,04:56,304,42,35,1761,BC Roma,1,,,,,Rimbalzi offensivi di squadra,,,,,20,90,0,A,10,False,0,327
+25416,329,2,04:55,305,42,35,1761,BC Roma,1,9380,11,Gerald,Ayayi,Palla persa,50,Passaggio sbagliato,,,9,18,0,A,2,False,0,
+25416,330,2,04:55,305,42,35,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Ingresso,,,,,,,,,,False,0,
+25416,331,2,04:55,305,42,35,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Uscita,,,,,,,,,,False,0,330
+25416,332,2,04:39,321,42,37,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti segnato,7,Appoggio a canestro,,,95,50,1,A,3,True,0,
+25416,333,2,04:39,321,42,37,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Assist,,,,,95,50,1,A,3,False,0,332
+25416,334,2,04:21,339,42,37,1761,BC Roma,1,6258,5,Corey,Davis,2 punti sbagliato,8,Da penetrazione,1003,tip-in appoggio canestro made,7,49,0,A,3,False,0,
+25416,335,2,04:21,339,42,37,1761,BC Roma,1,9379,7,Giovanni,Emejuru,Rimbalzo offensivo,,,,,7,49,0,A,3,False,0,334
+25416,336,2,04:21,339,44,37,1761,BC Roma,1,9379,7,Giovanni,Emejuru,2 punti segnato,7,Appoggio a canestro,,,7,49,0,A,3,True,0,
+25416,337,2,03:59,361,44,40,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti segnato,1,Tiro in sospensione,,,73,22,1,A,10,False,0,
+25416,338,2,03:59,361,44,40,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,73,22,1,A,10,False,0,337
+25416,339,2,03:45,375,44,40,1761,BC Roma,1,6258,5,Corey,Davis,3 punti sbagliato,1,Tiro in sospensione,,,27,77,0,A,10,False,0,
+25416,340,2,03:45,375,44,40,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,27,77,0,A,10,False,0,339
+25416,341,2,03:36,384,44,40,1769,Tezenis Verona,0,9340,22,RJ,Melendez,3 punti sbagliato,6,Arresto e tiro,,,72,21,1,A,10,False,0,
+25416,342,2,03:36,384,44,40,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo offensivo,,,,,72,21,1,A,10,False,0,341
+25416,343,2,03:36,384,44,40,1761,BC Roma,1,9379,7,Giovanni,Emejuru,Fallo commesso,100,personale,,,93,21,0,D,4,False,0,
+25416,344,2,03:36,384,44,40,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,93,21,0,D,4,False,0,343
+25416,345,2,03:36,384,44,40,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Ingresso,,,,,,,,,,False,0,
+25416,346,2,03:36,384,44,40,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Uscita,,,,,,,,,,False,0,345
+25416,347,2,03:31,389,44,40,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti sbagliato,6,Arresto e tiro,,,78,19,1,A,7,False,0,
+25416,348,2,03:31,389,44,40,1761,BC Roma,1,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,78,19,1,A,7,False,0,347
+25416,349,2,03:31,389,44,40,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo commesso,100,personale,,,71,84,1,A,8,False,0,
+25416,350,2,03:31,389,44,40,1761,BC Roma,1,9384,10,Erik,Stevenson,Fallo Subito,,,,,71,84,1,A,8,False,0,349
+25416,351,2,03:31,389,44,40,1761,BC Roma,1,9379,7,Giovanni,Emejuru,Uscita,,,,,,,,,,False,0,
+25416,352,2,03:31,389,44,40,1761,BC Roma,1,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,351
+25416,353,2,03:31,389,44,40,1761,BC Roma,1,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,351
+25416,354,2,03:31,389,44,40,1761,BC Roma,1,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,351
+25416,355,2,03:31,389,45,40,1761,BC Roma,1,9384,10,Erik,Stevenson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,356,2,03:31,389,46,40,1761,BC Roma,1,9384,10,Erik,Stevenson,Tiro libero segnato,,,,,,,,A,7,False,0,355
+25416,357,2,03:25,395,46,40,1761,BC Roma,1,9436,22,Kelly,Olynyk,Fallo commesso,103,tiro,,,91,54,0,D,3,False,0,
+25416,358,2,03:25,395,46,40,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Fallo Subito,,,,,91,54,0,D,3,False,0,357
+25416,359,2,03:25,395,46,41,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,360,2,03:25,395,46,42,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Tiro libero segnato,,,,,,,,A,7,False,0,359
+25416,361,2,03:09,411,46,42,1761,BC Roma,1,9436,22,Kelly,Olynyk,Palla persa,51,Palleggio,,,8,56,0,A,3,False,0,
+25416,362,2,03:09,411,46,42,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Palla recuperata,,,,,8,56,1,D,3,False,0,361
+25416,363,2,02:59,421,46,42,1761,BC Roma,1,9384,10,Erik,Stevenson,Fallo commesso,121,tecnico categoria 1,,,81,86,0,D,2,False,0,
+25416,364,2,02:59,421,46,42,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25416,365,2,02:59,421,46,43,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Tiro libero segnato,,,,,,,,A,7,False,0,364
+25416,366,2,02:45,435,46,43,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti sbagliato,3,Tiro in fadeaway,1004,tip-in appoggio canestro miss,69,40,1,A,9,False,0,
+25416,367,2,02:45,435,46,43,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo offensivo,,,,,69,40,1,A,9,False,0,366
+25416,368,2,02:45,435,46,43,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti sbagliato,7,Appoggio a canestro,,,69,40,1,A,7,False,0,
+25416,369,2,02:45,435,46,43,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo offensivo,,,,,69,40,1,A,9,False,0,368
+25416,370,2,02:45,435,46,45,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti segnato,,,,,72,40,1,A,7,False,0,
+25416,371,2,02:23,457,46,45,1761,BC Roma,1,9436,22,Kelly,Olynyk,Palla persa,51,Palleggio,,,11,54,0,A,6,False,0,
+25416,372,2,02:23,457,46,45,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Palla recuperata,,,,,11,54,0,A,6,False,0,371
+25416,373,2,02:16,464,46,45,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti sbagliato,8,Da penetrazione,1005,stoppata,94,49,1,A,3,False,0,
+25416,374,2,02:16,464,46,45,1761,BC Roma,1,9385,3,Paul,Watson,Stoppata,,,,,94,49,1,A,3,False,0,373
+25416,375,2,02:16,464,46,45,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Stoppata subita,,,,,94,49,1,A,3,False,0,373
+25416,376,2,02:16,464,46,45,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Rimbalzo offensivo,,,,,94,49,1,A,3,False,0,373
+25416,377,2,02:16,464,46,47,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti segnato,7,Appoggio a canestro,,,94,49,1,A,3,True,0,
+25416,378,2,02:03,477,46,47,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti sbagliato,6,Arresto e tiro,,,31,41,0,A,9,False,0,
+25416,379,2,02:03,477,46,47,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Rimbalzo difensivo,,,,,31,41,0,A,9,False,0,378
+25416,380,2,01:51,489,46,50,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti segnato,6,Arresto e tiro,,,71,33,1,A,9,False,0,
+25416,381,2,01:51,489,46,50,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,71,33,1,A,9,False,0,380
+25416,382,2,01:51,489,46,50,1761,BC Roma,1,,,,,Time Out,,,,,,,0,,,False,0,
+25416,383,2,01:34,506,46,50,1761,BC Roma,1,9385,3,Paul,Watson,2 punti sbagliato,7,Appoggio a canestro,,,5,58,0,A,3,False,0,
+25416,384,2,01:34,506,46,50,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,5,58,0,A,3,False,0,383
+25416,385,2,01:27,513,46,50,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti sbagliato,6,Arresto e tiro,,,97,97,1,A,1,False,0,
+25416,386,2,01:27,513,46,50,1769,Tezenis Verona,0,,,,,Rimbalzi offensivi di squadra,,,,,97,97,1,A,1,False,0,385
+25416,387,2,01:13,527,46,50,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti sbagliato,8,Da penetrazione,,,89,56,1,A,6,False,0,
+25416,388,2,01:13,527,46,50,1761,BC Roma,1,9385,3,Paul,Watson,Rimbalzo difensivo,,,,,89,56,1,A,6,False,0,387
+25416,389,2,01:03,537,48,50,1761,BC Roma,1,6258,5,Corey,Davis,2 punti segnato,6,Arresto e tiro,,,14,75,0,A,4,False,0,
+25416,390,2,00:42,558,48,50,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Palla persa,50,Passaggio sbagliato,,,89,46,1,A,6,False,0,
+25416,391,2,00:42,558,48,50,1761,BC Roma,1,9385,3,Paul,Watson,Palla recuperata,,,,,89,46,1,A,6,False,0,390
+25416,392,2,00:42,558,48,50,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Fallo commesso,103,tiro,,,7,57,1,D,3,False,0,
+25416,393,2,00:42,558,48,50,1761,BC Roma,1,9385,3,Paul,Watson,Fallo Subito,,,,,7,57,1,D,3,False,0,392
+25416,394,2,00:42,558,49,50,1761,BC Roma,1,9385,3,Paul,Watson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,395,2,00:42,558,49,50,1761,BC Roma,1,9382,19,Marko,Simonovic,Ingresso,,,,,,,,,,False,0,
+25416,396,2,00:42,558,49,50,1761,BC Roma,1,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,395
+25416,397,2,00:42,558,50,50,1761,BC Roma,1,9385,3,Paul,Watson,Tiro libero segnato,,,,,,,,A,7,False,0,394
+25416,398,2,00:42,558,50,50,1761,BC Roma,1,9385,3,Paul,Watson,Uscita,,,,,,,,,,False,0,
+25416,399,2,00:42,558,50,50,1761,BC Roma,1,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,398
+25416,400,2,00:20,580,50,52,1769,Tezenis Verona,0,6486,11,Andrea,Loro,2 punti segnato,8,Da penetrazione,,,92,51,1,A,3,True,0,
+25416,401,2,00:20,580,50,52,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,92,51,1,A,3,False,0,400
+25416,402,2,00:07,593,50,52,1761,BC Roma,1,6258,5,Corey,Davis,2 punti sbagliato,8,Da penetrazione,1004,tip-in appoggio canestro miss,10,60,0,A,6,False,0,
+25416,403,2,00:07,593,50,52,1761,BC Roma,1,9382,19,Marko,Simonovic,Rimbalzo offensivo,,,,,10,60,0,A,6,False,0,402
+25416,404,2,00:07,593,50,52,1761,BC Roma,1,9382,19,Marko,Simonovic,2 punti sbagliato,7,Appoggio a canestro,,,10,60,0,A,6,False,0,
+25416,405,2,00:07,593,50,52,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo difensivo,,,,,10,60,0,A,6,False,0,404
+25416,406,2,00:00,600,50,52,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25416,407,3,10:00,0,50,52,1761,BC Roma,1,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,
+25416,408,3,10:00,0,50,52,1761,BC Roma,1,9385,3,Paul,Watson,Ingresso,,,,,,,,,,False,0,407
+25416,409,3,10:00,0,50,52,1761,BC Roma,1,6258,5,Corey,Davis,Uscita,,,,,,,,,,False,0,407
+25416,410,3,10:00,0,50,52,1761,BC Roma,1,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,407
+25416,411,3,10:00,0,50,52,1761,BC Roma,1,9382,19,Marko,Simonovic,Uscita,,,,,,,,,,False,0,407
+25416,412,3,10:00,0,50,52,1761,BC Roma,1,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,407
+25416,413,3,10:00,0,50,52,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Ingresso,,,,,,,,,,False,0,407
+25416,414,3,10:00,0,50,52,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Uscita,,,,,,,,,,False,0,407
+25416,415,3,09:51,9,50,54,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti segnato,8,Da penetrazione,,,6,51,0,A,3,True,0,
+25416,416,3,09:39,21,53,54,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti segnato,1,Tiro in sospensione,,,72,25,1,A,10,False,0,
+25416,417,3,09:39,21,53,54,1761,BC Roma,1,6138,1,Niccolò,Mannion,Assist,,,,,72,25,1,A,10,False,0,416
+25416,418,3,09:39,21,53,54,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo commesso,103,tiro,,,72,25,0,D,10,False,0,
+25416,419,3,09:39,21,53,54,1761,BC Roma,1,9384,10,Erik,Stevenson,Fallo Subito,,,,,72,25,0,D,10,False,0,418
+25416,420,3,09:39,21,54,54,1761,BC Roma,1,9384,10,Erik,Stevenson,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,421,3,09:33,27,54,54,1769,Tezenis Verona,0,6486,11,Andrea,Loro,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,5,43,0,A,3,False,0,
+25416,422,3,09:33,27,54,54,1761,BC Roma,1,9384,10,Erik,Stevenson,Stoppata,,,,,5,43,0,A,3,False,0,421
+25416,423,3,09:33,27,54,54,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Stoppata subita,,,,,5,43,0,A,3,False,0,421
+25416,424,3,09:33,27,54,54,1769,Tezenis Verona,0,,,,,Rimbalzi offensivi di squadra,,,,,5,43,0,A,3,False,0,421
+25416,425,3,09:31,29,54,54,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Palla persa,50,Passaggio sbagliato,,,5,29,0,A,2,False,0,
+25416,426,3,09:31,29,54,54,1761,BC Roma,1,6138,1,Niccolò,Mannion,Palla recuperata,,,,,5,29,0,A,2,False,0,425
+25416,427,3,09:15,45,54,54,1761,BC Roma,1,9385,3,Paul,Watson,3 punti sbagliato,6,Arresto e tiro,,,98,3,1,A,5,False,0,
+25416,428,3,09:15,45,54,54,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Rimbalzo difensivo,,,,,98,3,1,A,5,False,0,427
+25416,429,3,08:54,66,54,54,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,3 punti sbagliato,1,Tiro in sospensione,,,28,78,0,A,10,False,0,
+25416,430,3,08:54,66,54,54,1761,BC Roma,1,5369,12,Arturs,Strautins,Rimbalzo difensivo,,,,,28,78,0,A,10,False,0,429
+25416,431,3,08:47,73,57,54,1761,BC Roma,1,6138,1,Niccolò,Mannion,3 punti segnato,6,Arresto e tiro,,,95,3,1,A,5,False,0,
+25416,432,3,08:47,73,57,54,1761,BC Roma,1,9384,10,Erik,Stevenson,Assist,,,,,95,3,1,A,5,False,0,431
+25416,433,3,08:22,98,57,54,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti sbagliato,6,Arresto e tiro,1004,tip-in appoggio canestro miss,23,88,0,A,10,False,0,
+25416,434,3,08:22,98,57,54,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo offensivo,,,,,23,88,0,A,10,False,0,433
+25416,435,3,08:22,98,57,54,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti sbagliato,7,Appoggio a canestro,,,23,88,0,A,4,False,0,
+25416,436,3,08:22,98,57,54,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo offensivo,,,,,23,88,0,A,10,False,0,435
+25416,437,3,08:22,98,57,56,1769,Tezenis Verona,0,9349,10,Mike,Tobey,2 punti segnato,7,Appoggio a canestro,,,23,88,0,A,4,False,0,
+25416,438,3,08:09,111,57,56,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti sbagliato,6,Arresto e tiro,,,70,35,1,A,9,False,0,
+25416,439,3,08:09,111,57,56,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,70,35,1,A,9,False,0,438
+25416,440,3,08:04,116,57,56,1761,BC Roma,1,9384,10,Erik,Stevenson,Fallo commesso,100,personale,,,31,74,1,D,9,False,0,
+25416,441,3,08:04,116,57,56,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo Subito,,,,,31,74,1,D,9,False,0,440
+25416,442,3,07:47,133,57,56,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti sbagliato,6,Arresto e tiro,,,31,49,0,A,9,False,0,
+25416,443,3,07:47,133,57,56,1761,BC Roma,1,,,,,Rimbalzi difensivi di squadra,,,,,31,49,0,A,9,False,0,442
+25416,444,3,07:47,133,57,56,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Fallo commesso,100,personale,,,12,25,0,A,2,False,0,
+25416,445,3,07:47,133,57,56,1761,BC Roma,1,9436,22,Kelly,Olynyk,Fallo Subito,,,,,12,25,0,A,2,False,0,444
+25416,446,3,07:37,143,57,56,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo commesso,100,personale,,,81,53,0,D,6,False,0,
+25416,447,3,07:37,143,57,56,1761,BC Roma,1,6138,1,Niccolò,Mannion,Fallo Subito,,,,,81,53,1,A,6,False,0,446
+25416,448,3,07:37,143,57,56,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,
+25416,449,3,07:37,143,57,56,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Ingresso,,,,,,,,,,False,0,448
+25416,450,3,07:28,152,57,56,1761,BC Roma,1,6138,1,Niccolò,Mannion,2 punti sbagliato,5,Tiro in Step Back,,,80,50,1,A,6,False,0,
+25416,451,3,07:28,152,57,56,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,80,50,1,A,6,False,0,450
+25416,452,3,07:18,162,57,59,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti segnato,6,Arresto e tiro,,,23,84,0,A,10,False,0,
+25416,453,3,07:18,162,57,59,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,23,84,0,A,10,False,0,452
+25416,454,3,07:01,179,59,59,1761,BC Roma,1,9436,22,Kelly,Olynyk,2 punti segnato,7,Appoggio a canestro,,,91,54,1,A,3,True,0,
+25416,455,3,07:01,179,59,59,1761,BC Roma,1,9384,10,Erik,Stevenson,Assist,,,,,91,54,1,A,3,False,0,454
+25416,456,3,06:48,192,59,61,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,2 punti segnato,8,Da penetrazione,,,6,47,0,A,3,True,0,
+25416,457,3,06:28,212,59,61,1761,BC Roma,1,6138,1,Niccolò,Mannion,2 punti sbagliato,5,Tiro in Step Back,,,77,73,1,A,7,False,0,
+25416,458,3,06:28,212,59,61,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Rimbalzo difensivo,,,,,77,73,1,A,7,False,0,457
+25416,459,3,06:03,237,59,61,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Palla persa,51,Palleggio,,,9,65,0,A,4,False,0,
+25416,460,3,06:03,237,59,61,1761,BC Roma,1,6138,1,Niccolò,Mannion,Palla recuperata,,,,,9,65,0,A,4,False,0,459
+25416,461,3,05:54,246,59,61,1761,BC Roma,1,6138,1,Niccolò,Mannion,Palla persa,50,Passaggio sbagliato,,,96,93,1,A,2,False,0,
+25416,462,3,05:54,246,59,61,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Palla recuperata,,,,,96,93,1,A,2,False,0,461
+25416,463,3,05:54,246,59,61,1761,BC Roma,1,9385,3,Paul,Watson,Fallo commesso,100,personale,,,60,93,1,A,8,False,0,
+25416,464,3,05:54,246,59,61,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo Subito,,,,,60,93,1,A,8,False,0,463
+25416,503,3,05:54,246,59,61,1761,BC Roma,1,9385,3,Paul,Watson,Uscita,,,,,,,,,,False,0,
+25416,504,3,05:54,246,59,61,1761,BC Roma,1,9380,11,Gerald,Ayayi,Ingresso,,,,,,,,,,False,0,503
+25416,505,3,05:54,246,59,61,1769,Tezenis Verona,0,7411,3,Federico,Poser,Ingresso,,,,,,,,,,False,0,503
+25416,506,3,05:54,246,59,61,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Uscita,,,,,,,,,,False,0,503
+25416,507,3,05:54,246,59,61,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Uscita,,,,,,,,,,False,0,503
+25416,508,3,05:54,246,59,61,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Ingresso,,,,,,,,,,False,0,503
+25416,477,3,05:30,270,59,64,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti segnato,1,Tiro in sospensione,,,7,97,0,A,5,False,0,
+25416,478,3,05:30,270,59,64,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo commesso,100,personale,,,88,72,0,D,2,False,0,
+25416,479,3,05:30,270,59,64,1761,BC Roma,1,9436,22,Kelly,Olynyk,Fallo Subito,,,,,88,72,0,D,2,False,0,478
+25416,482,3,05:26,274,59,64,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Fallo commesso,100,personale,,,94,48,0,D,3,False,0,
+25416,483,3,05:26,274,59,64,1761,BC Roma,1,6138,1,Niccolò,Mannion,Fallo Subito,,,,,94,48,0,D,3,False,0,482
+25416,486,3,05:26,274,60,64,1761,BC Roma,1,6138,1,Niccolò,Mannion,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,487,3,05:26,274,61,64,1761,BC Roma,1,6138,1,Niccolò,Mannion,Tiro libero segnato,,,,,,,,A,7,False,0,486
+25416,488,3,04:55,305,61,67,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti segnato,6,Arresto e tiro,,,29,64,0,A,9,False,0,
+25416,489,3,04:55,305,61,67,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,29,64,0,A,7,False,0,488
+25416,490,3,04:34,326,63,67,1761,BC Roma,1,9384,10,Erik,Stevenson,2 punti segnato,7,Appoggio a canestro,,,94,50,1,A,3,True,0,
+25416,491,3,04:34,326,63,67,1761,BC Roma,1,9436,22,Kelly,Olynyk,Assist,,,,,94,50,1,A,3,False,0,490
+25416,492,3,04:09,351,63,67,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti sbagliato,6,Arresto e tiro,,,29,75,0,A,10,False,0,
+25416,493,3,04:09,351,63,67,1761,BC Roma,1,,,,,Rimbalzi difensivi di squadra,,,,,29,75,0,A,10,False,0,492
+25416,494,3,04:09,351,63,67,1761,BC Roma,1,9382,19,Marko,Simonovic,Ingresso,,,,,,,,,,False,0,
+25416,495,3,04:09,351,63,67,1761,BC Roma,1,9436,22,Kelly,Olynyk,Uscita,,,,,,,,,,False,0,494
+25416,496,3,04:09,351,63,67,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Ingresso,,,,,,,,,,False,0,494
+25416,497,3,04:09,351,63,67,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Uscita,,,,,,,,,,False,0,494
+25416,498,3,03:51,369,63,67,1761,BC Roma,1,5369,12,Arturs,Strautins,2 punti sbagliato,8,Da penetrazione,,,94,49,1,A,3,False,0,
+25416,499,3,03:51,369,63,67,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Rimbalzo difensivo,,,,,94,49,1,A,3,False,0,498
+25416,500,3,03:43,377,63,70,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti segnato,6,Arresto e tiro,,,4,97,0,A,5,False,0,
+25416,501,3,03:43,377,63,70,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Assist,,,,,4,97,0,A,5,False,0,500
+25416,502,3,03:42,378,63,70,1761,BC Roma,1,,,,,Time Out,,,,,,,1,,,False,0,
+25416,509,3,03:42,378,63,70,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Ingresso,,,,,,,,,,False,0,
+25416,510,3,03:42,378,63,70,1761,BC Roma,1,9381,9,Trentyn,Flowers,Ingresso,,,,,,,,,,False,0,
+25416,511,3,03:42,378,63,70,1761,BC Roma,1,9384,10,Erik,Stevenson,Uscita,,,,,,,,,,False,0,510
+25416,512,3,03:17,403,63,70,1761,BC Roma,1,6138,1,Niccolò,Mannion,3 punti sbagliato,6,Arresto e tiro,,,79,95,1,A,8,False,0,
+25416,513,3,03:17,403,63,70,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,79,95,1,A,8,False,0,512
+25416,514,3,03:08,412,63,70,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo commesso,106,offensivo,,,40,59,0,A,9,False,0,
+25416,515,3,03:08,412,63,70,1769,Tezenis Verona,0,7411,3,Federico,Poser,Palla persa,,,,,40,59,0,A,9,False,0,514
+25416,516,3,03:08,412,63,70,1761,BC Roma,1,9382,19,Marko,Simonovic,Fallo Subito,,,,,40,59,0,A,9,False,0,514
+25416,517,3,02:59,421,63,70,1761,BC Roma,1,9380,11,Gerald,Ayayi,2 punti sbagliato,8,Da penetrazione,,,94,54,1,A,3,False,0,
+25416,518,3,02:59,421,63,70,1769,Tezenis Verona,0,7411,3,Federico,Poser,Rimbalzo difensivo,,,,,94,54,1,A,3,False,0,517
+25416,519,3,02:58,422,63,70,1761,BC Roma,1,6138,1,Niccolò,Mannion,Uscita,,,,,,,,,,False,0,
+25416,520,3,02:58,422,63,70,1761,BC Roma,1,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,519
+25416,521,3,02:58,422,63,70,1769,Tezenis Verona,0,7411,3,Federico,Poser,Palla persa,54,Fuori dal campo,,,96,68,0,D,2,False,0,
+25416,522,3,02:49,431,63,70,1761,BC Roma,1,9382,19,Marko,Simonovic,3 punti sbagliato,6,Arresto e tiro,,,68,37,1,A,9,False,0,
+25416,523,3,02:49,431,63,70,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo difensivo,,,,,68,37,1,A,9,False,0,522
+25416,524,3,02:28,452,63,70,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti sbagliato,1,Tiro in sospensione,,,32,40,0,A,9,False,0,
+25416,525,3,02:28,452,63,70,1761,BC Roma,1,9381,9,Trentyn,Flowers,Rimbalzo difensivo,,,,,32,40,0,A,9,False,0,524
+25416,526,3,02:28,452,63,70,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Fallo commesso,100,personale,,,5,63,0,A,4,False,0,
+25416,527,3,02:28,452,63,70,1761,BC Roma,1,9381,9,Trentyn,Flowers,Fallo Subito,,,,,5,63,0,A,4,False,0,526
+25416,528,3,02:28,452,63,70,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Uscita,,,,,,,,,,False,0,
+25416,529,3,02:28,452,63,70,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Ingresso,,,,,,,,,,False,0,528
+25416,530,3,02:28,452,64,70,1761,BC Roma,1,9381,9,Trentyn,Flowers,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,531,3,02:28,452,65,70,1761,BC Roma,1,9381,9,Trentyn,Flowers,Tiro libero segnato,,,,,,,,A,7,False,0,530
+25416,532,3,02:01,479,65,70,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti sbagliato,8,Da penetrazione,,,7,53,0,A,3,False,0,
+25416,533,3,02:01,479,65,70,1761,BC Roma,1,9382,19,Marko,Simonovic,Rimbalzo difensivo,,,,,7,53,0,A,3,False,0,532
+25416,534,3,01:56,484,67,70,1761,BC Roma,1,9381,9,Trentyn,Flowers,2 punti segnato,8,Da penetrazione,,,95,49,1,A,3,True,0,
+25416,535,3,01:56,484,67,70,1761,BC Roma,1,9382,19,Marko,Simonovic,Assist,,,,,95,49,1,A,3,False,0,534
+25416,536,3,01:48,492,67,70,1761,BC Roma,1,5369,12,Arturs,Strautins,Fallo commesso,100,personale,,,17,13,1,D,2,False,0,
+25416,537,3,01:48,492,67,70,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo Subito,,,,,17,13,1,D,2,False,0,536
+25416,538,3,01:48,492,67,70,1761,BC Roma,1,5369,12,Arturs,Strautins,Uscita,,,,,,,,,,False,0,
+25416,539,3,01:48,492,67,70,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Ingresso,,,,,,,,,,False,0,538
+25416,540,3,01:39,501,67,73,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti segnato,6,Arresto e tiro,,,31,56,0,A,9,False,0,
+25416,541,3,01:39,501,67,73,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Assist,,,,,31,56,0,A,9,False,0,540
+25416,542,3,01:18,522,67,73,1761,BC Roma,1,9382,19,Marko,Simonovic,Palla persa,51,Palleggio,,,95,52,1,A,3,False,0,
+25416,543,3,01:18,522,67,73,1769,Tezenis Verona,0,7411,3,Federico,Poser,Palla recuperata,,,,,95,52,0,D,3,False,0,542
+25416,544,3,01:12,528,67,73,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,3 punti sbagliato,6,Arresto e tiro,,,32,27,0,A,9,False,0,
+25416,545,3,01:12,528,67,73,1761,BC Roma,1,9382,19,Marko,Simonovic,Rimbalzo difensivo,,,,,32,27,0,A,9,False,0,544
+25416,546,3,01:01,539,67,73,1761,BC Roma,1,6258,5,Corey,Davis,Palla persa,50,Passaggio sbagliato,,,69,77,1,A,8,False,0,
+25416,547,3,00:53,547,67,73,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Fallo commesso,100,personale,,,13,87,1,D,4,False,0,
+25416,548,3,00:53,547,67,73,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo Subito,,,,,13,87,1,D,4,False,0,547
+25416,549,3,00:40,560,67,73,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,2 punti sbagliato,6,Arresto e tiro,,,6,85,0,A,4,False,0,
+25416,550,3,00:40,560,67,73,1761,BC Roma,1,9380,11,Gerald,Ayayi,Rimbalzo difensivo,,,,,6,85,0,A,4,False,0,549
+25416,551,3,00:37,563,67,73,1761,BC Roma,1,9384,10,Erik,Stevenson,Ingresso,,,,,,,,,,False,0,
+25416,552,3,00:37,563,67,73,1761,BC Roma,1,9380,11,Gerald,Ayayi,Uscita,,,,,,,,,,False,0,551
+25416,553,3,00:19,581,67,73,1761,BC Roma,1,9381,9,Trentyn,Flowers,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,91,52,1,A,3,False,0,
+25416,554,3,00:19,581,67,73,1769,Tezenis Verona,0,7411,3,Federico,Poser,Stoppata,,,,,91,52,1,A,3,False,0,553
+25416,555,3,00:19,581,67,73,1761,BC Roma,1,9381,9,Trentyn,Flowers,Stoppata subita,,,,,91,52,1,A,3,False,0,553
+25416,556,3,00:19,581,67,73,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Rimbalzo difensivo,,,,,91,52,1,A,3,False,0,553
+25416,557,3,00:13,587,67,73,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Palla persa,53,Passi,,,11,58,0,A,6,False,0,
+25416,558,3,00:02,598,69,73,1761,BC Roma,1,6258,5,Corey,Davis,2 punti segnato,8,Da penetrazione,,,93,52,1,A,3,True,0,
+25416,559,3,00:00,600,69,73,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25416,560,4,10:00,0,69,73,1761,BC Roma,1,9379,7,Giovanni,Emejuru,Ingresso,,,,,,,,,,False,0,
+25416,561,4,10:00,0,69,73,1761,BC Roma,1,9382,19,Marko,Simonovic,Uscita,,,,,,,,,,False,0,560
+25416,562,4,10:00,0,69,73,1769,Tezenis Verona,0,9444,50,Milan,Barbitch,Uscita,,,,,,,,,,False,0,560
+25416,563,4,10:00,0,69,73,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Ingresso,,,,,,,,,,False,0,560
+25416,564,4,10:00,0,69,73,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25416,565,4,09:51,9,69,73,1761,BC Roma,1,6258,5,Corey,Davis,Palla persa,50,Passaggio sbagliato,,,67,37,1,A,9,False,0,
+25416,566,4,09:40,20,69,76,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti segnato,6,Arresto e tiro,,,25,21,0,A,9,False,0,
+25416,567,4,09:40,20,69,76,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Assist,,,,,25,21,0,A,7,False,0,566
+25416,568,4,09:25,35,69,76,1761,BC Roma,1,6258,5,Corey,Davis,Palla persa,50,Passaggio sbagliato,,,76,94,1,A,8,False,0,
+25416,569,4,09:25,35,69,76,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Palla recuperata,,,,,76,94,1,A,8,False,0,568
+25416,570,4,09:21,39,69,76,1761,BC Roma,1,9379,7,Giovanni,Emejuru,Fallo commesso,103,tiro,,,11,73,1,D,4,False,0,
+25416,571,4,09:21,39,69,76,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo Subito,,,,,11,73,1,D,4,False,0,570
+25416,572,4,09:21,39,69,76,1761,BC Roma,1,5369,12,Arturs,Strautins,Ingresso,,,,,,,,,,False,0,
+25416,573,4,09:21,39,69,76,1761,BC Roma,1,3710,24,Andrea,Mezzanotte,Uscita,,,,,,,,,,False,0,572
+25416,574,4,09:21,39,69,77,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Tiro libero segnato,,,,,,,,A,7,False,0,
+25416,575,4,09:21,39,69,77,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Tiro libero sbagliato,,,,,,,,A,7,False,0,574
+25416,576,4,09:21,39,69,77,1761,BC Roma,1,9381,9,Trentyn,Flowers,Rimbalzo difensivo,,,,,,,,,,False,0,574
+25416,577,4,09:02,58,69,77,1761,BC Roma,1,6258,5,Corey,Davis,2 punti sbagliato,8,Da penetrazione,,,94,49,1,A,3,False,0,
+25416,578,4,09:02,58,69,77,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,94,49,1,A,3,False,0,577
+25416,579,4,08:58,62,69,77,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti sbagliato,8,Da penetrazione,,,3,47,0,A,3,False,0,
+25416,580,4,08:58,62,69,77,1761,BC Roma,1,,,,,Rimbalzi difensivi di squadra,,,,,3,47,0,A,3,False,0,579
+25416,581,4,08:58,62,69,77,1761,BC Roma,1,6138,1,Niccolò,Mannion,Ingresso,,,,,,,,,,False,0,
+25416,582,4,08:58,62,69,77,1761,BC Roma,1,6258,5,Corey,Davis,Uscita,,,,,,,,,,False,0,581
+25416,583,4,08:46,74,69,77,1769,Tezenis Verona,0,7411,3,Federico,Poser,Fallo commesso,100,personale,,,93,47,0,D,3,False,0,
+25416,584,4,08:46,74,69,77,1761,BC Roma,1,9381,9,Trentyn,Flowers,Fallo Subito,,,,,93,47,0,D,3,False,0,583
+25416,585,4,08:40,80,71,77,1761,BC Roma,1,9384,10,Erik,Stevenson,2 punti segnato,4,Giro e Tiro,,,95,77,1,A,2,False,0,
+25416,586,4,08:19,101,71,79,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,2 punti segnato,8,Da penetrazione,,,6,57,0,A,3,True,0,
+25416,587,4,08:02,118,71,79,1761,BC Roma,1,9381,9,Trentyn,Flowers,2 punti sbagliato,7,Appoggio a canestro,,,93,56,1,A,3,False,0,
+25416,588,4,08:02,118,71,79,1769,Tezenis Verona,0,7411,3,Federico,Poser,Stoppata,,,,,93,56,0,D,3,False,0,587
+25416,589,4,08:02,118,71,79,1761,BC Roma,1,9381,9,Trentyn,Flowers,Stoppata subita,,,,,93,56,1,A,3,False,0,587
+25416,590,4,08:02,118,71,79,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo difensivo,,,,,93,56,0,D,3,False,0,587
+25416,591,4,07:56,124,71,79,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,3 punti sbagliato,6,Arresto e tiro,1003,tip-in appoggio canestro made,22,14,0,A,8,False,0,
+25416,592,4,07:56,124,71,79,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo offensivo,,,,,22,14,0,A,8,False,0,591
+25416,593,4,07:56,124,71,81,1769,Tezenis Verona,0,9340,22,RJ,Melendez,2 punti segnato,7,Appoggio a canestro,,,22,14,0,A,2,False,0,
+25416,594,4,07:53,127,71,81,1761,BC Roma,1,,,,,Time Out,,,,,,,1,,,False,0,
+25416,595,4,07:53,127,71,81,1761,BC Roma,1,6258,5,Corey,Davis,Ingresso,,,,,,,,,,False,0,
+25416,596,4,07:53,127,71,81,1761,BC Roma,1,9381,9,Trentyn,Flowers,Uscita,,,,,,,,,,False,0,595
+25416,597,4,07:53,127,71,81,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Ingresso,,,,,,,,,,False,0,595
+25416,598,4,07:53,127,71,81,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Uscita,,,,,,,,,,False,0,595
+25416,599,4,07:37,143,71,81,1761,BC Roma,1,5369,12,Arturs,Strautins,3 punti sbagliato,6,Arresto e tiro,,,80,92,1,A,8,False,0,
+25416,600,4,07:37,143,71,81,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo difensivo,,,,,80,92,1,A,8,False,0,599
+25416,601,4,07:25,155,71,83,1769,Tezenis Verona,0,7411,3,Federico,Poser,2 punti segnato,7,Appoggio a canestro,,,4,56,0,A,3,True,0,
+25416,602,4,07:25,155,71,83,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Assist,,,,,4,56,0,A,3,False,0,601
+25416,603,4,07:24,156,71,83,1761,BC Roma,1,9379,7,Giovanni,Emejuru,Uscita,,,,,,,,,,False,0,
+25416,604,4,07:24,156,71,83,1761,BC Roma,1,9436,22,Kelly,Olynyk,Ingresso,,,,,,,,,,False,0,603
+25416,605,4,07:04,176,74,83,1761,BC Roma,1,6258,5,Corey,Davis,3 punti segnato,6,Arresto e tiro,,,74,83,1,A,8,False,0,
+25416,606,4,07:04,176,74,83,1761,BC Roma,1,9436,22,Kelly,Olynyk,Assist,,,,,74,83,1,A,8,False,0,605
+25416,607,4,06:50,190,74,83,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti sbagliato,6,Arresto e tiro,,,29,35,0,A,9,False,0,
+25416,608,4,06:50,190,74,83,1761,BC Roma,1,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,29,35,0,A,7,False,0,607
+25416,609,4,06:44,196,74,83,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo commesso,100,personale,,,94,50,0,D,3,False,0,
+25416,610,4,06:44,196,74,83,1761,BC Roma,1,5369,12,Arturs,Strautins,Fallo Subito,,,,,94,50,1,A,3,False,0,609
+25416,611,4,06:36,204,76,83,1761,BC Roma,1,6138,1,Niccolò,Mannion,2 punti segnato,8,Da penetrazione,,,93,55,1,A,3,True,0,
+25416,612,4,06:36,204,76,83,1769,Tezenis Verona,0,7411,3,Federico,Poser,Uscita,,,,,,,,,,False,0,
+25416,613,4,06:36,204,76,83,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Ingresso,,,,,,,,,,False,0,612
+25416,614,4,06:36,204,76,83,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Ingresso,,,,,,,,,,False,0,
+25416,615,4,06:36,204,76,83,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,614
+25416,616,4,06:36,204,76,83,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Ingresso,,,,,,,,,,False,0,
+25416,617,4,06:36,204,76,83,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Uscita,,,,,,,,,,False,0,616
+25416,618,4,06:19,221,76,86,1769,Tezenis Verona,0,9349,10,Mike,Tobey,3 punti segnato,6,Arresto e tiro,,,28,26,0,A,9,False,0,
+25416,619,4,06:19,221,76,86,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Assist,,,,,28,26,0,A,9,False,0,618
+25416,620,4,06:06,234,79,86,1761,BC Roma,1,6138,1,Niccolò,Mannion,3 punti segnato,1,Tiro in sospensione,,,71,27,1,A,9,False,0,
+25416,621,4,05:40,260,79,86,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti sbagliato,7,Appoggio a canestro,,,8,56,0,A,3,False,0,
+25416,622,4,05:40,260,79,86,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Rimbalzo offensivo,,,,,8,56,0,A,3,False,0,621
+25416,623,4,05:36,264,79,86,1769,Tezenis Verona,0,6486,11,Andrea,Loro,2 punti sbagliato,7,Appoggio a canestro,,,6,49,0,A,3,False,0,
+25416,624,4,05:36,264,79,86,1761,BC Roma,1,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,6,49,0,A,3,False,0,623
+25416,625,4,05:36,264,79,86,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Fallo commesso,100,personale,,,91,39,0,D,3,False,0,
+25416,626,4,05:36,264,79,86,1761,BC Roma,1,9384,10,Erik,Stevenson,Fallo Subito,,,,,91,39,0,D,3,False,0,625
+25416,627,4,05:36,264,79,86,1769,Tezenis Verona,0,106,14,Lorenzo,Ambrosin,Uscita,,,,,,,,,,False,0,
+25416,628,4,05:36,264,79,86,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Ingresso,,,,,,,,,,False,0,627
+25416,629,4,05:35,265,79,86,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,Fallo commesso,100,personale,,,65,56,0,D,9,False,0,
+25416,630,4,05:35,265,79,86,1761,BC Roma,1,6138,1,Niccolò,Mannion,Fallo Subito,,,,,65,56,0,D,9,False,0,629
+25416,631,4,05:20,280,79,86,1761,BC Roma,1,5369,12,Arturs,Strautins,3 punti sbagliato,6,Arresto e tiro,1003,tip-in appoggio canestro made,93,4,1,A,5,False,0,
+25416,632,4,05:20,280,79,86,1761,BC Roma,1,9436,22,Kelly,Olynyk,Rimbalzo offensivo,,,,,93,4,1,A,5,False,0,631
+25416,633,4,05:20,280,81,86,1761,BC Roma,1,9436,22,Kelly,Olynyk,2 punti segnato,7,Appoggio a canestro,,,93,4,1,A,4,False,0,
+25416,634,4,05:20,280,81,86,1769,Tezenis Verona,0,,,,,Time Out,,,,,,,0,,,False,0,
+25416,635,4,04:59,301,81,88,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti segnato,8,Da penetrazione,,,7,48,0,A,3,True,0,
+25416,636,4,04:41,319,83,88,1761,BC Roma,1,6138,1,Niccolò,Mannion,2 punti segnato,2,Tiro in corsa,,,92,24,1,A,4,False,0,
+25416,637,4,04:41,319,83,88,1761,BC Roma,1,9436,22,Kelly,Olynyk,Assist,,,,,92,24,1,A,4,False,0,636
+25416,638,4,04:15,345,83,88,1769,Tezenis Verona,0,7412,18,Federico,Zampini,3 punti sbagliato,6,Arresto e tiro,1006,violazione 24sec,28,30,0,A,9,False,0,
+25416,639,4,04:15,345,83,88,1769,Tezenis Verona,0,,,,,Palle perse di squadra,1006,violazione 24sec,,,28,30,0,A,9,False,0,
+25416,640,4,03:48,372,83,88,1761,BC Roma,1,9436,22,Kelly,Olynyk,Palla persa,51,Palleggio,,,93,49,1,A,3,False,0,
+25416,641,4,03:48,372,83,88,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Palla recuperata,,,,,93,49,1,A,3,False,0,640
+25416,642,4,03:25,395,83,88,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,3 punti sbagliato,6,Arresto e tiro,,,31,68,0,A,9,False,0,
+25416,643,4,03:25,395,83,88,1761,BC Roma,1,9436,22,Kelly,Olynyk,Rimbalzo difensivo,,,,,31,68,0,A,9,False,0,642
+25416,647,4,03:19,401,83,88,1761,BC Roma,1,6258,5,Corey,Davis,3 punti sbagliato,6,Arresto e tiro,1001,tip-in schiacciata made,82,5,1,A,10,False,0,
+25416,648,4,03:19,401,83,88,1761,BC Roma,1,9384,10,Erik,Stevenson,Rimbalzo offensivo,,,,,82,5,1,A,10,False,0,647
+25416,649,4,03:19,401,85,88,1761,BC Roma,1,9384,10,Erik,Stevenson,2 punti segnato,9,Schiacciata,,,82,5,1,A,4,False,1,
+25416,650,4,03:19,401,85,88,1769,Tezenis Verona,0,,,,,Time Out,,,,,,,0,,,False,0,
+25416,651,4,02:53,427,85,88,1769,Tezenis Verona,0,7412,18,Federico,Zampini,2 punti sbagliato,8,Da penetrazione,1005,stoppata,15,43,0,A,6,False,0,
+25416,652,4,02:53,427,85,88,1761,BC Roma,1,6138,1,Niccolò,Mannion,Stoppata,,,,,15,43,0,A,6,False,0,651
+25416,653,4,02:53,427,85,88,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Stoppata subita,,,,,15,43,0,A,6,False,0,651
+25416,654,4,02:53,427,85,88,1761,BC Roma,1,9384,10,Erik,Stevenson,Rimbalzo difensivo,,,,,15,43,0,A,6,False,0,651
+25416,655,4,02:36,444,85,88,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti sbagliato,6,Arresto e tiro,,,68,50,1,A,9,False,0,
+25416,656,4,02:36,444,85,88,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo difensivo,,,,,68,50,1,A,9,False,0,655
+25416,657,4,02:32,448,85,88,1761,BC Roma,1,5369,12,Arturs,Strautins,Fallo commesso,100,personale,,,20,78,1,D,4,False,0,
+25416,658,4,02:32,448,85,88,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Fallo Subito,,,,,20,78,1,D,4,False,0,657
+25416,659,4,02:21,459,85,88,1769,Tezenis Verona,0,6486,11,Andrea,Loro,3 punti sbagliato,3,Tiro in fadeaway,,,33,52,0,A,9,False,0,
+25416,660,4,02:21,459,85,88,1761,BC Roma,1,5369,12,Arturs,Strautins,Rimbalzo difensivo,,,,,33,52,0,A,9,False,0,659
+25416,661,4,02:11,469,85,88,1761,BC Roma,1,9436,22,Kelly,Olynyk,3 punti sbagliato,6,Arresto e tiro,,,68,44,1,A,9,False,0,
+25416,662,4,02:11,469,85,88,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Rimbalzo difensivo,,,,,68,44,1,A,9,False,0,661
+25416,663,4,01:57,483,85,88,1761,BC Roma,1,9436,22,Kelly,Olynyk,Fallo commesso,100,personale,,,42,25,1,D,8,False,0,
+25416,664,4,01:57,483,85,88,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Fallo Subito,,,,,42,25,1,D,8,False,0,663
+25416,665,4,01:57,483,85,88,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Uscita,,,,,,,,,,False,0,
+25416,666,4,01:57,483,85,88,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Ingresso,,,,,,,,,,False,0,665
+25416,667,4,01:44,496,85,88,1769,Tezenis Verona,0,9340,22,RJ,Melendez,3 punti sbagliato,6,Arresto e tiro,,,13,5,0,A,8,False,0,
+25416,668,4,01:44,496,85,88,1769,Tezenis Verona,0,9349,10,Mike,Tobey,Rimbalzo offensivo,,,,,13,5,0,A,8,False,0,667
+25416,669,4,01:43,497,85,88,1761,BC Roma,1,9436,22,Kelly,Olynyk,Fallo commesso,103,tiro,,,5,49,1,D,3,False,0,
+25416,670,4,01:43,497,85,88,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Fallo Subito,,,,,5,49,1,D,3,False,0,669
+25416,671,4,01:43,497,85,88,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25416,672,4,01:43,497,85,89,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Tiro libero segnato,,,,,,,,A,7,False,0,671
+25416,673,4,01:31,509,88,89,1761,BC Roma,1,9384,10,Erik,Stevenson,3 punti segnato,6,Arresto e tiro,,,95,97,1,A,1,False,0,
+25416,674,4,01:31,509,88,89,1761,BC Roma,1,6258,5,Corey,Davis,Assist,,,,,95,97,1,A,1,False,0,673
+25416,675,4,01:14,526,88,89,1769,Tezenis Verona,0,9349,10,Mike,Tobey,3 punti sbagliato,6,Arresto e tiro,,,32,50,0,A,9,False,0,
+25416,676,4,01:14,526,88,89,1761,BC Roma,1,6138,1,Niccolò,Mannion,Rimbalzo difensivo,,,,,32,50,0,A,9,False,0,675
+25416,677,4,01:07,533,88,89,1761,BC Roma,1,9384,10,Erik,Stevenson,2 punti sbagliato,1,Tiro in sospensione,,,76,48,1,A,7,False,0,
+25416,678,4,01:07,533,88,89,1769,Tezenis Verona,0,,,,,Rimbalzi difensivi di squadra,,,,,76,48,1,A,7,False,0,677
+25416,679,4,01:07,533,88,89,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Ingresso,,,,,,,,,,False,0,
+25416,680,4,01:07,533,88,89,1769,Tezenis Verona,0,9338,100,Jermaine,Samuels,Uscita,,,,,,,,,,False,0,679
+25416,681,4,00:50,550,88,89,1769,Tezenis Verona,0,9341,12,Andrew,Andrews,2 punti sbagliato,8,Da penetrazione,,,12,53,0,A,6,False,0,
+25416,682,4,00:50,550,88,89,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Rimbalzo offensivo,,,,,12,53,0,A,6,False,0,681
+25416,683,4,00:49,551,88,89,1769,Tezenis Verona,0,9340,22,RJ,Melendez,Palla persa,53,Passi,,,12,45,0,A,6,False,0,
+25416,684,4,00:34,566,88,89,1761,BC Roma,1,9384,10,Erik,Stevenson,Palla persa,54,Fuori dal campo,,,92,97,1,A,1,False,0,
+25416,685,4,00:16,584,88,89,1769,Tezenis Verona,0,,,,,Time Out,,,,,,,0,,,False,0,
+25416,686,4,00:16,584,88,89,1769,Tezenis Verona,0,7412,18,Federico,Zampini,Palla persa,50,Passaggio sbagliato,,,9,40,0,A,3,False,0,
+25416,687,4,00:16,584,88,89,1761,BC Roma,1,6138,1,Niccolò,Mannion,Palla recuperata,,,,,9,40,0,A,3,False,0,686
+25416,688,4,00:03,597,88,89,1761,BC Roma,1,9384,10,Erik,Stevenson,2 punti sbagliato,7,Appoggio a canestro,1005,stoppata,92,46,1,A,3,False,0,
+25416,689,4,00:03,597,88,89,1769,Tezenis Verona,0,6486,11,Andrea,Loro,Stoppata,,,,,92,46,1,A,3,False,0,688
+25416,690,4,00:03,597,88,89,1761,BC Roma,1,9384,10,Erik,Stevenson,Stoppata subita,,,,,92,46,1,A,3,False,0,688
+25416,691,4,00:03,597,88,89,1761,BC Roma,1,6138,1,Niccolò,Mannion,Rimbalzo offensivo,,,,,92,46,1,A,3,False,0,688
+25416,692,4,00:03,597,88,89,1761,BC Roma,1,5369,12,Arturs,Strautins,3 punti sbagliato,6,Arresto e tiro,1007,nessun rimbalzo,83,93,1,A,8,False,0,
+25416,693,4,00:00,600,88,89,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25421,103,1,10:00,0,0,0,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25421,104,1,10:00,0,0,0,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Palla contesa,,,,,,,1,,,False,0,
+25421,105,1,09:52,8,0,0,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Palla persa,50,Passaggio sbagliato,,,69,23,1,A,10,False,0,
+25421,106,1,09:52,8,0,0,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Palla recuperata,,,,,69,23,1,A,10,False,0,105
+25421,107,1,09:48,12,0,2,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,2 punti segnato,9,Schiacciata,500,contropiede,5,50,0,A,3,True,1,
+25421,108,1,09:27,33,2,2,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti segnato,5,Tiro in Step Back,,,87,13,1,A,4,False,0,
+25421,109,1,09:09,51,2,2,1766,Openjobmetis Varese,0,9337,3,David,Duke,3 punti sbagliato,1,Tiro in sospensione,,,7,4,0,A,1,False,0,
+25421,110,1,09:09,51,2,2,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Rimbalzo offensivo,,,,,7,4,0,A,1,False,0,109
+25421,111,1,09:04,56,2,2,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo commesso,100,personale,,,10,44,1,D,6,False,0,
+25421,112,1,09:04,56,2,2,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Fallo Subito,,,,,10,44,1,D,6,False,0,111
+25421,113,1,08:59,61,2,4,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,2 punti segnato,1,Tiro in sospensione,,,12,35,0,A,2,True,0,
+25421,114,1,08:59,61,2,4,1766,Openjobmetis Varese,0,9337,3,David,Duke,Assist,,,,,12,35,0,A,2,False,0,113
+25421,115,1,08:43,77,2,4,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti sbagliato,1,Tiro in sospensione,,,89,35,1,A,4,False,0,
+25421,116,1,08:43,77,2,4,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Rimbalzo difensivo,,,,,89,35,1,A,4,False,0,115
+25421,117,1,08:31,89,2,4,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti sbagliato,1,Tiro in sospensione,,,7,57,0,A,3,False,0,
+25421,118,1,08:31,89,2,4,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Rimbalzo offensivo,,,,,7,57,0,A,3,False,0,117
+25421,119,1,08:27,93,2,4,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti sbagliato,1,Tiro in sospensione,,,7,43,0,A,3,False,0,
+25421,120,1,08:27,93,2,4,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo difensivo,,,,,7,43,0,A,3,False,0,119
+25421,121,1,08:17,103,4,4,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,10,Alley-oop,,,93,51,1,A,3,True,0,
+25421,122,1,08:17,103,4,4,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,93,51,1,A,3,False,0,121
+25421,123,1,08:02,118,4,4,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti sbagliato,1,Tiro in sospensione,,,29,35,0,A,9,False,0,
+25421,124,1,08:02,118,4,4,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Rimbalzo offensivo,,,,,29,35,0,A,7,False,0,123
+25421,125,1,07:58,122,4,4,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Palla persa,50,Passaggio sbagliato,,,13,40,0,A,6,False,0,
+25421,126,1,07:58,122,4,4,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Palla recuperata,,,,,13,40,0,A,6,False,0,125
+25421,127,1,07:55,125,6,4,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,8,Da penetrazione,500,contropiede,92,55,1,A,3,True,0,
+25421,128,1,07:44,136,6,6,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,9,Schiacciata,,,5,50,0,A,3,True,1,
+25421,129,1,07:44,136,6,6,1766,Openjobmetis Varese,0,9337,3,David,Duke,Assist,,,,,5,50,0,A,3,False,0,128
+25421,130,1,07:37,143,6,6,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Fallo commesso,100,personale,,,61,95,0,D,8,False,0,
+25421,131,1,07:37,143,6,6,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Fallo Subito,,,,,61,95,0,D,8,False,0,130
+25421,132,1,07:33,147,6,6,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Palla persa,55,Infrazione di campo,,,52,89,1,A,8,False,0,
+25421,133,1,07:24,156,6,8,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,1,Tiro in sospensione,,,7,52,0,A,3,True,0,
+25421,134,1,07:24,156,6,8,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Assist,,,,,7,52,0,A,3,False,0,133
+25421,135,1,07:12,168,6,8,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Palla persa,54,Fuori dal campo,,,64,93,1,A,8,False,0,
+25421,136,1,07:07,173,6,8,1766,Openjobmetis Varese,0,9337,3,David,Duke,Palla persa,50,Passaggio sbagliato,,,31,63,0,A,9,False,0,
+25421,137,1,07:07,173,6,8,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Palla recuperata,,,,,31,63,0,A,9,False,0,136
+25421,138,1,07:03,177,6,8,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,80,10,1,A,10,False,0,
+25421,139,1,07:03,177,6,8,1766,Openjobmetis Varese,0,,,,,Rimbalzi difensivi di squadra,,,,,80,10,1,A,10,False,0,138
+25421,140,1,06:52,188,6,11,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,3 punti segnato,1,Tiro in sospensione,,,19,95,0,A,10,False,0,
+25421,141,1,06:52,188,6,11,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Assist,,,,,19,95,0,A,10,False,0,140
+25421,142,1,06:34,206,6,11,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Palla persa,50,Passaggio sbagliato,,,67,66,1,A,9,False,0,
+25421,143,1,06:34,206,6,11,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Palla recuperata,,,,,67,66,1,A,9,False,0,142
+25421,144,1,06:29,211,6,13,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,8,Da penetrazione,,,9,55,0,A,3,True,0,
+25421,145,1,06:29,211,6,13,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Assist,,,,,9,55,0,A,3,False,0,144
+25421,146,1,06:23,217,6,13,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,1,,,False,0,
+25421,147,1,06:23,217,6,13,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Uscita,,,,,,,,,,False,0,
+25421,148,1,06:23,217,6,13,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Ingresso,,,,,,,,,,False,0,147
+25421,149,1,06:17,223,6,13,1766,Openjobmetis Varese,0,9337,3,David,Duke,Fallo commesso,100,personale,,,72,88,0,D,8,False,0,
+25421,150,1,06:17,223,6,13,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Fallo Subito,,,,,72,88,0,D,8,False,0,149
+25421,151,1,06:17,223,6,13,1766,Openjobmetis Varese,0,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25421,152,1,06:17,223,6,13,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Ingresso,,,,,,,,,,False,0,151
+25421,153,1,06:09,231,6,13,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti sbagliato,1,Tiro in sospensione,,,88,51,1,A,6,False,0,
+25421,154,1,06:09,231,6,13,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Rimbalzo difensivo,,,,,88,51,1,A,6,False,0,153
+25421,155,1,05:59,241,6,15,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,9,Schiacciata,,,5,51,0,A,3,True,1,
+25421,156,1,05:59,241,6,15,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Assist,,,,,5,51,0,A,3,False,0,155
+25421,157,1,05:37,263,6,15,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti sbagliato,1,Tiro in sospensione,,,74,20,1,A,10,False,0,
+25421,158,1,05:37,263,6,15,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Rimbalzo difensivo,,,,,74,20,1,A,10,False,0,157
+25421,159,1,05:17,283,6,18,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,3 punti segnato,1,Tiro in sospensione,,,29,74,0,A,9,False,0,
+25421,160,1,05:04,296,6,18,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Fallo commesso,103,tiro,,,94,41,0,D,3,False,0,
+25421,161,1,05:04,296,6,18,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Fallo Subito,,,,,94,41,0,D,3,False,0,160
+25421,162,1,04:59,301,6,18,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Uscita,,,,,,,,,,False,0,
+25421,163,1,04:59,301,6,18,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,162
+25421,164,1,04:59,301,6,18,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Uscita,,,,,,,,,,False,0,162
+25421,165,1,04:59,301,6,18,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,162
+25421,166,1,04:59,301,7,18,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,167,1,04:59,301,8,18,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Tiro libero segnato,,,,,,,,A,7,False,0,166
+25421,168,1,04:45,315,8,20,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,8,Da penetrazione,,,7,54,0,A,3,True,0,
+25421,169,1,04:45,315,8,20,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Assist,,,,,7,54,0,A,3,False,0,168
+25421,170,1,04:33,327,8,20,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25421,171,1,04:33,327,8,20,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Uscita,,,,,,,,,,False,0,170
+25421,172,1,04:33,327,8,20,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,170
+25421,173,1,04:33,327,8,20,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,Ingresso,,,,,,,,,,False,0,170
+25421,174,1,04:33,327,8,20,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Fallo commesso,100,personale,,,80,23,0,D,4,False,0,
+25421,175,1,04:33,327,8,20,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Fallo Subito,,,,,80,23,0,D,4,False,0,174
+25421,176,1,04:33,327,8,20,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Palla persa,50,Passaggio sbagliato,,,89,68,1,A,2,False,0,
+25421,177,1,04:33,327,8,20,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Palla recuperata,,,,,89,68,1,A,2,False,0,176
+25421,178,1,04:29,331,8,23,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti segnato,1,Tiro in sospensione,500,contropiede,20,11,0,A,8,False,0,
+25421,179,1,04:29,331,8,23,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Assist,,,,,20,11,0,A,8,False,0,178
+25421,180,1,04:18,342,8,23,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti sbagliato,1,Tiro in sospensione,,,78,33,1,A,7,False,0,
+25421,181,1,04:18,342,8,23,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Rimbalzo difensivo,,,,,78,33,1,A,7,False,0,180
+25421,182,1,04:02,358,8,26,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti segnato,1,Tiro in sospensione,,,26,78,0,A,10,False,0,
+25421,183,1,03:59,361,8,26,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,1,,,False,0,
+25421,184,1,03:59,361,8,26,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Uscita,,,,,,,,,,False,0,
+25421,185,1,03:59,361,8,26,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Ingresso,,,,,,,,,,False,0,184
+25421,186,1,03:59,361,8,26,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Uscita,,,,,,,,,,False,0,184
+25421,187,1,03:59,361,8,26,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,184
+25421,188,1,03:59,361,8,26,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,184
+25421,189,1,03:59,361,8,26,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,184
+25421,190,1,03:42,378,11,26,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti segnato,1,Tiro in sospensione,,,75,82,1,A,8,False,0,
+25421,191,1,03:13,407,11,26,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Palla persa,51,Palleggio,,,16,80,0,A,4,False,0,
+25421,192,1,03:13,407,11,26,1766,Openjobmetis Varese,0,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,
+25421,193,1,03:13,407,11,26,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Uscita,,,,,,,,,,False,0,192
+25421,194,1,03:00,420,13,26,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,2 punti segnato,1,Tiro in sospensione,,,88,56,1,A,6,True,0,
+25421,195,1,02:51,429,13,26,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Fallo commesso,100,personale,,,38,29,1,D,9,False,0,
+25421,196,1,02:51,429,13,26,1766,Openjobmetis Varese,0,9337,3,David,Duke,Fallo Subito,,,,,38,29,1,D,9,False,0,195
+25421,197,1,02:51,429,13,26,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25421,198,1,02:51,429,13,26,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Ingresso,,,,,,,,,,False,0,197
+25421,199,1,02:51,429,13,26,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,Uscita,,,,,,,,,,False,0,197
+25421,200,1,02:51,429,13,26,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,197
+25421,201,1,02:35,445,13,29,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,3 punti segnato,1,Tiro in sospensione,,,14,5,0,A,8,False,0,
+25421,202,1,02:35,445,13,29,1766,Openjobmetis Varese,0,9337,3,David,Duke,Assist,,,,,14,5,0,A,8,False,0,201
+25421,203,1,02:24,456,13,29,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,92,43,1,A,3,False,0,
+25421,204,1,02:24,456,13,29,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Stoppata,,,,,92,43,1,A,3,False,0,203
+25421,205,1,02:24,456,13,29,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Stoppata subita,,,,,92,43,1,A,3,False,0,203
+25421,206,1,02:24,456,13,29,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Rimbalzo difensivo,,,,,92,43,1,A,3,False,0,203
+25421,207,1,02:18,462,13,29,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo commesso,100,personale,,,15,42,1,D,6,False,0,
+25421,208,1,02:18,462,13,29,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Fallo Subito,,,,,15,42,1,D,6,False,0,207
+25421,209,1,02:18,462,13,29,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Ingresso,,,,,,,,,,False,0,
+25421,210,1,02:18,462,13,29,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,209
+25421,211,1,02:12,468,13,29,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,3 punti sbagliato,1,Tiro in sospensione,,,16,7,0,A,8,False,0,
+25421,212,1,02:12,468,13,29,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Rimbalzo difensivo,,,,,16,7,0,A,8,False,0,211
+25421,213,1,01:55,485,13,29,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,3 punti sbagliato,1,Tiro in sospensione,,,69,51,1,A,9,False,0,
+25421,214,1,01:55,485,13,29,1766,Openjobmetis Varese,0,9337,3,David,Duke,Rimbalzo difensivo,,,,,69,51,1,A,9,False,0,213
+25421,215,1,01:46,494,13,29,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo commesso,100,personale,,,11,39,1,D,6,False,0,
+25421,216,1,01:46,494,13,29,1766,Openjobmetis Varese,0,9337,3,David,Duke,Fallo Subito,,,,,11,39,1,D,6,False,0,215
+25421,217,1,01:46,494,13,29,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Ingresso,,,,,,,,,,False,0,
+25421,218,1,01:46,494,13,29,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,217
+25421,219,1,01:38,502,13,29,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Palla persa,50,Passaggio sbagliato,,,22,76,0,A,7,False,0,
+25421,220,1,01:24,516,13,29,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,2 punti sbagliato,1,Tiro in sospensione,,,92,57,1,A,3,False,0,
+25421,221,1,01:24,516,13,29,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Rimbalzo difensivo,,,,,92,57,1,A,3,False,0,220
+25421,222,1,01:07,533,13,29,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,
+25421,223,1,01:07,533,13,29,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,222
+25421,224,1,01:06,534,13,29,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Palla persa,50,Passaggio sbagliato,,,8,59,0,A,3,False,0,
+25421,225,1,01:06,534,13,29,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Palla recuperata,,,,,8,59,0,A,3,False,0,224
+25421,226,1,01:02,538,15,29,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,2 punti segnato,8,Da penetrazione,,,92,46,1,A,3,True,0,
+25421,227,1,01:02,538,15,29,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Assist,,,,,92,46,1,A,3,False,0,226
+25421,229,1,00:43,557,15,32,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti segnato,1,Tiro in sospensione,,,28,27,0,A,9,False,0,
+25421,230,1,00:27,573,15,32,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Palla persa,50,Passaggio sbagliato,,,79,84,1,A,7,False,0,
+25421,231,1,00:27,573,15,32,1766,Openjobmetis Varese,0,9337,3,David,Duke,Palla recuperata,,,,,79,84,1,A,7,False,0,230
+25421,232,1,00:23,577,15,34,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,9,Schiacciata,500,contropiede,5,51,0,A,3,True,1,
+25421,233,1,00:23,577,15,34,1766,Openjobmetis Varese,0,9337,3,David,Duke,Assist,,,,,5,51,0,A,3,False,0,232
+25421,234,1,00:12,588,18,34,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti segnato,1,Tiro in sospensione,,,76,16,1,A,10,False,0,
+25421,235,1,00:12,588,18,34,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,76,16,1,A,10,False,0,234
+25421,236,1,00:00,600,18,34,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25421,237,2,10:00,0,18,34,1760,UNA Hotels Reggio Emilia,1,9352,2,Rob,Edwards,Uscita,,,,,,,,,,False,0,
+25421,238,2,10:00,0,18,34,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Ingresso,,,,,,,,,,False,0,237
+25421,239,2,10:00,0,18,34,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25421,240,2,09:42,18,18,36,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,1,Tiro in sospensione,,,11,53,0,A,6,True,0,
+25421,241,2,09:23,37,21,36,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,3 punti segnato,1,Tiro in sospensione,,,70,81,1,A,8,False,0,
+25421,242,2,09:23,37,21,36,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,70,81,1,A,8,False,0,241
+25421,243,2,09:23,37,21,36,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Fallo commesso,103,tiro,,,75,87,0,D,8,False,0,
+25421,244,2,09:23,37,21,36,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo Subito,,,,,75,87,0,D,8,False,0,243
+25421,245,2,09:23,37,21,36,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25421,246,2,09:23,37,21,36,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Rimbalzo difensivo,,,,,,,,,,False,0,245
+25421,249,2,09:04,56,21,38,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,2 punti segnato,7,Appoggio a canestro,,,12,54,0,A,6,True,0,
+25421,250,2,08:47,73,21,38,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Fallo commesso,103,tiro,,,89,58,0,D,6,False,0,
+25421,251,2,08:47,73,21,38,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo Subito,,,,,89,58,0,D,6,False,0,250
+25421,252,2,08:47,73,21,38,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25421,253,2,08:47,73,21,38,1766,Openjobmetis Varese,0,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,252
+25421,254,2,08:47,73,21,38,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Ingresso,,,,,,,,,,False,0,252
+25421,255,2,08:47,73,21,38,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,252
+25421,256,2,08:47,73,22,38,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,257,2,08:47,73,22,38,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Tiro libero sbagliato,,,,,,,,A,7,False,0,256
+25421,258,2,08:47,73,22,38,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Rimbalzo difensivo,,,,,,,,,,False,0,256
+25421,259,2,08:34,86,22,38,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Palla persa,50,Passaggio sbagliato,,,11,45,0,A,6,False,0,
+25421,260,2,08:34,86,22,38,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Palla recuperata,,,,,11,45,0,A,6,False,0,259
+25421,261,2,08:22,98,22,38,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,88,51,1,A,6,False,0,
+25421,262,2,08:22,98,22,38,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Stoppata,,,,,88,51,1,A,6,False,0,261
+25421,263,2,08:22,98,22,38,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Stoppata subita,,,,,88,51,1,A,6,False,0,261
+25421,264,2,08:22,98,22,38,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Rimbalzo difensivo,,,,,88,51,1,A,6,False,0,261
+25421,265,2,08:02,118,22,40,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,2 punti segnato,1,Tiro in sospensione,,,19,50,0,A,6,True,0,
+25421,266,2,07:52,128,22,40,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Fallo commesso,100,personale,,,85,53,0,D,6,False,0,
+25421,267,2,07:52,128,22,40,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo Subito,,,,,85,53,0,D,6,False,0,266
+25421,268,2,07:52,128,22,40,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Ingresso,,,,,,,,,,False,0,
+25421,269,2,07:52,128,22,40,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,268
+25421,270,2,07:52,128,22,40,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Uscita,,,,,,,,,,False,0,268
+25421,271,2,07:52,128,22,40,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Ingresso,,,,,,,,,,False,0,268
+25421,272,2,07:52,128,22,40,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Uscita,,,,,,,,,,False,0,268
+25421,273,2,07:52,128,22,40,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,268
+25421,274,2,07:35,145,22,40,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,3 punti sbagliato,1,Tiro in sospensione,,,72,13,1,A,10,False,0,
+25421,275,2,07:35,145,22,40,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Rimbalzo difensivo,,,,,72,13,1,A,10,False,0,274
+25421,276,2,07:15,165,22,40,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,3 punti sbagliato,1,Tiro in sospensione,,,6,3,0,A,1,False,0,
+25421,277,2,07:15,165,22,40,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Rimbalzo offensivo,,,,,6,3,0,A,1,False,0,276
+25421,278,2,07:05,175,22,40,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo commesso,100,personale,,,31,55,1,D,9,False,0,
+25421,279,2,07:05,175,22,40,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Fallo Subito,,,,,31,55,1,D,9,False,0,278
+25421,280,2,07:04,176,22,40,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Ingresso,,,,,,,,,,False,0,
+25421,281,2,07:04,176,22,40,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,280
+25421,282,2,06:51,189,22,40,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti sbagliato,1,Tiro in sospensione,,,31,24,0,A,8,False,0,
+25421,283,2,06:51,189,22,40,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,31,24,0,A,8,False,0,282
+25421,284,2,06:33,207,24,40,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,1,Tiro in sospensione,,,84,54,1,A,6,True,0,
+25421,285,2,06:07,233,24,43,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,3 punti segnato,1,Tiro in sospensione,,,31,78,0,A,10,False,0,
+25421,286,2,05:53,247,24,43,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Fallo commesso,100,personale,,,84,47,0,D,6,False,0,
+25421,287,2,05:53,247,24,43,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo Subito,,,,,84,47,0,D,6,False,0,286
+25421,288,2,05:53,247,24,43,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Uscita,,,,,,,,,,False,0,
+25421,289,2,05:53,247,24,43,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,288
+25421,290,2,05:53,247,24,43,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Uscita,,,,,,,,,,False,0,288
+25421,291,2,05:53,247,24,43,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Ingresso,,,,,,,,,,False,0,288
+25421,292,2,05:42,258,24,43,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti sbagliato,1,Tiro in sospensione,1004,tip-in appoggio canestro miss,81,47,1,A,6,False,0,
+25421,293,2,05:42,258,24,43,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo offensivo,,,,,81,47,1,A,6,False,0,292
+25421,294,2,05:42,258,24,43,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti sbagliato,7,Appoggio a canestro,,,81,47,1,A,6,False,0,
+25421,295,2,05:42,258,24,43,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Rimbalzo difensivo,,,,,81,47,1,A,6,False,0,294
+25421,296,2,05:32,268,24,43,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,3 punti sbagliato,1,Tiro in sospensione,,,33,66,0,A,9,False,0,
+25421,297,2,05:32,268,24,43,1760,UNA Hotels Reggio Emilia,1,,,,,Rimbalzi difensivi di squadra,,,,,33,66,0,A,9,False,0,296
+25421,298,2,05:16,284,24,43,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla persa,50,Passaggio sbagliato,,,84,49,1,A,6,False,0,
+25421,299,2,05:16,284,24,43,1766,Openjobmetis Varese,0,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,
+25421,300,2,05:16,284,24,43,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Uscita,,,,,,,,,,False,0,299
+25421,301,2,05:16,284,24,43,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,299
+25421,302,2,05:16,284,24,43,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,299
+25421,303,2,05:03,297,24,43,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Palla persa,50,Passaggio sbagliato,,,14,51,0,A,6,False,0,
+25421,304,2,05:03,297,24,43,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Palla recuperata,,,,,14,51,0,A,6,False,0,303
+25421,305,2,04:40,320,24,43,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,66,55,1,A,9,False,0,
+25421,306,2,04:40,320,24,43,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Rimbalzo difensivo,,,,,66,55,1,A,9,False,0,305
+25421,307,2,04:32,328,24,45,1766,Openjobmetis Varese,0,9337,3,David,Duke,2 punti segnato,1,Tiro in sospensione,,,19,67,0,A,4,False,0,
+25421,308,2,04:17,343,26,45,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,2 punti segnato,1,Tiro in sospensione,,,81,67,1,A,2,False,0,
+25421,309,2,04:05,355,26,45,1766,Openjobmetis Varese,0,9337,3,David,Duke,2 punti sbagliato,1,Tiro in sospensione,,,11,57,0,A,6,False,0,
+25421,310,2,04:05,355,26,45,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,11,57,0,A,6,False,0,309
+25421,311,2,03:58,362,26,45,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Fallo commesso,100,personale,,,62,55,0,D,9,False,0,
+25421,312,2,03:58,362,26,45,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Fallo Subito,,,,,62,55,0,D,9,False,0,311
+25421,313,2,03:58,362,26,45,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25421,314,2,03:58,362,26,45,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Ingresso,,,,,,,,,,False,0,313
+25421,315,2,03:58,362,26,45,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,313
+25421,316,2,03:58,362,26,45,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,313
+25421,317,2,03:58,362,26,45,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25421,318,2,03:58,362,26,45,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Tiro libero sbagliato,,,,,,,,A,7,False,0,317
+25421,319,2,03:58,362,26,45,1766,Openjobmetis Varese,0,,,,,Rimbalzi difensivi di squadra,,,,,,,,,,False,0,317
+25421,320,2,03:55,365,26,48,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,3 punti segnato,1,Tiro in sospensione,,,12,97,0,A,10,False,0,
+25421,321,2,03:55,365,26,48,1766,Openjobmetis Varese,0,9337,3,David,Duke,Assist,,,,,12,97,0,A,10,False,0,320
+25421,322,2,03:38,382,26,48,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,2 punti sbagliato,1,Tiro in sospensione,,,90,71,1,A,2,False,0,
+25421,323,2,03:38,382,26,48,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo offensivo,,,,,90,71,1,A,2,False,0,322
+25421,324,2,03:34,386,28,48,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,1,Tiro in sospensione,,,88,65,1,A,2,True,0,
+25421,325,2,03:15,405,28,50,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,1,Tiro in sospensione,,,14,55,0,A,6,True,0,
+25421,326,2,03:15,405,28,50,1766,Openjobmetis Varese,0,9337,3,David,Duke,Assist,,,,,14,55,0,A,6,False,0,325
+25421,327,2,02:50,430,28,50,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,3 punti sbagliato,1,Tiro in sospensione,,,68,28,1,A,9,False,0,
+25421,328,2,02:50,430,28,50,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Rimbalzo offensivo,,,,,68,28,1,A,9,False,0,327
+25421,329,2,02:46,434,30,50,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,2 punti segnato,1,Tiro in sospensione,,,88,47,1,A,6,True,0,
+25421,330,2,02:46,434,30,50,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,88,47,1,A,6,False,0,329
+25421,331,2,02:29,451,30,50,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Fallo commesso,103,tiro,,,32,36,1,D,9,False,0,
+25421,332,2,02:29,451,30,50,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Fallo Subito,,,,,32,36,1,D,9,False,0,331
+25421,333,2,02:29,451,30,50,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Uscita,,,,,,,,,,False,0,
+25421,334,2,02:29,451,30,50,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Ingresso,,,,,,,,,,False,0,333
+25421,335,2,02:29,451,30,50,1766,Openjobmetis Varese,0,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,333
+25421,336,2,02:29,451,30,50,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Ingresso,,,,,,,,,,False,0,333
+25421,337,2,02:29,451,30,51,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,338,2,02:29,451,30,52,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Tiro libero segnato,,,,,,,,A,7,False,0,337
+25421,339,2,02:29,451,30,53,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Tiro libero segnato,,,,,,,,A,7,False,0,337
+25421,340,2,02:29,451,30,53,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Assist,,,,,,,,,,False,0,337
+25421,341,2,02:20,460,30,53,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla persa,50,Passaggio sbagliato,,,81,71,1,A,2,False,0,
+25421,342,2,02:07,473,30,53,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,2 punti sbagliato,1,Tiro in sospensione,,,10,63,0,A,4,False,0,
+25421,343,2,02:07,473,30,53,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Rimbalzo difensivo,,,,,10,63,0,A,4,False,0,342
+25421,344,2,01:54,486,33,53,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti segnato,1,Tiro in sospensione,,,69,73,1,A,9,False,0,
+25421,345,2,01:31,509,33,53,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,3 punti sbagliato,1,Tiro in sospensione,,,30,79,0,A,10,False,0,
+25421,346,2,01:31,509,33,53,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,30,79,0,A,10,False,0,345
+25421,347,2,01:23,517,35,53,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,1,Tiro in sospensione,500,contropiede,88,60,1,A,6,True,0,
+25421,348,2,01:23,517,35,53,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Assist,,,500,contropiede,88,60,1,A,6,False,0,347
+25421,349,2,01:18,522,35,53,1766,Openjobmetis Varese,0,,,,,Time Out,,,,,,,0,,,False,0,
+25421,350,2,01:01,539,35,53,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Uscita,,,,,,,,,,False,0,
+25421,351,2,01:01,539,35,53,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,350
+25421,352,2,01:01,539,35,53,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,350
+25421,353,2,01:01,539,35,53,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,350
+25421,354,2,01:01,539,35,53,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,350
+25421,355,2,01:01,539,35,53,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,350
+25421,356,2,00:44,556,35,53,1766,Openjobmetis Varese,0,,,,,Time Out,,,,,,,0,,,False,0,
+25421,357,2,00:34,566,35,55,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,2 punti segnato,1,Tiro in sospensione,,,9,23,0,A,2,False,0,
+25421,358,2,00:16,584,38,55,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,3 punti segnato,1,Tiro in sospensione,,,80,6,1,A,10,False,0,
+25421,359,2,00:16,584,38,55,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Assist,,,,,80,6,1,A,10,False,0,358
+25421,360,2,00:05,595,38,55,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Palla persa,55,Infrazione di campo,,,44,53,0,A,9,False,0,
+25421,361,2,00:05,595,38,55,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Ingresso,,,,,,,,,,False,0,
+25421,362,2,00:05,595,38,55,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,361
+25421,363,2,00:05,595,40,55,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti segnato,1,Tiro in sospensione,,,89,49,1,A,6,True,0,
+25421,364,2,00:00,600,40,55,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25421,365,3,10:00,0,40,55,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Ingresso,,,,,,,,,,False,0,
+25421,366,3,10:00,0,40,55,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,365
+25421,367,3,10:00,0,40,55,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Uscita,,,,,,,,,,False,0,365
+25421,368,3,10:00,0,40,55,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Ingresso,,,,,,,,,,False,0,365
+25421,369,3,10:00,0,40,55,1766,Openjobmetis Varese,0,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,365
+25421,370,3,10:00,0,40,55,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Uscita,,,,,,,,,,False,0,365
+25421,371,3,10:00,0,40,55,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25421,372,3,09:44,16,40,55,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti sbagliato,1,Tiro in sospensione,1003,tip-in appoggio canestro made,8,82,0,A,4,False,0,
+25421,373,3,09:44,16,40,55,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo offensivo,,,,,8,82,0,A,4,False,0,372
+25421,374,3,09:44,16,42,55,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,7,Appoggio a canestro,,,8,82,0,A,4,False,0,
+25421,375,3,09:28,32,42,55,1766,Openjobmetis Varese,0,9337,3,David,Duke,Palla persa,50,Passaggio sbagliato,,,67,12,1,A,10,False,0,
+25421,376,3,09:28,32,42,55,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Palla recuperata,,,,,67,12,1,A,10,False,0,375
+25421,377,3,09:19,41,42,55,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,3 punti sbagliato,1,Tiro in sospensione,,,8,5,0,A,1,False,0,
+25421,378,3,09:19,41,42,55,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Rimbalzo offensivo,,,,,8,5,0,A,1,False,0,377
+25421,379,3,09:13,47,42,55,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,25,21,0,A,9,False,0,
+25421,380,3,09:13,47,42,55,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Rimbalzo difensivo,,,,,25,21,0,A,7,False,0,379
+25421,381,3,08:53,67,42,55,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti sbagliato,1,Tiro in sospensione,1001,tip-in schiacciata made,92,49,1,A,3,False,0,
+25421,382,3,08:53,67,42,55,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Rimbalzo offensivo,,,,,92,49,1,A,3,False,0,381
+25421,383,3,08:53,67,42,57,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,2 punti segnato,9,Schiacciata,,,92,49,1,A,3,True,1,
+25421,384,3,08:38,82,42,57,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,3 punti sbagliato,1,Tiro in sospensione,,,29,25,0,A,8,False,0,
+25421,385,3,08:38,82,42,57,1766,Openjobmetis Varese,0,9337,3,David,Duke,Rimbalzo difensivo,,,,,29,25,0,A,8,False,0,384
+25421,386,3,08:13,107,42,57,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,2 punti sbagliato,1,Tiro in sospensione,,,82,69,1,A,2,False,0,
+25421,387,3,08:13,107,42,57,1760,UNA Hotels Reggio Emilia,1,,,,,Rimbalzi difensivi di squadra,,,,,82,69,1,A,2,False,0,386
+25421,388,3,08:02,118,42,57,1766,Openjobmetis Varese,0,9337,3,David,Duke,Fallo commesso,100,personale,,,9,40,1,D,3,False,0,
+25421,389,3,08:02,118,42,57,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo Subito,,,,,9,40,1,D,3,False,0,388
+25421,390,3,07:57,123,44,57,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,9,Schiacciata,,,5,51,0,A,3,True,1,
+25421,391,3,07:57,123,44,57,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,5,51,0,A,3,False,0,390
+25421,392,3,07:38,142,44,57,1766,Openjobmetis Varese,0,9337,3,David,Duke,2 punti sbagliato,1,Tiro in sospensione,1005,stoppata,89,67,1,A,2,False,0,
+25421,393,3,07:38,142,44,57,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Stoppata,,,,,89,67,1,A,2,False,0,392
+25421,394,3,07:38,142,44,57,1766,Openjobmetis Varese,0,9337,3,David,Duke,Stoppata subita,,,,,89,67,1,A,2,False,0,392
+25421,395,3,07:38,142,44,57,1766,Openjobmetis Varese,0,,,,,Rimbalzi offensivi di squadra,,,,,89,67,1,A,2,False,0,392
+25421,396,3,07:37,143,44,57,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti sbagliato,1,Tiro in sospensione,,,77,84,1,A,8,False,0,
+25421,397,3,07:37,143,44,57,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Rimbalzo difensivo,,,,,77,84,1,A,8,False,0,396
+25421,398,3,07:15,165,44,57,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Fallo commesso,103,tiro,,,7,57,1,D,3,False,0,
+25421,399,3,07:15,165,44,57,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo Subito,,,,,7,57,1,D,3,False,0,398
+25421,400,3,07:15,165,44,57,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25421,401,3,07:15,165,44,57,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero sbagliato,,,,,,,,A,7,False,0,400
+25421,402,3,06:51,189,44,57,1766,Openjobmetis Varese,0,,,,,Palle perse di squadra,602,24 Secondi,,,70,28,1,A,9,False,0,
+25421,403,3,06:48,192,44,57,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Ingresso,,,,,,,,,,False,0,
+25421,404,3,06:48,192,44,57,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,403
+25421,405,3,06:37,203,44,57,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla persa,50,Passaggio sbagliato,,,12,29,0,A,2,False,0,
+25421,406,3,06:37,203,44,57,1766,Openjobmetis Varese,0,9337,3,David,Duke,Palla recuperata,,,,,12,29,0,A,2,False,0,405
+25421,407,3,06:30,210,44,60,1766,Openjobmetis Varese,0,9337,3,David,Duke,3 punti segnato,1,Tiro in sospensione,,,72,76,1,A,8,False,0,
+25421,408,3,06:30,210,44,60,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Assist,,,,,72,76,1,A,8,False,0,407
+25421,409,3,06:11,229,44,60,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Palla persa,50,Passaggio sbagliato,,,25,66,0,A,7,False,0,
+25421,410,3,06:11,229,44,60,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Palla recuperata,,,,,25,66,0,A,7,False,0,409
+25421,411,3,06:02,238,44,60,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo commesso,100,personale,,,82,78,0,D,2,False,0,
+25421,412,3,06:02,238,44,60,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Fallo Subito,,,,,82,78,0,D,2,False,0,411
+25421,413,3,06:02,238,44,60,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,
+25421,414,3,06:02,238,44,60,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,413
+25421,415,3,05:50,250,44,60,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Palla persa,51,Palleggio,,,71,31,1,A,9,False,0,
+25421,416,3,05:49,251,44,60,1766,Openjobmetis Varese,0,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25421,417,3,05:49,251,44,60,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Ingresso,,,,,,,,,,False,0,416
+25421,418,3,05:47,253,44,60,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Palla persa,55,Infrazione di campo,,,48,54,0,A,9,False,0,
+25421,419,3,05:42,258,44,60,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Uscita,,,,,,,,,,False,0,
+25421,420,3,05:42,258,44,60,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Ingresso,,,,,,,,,,False,0,419
+25421,421,3,05:37,263,44,60,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,3 punti sbagliato,1,Tiro in sospensione,,,75,17,1,A,10,False,0,
+25421,422,3,05:37,263,44,60,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Rimbalzo difensivo,,,,,75,17,1,A,10,False,0,421
+25421,423,3,05:28,272,44,60,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,3 punti sbagliato,1,Tiro in sospensione,,,29,34,0,A,9,False,0,
+25421,424,3,05:28,272,44,60,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Rimbalzo offensivo,,,,,29,34,0,A,9,False,0,423
+25421,425,3,05:18,282,44,60,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti sbagliato,1,Tiro in sospensione,,,7,45,0,A,3,False,0,
+25421,426,3,05:18,282,44,60,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Rimbalzo difensivo,,,,,7,45,0,A,3,False,0,425
+25421,427,3,05:10,290,44,62,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,9,Schiacciata,500,contropiede,95,50,1,A,3,True,1,
+25421,428,3,05:10,290,44,62,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Assist,,,500,contropiede,95,50,1,A,3,False,0,427
+25421,429,3,04:50,310,46,62,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,1,Tiro in sospensione,,,23,78,0,A,7,False,0,
+25421,430,3,04:31,329,46,65,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti segnato,1,Tiro in sospensione,,,74,82,1,A,8,False,0,
+25421,431,3,04:31,329,46,65,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo commesso,103,tiro,,,74,82,0,D,8,False,0,
+25421,432,3,04:31,329,46,65,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Fallo Subito,,,,,74,82,0,D,8,False,0,431
+25421,433,3,04:31,329,46,65,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,0,,,False,0,
+25421,434,3,04:31,329,46,65,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Ingresso,,,,,,,,,,False,0,
+25421,435,3,04:31,329,46,65,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Uscita,,,,,,,,,,False,0,434
+25421,436,3,04:31,329,46,65,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,434
+25421,437,3,04:31,329,46,65,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,434
+25421,438,3,04:31,329,46,65,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Uscita,,,,,,,,,,False,0,434
+25421,439,3,04:31,329,46,65,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,434
+25421,440,3,04:31,329,46,66,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,441,3,04:31,329,46,66,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,
+25421,442,3,04:31,329,46,66,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,441
+25421,443,3,04:21,339,46,66,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Fallo commesso,100,personale,,,30,35,1,D,9,False,0,
+25421,444,3,04:21,339,46,66,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo Subito,,,,,30,35,1,D,9,False,0,443
+25421,445,3,04:06,354,46,66,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla persa,50,Passaggio sbagliato,,,32,6,0,A,8,False,0,
+25421,446,3,04:06,354,46,66,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Palla recuperata,,,,,32,6,0,A,8,False,0,445
+25421,447,3,04:01,359,46,68,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,2 punti segnato,8,Da penetrazione,,,96,44,1,A,3,True,0,
+25421,448,3,04:01,359,46,68,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo commesso,103,tiro,,,96,44,0,D,3,False,0,
+25421,449,3,04:01,359,46,68,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Fallo Subito,,,,,96,44,0,D,3,False,0,448
+25421,450,3,04:01,359,46,69,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,451,3,03:56,364,46,69,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Fallo commesso,106,offensivo,,,29,30,0,A,9,False,0,
+25421,452,3,03:56,364,46,69,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Palla persa,,,,,29,30,0,A,9,False,0,451
+25421,453,3,03:56,364,46,69,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Fallo Subito,,,,,29,30,0,A,9,False,0,451
+25421,454,3,03:47,373,46,69,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo commesso,100,personale,,,78,44,0,D,7,False,0,
+25421,455,3,03:47,373,46,69,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Fallo Subito,,,,,78,44,0,D,7,False,0,454
+25421,456,3,03:47,373,46,69,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25421,457,3,03:47,373,46,70,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Tiro libero segnato,,,,,,,,A,7,False,0,456
+25421,458,3,03:47,373,46,70,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Ingresso,,,,,,,,,,False,0,
+25421,459,3,03:47,373,46,70,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,458
+25421,460,3,03:30,390,46,70,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Fallo commesso,100,personale,,,18,41,1,D,6,False,0,
+25421,461,3,03:30,390,46,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Fallo Subito,,,,,18,41,1,D,6,False,0,460
+25421,462,3,03:14,406,48,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,2 punti segnato,1,Tiro in sospensione,,,13,50,0,A,6,True,0,
+25421,463,3,02:53,427,48,70,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Palla persa,54,Fuori dal campo,,,61,96,1,A,8,False,0,
+25421,464,3,02:45,435,48,70,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Fallo commesso,121,tecnico categoria 1,,,25,50,1,D,7,False,0,
+25421,465,3,02:45,435,48,70,1766,Openjobmetis Varese,0,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,
+25421,466,3,02:45,435,48,70,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Uscita,,,,,,,,,,False,0,465
+25421,467,3,02:45,435,48,70,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,465
+25421,468,3,02:45,435,48,70,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,465
+25421,469,3,02:45,435,49,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,470,3,02:45,435,49,70,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Fallo commesso,100,personale,,,16,57,1,D,6,False,0,
+25421,471,3,02:45,435,49,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Fallo Subito,,,,,16,57,1,D,6,False,0,470
+25421,472,3,02:45,435,50,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,473,3,02:45,435,51,70,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Tiro libero segnato,,,,,,,,A,7,False,0,472
+25421,474,3,02:37,443,51,70,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,2 punti sbagliato,1,Tiro in sospensione,,,92,51,1,A,3,False,0,
+25421,475,3,02:37,443,51,70,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Rimbalzo difensivo,,,,,92,51,1,A,3,False,0,474
+25421,476,3,02:28,452,53,70,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,2 punti segnato,1,Tiro in sospensione,,,6,55,0,A,3,True,0,
+25421,477,3,02:05,475,53,73,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti segnato,1,Tiro in sospensione,,,73,81,1,A,8,False,0,
+25421,478,3,01:46,494,53,73,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti sbagliato,1,Tiro in sospensione,,,29,35,0,A,9,False,0,
+25421,479,3,01:46,494,53,73,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Rimbalzo difensivo,,,,,29,35,0,A,7,False,0,478
+25421,480,3,01:30,510,53,73,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Fallo commesso,100,personale,,,72,98,0,D,8,False,0,
+25421,481,3,01:30,510,53,73,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Fallo Subito,,,,,72,98,1,A,8,False,0,480
+25421,482,3,01:29,511,53,73,1760,UNA Hotels Reggio Emilia,1,314,0,Jaylen,Barford,Uscita,,,,,,,,,,False,0,
+25421,483,3,01:29,511,53,73,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Ingresso,,,,,,,,,,False,0,482
+25421,484,3,01:29,511,53,73,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Ingresso,,,,,,,,,,False,0,482
+25421,485,3,01:29,511,53,73,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,482
+25421,486,3,01:29,511,53,74,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,487,3,01:29,511,53,75,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Tiro libero segnato,,,,,,,,A,7,False,0,486
+25421,488,3,01:21,519,55,75,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,2 punti segnato,8,Da penetrazione,,,9,43,0,A,3,True,0,
+25421,489,3,01:01,539,55,78,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,3 punti segnato,1,Tiro in sospensione,,,86,5,1,A,10,False,0,
+25421,490,3,01:01,539,55,78,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Assist,,,,,86,5,1,A,10,False,0,489
+25421,491,3,00:42,558,58,78,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,3 punti segnato,1,Tiro in sospensione,,,24,15,0,A,8,False,0,
+25421,492,3,00:16,584,58,80,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,2 punti segnato,9,Schiacciata,,,95,50,1,A,3,True,1,
+25421,493,3,00:16,584,58,80,1766,Openjobmetis Varese,0,9337,3,David,Duke,Assist,,,,,95,50,1,A,3,False,0,492
+25421,494,3,00:00,600,58,80,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
+25421,495,4,10:00,0,58,80,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Uscita,,,,,,,,,,False,0,
+25421,496,4,10:00,0,58,80,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Ingresso,,,,,,,,,,False,0,495
+25421,497,4,10:00,0,58,80,,,,,,,,Inizio Tempo,,,,,,,,,,False,0,
+25421,498,4,09:46,14,58,80,1766,Openjobmetis Varese,0,9337,3,David,Duke,Palla persa,50,Passaggio sbagliato,,,84,49,1,A,6,False,0,
+25421,499,4,09:46,14,58,80,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla recuperata,,,,,84,49,1,A,6,False,0,498
+25421,500,4,09:41,19,58,80,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,2 punti sbagliato,1,Tiro in sospensione,,,9,56,0,A,3,False,0,
+25421,501,4,09:41,19,58,80,1766,Openjobmetis Varese,0,9337,3,David,Duke,Rimbalzo difensivo,,,,,9,56,0,A,3,False,0,500
+25421,502,4,09:34,26,58,80,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Palla persa,54,Fuori dal campo,,,82,68,1,A,2,False,0,
+25421,503,4,09:13,47,58,80,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti sbagliato,1,Tiro in sospensione,,,11,51,0,A,6,False,0,
+25421,504,4,09:13,47,58,80,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Rimbalzo difensivo,,,,,11,51,0,A,6,False,0,503
+25421,505,4,09:01,59,58,83,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,3 punti segnato,1,Tiro in sospensione,,,94,2,1,A,5,False,0,
+25421,506,4,09:01,59,58,83,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Assist,,,,,94,2,1,A,5,False,0,505
+25421,507,4,08:44,76,60,83,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,1,Tiro in sospensione,,,16,55,0,A,6,True,0,
+25421,508,4,08:44,76,60,83,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,16,55,0,A,6,False,0,507
+25421,509,4,08:24,96,60,86,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,3 punti segnato,1,Tiro in sospensione,,,93,98,1,A,1,False,0,
+25421,510,4,08:24,96,60,86,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Assist,,,,,93,98,1,A,1,False,0,509
+25421,511,4,08:07,113,60,86,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Fallo commesso,100,personale,,,10,39,1,D,6,False,0,
+25421,512,4,08:07,113,60,86,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Fallo Subito,,,,,10,39,1,D,6,False,0,511
+25421,513,4,08:07,113,60,86,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Ingresso,,,,,,,,,,False,0,
+25421,514,4,08:07,113,60,86,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Uscita,,,,,,,,,,False,0,513
+25421,515,4,08:07,113,60,86,1766,Openjobmetis Varese,0,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,513
+25421,516,4,08:07,113,60,86,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Ingresso,,,,,,,,,,False,0,513
+25421,517,4,08:07,113,60,86,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Uscita,,,,,,,,,,False,0,513
+25421,518,4,08:07,113,60,86,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,513
+25421,519,4,08:06,114,60,86,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,3 punti sbagliato,1,Tiro in sospensione,,,23,10,0,A,8,False,0,
+25421,520,4,08:06,114,60,86,1766,Openjobmetis Varese,0,,,,,Rimbalzi difensivi di squadra,,,,,23,10,0,A,8,False,0,519
+25421,521,4,07:45,135,60,86,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti sbagliato,1,Tiro in sospensione,,,68,78,1,A,8,False,0,
+25421,522,4,07:45,135,60,86,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo difensivo,,,,,68,78,1,A,8,False,0,521
+25421,523,4,07:45,135,60,86,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Palla persa,50,Passaggio sbagliato,,,35,38,0,A,9,False,0,
+25421,524,4,07:45,135,60,86,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Palla recuperata,,,,,35,38,0,A,9,False,0,523
+25421,527,4,07:41,139,60,86,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Fallo commesso,103,tiro,,,79,51,0,D,7,False,0,
+25421,528,4,07:41,139,60,86,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Fallo Subito,,,,,79,51,0,D,7,False,0,527
+25421,529,4,07:41,139,60,86,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25421,530,4,07:41,139,60,87,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Tiro libero segnato,,,,,,,,A,7,False,0,529
+25421,531,4,07:41,139,60,87,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Assist,,,,,,,,,,False,0,529
+25421,532,4,07:32,148,60,87,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,3 punti sbagliato,1,Tiro in sospensione,,,30,76,0,A,10,False,0,
+25421,533,4,07:32,148,60,87,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo offensivo,,,,,30,76,0,A,10,False,0,532
+25421,534,4,07:28,152,60,87,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti sbagliato,1,Tiro in sospensione,,,11,60,0,A,6,False,0,
+25421,535,4,07:28,152,60,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo offensivo,,,,,11,60,0,A,6,False,0,534
+25421,536,4,07:22,158,60,87,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Fallo commesso,103,tiro,,,16,61,1,D,6,False,0,
+25421,537,4,07:22,158,60,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo Subito,,,,,16,61,1,D,6,False,0,536
+25421,538,4,07:22,158,61,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,539,4,07:22,158,62,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero segnato,,,,,,,,A,7,False,0,538
+25421,540,4,07:13,167,62,87,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,3 punti sbagliato,1,Tiro in sospensione,,,65,37,1,A,9,False,0,
+25421,541,4,07:13,167,62,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Rimbalzo difensivo,,,,,65,37,1,A,9,False,0,540
+25421,542,4,06:51,189,62,87,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Palla contesa,,,,,,,0,,,False,0,
+25421,543,4,06:49,191,62,87,1760,UNA Hotels Reggio Emilia,1,,,,,Time Out,,,,,,,0,,,False,0,
+25421,544,4,06:49,191,62,87,1766,Openjobmetis Varese,0,97,2,Davide,Alviti,Uscita,,,,,,,,,,False,0,
+25421,545,4,06:49,191,62,87,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,544
+25421,546,4,06:49,191,62,87,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,544
+25421,547,4,06:49,191,62,87,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Ingresso,,,,,,,,,,False,0,544
+25421,548,4,06:44,196,64,87,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,2 punti segnato,1,Tiro in sospensione,,,11,61,0,A,6,True,0,
+25421,549,4,06:44,196,64,87,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,11,61,0,A,6,False,0,548
+25421,550,4,06:19,221,64,87,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,3 punti sbagliato,1,Tiro in sospensione,,,69,24,1,A,10,False,0,
+25421,551,4,06:19,221,64,87,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Rimbalzo difensivo,,,,,69,24,1,A,10,False,0,550
+25421,552,4,06:06,234,66,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,9,Schiacciata,,,10,53,0,A,6,True,1,
+25421,553,4,06:06,234,66,87,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,10,53,0,A,6,False,0,552
+25421,554,4,05:46,254,66,87,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Palla persa,50,Passaggio sbagliato,,,85,73,1,A,2,False,0,
+25421,555,4,05:46,254,66,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Palla recuperata,,,,,85,73,1,A,2,False,0,554
+25421,556,4,05:38,262,66,87,1766,Openjobmetis Varese,0,9337,3,David,Duke,Ingresso,,,,,,,,,,False,0,
+25421,557,4,05:38,262,66,87,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Uscita,,,,,,,,,,False,0,556
+25421,558,4,05:38,262,66,87,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Ingresso,,,,,,,,,,False,0,556
+25421,559,4,05:38,262,66,87,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Uscita,,,,,,,,,,False,0,556
+25421,560,4,05:38,262,66,87,1766,Openjobmetis Varese,0,7014,17,Ismael,Kamagate,Uscita,,,,,,,,,,False,0,556
+25421,561,4,05:38,262,66,87,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,556
+25421,562,4,05:38,262,68,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,2 punti segnato,1,Tiro in sospensione,,,11,48,0,A,6,True,0,
+25421,563,4,05:38,262,68,87,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,11,48,0,A,6,False,0,562
+25421,564,4,05:38,262,68,87,1766,Openjobmetis Varese,0,9337,3,David,Duke,Fallo commesso,103,tiro,,,11,56,1,D,6,False,0,
+25421,565,4,05:38,262,68,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Fallo Subito,,,,,11,56,1,D,6,False,0,564
+25421,566,4,05:38,262,68,87,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Ingresso,,,,,,,,,,False,0,
+25421,567,4,05:38,262,68,87,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Uscita,,,,,,,,,,False,0,566
+25421,568,4,05:38,262,69,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,569,4,05:38,262,69,87,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Ingresso,,,,,,,,,,False,0,
+25421,570,4,05:38,262,69,87,1760,UNA Hotels Reggio Emilia,1,7034,34,Derek,Ogbeide,Uscita,,,,,,,,,,False,0,569
+25421,571,4,05:27,273,69,87,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Fallo commesso,106,offensivo,,,75,53,1,A,7,False,0,
+25421,572,4,05:27,273,69,87,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Palla persa,,,,,75,53,1,A,7,False,0,571
+25421,573,4,05:27,273,69,87,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Fallo Subito,,,,,75,53,1,A,7,False,0,571
+25421,574,4,05:08,292,69,87,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,3 punti sbagliato,1,Tiro in sospensione,,,22,93,0,A,10,False,0,
+25421,575,4,05:08,292,69,87,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Rimbalzo difensivo,,,,,22,93,0,A,10,False,0,574
+25421,576,4,05:00,300,69,87,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,3 punti sbagliato,1,Tiro in sospensione,,,74,91,1,A,8,False,0,
+25421,577,4,05:00,300,69,87,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Rimbalzo offensivo,,,,,74,91,1,A,8,False,0,576
+25421,578,4,04:56,304,69,87,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Fallo commesso,103,tiro,,,86,57,0,D,6,False,0,
+25421,579,4,04:56,304,69,87,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Fallo Subito,,,,,86,57,0,D,6,False,0,578
+25421,580,4,04:56,304,69,88,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,581,4,04:56,304,69,89,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Tiro libero segnato,,,,,,,,A,7,False,0,580
+25421,582,4,04:48,312,71,89,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti segnato,9,Schiacciata,,,9,50,0,A,3,True,1,
+25421,583,4,04:48,312,71,89,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,9,50,0,A,3,False,0,582
+25421,584,4,04:34,326,71,89,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Fallo commesso,103,tiro,,,82,5,0,D,10,False,0,
+25421,585,4,04:34,326,71,89,1766,Openjobmetis Varese,0,9337,3,David,Duke,Fallo Subito,,,,,82,5,0,D,10,False,0,584
+25421,586,4,04:34,326,71,90,1766,Openjobmetis Varese,0,9337,3,David,Duke,Tiro libero segnato,,,,,,,,A,7,False,0,
+25421,587,4,04:34,326,71,90,1766,Openjobmetis Varese,0,9337,3,David,Duke,Tiro libero sbagliato,,,,,,,,A,7,False,0,586
+25421,588,4,04:34,326,71,91,1766,Openjobmetis Varese,0,9337,3,David,Duke,Tiro libero segnato,,,,,,,,A,7,False,0,586
+25421,589,4,04:34,326,71,91,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Assist,,,,,,,,,,False,0,586
+25421,590,4,04:31,329,71,91,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Fallo commesso,103,tiro,,,16,50,1,D,6,False,0,
+25421,591,4,04:31,329,71,91,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Fallo Subito,,,,,16,50,1,D,6,False,0,590
+25421,592,4,04:31,329,72,91,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,
+25421,593,4,04:31,329,73,91,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Tiro libero segnato,500,contropiede,,,,,,A,7,False,0,592
+25421,594,4,04:31,329,73,91,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Assist,,,,,,,,,,False,0,592
+25421,595,4,04:19,341,73,91,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,3 punti sbagliato,1,Tiro in sospensione,,,71,27,1,A,9,False,0,
+25421,596,4,04:19,341,73,91,1766,Openjobmetis Varese,0,,,,,Rimbalzi offensivi di squadra,,,,,71,27,1,A,9,False,0,595
+25421,597,4,04:04,356,73,93,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,2 punti segnato,1,Tiro in sospensione,,,85,56,1,A,6,True,0,
+25421,598,4,04:04,356,73,93,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Assist,,,,,85,56,1,A,6,False,0,597
+25421,599,4,03:54,366,73,93,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,3 punti sbagliato,1,Tiro in sospensione,,,29,81,0,A,10,False,0,
+25421,600,4,03:54,366,73,93,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Rimbalzo offensivo,,,,,29,81,0,A,10,False,0,599
+25421,601,4,03:48,372,73,93,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Fallo commesso,100,personale,,,18,60,1,D,6,False,0,
+25421,602,4,03:48,372,73,93,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo Subito,,,,,18,60,1,D,6,False,0,601
+25421,603,4,03:48,372,73,93,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Ingresso,,,,,,,,,,False,0,
+25421,604,4,03:48,372,73,93,1760,UNA Hotels Reggio Emilia,1,5663,16,Lorenzo,Uglietti,Uscita,,,,,,,,,,False,0,603
+25421,605,4,03:48,372,73,93,1760,UNA Hotels Reggio Emilia,1,5125,20,Luca,Severini,Uscita,,,,,,,,,,False,0,603
+25421,606,4,03:48,372,73,93,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Ingresso,,,,,,,,,,False,0,603
+25421,607,4,03:48,372,73,93,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25421,608,4,03:48,372,74,93,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Tiro libero segnato,,,,,,,,A,7,False,0,607
+25421,609,4,03:35,385,74,93,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,3 punti sbagliato,1,Tiro in sospensione,,,71,82,1,A,8,False,0,
+25421,610,4,03:35,385,74,93,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Rimbalzo difensivo,,,,,71,82,1,A,8,False,0,609
+25421,611,4,03:20,400,74,93,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,3 punti sbagliato,1,Tiro in sospensione,,,5,3,0,A,1,False,0,
+25421,612,4,03:20,400,74,93,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Rimbalzo difensivo,,,,,5,3,0,A,1,False,0,611
+25421,613,4,03:07,413,74,93,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Fallo commesso,100,personale,,,86,55,0,D,6,False,0,
+25421,614,4,03:07,413,74,93,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Fallo Subito,,,,,86,55,0,D,6,False,0,613
+25421,615,4,03:07,413,74,93,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Uscita,,,,,,,,,,False,0,
+25421,616,4,03:07,413,74,93,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,Ingresso,,,,,,,,,,False,0,615
+25421,617,4,03:04,416,74,93,1760,UNA Hotels Reggio Emilia,1,6309,7,Tomas,Woldetensae,Fallo commesso,100,personale,,,89,51,0,D,6,False,0,
+25421,618,4,03:04,416,74,93,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Fallo Subito,,,,,89,51,1,A,6,False,0,617
+25421,619,4,03:04,416,74,93,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25421,620,4,03:04,416,74,93,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Tiro libero sbagliato,,,,,,,,A,7,False,0,619
+25421,621,4,03:04,416,74,93,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Rimbalzo difensivo,,,,,,,,,,False,0,619
+25421,622,4,03:00,420,77,93,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,3 punti segnato,1,Tiro in sospensione,,,27,86,0,A,10,False,0,
+25421,623,4,03:00,420,77,93,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Assist,,,,,27,86,0,A,10,False,0,622
+25421,624,4,02:43,437,77,95,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,2 punti segnato,1,Tiro in sospensione,,,86,54,1,A,6,True,0,
+25421,625,4,02:43,437,77,95,1766,Openjobmetis Varese,0,9337,3,David,Duke,Assist,,,,,86,54,1,A,6,False,0,624
+25421,626,4,02:29,451,80,95,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,3 punti segnato,1,Tiro in sospensione,,,30,80,0,A,10,False,0,
+25421,627,4,02:14,466,80,95,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Palla persa,54,Fuori dal campo,,,85,5,1,A,10,False,0,
+25421,628,4,02:14,466,80,95,1766,Openjobmetis Varese,0,9337,3,David,Duke,Uscita,,,,,,,,,,False,0,
+25421,629,4,02:14,466,80,95,1766,Openjobmetis Varese,0,9336,7,William,McDowell-White,Ingresso,,,,,,,,,,False,0,628
+25421,630,4,02:14,466,80,95,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Uscita,,,,,,,,,,False,0,628
+25421,631,4,02:14,466,80,95,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Ingresso,,,,,,,,,,False,0,628
+25421,632,4,02:14,466,80,95,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Uscita,,,,,,,,,,False,0,628
+25421,633,4,02:14,466,80,95,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,Ingresso,,,,,,,,,,False,0,628
+25421,634,4,02:14,466,80,95,1766,Openjobmetis Varese,0,6556,5,Mauro,Villa,Ingresso,,,,,,,,,,False,0,
+25421,635,4,02:14,466,80,95,1766,Openjobmetis Varese,0,2790,35,Iris,Ikangi,Uscita,,,,,,,,,,False,0,634
+25421,636,4,02:14,466,80,95,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Palla persa,50,Passaggio sbagliato,,,11,53,0,A,6,False,0,
+25421,637,4,02:14,466,80,95,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,Palla recuperata,,,,,11,53,0,A,6,False,0,636
+25421,638,4,01:59,481,80,95,1766,Openjobmetis Varese,0,9335,22,Isaiah,Roby,3 punti sbagliato,1,Tiro in sospensione,,,75,12,1,A,10,False,0,
+25421,639,4,01:59,481,80,95,1766,Openjobmetis Varese,0,,,,,Rimbalzi offensivi di squadra,,,,,75,12,1,A,10,False,0,638
+25421,640,4,01:59,481,80,95,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Fallo commesso,100,personale,,,92,48,0,D,3,False,0,
+25421,641,4,01:59,481,80,95,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,Fallo Subito,,,,,92,48,0,D,3,False,0,640
+25421,642,4,01:59,481,80,95,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,Tiro libero sbagliato,,,,,,,,A,7,False,0,
+25421,643,4,01:59,481,80,95,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,Tiro libero sbagliato,,,,,,,,A,7,False,0,642
+25421,644,4,01:59,481,80,95,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,Rimbalzo difensivo,,,,,,,,,,False,0,642
+25421,645,4,01:48,492,82,95,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,2 punti segnato,9,Schiacciata,,,13,56,0,A,6,True,1,
+25421,646,4,01:48,492,82,95,1760,UNA Hotels Reggio Emilia,1,5823,9,Riccardo,Visconti,Assist,,,,,13,56,0,A,6,False,0,645
+25421,647,4,01:01,539,82,95,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti sbagliato,1,Tiro in sospensione,,,74,88,1,A,8,False,0,
+25421,648,4,01:01,539,82,95,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Rimbalzo difensivo,,,,,74,88,1,A,8,False,0,647
+25421,649,4,00:52,548,82,95,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Fallo commesso,106,offensivo,,,32,54,0,A,9,False,0,
+25421,650,4,00:52,548,82,95,1760,UNA Hotels Reggio Emilia,1,9139,4,JT,Thor,Palla persa,,,,,32,54,0,A,9,False,0,649
+25421,651,4,00:52,548,82,95,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Fallo Subito,,,,,32,54,0,A,9,False,0,649
+25421,652,4,00:52,548,82,95,1766,Openjobmetis Varese,0,6556,5,Mauro,Villa,Uscita,,,,,,,,,,False,0,
+25421,653,4,00:52,548,82,95,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Ingresso,,,,,,,,,,False,0,652
+25421,654,4,00:52,548,82,95,1766,Openjobmetis Varese,0,3207,13,Matteo,Librizzi,Ingresso,,,,,,,,,,False,0,652
+25421,655,4,00:52,548,82,95,1766,Openjobmetis Varese,0,3155,34,Maximilian,Ladurner,Uscita,,,,,,,,,,False,0,652
+25421,656,4,00:47,553,82,95,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,3 punti sbagliato,1,Tiro in sospensione,,,68,54,1,A,9,False,0,
+25421,657,4,00:47,553,82,95,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,Rimbalzo offensivo,,,,,68,54,1,A,9,False,0,656
+25421,658,4,00:41,559,82,97,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,2 punti segnato,9,Schiacciata,,,91,54,1,A,3,True,1,
+25421,659,4,00:33,567,84,97,1760,UNA Hotels Reggio Emilia,1,6887,25,Elhadji,Fainke,2 punti segnato,1,Tiro in sospensione,,,14,52,0,A,6,True,0,
+25421,660,4,00:33,567,84,97,1760,UNA Hotels Reggio Emilia,1,6617,10,Troy,Caupain,Assist,,,,,14,52,0,A,6,False,0,659
+25421,661,4,00:09,591,84,99,1766,Openjobmetis Varese,0,4034,11,Stefan,Nikolic,2 punti segnato,9,Schiacciata,,,89,62,1,A,2,True,1,
+25421,662,4,00:09,591,84,99,1766,Openjobmetis Varese,0,9334,12,Hunter,Hale,Assist,,,,,89,62,1,A,2,False,0,661
+25421,663,4,00:00,600,84,99,,,,,,,,Fine Tempo,,,,,,,,,,False,0,
