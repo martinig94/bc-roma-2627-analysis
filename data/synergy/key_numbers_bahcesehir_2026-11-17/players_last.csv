@@ -1,0 +1,13 @@
+player_id,name,gp,possessions,pointMade,turnover,shotAttempt,shotMade,shot3Attempt,shot3Made,ftAttempt,ftMade,ftTimes,shotFoul,score,poss_pnrbh,pts_pnrbh,poss_roll,pts_roll,poss_trans,pts_trans,poss_iso,pts_iso,poss_post,pts_post,poss_spot,pts_spot,poss_putback,pts_putback,poss_cut,pts_cut,poss_handoff,pts_handoff,poss_offscreen,pts_offscreen,poss_misc,pts_misc
+6a9dcce0f9fa4d590c37fb46,Aleksa Avramovic,3,26,32,2,19,11,6,1,11,9,6,4,16,12,17,,,8,9,1,0,,,3,2,,,2,4,,,,,,
+6a9e8e3ccfeb35a5192e9686,Marcquise Reed,3,38,41,7,28,17,2,1,7,6,4,3,20,16,11,,,9,8,4,8,,,3,8,,,2,2,1,2,1,2,2,0
+66e5eda84ec0304d8b2ccc99,Mateusz Ponitka,3,27,39,1,22,14,8,4,8,7,4,2,18,2,0,,,10,18,,,,,7,9,1,2,5,8,,,,,2,2
+678399c7598b841c2d081eb0,Kenan Sipahi,3,19,14,3,15,4,10,4,2,2,1,1,5,4,3,,,1,3,,,1,0,10,6,,,2,2,,,,,1,0
+6a9e8f68cfeb35a5192e9688,Damien Inglis,2,16,14,4,10,6,0,0,4,2,2,1,8,,,3,0,1,0,,,11,14,,,,,,,,,,,1,0
+66e5eda84ec0304d8b2cc955,Furkan Haltali,2,7,6,2,4,2,0,0,3,2,2,1,3,,,2,3,,,,,1,0,1,0,,,2,2,,,,,1,1
+68bfeafaac6156e28b1ac4bb,Trevion Williams,3,36,27,9,23,10,1,1,9,6,5,3,14,,,10,11,2,2,2,0,7,1,1,3,8,6,2,2,,,,,4,2
+64f0cb8ae7b681d5d52d3f60,Tyler Cavanaugh,3,17,27,1,14,9,8,4,5,5,3,1,11,,,,,3,7,,,3,4,8,12,,,,,,,2,2,1,2
+6a9e8e3ccfeb35a5192e9687,David DiLeo,3,8,6,2,6,2,5,2,0,0,0,0,2,,,,,,,,,,,5,6,,,,,,,2,0,1,0
+6ace60d1e55d852c066929ef,Luka Mitrovic,3,11,9,3,6,3,0,0,5,3,3,3,5,,,2,2,1,2,,,1,0,,,4,5,1,0,,,,,2,0
+68bfe9cfac6156e28b1ac4b6,Malachi Flynn,3,49,55,7,36,17,20,9,14,12,7,6,23,18,13,,,5,6,8,13,,,9,11,,,4,8,2,3,2,0,1,1
+5f4fccb1f68e52f82711db3b,Ismet Akpinar,1,5,6,0,5,2,4,2,0,0,0,0,2,1,0,,,,,,,,,1,3,,,,,,,3,3,,

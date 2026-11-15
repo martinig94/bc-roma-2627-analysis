@@ -1,0 +1,15 @@
+player_id,name,gp,possessions,pointMade,turnover,shotAttempt,shotMade,shot3Attempt,shot3Made,ftAttempt,ftMade,ftTimes,shotFoul,score,poss_pnrbh,pts_pnrbh,poss_roll,pts_roll,poss_trans,pts_trans,poss_iso,pts_iso,poss_post,pts_post,poss_spot,pts_spot,poss_putback,pts_putback,poss_cut,pts_cut,poss_handoff,pts_handoff,poss_offscreen,pts_offscreen,poss_misc,pts_misc
+6a9c9780c69f19cdbfc48095,Rasheed Bello,2,23,18,4,16,6,8,2,6,4,3,1,9,11,7,,,5,5,3,3,,,1,0,,,,,,,,,3,3
+6a9c9780c69f19cdbfc48099,Kessler Edwards,3,17,17,3,14,7,10,3,0,0,0,0,7,1,0,,,2,2,,,1,2,10,11,,,1,2,,,,,2,0
+6ac7dae6e55d852c06ecbc51,Kevin Kokila,1,7,8,0,6,3,0,0,2,2,1,1,4,,,5,4,,,,,,,,,2,4,,,,,,,,
+6a9c98acc69f19cdbfc4809a,Tommaso Baldasso,1,8,9,2,4,2,2,1,4,4,2,0,4,3,2,,,,,,,,,4,5,,,,,,,,,1,2
+695bc5d72ec211ecc9eb769c,Francesco Ferrari,3,21,21,2,17,8,8,4,4,1,2,0,9,,,,,6,7,,,2,2,7,9,2,0,,,1,2,,,3,1
+6a9c9780c69f19cdbfc48098,Wendell Moore,3,43,36,5,36,16,8,1,4,3,2,1,18,11,12,1,0,12,14,2,0,2,0,6,0,3,4,2,4,2,0,2,2,,
+68ba0dcfac6156e28b1ab0ac,Derrick Alston,1,18,16,0,15,4,8,1,7,7,3,3,7,1,0,1,2,4,4,2,0,1,0,4,3,,,3,4,1,3,1,0,,
+6aa246f9ea52b3d153049ba8,Marcus Carr,3,41,42,2,36,16,18,7,7,3,4,3,18,17,21,,,9,13,3,0,,,8,6,2,2,,,1,0,,,1,0
+6a9e4918cfeb35a5192ae288,Bobi Klintman,1,7,6,1,5,2,2,1,2,1,1,1,3,,,,,,,,,,,3,3,1,0,2,3,,,,,1,0
+68c027ebac6156e28b1ac61c,Aliou Diarra,2,18,21,1,12,7,0,0,10,7,5,5,12,,,10,12,3,4,,,1,1,1,0,,,,,1,2,,,2,2
+6a9c9780c69f19cdbfc48096,Trent Frazier,2,25,35,0,24,12,18,9,2,2,1,1,13,11,19,,,3,5,1,0,,,3,5,,,,,1,0,5,6,1,0
+66dc3df6c8fcce5ed29b39a8,Mouhamet Diouf,3,23,22,2,17,10,0,0,8,2,4,4,11,,,6,2,1,0,,,10,14,1,2,2,2,2,2,,,,,1,0
+622a549b25a5348885ed339c,Daniel Hackett,3,14,12,0,12,4,2,0,4,4,2,0,6,4,6,,,3,0,,,,,3,2,,,,,3,2,1,2,,
+6a9c9780c69f19cdbfc48097,Davide Casarin,2,12,13,1,10,5,1,0,3,3,2,2,6,1,0,,,8,11,,,,,1,0,,,1,2,,,,,1,0
