@@ -20,6 +20,15 @@ CSS = r"""
 .kn2 .h2, .kn2 h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.15; text-wrap: balance; color: inherit; border: 0; }
 .kn2 b, .kn2 .num { font-variant-numeric: tabular-nums; }
 .kn2 p { margin: 0; }
+.kn2 th { white-space: normal; }
+.kn2 header { border: 0; padding: 0; background: none; }
+.kn2 { width: min(1120px, calc(100vw - 24px)); position: relative; left: 50%; transform: translateX(-50%); }
+.kn2 .bar { max-width: none; margin: 0; gap: 0; flex-wrap: nowrap; }
+.kn2 .brief { border-left: 0; border-radius: var(--r); margin: 0; background: var(--card); padding: var(--s4) var(--s5); }
+.kn2 details.fold .brief { background: var(--paper); }
+.kn2 .brief ul, .kn2 .brief p { margin: 0; }
+.kn2 table { display: table; overflow: visible; }
+.kn2 h3::after, .kn2 .h2::after { content: none; }
 .kn2 .eyebrow { font: 600 var(--t-xs)/1.2 var(--font-heading); text-transform: uppercase; letter-spacing: .09em; color: var(--text-subtle); }
 .kn2 .hero .eyebrow { color: var(--accent-bright); }
 .kn2 .av { flex: none; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; background: var(--ink); color: var(--on-ink);
