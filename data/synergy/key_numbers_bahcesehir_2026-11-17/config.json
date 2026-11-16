@@ -1,10 +1,19 @@
 {
-  "opponent":  {"name": "Bahcesehir", "abbr": "BKI", "team_id": "5b0e907a9559b26e7e9859b6"},
-  "reference": {"name": "BC Roma", "abbr": "BCR", "team_id": "54457df1300969b132fd0e16"},
+  "opponent": {
+    "name": "Bahcesehir",
+    "abbr": "BKI",
+    "team_id": "5b0e907a9559b26e7e9859b6"
+  },
   "competition": "EuroCup",
   "game": "EuroCup round 8, home, Tue 17 Nov 2026",
+  "game_short": "EuroCup, Tue 17 Nov",
   "game_date": "2026-11-17",
+  "reference": {
+    "name": "BC Roma",
+    "abbr": "BCR",
+    "team_id": "54457df1300969b132fd0e16"
+  },
   "season": "2026-27",
-  "date": "15 Nov 2026",
+  "date": "16 Nov 2026",
   "author": "Giulia Martini"
 }

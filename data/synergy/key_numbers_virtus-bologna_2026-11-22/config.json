@@ -1,10 +1,19 @@
 {
-  "opponent":  {"name": "Virtus Bologna", "abbr": "VOB", "team_id": "54457df0300969b132fd0dca"},
-  "reference": {"name": "BC Roma", "abbr": "BCR", "team_id": "54457df1300969b132fd0e16"},
+  "opponent": {
+    "name": "Virtus Bologna",
+    "abbr": "VOB",
+    "team_id": "54457df0300969b132fd0dca"
+  },
   "competition": "Serie A",
   "game": "Serie A round 9, away, Sun 22 Nov 2026",
+  "game_short": "Serie A, Sun 22 Nov",
   "game_date": "2026-11-22",
+  "reference": {
+    "name": "BC Roma",
+    "abbr": "BCR",
+    "team_id": "54457df1300969b132fd0e16"
+  },
   "season": "2026-27",
-  "date": "15 Nov 2026",
+  "date": "16 Nov 2026",
   "author": "Giulia Martini"
 }

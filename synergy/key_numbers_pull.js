@@ -10,7 +10,10 @@
 //   players.csv    opponent players: possessions, points, turnovers, play types, and shot aggregates (rim / mid / three, catch-and-shoot,
 //                  open / guarded jumpers, drives by side, attributed to the driver)
 //   defenders.csv  reference team (BC Roma) defenders: possessions and points allowed by play type (possessions that end on him)
-//   opp_shots.csv / ref_def_shots.csv   every FGA of the opponent and every FGA allowed by the reference team (for the shot charts)
+//   opp_shots.csv / ref_def_shots.csv / opp_def_shots.csv   every FGA of the opponent, allowed by the reference team, allowed by the opponent
+//   games.csv      per game rows of the opponent (who=opp) and of the reference team (who=ref), both sides, play types and rebounds
+//   players_last.csv / defenders_last.csv   opponent players and reference defenders over the last 3 games of each team (`game in [...]`)
+//   ref_numbers.csv  shirt numbers of the reference team (from its shots)
 const CONFIG = {
   S: '69bba845d0611197290c7acc',
   C: '54457dce300969b132fcfb3f:COMP:560100ac8dc7a24394b95656',
@@ -19,7 +22,8 @@ const CONFIG = {
 (async () => {
 const {S, C, OPP, REF} = CONFIG;
 window.__kn = {done: false, log: []};
-const log = m => window.__kn.log.push(m);
+const KN = window.__kn;
+const log = m => KN.log.push(m);
 const API = 'https://basketball.synergysportstech.com/api';
 const tok = () => JSON.parse(localStorage.getItem('oidc.user:https://auth.synergysportstech.com:client.basketball.teamsite')).access_token;
 const post = async (u, b) => (await fetch(u, {method: 'POST', headers: {Authorization: 'Bearer ' + tok(), 'Content-Type': 'application/json'}, body: JSON.stringify(b)})).json();
@@ -72,6 +76,8 @@ await pool(teams.flatMap(id => [false, true].map(defense => async () => {
   const shots = await getShots(id, defense), side = defense ? 'def' : 'off', r = T[id + side];
   if (id === OPP && !defense) SH.opp = shots;
   if (id === REF && defense) SH.refdef = shots;
+  if (id === OPP && defense) SH.oppdef = shots;
+  if (id === REF && !defense) SH.refoff = shots;
   const a = {rim_a: 0, rim_m: 0, paint_a: 0, paint_m: 0, mid_a: 0, mid_m: 0, three_a: 0, three_m: 0, cs3_a: 0, cs3_m: 0, jump_tag: 0, jump_open: 0,
              open3_a: 0, open3_m: 0, drive_fga: 0, drive_l: 0, drive_r: 0, sq_tot: 0, sq_n: 0, shots: shots.length};
   const zones = {};
@@ -115,7 +121,35 @@ const D = {};
 const DPT = {all: 'play eq 1', ...PT};
 for (const [k, rows] of await pool(Object.entries(DPT).map(([k, ex]) => async () => [k, await q(`${base} and defensiveteam eq oid(${REF}) and (${ex}) group defensiveplayer`)])))
   for (const x of rows) { const r = D[x.player.id] = D[x.player.id] || {player_id: x.player.id, name: x.player.name}; if (k === 'all') r.gp = x.gp; r['poss_' + k] = x.possessions || 0; r['pts_' + k] = x.pointMade || 0; r['fga_' + k] = x.shotAttempt || 0; r['to_' + k] = x.turnover || 0; }
-// 6. files
+// 6. per game rows of the opponent and of the reference team (for the Last 3 games view)
+const GR = [];
+for (const [who, id] of [['opp', OPP], ['ref', REF]]) for (const side of ['off', 'def']) {
+  const rows = {};
+  for (const x of await q(`${base} and ${SIDE[side]} eq oid(${id}) group game`, true)) {
+    const gm = x.game, vs = [gm.homeTeam, gm.awayTeam].find(t => t && t.id !== id);
+    const r = rows[gm.id] = {who, side, game_id: gm.id, date: gm.date, vs: vs ? vs.name : '', gp: 1};
+    for (const k of NUM) r[k] = x[k] || 0;
+    r.offreb = x.offreb || 0; r.defreb = x.defReb || 0; r.assist = x.assist || 0; r.steal = x.steal || 0;
+  }
+  for (const [k, res] of await pool(Object.entries(PT).map(([k, ex]) => async () => [k, await q(`${base} and ${SIDE[side]} eq oid(${id}) and (${ex}) group game`)])))
+    for (const x of res) { const r = rows[x.game.id]; if (!r) continue; r['poss_' + k] = x.possessions || 0; r['pts_' + k] = x.pointMade || 0; r['to_' + k] = x.turnover || 0; }
+  GR.push(...Object.values(rows));
+}
+const last3 = who => GR.filter(r => r.who === who && r.side === 'off').sort((a, b) => a.date < b.date ? 1 : -1).slice(0, 3).map(r => r.game_id);
+const gin = ids => `game in [${ids.map(g => `oid(${g})`).join(',')}]`;
+const PL = {};
+for (const [k, ex] of [['all', 'play eq 1'], ...Object.entries(PT)]) for (const x of await q(`${base} and offensiveteam eq oid(${OPP}) and ${gin(last3('opp'))} and (${ex}) group offensiveplayer`)) {
+  const r = PL[x.player.id] = PL[x.player.id] || {player_id: x.player.id, name: x.player.name};
+  if (k === 'all') { r.gp = x.gp; for (const kk of NUM) r[kk] = x[kk] || 0; } else { r['poss_' + k] = x.possessions || 0; r['pts_' + k] = x.pointMade || 0; }
+}
+const DL = {};
+for (const [k, ex] of Object.entries(DPT)) for (const x of await q(`${base} and defensiveteam eq oid(${REF}) and ${gin(last3('ref'))} and (${ex}) group defensiveplayer`)) {
+  const r = DL[x.player.id] = DL[x.player.id] || {player_id: x.player.id, name: x.player.name};
+  if (k === 'all') r.gp = x.gp; r['poss_' + k] = x.possessions || 0; r['pts_' + k] = x.pointMade || 0; r['fga_' + k] = x.shotAttempt || 0; r['to_' + k] = x.turnover || 0;
+}
+const RN = {}; for (const s of SH.refoff || []) if (s.player) RN[s.player.name] = s.playerNumber;
+log('games done');
+// 7. files
 const ptc = Object.keys(PT).flatMap(k => ['poss_' + k, 'pts_' + k, 'to_' + k]);
 const tcols = ['team_id', 'abbr', 'name', 'side', 'gp', ...NUM, 'offreb', 'defreb', 'assist', 'steal', ...ptc, 'shots', 'rim_a', 'rim_m', 'paint_a', 'paint_m', 'mid_a', 'mid_m', 'three_a', 'three_m',
                'cs3_a', 'cs3_m', 'jump_tag', 'jump_open', 'open3_a', 'open3_m', 'drive_fga', 'drive_l', 'drive_r', 'sq_tot', 'sq_n'];
@@ -124,15 +158,20 @@ const dcols = ['player_id', 'name', 'gp', ...Object.keys(DPT).flatMap(k => ['pos
 const scols = ['gameId', 'gameDate', 'player', 'playerNumber', 'pointsAttempted', 'made', 'zoneName', 'shotDistance', 'x', 'y', 'shotQuality', 'play_type', 'description'];
 const srow = s => ({...s, player: s.player && s.player.name, made: parse(s).made ? 1 : 0, x: s.coordinates.x, y: s.coordinates.y, play_type: parse(s).playType});
 const dates = (SH.opp || []).map(s => s.gameDate).sort();
-window.__kn.files = {
+KN.files = {
   'teams.csv': csv(tcols, Object.values(T).sort((a, b) => a.name.localeCompare(b.name) || a.side.localeCompare(b.side))),
   'zones.csv': csv(['team_id', 'side', 'zone', 'fga', 'fgm', 'x', 'y'], Z),
   'players.csv': csv(pcols, Object.values(P).filter(r => r.possessions || r.fga).sort((a, b) => (b.fga || 0) - (a.fga || 0))),
   'defenders.csv': csv(dcols, Object.values(D).sort((a, b) => (b.poss_all || 0) - (a.poss_all || 0))),
   'opp_shots.csv': csv(scols, (SH.opp || []).map(srow)),
   'ref_def_shots.csv': csv(scols, (SH.refdef || []).map(srow)),
+  'opp_def_shots.csv': csv(scols, (SH.oppdef || []).map(srow)),
+  'games.csv': csv(['who', 'side', 'game_id', 'date', 'vs', 'gp', ...NUM, 'offreb', 'defreb', 'assist', 'steal', ...ptc], GR),
+  'players_last.csv': csv(['player_id', 'name', 'gp', ...NUM, ...Object.keys(PT).flatMap(k => ['poss_' + k, 'pts_' + k])], Object.values(PL)),
+  'defenders_last.csv': csv(dcols, Object.values(DL).sort((a, b) => (b.poss_all || 0) - (a.poss_all || 0))),
+  'ref_numbers.csv': csv(['name', 'number'], Object.entries(RN).map(([name, number]) => ({name, number}))),
 };
-window.__kn.meta = {pulled: new Date().toISOString(), last_game: dates[dates.length - 1], opp_fga: (SH.opp || []).length, teams: teams.length, config: CONFIG};
-window.__kn.sizes = Object.fromEntries(Object.entries(window.__kn.files).map(([k, v]) => [k, v.length]));
-window.__kn.done = true;
+KN.meta = {last3_opp: last3('opp'), last3_ref: last3('ref'), pulled: new Date().toISOString(), last_game: dates[dates.length - 1], opp_fga: (SH.opp || []).length, teams: teams.length, config: CONFIG};
+KN.sizes = Object.fromEntries(Object.entries(KN.files).map(([k, v]) => [k, v.length]));
+KN.done = true;
 })().catch(e => { window.__kn.error = String(e && e.stack || e); window.__kn.done = true; });
