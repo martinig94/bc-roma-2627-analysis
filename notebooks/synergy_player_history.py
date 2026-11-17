@@ -7,6 +7,7 @@ Reads `players_shots.csv` and `players_games.csv` of the data folder (see its RE
   10b_player_<name>_situations.png       P&R ball handler by side, isolation by location, transition by role (and the action after it)
   10c_player_<name>_triangles.png        3PT / paint / mid-range split of the attempts, one dot per game, one triangle per season
   10d_player_<name>_drives.png           finishes at the basket left or right of the rim (P&R ball handler, isolation, both), by season
+  10e_player_<name>_pnr_shots.png        P&R ball handler: share of threes, drives and mid-range shots, and each by side of the floor, by season
 
 Descriptive only, based solely on the data (field-goal attempts: possessions ending in a turnover, a foul or a pass are not in the
 shot list). Every figure carries the date and the author (weekly/config.json). Exhibitions and third-division games are left out.
@@ -288,6 +289,72 @@ def fig_drives(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
     c.save(fig, f'10d_player_{p.lower()}_drives.png', 'free throws excluded')
 
 
+PNR_TYPES = ['Three', 'Drive to the basket', 'Mid-range']
+PNR_COLORS = {'Three': '#F2B705', 'Drive to the basket': '#1F3A5F', 'Mid-range': '#4F7FBF', 'Other': '#CCCCCC'}
+
+
+def pnr_shot_type(chain_text: pd.Series, pts_att: pd.Series, zone_name: pd.Series) -> pd.Series:
+    """Shot type out of the pick-and-roll: drive to the basket, three, mid-range, else (paint jumpers, floaters) 'Other'."""
+    return pd.Series(np.select([chain_text.str.contains('To Basket', regex=False), pts_att == 3, zone_name == 'Mid-range'],
+                               ['Drive to the basket', 'Three', 'Mid-range'], 'Other'), index=chain_text.index)
+
+
+def fig_pnr(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
+    """Pick-and-roll ball handler: how often he shoots a three, drives to the basket or takes a mid-range shot, and from which side."""
+    d = s[(s.player == p) & (s.pt == 'P&R Ball Handler') & s.x.notna()].copy()
+    d['type'] = pnr_shot_type(d.description, d.pts_att, d.zone)
+    d['side'] = np.where(d.x < RIM_X, 'right', 'left')
+    seasons = [se for se in SEASON_COLORS if se in set(d.season)]
+    fig = plt.figure(figsize=(14, 7.4))
+    gs = fig.add_gridspec(2, 3, left=.06, right=.98, top=.76, bottom=.1, hspace=.62, wspace=.25, height_ratios=[.8, 1.2])
+    top = fig.add_subplot(gs[0, :])
+    tot = d.groupby('season').size().reindex(seasons)
+    for i, se in enumerate(seasons):
+        left = 0
+        for k in PNR_TYPES + ['Other']:
+            n = int((d[d.season == se].type == k).sum())
+            if n:
+                top.barh(i, 100 * n / tot[se], left=left, color=PNR_COLORS[k], height=.62, label=k if i == 0 else None)
+                if 100 * n / tot[se] >= 6:
+                    top.text(left + 50 * n / tot[se], i, f'{n}\n{100 * n / tot[se]:.0f}%', ha='center', va='center', fontsize=8.5,
+                             color='#222' if k in ('Three', 'Other') else 'white')
+                left += 100 * n / tot[se]
+        top.text(101, i, f'{tot[se]} shots', va='center', fontsize=8.5, color=TEXT2)
+    top.set_yticks(range(len(seasons))); top.set_yticklabels(seasons, fontsize=9); top.invert_yaxis()
+    top.set_xlim(0, 112); top.set_xticks([0, 25, 50, 75, 100]); top.set_xticklabels([f'{v}%' for v in (0, 25, 50, 75, 100)], fontsize=8)
+    top.tick_params(axis='y', length=0); top.set_title('What he shoots out of the pick-and-roll (share of his P&R shots)', fontsize=10, loc='left', color=TEXT2)
+    top.legend(ncol=4, fontsize=8.5, loc='lower right', bbox_to_anchor=(1, 1.0), frameon=False)
+    w = .38
+    for j, k in enumerate(PNR_TYPES):
+        ax = fig.add_subplot(gs[1, j])
+        x = d[d.type == k]
+        t = x.groupby(['season', 'side']).agg(a=('made', 'size'), m=('made', 'sum'))
+        for i, side in enumerate(('left', 'right')):
+            pos = np.arange(len(seasons)) + (i - .5) * w
+            n = [int(t.a.get((se, side), 0)) for se in seasons]
+            m = [int(t.m.get((se, side), 0)) for se in seasons]
+            ax.bar(pos, n, w * .94, color=SIDE_COLORS[side], label=f'{side} side')
+            for xx, nn, mm in zip(pos, n, m):
+                if nn:
+                    ax.text(xx, nn + max(n + [1]) * .02, f'{mm}/{nn}\n{100 * mm / nn:.0f}%', ha='center', va='bottom', fontsize=7.5, color=TEXT2)
+        r = x.groupby('season').side.apply(lambda v: f'{100 * (v == "right").mean():.0f}%').reindex(seasons).fillna('-')
+        ax.set_title(f'{k}: by side\nshare on the right: ' + ' · '.join(r), fontsize=9, loc='left', color=TEXT2)
+        ax.set_xticks(np.arange(len(seasons))); ax.set_xticklabels(seasons, fontsize=8)
+        ax.set_ylim(0, max(ax.get_ylim()[1], 8) * 1.2); ax.grid(axis='y', color=GRID, lw=.7); ax.set_axisbelow(True)
+        ax.tick_params(axis='y', labelsize=8); ax.tick_params(axis='x', length=0)
+        if j == 0:
+            ax.set_ylabel('shots (made/attempted, FG%)', fontsize=8.5, color=TEXT2)
+            ax.legend(handles=[Patch(fc=SIDE_COLORS[q], label=f'{q.capitalize()} side of the floor') for q in ('left', 'right')], fontsize=8, loc='upper left', frameon=False)
+    fig.text(.02, .955, f'{p}: three, drive or mid-range out of the pick-and-roll', fontsize=14, fontweight='bold')
+    fig.text(.02, .915, season_line(p, s, g), fontsize=8.5, color=TEXT2, va='top')
+    fig.text(.02, .84, 'Every field-goal attempt where he is the P&R ball handler. Drive = shot logged "To Basket"; three = any three; mid-range = other two-point shots outside the paint; '
+             '"Other" = jumpers and floaters in the paint.\n'
+             'Side = left or right of the rim (offense\'s point of view) from the shot coordinates, so a pull-up three from the right wing counts on the right.',
+             fontsize=8.5, color=TEXT2, va='top')
+    fig.text(.02, .04, 'Possessions ending in a pass, a turnover or a foul are not in the shot list. 2023-25: US college; small samples per season, side and type: tendencies, not rules.', fontsize=7, color=TEXT3)
+    c.save(fig, f'10e_player_{p.lower()}_pnr_shots.png', 'free throws excluded')
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('data', type=Path); ap.add_argument('--out', type=Path, required=True)
@@ -297,7 +364,7 @@ def main() -> None:
     s, g = load(a.data)
     c = Ctx(a.out, a.author, a.date)
     for p in (a.players.split(',') if a.players else sorted(s.player.unique())):
-        fig_zones(c, p, s, g); fig_situations(c, p, s, g); fig_triangles(c, p, s, g); fig_drives(c, p, s, g)
+        fig_zones(c, p, s, g); fig_situations(c, p, s, g); fig_triangles(c, p, s, g); fig_drives(c, p, s, g); fig_pnr(c, p, s, g)
         print(p, '->', a.out / f'10*_player_{p.lower()}_*.png')
 
 
