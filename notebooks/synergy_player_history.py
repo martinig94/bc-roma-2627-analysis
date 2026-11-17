@@ -107,7 +107,8 @@ def season_line(p: str, s: pd.DataFrame, g: pd.DataFrame) -> str:
     """'2024-25: 26 games, 130 FGA (Spanish ACB League) · ...' for the subtitle."""
     parts = []
     for se, gg in g[g.player == p].groupby('season'):
-        comps = ', '.join(c.replace(' (ABA)', '').replace(' League', '') for c in gg.comp.unique())
+        names = [c.replace(' (ABA)', '').replace(' League', '') for c in gg.comp.value_counts().index]
+        comps = ', '.join(names[:2]) + (f' +{len(names) - 2}' if len(names) > 2 else '')   # most-played two, so the subtitle fits the figure
         parts.append(f'{se}: {gg.game_id.nunique()} games, {len(s[(s.player == p) & (s.season == se)])} FGA ({comps})')
     line = ' · '.join(parts)
     if len(line) > 150:   # four seasons with long competition lists: two lines
