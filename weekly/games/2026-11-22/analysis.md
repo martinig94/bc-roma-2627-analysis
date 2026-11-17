@@ -31,11 +31,18 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## Key points
 
-{{ pending }}
+Based on the data only: 8 LBA games each, Synergy pull of 16 Nov 2026 (Italian Serie A games only), LBA box scores for the rest.
+
+- ==Virtus Bologna is first with 7-1 (+86)==, its only loss at home to Trieste: [standings](#lba-so-far-results-and-standings).
+- ==One of the best defenses of the league with a top-three offense==: [team comparison](#bc-roma-and-virtus-bologna-compared).
+- ==Few turnovers and a lot of open-court points==: [offense](offense_tendencies.html#key-points).
+- ==Mid-range is a real shot for Bologna and the rim its best finishing spot in the league==: [shot selection](#shot-selection).
+- ==Bello and Alston have played only some of the games==: [roster](#roster-starting-five-and-bench).
+- Where the game is decided: [what to expect](#what-to-expect).
 
 ## LBA so far: results and standings
 
-{{ pending }}
+Virtus Bologna is 1st with 7-1, level on points with Napoli; BC Roma is 13th with 2-6. Bologna won the first five, lost 93-100 at home to Trieste in round 6, then beat Verona (95-81, home) and Trento (88-75, away).
 
 <!-- more -->
 
@@ -45,7 +52,9 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## BC Roma and Virtus Bologna compared
 
-{{ pending }}
+- Defense is the gap: Bologna allows about 14 points per 100 possessions fewer than BC Roma (ratings in the table).
+- Offense: the two are close (Bologna 3rd and BC Roma 2nd in points per possession, Synergy count).
+- Bologna grabs more of its own misses and goes to the line more often than BC Roma.
 
 <!-- more -->
 
@@ -55,7 +64,10 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## Roster, starting five and bench
 
-{{ pending }}
+- Fixed starters: Diouf (8 of 8 games) and Ferrari (7 of 8); Moore has started all six games he played (he joined in round 2).
+- Carr (5 starts) is the main ball handler and plays the most minutes (24' a game); Frazier and Edwards move in and out of the five.
+- Bello (3 games, all as starter) and Alston (4 games, all as starter) have missed part of the season: check the availability before the game.
+- The bench is Hackett (19' a game, never a starter), Diarra, Baldasso and Casarin.
 
 <!-- more -->
 
@@ -71,7 +83,9 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## Shot selection
 
-{{ pending }}
+- Bologna finishes at the rim better than any team in the league (69%), but only about 1 shot in 3 is taken there.
+- ==Mid-range is a shot it uses== (1 in 5 attempts, 4th in the LBA, 40%); about 40% of the attempts are threes (36%, 7th).
+- Who takes which shots: [individual tendencies](individual_tendencies.html#shot-charts-by-player).
 
 <!-- more -->
 
@@ -84,7 +98,7 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## Key players
 
-{{ pending }}
+Carr runs the offense (most possessions, 6.6 assists a game) and creates most of the pick-and-roll shots; Frazier is the main three-point shooter (42 of his 63 attempts are threes); Alston scores the most per game when he plays (15.0); Diouf (post-ups, put-backs) and Diarra (cuts, rolls) finish at the rim. Lines per player: [individual tendencies](individual_tendencies.html#key-points).
 
 <!-- more -->
 
@@ -97,14 +111,24 @@ THE STRUCTURE OF THIS PAGE IS THE STANDARD FOR EVERY ANALYSIS (same sections, sa
 
 ## What to expect
 
-{{ pending }}
+From the numbers only (8 games each, so tendencies, not predictions):
+
+- **BC Roma's spot-ups against Bologna's spot-up defense.** BC Roma is 3rd in points per possession on spot-ups; Bologna allows the second-lowest.
+- **Isolations and pick-and-roll ball handlers.** Bologna defends both very well (3rd and 4th best); BC Roma's isolations are the best of the league.
+- **Transition and put-backs, both ways.** Bologna runs a lot (2nd in share of possessions, 4th in efficiency); BC Roma's defense allows the 3rd most points per possession in transition and the most on put-backs, Bologna's own put-back defense is 14th.
+- **Free throws.** BC Roma's offense is last in free-throw rate and its defense 3rd highest in free throws allowed; Bologna's offense is 9th and its defense 5th lowest.
 
 <!-- more -->
 
 ### Metrics to check during/after the game
 
-{{ pending }}
+- BC Roma's spot-up and isolation shots against Bologna's defense: attempts, efficiency, who takes them.
+- Bologna's transition points and points off BC Roma's turnovers (Bologna turns the ball over less than all teams but one).
+- Put-backs and second-chance points allowed by BC Roma.
+- Free-throw attempts of both teams.
+- Who starts for Bologna (Bello, Alston, Frazier or Edwards).
 
-### Clips suggested
+### Other checks
 
-{{ pending }}
+- The samples are small (8 games). Synergy counts are those of the pull of 16 Nov (Italian Serie A only, ranks over the 16 teams): `data/synergy/key_numbers_virtus-bologna_2026-11-22/README.md`.
+- European games are not in these numbers, so minutes and availability in the league only show part of the rotation.
