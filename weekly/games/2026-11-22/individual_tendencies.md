@@ -100,6 +100,17 @@ Every shot he takes as the pick-and-roll ball handler, by type (top bar) and by 
 - **Mid-range: slightly more from the right, and less accurate there.** Right share 42%, 60%, 61% and 50%; Antwerp 36% from the right (20/55) against 40% from the left (14/35); no clear difference this season (6 and 6 shots).
 - **In short**: out of the screen he goes to his right for the jump shots (three and mid-range) and to his left for the finish at the rim; the sample this season (44 shots) is too small to say whether that has changed.
 
+### Pick-and-roll screen and isolation: left, centre or right
+
+![Bello: where the pick-and-roll screen and the isolation are, left, centre or right, four seasons](10f_player_bello_pnr_iso_courts.png)
+
+The court is seen from behind the offense (left is the offense's left); the shading and the percentages are his two professional seasons together, the bars below show every season.
+
+- **Pick-and-roll: ==the high pick==.** 80% of his P&R shots come off a screen in the centre (316 of 397), 12% off a right-side screen and 8% off a left-side one. It was 66-68% in the two college seasons.
+- **Side screens are a minor share and go slightly more to the right** than to the left in every season (12% against 8% in 2025-26, 11% against 9% this season). He shoots about as well off them (38-42%) as off the high pick (42%).
+- **Isolation: ==from the top==.** Two thirds of his isolation shots start at the top of the key (64 of 96), a quarter on the right (23%) and a tenth on the left (10%; only 10 shots, 2 made). It is a small part of his game: 6% to 13% of his shots.
+- This season: 80% high pick (44 shots); isolations are 10 shots, so nothing to read there yet.
+
 ### Game by game
 
 ![Bello: 3PT / paint / mid-range split of the attempts, game by game, four seasons](10c_player_bello_triangles.png)

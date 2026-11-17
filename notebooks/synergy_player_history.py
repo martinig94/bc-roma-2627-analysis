@@ -8,6 +8,7 @@ Reads `players_shots.csv` and `players_games.csv` of the data folder (see its RE
   10c_player_<name>_triangles.png        3PT / paint / mid-range split of the attempts, one dot per game, one triangle per season
   10d_player_<name>_drives.png           finishes at the basket left or right of the rim (P&R ball handler, isolation, both), by season
   10e_player_<name>_pnr_shots.png        P&R ball handler: share of threes, drives and mid-range shots, and each by side of the floor, by season
+  10f_player_<name>_pnr_iso_courts.png   P&R screen (left / high / right) and isolation start (left / top / right) on a half court, plus one bar per season
 
 Descriptive only, based solely on the data (field-goal attempts: possessions ending in a turnover, a foul or a pass are not in the
 shot list). Every figure carries the date and the author (weekly/config.json). Exhibitions and third-division games are left out.
@@ -26,7 +27,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.lines import Line2D
-from matplotlib.patches import Patch, Polygon
+from matplotlib.axes import Axes
+from matplotlib.patches import Arc, Circle, Patch, Polygon, Rectangle
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import weekly_config
@@ -355,6 +357,73 @@ def fig_pnr(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
     c.save(fig, f'10e_player_{p.lower()}_pnr_shots.png', 'free throws excluded')
 
 
+COURT_ZONES = {   # play type -> (title, sub-types left to right as the offense sees the court, label of each)
+    'P&R Ball Handler': ('Pick-and-roll: where is the screen?', ['Left P&R', 'High P&R', 'Right P&R'], ['Left', 'High (centre)', 'Right']),
+    'ISO': ('Isolation: where does it start?', ['Left', 'Top', 'Right'], ['Left', 'Top', 'Right']),
+}
+
+
+def draw_half_court(ax: Axes) -> None:
+    """Half court seen from behind the offense: basket at the bottom, left of the offense on the left of the picture (feet)."""
+    line = dict(color='#888888', lw=1.2, zorder=3)
+    ax.add_patch(Rectangle((-25, 0), 50, 34, fill=False, **line))
+    ax.add_patch(Rectangle((-8, 0), 16, 19, fill=False, **line))
+    ax.add_patch(Arc((0, 19), 12, 12, theta1=0, theta2=180, **line))
+    ax.add_patch(Arc((0, 5.25), 47.5, 47.5, theta1=22, theta2=158, **line))
+    ax.plot([-22, -22], [0, 14], **line); ax.plot([22, 22], [0, 14], **line)
+    ax.add_patch(Circle((0, 5.25), .75, fill=False, **line))
+    ax.set_xlim(-26, 26); ax.set_ylim(-1, 35); ax.set_aspect('equal'); ax.axis('off')
+
+
+def fig_courts(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
+    """P&R screen location and isolation start, left / centre / right: a half court (pro seasons) over one bar per season."""
+    from matplotlib.colors import to_rgba
+    seasons = [se for se in SEASON_COLORS if se in set(s[s.player == p].season)]
+    pro = [se for se in seasons if se in ('2025-26', '2026-27')]
+    fig = plt.figure(figsize=(14, 9))
+    gs = fig.add_gridspec(2, 2, left=.05, right=.97, top=.74, bottom=.09, hspace=.18, wspace=.12, height_ratios=[1.25, 1])
+    for j, (pt, (title, subs, labels)) in enumerate(COURT_ZONES.items()):
+        d = s[(s.player == p) & (s.pt == pt) & s['sub'].isin(subs)]
+        cc = fig.add_subplot(gs[0, j]); draw_half_court(cc)
+        dp = d[d.season.isin(pro)]
+        n = len(dp)
+        for k, (sub, lab) in enumerate(zip(subs, labels)):
+            x = dp[dp['sub'] == sub]
+            share = len(x) / n if n else 0
+            x0, x1 = (-25, -8) if k == 0 else ((-8, 8) if k == 1 else (8, 25))
+            cc.add_patch(Rectangle((x0, 0), x1 - x0, 34, fc=to_rgba('#1F3A5F', .12 + .78 * share), ec='none', zorder=1))
+            fg = f'{100 * x.made.sum() / len(x):.0f}% FG\n({int(x.made.sum())}/{len(x)})' if len(x) else ''
+            cc.text((x0 + x1) / 2, 25, f'{100 * share:.0f}%', ha='center', va='center', fontsize=26, fontweight='bold',
+                    color='white' if share > .35 else TEXT, zorder=5)
+            cc.text((x0 + x1) / 2, 20, lab, ha='center', va='center', fontsize=10.5, color='white' if share > .35 else TEXT, zorder=5)
+            cc.text((x0 + x1) / 2, 15, fg, ha='center', va='center', linespacing=1.3, fontsize=8.5, color='white' if share > .35 else TEXT2, zorder=5)
+        cc.set_title(f'{title}\n{" + ".join(pro)} ({n} shots)', fontsize=11, loc='left', color=TEXT, pad=8)
+        bar = fig.add_subplot(gs[1, j])
+        for i, se in enumerate(seasons):
+            t = d[d.season == se]['sub'].value_counts().reindex(subs, fill_value=0)
+            tot = int(t.sum()); left = 0
+            for sub, shade in zip(subs, ('#4F7FBF', '#1F3A5F', '#B9CFEA')):
+                v = 100 * t[sub] / tot if tot else 0
+                bar.barh(i, v, left=left, color=shade, height=.62, label=labels[subs.index(sub)] if i == 0 else None)
+                if v >= 7:
+                    bar.text(left + v / 2, i, f'{v:.0f}%', ha='center', va='center', fontsize=9, color='white' if shade != '#B9CFEA' else TEXT)
+                left += v
+            bar.text(101, i, f'{tot} shots', va='center', fontsize=8.5, color=TEXT2)
+        bar.set_yticks(range(len(seasons))); bar.set_yticklabels(seasons, fontsize=9); bar.invert_yaxis()
+        bar.set_xlim(0, 112); bar.set_xticks([0, 50, 100]); bar.set_xticklabels(['0%', '50%', '100%'], fontsize=8)
+        bar.tick_params(axis='y', length=0); bar.set_title('By season (share of his shots)', fontsize=9.5, loc='left', color=TEXT2)
+        bar.legend(ncol=3, fontsize=8, loc='lower right', bbox_to_anchor=(1, 1.0), frameon=False)
+    fig.text(.02, .955, f'{p}: pick-and-roll screen and isolation, left, centre or right', fontsize=14, fontweight='bold')
+    fig.text(.02, .915, season_line(p, s, g), fontsize=8.5, color=TEXT2, va='top')
+    fig.text(.02, .85, 'Court seen from behind the offense: left is the offense\'s left. Darker = bigger share of his shots of that play type. P&R side is Synergy\'s own tag '
+             '(High = screen in the centre, Left / Right = side screen);\n'
+             'isolation Top / Left / Right is where the isolation starts.',
+             fontsize=8.5, color=TEXT2, va='top')
+    fig.text(.02, .035, 'Shots only (possessions ending in a pass, a turnover or a foul are not in the shot list). Court shading and FG% use his two professional seasons together; small samples on the sides.',
+             fontsize=7, color=TEXT3)
+    c.save(fig, f'10f_player_{p.lower()}_pnr_iso_courts.png', 'free throws excluded')
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('data', type=Path); ap.add_argument('--out', type=Path, required=True)
@@ -364,7 +433,7 @@ def main() -> None:
     s, g = load(a.data)
     c = Ctx(a.out, a.author, a.date)
     for p in (a.players.split(',') if a.players else sorted(s.player.unique())):
-        fig_zones(c, p, s, g); fig_situations(c, p, s, g); fig_triangles(c, p, s, g); fig_drives(c, p, s, g); fig_pnr(c, p, s, g)
+        fig_zones(c, p, s, g); fig_situations(c, p, s, g); fig_triangles(c, p, s, g); fig_drives(c, p, s, g); fig_pnr(c, p, s, g); fig_courts(c, p, s, g)
         print(p, '->', a.out / f'10*_player_{p.lower()}_*.png')
 
 
