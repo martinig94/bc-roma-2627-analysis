@@ -11,22 +11,16 @@ THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the 
 
 ## Key points
 
-{{ pending }}
-
-## Defensive scheme
-
-Pressure, pick-and-roll coverage, switching, zone use, transition defense.
-
-{{ pending }}
+- ==Bologna allows few points per possession== (3rd in the LBA) and few free throws: [what they allow](#what-they-allow).
+- ==Spot-ups, isolations and pick-and-roll ball handlers are very well defended== (2nd, 3rd and 4th best): [what they allow](#what-they-allow).
+- ==Put-backs and transition are where opponents score==: [what they allow](#what-they-allow).
 
 ## What they allow
 
-Play types and shot zones allowed, points per possession, rebounds and turnovers forced.
-
-{{ pending }}
+- Bologna is 3rd in points allowed per possession and 4th in opponents' effective field-goal percentage; it forces turnovers on 15% of the possessions (5th) and allows the 5th lowest free-throw rate.
+- Best defended: spot-ups (2nd), isolations (3rd), pick-and-roll ball handlers and cuts (4th each). Opponents run isolations against Bologna more than against any other team.
+- Weakest: put-backs (14th), misc plays (13th), transition and post-ups (11th each).
 
 <!-- more -->
 
-## Clips
-
-{{ pending }}
+Ranks over the 16 teams, Italian Serie A games only, 8 games each (Synergy pull of 16 Nov 2026). Shots allowed: rim 60% (6th best), mid-range 34% (3rd best), threes 34% (9th lowest).
