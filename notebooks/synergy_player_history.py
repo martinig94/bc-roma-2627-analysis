@@ -364,7 +364,8 @@ COURT_ZONES = {   # play type -> (title, sub-types left to right as the offense 
 
 
 def draw_half_court(ax: Axes) -> None:
-    """Half court seen from behind the offense: basket at the bottom, left of the offense on the left of the picture (feet)."""
+    """Half court seen from behind the offense, in feet: basket at the top (the project's shot-chart orientation, see lba_style.ROTATE_COURT),
+    the offense's left on the left of the picture, its right on the right (Synergy x < 250 is the offense's right)."""
     line = dict(color='#888888', lw=1.2, zorder=3)
     ax.add_patch(Rectangle((-25, 0), 50, 34, fill=False, **line))
     ax.add_patch(Rectangle((-8, 0), 16, 19, fill=False, **line))
@@ -372,7 +373,7 @@ def draw_half_court(ax: Axes) -> None:
     ax.add_patch(Arc((0, 5.25), 47.5, 47.5, theta1=22, theta2=158, **line))
     ax.plot([-22, -22], [0, 14], **line); ax.plot([22, 22], [0, 14], **line)
     ax.add_patch(Circle((0, 5.25), .75, fill=False, **line))
-    ax.set_xlim(-26, 26); ax.set_ylim(-1, 35); ax.set_aspect('equal'); ax.axis('off')
+    ax.set_xlim(-26, 26); ax.set_ylim(35, -1); ax.set_aspect('equal'); ax.axis('off')   # y reversed: basket at the top, as in every shot chart of the project
 
 
 def fig_courts(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
@@ -393,10 +394,10 @@ def fig_courts(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
             x0, x1 = (-25, -8) if k == 0 else ((-8, 8) if k == 1 else (8, 25))
             cc.add_patch(Rectangle((x0, 0), x1 - x0, 34, fc=to_rgba('#1F3A5F', .12 + .78 * share), ec='none', zorder=1))
             fg = f'{100 * x.made.sum() / len(x):.0f}% FG\n({int(x.made.sum())}/{len(x)})' if len(x) else ''
-            cc.text((x0 + x1) / 2, 25, f'{100 * share:.0f}%', ha='center', va='center', fontsize=26, fontweight='bold',
+            cc.text((x0 + x1) / 2, 13, f'{100 * share:.0f}%', ha='center', va='center', fontsize=26, fontweight='bold',
                     color='white' if share > .35 else TEXT, zorder=5)
             cc.text((x0 + x1) / 2, 20, lab, ha='center', va='center', fontsize=10.5, color='white' if share > .35 else TEXT, zorder=5)
-            cc.text((x0 + x1) / 2, 15, fg, ha='center', va='center', linespacing=1.3, fontsize=8.5, color='white' if share > .35 else TEXT2, zorder=5)
+            cc.text((x0 + x1) / 2, 26, fg, ha='center', va='center', linespacing=1.3, fontsize=8.5, color='white' if share > .35 else TEXT2, zorder=5)
         cc.set_title(f'{title}\n{" + ".join(pro)} ({n} shots)', fontsize=11, loc='left', color=TEXT, pad=8)
         bar = fig.add_subplot(gs[1, j])
         for i, se in enumerate(seasons):
@@ -424,6 +425,44 @@ def fig_courts(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
     c.save(fig, f'10f_player_{p.lower()}_pnr_iso_courts.png', 'free throws excluded')
 
 
+LR_GROUPS = [('All shots', None), ('Threes', '3PT'), ('Mid-range', 'Mid-range'), ('Paint', 'Paint')]
+LR_ROWS = [('All seasons', None), ('Antwerp + Virtus', ('2025-26', '2026-27'))]
+
+
+def fig_left_right(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
+    """Does he shoot more from the left or from the right of the floor? All shots, threes, mid-range and paint, cumulative."""
+    d = s[(s.player == p) & s.x.notna()].copy()
+    d['side'] = np.where(d.x < RIM_X, 'right', 'left')
+    fig, axs = plt.subplots(2, 2, figsize=(14, 6.8))
+    fig.subplots_adjust(left=.11, right=.97, top=.75, bottom=.1, hspace=.6, wspace=.18)
+    for ax, (title, kind) in zip(axs.flat, LR_GROUPS):
+        x = d if kind is None else d[d.kind == kind]
+        for i, (row_name, seasons) in enumerate(LR_ROWS):
+            r = x if seasons is None else x[x.season.isin(seasons)]
+            left = 0
+            for side in ('left', 'right'):
+                t = r[r.side == side]
+                share = 100 * len(t) / len(r) if len(r) else 0
+                ax.barh(i, share, left=left, color=SIDE_COLORS[side], height=.62)
+                fg = f'{100 * t.made.sum() / len(t):.0f}% FG' if len(t) else ''
+                ax.text(left + share / 2, i, f'{share:.0f}%\n{fg} ({int(t.made.sum())}/{len(t)})', ha='center', va='center', fontsize=8.5,
+                        color='white' if side == 'right' else TEXT)
+                left += share
+        ax.set_yticks(range(len(LR_ROWS))); ax.set_yticklabels([n for n, _ in LR_ROWS] if ax in axs[:, 0] else [], fontsize=9)
+        ax.invert_yaxis(); ax.set_xlim(0, 100); ax.set_xticks([0, 50, 100]); ax.set_xticklabels(['0%', '50%', '100%'], fontsize=8)
+        ax.tick_params(axis='y', length=0)
+        ax.set_title(f'{title} ({len(x)} shots)', fontsize=10.5, loc='left', color=TEXT, pad=6)
+    fig.legend(handles=[Patch(fc=SIDE_COLORS[k], label=f'{k.capitalize()} of the floor') for k in ('left', 'right')], loc='upper right', ncol=2, fontsize=9,
+               bbox_to_anchor=(.97, .985), frameon=False)
+    fig.text(.02, .955, f'{p}: more to the left or to the right?', fontsize=14, fontweight='bold')
+    fig.text(.02, .915, season_line(p, s, g), fontsize=8.5, color=TEXT2, va='top')
+    fig.text(.02, .835, 'Every field-goal attempt, all play types, by the side of the floor (left or right of the basket, from the offense\'s point of view) where it is taken.',
+             fontsize=8.5, color=TEXT2, va='top')
+    fig.text(.02, .04, 'Shots only. Side from the shot coordinates in the Synergy shot chart; a shot right under the basket counts on the side of its coordinate. '
+             '2023-25 are US college games.', fontsize=7, color=TEXT3)
+    c.save(fig, f'10g_player_{p.lower()}_left_right.png', 'free throws excluded')
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('data', type=Path); ap.add_argument('--out', type=Path, required=True)
@@ -433,7 +472,7 @@ def main() -> None:
     s, g = load(a.data)
     c = Ctx(a.out, a.author, a.date)
     for p in (a.players.split(',') if a.players else sorted(s.player.unique())):
-        fig_zones(c, p, s, g); fig_situations(c, p, s, g); fig_triangles(c, p, s, g); fig_drives(c, p, s, g); fig_pnr(c, p, s, g); fig_courts(c, p, s, g)
+        fig_zones(c, p, s, g); fig_situations(c, p, s, g); fig_triangles(c, p, s, g); fig_drives(c, p, s, g); fig_pnr(c, p, s, g); fig_courts(c, p, s, g); fig_left_right(c, p, s, g)
         print(p, '->', a.out / f'10*_player_{p.lower()}_*.png')
 
 
