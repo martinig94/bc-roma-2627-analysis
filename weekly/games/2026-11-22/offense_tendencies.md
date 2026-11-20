@@ -27,6 +27,12 @@ THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the 
 
 <!-- more -->
 
+{{ figure: 02_opponent_playtypes }}
+
+{{ figure: 06_players_playtype_mix }}
+
+[How to read the play-type plots](../../methodology/#reading-the-shot-selection-triangles-and-the-play-type-plots).
+
 LBA ranks over the 16 teams, 8 games (Synergy pull of 16 Nov 2026, unchanged on 20 Nov); Euroleague ranks over the 20 teams, 13 games (pull of 20 Nov, the games of 17 and 19 Nov included). Share = part of Bologna's possessions; rank by points per possession, 1 = best.
 
 | Play type | Serie A: share | PPP | Rank (16) | Euroleague: share | PPP | Rank (20) |

@@ -1,0 +1,553 @@
+date,game,period,clock,player,play_type,shot_type,zone,made,description
+2026-11-15,Virtus Bologna@Trento,4,0:06,Francesco Ferrari,Offensive Rebounds (Put Backs),Put-back attempt,Mid-range,0,24 Francesco Ferrari > Offensive Rebound > Short > Scoring Attempt > Short to < 17' > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,4,0:06,Tommaso Baldasso,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,0,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,4,1:22,Francesco Ferrari,Other,Hook,Paint,0,24 Francesco Ferrari > Post-Up > Left Block > Left Shoulder > Dribble Move > To Hook > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,4,1:35,Marcus Carr,Isolation,"Dribble jumper, 3PT",Wing 3,0,2 Marcus Carr > ISO > Top > Drives Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,4,3:16,Marcus Carr,Spot Up,"Guarded, 3PT",Wing 3,0,13 Matteo Baiocchi > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,4,4:45,Aliou Diarra,Transition,To basket,Paint,1,31 Aliou Diarra > Transition > Trailer > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,4,5:35,Aliou Diarra,Transition,To basket,Paint,0,31 Aliou Diarra > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,4,6:25,Marcus Carr,P&R Ball Handler,To basket,Mid-range,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts Foul > 0 Pts
+2026-11-15,Virtus Bologna@Trento,4,7:08,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Left Block > Left Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,4,7:18,Trent Frazier,Isolation,"Dribble jumper, mid-range",Mid-range,0,1 Trent Frazier > ISO > Top > Drives Left > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,4,7:37,Trent Frazier,Off Screen,"Dribble jumper, 3PT",Corner 3,0,1 Trent Frazier > Off Screen > To Shooter's Right > Flare > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,4,8:08,Mouhamet Diouf,Cut,To basket,Paint,1,35 Mouhamet Diouf > Cut > Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,4,9:22,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,,Rasheed Bello,Isolation,"Dribble jumper, 3PT",Wing 3,0,0 Rasheed Bello > ISO > Right > Drives Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,1:32,Marcus Carr,Transition,"Open, 3PT",Wing 3,1,2 Marcus Carr > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,1:57,Marcus Carr,Transition,To basket,Paint,1,2 Marcus Carr > Transition > Left Wing > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,3,2:25,Marcus Carr,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,3,2:53,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Left Block > Right Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,3,3:28,Wendell Moore,Other,Other,Mid-range,0,8 Wendell Moore > Post-Up > Right Block > Right Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,3,4:19,Kessler Edwards,Spot Up,"Guarded, 3PT",Top 3,0,9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,5:20,Marcus Carr,Transition,To basket,Paint,1,2 Marcus Carr > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,3,5:35,Trent Frazier,Off Screen,"Guarded, 3PT",Wing 3,1,1 Trent Frazier > Off Screen > To Shooter's Right > Flare > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,6:02,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,6:16,Wendell Moore,Spot Up,"Guarded, 3PT",Corner 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Wendell Moore > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,7:12,Wendell Moore,Cut,To basket,Paint,1,8 Wendell Moore > Cut > Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,3,7:43,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,7:58,Wendell Moore,Spot Up,"Open, 3PT",Corner 3,0,35 Mouhamet Diouf > Post-Up > Left Block > Left Shoulder > Dribble Move > Defense Commits > Ball Delivered > 8 Wendell Moore > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,8:25,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,3,9:00,Wendell Moore,Transition,To basket,Paint,0,8 Wendell Moore > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,3,9:23,Wendell Moore,Transition,To basket,Paint,1,8 Wendell Moore > Transition > Right Wing > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,0:18,Aliou Diarra,Transition,To basket,Paint,1,31 Aliou Diarra > Transition > Right Wing > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,0:42,Rasheed Bello,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,2,1:05,Francesco Ferrari,Spot Up,"Guarded, 3PT",Wing 3,0,24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,2,1:36,Francesco Ferrari,Transition,To basket,Paint,0,24 Francesco Ferrari > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,2:39,Daniel Hackett,Spot Up,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 23 Daniel Hackett > Spot-Up > Drives Left > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,2:50,Marcus Carr,Isolation,To basket,Mid-range,0,2 Marcus Carr > ISO > Top > Drives Right > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,3:18,Wendell Moore,Spot Up,"Open, 3PT",Top 3,0,8 Wendell Moore > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,2,3:23,Wendell Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Paint,0,8 Wendell Moore > P&R Ball Handler > Left P&R > Side > Go Away from Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,4:03,Wendell Moore,P&R Ball Handler,To basket,Paint,1,8 Wendell Moore > P&R Ball Handler > Right P&R > Side > Go Away from Pick > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,,Rasheed Bello,Other,To basket,Paint,1,0 Rasheed Bello > No Play Type > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,4:58,Tommaso Baldasso,Spot Up,"Guarded, 3PT",Wing 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,2,5:28,Wendell Moore,Off Screen,"Guarded, mid-range",Mid-range,1,8 Wendell Moore > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Guarded > Medium/17' to <3p > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,6:22,Rasheed Bello,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,2,6:51,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,0,9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,2,7:25,Aliou Diarra,Other,"Open, mid-range",Mid-range,1,31 Aliou Diarra > Hand Off > From Dribble > Left > No Dribble Jumper > Open > Medium/17' to <3p > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,8:13,Trent Frazier,Spot Up,"Open, 3PT",Corner 3,0,1 Trent Frazier > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,2,9:01,Marcus Carr,Spot Up,"Guarded, 3PT",Wing 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,2,9:30,Trent Frazier,P&R Ball Handler,To basket,Paint,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,2,9:38,Marcus Carr,P&R Ball Handler,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,,Trent Frazier,Other,"Open, 3PT",Wing 3,0,1 Trent Frazier > No Play Type > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,1,,Aliou Diarra,Other,To basket,Paint,1,31 Aliou Diarra > No Play Type > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,0:25,Aliou Diarra,P&R Roll Man,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,1:00,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Left Block > Right Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,1:32,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Left Block > Left Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,2:22,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,1,3:13,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Left Block > Right Shoulder > Dribble Move > To Drop Step > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,4:20,Tommaso Baldasso,Spot Up,"Guarded, 3PT",Corner 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,1,4:49,Tommaso Baldasso,Spot Up,To basket,Paint,1,11 Tommaso Baldasso > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,5:30,Wendell Moore,P&R Ball Handler,To basket,Paint,0,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,5:58,Rasheed Bello,Isolation,"Dribble jumper, 3PT",Wing 3,0,0 Rasheed Bello > ISO > Left > Drives Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,1,6:34,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,1,7:11,Trent Frazier,Off Screen,"Guarded, 3PT",Wing 3,1,1 Trent Frazier > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-15,Virtus Bologna@Trento,1,7:16,Wendell Moore,Offensive Rebounds (Put Backs),To basket,Paint,0,8 Wendell Moore > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,7:16,Wendell Moore,Transition,To basket,Paint,0,8 Wendell Moore > Transition > First Middle > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,7:47,Wendell Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,8:41,Rasheed Bello,P&R Ball Handler,To basket,Mid-range,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,9:02,Rasheed Bello,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-15,Virtus Bologna@Trento,1,9:27,Trent Frazier,Transition,To basket,Paint,0,1 Trent Frazier > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-11-15,Virtus Bologna@Trento,1,9:43,Rasheed Bello,Isolation,"Dribble jumper, 3PT",Corner 3,1,0 Rasheed Bello > ISO > Left > Early Jumper > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,4,0:01,Marcus Carr,P&R Ball Handler,To basket,Paint,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,4,0:23,Marcus Carr,Spot Up,To basket,Paint,1,2 Marcus Carr > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,4,1:40,Trent Frazier,P&R Ball Handler,To basket,Paint,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,4,2:17,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,4,3:21,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Left Block > Left Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,4,3:53,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,4,4:23,Trent Frazier,Spot Up,"Open, 3PT",Corner 3,1,1 Trent Frazier > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,4,4:32,Bobi Klintman,Spot Up,"Guarded, 3PT",Corner 3,0,1 Trent Frazier > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,4,5:01,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,4,5:23,Trent Frazier,Off Screen,"Open, 3PT",Wing 3,0,1 Trent Frazier > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,4,5:48,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,4,6:35,Kessler Edwards,Transition,To basket,Paint,1,9 Kessler Edwards > Transition > First Middle > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,4,6:56,Trent Frazier,Transition,"Open, mid-range",Mid-range,1,1 Trent Frazier > Transition > Right Wing > No Dribble Jumper > Open > Medium/17' to <3p > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,4,7:17,Wendell Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,4,7:25,Daniel Hackett,Other,To basket,Paint,0,23 Daniel Hackett > Hand Off > From Dribble > Left > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,4,7:46,Wendell Moore,Isolation,To basket,Paint,0,8 Wendell Moore > ISO > Right > Drives Right > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,4,8:31,Trent Frazier,Transition,"Open, 3PT",Corner 3,1,1 Trent Frazier > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,4,9:04,Marcus Carr,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,4,9:49,Aliou Diarra,P&R Roll Man,To basket,Paint,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,3,0:02,Aliou Diarra,P&R Roll Man,To basket,Paint,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,3,0:40,Daniel Hackett,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,23 Daniel Hackett > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,3,1:27,Davide Casarin,Transition,To basket,Paint,1,7 Davide Casarin > Transition > Left Wing > To Basket > Make 2 Pts Foul > 1 Pts
+2026-11-09,Verona@VirtusBologna,3,1:48,Aliou Diarra,P&R Roll Man,To basket,Paint,1,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,3,2:35,Francesco Ferrari,Spot Up,"Guarded, 3PT",Wing 3,0,24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,3,2:55,Daniel Hackett,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,7 Davide Casarin > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 23 Daniel Hackett > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,3,3:46,Daniel Hackett,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,23 Daniel Hackett > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,3,4:32,Mouhamet Diouf,P&R Roll Man,"Open, short (<17 ft)",Mid-range,0,1 Trent Frazier > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Short to < 17' > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,3,5:09,Mouhamet Diouf,Spot Up,To basket,Paint,1,35 Mouhamet Diouf > Spot-Up > Drives Right > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,3,5:38,Bobi Klintman,Spot Up,"Guarded, 3PT",Top 3,1,35 Mouhamet Diouf > Post-Up > Right Block > Right Shoulder > Dribble Move > Defense Commits > Ball Delivered > 34 Bobi Klintman > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,3,6:14,Wendell Moore,Off Screen,"Dribble jumper, short (<17 ft)",Mid-range,0,8 Wendell Moore > Off Screen > To Shooter's Left > Straight > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,3,6:56,Francesco Ferrari,Spot Up,"Open, 3PT",Corner 3,1,24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,3,7:05,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,3,7:34,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,3,7:56,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Flash Middle > Left Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,3,8:36,Francesco Ferrari,Other,"Dribble jumper, short (<17 ft)",Mid-range,1,24 Francesco Ferrari > Hand Off > From Dribble > Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,3,8:47,Marcus Carr,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,3,9:31,Mouhamet Diouf,P&R Roll Man,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,2,0:33,Wendell Moore,Other,"Dribble jumper, 3PT",Top 3,0,8 Wendell Moore > Hand Off > From Dribble > Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,2,1:08,Kessler Edwards,P&R Ball Handler,"Dribble jumper, 3PT",Corner 3,0,9 Kessler Edwards > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,2,1:23,Davide Casarin,Transition,To basket,Paint,0,7 Davide Casarin > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,2,1:47,Daniel Hackett,Other,To basket,Paint,0,23 Daniel Hackett > Hand Off > From Stationary > Right > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,2,2:35,Wendell Moore,Transition,To basket,Paint,1,8 Wendell Moore > Transition > Right Wing > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,2,3:08,Wendell Moore,Transition,To basket,Paint,1,8 Wendell Moore > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,2,3:23,Marcus Carr,P&R Ball Handler,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Go Away from Pick > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,2,3:40,Francesco Ferrari,Transition,"Guarded, 3PT",Wing 3,0,24 Francesco Ferrari > Transition > Trailer > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,2,3:57,Bobi Klintman,Spot Up,To basket,Paint,0,34 Bobi Klintman > Spot-Up > Drives Left > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,2,5:05,Bobi Klintman,Offensive Rebounds (Put Backs),To basket,Paint,0,34 Bobi Klintman > Offensive Rebound > Long > Scoring Attempt > At Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,2,5:26,Wendell Moore,Transition,To basket,Paint,1,8 Wendell Moore > Transition > Left Wing > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,2,5:52,Wendell Moore,Cut,To basket,Paint,1,8 Wendell Moore > Cut > Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,2,6:00,Marcus Carr,Spot Up,"Open, 3PT",Wing 3,0,2 Marcus Carr > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,2,7:11,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Takes Early Jump Shot > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,2,7:29,Aliou Diarra,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,31 Aliou Diarra > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,2,8:09,Aliou Diarra,P&R Roll Man,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,2,8:28,Trent Frazier,Off Screen,"Guarded, 3PT",Wing 3,0,1 Trent Frazier > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,2,9:01,Davide Casarin,Transition,To basket,Paint,1,7 Davide Casarin > Transition > Right Wing > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,2,9:31,Davide Casarin,Spot Up,"Open, 3PT",Corner 3,0,7 Davide Casarin > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,2,9:38,Daniel Hackett,P&R Ball Handler,To basket,Paint,0,23 Daniel Hackett > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,1,0:24,Daniel Hackett,Transition,To basket,Paint,0,23 Daniel Hackett > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,1,0:47,Trent Frazier,Spot Up,To basket,Paint,1,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 1 Trent Frazier > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,1,1:47,Davide Casarin,Transition,To basket,Paint,1,7 Davide Casarin > Transition > Right Wing > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,1,2:06,Aliou Diarra,P&R Roll Man,To basket,Paint,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,1,3:55,Trent Frazier,Other,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > Hand Off > From Dribble > Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,1,4:08,Francesco Ferrari,Transition,To basket,Paint,1,24 Francesco Ferrari > Transition > First Middle > To Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,1,6:03,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-09,Verona@VirtusBologna,1,6:19,Wendell Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,8 Wendell Moore > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,1,6:49,Bobi Klintman,Cut,To basket,Mid-range,1,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > Cut > Basket > Make 2 Pts
+2026-11-09,Verona@VirtusBologna,1,8:06,Mouhamet Diouf,Other,Hook,Paint,0,35 Mouhamet Diouf > Post-Up > Flash Middle > Left Shoulder > Dribble Move > To Hook > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,1,8:11,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-09,Verona@VirtusBologna,1,8:33,Marcus Carr,P&R Ball Handler,To basket,Paint,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-09,Verona@VirtusBologna,1,9:33,Wendell Moore,Transition,"Open, 3PT",Wing 3,1,8 Wendell Moore > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,0:01,Wendell Moore,Spot Up,"Guarded, 3PT",Corner 3,0,8 Wendell Moore > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,0:01,Daniel Hackett,Transition,"Guarded, 3PT",Corner 3,0,23 Daniel Hackett > Transition > Right Wing > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,0:12,Rasheed Bello,Transition,To basket,Paint,1,0 Rasheed Bello > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,0:29,Marcus Carr,Offensive Rebounds (Put Backs),Put-back attempt,Wing 3,0,2 Marcus Carr > Offensive Rebound > Long > Scoring Attempt > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,0:29,Derrick Alston,Off Screen,"Dribble jumper, 3PT",Wing 3,0,21 Derrick Alston > Off Screen > To Shooter's Left > Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,0:57,Wendell Moore,P&R Roll Man,To basket,Paint,0,21 Derrick Alston > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Wendell Moore > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,2:00,Derrick Alston,P&R Roll Man,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > P&R Roll Man > Slips the Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,2:31,Wendell Moore,Offensive Rebounds (Put Backs),To basket,Paint,1,8 Wendell Moore > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,2:31,Marcus Carr,Other,"Dribble jumper, 3PT",Wing 3,0,2 Marcus Carr > Hand Off > From Dribble > Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,3:10,Daniel Hackett,Spot Up,To basket,Paint,1,23 Daniel Hackett > Spot-Up > Drives Right > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,3:22,Derrick Alston,Spot Up,"Open, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,3:55,Derrick Alston,Spot Up,"Guarded, 3PT",Wing 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,4:26,Derrick Alston,Other,To basket,Paint,0,21 Derrick Alston > Post-Up > Left Block > Left Shoulder > Dribble Move > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,5:08,Wendell Moore,Offensive Rebounds (Put Backs),To basket,Paint,1,8 Wendell Moore > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,5:08,Derrick Alston,Spot Up,"Open, 3PT",Top 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,5:47,Derrick Alston,Cut,Other,Paint,0,21 Derrick Alston > Cut > Screen > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,6:12,Wendell Moore,P&R Ball Handler,To basket,Paint,1,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,6:44,Wendell Moore,Other,Other,Mid-range,0,8 Wendell Moore > Post-Up > Left Block > Left Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,7:09,Rasheed Bello,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 0 Rasheed Bello > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,8:11,Kevin Kokila,P&R Roll Man,To basket,Paint,1,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 3 Kevin Kokila > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,8:22,Marcus Carr,Transition,To basket,Paint,0,2 Marcus Carr > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,4,8:43,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,0,9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,9:14,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,4,9:46,Rasheed Bello,P&R Ball Handler,To basket,Paint,1,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,,Marcus Carr,Spot Up,"Guarded, 3PT",Wing 3,0,2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,0:44,Kessler Edwards,Spot Up,"Open, 3PT",Wing 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,1:19,Wendell Moore,Spot Up,"Guarded, 3PT",Corner 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Wendell Moore > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,1:51,Wendell Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,2:07,Davide Casarin,Transition,To basket,Paint,0,7 Davide Casarin > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,2:30,Mouhamet Diouf,P&R Roll Man,To basket,Paint,0,7 Davide Casarin > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,2:55,Davide Casarin,P&R Ball Handler,To basket,Paint,0,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,3:09,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,3:15,Wendell Moore,Other,To basket,Mid-range,0,8 Wendell Moore > Hand Off > From Dribble > Left > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,3:38,Kessler Edwards,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,4:33,Mouhamet Diouf,Offensive Rebounds (Put Backs),To basket,Paint,1,35 Mouhamet Diouf > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,4:33,Rasheed Bello,P&R Ball Handler,To basket,Paint,0,0 Rasheed Bello > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,5:18,Wendell Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,8 Wendell Moore > P&R Ball Handler > Right P&R > Side > Go Away from Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,5:38,Derrick Alston,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,21 Derrick Alston > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,6:12,Francesco Ferrari,Spot Up,"Open, 3PT",Wing 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,6:36,Rasheed Bello,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,3,7:16,Rasheed Bello,P&R Ball Handler,To basket,Paint,1,0 Rasheed Bello > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,7:47,Marcus Carr,Offensive Rebounds (Put Backs),To basket,Paint,1,2 Marcus Carr > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,7:47,Marcus Carr,Transition,To basket,Paint,0,2 Marcus Carr > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,8:26,Francesco Ferrari,Other,Hook,Paint,1,24 Francesco Ferrari > Post-Up > Left Block > Left Shoulder > Dribble Move > To Hook > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,9:03,Marcus Carr,Transition,"Dribble jumper, short (<17 ft)",Paint,1,2 Marcus Carr > Transition > Ballhandler > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,3,9:19,Rasheed Bello,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,,Rasheed Bello,P&R Ball Handler,To basket,Paint,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,0:41,Daniel Hackett,Other,To basket,Paint,1,23 Daniel Hackett > Hand Off > From Dribble > Left > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,1:03,Davide Casarin,Transition,To basket,Paint,0,7 Davide Casarin > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,1:22,Daniel Hackett,Transition,"Guarded, 3PT",Corner 3,0,23 Daniel Hackett > Transition > Left Wing > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,1:50,Marcus Carr,Spot Up,"Guarded, 3PT",Wing 3,1,2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,1:56,Marcus Carr,Isolation,"Dribble jumper, short (<17 ft)",Paint,0,2 Marcus Carr > ISO > Top > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,2:37,Derrick Alston,Transition,"Guarded, 3PT",Wing 3,0,21 Derrick Alston > Transition > Right Wing > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,3:01,Kevin Kokila,P&R Roll Man,To basket,Mid-range,0,21 Derrick Alston > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 3 Kevin Kokila > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,3:23,Derrick Alston,Transition,"Open, 3PT",Corner 3,0,21 Derrick Alston > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,3:48,Derrick Alston,Transition,To basket,Mid-range,1,21 Derrick Alston > Transition > Right Wing > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,4:32,Francesco Ferrari,Transition,"Guarded, 3PT",Wing 3,1,24 Francesco Ferrari > Transition > Left Wing > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,4:52,Mouhamet Diouf,Other,Other,Paint,0,35 Mouhamet Diouf > Post-Up > Right Block > Right Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,5:00,Derrick Alston,Spot Up,"Dribble jumper, 3PT",Wing 3,0,21 Derrick Alston > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,5:06,Mouhamet Diouf,Other,To basket,Paint,0,35 Mouhamet Diouf > Post-Up > Flash Middle > Left Shoulder > No Dribble Move > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,5:53,Wendell Moore,Transition,"Open, 3PT",Wing 3,0,8 Wendell Moore > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,6:10,Mouhamet Diouf,P&R Roll Man,To basket,Paint,0,23 Daniel Hackett > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,7:12,Francesco Ferrari,Spot Up,"Guarded, 3PT",Wing 3,1,24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,7:41,Kessler Edwards,Other,Other,Paint,1,9 Kessler Edwards > Post-Up > Left Block > Left Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,2,8:26,Kessler Edwards,Spot Up,"Open, 3PT",Wing 3,1,0 Rasheed Bello > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,8:50,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,1,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,9:14,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,2,9:48,Kessler Edwards,Cut,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Cut > Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,0:12,Kevin Kokila,P&R Roll Man,To basket,Paint,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 3 Kevin Kokila > P&R Roll Man > Slips the Pick > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,0:25,Kessler Edwards,Other,"Dribble jumper, 3PT",Top 3,0,9 Kessler Edwards > No Play Type > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,0:41,Kevin Kokila,P&R Roll Man,To basket,Paint,1,7 Davide Casarin > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 3 Kevin Kokila > P&R Roll Man > Slips the Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,1:33,Davide Casarin,Transition,To basket,Paint,1,7 Davide Casarin > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,2:01,Davide Casarin,Transition,To basket,Paint,1,7 Davide Casarin > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,2:37,Marcus Carr,Transition,To basket,Paint,1,2 Marcus Carr > Transition > Left Wing > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,3:49,Kevin Kokila,Offensive Rebounds (Put Backs),To basket,Paint,1,3 Kevin Kokila > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,3:49,Kevin Kokila,P&R Roll Man,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 3 Kevin Kokila > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,4:31,Francesco Ferrari,Offensive Rebounds (Put Backs),To basket,Paint,0,24 Francesco Ferrari > Offensive Rebound > Long > Scoring Attempt > At Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,4:31,Marcus Carr,Spot Up,"Guarded, 3PT",Corner 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,5:28,Derrick Alston,Cut,To basket,Paint,1,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > Cut > Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,6:56,Derrick Alston,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,0,21 Derrick Alston > ISO > Top > Drives Right > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,7:28,Wendell Moore,P&R Ball Handler,To basket,Paint,1,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,7:56,Francesco Ferrari,Transition,To basket,Paint,1,24 Francesco Ferrari > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,8:37,Francesco Ferrari,Spot Up,"Open, 3PT",Top 3,1,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-11-02,Trieste@VirtusBologna,1,9:10,Derrick Alston,Isolation,To basket,Paint,0,21 Derrick Alston > ISO > Left > Drives Right > To Basket > Miss 2 Pts
+2026-11-02,Trieste@VirtusBologna,1,9:38,Francesco Ferrari,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,5,2:45,Daniel Hackett,Offensive Rebounds (Put Backs),Put-back attempt,Mid-range,0,23 Daniel Hackett > Offensive Rebound > Long > Scoring Attempt > Short to < 17' > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,5,0:02,Marcus Carr,Off Screen,"Dribble jumper, 3PT",Wing 3,0,2 Marcus Carr > Off Screen > To Shooter's Right > Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,5,0:32,Marcus Carr,Isolation,To basket,Mid-range,0,2 Marcus Carr > ISO > Top > Drives Right > To Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,5,1:06,Marcus Carr,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,1,2 Marcus Carr > ISO > Top > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,5,1:45,Marcus Carr,Isolation,"Dribble jumper, 3PT",Top 3,1,2 Marcus Carr > ISO > Left > Drives Right > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,5,2:32,Daniel Hackett,Spot Up,"Open, 3PT",Wing 3,1,23 Daniel Hackett > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,5,2:45,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,0,9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,5,3:49,Wendell Moore,Transition,"Guarded, short (<17 ft)",Mid-range,1,8 Wendell Moore > Transition > First Middle > No Dribble Jumper > Guarded > Short to < 17' > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,4,0:55,Marcus Carr,Transition,"Dribble jumper, 3PT",Top 3,0,2 Marcus Carr > Transition > Ballhandler > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,4,1:26,Wendell Moore,Other,"Open, 3PT",Wing 3,1,8 Wendell Moore > Hand Off > From Dribble > Left > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,4,1:36,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,4,2:30,Bobi Klintman,Cut,To basket,Paint,1,34 Bobi Klintman > Cut > Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,4,2:37,Bobi Klintman,P&R Roll Man,"Guarded, 3PT",Top 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > P&R Roll Man > Pick and Pops > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,4,3:17,Trent Frazier,Isolation,To basket,Paint,0,1 Trent Frazier > ISO > Top > Drives Left > To Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,4,4:08,Kessler Edwards,Spot Up,"Open, 3PT",Corner 3,1,9 Kessler Edwards > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,4,4:29,Mouhamet Diouf,P&R Roll Man,To basket,Paint,0,1 Trent Frazier > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,4,4:53,Marcus Carr,Isolation,To basket,Paint,0,2 Marcus Carr > ISO > Top > Drives Right > To Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,4,5:28,Marcus Carr,Spot Up,"Open, 3PT",Wing 3,0,2 Marcus Carr > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,4,5:34,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,4,6:28,Wendell Moore,P&R Ball Handler,To basket,Paint,1,8 Wendell Moore > P&R Ball Handler > Right P&R > Side > Go Away from Pick > To Basket > Make 2 Pts Foul > 1 Pts
+2026-10-25,VirtusBologna@Milano,4,6:46,Wendell Moore,Cut,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Wendell Moore > Cut > Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,4,7:31,Marcus Carr,Spot Up,"Open, 3PT",Wing 3,0,2 Marcus Carr > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,4,7:38,Bobi Klintman,Offensive Rebounds (Put Backs),To basket,Paint,0,34 Bobi Klintman > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,4,7:38,Tommaso Baldasso,Off Screen,"Dribble jumper, mid-range",Mid-range,0,11 Tommaso Baldasso > Off Screen > To Shooter's Right > Straight > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,4,7:58,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,2 Marcus Carr > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,4,8:05,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,4,9:20,Trent Frazier,Isolation,"Dribble jumper, 3PT",Top 3,1,1 Trent Frazier > ISO > Top > Drives Right > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,3,,Trent Frazier,Isolation,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > ISO > Left > Drives Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,3,0:42,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,1 Trent Frazier > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,3,1:54,Aliou Diarra,Cut,To basket,Paint,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > Cut > Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,3,2:22,Trent Frazier,Cut,Other,Mid-range,0,31 Aliou Diarra > Post-Up > Right Block > Left Shoulder > Dribble Move > Defense Commits > Ball Delivered > 1 Trent Frazier > Cut > Flash > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,3,3:12,Tommaso Baldasso,Other,"Dribble jumper, mid-range",Mid-range,1,11 Tommaso Baldasso > Hand Off > From Dribble > Right > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,3,3:40,Wendell Moore,P&R Ball Handler,To basket,Paint,1,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,3,4:05,Wendell Moore,Other,"Dribble jumper, short (<17 ft)",Mid-range,1,8 Wendell Moore > Hand Off > From Dribble > Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,3,4:13,Mouhamet Diouf,Other,Other,Mid-range,0,35 Mouhamet Diouf > Post-Up > Flash Middle > Left Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,3,4:44,Wendell Moore,Cut,To basket,Paint,1,8 Wendell Moore > Cut > Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,3,4:52,Wendell Moore,Spot Up,"Open, 3PT",Wing 3,0,8 Wendell Moore > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,3,4:58,Mouhamet Diouf,Other,Other,Mid-range,0,35 Mouhamet Diouf > Post-Up > Right Block > Right Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,3,6:40,Daniel Hackett,Transition,"Open, 3PT",Wing 3,0,23 Daniel Hackett > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,3,,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > No Play Type > To Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,3,7:51,Kessler Edwards,Transition,To basket,Paint,0,9 Kessler Edwards > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,3,8:26,Kessler Edwards,Spot Up,"Open, 3PT",Wing 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,3,8:39,Kessler Edwards,Spot Up,"Guarded, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,3,9:33,Wendell Moore,Spot Up,"Open, 3PT",Wing 3,0,8 Wendell Moore > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,2,0:14,Trent Frazier,Isolation,"Dribble jumper, 3PT",Top 3,1,1 Trent Frazier > ISO > Top > Drives Left > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,2,1:13,Bobi Klintman,Spot Up,"Dribble jumper, 3PT",Corner 3,0,34 Bobi Klintman > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,2,1:13,Davide Casarin,Other,Other,Mid-range,0,7 Davide Casarin > Post-Up > Left Block > Right Shoulder > Dribble Move > To Jumper > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,2,1:13,Bobi Klintman,P&R Roll Man,"Guarded, 3PT",Wing 3,0,7 Davide Casarin > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > P&R Roll Man > Pick and Pops > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,2,3:43,Trent Frazier,P&R Ball Handler,To basket,Paint,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,2,4:33,Tommaso Baldasso,P&R Roll Man,"Guarded, 3PT",Top 3,0,8 Wendell Moore > P&R Ball Handler > High P&R > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > P&R Roll Man > Slips the Pick > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,2,5:02,Marcus Carr,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,2,6:17,Tommaso Baldasso,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,0,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,2,6:49,Francesco Ferrari,P&R Roll Man,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > P&R Roll Man > Slips the Pick > To Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,2,7:12,Wendell Moore,Transition,To basket,Paint,1,8 Wendell Moore > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,2,8:24,Marcus Carr,P&R Ball Handler,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,2,8:42,Francesco Ferrari,Cut,To basket,Paint,1,24 Francesco Ferrari > Cut > Basket > Make 2 Pts Foul > 1 Pts
+2026-10-25,VirtusBologna@Milano,1,0:02,Trent Frazier,P&R Ball Handler,To basket,Paint,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,1,0:35,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,1,1:05,Bobi Klintman,Isolation,To basket,Mid-range,0,34 Bobi Klintman > ISO > Left > Drives Left > To Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,1,2:03,Daniel Hackett,Cut,To basket,Paint,1,23 Daniel Hackett > Cut > Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,1,2:48,Aliou Diarra,Other,To basket,Paint,0,31 Aliou Diarra > Post-Up > Left Block > Right Shoulder > Dribble Move > To Drop Step > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,1,,Bobi Klintman,Other,"Dribble jumper, 3PT",Top 3,0,34 Bobi Klintman > No Play Type > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,1,2:49,Trent Frazier,Other,"Guarded, 3PT",Top 3,0,1 Trent Frazier > Hand Off > From Dribble > Top > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,1,4:20,Marcus Carr,Spot Up,"Guarded, 3PT",Wing 3,1,23 Daniel Hackett > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-25,VirtusBologna@Milano,1,,Aliou Diarra,P&R Roll Man,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,1,5:10,Kessler Edwards,Spot Up,"Guarded, 3PT",Wing 3,0,8 Wendell Moore > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,1,5:14,Mouhamet Diouf,Offensive Rebounds (Put Backs),To basket,Paint,1,35 Mouhamet Diouf > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-25,VirtusBologna@Milano,1,5:14,Mouhamet Diouf,P&R Roll Man,To basket,Paint,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Slips the Pick > To Basket > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,1,5:41,Marcus Carr,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,0,2 Marcus Carr > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,1,6:00,Marcus Carr,Spot Up,"Dribble jumper, 3PT",Wing 3,0,2 Marcus Carr > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-25,VirtusBologna@Milano,1,6:45,Mouhamet Diouf,Cut,To basket,Paint,1,35 Mouhamet Diouf > Cut > Basket > Make 2 Pts Foul > 0 Pts
+2026-10-25,VirtusBologna@Milano,1,7:43,Francesco Ferrari,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,24 Francesco Ferrari > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-25,VirtusBologna@Milano,1,8:17,Wendell Moore,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,8 Wendell Moore > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,0:05,Aliou Diarra,Cut,To basket,Paint,0,31 Aliou Diarra > Cut > Basket > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,4,0:49,Aliou Diarra,Cut,To basket,Paint,1,31 Aliou Diarra > Cut > Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,4,1:11,Aliou Diarra,P&R Roll Man,To basket,Paint,1,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Slips the Pick > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,4,1:59,Francesco Ferrari,P&R Roll Man,To basket,Paint,1,7 Davide Casarin > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > P&R Roll Man > Slips the Pick > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,4,2:44,Aliou Diarra,Transition,To basket,Paint,1,31 Aliou Diarra > Transition > First Middle > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,4,3:13,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,3:25,Matteo Baiocchi,Transition,"Dribble jumper, mid-range",Mid-range,1,13 Matteo Baiocchi > Transition > Ballhandler > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,4,3:42,Francesco Ferrari,Spot Up,"Guarded, 3PT",Corner 3,0,24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,4:59,Bobi Klintman,Other,"Guarded, 3PT",Wing 3,1,34 Bobi Klintman > Hand Off > From Dribble > Right > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,5:29,Trent Frazier,Spot Up,"Guarded, 3PT",Corner 3,1,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 1 Trent Frazier > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,6:16,Bobi Klintman,Spot Up,"Open, 3PT",Top 3,1,34 Bobi Klintman > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,6:25,Mouhamet Diouf,Cut,To basket,Paint,1,11 Tommaso Baldasso > P&R Ball Handler > Left P&R > Side > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > Cut > Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,4,7:05,Daniel Hackett,Transition,"Open, 3PT",Corner 3,1,23 Daniel Hackett > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,7:42,Bobi Klintman,Spot Up,"Guarded, 3PT",Wing 3,1,23 Daniel Hackett > ISO > Top > Defense Commits > Ball Delivered > 34 Bobi Klintman > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,8:32,Tommaso Baldasso,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,11 Tommaso Baldasso > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,4,9:27,Daniel Hackett,Spot Up,"Open, 3PT",Corner 3,1,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 23 Daniel Hackett > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,4,9:39,Tommaso Baldasso,Other,"Dribble jumper, mid-range",Mid-range,0,11 Tommaso Baldasso > Hand Off > From Dribble > Right > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,3,0:23,Tommaso Baldasso,Transition,"Open, 3PT",Wing 3,0,11 Tommaso Baldasso > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,3,0:56,Aliou Diarra,Spot Up,"Open, 3PT",Top 3,0,31 Aliou Diarra > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,3,1:30,Davide Casarin,Spot Up,To basket,Mid-range,0,7 Davide Casarin > Spot-Up > Drives Left > To Basket > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,3,2:00,Davide Casarin,Transition,To basket,Paint,1,7 Davide Casarin > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,3,2:22,Davide Casarin,P&R Ball Handler,To basket,Paint,1,7 Davide Casarin > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,3,3:09,Aliou Diarra,Cut,To basket,Paint,1,31 Aliou Diarra > Cut > Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,3,3:43,Aliou Diarra,Cut,To basket,Paint,1,31 Aliou Diarra > Cut > Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,3,4:05,Daniel Hackett,Spot Up,"Guarded, 3PT",Wing 3,0,23 Daniel Hackett > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,3,5:26,Francesco Ferrari,Transition,To basket,Paint,1,24 Francesco Ferrari > Transition > First Middle > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,3,5:44,Mouhamet Diouf,Transition,To basket,Paint,1,35 Mouhamet Diouf > Transition > First Middle > To Basket > Make 2 Pts Foul > 1 Pts
+2026-10-18,Scafati@VirtusBologna,3,6:08,Derrick Alston,Spot Up,"Dribble jumper, 3PT",Wing 3,1,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > Spot-Up > Drives Left > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,3,7:30,Rasheed Bello,Transition,"Dribble jumper, short (<17 ft)",Mid-range,0,0 Rasheed Bello > Transition > Right Wing > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,3,7:45,Derrick Alston,Spot Up,"Open, 3PT",Wing 3,0,21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,3,7:50,Francesco Ferrari,Transition,"Guarded, 3PT",Wing 3,0,24 Francesco Ferrari > Transition > Right Wing > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,3,8:17,Derrick Alston,Spot Up,"Guarded, 3PT",Corner 3,1,21 Derrick Alston > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,3,8:38,Rasheed Bello,Spot Up,"Dribble jumper, 3PT",Wing 3,0,35 Mouhamet Diouf > Post-Up > Left Block > Right Shoulder > Dribble Move > Defense Commits > Ball Delivered > 0 Rasheed Bello > Spot-Up > Drives Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,3,9:23,Wendell Moore,Other,Other,Mid-range,1,8 Wendell Moore > Post-Up > Left Block > Right Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,2,0:05,Rasheed Bello,Spot Up,"Open, 3PT",Wing 3,0,8 Wendell Moore > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 0 Rasheed Bello > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,2,0:41,Tommaso Baldasso,Spot Up,"Dribble jumper, mid-range",Mid-range,1,11 Tommaso Baldasso > Spot-Up > Drives Left > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,2,2:03,Francesco Ferrari,Cut,Other,Mid-range,0,24 Francesco Ferrari > Cut > Flash > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,2,2:29,Derrick Alston,Spot Up,"Dribble jumper, 3PT",Wing 3,0,21 Derrick Alston > Spot-Up > Drives Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,2,2:59,Francesco Ferrari,Spot Up,"Guarded, 3PT",Top 3,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,2,4:01,Derrick Alston,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,21 Derrick Alston > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,2,5:13,Derrick Alston,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,1,21 Derrick Alston > P&R Ball Handler > Left P&R > Side > Go Away from Pick > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,2,5:35,Trent Frazier,Spot Up,"Open, 3PT",Wing 3,0,1 Trent Frazier > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,2,6:04,Mouhamet Diouf,Cut,To basket,Paint,1,35 Mouhamet Diouf > Cut > Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,2,6:53,Bobi Klintman,Spot Up,"Open, 3PT",Wing 3,1,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,2,7:24,Derrick Alston,Spot Up,"Open, 3PT",Corner 3,0,1 Trent Frazier > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,2,8:01,Bobi Klintman,Spot Up,"Guarded, 3PT",Corner 3,1,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,2,8:35,Aliou Diarra,Cut,To basket,Paint,1,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > Cut > Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,2,,Aliou Diarra,Other,To basket,Paint,0,31 Aliou Diarra > No Play Type > To Basket > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,2,9:40,Tommaso Baldasso,Off Screen,To basket,Paint,1,11 Tommaso Baldasso > Off Screen > To Shooter's Left > Straight > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,1,0:13,Tommaso Baldasso,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,1,0:47,Bobi Klintman,Cut,To basket,Paint,0,34 Bobi Klintman > Cut > Basket > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,1,0:54,Tommaso Baldasso,Spot Up,"Open, 3PT",Wing 3,0,7 Davide Casarin > P&R Ball Handler > High P&R > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-18,Scafati@VirtusBologna,1,1:35,Aliou Diarra,Other,Other,Paint,1,31 Aliou Diarra > Post-Up > Flash Middle > Right Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,1,2:45,Bobi Klintman,Spot Up,"Guarded, 3PT",Corner 3,1,34 Bobi Klintman > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,1,3:29,Rasheed Bello,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,0 Rasheed Bello > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,1,4:06,Mouhamet Diouf,Spot Up,To basket,Paint,1,35 Mouhamet Diouf > Spot-Up > Drives Right > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,1,4:45,Derrick Alston,Transition,"Open, 3PT",Wing 3,1,21 Derrick Alston > Transition > Right Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,1,5:23,Derrick Alston,Spot Up,"Open, 3PT",Wing 3,1,21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,1,5:29,Rasheed Bello,P&R Ball Handler,To basket,Paint,0,0 Rasheed Bello > P&R Ball Handler > High P&R > Go Away from Pick > To Basket > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,1,6:56,Wendell Moore,Transition,To basket,Paint,1,8 Wendell Moore > Transition > Right Wing > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,1,7:26,Wendell Moore,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,0,8 Wendell Moore > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-18,Scafati@VirtusBologna,1,7:54,Mouhamet Diouf,Transition,To basket,Paint,1,35 Mouhamet Diouf > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-10-18,Scafati@VirtusBologna,1,8:25,Derrick Alston,Spot Up,"Guarded, 3PT",Corner 3,1,0 Rasheed Bello > P&R Ball Handler > High P&R > Split > Defense Commits > Ball Delivered > 21 Derrick Alston > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-18,Scafati@VirtusBologna,1,9:09,Mouhamet Diouf,Offensive Rebounds (Put Backs),To basket,Paint,1,35 Mouhamet Diouf > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts Foul > 0 Pts
+2026-10-18,Scafati@VirtusBologna,1,9:09,Mouhamet Diouf,Other,Other,Paint,0,35 Mouhamet Diouf > Post-Up > Left Block > Right Shoulder > Dribble Move > To Up and Under > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,4,1:46,Aliou Diarra,Offensive Rebounds (Put Backs),To basket,Paint,1,31 Aliou Diarra > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,4,0:07,Marcus Carr,Transition,To basket,Paint,1,2 Marcus Carr > Transition > First Middle > To Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,4,0:31,Kessler Edwards,P&R Roll Man,To basket,Paint,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > P&R Roll Man > Pick and Pops > Drives Left > To Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,4,1:46,Derrick Alston,Spot Up,"Guarded, 3PT",Wing 3,0,21 Derrick Alston > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,4,2:13,Marcus Carr,Isolation,To basket,Paint,0,2 Marcus Carr > ISO > Top > Drives Left > To Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,4,3:32,Kessler Edwards,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,9 Kessler Edwards > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,4,4:08,Derrick Alston,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,21 Derrick Alston > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,4,6:05,Aliou Diarra,Offensive Rebounds (Put Backs),To basket,Paint,1,31 Aliou Diarra > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,4,6:05,Derrick Alston,Spot Up,"Open, 3PT",Corner 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,4,6:50,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-11,VirtusBologna@Venezia,4,7:28,Marcus Carr,Spot Up,"Guarded, 3PT",Wing 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-11,VirtusBologna@Venezia,4,8:40,Trent Frazier,Other,"Open, 3PT",Wing 3,0,1 Trent Frazier > Hand Off > From Dribble > Right > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,4,9:02,Marcus Carr,P&R Ball Handler,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,4,9:40,Mouhamet Diouf,Other,Other,Paint,1,35 Mouhamet Diouf > Post-Up > Right Block > Right Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,0:08,Trent Frazier,Isolation,"Dribble jumper, mid-range",Mid-range,1,1 Trent Frazier > ISO > Top > Drives Right > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,0:57,Bobi Klintman,Cut,Other,Paint,1,1 Trent Frazier > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > Cut > Flash > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,1:33,Trent Frazier,Transition,To basket,Paint,1,1 Trent Frazier > Transition > Left Wing > To Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,2:05,Trent Frazier,Isolation,"Dribble jumper, mid-range",Mid-range,0,1 Trent Frazier > ISO > Right > Drives Left > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,2:21,Aliou Diarra,Offensive Rebounds (Put Backs),To basket,Paint,0,31 Aliou Diarra > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,2:21,Davide Casarin,P&R Ball Handler,To basket,Paint,0,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,3:46,Aliou Diarra,Cut,To basket,Paint,1,31 Aliou Diarra > Cut > Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,4:20,Tommaso Baldasso,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,34 Bobi Klintman > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,4:52,Bobi Klintman,Transition,"Open, 3PT",Corner 3,1,34 Bobi Klintman > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-11,VirtusBologna@Venezia,3,5:51,Tommaso Baldasso,Spot Up,"Guarded, 3PT",Top 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,3,6:27,Derrick Alston,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,21 Derrick Alston > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,3,7:24,Tommaso Baldasso,Transition,"Guarded, 3PT",Wing 3,1,11 Tommaso Baldasso > Transition > Left Wing > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-11,VirtusBologna@Venezia,3,7:55,Marcus Carr,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Marcus Carr > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,8:34,Marcus Carr,Transition,"Guarded, 3PT",Wing 3,0,2 Marcus Carr > Transition > Right Wing > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,3,8:52,Mouhamet Diouf,P&R Roll Man,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,3,9:23,Kessler Edwards,P&R Roll Man,"Open, 3PT",Wing 3,1,2 Marcus Carr > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-11,VirtusBologna@Venezia,2,0:14,Derrick Alston,P&R Ball Handler,To basket,Paint,1,21 Derrick Alston > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,0:59,Trent Frazier,Off Screen,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > Off Screen > To Shooter's Left > Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,2,2:03,Derrick Alston,Transition,"Dribble jumper, short (<17 ft)",Mid-range,0,21 Derrick Alston > Transition > Right Wing > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,2:29,Davide Casarin,Transition,To basket,Paint,1,7 Davide Casarin > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,2:54,Francesco Ferrari,Cut,To basket,Paint,1,24 Francesco Ferrari > Cut > Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,,Tommaso Baldasso,Other,"Dribble jumper, 3PT",Wing 3,0,11 Tommaso Baldasso > No Play Type > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,2,4:25,Mouhamet Diouf,Offensive Rebounds (Put Backs),To basket,Paint,1,35 Mouhamet Diouf > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts Foul > 1 Pts
+2026-10-11,VirtusBologna@Venezia,2,4:25,Marcus Carr,P&R Ball Handler,To basket,Paint,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,5:01,Tommaso Baldasso,Transition,"Open, 3PT",Wing 3,1,11 Tommaso Baldasso > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-11,VirtusBologna@Venezia,2,5:22,Tommaso Baldasso,Off Screen,"Dribble jumper, mid-range",Mid-range,1,11 Tommaso Baldasso > Off Screen > To Shooter's Right > Straight > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,6:08,Marcus Carr,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,6:50,Bobi Klintman,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,8:06,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Right Block > Right Shoulder > Dribble Move > To Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,9:03,Aliou Diarra,Offensive Rebounds (Put Backs),To basket,Paint,0,31 Aliou Diarra > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,9:03,Trent Frazier,P&R Ball Handler,To basket,Mid-range,0,1 Trent Frazier > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,9:13,Trent Frazier,Spot Up,"Guarded, 3PT",Corner 3,0,1 Trent Frazier > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,2,9:17,Davide Casarin,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,2,9:48,Aliou Diarra,P&R Roll Man,To basket,Paint,1,1 Trent Frazier > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,0:21,Trent Frazier,Isolation,"Dribble jumper, 3PT",Wing 3,1,1 Trent Frazier > ISO > Top > Early Jumper > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-11,VirtusBologna@Venezia,1,1:28,Bobi Klintman,P&R Roll Man,To basket,Paint,1,1 Trent Frazier > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > P&R Roll Man > Rolls to Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,1:48,Bobi Klintman,Transition,To basket,Mid-range,0,34 Bobi Klintman > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,2:03,Davide Casarin,Spot Up,"Open, 3PT",Corner 3,0,23 Daniel Hackett > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 7 Davide Casarin > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,1,2:42,Daniel Hackett,Spot Up,To basket,Paint,0,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 23 Daniel Hackett > Spot-Up > Drives Right > To Basket > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,3:07,Daniel Hackett,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 23 Daniel Hackett > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,3:28,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,1,4:08,Kessler Edwards,Spot Up,To basket,Paint,1,9 Kessler Edwards > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,5:03,Derrick Alston,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,21 Derrick Alston > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,5:49,Kessler Edwards,Other,To basket,Paint,1,9 Kessler Edwards > Hand Off > From Dribble > Left > To Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,6:22,Derrick Alston,Transition,"Open, 3PT",Wing 3,0,21 Derrick Alston > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,1,6:52,Marcus Carr,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,1,7:16,Mouhamet Diouf,Spot Up,"Open, mid-range",Mid-range,0,35 Mouhamet Diouf > Spot-Up > No Dribble Jumper > Open > Medium/17' to <3p > Miss 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,7:56,Francesco Ferrari,Spot Up,"Guarded, 3PT",Wing 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-10-11,VirtusBologna@Venezia,1,8:21,Kessler Edwards,Other,"Guarded, 3PT",Wing 3,0,9 Kessler Edwards > Hand Off > From Dribble > Left > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-11,VirtusBologna@Venezia,1,8:54,Marcus Carr,P&R Ball Handler,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-11,VirtusBologna@Venezia,1,9:30,Marcus Carr,P&R Ball Handler,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,0:10,Daniel Hackett,Transition,To basket,Paint,1,23 Daniel Hackett > Transition > Right Wing > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,0:59,Marcus Carr,Isolation,To basket,Mid-range,1,2 Marcus Carr > ISO > Right > Drives Right > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,1:35,Marcus Carr,P&R Ball Handler,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts Foul > 1 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,1:59,Kessler Edwards,Cut,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Cut > Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,2:11,Marcus Carr,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,3:43,Bobi Klintman,P&R Roll Man,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > P&R Roll Man > Pick and Pops > Drives Left > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,4:16,Bobi Klintman,Spot Up,"Open, 3PT",Wing 3,1,34 Bobi Klintman > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,4:23,Bobi Klintman,P&R Roll Man,"Open, 3PT",Top 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > P&R Roll Man > Pick and Pops > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,4:46,Marcus Carr,P&R Ball Handler,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,5:25,Marcus Carr,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,5:58,Daniel Hackett,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,1,23 Daniel Hackett > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,6:36,Wendell Moore,Cut,To basket,Mid-range,0,8 Wendell Moore > Cut > Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,7:14,Tommaso Baldasso,Other,"Dribble jumper, short (<17 ft)",Paint,0,11 Tommaso Baldasso > Hand Off > From Dribble > Right > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,8:19,Trent Frazier,P&R Ball Handler,To basket,Paint,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,4,9:46,Wendell Moore,Spot Up,"Open, 3PT",Corner 3,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 8 Wendell Moore > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,0:21,Kessler Edwards,Spot Up,"Guarded, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,1:17,Kessler Edwards,Spot Up,"Open, 3PT",Corner 3,1,9 Kessler Edwards > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,2:22,Aliou Diarra,Cut,To basket,Paint,1,31 Aliou Diarra > Cut > Basket > Make 2 Pts Foul > 1 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,3:26,Trent Frazier,P&R Ball Handler,To basket,Paint,1,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,3:58,Bobi Klintman,Cut,To basket,Paint,1,7 Davide Casarin > P&R Ball Handler > High P&R > Defense Commits > Ball Delivered > 34 Bobi Klintman > Cut > Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,4:38,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,6:04,Trent Frazier,Spot Up,To basket,Paint,1,7 Davide Casarin > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 1 Trent Frazier > Spot-Up > Drives Straight > To Basket > Make 2 Pts Foul > 1 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,6:32,Mouhamet Diouf,P&R Roll Man,"Open, short (<17 ft)",Mid-range,0,2 Marcus Carr > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Slips the Pick > No Dribble Jumper > Open > Short to < 17' > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,6:39,Marcus Carr,Spot Up,"Guarded, 3PT",Wing 3,0,2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,7:05,Bobi Klintman,Transition,To basket,Paint,1,34 Bobi Klintman > Transition > Right Wing > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,7:35,Trent Frazier,Cut,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 1 Trent Frazier > Cut > Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,8:40,Trent Frazier,Spot Up,"Open, 3PT",Corner 3,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 1 Trent Frazier > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,3,9:28,Francesco Ferrari,Spot Up,"Guarded, 3PT",Top 3,0,24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,0:04,Marcus Carr,P&R Ball Handler,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,0:35,Tommaso Baldasso,Other,"Dribble jumper, 3PT",Wing 3,0,11 Tommaso Baldasso > Hand Off > From Dribble > Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,0:55,Bobi Klintman,Spot Up,"Guarded, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,1:28,Marcus Carr,P&R Ball Handler,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,1:56,Marcus Carr,Spot Up,"Guarded, 3PT",Wing 3,0,2 Marcus Carr > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,2:02,Tommaso Baldasso,Spot Up,"Open, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,2:19,Marcus Carr,P&R Ball Handler,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,2:50,Mouhamet Diouf,Offensive Rebounds (Put Backs),To basket,Paint,1,35 Mouhamet Diouf > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,2:50,Francesco Ferrari,Cut,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > Right P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > Cut > Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,3:56,Marcus Carr,Transition,"Open, 3PT",Wing 3,1,2 Marcus Carr > Transition > Trailer > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,5:08,Trent Frazier,Cut,To basket,Mid-range,1,2 Marcus Carr > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 1 Trent Frazier > Cut > Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,5:29,Aliou Diarra,Other,To basket,Paint,1,31 Aliou Diarra > Post-Up > Flash Middle > Post Pin > No Dribble Move > To Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,6:29,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,7:04,Wendell Moore,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,7:30,Wendell Moore,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,8:04,Trent Frazier,Spot Up,"Dribble jumper, 3PT",Wing 3,0,8 Wendell Moore > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 1 Trent Frazier > Spot-Up > Drives Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,8:48,Tommaso Baldasso,Spot Up,"Dribble jumper, mid-range",Mid-range,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > Drives Right > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,2,9:25,Davide Casarin,Spot Up,"Open, 3PT",Wing 3,0,7 Davide Casarin > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,0:03,Kessler Edwards,Cut,To basket,Paint,0,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Cut > Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,0:53,Aliou Diarra,Cut,To basket,Paint,1,31 Aliou Diarra > Cut > Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,1:17,Tommaso Baldasso,Transition,"Dribble jumper, mid-range",Mid-range,0,11 Tommaso Baldasso > Transition > Ballhandler > Dribble Jumper > Medium/17' to <3p > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,1:41,Tommaso Baldasso,P&R Ball Handler,"Dribble jumper, mid-range",Mid-range,1,11 Tommaso Baldasso > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,1:59,Mouhamet Diouf,P&R Roll Man,To basket,Paint,0,7 Davide Casarin > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,2:33,Mouhamet Diouf,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,0,35 Mouhamet Diouf > Spot-Up > Drives Right > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,2:56,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,0,7 Davide Casarin > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,3:28,Bobi Klintman,Cut,Other,Mid-range,1,34 Bobi Klintman > Cut > Flash > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,3:35,Aliou Diarra,Transition,To basket,Paint,0,31 Aliou Diarra > Transition > First Middle > To Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,3:50,Davide Casarin,P&R Ball Handler,To basket,Mid-range,0,7 Davide Casarin > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,4:52,Bobi Klintman,Cut,To basket,Paint,1,34 Bobi Klintman > Cut > Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,5:21,Wendell Moore,Transition,To basket,Paint,1,8 Wendell Moore > Transition > Leak Outs > To Basket > Make 2 Pts Foul > 1 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,5:54,Bobi Klintman,Transition,"Open, mid-range",Mid-range,0,34 Bobi Klintman > Transition > Left Wing > No Dribble Jumper > Open > Medium/17' to <3p > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,6:38,Bobi Klintman,Cut,To basket,Paint,1,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > Cut > Basket > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,7:24,Francesco Ferrari,Transition,"Open, 3PT",Corner 3,1,24 Francesco Ferrari > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,7:42,Wendell Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,0,8 Wendell Moore > P&R Ball Handler > High P&R > Go Away from Pick > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,8:13,Francesco Ferrari,Spot Up,"Open, 3PT",Wing 3,0,24 Francesco Ferrari > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,8:17,Marcus Carr,P&R Ball Handler,To basket,Mid-range,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > To Basket > Miss 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,8:51,Mouhamet Diouf,Other,Other,Paint,1,35 Mouhamet Diouf > Post-Up > Flash Middle > Right Shoulder > Dribble Move > To Jumper > Make 2 Pts
+2026-10-04,Maxima Roma@VirtusBologna,1,9:06,Marcus Carr,Transition,To basket,Paint,0,2 Marcus Carr > Transition > Trailer > To Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,4,1:08,Francesco Ferrari,Transition,To basket,Paint,1,24 Francesco Ferrari > Transition > First Middle > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,4,1:46,Derrick Alston,Spot Up,"Open, 3PT",Corner 3,1,21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-09-27,VirtusBologna@Varese,4,1:56,Mouhamet Diouf,Cut,Other,Mid-range,0,21 Derrick Alston > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 35 Mouhamet Diouf > Cut > Flash > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,4,2:35,Bobi Klintman,Transition,To basket,Paint,1,34 Bobi Klintman > Transition > Right Wing > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,4,2:51,Tommaso Baldasso,P&R Ball Handler,"Dribble jumper, short (<17 ft)",Mid-range,1,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,4,4:19,Tommaso Baldasso,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,4,4:56,Tommaso Baldasso,Isolation,"Dribble jumper, 3PT",Wing 3,1,11 Tommaso Baldasso > ISO > Top > Drives Left > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-09-27,VirtusBologna@Varese,4,5:23,Trent Frazier,Isolation,"Dribble jumper, mid-range",Mid-range,1,1 Trent Frazier > ISO > Top > Drives Left > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,4,6:10,Tommaso Baldasso,Transition,"Dribble jumper, mid-range",Mid-range,1,11 Tommaso Baldasso > Transition > Trailer > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,4,8:26,Derrick Alston,Spot Up,"Open, 3PT",Top 3,0,21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,4,8:30,Derrick Alston,Spot Up,"Open, 3PT",Wing 3,0,21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,4,8:39,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,4,9:22,Kessler Edwards,Cut,To basket,Paint,1,9 Kessler Edwards > Cut > Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,3,0:03,Marcus Carr,Isolation,"Dribble jumper, mid-range",Mid-range,1,2 Marcus Carr > ISO > Top > Drives Right > Dribble Jumper > Medium/17' to <3p > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,3,0:35,Bobi Klintman,Transition,"Guarded, 3PT",Wing 3,0,34 Bobi Klintman > Transition > Right Wing > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,3,0:53,Tommaso Baldasso,Spot Up,"Dribble jumper, 3PT",Top 3,0,23 Daniel Hackett > P&R Ball Handler > Right P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > Drives Right > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,3,1:06,Marcus Carr,Transition,To basket,Paint,0,2 Marcus Carr > Transition > Ballhandler > To Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,3,2:07,Marcus Carr,Isolation,To basket,Paint,1,2 Marcus Carr > ISO > Right > Drives Right > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,3,3:22,Tommaso Baldasso,Spot Up,"Dribble jumper, short (<17 ft)",Mid-range,1,11 Tommaso Baldasso > Spot-Up > Drives Left > Dribble Jumper > Short to < 17' > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,3,4:01,Trent Frazier,Spot Up,To basket,Paint,1,1 Trent Frazier > Spot-Up > Drives Left > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,3,6:13,Trent Frazier,Off Screen,"Dribble jumper, 3PT",Wing 3,0,1 Trent Frazier > Off Screen > To Shooter's Right > Flare > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,3,6:42,Mouhamet Diouf,Transition,To basket,Paint,1,35 Mouhamet Diouf > Transition > First Middle > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,3,8:23,Derrick Alston,Offensive Rebounds (Put Backs),To basket,Paint,1,21 Derrick Alston > Offensive Rebound > Short > Scoring Attempt > At Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,3,8:23,Derrick Alston,Transition,To basket,Paint,0,21 Derrick Alston > Transition > Left Wing > To Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,3,9:18,Kessler Edwards,Cut,Other,Mid-range,1,35 Mouhamet Diouf > Post-Up > Left Block > Left Shoulder > Dribble Move > Defense Commits > Ball Delivered > 9 Kessler Edwards > Cut > Flash > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,3,9:30,Derrick Alston,Spot Up,"Open, 3PT",Corner 3,0,21 Derrick Alston > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,2,0:05,Tommaso Baldasso,Offensive Rebounds (Put Backs),To basket,Paint,0,11 Tommaso Baldasso > Offensive Rebound > Short > Scoring Attempt > At Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,2,0:05,Marcus Carr,Isolation,"Dribble jumper, short (<17 ft)",Mid-range,0,2 Marcus Carr > ISO > Top > Drives Left > Dribble Jumper > Short to < 17' > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,2,0:36,Tommaso Baldasso,Off Screen,"Open, 3PT",Wing 3,0,11 Tommaso Baldasso > Off Screen > To Shooter's Left > Straight > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,2,2:05,Tommaso Baldasso,Spot Up,"Dribble jumper, 3PT",Wing 3,0,23 Daniel Hackett > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 11 Tommaso Baldasso > Spot-Up > Drives Straight > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,2,2:57,Bobi Klintman,Transition,"Open, 3PT",Corner 3,0,34 Bobi Klintman > Transition > Left Wing > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,2,3:19,Francesco Ferrari,Transition,To basket,Paint,1,24 Francesco Ferrari > Transition > Left Wing > To Basket > Make 2 Pts Foul > 0 Pts
+2026-09-27,VirtusBologna@Varese,2,4:04,Bobi Klintman,Cut,To basket,Mid-range,1,34 Bobi Klintman > Cut > Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,2,4:25,Davide Casarin,Cut,To basket,Paint,0,35 Mouhamet Diouf > Post-Up > Right Block > Defense Commits > Ball Delivered > 7 Davide Casarin > Cut > Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,2,5:44,Kessler Edwards,Transition,"Open, 3PT",Wing 3,1,9 Kessler Edwards > Transition > Trailer > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-09-27,VirtusBologna@Varese,2,6:07,Francesco Ferrari,Cut,To basket,Paint,0,1 Trent Frazier > P&R Ball Handler > High P&R > Go Away from Pick > Defense Commits > Ball Delivered > 24 Francesco Ferrari > Cut > Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,2,7:00,Trent Frazier,Other,"Guarded, 3PT",Top 3,1,1 Trent Frazier > Hand Off > From Dribble > Top > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts
+2026-09-27,VirtusBologna@Varese,2,7:56,Marcus Carr,Transition,To basket,Mid-range,1,2 Marcus Carr > Transition > Ballhandler > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,2,,Marcus Carr,Other,To basket,Paint,0,2 Marcus Carr > No Play Type > To Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,2,8:54,Kessler Edwards,Cut,To basket,Paint,1,9 Kessler Edwards > Cut > Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,2,9:34,Derrick Alston,Spot Up,"Dribble jumper, 3PT",Wing 3,1,21 Derrick Alston > Spot-Up > Drives Straight > Dribble Jumper > Long/3pt > Make 3 Pts
+2026-09-27,VirtusBologna@Varese,1,0:20,Trent Frazier,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,1,0:57,Derrick Alston,Transition,To basket,Paint,1,21 Derrick Alston > Transition > Right Wing > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,1,1:04,Tommaso Baldasso,P&R Ball Handler,"Dribble jumper, 3PT",Top 3,0,11 Tommaso Baldasso > P&R Ball Handler > High P&R > Dribble Off Pick > Dribble Jumper > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,1,1:06,Derrick Alston,Spot Up,"Guarded, 3PT",Wing 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 21 Derrick Alston > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,1,1:44,Tommaso Baldasso,Transition,To basket,Paint,1,11 Tommaso Baldasso > Transition > Ballhandler > To Basket > Make 2 Pts Foul > 1 Pts
+2026-09-27,VirtusBologna@Varese,1,2:06,Tommaso Baldasso,Spot Up,"Guarded, 3PT",Corner 3,0,11 Tommaso Baldasso > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,1,3:36,Bobi Klintman,P&R Roll Man,To basket,Paint,1,23 Daniel Hackett > P&R Ball Handler > Left P&R > Side > Dribble Off Pick > Defense Commits > Ball Delivered > 34 Bobi Klintman > P&R Roll Man > Pick and Pops > Drives Right > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,1,4:01,Tommaso Baldasso,Off Screen,"Guarded, 3PT",Wing 3,0,11 Tommaso Baldasso > Off Screen > To Shooter's Right > Straight > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,1,4:26,Aliou Diarra,P&R Roll Man,To basket,Paint,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 31 Aliou Diarra > P&R Roll Man > Rolls to Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,1,4:48,Daniel Hackett,Transition,"Guarded, 3PT",Corner 3,0,23 Daniel Hackett > Transition > Left Wing > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,1,5:54,Daniel Hackett,Spot Up,"Open, 3PT",Wing 3,1,23 Daniel Hackett > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-09-27,VirtusBologna@Varese,1,6:07,Marcus Carr,Spot Up,"Open, 3PT",Corner 3,0,1 Trent Frazier > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 2 Marcus Carr > Spot-Up > No Dribble Jumper > Open > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,1,6:49,Derrick Alston,Transition,To basket,Paint,1,21 Derrick Alston > Transition > Leak Outs > To Basket > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,1,7:08,Marcus Carr,Spot Up,"Open, 3PT",Corner 3,1,2 Marcus Carr > Spot-Up > No Dribble Jumper > Open > Long/3pt > Make 3 Pts
+2026-09-27,VirtusBologna@Varese,1,7:40,Kessler Edwards,Spot Up,"Guarded, 3PT",Wing 3,0,2 Marcus Carr > P&R Ball Handler > High P&R > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Miss 3 Pts
+2026-09-27,VirtusBologna@Varese,1,8:31,Mouhamet Diouf,Other,To basket,Paint,1,35 Mouhamet Diouf > Post-Up > Left Block > Right Shoulder > Dribble Move > To Drop Step > Make 2 Pts
+2026-09-27,VirtusBologna@Varese,1,8:43,Derrick Alston,Off Screen,To basket,Paint,0,21 Derrick Alston > Off Screen > To Shooter's Left > Flare > To Basket > Miss 2 Pts
+2026-09-27,VirtusBologna@Varese,1,9:24,Kessler Edwards,Spot Up,"Guarded, 3PT",Corner 3,1,1 Trent Frazier > P&R Ball Handler > Left P&R > Baseline > Dribble Off Pick > Defense Commits > Ball Delivered > 9 Kessler Edwards > Spot-Up > No Dribble Jumper > Guarded > Long/3pt > Make 3 Pts

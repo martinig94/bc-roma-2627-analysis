@@ -1,0 +1,81 @@
+player,play_type,shot_type,fga,fgm
+Alston,Spot Up,"Open, 3PT",10,2
+Alston,Spot Up,"Guarded, 3PT",5,3
+Alston,Spot Up,"Dribble jumper, 3PT",4,2
+Alston,Transition,To basket,4,3
+Alston,Transition,"Open, 3PT",3,1
+Alston,Transition,"Guarded, 3PT",1,0
+Alston,Transition,"Dribble jumper, short (<17 ft)",1,0
+Baldasso,Spot Up,"Guarded, 3PT",4,1
+Baldasso,Spot Up,"Dribble jumper, short (<17 ft)",3,3
+Baldasso,Spot Up,"Dribble jumper, mid-range",2,1
+Baldasso,Spot Up,"Open, 3PT",2,0
+Baldasso,Spot Up,"Dribble jumper, 3PT",2,0
+Baldasso,Spot Up,To basket,1,1
+Bello,P&R Ball Handler,"Dribble jumper, 3PT",6,2
+Bello,P&R Ball Handler,To basket,6,2
+Carr,Isolation,To basket,6,2
+Carr,Isolation,"Dribble jumper, short (<17 ft)",3,1
+Carr,Isolation,"Dribble jumper, 3PT",2,1
+Carr,Isolation,"Dribble jumper, mid-range",1,1
+Carr,P&R Ball Handler,To basket,16,7
+Carr,P&R Ball Handler,"Dribble jumper, 3PT",11,5
+Carr,P&R Ball Handler,"Dribble jumper, mid-range",5,3
+Carr,P&R Ball Handler,"Dribble jumper, short (<17 ft)",3,1
+Carr,Spot Up,"Guarded, 3PT",9,3
+Carr,Spot Up,"Open, 3PT",5,1
+Carr,Spot Up,To basket,1,1
+Carr,Spot Up,"Dribble jumper, 3PT",1,0
+Carr,Spot Up,"Dribble jumper, short (<17 ft)",1,0
+Carr,Transition,To basket,9,5
+Carr,Transition,"Open, 3PT",2,2
+Carr,Transition,"Dribble jumper, short (<17 ft)",1,1
+Carr,Transition,"Dribble jumper, 3PT",1,0
+Carr,Transition,"Guarded, 3PT",1,0
+Casarin,Transition,To basket,10,7
+Diarra,Cut,To basket,9,8
+Diarra,P&R Roll Man,To basket,10,6
+Diouf,Other,To basket,11,10
+Diouf,Other,Other,6,2
+Diouf,Other,Hook,1,0
+Diouf,P&R Roll Man,To basket,7,0
+Diouf,P&R Roll Man,"Open, short (<17 ft)",2,0
+Edwards,Spot Up,"Guarded, 3PT",14,2
+Edwards,Spot Up,"Open, 3PT",5,5
+Edwards,Spot Up,"Dribble jumper, short (<17 ft)",2,2
+Edwards,Spot Up,To basket,1,1
+Ferrari,Spot Up,"Guarded, 3PT",7,2
+Ferrari,Spot Up,"Open, 3PT",4,2
+Ferrari,Spot Up,"Dribble jumper, short (<17 ft)",1,0
+Ferrari,Transition,To basket,6,5
+Ferrari,Transition,"Guarded, 3PT",3,1
+Ferrari,Transition,"Open, 3PT",1,1
+Frazier,Isolation,"Dribble jumper, mid-range",4,2
+Frazier,Isolation,"Dribble jumper, 3PT",4,3
+Frazier,Isolation,To basket,1,0
+Frazier,P&R Ball Handler,"Dribble jumper, 3PT",18,8
+Frazier,P&R Ball Handler,To basket,7,4
+Frazier,Spot Up,"Open, 3PT",4,2
+Frazier,Spot Up,To basket,3,3
+Frazier,Spot Up,"Guarded, 3PT",2,1
+Frazier,Spot Up,"Dribble jumper, 3PT",1,0
+Hackett,Spot Up,To basket,3,1
+Hackett,Spot Up,"Open, 3PT",3,3
+Hackett,Spot Up,"Dribble jumper, short (<17 ft)",2,1
+Hackett,Spot Up,"Guarded, 3PT",1,0
+Klintman,Cut,To basket,7,6
+Klintman,Cut,Other,2,2
+Klintman,Spot Up,"Guarded, 3PT",6,4
+Klintman,Spot Up,"Open, 3PT",3,3
+Klintman,Spot Up,To basket,1,0
+Klintman,Spot Up,"Dribble jumper, 3PT",1,0
+Klintman,Spot Up,"Dribble jumper, short (<17 ft)",1,1
+Moore,P&R Ball Handler,"Dribble jumper, short (<17 ft)",7,3
+Moore,P&R Ball Handler,To basket,6,5
+Moore,P&R Ball Handler,"Dribble jumper, 3PT",3,1
+Moore,P&R Ball Handler,"Dribble jumper, mid-range",1,0
+Moore,Spot Up,"Open, 3PT",5,1
+Moore,Spot Up,"Guarded, 3PT",3,0
+Moore,Transition,To basket,9,7
+Moore,Transition,"Open, 3PT",2,1
+Moore,Transition,"Guarded, short (<17 ft)",1,1
