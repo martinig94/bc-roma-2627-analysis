@@ -1,0 +1,127 @@
+gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
+1,1,2026-09-24,RED,Crvena Zvezda Meridianbet Belgrade,77,ZAL,Zalgiris Kaunas,83,True
+2,1,2026-09-24,DUB,Dubai Basketball,78,MAD,Real Madrid,77,True
+3,1,2026-09-24,HTA,Hapoel Ibi Tel Aviv,84,MUN,Fc Bayern Munich,86,True
+4,1,2026-09-24,BAR,Fc Barcelona,89,IST,Anadolu Efes Istanbul,82,True
+5,1,2026-09-24,BAS,Kosner Baskonia Vitoria-Gasteiz,89,OLY,Olympiacos Piraeus,106,True
+6,1,2026-09-24,ASV,Ldlc Asvel Villeurbanne,84,TEL,Maccabi Rapyd Tel Aviv,74,True
+7,1,2026-09-24,PAN,Panathinaikos Aktor Athens,91,PRS,Paris Basketball,72,True
+8,1,2026-09-25,BES,Besiktas Fuzul Istanbul,94,PAM,Valencia Basket,96,True
+9,1,2026-09-25,ULK,Fenerbahce Tarfin Istanbul,78,VIR,Virtus Bologna,68,True
+10,1,2026-09-25,PAR,Partizan Mozzart Bet Belgrade,92,MIL,Armani Olimpia Milan,76,True
+11,2,2026-09-29,IST,Anadolu Efes Istanbul,94,MAD,Real Madrid,84,True
+12,2,2026-09-29,RED,Crvena Zvezda Meridianbet Belgrade,80,HTA,Hapoel Ibi Tel Aviv,81,True
+13,2,2026-09-29,DUB,Dubai Basketball,94,BAR,Fc Barcelona,87,True
+14,2,2026-09-29,ZAL,Zalgiris Kaunas,91,OLY,Olympiacos Piraeus,93,True
+15,2,2026-09-29,PAM,Valencia Basket,111,BAS,Kosner Baskonia Vitoria-Gasteiz,88,True
+16,2,2026-09-29,MIL,Armani Olimpia Milan,87,VIR,Virtus Bologna,85,True
+17,2,2026-09-29,ULK,Fenerbahce Tarfin Istanbul,100,MUN,Fc Bayern Munich,76,True
+18,2,2026-09-29,PRS,Paris Basketball,79,PAR,Partizan Mozzart Bet Belgrade,92,True
+19,2,2026-09-30,TEL,Maccabi Rapyd Tel Aviv,93,BES,Besiktas Fuzul Istanbul,109,True
+20,2,2026-09-30,PAN,Panathinaikos Aktor Athens,102,ASV,Ldlc Asvel Villeurbanne,79,True
+21,3,2026-10-01,RED,Crvena Zvezda Meridianbet Belgrade,77,IST,Anadolu Efes Istanbul,72,True
+22,3,2026-10-01,HTA,Hapoel Ibi Tel Aviv,102,MAD,Real Madrid,98,True
+23,3,2026-10-01,VIR,Virtus Bologna,96,OLY,Olympiacos Piraeus,94,True
+24,3,2026-10-01,PRS,Paris Basketball,82,ZAL,Zalgiris Kaunas,78,True
+25,3,2026-10-02,BES,Besiktas Fuzul Istanbul,82,BAR,Fc Barcelona,95,True
+26,3,2026-10-02,ASV,Ldlc Asvel Villeurbanne,92,PAM,Valencia Basket,105,True
+27,3,2026-10-02,BAS,Kosner Baskonia Vitoria-Gasteiz,86,MIL,Armani Olimpia Milan,76,True
+28,3,2026-10-02,MUN,Fc Bayern Munich,84,PAR,Partizan Mozzart Bet Belgrade,86,True
+29,3,2026-10-02,ULK,Fenerbahce Tarfin Istanbul,76,DUB,Dubai Basketball,66,True
+30,3,2026-10-02,PAN,Panathinaikos Aktor Athens,90,TEL,Maccabi Rapyd Tel Aviv,67,True
+31,4,2026-10-07,PRS,Paris Basketball,96,ASV,Ldlc Asvel Villeurbanne,98,True
+32,4,2026-10-08,TEL,Maccabi Rapyd Tel Aviv,97,MIL,Armani Olimpia Milan,79,True
+33,4,2026-10-08,MUN,Fc Bayern Munich,87,VIR,Virtus Bologna,94,True
+34,4,2026-10-08,PAM,Valencia Basket,93,HTA,Hapoel Ibi Tel Aviv,82,True
+35,4,2026-10-08,MAD,Real Madrid,86,PAR,Partizan Mozzart Bet Belgrade,76,True
+36,4,2026-10-08,PAN,Panathinaikos Aktor Athens,92,ULK,Fenerbahce Tarfin Istanbul,74,True
+37,4,2026-10-08,DUB,Dubai Basketball,58,RED,Crvena Zvezda Meridianbet Belgrade,77,True
+38,4,2026-10-09,BAS,Kosner Baskonia Vitoria-Gasteiz,84,BES,Besiktas Fuzul Istanbul,92,True
+39,4,2026-10-09,BAR,Fc Barcelona,81,ZAL,Zalgiris Kaunas,88,True
+40,4,2026-10-09,OLY,Olympiacos Piraeus,89,IST,Anadolu Efes Istanbul,66,True
+41,5,2026-10-13,ASV,Ldlc Asvel Villeurbanne,82,RED,Crvena Zvezda Meridianbet Belgrade,84,True
+42,5,2026-10-13,BAS,Kosner Baskonia Vitoria-Gasteiz,79,DUB,Dubai Basketball,93,True
+43,5,2026-10-13,MIL,Armani Olimpia Milan,89,MAD,Real Madrid,98,True
+44,5,2026-10-13,BAR,Fc Barcelona,90,TEL,Maccabi Rapyd Tel Aviv,87,True
+45,5,2026-10-13,PAM,Valencia Basket,97,OLY,Olympiacos Piraeus,102,True
+46,5,2026-10-13,ULK,Fenerbahce Tarfin Istanbul,99,ZAL,Zalgiris Kaunas,80,True
+47,5,2026-10-13,PAR,Partizan Mozzart Bet Belgrade,55,PAN,Panathinaikos Aktor Athens,72,True
+48,5,2026-10-14,HTA,Hapoel Ibi Tel Aviv,100,BES,Besiktas Fuzul Istanbul,82,True
+49,5,2026-10-14,IST,Anadolu Efes Istanbul,93,MUN,Fc Bayern Munich,101,True
+50,5,2026-10-14,PRS,Paris Basketball,94,VIR,Virtus Bologna,96,True
+51,6,2026-10-15,MIL,Armani Olimpia Milan,97,DUB,Dubai Basketball,101,True
+52,6,2026-10-15,PAM,Valencia Basket,88,TEL,Maccabi Rapyd Tel Aviv,91,True
+53,6,2026-10-15,MAD,Real Madrid,111,ASV,Ldlc Asvel Villeurbanne,92,True
+54,6,2026-10-15,ULK,Fenerbahce Tarfin Istanbul,74,PAR,Partizan Mozzart Bet Belgrade,65,True
+55,6,2026-10-16,BES,Besiktas Fuzul Istanbul,95,MUN,Fc Bayern Munich,87,True
+56,6,2026-10-16,RED,Crvena Zvezda Meridianbet Belgrade,90,PRS,Paris Basketball,81,True
+57,6,2026-10-16,ZAL,Zalgiris Kaunas,70,IST,Anadolu Efes Istanbul,85,True
+58,6,2026-10-16,BAR,Fc Barcelona,100,OLY,Olympiacos Piraeus,105,True
+59,6,2026-10-16,VIR,Virtus Bologna,86,BAS,Kosner Baskonia Vitoria-Gasteiz,78,True
+60,6,2026-10-16,PAN,Panathinaikos Aktor Athens,81,HTA,Hapoel Ibi Tel Aviv,91,True
+61,7,2026-10-21,HTA,Hapoel Ibi Tel Aviv,90,VIR,Virtus Bologna,81,True
+62,7,2026-10-22,TEL,Maccabi Rapyd Tel Aviv,99,MAD,Real Madrid,113,True
+63,7,2026-10-22,MIL,Armani Olimpia Milan,81,BAR,Fc Barcelona,89,True
+64,7,2026-10-22,IST,Anadolu Efes Istanbul,89,BES,Besiktas Fuzul Istanbul,80,True
+65,7,2026-10-22,MUN,Fc Bayern Munich,91,DUB,Dubai Basketball,107,True
+66,7,2026-10-22,PAR,Partizan Mozzart Bet Belgrade,85,RED,Crvena Zvezda Meridianbet Belgrade,82,True
+67,7,2026-10-22,PAN,Panathinaikos Aktor Athens,85,BAS,Kosner Baskonia Vitoria-Gasteiz,79,True
+68,7,2026-10-23,ZAL,Zalgiris Kaunas,105,ASV,Ldlc Asvel Villeurbanne,85,True
+69,7,2026-10-23,PRS,Paris Basketball,93,PAM,Valencia Basket,104,True
+70,7,2026-10-23,OLY,Olympiacos Piraeus,61,ULK,Fenerbahce Tarfin Istanbul,64,True
+71,8,2026-10-27,RED,Crvena Zvezda Meridianbet Belgrade,100,TEL,Maccabi Rapyd Tel Aviv,78,True
+72,8,2026-10-27,DUB,Dubai Basketball,93,PRS,Paris Basketball,99,True
+73,8,2026-10-27,BAS,Kosner Baskonia Vitoria-Gasteiz,86,MAD,Real Madrid,104,True
+74,8,2026-10-27,MUN,Fc Bayern Munich,84,BAR,Fc Barcelona,88,True
+75,8,2026-10-27,PAM,Valencia Basket,86,ULK,Fenerbahce Tarfin Istanbul,78,True
+76,8,2026-10-27,PAN,Panathinaikos Aktor Athens,80,MIL,Armani Olimpia Milan,75,True
+77,8,2026-10-28,HTA,Hapoel Ibi Tel Aviv,118,IST,Anadolu Efes Istanbul,88,True
+78,8,2026-10-28,ASV,Ldlc Asvel Villeurbanne,82,PAR,Partizan Mozzart Bet Belgrade,75,True
+79,8,2026-10-28,BES,Besiktas Fuzul Istanbul,73,OLY,Olympiacos Piraeus,81,True
+80,8,2026-10-28,VIR,Virtus Bologna,74,ZAL,Zalgiris Kaunas,91,True
+81,9,2026-10-29,RED,Crvena Zvezda Meridianbet Belgrade,103,MUN,Fc Bayern Munich,73,True
+82,9,2026-10-29,TEL,Maccabi Rapyd Tel Aviv,94,PRS,Paris Basketball,99,True
+83,9,2026-10-29,MAD,Real Madrid,95,ULK,Fenerbahce Tarfin Istanbul,76,True
+84,9,2026-10-30,DUB,Dubai Basketball,97,HTA,Hapoel Ibi Tel Aviv,83,True
+85,9,2026-10-30,ASV,Ldlc Asvel Villeurbanne,94,BAS,Kosner Baskonia Vitoria-Gasteiz,79,True
+86,9,2026-10-30,ZAL,Zalgiris Kaunas,87,PAR,Partizan Mozzart Bet Belgrade,80,True
+87,9,2026-10-30,BAR,Fc Barcelona,98,PAM,Valencia Basket,94,True
+88,9,2026-10-30,IST,Anadolu Efes Istanbul,83,PAN,Panathinaikos Aktor Athens,68,True
+89,9,2026-10-30,VIR,Virtus Bologna,101,BES,Besiktas Fuzul Istanbul,103,True
+90,9,2026-10-30,OLY,Olympiacos Piraeus,84,MIL,Armani Olimpia Milan,78,True
+91,10,2026-11-04,MAD,Real Madrid,112,PAN,Panathinaikos Aktor Athens,115,True
+92,10,2026-11-05,ULK,Fenerbahce Tarfin Istanbul,84,BAS,Kosner Baskonia Vitoria-Gasteiz,65,True
+93,10,2026-11-05,HTA,Hapoel Ibi Tel Aviv,90,BAR,Fc Barcelona,93,True
+94,10,2026-11-05,ASV,Ldlc Asvel Villeurbanne,95,MUN,Fc Bayern Munich,99,True
+95,10,2026-11-05,IST,Anadolu Efes Istanbul,90,PRS,Paris Basketball,95,True
+96,10,2026-11-05,MIL,Armani Olimpia Milan,73,PAM,Valencia Basket,84,True
+97,10,2026-11-06,BES,Besiktas Fuzul Istanbul,67,ZAL,Zalgiris Kaunas,83,True
+98,10,2026-11-06,VIR,Virtus Bologna,75,DUB,Dubai Basketball,93,True
+99,10,2026-11-06,PAR,Partizan Mozzart Bet Belgrade,88,TEL,Maccabi Rapyd Tel Aviv,67,True
+100,10,2026-11-06,OLY,Olympiacos Piraeus,57,RED,Crvena Zvezda Meridianbet Belgrade,62,True
+101,11,2026-11-11,PRS,Paris Basketball,111,ULK,Fenerbahce Tarfin Istanbul,109,True
+102,11,2026-11-11,PAR,Partizan Mozzart Bet Belgrade,80,BAS,Kosner Baskonia Vitoria-Gasteiz,66,True
+103,11,2026-11-12,TEL,Maccabi Rapyd Tel Aviv,80,HTA,Hapoel Ibi Tel Aviv,73,True
+104,11,2026-11-12,MIL,Armani Olimpia Milan,83,ZAL,Zalgiris Kaunas,86,True
+105,11,2026-11-12,PAM,Valencia Basket,102,MUN,Fc Bayern Munich,87,True
+106,11,2026-11-12,MAD,Real Madrid,105,RED,Crvena Zvezda Meridianbet Belgrade,84,True
+107,11,2026-11-12,OLY,Olympiacos Piraeus,101,DUB,Dubai Basketball,72,True
+108,11,2026-11-13,ASV,Ldlc Asvel Villeurbanne,91,BES,Besiktas Fuzul Istanbul,95,True
+109,11,2026-11-13,IST,Anadolu Efes Istanbul,103,VIR,Virtus Bologna,91,True
+110,11,2026-11-13,PAN,Panathinaikos Aktor Athens,74,BAR,Fc Barcelona,76,True
+111,12,2026-11-17,DUB,Dubai Basketball,80,IST,Anadolu Efes Istanbul,75,True
+112,12,2026-11-17,ZAL,Zalgiris Kaunas,117,MUN,Fc Bayern Munich,114,True
+113,12,2026-11-17,TEL,Maccabi Rapyd Tel Aviv,95,OLY,Olympiacos Piraeus,97,True
+114,12,2026-11-17,BAS,Kosner Baskonia Vitoria-Gasteiz,82,HTA,Hapoel Ibi Tel Aviv,85,True
+115,12,2026-11-17,MIL,Armani Olimpia Milan,91,RED,Crvena Zvezda Meridianbet Belgrade,77,True
+116,12,2026-11-17,BAR,Fc Barcelona,86,PRS,Paris Basketball,89,True
+117,12,2026-11-17,ULK,Fenerbahce Tarfin Istanbul,115,ASV,Ldlc Asvel Villeurbanne,81,True
+118,12,2026-11-17,PAR,Partizan Mozzart Bet Belgrade,64,PAM,Valencia Basket,76,True
+119,12,2026-11-17,VIR,Virtus Bologna,84,PAN,Panathinaikos Aktor Athens,79,True
+120,12,2026-11-18,BES,Besiktas Fuzul Istanbul,83,MAD,Real Madrid,79,True
+121,13,2026-11-19,ZAL,Zalgiris Kaunas,72,PAN,Panathinaikos Aktor Athens,87,True
+122,13,2026-11-19,TEL,Maccabi Rapyd Tel Aviv,74,DUB,Dubai Basketball,80,True
+123,13,2026-11-19,MIL,Armani Olimpia Milan,78,ULK,Fenerbahce Tarfin Istanbul,70,True
+124,13,2026-11-19,MUN,Fc Bayern Munich,100,BAS,Kosner Baskonia Vitoria-Gasteiz,81,True
+125,13,2026-11-19,PAM,Valencia Basket,92,VIR,Virtus Bologna,87,True
+126,13,2026-11-19,PRS,Paris Basketball,97,HTA,Hapoel Ibi Tel Aviv,96,True

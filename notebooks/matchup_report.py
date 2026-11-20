@@ -46,8 +46,8 @@ from player_names import ec_surname
 ROOT = Path(__file__).resolve().parent.parent
 CFG = weekly_config.load()
 
-COMP_LBA, COMP_EC = "LBA", "EC"            # values of the box-score `competition` column
-COMP_LABELS = {COMP_LBA: "LBA", COMP_EC: "EuroCup"}   # display names
+COMP_LBA, COMP_EC, COMP_EL = "LBA", "EC", "EL"   # values of the box-score `competition` column (also the prefix of the game ids)
+COMP_LABELS = {COMP_LBA: "LBA", COMP_EC: "EuroCup", COMP_EL: "Euroleague"}   # display names
 COMP, COMP_NAME = COMP_LBA, "LBA"       # the competition the reference figures (league averages, key players, basic stats) are drawn from; "EC" for a EuroCup-only report
 SHARED_NAME = "LBA"     # the competition(s) the two teams have in common ("LBA", "EuroCup" or "LBA + EuroCup"), set in main()
 SOCIAL = False          # --social: portrait 4:5 versions (1080x1350) of selected figures for Instagram
@@ -135,16 +135,20 @@ def short(name: str) -> str:
 
 # ── EuroCup file ────────────────────────────────────────────────────────────────
 # Raw-file club names / codes -> the names used in the LBA tables (data mappings, not config).
-EC_TEAM_MAP = {"ROMA BASKETBALL": "BC Roma", "MAXIMA ROMA": "Maxima Roma"}
+# EuroLeague-API team name -> LBA team name (EuroCup and Euroleague clubs)
+EC_TEAM_MAP = {"ROMA BASKETBALL": "BC Roma", "MAXIMA ROMA": "Maxima Roma",
+               "VIRTUS BOLOGNA": "Virtus Costa Bologna", "ARMANI OLIMPIA MILAN": "Armani Olimpia Milano"}
 EC_CODE_MAP = {"BCR": "BC Roma", "MRO": "Maxima Roma"}
 EC_DATES = {6: "2026-09-30", 16: "2026-09-30", 24: "2026-10-06", 29: "2026-10-07"}   # gamecode -> date
 
 
-def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Parse the raw EuroCup file into tables shaped like the LBA ones.
+def parse_eurocup(path: Path, competition: str = COMP_EC, feed: Path | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Parse a raw EuroLeague-API file (EuroCup or Euroleague) into tables shaped like the LBA ones.
 
     Args:
         path: The pipe-separated raw file (BOX / ZONES sections).
+        competition: Value of the ``competition`` column and prefix of the game ids (``COMP_EC`` or ``COMP_EL``).
+        feed: Results file with the game dates and club names; default ``eurocup/results.csv`` next to ``path``.
 
     Returns:
         (player and team-total rows, zone rows).
@@ -165,7 +169,7 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
         team = EC_TEAM_MAP.get(f[1], f[1].title())
         if f[2] == "TOTAL":
             games.setdefault(gc, []).append((team, int(f[5])))
-            rows.append(dict(game_id=f"EC{gc}", competition=COMP_EC, team=team, row_type="total", player_surname=None,
+            rows.append(dict(game_id=f"{competition}{gc}", competition=competition, team=team, row_type="total", player_surname=None,
                              starter=None, sec=TEAM_GAME_SECS, pts=int(f[5]), fg2m=int(f[6]), fg2a=int(f[7]), fg3m=int(f[8]),
                              fg3a=int(f[9]), ftm=int(f[10]), fta=int(f[11]), oreb=int(f[12]), dreb=int(f[13]),
                              ast=int(f[14]), stl=int(f[15]), tov=int(f[16]), blk=int(f[17]), pf=int(f[18]),
@@ -174,7 +178,7 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
             m = f[4]
             sec = 0 if m in ("DNP", "") else int(m.split(":")[0]) * 60 + int(m.split(":")[1])
             surname = ec_surname(f[2])
-            rows.append(dict(game_id=f"EC{gc}", competition=COMP_EC, team=team, row_type="player", player_surname=surname,
+            rows.append(dict(game_id=f"{competition}{gc}", competition=competition, team=team, row_type="player", player_surname=surname,
                              starter=int(f[3]), sec=sec, pts=int(f[5]), fg2m=int(f[6]), fg2a=int(f[7]), fg3m=int(f[8]),
                              fg3a=int(f[9]), ftm=int(f[10]), fta=int(f[11]), oreb=int(f[12]), dreb=int(f[13]),
                              ast=int(f[14]), stl=int(f[15]), tov=int(f[16]), blk=int(f[17]), pf=int(f[18]),
@@ -184,18 +188,18 @@ def parse_eurocup(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
     for gc, teams in games.items():
         for team, pts in teams:
             other = [t for t in teams if t[0] != team][0]
-            sel = (box.game_id == f"EC{gc}") & (box.team == team)
+            sel = (box.game_id == f"{competition}{gc}") & (box.team == team)
             box.loc[sel, "opponent"] = other[0]; box.loc[sel, "opp_pts"] = other[1]
     box["reb"] = box.oreb + box.dreb
-    box["home"] = [int(games[int(g[2:])][0][0] == t) for g, t in zip(box.game_id, box.team)]    # the first team listed in a game is the home team
+    box["home"] = [int(games[int(g[len(competition):])][0][0] == t) for g, t in zip(box.game_id, box.team)]    # the first team listed in a game is the home team
     dates, codes = dict(EC_DATES), dict(EC_CODE_MAP)
-    feed = path.parent / "eurocup" / "results.csv"            # every game of the season: gamecode -> date, club code -> team name
+    feed = feed or path.parent / "eurocup" / "results.csv"    # every game of the season: gamecode -> date, club code -> team name
     if feed.exists():
         res = pd.read_csv(feed)
         dates.update(dict(zip(res.gamecode, res.date)))
         codes.update({**dict(zip(res.home_code, res.home)), **dict(zip(res.away_code, res.away))})
-    box["date"] = box.game_id.str[2:].astype(int).map(dates)
-    zones = pd.DataFrame([dict(game_id=f"EC{f[0]}", team=codes.get(f[1], f[1]), zone=f[2], action=f[3], n=int(f[4]))
+    box["date"] = box.game_id.str[len(competition):].astype(int).map(dates)
+    zones = pd.DataFrame([dict(game_id=f"{competition}{f[0]}", team=codes.get(f[1], f[1]), zone=f[2], action=f[3], n=int(f[4]))
                           for f in zone_lines], columns=["game_id", "team", "zone", "action", "n"])
     return box, zones
 

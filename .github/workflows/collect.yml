@@ -44,6 +44,10 @@ jobs:
         continue-on-error: true   # the report falls back to "EuroCup standings not available yet"
         run: python notebooks/eurocup_fetch.py
 
+      - name: Euroleague box scores of the LBA clubs (starting fives of the opponent analysis)
+        continue-on-error: true   # the starting-fives grid falls back to the games already fetched
+        run: python notebooks/euroleague_fetch.py
+
       - name: Weekly report for the new rounds
         id: weekly
         continue-on-error: true   # a report problem must not block committing the data

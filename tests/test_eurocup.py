@@ -105,3 +105,20 @@ def test_upcoming_rows_make_schedule_rows_for_unplayed_games_only() -> None:
         ("2026-10-27", "20:00", "1", "Bosna Bh Telecom Sarajevo"), ("2026-11-03", "19:00", "0", "Paok")]
     assert rows[0]["analysis"] == "matchup_BC_Roma_vs_Bosna_Bh_Telecom_Sarajevo_before_2026-10-27"
     assert rows[1]["analysis"] == "matchup_Paok_vs_BC_Roma_before_2026-11-03"
+
+
+def test_euroleague_games_are_loaded_with_the_lba_team_name_and_shown_in_the_starting_fives(tmp_path: Path) -> None:
+    """The Euroleague raw file gives EL game ids, the LBA name of the club and a column in the starting-fives grid."""
+    import weekly_sections as ws
+    (tmp_path / "euroleague").mkdir()
+    feed = pd.DataFrame([(9, 1, "2026-11-17", "VIR", "Virtus Bologna", 84, "PAN", "Panathinaikos", 79, True)], columns=ec.RESULT_COLS)
+    feed.to_csv(tmp_path / ec.EL_RESULTS_NAME, index=False)
+    stats = "1|2|1|2|1|2|1|2|1|1|1|0|2|2"
+    (tmp_path / ec.EL_RAW_NAME).write_text("\n".join([
+        "BOX", f"9|VIRTUS BOLOGNA|CARR, MARCUS|1|20:00|12|{stats}|4|9", f"9|VIRTUS BOLOGNA|TOTAL|||84|{stats}||90",
+        f"9|PANATHINAIKOS|TOTAL|||79|{stats}||80", "ZONES"]) + "\n", encoding="utf-8")
+    box = ws.load_euroleague_before(tmp_path, "2026-11-22")
+    assert set(box.game_id) == {"EL9"} and set(box.competition) == {"EL"} and "Virtus Costa Bologna" in set(box.team)
+    assert ws.load_euroleague_before(tmp_path, "2026-11-17").empty                 # the game of the day itself is not "before"
+    fives = ws.fig_starting_fives(box, "Virtus Costa Bologna", tmp_path)
+    assert fives == [{"date": "2026-11-17", "opponent": "Panathinaikos", "starters": ["Carr"]}]
