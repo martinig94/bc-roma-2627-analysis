@@ -30,6 +30,13 @@ gamecode|teamcode|zone|action|count                 (teamcode BCR / MRO; action 
 Zones A/B/C (≤4.49 m from the rim) are what the report counts as "points in the paint", matching the
 4.5 m distance rule used on the Legabasket coordinates.
 
+## Euroleague games of the LBA clubs
+
+`python notebooks/euroleague_fetch.py` (daily workflow) writes `data/euroleague/results.csv` and appends the Euroleague box scores
+(season code `E2026`) of the clubs that are also LBA teams (`EC_TEAM_MAP` in `notebooks/matchup_report.py`: Virtus Bologna, Olimpia Milano) to
+`data/euroleague_2026_raw.txt`, same format as above. Only the starting-fives grid of the opponent analysis reads it
+(`weekly_sections.load_euroleague_before`); the other figures and tables stay LBA / EuroCup.
+
 ## 4th-quarter play-by-play (clutch report)
 
 `data/eurocup_2026_q4_pbp.txt` holds the last 7 minutes of the 4th quarter of each EuroCup game, one event per line (`period|clock|team_code|player|playtype|score_A|score_B`, score forward-filled), fetched from `https://live.euroleague.net/api/PlayByPlay?gamecode=<N>&seasoncode=U2026` (keys FirstQuarter…ForthQuarter/ExtraTime; PLAYTYPE codes 2FGM/2FGA/3FGM/3FGA/FTM/FTA/AS/TO/ST/D/O/RV/CM/FV/AG/IN/OUT). `notebooks/clutch_report.py` reads it next to the LBA play-by-play.

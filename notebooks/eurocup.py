@@ -35,6 +35,9 @@ DATA = ROOT / "data" / "eurocup"
 SEASON = 2026
 COMPETITION_CODE = "U"                  # EuroLeague API code of the EuroCup
 COMPETITION = "EuroCup"                 # name of the competition in weekly/schedule.csv
+EL_COMPETITION_CODE = "E"               # EuroLeague API code of the Euroleague
+EL_RAW_NAME = "euroleague_2026_raw.txt"   # Euroleague box scores of the LBA clubs, inside the data folder (format of RAW)
+EL_RESULTS_NAME = "euroleague/results.csv"   # Euroleague results feed, inside the data folder (columns of RESULT_COLS)
 CFG = weekly_config.load()
 HTTP_TIMEOUT = 60                       # seconds
 PHOTO_SIZE = 240                        # px, side of the headshot thumbnail box (height allowed up to twice that)
@@ -52,13 +55,13 @@ def team_name(raw: str) -> str:
 
 
 # ── fetch ───────────────────────────────────────────────────────────────────────
-def fetch_results(season: int = SEASON) -> pd.DataFrame:
-    """Every game of the EuroCup season (the results feed lists the whole schedule, played or not)."""
+def fetch_results(season: int = SEASON, competition: str = COMPETITION_CODE) -> pd.DataFrame:
+    """Every game of the season of `competition` ("U" EuroCup, "E" Euroleague): the results feed lists the whole schedule, played or not."""
     from euroleague_api.game_metadata import GameMetadata
-    raw = GameMetadata(COMPETITION_CODE).get_gamecodes_season(season)
+    raw = GameMetadata(competition).get_gamecodes_season(season)
     missing = [c for c in ("gameCode", "Round", "date", "homecode", "hometeam", "homescore", "awaycode", "awayteam", "awayscore", "played") if c not in raw]
     if missing:
-        raise SystemExit(f"EuroCup results feed has no column(s) {missing}; got {list(raw.columns)}")
+        raise SystemExit(f"results feed of competition {competition} has no column(s) {missing}; got {list(raw.columns)}")
     out = pd.DataFrame({
         "gamecode": raw.gameCode, "round": raw.Round,
         "date": pd.to_datetime(raw.date, format="%b %d, %Y", errors="coerce").dt.strftime("%Y-%m-%d"),
@@ -175,12 +178,13 @@ def _i(x: object) -> int:
     return 0 if x is None or pd.isna(x) else int(x)
 
 
-def fetch_game_lines(gamecode: int, names: dict[str, str], season: int = SEASON) -> tuple[list[str], list[str]]:
+def fetch_game_lines(gamecode: int, names: dict[str, str], season: int = SEASON,
+                     competition: str = COMPETITION_CODE) -> tuple[list[str], list[str]]:
     """Raw-file lines of one played game: (BOX lines, ZONES lines). Format: notebooks/eurocup_fetch.md.
     `names` maps club code -> team name as written in the file. Team totals are the sum of the players and the team row; PIR is the API's team total."""
     from euroleague_api.boxscore_data import BoxScoreData
     from euroleague_api.shot_data import ShotData
-    df = BoxScoreData(COMPETITION_CODE).get_players_boxscore_stats(season, gamecode)
+    df = BoxScoreData(competition).get_players_boxscore_stats(season, gamecode)
     box, order, quarters = [], [], []
     for code in dict.fromkeys(df.Team):
         t = df[df.Team == code]
@@ -197,20 +201,20 @@ def fetch_game_lines(gamecode: int, names: dict[str, str], season: int = SEASON)
         val = int(t[t.Player == TEAM_ROWS[1]].Valuation.iloc[0])
         box.append("|".join([str(gamecode), name, "TOTAL", "", "", *tot, "", str(val)]))
     try:
-        q = BoxScoreData(COMPETITION_CODE).get_teams_boxscore_quarter_scores(season, gamecode)
+        q = BoxScoreData(competition).get_teams_boxscore_quarter_scores(season, gamecode)
         parts = [f"{r.Team}:{r.Quarter1}-{r.Quarter2}-{r.Quarter3}-{r.Quarter4}" for r in q.itertuples()]
         if parts:
             box.append(f"{gamecode}|QUARTERS|" + ";".join(parts))
     except Exception:
         pass            # the quarters line is informational; nothing reads it
-    sh = ShotData(COMPETITION_CODE).get_game_shot_data(season, gamecode)
+    sh = ShotData(competition).get_game_shot_data(season, gamecode)
     sh = sh[sh.ID_ACTION.isin(ZONE_ACTIONS) & sh.ZONE.astype(str).str.strip().ne("")]
     zones = [f"{gamecode}|{code}|{zone}|{act}|{n}" for (code, zone, act), n in sh.groupby(["TEAM", "ZONE", "ID_ACTION"]).size().items()]
     return box, zones
 
 
-def update_raw(results: pd.DataFrame, path: Path = RAW) -> list[int]:
-    """Append the played games that are not in the raw file yet (every team of the EuroCup, so that the league reference is complete).
+def update_raw(results: pd.DataFrame, path: Path = RAW, competition: str = COMPETITION_CODE) -> list[int]:
+    """Append the played games of `results` that are not in the raw file yet (EuroCup: every team, so that the league reference is complete).
     Returns the game codes added. A game that cannot be fetched is skipped and tried again on the next run."""
     lines = path.read_text(encoding="utf-8").splitlines() if path.exists() else ["BOX", "ZONES"]
     have = {int(l.split("|")[0]) for l in lines if re.match(r"^\d+\|", l)}
@@ -219,7 +223,7 @@ def update_raw(results: pd.DataFrame, path: Path = RAW) -> list[int]:
     new_box, new_zones, added = [], [], []
     for gc in results[results.played & ~results.gamecode.isin(have)].gamecode:
         try:
-            b, z = fetch_game_lines(int(gc), names)
+            b, z = fetch_game_lines(int(gc), names, competition=competition)
         except Exception as exc:
             print(f"box score of game {gc}: {exc}")
             continue

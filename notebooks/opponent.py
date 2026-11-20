@@ -144,7 +144,7 @@ def generate(rnd: int, team: str = TEAM, data: Path = DATA_DIR, force: bool = Fa
     xbox = ws.load_box_before(data, date, CFG["eurocup_file"])
     roster = write_roster(folder, opp, date, data)
     lba_style.STAMP_NOTE = f"games before {pd.Timestamp(date):%d %b %Y} (pre-match snapshot)"
-    ws.fig_starting_fives(xbox, opp, folder)
+    ws.fig_starting_fives(pd.concat([xbox, ws.load_euroleague_before(data, date)], ignore_index=True), opp, folder)
     opponent_figures(data, opp, date, LBA, folder)
     fin = st.finished(games, date)
     lba_ids = [int(x) for x in fin[(fin.home_team == opp) | (fin.away_team == opp)].game_id]

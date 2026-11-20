@@ -14,10 +14,11 @@ import numpy as np
 import pandas as pd
 from matplotlib.lines import Line2D
 
+import eurocup
 import lba_style
 import weekly_config
 from lba_style import BLUE, GREEN, LEAGUE, SUP_KW, TEXT, TEXT2, TITLE_KW, save_fig, shots_cm, style_axes, team_color
-from matchup_report import apply_starter_overrides, parse_eurocup, plot_zone_heatmap, zone_stats
+from matchup_report import COMP_EL, COMP_LABELS, apply_starter_overrides, parse_eurocup, plot_zone_heatmap, zone_stats
 from player_names import photo_name
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -73,6 +74,19 @@ def load_box(data: Path, upto_round: int, upto_date: str, eurocup_file: str = ""
 def load_box_before(data: Path, before: str, eurocup_file: str = "") -> pd.DataFrame:
     """Return everything available before a game: LBA and EuroCup rows dated strictly before `before` (YYYY-MM-DD)."""
     box = load_box(data, ALL_ROUNDS, END_OF_TIME, eurocup_file)
+    return box[box.date < before].copy()
+
+
+def load_euroleague_before(data: Path, before: str) -> pd.DataFrame:
+    """Return the Euroleague box-score rows dated strictly before `before` (YYYY-MM-DD), in the columns of ``load_box``.
+
+    Empty when data/euroleague_2026_raw.txt has not been fetched (notebooks/euroleague_fetch.py).
+    """
+    raw = data / eurocup.EL_RAW_NAME
+    if not raw.exists():
+        return pd.DataFrame()
+    box, _ = parse_eurocup(raw, COMP_EL, data / eurocup.EL_RESULTS_NAME)
+    box["player_surname"] = box.player_surname.str.upper()
     return box[box.date < before].copy()
 
 
@@ -209,7 +223,7 @@ def roster_table(box: pd.DataFrame, data: Path, team: str = TEAM, asof: str | No
 
 # ── starting fives of the last games ───────────────────────────────────────────
 def fig_starting_fives(box: pd.DataFrame, team: str, out: Path, n: int = 5, top: int = 12, idx: int = 1) -> list[dict]:
-    """Save 11_starting_fives.png and return the starters of each game. Grid players x last `n` games (LBA and EuroCup, date order): team colour = starter (S, minutes), grey = bench minutes, red = out of the game.
+    """Save 11_starting_fives.png and return the starters of each game. Grid players x last `n` games (every competition in `box`, date order): team colour = starter (S, minutes), grey = bench minutes, red = out of the game.
     Rows: the `top` players by minutes over all the games in `box`, plus anyone who started. Written to 11_starting_fives.png."""
     p = box[(box.team == team) & (box.row_type == "player")]
     tot = box[(box.team == team) & (box.row_type == "total")].sort_values(["date", "game_id"]).tail(n)
@@ -238,11 +252,12 @@ def fig_starting_fives(box: pd.DataFrame, team: str, out: Path, n: int = 5, top:
     ax.set_xlim(-0.05, len(tot)); ax.set_ylim(-len(players) - 0.1, 0)
     ax.set_yticks([-i - 0.56 for i in range(len(players))], [x.title() for x in players], fontsize=9)
     opp_pts = box[(box.row_type == "total") & (box.team != team) & box.game_id.isin(tot.game_id)].groupby("game_id").pts.first()
-    labels = [f"{g.date[5:]}\n{str(g.opponent).split()[0][:11]}\n{'LBA' if g.competition == COMP_LBA else 'EC'} {int(g.pts)}-{int(opp_pts.get(g.game_id, 0))}"
+    labels = [f"{g.date[5:]}\n{str(g.opponent).split()[0][:11]}\n{g.competition} {int(g.pts)}-{int(opp_pts.get(g.game_id, 0))}"
               for g in tot.itertuples()]
     ax.set_xticks([j + 0.47 for j in range(len(tot))], labels, fontsize=8)
     ax.xaxis.tick_top(); ax.tick_params(length=0); ax.spines[:].set_visible(False)
-    fig.suptitle(f"{team}: starters (S), bench minutes and absences, last {len(tot)} games (LBA and EuroCup)", **SUP_KW)
+    comps = " and ".join(COMP_LABELS[c] for c in COMP_LABELS if c in set(tot.competition))
+    fig.suptitle(f"{team}: starters (S), bench minutes and absences, last {len(tot)} games ({comps})", **SUP_KW)
     save_fig(fig, out / "11_starting_fives.png"); plt.close(fig)
     return fives
 
