@@ -45,7 +45,7 @@ Based on the data only: 8 LBA games each (Synergy and LBA box scores; ranks are 
 
 Virtus Bologna is 1st with 7-1, level on points with Napoli; BC Roma is 13th with 2-6. Bologna won the first five, lost 93-100 at home to Trieste in round 6, then beat Verona (95-81, home) and Trento (88-75, away).
 
-In the Euroleague Bologna is 5-8. Sunday is its third game in six days: it beat Panathinaikos 83-79 at home on 17 Nov and lost 87-91 at Valencia on 19 Nov.
+In the Euroleague Bologna is 5-8. Sunday is its third game in six days: it beat Panathinaikos 84-79 at home on 17 Nov and lost 87-92 at Valencia on 19 Nov.
 
 <!-- more -->
 
