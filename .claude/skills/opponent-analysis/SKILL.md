@@ -47,6 +47,13 @@ Key points (top of each page) are headlines: one line per point, at most one num
   Do this for every new figure or index of every future analysis, and give the figures their descriptive names: never "plot 1" or
   "plot 2" (in titles, notes, text or code comments).
 
+## 3b. Figures with a court (shot charts, zones, sides)
+
+* **Every court is drawn with the basket at the top**: the standard half court rotated by 180 degrees (`lba_style.ROTATE_COURT`, `lba_style.draw_half_court`), with the text upright. This holds for every shot chart and court figure, team or player (for example `10f_player_<name>_pnr_iso_courts.png` of `notebooks/synergy_player_history.py`), never basket at the bottom.
+* **Left and right are the offense's**, seen from behind the offense: the offense's left is the left of the picture, its right the right. In the Synergy shot chart x < 250 is the offense's right, x > 250 its left (the rim is at (250, 330)).
+* One figure answers one question, with the answer in the title or the first label; no more than three panels per figure, labels inside the bars, no overlapping text. After drawing, open the PNG and check it before using it.
+* In a page section, one figure per sub-heading, under a short text (what it shows, how to read it), then at most three bullets. Cumulative views (all seasons, all shot types together) come after the breakdown they sum up.
+
 ## 4. Writing the numbers
 
 * Source of every number: the Synergy pull folder (`data/synergy/<team>_<date>/`, README lists the files), `data/box_scores.csv`, `data/pbp.csv`, the `auto.json` of the matchup report. Team-level ranks come from the `league_team_*.csv` of the pull; play-type ranks only exist in the newest `data/synergy/leaderboards_<date>/`, so say "on <date>" next to any play-type rank that is older than the pull.
