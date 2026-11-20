@@ -14,6 +14,7 @@ THE STRUCTURE OF THESE THREE PAGES IS THE STANDARD FOR EVERY ANALYSIS; only the 
 - ==Carr, Frazier and Moore create out of the pick-and-roll==; Alston and Edwards are the spot-up shooters: [lines per player](#key-points).
 - ==Diouf and Diarra score at the rim== (post-ups, rolls, cuts), neither shoots threes: [shot charts](#shot-charts-by-player).
 - ==Bello is the second pick-and-roll ball handler==, with a four-season shot history: [Rasheed Bello](#rasheed-bello-four-seasons-of-shots).
+- Who brings energy at the rim and in the open court: [energy](#energy-rim-activity-and-pace).
 - Who plays when: [rotation by player](#rotation-by-player).
 
 <!-- more -->
@@ -80,11 +81,57 @@ How the shot attempts of each game split between threes, paint and mid-range: on
 
 ## Shot charts by player
 
-Shot profile (made/attempted by location and play type) and shot types within each play type. Team zone totals: link to the shot selection section of the analysis page.
+Zone shot charts, then for each player the field goals by play type and, for the players who together use 80% of the possessions, a green figure with the shot types within his two main play types (LBA, 8 games). [How to read these figures](../../methodology/#reading-the-shot-selection-triangles-and-the-play-type-plots). Team zone totals: [shot selection](./#shot-selection).
 
 <!-- more -->
 
 {{ shot_charts }}
+
+{{ figure: 05_player_carr_shot_profile }}
+
+{{ figure: 05c_player_carr_shot_types }}
+
+{{ figure: 05_player_frazier_shot_profile }}
+
+{{ figure: 05c_player_frazier_shot_types }}
+
+{{ figure: 05_player_moore_shot_profile }}
+
+{{ figure: 05c_player_moore_shot_types }}
+
+{{ figure: 05_player_diouf_shot_profile }}
+
+{{ figure: 05c_player_diouf_shot_types }}
+
+{{ figure: 05_player_alston_shot_profile }}
+
+{{ figure: 05c_player_alston_shot_types }}
+
+{{ figure: 05_player_diarra_shot_profile }}
+
+{{ figure: 05c_player_diarra_shot_types }}
+
+{{ figure: 05_player_klintman_shot_profile }}
+
+{{ figure: 05c_player_klintman_shot_types }}
+
+{{ figure: 05_player_baldasso_shot_profile }}
+
+{{ figure: 05c_player_baldasso_shot_types }}
+
+{{ figure: 05_player_edwards_shot_profile }}
+
+{{ figure: 05c_player_edwards_shot_types }}
+
+{{ figure: 05_player_ferrari_shot_profile }}
+
+{{ figure: 05c_player_ferrari_shot_types }}
+
+{{ figure: 05_player_casarin_shot_profile }}
+
+{{ figure: 05_player_hackett_shot_profile }}
+
+{{ figure: 05_player_bello_shot_profile }}
 
 ## Rasheed Bello: four seasons of shots
 
@@ -149,6 +196,18 @@ The court is seen from behind the offense, basket at the top, left is the offens
 The mix moved from paint-heavy (college) to the three-and-mid-range side from 2024-25 on.
 
 Source and caveats: Synergy shot list (pulled 20 Nov 2026, `data/synergy/players_2026-11-20/`), field-goal attempts only: possessions ending in a turnover, foul or pass are not counted. Side from the shot coordinate (checked against Synergy's Drives Left / Right tags from 2024-25 on). Small samples per season and side.
+
+## Energy: rim activity and pace
+
+Two scores per player, as league percentiles (0.5 = league median): ==rim activity== and ==high pace== (LBA games). [How the scores are built](../../methodology/#energy-indices-rim-activity-and-high-pace).
+
+- **Carr, Bello and Moore have the highest pace** (0.97, 0.92, 0.88); Bello on 3 games only.
+- **Diarra and Diouf carry the rim activity** (0.99 and 0.98) and are also above 0.8 in pace.
+- **Edwards and Hackett have the lowest pace** among the rotation players (0.23 and 0.36); Frazier the lowest rim activity (0.11).
+
+<!-- more -->
+
+{{ figure: 15_energy_indices }}
 
 ## Rotation by player
 

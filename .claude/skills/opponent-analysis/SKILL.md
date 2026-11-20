@@ -36,7 +36,7 @@ Key points (top of each page) are headlines: one line per point, at most one num
 
 * Same page: `[text](#section-title)`. Other page of the game: `[text](offense_tendencies.html#section-title)`; from a sub-page to the main analysis: `./#section-title`.
 * The anchor is the heading lowercased with spaces and punctuation turned into hyphens (`## Roster, starting five and bench` is `#roster-starting-five-and-bench`). Avoid linking to headings with colons.
-* A link to a heading inside a closed drop-down opens it. After building, check that every `#anchor` exists (see 5).
+* A link to a heading inside a closed drop-down opens it. After building, check that every `#anchor` exists (see 6).
 * **Every figure type that needs explaining has a section in the Methodology page** (`weekly/pages/methodology.md`): what it shows, how it is
   built, how to read it, with a picture drawn with invented (dummy) data by `notebooks/methodology_figures.py`, using the same drawing
   functions as the real figure. Two links, both ways:
@@ -62,7 +62,23 @@ Key points (top of each page) are headlines: one line per point, at most one num
 * Clips: game clock from `shots.csv` (period, time remaining), one line per theme.
 * Data only, no coaching judgement presented as fact: tendencies, not predictions; small samples get a warning in Details.
 
-## 5. Refreshing when the opponent plays again
+## 5. Pulls and figures every analysis must have
+
+Never publish an analysis without these; a missing one means the pull was skipped, not that the section is optional.
+Synergy pulls need a browser logged in to Synergy (the user signs in); run each script in the Synergy tab (headers of the scripts).
+
+| What | Pull / command | Output | Shown in |
+|---|---|---|---|
+| Scouting pull, the opponent's league | `synergy/webapp_pull.js` + the Cumulative Box tab of the team page (`/teams/<id>/boxscore`) into `data/synergy/<team>_<date>/` with `config.json` and README, then `python notebooks/synergy_scouting_plots.py data/synergy/<team>_<date>` | `02_opponent_playtypes`, `06_players_playtype_mix`, `05_player_<name>_shot_profile`, `05c_player_<name>_shot_types` | offense page, Play types and sets (02, 06); individual page, Shot charts by player (05, 05c, players by possessions) |
+| Defensive pull, one folder per competition | `synergy/defense_pull.js` into `data/synergy/defense_<team>_<date>/<competition>/`, then `python notebooks/synergy_defense_plots.py <folders> --out weekly/games/<date>` | `16_defense_playtypes`, `17_defenders_playtype_mix` | defense page: What they allow (16), Defensive scheme (17) |
+| Key numbers | `synergy/key_numbers_pull.js` | Key numbers tab | `key_numbers.md` |
+| Energy indices | `python notebooks/energy_indices.py "<Team>"`, copy the PNG to `weekly/games/<date>/15_energy_indices.png` | `15_energy_indices` | individual page, Energy: rim activity and pace |
+| Second competition (Euroleague, EuroCup) | the same pulls with that competition key; every game of both competitions is used, ranks stay per competition | tables / second panel | same sections, side by side |
+
+Copy the PNGs into `weekly/games/<date>/` and reference them with `{{ figure: name }}`. Text stays short: the figure carries the
+numbers, the summary carries three or four bullets, no table that repeats a figure.
+
+## 6. Refreshing when the opponent plays again
 
 1. Make sure the games are in the data: `git pull` (the morning GitHub Action collects) or `python -m lba_data.collect`; re-pull Synergy for the opponent if needed (see its README).
 2. Regenerate what depends on the data: `python notebooks/synergy_scouting_plots.py data/synergy/<folder>`, `python notebooks/energy_indices.py "<Team>"` (copy the PNG to `weekly/games/<date>/15_energy_indices.png`), the matchup figures come from `weekly.py`.

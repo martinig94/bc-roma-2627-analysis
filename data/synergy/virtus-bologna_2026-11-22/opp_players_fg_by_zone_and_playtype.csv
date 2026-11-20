@@ -1,0 +1,154 @@
+player,dimension,category,fgm,fga
+Alston,play_type,Spot Up,7,19
+Alston,play_type,P&R Ball Handler,2,7
+Alston,play_type,Transition,4,9
+Alston,play_type,Cut,1,2
+Alston,play_type,Off Screen,0,2
+Alston,play_type,Isolation,0,2
+Alston,play_type,P&R Roll Man,1,1
+Alston,play_type,Offensive Rebounds (Put Backs),1,1
+Alston,play_type,Other,0,1
+Alston,shot_location,Wing 3,5,16
+Alston,shot_location,Paint,6,11
+Alston,shot_location,Top 3,0,5
+Alston,shot_location,Corner 3,3,7
+Alston,shot_location,Mid-range,2,5
+Baiocchi,play_type,Transition,1,1
+Baiocchi,shot_location,Mid-range,1,1
+Baldasso,play_type,Spot Up,6,14
+Baldasso,play_type,P&R Ball Handler,3,7
+Baldasso,play_type,Transition,4,6
+Baldasso,play_type,Off Screen,2,5
+Baldasso,play_type,Other,1,5
+Baldasso,play_type,P&R Roll Man,0,1
+Baldasso,play_type,Offensive Rebounds (Put Backs),0,1
+Baldasso,play_type,Isolation,1,1
+Baldasso,shot_location,Mid-range,9,15
+Baldasso,shot_location,Wing 3,4,13
+Baldasso,shot_location,Corner 3,1,2
+Baldasso,shot_location,Paint,3,5
+Baldasso,shot_location,Top 3,0,5
+Bello,play_type,P&R Ball Handler,4,12
+Bello,play_type,Transition,1,2
+Bello,play_type,Spot Up,0,3
+Bello,play_type,Isolation,1,3
+Bello,play_type,Other,1,1
+Bello,shot_location,Wing 3,1,7
+Bello,shot_location,Top 3,1,3
+Bello,shot_location,Paint,4,7
+Bello,shot_location,Mid-range,0,3
+Bello,shot_location,Corner 3,1,1
+Carr,play_type,P&R Ball Handler,16,35
+Carr,play_type,Transition,8,14
+Carr,play_type,Spot Up,5,17
+Carr,play_type,Isolation,5,12
+Carr,play_type,Other,0,2
+Carr,play_type,Offensive Rebounds (Put Backs),1,2
+Carr,play_type,Off Screen,0,1
+Carr,shot_location,Wing 3,7,25
+Carr,shot_location,Mid-range,9,23
+Carr,shot_location,Paint,14,25
+Carr,shot_location,Top 3,4,7
+Carr,shot_location,Corner 3,1,3
+Casarin,play_type,Transition,7,10
+Casarin,play_type,P&R Ball Handler,1,5
+Casarin,play_type,Other,0,1
+Casarin,play_type,Spot Up,0,4
+Casarin,play_type,Cut,0,1
+Casarin,shot_location,Paint,8,14
+Casarin,shot_location,Corner 3,0,2
+Casarin,shot_location,Mid-range,0,4
+Casarin,shot_location,Wing 3,0,1
+Diarra,play_type,P&R Roll Man,6,10
+Diarra,play_type,Cut,8,9
+Diarra,play_type,Transition,3,5
+Diarra,play_type,Other,4,6
+Diarra,play_type,Offensive Rebounds (Put Backs),2,4
+Diarra,play_type,Spot Up,0,2
+Diarra,shot_location,Paint,22,32
+Diarra,shot_location,Mid-range,1,3
+Diarra,shot_location,Top 3,0,1
+Diouf,play_type,Other,12,18
+Diouf,play_type,P&R Roll Man,0,9
+Diouf,play_type,Cut,4,5
+Diouf,play_type,Offensive Rebounds (Put Backs),5,5
+Diouf,play_type,Transition,3,3
+Diouf,play_type,Spot Up,2,4
+Diouf,shot_location,Paint,26,35
+Diouf,shot_location,Mid-range,0,9
+Edwards,play_type,Spot Up,10,22
+Edwards,play_type,Cut,5,6
+Edwards,play_type,Transition,2,3
+Edwards,play_type,P&R Roll Man,1,2
+Edwards,play_type,Other,2,4
+Edwards,play_type,P&R Ball Handler,0,1
+Edwards,shot_location,Top 3,0,2
+Edwards,shot_location,Corner 3,4,12
+Edwards,shot_location,Paint,8,11
+Edwards,shot_location,Wing 3,5,10
+Edwards,shot_location,Mid-range,3,3
+Ferrari,play_type,Spot Up,4,12
+Ferrari,play_type,Transition,7,10
+Ferrari,play_type,Cut,2,5
+Ferrari,play_type,Other,2,3
+Ferrari,play_type,Offensive Rebounds (Put Backs),0,2
+Ferrari,play_type,P&R Roll Man,2,2
+Ferrari,play_type,P&R Ball Handler,0,1
+Ferrari,shot_location,Mid-range,1,6
+Ferrari,shot_location,Paint,10,14
+Ferrari,shot_location,Wing 3,3,9
+Ferrari,shot_location,Corner 3,2,3
+Ferrari,shot_location,Top 3,1,3
+Frazier,play_type,P&R Ball Handler,12,25
+Frazier,play_type,Spot Up,6,10
+Frazier,play_type,Isolation,5,9
+Frazier,play_type,Off Screen,2,7
+Frazier,play_type,Other,1,5
+Frazier,play_type,Transition,3,4
+Frazier,play_type,Cut,2,3
+Frazier,shot_location,Mid-range,4,8
+Frazier,shot_location,Corner 3,4,7
+Frazier,shot_location,Top 3,5,10
+Frazier,shot_location,Wing 3,9,25
+Frazier,shot_location,Paint,9,13
+Hackett,play_type,Spot Up,5,9
+Hackett,play_type,Transition,2,7
+Hackett,play_type,P&R Ball Handler,3,4
+Hackett,play_type,Other,1,3
+Hackett,play_type,Offensive Rebounds (Put Backs),0,1
+Hackett,play_type,Cut,1,1
+Hackett,shot_location,Mid-range,3,6
+Hackett,shot_location,Paint,4,9
+Hackett,shot_location,Corner 3,2,5
+Hackett,shot_location,Wing 3,2,4
+Hackett,shot_location,Top 3,1,1
+Klintman,play_type,Spot Up,8,12
+Klintman,play_type,Cut,8,9
+Klintman,play_type,Transition,3,7
+Klintman,play_type,P&R Roll Man,3,6
+Klintman,play_type,Other,1,2
+Klintman,play_type,Offensive Rebounds (Put Backs),0,2
+Klintman,play_type,Isolation,0,1
+Klintman,shot_location,Corner 3,3,6
+Klintman,shot_location,Top 3,2,5
+Klintman,shot_location,Paint,10,14
+Klintman,shot_location,Mid-range,4,7
+Klintman,shot_location,Wing 3,4,7
+Kokila,play_type,P&R Roll Man,2,5
+Kokila,play_type,Offensive Rebounds (Put Backs),1,1
+Kokila,shot_location,Paint,3,4
+Kokila,shot_location,Mid-range,0,2
+Moore,play_type,P&R Ball Handler,9,17
+Moore,play_type,Transition,9,12
+Moore,play_type,Spot Up,1,8
+Moore,play_type,Cut,4,5
+Moore,play_type,Other,3,7
+Moore,play_type,Offensive Rebounds (Put Backs),2,3
+Moore,play_type,Off Screen,1,2
+Moore,play_type,Isolation,0,1
+Moore,play_type,P&R Roll Man,0,1
+Moore,shot_location,Mid-range,7,16
+Moore,shot_location,Corner 3,1,5
+Moore,shot_location,Paint,18,25
+Moore,shot_location,Top 3,0,4
+Moore,shot_location,Wing 3,3,6

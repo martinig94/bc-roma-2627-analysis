@@ -1,0 +1,113 @@
+player,play_type,poss,pts,ppp,full
+Alston,Spot Up,21,25,1.19,Derrick Alston
+Alston,P&R Ball Handler,12,9,0.75,Derrick Alston
+Alston,Transition,12,13,1.083,Derrick Alston
+Alston,Cut,3,4,1.333,Derrick Alston
+Alston,Off Screen,3,2,0.667,Derrick Alston
+Alston,Isolation,2,0,0,Derrick Alston
+Alston,P&R Roll Man,1,2,2,Derrick Alston
+Alston,Offensive Rebounds (Put Backs),1,2,2,Derrick Alston
+Alston,Post-Up,1,0,0,Derrick Alston
+Alston,Handoffs,1,3,3,Derrick Alston
+Alston,Miscellaneous Plays,1,0,0,Derrick Alston
+Baiocchi,Transition,1,2,2,Matteo Baiocchi
+Baiocchi,Isolation,1,1,1,Matteo Baiocchi
+Baldasso,Spot Up,16,15,0.938,Tommaso Baldasso
+Baldasso,P&R Ball Handler,12,10,0.833,Tommaso Baldasso
+Baldasso,Transition,6,11,1.833,Tommaso Baldasso
+Baldasso,Off Screen,6,4,0.667,Tommaso Baldasso
+Baldasso,Handoffs,4,2,0.5,Tommaso Baldasso
+Baldasso,Miscellaneous Plays,3,4,1.333,Tommaso Baldasso
+Baldasso,P&R Roll Man,1,0,0,Tommaso Baldasso
+Baldasso,Offensive Rebounds (Put Backs),1,0,0,Tommaso Baldasso
+Baldasso,Isolation,1,3,3,Tommaso Baldasso
+Bello,P&R Ball Handler,13,10,0.769,Rasheed Bello
+Bello,Transition,6,5,0.833,Rasheed Bello
+Bello,Spot Up,3,0,0,Rasheed Bello
+Bello,Isolation,3,3,1,Rasheed Bello
+Bello,Miscellaneous Plays,3,3,1,Rasheed Bello
+Carr,P&R Ball Handler,39,40,1.026,Marcus Carr
+Carr,Transition,21,21,1,Marcus Carr
+Carr,Spot Up,20,17,0.85,Marcus Carr
+Carr,Isolation,15,16,1.067,Marcus Carr
+Carr,Miscellaneous Plays,6,4,0.667,Marcus Carr
+Carr,Offensive Rebounds (Put Backs),3,2,0.667,Marcus Carr
+Carr,Handoffs,1,0,0,Marcus Carr
+Carr,Off Screen,1,0,0,Marcus Carr
+Casarin,Transition,13,19,1.462,Davide Casarin
+Casarin,P&R Ball Handler,7,2,0.286,Davide Casarin
+Casarin,Miscellaneous Plays,6,0,0,Davide Casarin
+Casarin,Spot Up,4,0,0,Davide Casarin
+Casarin,Cut,2,2,1,Davide Casarin
+Casarin,Isolation,1,0,0,Davide Casarin
+Casarin,Post-Up,1,0,0,Davide Casarin
+Diarra,P&R Roll Man,17,20,1.176,Aliou Diarra
+Diarra,Cut,10,19,1.9,Aliou Diarra
+Diarra,Transition,8,9,1.125,Aliou Diarra
+Diarra,Post-Up,6,5,0.833,Aliou Diarra
+Diarra,Miscellaneous Plays,6,4,0.667,Aliou Diarra
+Diarra,Offensive Rebounds (Put Backs),4,4,1,Aliou Diarra
+Diarra,Spot Up,2,0,0,Aliou Diarra
+Diarra,Handoffs,1,2,2,Aliou Diarra
+Diouf,Post-Up,17,22,1.294,Mouhamet Diouf
+Diouf,P&R Roll Man,16,6,0.375,Mouhamet Diouf
+Diouf,Cut,8,11,1.375,Mouhamet Diouf
+Diouf,Offensive Rebounds (Put Backs),6,11,1.833,Mouhamet Diouf
+Diouf,Transition,5,7,1.4,Mouhamet Diouf
+Diouf,Miscellaneous Plays,5,4,0.8,Mouhamet Diouf
+Diouf,Spot Up,4,4,1,Mouhamet Diouf
+Edwards,Spot Up,25,29,1.16,Kessler Edwards
+Edwards,Cut,6,10,1.667,Kessler Edwards
+Edwards,Transition,4,5,1.25,Kessler Edwards
+Edwards,P&R Roll Man,2,3,1.5,Kessler Edwards
+Edwards,Handoffs,2,2,1,Kessler Edwards
+Edwards,Miscellaneous Plays,2,0,0,Kessler Edwards
+Edwards,P&R Ball Handler,1,0,0,Kessler Edwards
+Edwards,Offensive Rebounds (Put Backs),1,2,2,Kessler Edwards
+Edwards,Post-Up,1,2,2,Kessler Edwards
+Ferrari,Spot Up,13,14,1.077,Francesco Ferrari
+Ferrari,Transition,12,18,1.5,Francesco Ferrari
+Ferrari,Cut,5,5,1,Francesco Ferrari
+Ferrari,Miscellaneous Plays,5,3,0.6,Francesco Ferrari
+Ferrari,Offensive Rebounds (Put Backs),3,1,0.333,Francesco Ferrari
+Ferrari,P&R Roll Man,2,4,2,Francesco Ferrari
+Ferrari,Post-Up,2,2,1,Francesco Ferrari
+Ferrari,P&R Ball Handler,1,0,0,Francesco Ferrari
+Ferrari,Handoffs,1,2,2,Francesco Ferrari
+Frazier,P&R Ball Handler,30,40,1.333,Trent Frazier
+Frazier,Spot Up,12,18,1.5,Trent Frazier
+Frazier,Isolation,9,13,1.444,Trent Frazier
+Frazier,Off Screen,7,6,0.857,Trent Frazier
+Frazier,Miscellaneous Plays,6,6,1,Trent Frazier
+Frazier,Transition,5,7,1.4,Trent Frazier
+Frazier,Handoffs,4,3,0.75,Trent Frazier
+Frazier,Cut,3,4,1.333,Trent Frazier
+Hackett,Spot Up,10,13,1.3,Daniel Hackett
+Hackett,Transition,9,6,0.667,Daniel Hackett
+Hackett,P&R Ball Handler,6,9,1.5,Daniel Hackett
+Hackett,Handoffs,3,2,0.667,Daniel Hackett
+Hackett,Offensive Rebounds (Put Backs),2,2,1,Daniel Hackett
+Hackett,Cut,1,2,2,Daniel Hackett
+Hackett,Off Screen,1,2,2,Daniel Hackett
+Hackett,Miscellaneous Plays,1,2,2,Daniel Hackett
+Klintman,Spot Up,14,23,1.643,Bobi Klintman
+Klintman,Cut,12,18,1.5,Bobi Klintman
+Klintman,Transition,10,9,0.9,Bobi Klintman
+Klintman,P&R Roll Man,8,6,0.75,Bobi Klintman
+Klintman,Miscellaneous Plays,4,1,0.25,Bobi Klintman
+Klintman,Offensive Rebounds (Put Backs),2,0,0,Bobi Klintman
+Klintman,Isolation,2,0,0,Bobi Klintman
+Klintman,Handoffs,1,3,3,Bobi Klintman
+Kokila,P&R Roll Man,5,4,0.8,Kevin Kokila
+Kokila,Offensive Rebounds (Put Backs),2,4,2,Kevin Kokila
+Moore,P&R Ball Handler,24,24,1,Wendell Moore
+Moore,Transition,18,25,1.389,Wendell Moore
+Moore,Spot Up,9,3,0.333,Wendell Moore
+Moore,Cut,5,8,1.6,Wendell Moore
+Moore,Handoffs,4,5,1.25,Wendell Moore
+Moore,Offensive Rebounds (Put Backs),3,4,1.333,Wendell Moore
+Moore,Post-Up,3,2,0.667,Wendell Moore
+Moore,Off Screen,3,4,1.333,Wendell Moore
+Moore,Isolation,2,0,0,Wendell Moore
+Moore,P&R Roll Man,1,0,0,Wendell Moore
+Moore,Miscellaneous Plays,1,0,0,Wendell Moore
