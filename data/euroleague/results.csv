@@ -125,3 +125,7 @@ gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
 124,13,2026-11-19,MUN,Fc Bayern Munich,100,BAS,Kosner Baskonia Vitoria-Gasteiz,81,True
 125,13,2026-11-19,PAM,Valencia Basket,92,VIR,Virtus Bologna,87,True
 126,13,2026-11-19,PRS,Paris Basketball,97,HTA,Hapoel Ibi Tel Aviv,96,True
+127,13,2026-11-20,IST,Anadolu Efes Istanbul,107,ASV,Ldlc Asvel Villeurbanne,81,True
+128,13,2026-11-20,BAR,Fc Barcelona,100,RED,Crvena Zvezda Meridianbet Belgrade,103,True
+129,13,2026-11-20,PAR,Partizan Mozzart Bet Belgrade,91,BES,Besiktas Fuzul Istanbul,87,True
+130,13,2026-11-20,OLY,Olympiacos Piraeus,92,MAD,Real Madrid,76,True
