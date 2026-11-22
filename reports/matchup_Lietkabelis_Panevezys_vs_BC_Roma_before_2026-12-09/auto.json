@@ -1,7 +1,7 @@
 {
   "kind": "opponent",
   "version": 10,
-  "n_before": 80,
+  "n_before": 82,
   "competition": "EuroCup",
   "round": null,
   "team": "BC Roma",
@@ -26,26 +26,26 @@
       "name": "Schumacher",
       "pos": "Guard",
       "height": "190",
-      "gp": 7,
+      "gp": 8,
       "number": "2",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
-      "min": 28.4,
-      "pts": 12.9,
-      "reb": 2.6,
+      "min": 27.6,
+      "pts": 12.6,
+      "reb": 2.5,
       "oreb": 0.4,
-      "ast": 3.7,
-      "pir": 13.6,
-      "fd": 4.6,
-      "pf": 1.7,
-      "fg2": "40 (6.9)",
-      "fg3": "37 (4.3)",
-      "ft": "95 (2.9)",
+      "ast": 3.5,
+      "pir": 12.5,
+      "fd": 4.5,
+      "pf": 2.1,
+      "fg2": "38 (6.6)",
+      "fg3": "39 (4.1)",
+      "ft": "96 (2.9)",
       "ppg_lba": null,
-      "ppg_ec": 12.9,
-      "sec_total": 11912
+      "ppg_ec": 12.6,
+      "sec_total": 13262
     },
     {
       "player_id": "ec_jaramaz_o",
@@ -53,26 +53,26 @@
       "name": "Jaramaz",
       "pos": "Guard",
       "height": "193",
-      "gp": 7,
+      "gp": 8,
       "number": "10",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
-      "min": 26.6,
-      "pts": 8.4,
-      "reb": 3.6,
-      "oreb": 1.3,
-      "ast": 3.3,
-      "pir": 6.3,
-      "fd": 2.7,
-      "pf": 2.6,
-      "fg2": "37 (5.4)",
-      "fg3": "24 (4.1)",
-      "ft": "56 (2.6)",
+      "min": 25.0,
+      "pts": 7.6,
+      "reb": 3.2,
+      "oreb": 1.1,
+      "ast": 3.0,
+      "pir": 5.5,
+      "fd": 2.6,
+      "pf": 2.4,
+      "fg2": "37 (5.1)",
+      "fg3": "23 (3.8)",
+      "ft": "56 (2.2)",
       "ppg_lba": null,
-      "ppg_ec": 8.4,
-      "sec_total": 11164
+      "ppg_ec": 7.6,
+      "sec_total": 12006
     },
     {
       "player_id": "ec_valinskas_m",
@@ -80,26 +80,26 @@
       "name": "Valinskas",
       "pos": "Guard",
       "height": "189",
-      "gp": 7,
+      "gp": 8,
       "number": "99",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
-      "min": 16.0,
+      "min": 16.4,
       "pts": 8.0,
       "reb": 1.9,
-      "oreb": 0.3,
-      "ast": 1.3,
+      "oreb": 0.4,
+      "ast": 1.4,
       "pir": 8.9,
-      "fd": 3.0,
-      "pf": 0.7,
-      "fg2": "45 (4.1)",
-      "fg3": "50 (2.0)",
-      "ft": "64 (2.0)",
+      "fd": 2.8,
+      "pf": 0.8,
+      "fg2": "48 (4.1)",
+      "fg3": "44 (2.0)",
+      "ft": "69 (2.0)",
       "ppg_lba": null,
       "ppg_ec": 8.0,
-      "sec_total": 6741
+      "sec_total": 7859
     },
     {
       "player_id": "ec_radzius_n",
@@ -107,7 +107,7 @@
       "name": "Radzius",
       "pos": "Guard",
       "height": "184",
-      "gp": 6,
+      "gp": 7,
       "number": "5",
       "age": null,
       "country": "",
@@ -115,18 +115,18 @@
       "birth_date": "",
       "min": 11.0,
       "pts": 3.0,
-      "reb": 0.8,
-      "oreb": 0.5,
-      "ast": 1.2,
-      "pir": 3.2,
-      "fd": 1.2,
-      "pf": 1.7,
-      "fg2": "33 (1.5)",
-      "fg3": "33 (1.5)",
-      "ft": "75 (0.7)",
+      "reb": 0.9,
+      "oreb": 0.4,
+      "ast": 1.0,
+      "pir": 3.3,
+      "fd": 1.3,
+      "pf": 2.0,
+      "fg2": "33 (1.3)",
+      "fg3": "40 (1.4)",
+      "ft": "75 (0.6)",
       "ppg_lba": null,
       "ppg_ec": 3.0,
-      "sec_total": 3945
+      "sec_total": 4616
     },
     {
       "player_id": "ec_kennedy_k",
@@ -134,26 +134,26 @@
       "name": "Kennedy",
       "pos": "Forward",
       "height": "198",
-      "gp": 7,
+      "gp": 8,
       "number": "0",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
-      "min": 24.6,
-      "pts": 12.3,
-      "reb": 2.4,
-      "oreb": 0.4,
-      "ast": 1.7,
-      "pir": 10.7,
-      "fd": 2.4,
-      "pf": 1.7,
-      "fg2": "54 (4.0)",
-      "fg3": "39 (4.0)",
-      "ft": "82 (4.0)",
+      "min": 25.2,
+      "pts": 12.9,
+      "reb": 2.5,
+      "oreb": 0.5,
+      "ast": 2.0,
+      "pir": 11.9,
+      "fd": 2.5,
+      "pf": 1.6,
+      "fg2": "55 (4.1)",
+      "fg3": "38 (4.0)",
+      "ft": "86 (4.5)",
       "ppg_lba": null,
-      "ppg_ec": 12.3,
-      "sec_total": 10345
+      "ppg_ec": 12.9,
+      "sec_total": 12090
     },
     {
       "player_id": "ec_baslyk_d",
@@ -161,26 +161,26 @@
       "name": "Baslyk",
       "pos": "Forward",
       "height": "198",
-      "gp": 7,
+      "gp": 8,
       "number": "9",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
-      "min": 20.4,
-      "pts": 5.7,
+      "min": 21.0,
+      "pts": 5.9,
       "reb": 2.1,
-      "oreb": 0.7,
-      "ast": 0.7,
-      "pir": 4.4,
-      "fd": 2.3,
-      "pf": 3.0,
-      "fg2": "43 (1.0)",
-      "fg3": "29 (3.0)",
-      "ft": "84 (2.7)",
+      "oreb": 0.8,
+      "ast": 0.6,
+      "pir": 3.9,
+      "fd": 2.1,
+      "pf": 3.2,
+      "fg2": "50 (1.2)",
+      "fg3": "27 (3.2)",
+      "ft": "84 (2.4)",
       "ppg_lba": null,
-      "ppg_ec": 5.7,
-      "sec_total": 8582
+      "ppg_ec": 5.9,
+      "sec_total": 10076
     },
     {
       "player_id": "ec_fevrier_i",
@@ -215,26 +215,26 @@
       "name": "Nemeiksa",
       "pos": "Forward",
       "height": "201",
-      "gp": 7,
+      "gp": 8,
       "number": "50",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
       "min": 10.1,
-      "pts": 2.4,
+      "pts": 2.2,
       "reb": 3.0,
-      "oreb": 1.4,
+      "oreb": 1.2,
       "ast": 0.1,
-      "pir": 4.4,
+      "pir": 4.0,
       "fd": 1.0,
-      "pf": 1.6,
-      "fg2": "62 (1.1)",
-      "fg3": "20 (0.7)",
-      "ft": "67 (0.9)",
+      "pf": 1.8,
+      "fg2": "62 (1.0)",
+      "fg3": "17 (0.8)",
+      "ft": "62 (1.0)",
       "ppg_lba": null,
-      "ppg_ec": 2.4,
-      "sec_total": 4253
+      "ppg_ec": 2.2,
+      "sec_total": 4825
     },
     {
       "player_id": "ec_sy_b",
@@ -242,26 +242,26 @@
       "name": "Sy",
       "pos": "Forward",
       "height": "205",
-      "gp": 2,
+      "gp": 3,
       "number": "35",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
-      "min": 24.5,
-      "pts": 11.5,
-      "reb": 2.0,
-      "oreb": 0.5,
+      "min": 26.5,
+      "pts": 15.0,
+      "reb": 2.7,
+      "oreb": 0.7,
       "ast": 0.0,
-      "pir": 11.0,
-      "fd": 3.0,
-      "pf": 1.5,
+      "pir": 14.7,
+      "fd": 3.3,
+      "pf": 1.7,
       "fg2": "67 (6.0)",
-      "fg3": "20 (2.5)",
-      "ft": "57 (3.5)",
+      "fg3": "40 (3.3)",
+      "ft": "69 (4.3)",
       "ppg_lba": null,
-      "ppg_ec": 11.5,
-      "sec_total": 2940
+      "ppg_ec": 15.0,
+      "sec_total": 4768
     },
     {
       "player_id": "ec_simonis_z",
@@ -296,26 +296,26 @@
       "name": "Maldunas",
       "pos": "Center",
       "height": "206",
-      "gp": 7,
+      "gp": 8,
       "number": "12",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
       "min": 20.4,
-      "pts": 4.4,
+      "pts": 4.6,
       "reb": 5.1,
-      "oreb": 1.7,
+      "oreb": 1.9,
       "ast": 1.6,
-      "pir": 7.3,
-      "fd": 2.4,
-      "pf": 3.3,
-      "fg2": "54 (3.7)",
+      "pir": 7.1,
+      "fd": 2.5,
+      "pf": 3.2,
+      "fg2": "53 (3.8)",
       "fg3": "– (0.0)",
-      "ft": "19 (2.3)",
+      "ft": "25 (2.5)",
       "ppg_lba": null,
-      "ppg_ec": 4.4,
-      "sec_total": 8562
+      "ppg_ec": 4.6,
+      "sec_total": 9774
     },
     {
       "player_id": null,
@@ -323,26 +323,26 @@
       "name": "Ilic",
       "pos": "",
       "height": "",
-      "gp": 7,
+      "gp": 8,
       "number": "",
       "age": null,
       "country": "",
       "weight": "",
       "birth_date": "",
-      "min": 18.6,
-      "pts": 3.9,
-      "reb": 3.9,
-      "oreb": 2.3,
-      "ast": 0.9,
-      "pir": 1.7,
+      "min": 18.7,
+      "pts": 4.2,
+      "reb": 3.6,
+      "oreb": 2.1,
+      "ast": 0.8,
+      "pir": 1.9,
       "fd": 1.6,
-      "pf": 3.7,
-      "fg2": "42 (3.7)",
+      "pf": 3.8,
+      "fg2": "47 (3.8)",
       "fg3": "– (0.0)",
-      "ft": "56 (1.3)",
+      "ft": "60 (1.2)",
       "ppg_lba": null,
-      "ppg_ec": 3.9,
-      "sec_total": 7794
+      "ppg_ec": 4.2,
+      "sec_total": 8962
     }
   ],
   "comparison": {
@@ -350,112 +350,112 @@
       {
         "stat": "Games",
         "team": 8,
-        "opp": 7
+        "opp": 8
       },
       {
         "stat": "Record",
         "team": "3-5",
-        "opp": "3-4"
+        "opp": "3-5"
       },
       {
         "stat": "Points per game",
         "team": 84.9,
-        "opp": 73.7
+        "opp": 75.0
       },
       {
         "stat": "Points allowed per game",
         "team": 90.8,
-        "opp": 81.7
+        "opp": 82.9
       },
       {
         "stat": "Offensive rating",
         "team": 107.0,
-        "opp": 101.7
+        "opp": 102.5
       },
       {
         "stat": "Defensive rating",
         "team": 113.2,
-        "opp": 112.5
+        "opp": 113.6
       },
       {
         "stat": "Net rating",
         "team": -6.2,
-        "opp": -10.8
+        "opp": -11.2
       },
       {
         "stat": "Pace (possessions per 40')",
         "team": 79.8,
-        "opp": 72.5
+        "opp": 73.1
       },
       {
         "stat": "eFG%",
         "team": 52.9,
-        "opp": 48.2
+        "opp": 49.1
       },
       {
         "stat": "TOV% (per 100 poss.)",
         "team": 23.0,
-        "opp": 20.7
+        "opp": 21.3
       },
       {
         "stat": "FT rate (FTA/FGA)",
         "team": 37.8,
-        "opp": 36.6
+        "opp": 37.7
       },
       {
         "stat": "3PA per game",
         "team": 28.5,
-        "opp": 23.7
+        "opp": 23.5
       },
       {
         "stat": "3P%",
         "team": 30.7,
-        "opp": 33.1
+        "opp": 33.5
       },
       {
         "stat": "2P%",
         "team": 58.7,
-        "opp": 47.3
+        "opp": 48.3
       },
       {
         "stat": "FT%",
         "team": 81.4,
-        "opp": 69.0
+        "opp": 71.3
       },
       {
         "stat": "Assists per game",
         "team": 18.0,
-        "opp": 14.6
+        "opp": 14.1
       },
       {
         "stat": "Offensive rebounds per game",
         "team": 11.4,
-        "opp": 12.9
+        "opp": 12.4
       },
       {
         "stat": "Defensive rebounds per game",
         "team": 26.5,
-        "opp": 20.6
+        "opp": 20.4
       },
       {
         "stat": "OREB%",
         "team": 33.5,
-        "opp": 34.6
+        "opp": 34.1
       },
       {
         "stat": "DREB%",
         "team": 66.7,
-        "opp": 64.6
+        "opp": 64.9
       },
       {
         "stat": "Opp. eFG%",
         "team": 52.8,
-        "opp": 56.6
+        "opp": 57.3
       },
       {
         "stat": "Opp. TOV% (forced)",
         "team": 16.4,
-        "opp": 22.6
+        "opp": 22.5
       }
     ],
     "team": {
@@ -464,16 +464,16 @@
       "form": "LLLWL"
     },
     "opp": {
-      "record": "3-4",
-      "position": 6,
-      "form": "WWLLL"
+      "record": "3-5",
+      "position": 7,
+      "form": "WLLLL"
     }
   },
   "assist_top": [
     {
       "passer": "Schumacher",
       "scorer": "Kennedy",
-      "n": 7
+      "n": 8
     },
     {
       "passer": "Jaramaz",
@@ -491,56 +491,56 @@
       "n": 4
     },
     {
-      "passer": "Schumacher",
-      "scorer": "Valinskas",
+      "passer": "Jaramaz",
+      "scorer": "Maldunas",
       "n": 3
     },
     {
-      "passer": "Kennedy",
-      "scorer": "Schumacher",
+      "passer": "Baslyk",
+      "scorer": "Fevrier",
       "n": 3
     }
   ],
   "turnovers": [
     {
       "name": "Schumacher",
-      "gp": 7,
-      "min": 198.5,
-      "tov": 19,
-      "tov_min": 0.096,
-      "tov_pg": 2.7,
+      "gp": 8,
+      "min": 221.0,
+      "tov": 23,
+      "tov_min": 0.104,
+      "tov_pg": 2.9,
       "worst_n": 4,
-      "worst_game": "at Bahcesehir College Istanbul (11/11)",
+      "worst_game": "at Bosna Bh Telecom Sarajevo (18/11)",
       "top": false
     },
     {
       "name": "Jaramaz",
-      "gp": 7,
-      "min": 186.1,
-      "tov": 19,
-      "tov_min": 0.102,
-      "tov_pg": 2.7,
+      "gp": 8,
+      "min": 200.1,
+      "tov": 21,
+      "tov_min": 0.105,
+      "tov_pg": 2.6,
       "worst_n": 4,
       "worst_game": "vs Paok Thessaloniki (13/10)",
       "top": false
     },
     {
       "name": "Ilic",
-      "gp": 7,
-      "min": 129.9,
-      "tov": 15,
-      "tov_min": 0.115,
-      "tov_pg": 2.1,
+      "gp": 8,
+      "min": 149.4,
+      "tov": 19,
+      "tov_min": 0.127,
+      "tov_pg": 2.4,
       "worst_n": 6,
       "worst_game": "vs Paok Thessaloniki (13/10)",
       "top": true
     },
     {
       "name": "Kennedy",
-      "gp": 7,
-      "min": 172.4,
-      "tov": 14,
-      "tov_min": 0.081,
+      "gp": 8,
+      "min": 201.5,
+      "tov": 16,
+      "tov_min": 0.079,
       "tov_pg": 2.0,
       "worst_n": 6,
       "worst_game": "vs Kids&Us Manresa (04/11)",
@@ -548,24 +548,24 @@
     },
     {
       "name": "Maldunas",
-      "gp": 7,
-      "min": 142.7,
-      "tov": 9,
-      "tov_min": 0.063,
-      "tov_pg": 1.3,
+      "gp": 8,
+      "min": 162.9,
+      "tov": 12,
+      "tov_min": 0.074,
+      "tov_pg": 1.5,
       "worst_n": 4,
       "worst_game": "vs Kids&Us Manresa (04/11)",
       "top": false
     },
     {
       "name": "Valinskas",
-      "gp": 7,
-      "min": 112.4,
-      "tov": 7,
-      "tov_min": 0.062,
-      "tov_pg": 1.0,
+      "gp": 8,
+      "min": 131.0,
+      "tov": 9,
+      "tov_min": 0.069,
+      "tov_pg": 1.1,
       "worst_n": 2,
-      "worst_game": "at BC Roma (07/10)",
+      "worst_game": "at Bosna Bh Telecom Sarajevo (18/11)",
       "top": false
     },
     {
@@ -581,33 +581,44 @@
     },
     {
       "name": "Baslyk",
-      "gp": 7,
-      "min": 143.0,
+      "gp": 8,
+      "min": 167.9,
       "tov": 3,
-      "tov_min": 0.021,
+      "tov_min": 0.018,
       "tov_pg": 0.4,
       "worst_n": 1,
       "worst_game": "at Bahcesehir College Istanbul (11/11)",
       "top": false
     },
     {
-      "name": "Radzius",
-      "gp": 6,
-      "min": 65.8,
+      "name": "Sy",
+      "gp": 3,
+      "min": 79.5,
       "tov": 3,
-      "tov_min": 0.046,
-      "tov_pg": 0.5,
+      "tov_min": 0.038,
+      "tov_pg": 1.0,
+      "worst_n": 3,
+      "worst_game": "at Bosna Bh Telecom Sarajevo (18/11)",
+      "top": false
+    },
+    {
+      "name": "Radzius",
+      "gp": 7,
+      "min": 76.9,
+      "tov": 3,
+      "tov_min": 0.039,
+      "tov_pg": 0.4,
       "worst_n": 2,
       "worst_game": "at Bahcesehir College Istanbul (11/11)",
       "top": false
     },
     {
       "name": "Nemeiksa",
-      "gp": 7,
-      "min": 70.9,
+      "gp": 8,
+      "min": 80.4,
       "tov": 2,
-      "tov_min": 0.028,
-      "tov_pg": 0.3,
+      "tov_min": 0.025,
+      "tov_pg": 0.2,
       "worst_n": 2,
       "worst_game": "vs Ratiopharm Ulm (27/10)",
       "top": false
@@ -622,18 +633,7 @@
       "worst_n": 1,
       "worst_game": "vs Ratiopharm Ulm (27/10)",
       "top": false
-    },
-    {
-      "name": "Sy",
-      "gp": 2,
-      "min": 49.0,
-      "tov": 0,
-      "tov_min": 0.0,
-      "tov_pg": 0.0,
-      "worst_n": 0,
-      "worst_game": "at Bahcesehir College Istanbul (11/11)",
-      "top": false
     }
   ],
-  "standings_md": "## EuroCup so far: results and standings\n\nAll 30 EuroCup games played before this match (rounds 1 to 8); home team first.\n\n- **Round 1**: **Lietkabelis 75-72 Bosna** · PAOK 93-78 Manresa · Ulm 98-84 Botevgrad · **Bahcesehir 91-78 BC Roma**\n- **Round 2**: Bosna 72-75 PAOK · **BC Roma 92-87 Lietkabelis** · Botevgrad 61-100 Bahcesehir · Manresa 101-89 Ulm\n- **Round 3**: **Lietkabelis 95-86 PAOK** · Bahcesehir 100-88 Manresa · **BC Roma 77-72 Botevgrad** · Ulm 102-93 Bosna\n- **Round 4**: **Botevgrad 57-64 Lietkabelis** · **Manresa 108-88 BC Roma** · Bosna 86-77 Bahcesehir · PAOK 87-78 Ulm\n- **Round 5**: **Lietkabelis 68-86 Ulm** · Bahcesehir 84-81 PAOK · **BC Roma 80-85 Bosna** · Botevgrad 65-76 Manresa\n- **Round 6**: **PAOK 113-111 BC Roma** · Ulm 82-96 Bahcesehir · **Lietkabelis 66-80 Manresa** · Bosna 69-78 Botevgrad\n- **Round 7**: Botevgrad 56-79 PAOK · Manresa 86-82 Bosna · **Bahcesehir 99-61 Lietkabelis** · **BC Roma 83-78 Ulm**\n- **Round 8**: Botevgrad 86-78 Ulm · **BC Roma 70-92 Bahcesehir**\n\n![standings](00_standings.png)\n\n**Standings after round 8**\n\n| # | Team | Pts | W-L | Points for-against | Diff | Results |\n|---:|---|---:|:---:|:---:|---:|:---:|\n| 1 | Bahcesehir | 14 | 7-1 | 739-607 | +132 | WWWLWWWW |\n| 2 | PAOK | 10 | 5-2 | 614-574 | +40 | WWLWLWW |\n| 3 | Manresa | 10 | 5-2 | 617-583 | +34 | LWLWWWW |\n| 4 | **BC Roma** | 6 | 3-5 | 679-726 | -47 | LWWLLLWL |\n| 5 | Ulm | 6 | 3-5 | 691-698 | -7 | WLWLWLLL |\n| 6 | **Lietkabelis** | 6 | 3-4 | 516-572 | -56 | WLWWLLL |\n| 7 | Botevgrad | 4 | 2-6 | 559-641 | -82 | LLLLLWLW |\n| 8 | Bosna | 4 | 2-5 | 559-573 | -14 | LLLWWLL |\n\n2 points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).\n"
+  "standings_md": "## EuroCup so far: results and standings\n\nAll 32 EuroCup games played before this match (rounds 1 to 8); home team first.\n\n- **Round 1**: **Lietkabelis 75-72 Bosna** · PAOK 93-78 Manresa · Ulm 98-84 Botevgrad · **Bahcesehir 91-78 BC Roma**\n- **Round 2**: Bosna 72-75 PAOK · **BC Roma 92-87 Lietkabelis** · Botevgrad 61-100 Bahcesehir · Manresa 101-89 Ulm\n- **Round 3**: **Lietkabelis 95-86 PAOK** · Bahcesehir 100-88 Manresa · **BC Roma 77-72 Botevgrad** · Ulm 102-93 Bosna\n- **Round 4**: **Botevgrad 57-64 Lietkabelis** · **Manresa 108-88 BC Roma** · Bosna 86-77 Bahcesehir · PAOK 87-78 Ulm\n- **Round 5**: **Lietkabelis 68-86 Ulm** · Bahcesehir 84-81 PAOK · **BC Roma 80-85 Bosna** · Botevgrad 65-76 Manresa\n- **Round 6**: **PAOK 113-111 BC Roma** · Ulm 82-96 Bahcesehir · **Lietkabelis 66-80 Manresa** · Bosna 69-78 Botevgrad\n- **Round 7**: Botevgrad 56-79 PAOK · Manresa 86-82 Bosna · **Bahcesehir 99-61 Lietkabelis** · **BC Roma 83-78 Ulm**\n- **Round 8**: Botevgrad 86-78 Ulm · **BC Roma 70-92 Bahcesehir** · **Bosna 91-84 Lietkabelis** · Manresa 80-88 PAOK\n\n![standings](00_standings.png)\n\n**Standings after round 8**\n\n| # | Team | Pts | W-L | Points for-against | Diff | Results |\n|---:|---|---:|:---:|:---:|---:|:---:|\n| 1 | Bahcesehir | 14 | 7-1 | 739-607 | +132 | WWWLWWWW |\n| 2 | PAOK | 12 | 6-2 | 702-654 | +48 | WWLWLWWW |\n| 3 | Manresa | 10 | 5-3 | 697-671 | +26 | LWLWWWWL |\n| 4 | **BC Roma** | 6 | 3-5 | 679-726 | -47 | LWWLLLWL |\n| 5 | Ulm | 6 | 3-5 | 691-698 | -7 | WLWLWLLL |\n| 6 | Bosna | 6 | 3-5 | 650-657 | -7 | LLLWWLLW |\n| 7 | **Lietkabelis** | 6 | 3-5 | 600-663 | -63 | WLWWLLLL |\n| 8 | Botevgrad | 4 | 2-6 | 559-641 | -82 | LLLLLWLW |\n\n2 points per win. Teams level on points are ordered by the games between them, then by point difference; with so few games played most of them have not met yet, so the order inside a group on the same points is provisional (newspapers sometimes list it differently).\n"
 }

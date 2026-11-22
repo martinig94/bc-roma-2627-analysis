@@ -57,9 +57,9 @@ game_id,championship_id,competition,year,round,round_name,phase_id,match_datetim
 25423,602,,2026,8,8° Giornata,1,2026-11-15T18:15:00.000+01:00,2,1771,APU Old Wild West Udine,1751,Armani Olimpia Milano,70,83,,,,,,,,,,,PalaCarnera Credifriuli,Udine,,Vertemati Adriano,Banchi Luca,2026-11-15T20:15:37.352+01:00
 25424,602,,2026,9,9° Giornata,,2026-11-22T18:00:00.000+01:00,0,1750,Virtus Costa Bologna,1761,BC Roma,0,0,,,,,,,,,,,PalaDozza,Bologna,,,,2026-11-17T10:28:45.326+01:00
 25425,602,,2026,9,9° Giornata,,2026-11-22T18:15:00.000+01:00,0,1769,Tezenis Verona,1771,APU Old Wild West Udine,0,0,,,,,,,,,,,Pala MAGIS,Verona,,,,2026-11-17T10:29:21.622+01:00
-25426,602,,2026,9,9° Giornata,,2026-11-21T19:00:00.000+01:00,0,1763,Dolomiti Energia Trentino,1772,Napoli Basketball,0,0,,,,,,,,,,,BTS Arena,Trento,,,,2026-11-17T09:29:56.141+01:00
-25427,602,,2026,9,9° Giornata,,2026-11-22T16:00:00.000+01:00,0,1752,Bertram Derthona Tortona,1751,Armani Olimpia Milano,0,0,,,,,,,,,,,Nova Arena,Tortona,,,,2026-11-17T10:00:36.089+01:00
-25428,602,,2026,9,9° Giornata,,2026-11-21T20:00:00.000+01:00,0,1767,Pallacanestro Trieste,1760,UNA Hotels Reggio Emilia,0,0,,,,,,,,,,,Generali Arena,Trieste,,,,2026-11-17T10:27:32.851+01:00
+25426,602,,2026,9,9° Giornata,1,2026-11-21T19:00:00.000+01:00,2,1763,Dolomiti Energia Trentino,1772,Napoli Basketball,100,86,,,,,,,,,,,BTS Arena,Trento,3725,Rossi Alessandro,Repesa Jasmin,2026-11-21T21:53:56.416+01:00
+25427,602,,2026,9,9° Giornata,,2026-11-22T16:00:00.000+01:00,0,1752,Bertram Derthona Tortona,1751,Armani Olimpia Milano,0,0,,,,,,,,,,,Nova Arena,Tortona,,,,2026-11-22T15:39:40.162+01:00
+25428,602,,2026,9,9° Giornata,1,2026-11-21T20:00:00.000+01:00,2,1767,Pallacanestro Trieste,1760,UNA Hotels Reggio Emilia,89,94,,,,,,,,,,,Generali Arena,Trieste,5042,Taccetti Francesco,Priftis Dimitris,2026-11-21T21:57:23.062+01:00
 25429,602,,2026,9,9° Giornata,,2026-11-22T18:00:00.000+01:00,0,1762,Maxima Roma,1764,Nutribullet Treviso Basket,0,0,,,,,,,,,,,PalaEur,Roma,,,,2026-11-17T10:29:03.470+01:00
 25430,602,,2026,9,9° Giornata,,2026-11-22T17:30:00.000+01:00,0,1768,Longobardi Scafati Basket,1765,Acqua S.Bernardo Cantù,0,0,,,,,,,,,,,Beta Ricambi Arena PalaMangano,Scafati,,,,2026-11-17T10:28:21.168+01:00
 25431,602,,2026,9,9° Giornata,,2026-11-22T19:00:00.000+01:00,0,1766,Openjobmetis Varese,1753,Umana Reyer Venezia,0,0,,,,,,,,,,,Itelyum Arena,Varese,,,,2026-11-17T10:29:45.788+01:00

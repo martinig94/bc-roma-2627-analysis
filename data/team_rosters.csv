@@ -66,7 +66,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1752,Bertram Derthona Tortona,7431,Justin,Gorham,4,Ala,1998-08-06,Columbia,USA,201,102,2026-07-01,2027-06-30,v3SESWf5Yj8ncKKyhBWE4PAL
 2026,1752,Bertram Derthona Tortona,4268,Andrea,Pecchia,6,Ala,1997-11-16,Segrate,ITA,197,90,2026-07-01,2027-06-30,FPkGAtkTXqkP4wGMzemxFJx8
 2026,1752,Bertram Derthona Tortona,75,Amar,Alibegovic,7,Ala,1995-03-31,Corvalis,ITA,206,109,2026-07-01,2027-06-30,pZpWxP6Z5UPXzXW79y3aTAYn
-2026,1752,Bertram Derthona Tortona,9121,Gabriele,Furfaro,8,-,2010-04-13,Savona,ITA,,,2027-07-10,2027-06-30,
+2026,1752,Bertram Derthona Tortona,9121,Gabriele,Furfaro,8,-,2010-04-13,Savona,ITA,,,2026-07-10,2027-06-30,
 2026,1752,Bertram Derthona Tortona,7537,Edoardo,Di Meo,9,Guardia,2008-05-12,Cuneo,ITA,190,89,2026-07-01,2027-06-30,vBmUD5PyaeFDr6PbBs9wVHnt
 2026,1752,Bertram Derthona Tortona,656,Giordano,Bortolani,12,Guardia,2000-12-02,Sant'Agata di Militello,ITA,194,85,2026-07-01,2027-06-30,EYnqsAcTHcLjw8nY76gxQe1Q
 2026,1752,Bertram Derthona Tortona,9038,Dominik,Olejniczak,17,Centro,1996-07-01,Torun,POL,213,118,2026-07-01,2027-06-30,rSUqNXhDQ2VunqZmtfEKLDne
@@ -84,9 +84,11 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1763,Dolomiti Energia Trentino,7674,Cosimo,Flauto,9,-,2009-01-01,Firenze,ITA,,,2026-07-01,2027-06-30,
 2026,1763,Dolomiti Energia Trentino,2148,Toto,Forray,10,Playmaker,1986-03-20,Buenos Aires,ITA,187,90,2026-07-01,2027-06-30,xirWmWKiMXPkDgV59BswW4Zx
 2026,1763,Dolomiti Energia Trentino,7119,Federico,Cattapan,11,-,2008-05-27,Camposampiero,ITA,,,2026-07-01,2027-06-30,Vp5giUZr11dJofeKvdBWaLHk
+2026,1763,Dolomiti Energia Trentino,7118,Vittorio,Triggiani,12,-,2008-08-03,Roma,ITA,,,2026-11-01,2027-06-30,
 2026,1763,Dolomiti Energia Trentino,7599,Antonio,Barra,12,-,2008-06-04,Torino,ITA,,,2026-07-01,2027-06-30,
 2026,1763,Dolomiti Energia Trentino,7600,Giulio,Vergnaghi,12,-,2008-04-08,Cuneo,ITA,,,2026-07-01,2027-06-30,
 2026,1763,Dolomiti Energia Trentino,9442,Talel,Fezzani,12,-,2009-08-26,Rovereto,ITA,,,2026-07-01,2027-06-30,
+2026,1763,Dolomiti Energia Trentino,9465,Andrea,Maggiorini,12,-,,,,,,2026-11-21,2027-06-30,
 2026,1763,Dolomiti Energia Trentino,7449,Selom,Mawugbe,21,Centro,1998-07-20,Los Angeles,USA,207,105,2026-07-01,2027-06-30,45fNixmyUEpLVD31pKpUZVt1
 2026,1763,Dolomiti Energia Trentino,9327,Isaiah,Bigelow,24,Ala,2000-01-05,Greensboro,USA,201,95,2026-07-01,2027-06-30,YTGi3N6SkKHUz96bGzHbQ4q3
 2026,1763,Dolomiti Energia Trentino,378,Jordan,Bayehe,26,Centro,1999-10-16,Yaoundè,ITA,204,100,2026-07-01,2027-06-30,DYCLbGWxcn1tYAGcwAnkwiDR

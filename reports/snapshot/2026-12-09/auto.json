@@ -12,10 +12,10 @@
   "venue": null,
   "played": false,
   "version": 8,
-  "n_before": 80,
+  "n_before": 82,
   "opponent_analysis": "matchup_Lietkabelis_Panevezys_vs_BC_Roma_before_2026-12-09",
   "record": "2-6",
-  "position": 13,
+  "position": 14,
   "points": 4,
   "record_ec": "3-5",
   "form": "LLWLL",
@@ -688,13 +688,13 @@
   "ts_pir_lba": {
     "file": "ts_pir_lba.png",
     "players": 8,
-    "others": 164,
+    "others": 163,
     "games": 8
   },
   "ts_pir_ec": {
     "file": "ts_pir_eurocup.png",
     "players": 9,
-    "others": 350,
+    "others": 354,
     "games": 8
   },
   "standings_table": {
@@ -705,7 +705,7 @@
     "record": "3-5"
   },
   "md": {
-    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Bahcesehir | 14 | 7-1 | +132 | WWWLWWWW |\n| 2 | PAOK | 10 | 5-2 | +40 | WWLWLWW |\n| 3 | Manresa | 10 | 5-2 | +34 | LWLWWWW |\n| 4 | **BC Roma** | 6 | 3-5 | -47 | LWWLLLWL |\n| 5 | Ulm | 6 | 3-5 | -7 | WLWLWLLL |\n| 6 | **Lietkabelis** | 6 | 3-4 | -56 | WLWWLLL |\n| 7 | Botevgrad | 4 | 2-6 | -82 | LLLLLWLW |\n| 8 | Bosna | 4 | 2-5 | -14 | LLLWWLL |",
+    "standings": "| # | Team | Pts | W-L | Diff | Results |\n| ---: | --- | ---: | :---: | ---: | :---: |\n| 1 | Bahcesehir | 14 | 7-1 | +132 | WWWLWWWW |\n| 2 | PAOK | 12 | 6-2 | +48 | WWLWLWWW |\n| 3 | Manresa | 10 | 5-3 | +26 | LWLWWWWL |\n| 4 | **BC Roma** | 6 | 3-5 | -47 | LWWLLLWL |\n| 5 | Ulm | 6 | 3-5 | -7 | WLWLWLLL |\n| 6 | Bosna | 6 | 3-5 | -7 | LLLWWLLW |\n| 7 | **Lietkabelis** | 6 | 3-5 | -63 | WLWWLLLL |\n| 8 | Botevgrad | 4 | 2-6 | -82 | LLLLLWLW |",
     "last_results": "- 11-03 · EuroCup: **L** 111-113 at Paok Thessaloniki\n- 11-08 · round 7: **L** 100-116 at Trieste\n- 11-11 · EuroCup: **W** 83-78 vs Ratiopharm Ulm\n- 11-14 · round 8: **L** 88-89 vs Verona\n- 11-17 · EuroCup: **L** 70-92 vs Bahcesehir College Istanbul"
   }
 }
