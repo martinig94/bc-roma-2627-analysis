@@ -7,6 +7,7 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1765,Acqua S.Bernardo Cantù,4217,Matteo,Parravicini,10,Playmaker,2001-07-04,Varese,ITA,187,83,2026-07-01,2027-06-30,KjZdyY3KSNJwLFQ1P6zREFvH
 2026,1765,Acqua S.Bernardo Cantù,9073,Simone,Ventura,11,Guardia/Ala,2009-06-06,Desio,ITA,196,,2026-07-01,2027-06-30,eExtPub7AHViq9J6rcjB9JEk
 2026,1765,Acqua S.Bernardo Cantù,9365,Isaiah,Miles,15,Ala,1994-06-09,Baltimora,USA,203,100,2026-07-01,2027-06-30,K894BMc2YxWrUCNbGK6Uukf7
+2026,1765,Acqua S.Bernardo Cantù,9467,Michael Solomon,Smith,21,-,1997-10-13,,,,,2026-11-22,2027-06-30,hrqPSzUM7MrX6ZiRNj1zQCZD
 2026,1765,Acqua S.Bernardo Cantù,9343,Chad,Brown,22,Centro,1996-09-06,Deltona,USA,206,111,2026-07-01,2027-06-30,akusdDTh5aockSzULejg6c6X
 2026,1765,Acqua S.Bernardo Cantù,2494,Andrejs,Grazulis,24,Ala,1993-07-21,Koknese,LVA,202,101,2026-07-01,2027-06-30,nmU4ZUXXcTmqGjRERRibRa5K
 2026,1765,Acqua S.Bernardo Cantù,3855,Davide,Moretti,25,Play/Guardia,1998-03-25,Bologna,ITA,191,81,2026-07-01,2027-06-30,H5Ze34vGXUM1wuhDUktKkNd4
@@ -244,3 +245,4 @@ year,team_id,team,player_id,name,surname,number,role,birth_date,place_of_birth,c
 2026,1750,Virtus Costa Bologna,9043,Aliou,Diarra,31,Centro,2001-12-31,Kayes,MLI,207,87,2026-07-01,2027-06-30,oioc8kMkf3KCkFURutWYhJmK
 2026,1750,Virtus Costa Bologna,9372,Bo,Klintman,34,Ala,2003-03-06,Malmo,SWE,206,102,2026-07-01,2027-06-30,nxjHXdX5EQzFEKo8UZNERaUk
 2026,1750,Virtus Costa Bologna,1774,Mouhamet Rassoul,Diouf,35,Centro,2001-09-10,,SEN,206,105,2026-07-01,2027-06-30,Q4VDUg4q9FgbJ6kbGXGzSeyE
+2026,1750,Virtus Costa Bologna,1,Abass Awudu,Abass,50,-,1993-01-27,Como,,,,2026-11-22,2027-06-30,
