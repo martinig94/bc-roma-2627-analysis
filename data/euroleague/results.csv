@@ -129,3 +129,9 @@ gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
 128,13,2026-11-20,BAR,Fc Barcelona,100,RED,Crvena Zvezda Meridianbet Belgrade,103,True
 129,13,2026-11-20,PAR,Partizan Mozzart Bet Belgrade,91,BES,Besiktas Fuzul Istanbul,87,True
 130,13,2026-11-20,OLY,Olympiacos Piraeus,92,MAD,Real Madrid,76,True
+131,14,2026-11-24,RED,Crvena Zvezda Meridianbet Belgrade,84,VIR,Virtus Bologna,108,True
+132,14,2026-11-24,BES,Besiktas Fuzul Istanbul,76,PRS,Paris Basketball,88,True
+133,14,2026-11-24,BAR,Fc Barcelona,77,ULK,Fenerbahce Tarfin Istanbul,83,True
+134,14,2026-11-24,MUN,Fc Bayern Munich,79,TEL,Maccabi Rapyd Tel Aviv,87,True
+135,14,2026-11-24,PAM,Valencia Basket,83,PAN,Panathinaikos Aktor Athens,86,True
+136,14,2026-11-24,ASV,Ldlc Asvel Villeurbanne,91,MIL,Armani Olimpia Milan,95,True
