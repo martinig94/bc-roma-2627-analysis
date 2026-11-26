@@ -135,3 +135,7 @@ gamecode,round,date,home_code,home,home_score,away_code,away,away_score,played
 134,14,2026-11-24,MUN,Fc Bayern Munich,79,TEL,Maccabi Rapyd Tel Aviv,87,True
 135,14,2026-11-24,PAM,Valencia Basket,83,PAN,Panathinaikos Aktor Athens,86,True
 136,14,2026-11-24,ASV,Ldlc Asvel Villeurbanne,91,MIL,Armani Olimpia Milan,95,True
+137,14,2026-11-25,DUB,Dubai Basketball,71,PAR,Partizan Mozzart Bet Belgrade,84,True
+138,14,2026-11-25,BAS,Kosner Baskonia Vitoria-Gasteiz,86,IST,Anadolu Efes Istanbul,81,True
+139,14,2026-11-25,MAD,Real Madrid,108,ZAL,Zalgiris Kaunas,93,True
+140,14,2026-11-25,OLY,Olympiacos Piraeus,104,HTA,Hapoel Ibi Tel Aviv,79,True
