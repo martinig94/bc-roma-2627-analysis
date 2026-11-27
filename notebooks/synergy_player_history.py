@@ -293,6 +293,13 @@ def fig_drives(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
 
 PNR_TYPES = ['Three', 'Drive to the basket', 'Mid-range']
 PNR_COLORS = {'Three': '#F2B705', 'Drive to the basket': '#1F3A5F', 'Mid-range': '#4F7FBF', 'Other': '#CCCCCC'}
+# texts of the pick-and-roll and left / right figures that depend on the data source (another source sets its own)
+PNR_INTRO = ('Every field-goal attempt where he is the P&R ball handler. Drive = shot logged "To Basket"; three = any three; mid-range = other two-point shots outside the paint; '
+             '"Other" = jumpers and floaters in the paint.\n'
+             'Side = left or right of the rim (offense\'s point of view) from the shot coordinates, so a pull-up three from the right wing counts on the right.')
+PNR_NOTE = 'Possessions ending in a pass, a turnover or a foul are not in the shot list. 2023-25: US college; small samples per season, side and type: tendencies, not rules.'
+LR_NOTE = ('Shots only. Side from the shot coordinates in the Synergy shot chart; a shot right under the basket counts on the side of its coordinate. '
+           '2023-25 are US college games.')
 
 
 def pnr_shot_type(chain_text: pd.Series, pts_att: pd.Series, zone_name: pd.Series) -> pd.Series:
@@ -349,11 +356,8 @@ def fig_pnr(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
             ax.legend(handles=[Patch(fc=SIDE_COLORS[q], label=f'{q.capitalize()} side of the floor') for q in ('left', 'right')], fontsize=8, loc='upper left', frameon=False)
     fig.text(.02, .955, f'{p}: three, drive or mid-range out of the pick-and-roll', fontsize=14, fontweight='bold')
     fig.text(.02, .915, season_line(p, s, g), fontsize=8.5, color=TEXT2, va='top')
-    fig.text(.02, .84, 'Every field-goal attempt where he is the P&R ball handler. Drive = shot logged "To Basket"; three = any three; mid-range = other two-point shots outside the paint; '
-             '"Other" = jumpers and floaters in the paint.\n'
-             'Side = left or right of the rim (offense\'s point of view) from the shot coordinates, so a pull-up three from the right wing counts on the right.',
-             fontsize=8.5, color=TEXT2, va='top')
-    fig.text(.02, .04, 'Possessions ending in a pass, a turnover or a foul are not in the shot list. 2023-25: US college; small samples per season, side and type: tendencies, not rules.', fontsize=7, color=TEXT3)
+    fig.text(.02, .84, PNR_INTRO, fontsize=8.5, color=TEXT2, va='top')
+    fig.text(.02, .04, PNR_NOTE, fontsize=7, color=TEXT3)
     c.save(fig, f'10e_player_{p.lower()}_pnr_shots.png', 'free throws excluded')
 
 
@@ -458,8 +462,7 @@ def fig_left_right(c: Ctx, p: str, s: pd.DataFrame, g: pd.DataFrame) -> None:
     fig.text(.02, .915, season_line(p, s, g), fontsize=8.5, color=TEXT2, va='top')
     fig.text(.02, .835, 'Every field-goal attempt, all play types, by the side of the floor (left or right of the basket, from the offense\'s point of view) where it is taken.',
              fontsize=8.5, color=TEXT2, va='top')
-    fig.text(.02, .04, 'Shots only. Side from the shot coordinates in the Synergy shot chart; a shot right under the basket counts on the side of its coordinate. '
-             '2023-25 are US college games.', fontsize=7, color=TEXT3)
+    fig.text(.02, .04, LR_NOTE, fontsize=7, color=TEXT3)
     c.save(fig, f'10g_player_{p.lower()}_left_right.png', 'free throws excluded')
 
 

@@ -10,3 +10,6 @@ sportradar_key.txt
 
 # The site is built and deployed by GitHub Actions (.github/workflows/site.yml); never committed
 docs/
+
+# Hudl Instat raw dumps (licensed data)
+data/hudl_raw/

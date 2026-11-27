@@ -30,6 +30,7 @@ from synergy_scouting_plots import INK_4, NAVY, PALETTE
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR = "Giulia Martini"
+SOURCE = "Synergy Sports"                      # data source named in the footer
 COMPETITION_NAMES = {"seriea": "Serie A", "euroleague": "Euroleague", "eurocup": "EuroCup"}   # folder name -> label
 PLAY_TYPES = {"spot": "Spot up", "pnrbh": "P&R ball handler", "trans": "Transition", "roll": "P&R roll man", "cut": "Cut",
               "putback": "Put backs", "iso": "Isolation", "post": "Post-up", "handoff": "Handoff", "offscreen": "Off screen",
@@ -85,17 +86,19 @@ def draw_defender_mix(ax: Axes, defenders: pd.DataFrame, title: str, colors: dic
     ax.set_xlabel("Possessions that ended on the defender (shot, turnover or free-throw trip)")
 
 
-def main() -> None:
-    """Write the two defense figures for the competition folders given on the command line."""
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("folders", nargs="+", help="competition folders of one defensive pull")
-    ap.add_argument("--out", required=True, help="folder for the two PNGs")
-    ap.add_argument("--date", default=f"{datetime.date.today():%d %b %Y}")
-    a = ap.parse_args()
-    out = Path(a.out) if Path(a.out).is_absolute() else ROOT / a.out
-    pulls = [load(Path(f) if Path(f).is_absolute() else ROOT / f) for f in a.folders]
+def write_figures(pulls: list[tuple[str, str, pd.DataFrame, pd.DataFrame]], out: Path, date: str, source: str = SOURCE,
+                  defender_xlabel: str | None = None) -> None:
+    """Write the play types faced and the defender mix figures, one panel per competition.
+
+    Args:
+        pulls: One ``load`` result per competition.
+        out: Folder for the two PNGs.
+        date: Date written in the footer.
+        source: Data source named in the footer.
+        defender_xlabel: X label of the defender figure, when the source counts something else than Synergy does.
+    """
     team = pulls[0][1]
-    foot = f"{AUTHOR} · {a.date} · Source: Synergy Sports · ranks within each competition"
+    foot = f"{AUTHOR} · {date} · Source: {source} · ranks within each competition"
     colors = dict(zip(PLAY_TYPES, PALETTE))
 
     fig, axs = plt.subplots(1, len(pulls), figsize=(7.2 * len(pulls), 5.6), squeeze=False)
@@ -109,12 +112,25 @@ def main() -> None:
     fig, axs = plt.subplots(1, len(pulls), figsize=(7.2 * len(pulls), 5.8), squeeze=False)
     for ax, (comp, _, _, defenders) in zip(axs[0], pulls):
         draw_defender_mix(ax, defenders, comp, colors)
+        if defender_xlabel:
+            ax.set_xlabel(defender_xlabel)
     axs[0][-1].legend(frameon=False, fontsize=7.5, ncol=2, loc="lower right")
     fig.suptitle(f"{team} defenders: possessions defended by play type (≥{MIN_DEFENDER_POSS} poss)", fontsize=13, fontweight="bold",
                  x=.02, ha="left")
     fig.text(.01, .008, foot, fontsize=7, color=INK_4)
     fig.tight_layout(rect=(0, .03, 1, .94))
     save(fig, out / "17_defenders_playtype_mix.png")
+
+
+def main() -> None:
+    """Write the two defense figures for the competition folders given on the command line."""
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("folders", nargs="+", help="competition folders of one defensive pull")
+    ap.add_argument("--out", required=True, help="folder for the two PNGs")
+    ap.add_argument("--date", default=f"{datetime.date.today():%d %b %Y}")
+    a = ap.parse_args()
+    out = Path(a.out) if Path(a.out).is_absolute() else ROOT / a.out
+    write_figures([load(Path(f) if Path(f).is_absolute() else ROOT / f) for f in a.folders], out, a.date)
     print("plots written to", out)
 
 
