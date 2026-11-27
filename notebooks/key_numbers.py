@@ -33,6 +33,7 @@ MIN = {"season": {"zone": 12, "def": 5, "drive_side": 12, "three": 10, "iso": 5,
 PT = ["pnrbh", "roll", "trans", "iso", "post", "spot", "putback", "cut", "handoff", "offscreen", "misc"]
 PLAY = {"pnrbh": "Pick and roll, ball handler", "roll": "Pick and roll, roll man", "iso": "Isolation", "post": "Post-up",
         "spot": "Spot-up", "offscreen": "Off screen", "handoff": "Handoff", "cut": "Cut", "trans": "Transition", "putback": "Putback"}
+MATCHUP_PLAYS = ["pnrbh", "iso", "post", "spot", "offscreen", "handoff", "roll"]   # play types that can get a "Who defends it for us" row
 
 
 # ── shots ─────────────────────────────────────────────────────────────────────
@@ -346,8 +347,7 @@ def build_scope(scope: str, d: dict) -> str:
                f'<div class="panel brief"><h3>They rank above our defense</h3><div class="sub">Their offense against what we allow.</div>{above}</div></div></div>')
 
     # matchups
-    plays = ["pnrbh", "iso", "post", "spot", "offscreen", "handoff", "roll"]
-    freq = sorted(plays, key=lambda k: -(B.val(opp, "off", f"per100_{k}") or 0))
+    freq = sorted(MATCHUP_PLAYS, key=lambda k: -(B.val(opp, "off", f"per100_{k}") or 0))
     chosen = [k for k in freq if B.rank(opp, "off", f"ppp_{k}") <= n / 2][:4] or freq[:3]
     rows = []
     for k in chosen:
